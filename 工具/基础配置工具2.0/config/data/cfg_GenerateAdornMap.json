@@ -1,0 +1,21 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "AdornMapId": 1,
+        "Layer": 2,
+        "SeedTypeId": 1,
+        "MaterialIdList": [
+            [
+                4,
+                1000
+            ],
+            [
+                5,
+                1000
+            ]
+        ],
+        "BigStructIdList": [
+            3
+        ]
+    }
+]

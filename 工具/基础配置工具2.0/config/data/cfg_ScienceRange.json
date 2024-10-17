@@ -1,0 +1,40 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "ScienceRangeId": 1,
+        "ScienceRangeName": "炮塔",
+        "ShowMoneyList": [],
+        "Offset": [
+            1,
+            1
+        ],
+        "Interval": [
+            30,
+            8
+        ],
+        "NodeSize": [
+            100,
+            50
+        ],
+        "ScienceRangeDes": "炮塔科技类型"
+    },
+    {
+        "KEY_INDEX": "2",
+        "ScienceRangeId": 2,
+        "ScienceRangeName": "建筑",
+        "ShowMoneyList": [],
+        "Offset": [
+            1,
+            1
+        ],
+        "Interval": [
+            10,
+            10
+        ],
+        "NodeSize": [
+            100,
+            40
+        ],
+        "ScienceRangeDes": "建筑科技类型"
+    }
+]

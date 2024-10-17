@@ -1,0 +1,18 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "MapDrawId": 1,
+        "DrawType": 1,
+        "Param1": 2.0,
+        "Param2": 2.0,
+        "Param3": [
+            1.0,
+            1.0
+        ],
+        "Param4": [
+            50.0,
+            200.0
+        ],
+        "ParamList": []
+    }
+]

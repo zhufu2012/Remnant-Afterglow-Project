@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dytm3lpghnv0s"]
+
+[ext_resource type="Script" path="res://src/core/autoloads/DeveloperTool.cs" id="1_njtlo"]
+
+[node name="DeveloperTool" type="Node"]
+script = ExtResource("1_njtlo")

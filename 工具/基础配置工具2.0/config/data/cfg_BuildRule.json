@@ -1,0 +1,38 @@
+[
+    {
+        "KEY_INDEX": "1_需要建造在资源地块上_资源地块_any_20_1_5_False",
+        "BuildingID": 1,
+        "BuildingName": "需要建造在资源地块上",
+        "searchTags": "资源地块",
+        "searchTeam": "any",
+        "searchDistance": 20,
+        "minCount": 1,
+        "maxCount": 5,
+        "blocksPlacement": false,
+        "cannotPlaceMessage": false
+    },
+    {
+        "KEY_INDEX": "2_需要放置在液体地块中_液体地块_any_20_1_99_False",
+        "BuildingID": 2,
+        "BuildingName": "需要放置在液体地块中",
+        "searchTags": "液体地块",
+        "searchTeam": "any",
+        "searchDistance": 20,
+        "minCount": 1,
+        "maxCount": 99,
+        "blocksPlacement": false,
+        "cannotPlaceMessage": false
+    },
+    {
+        "KEY_INDEX": "3_需要建造在城墙上_城墙_own_20_1_99_False",
+        "BuildingID": 3,
+        "BuildingName": "需要建造在城墙上",
+        "searchTags": "城墙",
+        "searchTeam": "own",
+        "searchDistance": 20,
+        "minCount": 1,
+        "maxCount": 99,
+        "blocksPlacement": false,
+        "cannotPlaceMessage": false
+    }
+]

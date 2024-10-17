@@ -1,0 +1,14 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "DependencyId": 1,
+        "Code": "float Key = BaseValue;",
+        "Relation": "Key"
+    },
+    {
+        "KEY_INDEX": "2",
+        "DependencyId": 2,
+        "Code": "float Key = TargetRegen;",
+        "Relation": "Key"
+    }
+]

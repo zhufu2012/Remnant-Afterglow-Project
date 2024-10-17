@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5d2m30bea8o3"]
+
+[ext_resource type="Texture2D" uid="uid://dnwc50gcr8s87" path="res://Test/Test/ID_DE7940C7BC2D4D46915E35BA3143081A.png" id="1_1jf1b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7u611"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1jf1b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Test" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 160.0
+offset_top = 120.0
+offset_right = 256.0
+offset_bottom = 149.0
+text = "1111"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 200.0
+offset_top = 104.0
+offset_right = 536.0
+offset_bottom = 160.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 528.0
+offset_bottom = 288.0
+color = Color(0.180101, 0.144044, 0.244176, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(276, 144.25)
+scale = Vector2(0.9, 1.01064)
+sprite_frames = SubResource("SpriteFrames_7u611")
+frame_progress = 0.329788

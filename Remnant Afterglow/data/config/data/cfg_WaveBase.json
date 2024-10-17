@@ -1,0 +1,46 @@
+[
+    {
+        "KEY_INDEX": "1_1",
+        "BrushId": 1,
+        "WaveId": 1,
+        "WaveName": "第一波",
+        "WaveType": 1,
+        "WaveWay": 1,
+        "WaveDes": "直接全部刷新",
+        "WaveData": [
+            [
+                1,
+                1,
+                1,
+                3000
+            ]
+        ],
+        "WaveRandData": [],
+        "WaveTime": 120
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "BrushId": 1,
+        "WaveId": 2,
+        "WaveName": "第二波",
+        "WaveType": 1,
+        "WaveWay": 2,
+        "WaveDes": "间隔刷新",
+        "WaveData": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            [
+                2,
+                2,
+                1,
+                2
+            ]
+        ],
+        "WaveRandData": [],
+        "WaveTime": 60
+    }
+]

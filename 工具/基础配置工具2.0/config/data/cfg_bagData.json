@@ -1,0 +1,20 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "BagId": 1,
+        "BagName": "系统背包",
+        "BagDesc": "无法看见，无需管道具顺序和\n在背包的位置,无限大小",
+        "BagType": 0,
+        "Crosswise": 0,
+        "Vertical": 0
+    },
+    {
+        "KEY_INDEX": "2",
+        "BagId": 2,
+        "BagName": "常规玩家背包",
+        "BagDesc": "可以看见，\n背包大小=背包横排大小*背包竖排大小",
+        "BagType": 1,
+        "Crosswise": 10,
+        "Vertical": 10
+    }
+]

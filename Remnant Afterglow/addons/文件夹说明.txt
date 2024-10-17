@@ -1,0 +1,5 @@
+用于存放godot项目相关的插件
+fastnoiselite-configurator  噪声编辑器插件  作者：squrious
+https://godotengine.org/asset-library/asset/2288
+
+SceneView  场景管理器插件,作者：救世暗写德

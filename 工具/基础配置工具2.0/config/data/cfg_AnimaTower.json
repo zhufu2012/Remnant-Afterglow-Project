@@ -1,0 +1,25 @@
+[
+    {
+        "KEY_INDEX": "1_1",
+        "ObjectId": 1,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "DurationMs": 20,
+        "FrameCount": 3,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_FD737468540A4B0689A1B65091CC19B7.png"
+    }
+]

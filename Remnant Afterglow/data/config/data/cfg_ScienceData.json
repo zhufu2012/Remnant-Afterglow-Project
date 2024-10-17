@@ -1,0 +1,98 @@
+[
+    {
+        "KEY_INDEX": "1_1",
+        "ChapterId": 1,
+        "ScienceId": 1,
+        "ScienceRangeId": 1,
+        "ScienceType": 1,
+        "IsUnlock": true,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "ChapterId": 1,
+        "ScienceId": 2,
+        "ScienceRangeId": 1,
+        "ScienceType": 2,
+        "IsUnlock": true,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    },
+    {
+        "KEY_INDEX": "1_3",
+        "ChapterId": 1,
+        "ScienceId": 3,
+        "ScienceRangeId": 1,
+        "ScienceType": 0,
+        "IsUnlock": false,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    },
+    {
+        "KEY_INDEX": "1_4",
+        "ChapterId": 1,
+        "ScienceId": 4,
+        "ScienceRangeId": 1,
+        "ScienceType": 1,
+        "IsUnlock": false,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    },
+    {
+        "KEY_INDEX": "1_5",
+        "ChapterId": 1,
+        "ScienceId": 5,
+        "ScienceRangeId": 1,
+        "ScienceType": 2,
+        "IsUnlock": false,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    },
+    {
+        "KEY_INDEX": "1_6",
+        "ChapterId": 1,
+        "ScienceId": 6,
+        "ScienceRangeId": 1,
+        "ScienceType": 3,
+        "IsUnlock": false,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    },
+    {
+        "KEY_INDEX": "1_7",
+        "ChapterId": 1,
+        "ScienceId": 7,
+        "ScienceRangeId": 1,
+        "ScienceType": 4,
+        "IsUnlock": false,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    },
+    {
+        "KEY_INDEX": "1_8",
+        "ChapterId": 1,
+        "ScienceId": 8,
+        "ScienceRangeId": 8,
+        "ScienceType": 5,
+        "IsUnlock": false,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    }
+]

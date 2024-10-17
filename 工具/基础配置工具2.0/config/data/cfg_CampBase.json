@@ -1,0 +1,46 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "CampId": 1,
+        "CampName": "失落机械",
+        "CampDes": "nan",
+        "AllyList": [],
+        "NeutralList": [],
+        "HostileList": [],
+        "CampPng": "./data/config/images/ID_301B396F232A4E7BAC3B61BF8472349F.png",
+        "IsUser": true
+    },
+    {
+        "KEY_INDEX": "2",
+        "CampId": 2,
+        "CampName": "辉煌神殿",
+        "CampDes": "nan",
+        "AllyList": [],
+        "NeutralList": [],
+        "HostileList": [],
+        "CampPng": "./data/config/images/ID_E863ABF027B040BAAA8FD177E8E70A91.png",
+        "IsUser": true
+    },
+    {
+        "KEY_INDEX": "3",
+        "CampId": 3,
+        "CampName": "拉伦凯斯",
+        "CampDes": "nan",
+        "AllyList": [],
+        "NeutralList": [],
+        "HostileList": [],
+        "CampPng": "./data/config/images/ID_A73D99CDB0334013B6FAED575598EE44.png",
+        "IsUser": true
+    },
+    {
+        "KEY_INDEX": "4",
+        "CampId": 4,
+        "CampName": "坠落繁星",
+        "CampDes": "nan",
+        "AllyList": [],
+        "NeutralList": [],
+        "HostileList": [],
+        "CampPng": "./data/config/images/ID_7A9FC8C37AC5440E955BC742964533F0.png",
+        "IsUser": false
+    }
+]

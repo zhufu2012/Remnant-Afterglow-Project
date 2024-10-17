@@ -1,0 +1,26 @@
+{
+    "TowerBase_DisplayText_1": {
+        "languages": {
+            "zh_cn": "光子塔",
+            "en_us": NaN
+        }
+    },
+    "TowerBase_DisplayText_2": {
+        "languages": {
+            "zh_cn": "火炮塔",
+            "en_us": NaN
+        }
+    },
+    "TowerBase_DisplayDescription_1": {
+        "languages": {
+            "zh_cn": "价格:〔${core.price}〕\\n标签:〔${core.tags}〕持续射出激光攻击敌人\\n射程较近\\n无视敌人30\n点装甲值\\n造成0.5倍护盾和装甲伤害",
+            "en_us": NaN
+        }
+    },
+    "TowerBase_DisplayDescription_2": {
+        "languages": {
+            "zh_cn": "价格:〔${core.price}〕\\n标签:〔${core.tags}〕\\n伤害类型：光线穿盾\\n射线炮塔是最为平常的光线类炮塔，拥有基础的作战能力，可以有效的杀死低级敌人",
+            "en_us": NaN
+        }
+    }
+}

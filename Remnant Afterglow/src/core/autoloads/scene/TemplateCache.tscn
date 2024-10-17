@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://biqfpb6v73u44"]
+
+[ext_resource type="Script" path="res://src/core/autoloads/TemplateCache.cs" id="1_ro6k2"]
+
+[node name="TemplateCache" type="Node"]
+script = ExtResource("1_ro6k2")

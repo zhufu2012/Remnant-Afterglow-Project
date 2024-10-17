@@ -1,0 +1,72 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "MapImageSetId": 1,
+        "MapImageSetName": "地图地块图像集",
+        "ImageSetDescribe": "第一层的图像集",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 36,
+        "ImageSetLayer": 1,
+        "MapImageSize": [
+            6,
+            6
+        ],
+        "MapImageSet": "./data/config/images/ID_5A24066537DA464E9986295F2B4A5A74.png"
+    },
+    {
+        "KEY_INDEX": "2",
+        "MapImageSetId": 2,
+        "MapImageSetName": "资源图像集",
+        "ImageSetDescribe": "第二层的图像集",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 24,
+        "ImageSetLayer": 2,
+        "MapImageSize": [
+            4,
+            8
+        ],
+        "MapImageSet": "./data/config/images/ID_EFB1EB7036594BD4AB9B7CBA32809B1B.png"
+    },
+    {
+        "KEY_INDEX": "3",
+        "MapImageSetId": 3,
+        "MapImageSetName": "六边形地块图像集",
+        "ImageSetDescribe": "大地图的图像集",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 2,
+        "ImageSetLayer": 1,
+        "MapImageSize": [
+            2,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_DB2CF3B5B8BE4939858EB61D050FB732.png"
+    },
+    {
+        "KEY_INDEX": "4",
+        "MapImageSetId": 4,
+        "MapImageSetName": "六边形地块图像集2",
+        "ImageSetDescribe": "大地图的图像集2",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 2,
+        "ImageSetLayer": 1,
+        "MapImageSize": [
+            2,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_1B8D765690364953B9DD0A5FB0ECF439.png"
+    },
+    {
+        "KEY_INDEX": "5",
+        "MapImageSetId": 5,
+        "MapImageSetName": "沙漠地块",
+        "ImageSetDescribe": "沙漠第一层的图像集",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 50,
+        "ImageSetLayer": 1,
+        "MapImageSize": [
+            10,
+            5
+        ],
+        "MapImageSet": "./data/config/images/ID_788E732D8C794339B84E4666740DF142.png"
+    }
+]

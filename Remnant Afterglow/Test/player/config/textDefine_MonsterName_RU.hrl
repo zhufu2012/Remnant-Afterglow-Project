@@ -1,0 +1,313 @@
+-ifndef(textDefine_MonsterName_RU_hrl).
+-define(textDefine_MonsterName_RU_hrl, 1).
+-define(MONSN1, "MonsN1").
+-define(MONSN301, "Бульна").
+-define(MONSN308, "Гераклисс").
+-define(MONST309, "Первая ведьма").
+-define(MONSN309, "Пандора").
+-define(MD3N01, "Спартанский драконник").
+-define(MD3N02, "Спартанский воин").
+-define(MD3N03, "Бык Миноса").
+-define(MD3N04, "Спартанский наездник").
+-define(MD3N05, "Боевой жрец").
+-define(MD3N06, "Спартанский берсерк").
+-define(MD3N07, "Спартанский гладиатор").
+-define(MD3N08, "Гарпия-жрец").
+-define(MD3N09, "Гарпия-маг").
+-define(MD3N10, "Ягуар амазонок").
+-define(MD3N11, "Амазонка-воительница").
+-define(MD3N12, "Амазонка-солдат").
+-define(MD3N13, "Амазонка-охотница").
+-define(MD3N14, "Пес бездны").
+-define(MD3N15, "Балор бездны").
+-define(MD3N16, "Наблюдатель бездны").
+-define(MD3N17, "Демон-воин").
+-define(MD3N18, "Демон-пехотинец").
+-define(MD3N19, "Демон-надзиратель").
+-define(MD3N20, "Демон-маг").
+-define(MD3N21, "Бес-подрывник").
+-define(MD3N22, "Падший демон").
+-define(MD3N23, "Дикий демон").
+-define(MD3N24, "Ведьма бездны").
+-define(MD3N25, "Монстр с косой").
+-define(MD3N26, "Демон-палач").
+-define(MD3N27, "Демон-берсерк").
+-define(MD3N28, "Демон-страж").
+-define(MD3N29, "Яростный демон").
+-define(MD3N30, "Пожиратель").
+-define(MD3N31, "Темный маг").
+-define(MD3N32, "Демон-жрец").
+-define(MD3N33, "Нага-воин").
+-define(MD3N34, "Нага-берсерк").
+-define(MD3N35, "Нага-маг").
+-define(MD3N36, "Дракончик").
+-define(MD3N37, "Ониксовый леопард").
+-define(MD3N38, "Волк-демон").
+-define(MD3N39, "Боевой медведь викингов").
+-define(MD3N40, "Дворф с топором").
+-define(MD3N41, "Дворф-воин").
+-define(MD3N42, "Дворф-берсерк").
+-define(MD3N43, "Дворф-наездник").
+-define(MD3N44, "Эльф-убийца").
+-define(MD3N45, "Эльф-воин").
+-define(MD3N46, "Эльф-жрец").
+-define(MD3N47, "Эльф-лучник").
+-define(MD3N48, "Эльф-маг").
+-define(MD3N49, "Огр").
+-define(MD3N50, "Оборотень").
+-define(MD3N51, "Викинг-мечник").
+-define(MD3N52, "Викинг с топором").
+-define(MD3N53, "Викинг на медведе").
+-define(MD3N54, "Викинг-шаман").
+-define(MD3N55, "Жуткий скелет").
+-define(MD3N56, "Ползучий труп").
+-define(MD3N57, "Гаргулья").
+-define(MD3N58, "Ползун").
+-define(MD3N59, "Паучок").
+-define(MD3N60, "Костяной воин").
+-define(MD3N61, "Костяной солдат").
+-define(MD3N62, "Костяной маг").
+-define(MD3N63, "Костяной лучник").
+-define(MD3N64, "Костяной палач").
+-define(MD3N65, "Нежить").
+-define(MD3N66, "Зомби").
+-define(MD3N67, "Трупоед").
+-define(MD3N68, "Злобный вурдалак").
+-define(MD3N69, "Поганище").
+-define(MD3N70, "Лич").
+-define(MD3N71, "Адский вурдалак").
+-define(MD3N72, "Адский пес").
+-define(MD3N73, "Адский жрец").
+-define(MD3N74, "Банши").
+-define(MD3N75, "Крыса-грызун").
+-define(MD3N76, "Кровавая оса").
+-define(MD3N77, "Кровавая летучая мышь").
+-define(MD3N78, "Логово летучих мышей").
+-define(MD3N79, "Сундук-мимик").
+-define(MD3N80, "Снежный волк викингов").
+-define(MD3N81, "不翻译").
+-define(MD3N82, "Стихия тени").
+-define(MD3N83, "Теневой страж").
+-define(MD3N84, "Стихия огня").
+-define(MD3N85, "Пламенный страж").
+-define(MD3N86, "Земляной страж").
+-define(MD3N87, "Демонический угорь").
+-define(MD3N88, "Рыба-демон").
+-define(MD3N89, "Удильщик").
+-define(MD3N90, "Кровавая акула").
+-define(MD3N91, "Марин-воин").
+-define(MD3N92, "Марин-берсерк").
+-define(MD3N93, "Марин-страж").
+-define(MD3N94, "Марин-маг").
+-define(MD3N95, "Стихия воды").
+-define(MD3N96, "Хранитель воды").
+-define(MD3T97, "Дракон разрушений").
+-define(MD3N97, "Нидхегг").
+-define(MD3T98, "Бог войны").
+-define(MD3N98, "Арес").
+-define(MD3N99, "Ипполита").
+-define(MD3N100, "Леонид").
+-define(MD3N101, "Химера").
+-define(MD3T102, "Превращенный змей").
+-define(MD3N102, "Ладон").
+-define(MD3N103, "Глава гарпий").
+-define(MD3N104, "Четырехрукий гигант").
+-define(MD3T105, "Владыка разрушений").
+-define(MD3N105, "Баал").
+-define(MD3N106, "Демон ярости").
+-define(MD3N107, "Демон безумия").
+-define(MD3N108, "Адский страж").
+-define(MD3N109, "Адский легат").
+-define(MD3N110, "Ведьма снов").
+-define(MD3N111, "Проводник душ").
+-define(MD3N112, "Костяной военачальник").
+-define(MD3N113, "Ученик смерти").
+-define(MD3N114, "Кошмарный всадник").
+-define(MD3N115, "Король гулей").
+-define(MD3N116, "Пожирательница душ").
+-define(MD3N117, "Дракон-лич").
+-define(MD3N118, "Жаба-демон").
+-define(MD3N119, "Королевский дракондор").
+-define(MD3T120, "Ведьма озера").
+-define(MD3N120, "Вивьен").
+-define(MD3T121, "Фенрир").
+-define(MD3N121, "Фенрир").
+-define(MD3T122, "Мировой змей").
+-define(MD3N122, "Йормунганд").
+-define(MD3N123, "Око Одина").
+-define(MD3T124, "Солнцеед").
+-define(MD3N124, "Сколль").
+-define(MD3T125, "Свирепый волк").
+-define(MD3N125, "Хати").
+-define(MD3N126, "Королева темных эльфов").
+-define(MD3N127, "Темный эльф-убийца").
+-define(MD3T128, "Каменный гигант").
+-define(MD3N128, "Грунгнир").
+-define(MD3N129, "Вождь огров").
+-define(MD3N130, "Ругару").
+-define(MD3N131, "Адский цербер").
+-define(MD3T132, "Судья смерти").
+-define(MD3N132, "Радамант").
+-define(MD3N133, "Аргус").
+-define(MD3N134, "Смертоносный паук").
+-define(MD3N135, "Бушующее пламя").
+-define(MD3N136, "Трехглавый змей").
+-define(MD3T137, "Повелитель желаний").
+-define(MD3N137, "Асмодей").
+-define(MD3T138, "Темный владыка").
+-define(MD3N138, "Белиал").
+-define(MD3N139, "Изголодавшийся демон").
+-define(MD3N140, "Кошмарный демон").
+-define(MD3N141, "Кровопийца").
+-define(MD3N142, "Суккуб").
+-define(MD3N143, "Демонический паук").
+-define(MD3N144, "Сфинкс").
+-define(MD3N145, "Скарабей").
+-define(MD3N146, "Василиск").
+-define(MD3N147, "Локи").
+-define(MD3N148, "Король дворфов").
+-define(MD3N149, "Огненный владыка").
+-define(MD3T150, "Превращенный змей").
+-define(MD3N150, "Фафнир").
+-define(MD3T151, "Ведьма-пророк").
+-define(MD3N151, "Кассандра").
+-define(MD3T153, "Кентавр").
+-define(MD3N153, "Хирон").
+-define(MD3N154, "Ирида").
+-define(MD3T154, "Ведьма пустоши").
+-define(MD3N155, "Ведьма тени").
+-define(MD3N157, "不翻译").
+-define(MD3N158, "Посейдон").
+-define(MD3N159, "Сирена").
+-define(MD3N160, "Левиафан").
+-define(MD3N161, "Сцилла").
+-define(MD3N162, "Медуза").
+-define(MD3N163, "Гигант глубин").
+-define(MD3N164, "Генерал Клешня").
+-define(MD3N165, "Владыка глубин").
+-define(MD3N166, "Военачальник глубин").
+-define(MD3N167, "Страж глубин").
+-define(MD3N168, "Лавовый скорпион").
+-define(MD3N169, "Ядовитый дракон").
+-define(MD3N171, "Сурт").
+-define(MD3N172, "Лафей").
+-define(MD3N173, "Морозный владыка").
+-define(MD3N174, "Тифон").
+-define(MD3T175, "Аид").
+-define(MD3N175, "Аид").
+-define(MD3T177, "Валькирия").
+-define(MD3N177, "Брюнхильда").
+-define(MD3N178, "Тор").
+-define(MD3T179, "Убийца драконов").
+-define(MD3N179, "Сигурд").
+-define(MD3T180, "Цветок пустыни").
+-define(MD3N180, "Царица Савская").
+-define(MD3T181, "Король героев").
+-define(MD3N181, "Гильгамеш").
+-define(MD3T182, "Богиня-воительница").
+-define(MD3N182, "Иштар").
+-define(MD3T183, "Магистр Элдрич").
+-define(MD3N183, "Мерлин").
+-define(MD3N184, "Морриган").
+-define(MD3T186, "Загадочный дух").
+-define(MD3N186, "Волшебная лампа").
+-define(MD3N187, "Минотавр").
+-define(MD3N188, "Гор").
+-define(MD3T189, "Повелительница Египта").
+-define(MD3N189, "Клеопатра").
+-define(MD3N190, "Дракула").
+-define(MD3T184, "Эриния").
+-define(MD3T188, "Хранитель фараона").
+-define(MONSN184, "Бог войны").
+-define(MONSN180, "Прорицатель Нит").
+-define(MONSN181, "Искатель ветра Кайя").
+-define(MONSN182, "Железнокровный Шеффилд").
+-define(MONSN183, "Дадалит").
+-define(MONSN235, "Смертоносный Малефик").
+-define(MONSN234, "Искатель Браунинг").
+-define(MONSN233, "Ветроход Брюс").
+-define(MONSN232, "Гладиатор V").
+-define(MONSN230, "Мастер клинка Калли").
+-define(MONSN229, "Боец Кэрол").
+-define(MONSN226, "Одиночка Чаплин").
+-define(MONSN237, "Афинский легион").
+-define(MONSN306, "Охотник на демонов Юла").
+-define(MONSN236, "Непревзойденный").
+-define(MT_NTJ, "Ремонт арбалета").
+-define(MD3N191, "Монака").
+-define(MONSN238, "Молот Тора").
+-define(MD3N192, "Городские ворота").
+-define(MD3N193, "Статуя Афины").
+-define(MD3N194, "Статуя Морриган").
+-define(MD3N195, "Статуя Иштар").
+-define(MD3N196, "Фрейя").
+-define(MD3N197, "Анубис").
+-define(MD3N198, "Нефертити").
+-define(MD3N199, "Голова Мимира").
+-define(MD3N200, "Городские ворота (низ)").
+-define(MD3N201, "Городские ворота (центр)").
+-define(MD3N202, "Городские ворота (верх)").
+-define(MD3N203, "Мастерская дворфов").
+-define(MD3N204, "Алхимическая лаборатория").
+-define(MD3N205, "Башня мага").
+-define(MD3N206, "Химера").
+-define(MD3N207, "Морозный Медведь").
+-define(MD3N208, "Ифрит").
+-define(MD3N209, "Драгоценный Жук").
+-define(MD3N210, "Хель").
+-define(MD3N211, "Артемида").
+-define(MD3N212, "Кронос").
+-define(MD3N213, "Жанна д’Арк").
+-define(MD3N214, "Афина").
+-define(MD3N215, "Двойник Афины").
+-define(MD3N216, "").
+-define(MD3N217, "").
+-define(MD3N218, "").
+-define(MD3N219, "").
+-define(MD3N220, "").
+-define(MD3N221, "").
+-define(MD3N222, "").
+-define(MD3N223, "").
+-define(MD3N224, "").
+-define(MD3N225, "").
+-define(MD3N226, "").
+-define(MD3N227, "").
+-define(MD3N228, "").
+-define(MD3N229, "").
+-define(MD3N230, "").
+-define(MD3N231, "").
+-define(MD3N232, "").
+-define(MD3N233, "").
+-define(MD3N234, "").
+-define(MD3N235, "").
+-define(MD3N236, "").
+-define(MD3N237, "").
+-define(MD3N238, "").
+-define(MD3N239, "").
+-define(MD3N240, "").
+-define(MD3N241, "").
+-define(MD3N242, "").
+-define(MD3N243, "").
+-define(MD3N244, "").
+-define(MD3N245, "").
+-define(MD3N246, "").
+-define(ARENAROBOTNAME1, "").
+-define(ARENAROBOTNAME2, "").
+-define(ARENAROBOTNAME3, "").
+-define(ARENAROBOTNAME4, "").
+-define(ARENAROBOTNAME5, "").
+-define(MD3T171, "").
+-define(MD3N247, "").
+-define(MD3N248, "").
+-define(MD3N249, "").
+-define(MD3N250, "").
+-define(MD3N251, "Хаттори Хандзо").
+-define(MD3N252, "Скатах").
+-define(MD3N253, "Саладин").
+-define(MD3N254, "").
+-define(MD3N255, "").
+-define(MD3N256, "Архангел").
+-define(MD3N257, "Элизабет").
+-define(MD3N258, "").
+-endif.
+

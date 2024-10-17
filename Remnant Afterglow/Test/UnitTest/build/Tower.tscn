@@ -1,0 +1,124 @@
+[gd_scene load_steps=14 format=3 uid="uid://62a4bwc1cmxk"]
+
+[ext_resource type="Script" path="res://Test/UnitTest/build/TowerTest.cs" id="1_0l41q"]
+[ext_resource type="Texture2D" uid="uid://ca4gjg7e2sye2" path="res://Test/UnitTest/img/炮塔地基.png" id="1_pi1jy"]
+[ext_resource type="Texture2D" uid="uid://5i7qqjs3wh66" path="res://Test/UnitTest/img/射击塔.png" id="2_l53bj"]
+[ext_resource type="Texture2D" uid="uid://c1w4wug17ub4c" path="res://Test/UnitTest/img/攻击圈.png" id="4_stdn1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wi76h"]
+radius = 40.05
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tf6hm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o50rv"]
+
+[sub_resource type="Animation" id="Animation_21r5j"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_s3h01"]
+resource_name = "开火"
+length = 0.5
+step = 0.02
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Draw/射击塔:offset:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-10, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -10, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.12, 0.22, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Draw/射击塔:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.95, -0.25, 0, 0.25, 0, 0.95, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.12, 0.22, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Draw/射击塔:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.95, -0.25, 0, 0.25, 0, 0.95, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.12, 0.22, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_8n1m0"]
+resource_name = "静默"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Draw/射击塔:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 0, 0, 1, 0, 0, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 0.785398, 0, 0, 0, 0, 0.785398, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.785398, 0, 0, 0, 0, -0.785398, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7, 1.3, 2, 2.7, 3.4, 4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7uiri"]
+_data = {
+"RESET": SubResource("Animation_21r5j"),
+"开火": SubResource("Animation_s3h01"),
+"静默": SubResource("Animation_8n1m0")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b0we8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aoqmx"]
+radius = 158.808
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_0l41q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wi76h")
+
+[node name="Draw" type="Node2D" parent="."]
+
+[node name="炮塔地基" type="Sprite2D" parent="Draw"]
+material = SubResource("ShaderMaterial_tf6hm")
+texture = ExtResource("1_pi1jy")
+
+[node name="射击塔" type="Sprite2D" parent="Draw"]
+texture = ExtResource("2_l53bj")
+offset = Vector2(0, -10)
+
+[node name="炮口效果" type="AnimatedSprite2D" parent="Draw"]
+position = Vector2(0, -55)
+sprite_frames = SubResource("SpriteFrames_o50rv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7uiri")
+}
+autoplay = "RESET"
+
+[node name="AttackRange" type="Area2D" parent="."]
+
+[node name="攻击范围" type="Sprite2D" parent="AttackRange"]
+modulate = Color(0, 1, 1, 1)
+material = SubResource("ShaderMaterial_b0we8")
+position = Vector2(0, 7.62939e-06)
+scale = Vector2(0.319401, 0.318)
+texture = ExtResource("4_stdn1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+shape = SubResource("CircleShape2D_aoqmx")
+
+[node name="TimerList" type="Node" parent="."]
+
+[node name="Timer1" type="Timer" parent="TimerList"]

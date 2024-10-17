@@ -1,0 +1,16 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "ChapterId": 1,
+        "ChapterName": "战役一",
+        "Describe1": "战役一描述1",
+        "Describe2": "战役一描述2",
+        "ChapterType": 1,
+        "BigMapBaseId": 1,
+        "CameraId": 2,
+        "ChapterImage": "./data/config/images/ID_4F7A8073DA284D22BA006B9612BECC52.png",
+        "ChapterStartCopy": [
+            1
+        ]
+    }
+]

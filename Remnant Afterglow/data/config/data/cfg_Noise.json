@@ -1,0 +1,26 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "NoiseId": 1,
+        "NoiseType": 0,
+        "NoiseX": 320,
+        "NoiseY": 320,
+        "Frequency": 0.005,
+        "Enabled": true,
+        "Amplitude": 35.01,
+        "WarpFractalGain": 0.5,
+        "WarpFractalType": 0,
+        "WarpFrequency": 0.01,
+        "WarpFractalOctaves": 1,
+        "WarpType": 2,
+        "FractalType": 2,
+        "FractalGain": 0.32,
+        "FractalLacunarity": 2.29,
+        "FractalOctaves": 7,
+        "FractalPingPongStrength": 2.0,
+        "FractalWeightedStrength": 0.0,
+        "DistanceFunction": 1,
+        "CellularJitter": 0.45,
+        "CellularReturnType": 1
+    }
+]

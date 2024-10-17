@@ -1,0 +1,14 @@
+{
+    "Enemy_Name_1": {
+        "languages": {
+            "zh_cn": "士兵",
+            "en_us": NaN
+        }
+    },
+    "Enemy_Name_2": {
+        "languages": {
+            "zh_cn": "高级士兵",
+            "en_us": NaN
+        }
+    }
+}

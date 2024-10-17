@@ -1,0 +1,27 @@
+[
+    {
+        "KEY_INDEX": "1_1",
+        "ChapterId": 1,
+        "CopyId": 1,
+        "CopyType": 0,
+        "WaveNum": 10,
+        "BrushSpace": 60,
+        "BrushSpaceList": [
+            [
+                1,
+                5
+            ],
+            [
+                2,
+                10
+            ],
+            [
+                3,
+                60
+            ]
+        ],
+        "BrushIdList": [
+            1
+        ]
+    }
+]

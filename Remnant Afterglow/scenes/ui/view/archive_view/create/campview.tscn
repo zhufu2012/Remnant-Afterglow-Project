@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://xqov3w4qcjfx"]
+
+[node name="Campview" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -502.0
+offset_bottom = -486.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 11.0
+offset_right = 152.0
+offset_bottom = 151.0
+text = "选择阵营"

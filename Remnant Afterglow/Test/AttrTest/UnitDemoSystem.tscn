@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://v3po1w36xh40"]
+
+[ext_resource type="Script" path="res://Test/AttributeTest/UnitDemoSystem.cs" id="1_oymgh"]
+[ext_resource type="Script" path="res://src/core/controllers/MainCamera.cs" id="2_g4md1"]
+[ext_resource type="PackedScene" uid="uid://dokvx037bur88" path="res://addons/fastnoiselite-configurator/fastnoiselite-configurator.tscn" id="3_jiskb"]
+
+[node name="UnitDemoSystem" type="Node"]
+script = ExtResource("1_oymgh")
+UnitCount = 1
+
+[node name="UnitList" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+script = ExtResource("2_g4md1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="noise_editor" parent="Camera2D/CanvasLayer" instance=ExtResource("3_jiskb")]
+visible = false

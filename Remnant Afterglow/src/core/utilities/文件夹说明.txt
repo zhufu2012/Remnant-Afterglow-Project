@@ -1,0 +1,6 @@
+c#代码 空间:Remnant_Afterglow
+dict_util：字典相关的方法
+Common:通用函数
+file_op文件夹：文件相关操作的代码
+compatible文件夹:用于处理一些不兼容godot的库
+

@@ -1,0 +1,347 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "MassifId": 1,
+        "MassifName": "贫瘠废料地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 1,
+        "NumberResources": 20000,
+        "PlotPictures": "./data/config/images/ID_65270ABED6A143CA9A6E2DA6D5253C20.png",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 1
+    },
+    {
+        "KEY_INDEX": "2",
+        "MassifId": 2,
+        "MassifName": "标准废料地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 1,
+        "NumberResources": 24000,
+        "PlotPictures": "./data/config/images/ID_65270ABED6A143CA9A6E2DA6D5253C20.png",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 1
+    },
+    {
+        "KEY_INDEX": "3",
+        "MassifId": 3,
+        "MassifName": "富裕废料地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 1,
+        "NumberResources": 28000,
+        "PlotPictures": "./data/config/images/ID_65270ABED6A143CA9A6E2DA6D5253C20.png",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 1
+    },
+    {
+        "KEY_INDEX": "4",
+        "MassifId": 4,
+        "MassifName": "贫瘠万能齿轮地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 2,
+        "NumberResources": 16000,
+        "PlotPictures": "./data/config/images/ID_E31128960DEA4CBF9C4BDB2DC1750D18.png",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 1
+    },
+    {
+        "KEY_INDEX": "5",
+        "MassifId": 5,
+        "MassifName": "标准万能齿轮地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 2,
+        "NumberResources": 19200,
+        "PlotPictures": "./data/config/images/ID_E31128960DEA4CBF9C4BDB2DC1750D18.png",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 1
+    },
+    {
+        "KEY_INDEX": "6",
+        "MassifId": 6,
+        "MassifName": "富裕万能齿轮地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 2,
+        "NumberResources": 22400,
+        "PlotPictures": "./data/config/images/ID_E31128960DEA4CBF9C4BDB2DC1750D18.png",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 1
+    },
+    {
+        "KEY_INDEX": "7",
+        "MassifId": 7,
+        "MassifName": "贫瘠怨灵水晶地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 3,
+        "NumberResources": 2000,
+        "PlotPictures": "./data/config/images/ID_1533A4BF36C9491EA6F1B445A0988563.png",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 1
+    },
+    {
+        "KEY_INDEX": "8",
+        "MassifId": 8,
+        "MassifName": "标准怨灵水晶地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 3,
+        "NumberResources": 2400,
+        "PlotPictures": "./data/config/images/ID_1533A4BF36C9491EA6F1B445A0988563.png",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 1
+    },
+    {
+        "KEY_INDEX": "9",
+        "MassifId": 9,
+        "MassifName": "富裕怨灵水晶地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 3,
+        "NumberResources": 2800,
+        "PlotPictures": "./data/config/images/ID_1533A4BF36C9491EA6F1B445A0988563.png",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 1
+    },
+    {
+        "KEY_INDEX": "10",
+        "MassifId": 10,
+        "MassifName": "贫瘠熔岩地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 1,
+        "NumberResources": 30000,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 2
+    },
+    {
+        "KEY_INDEX": "11",
+        "MassifId": 11,
+        "MassifName": "标准熔岩地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 1,
+        "NumberResources": 36000,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 2
+    },
+    {
+        "KEY_INDEX": "12",
+        "MassifId": 12,
+        "MassifName": "富裕熔岩地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 1,
+        "NumberResources": 42000,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 2
+    },
+    {
+        "KEY_INDEX": "13",
+        "MassifId": 13,
+        "MassifName": "贫瘠次元岛溶剂地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 4,
+        "NumberResources": 10000,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 2
+    },
+    {
+        "KEY_INDEX": "14",
+        "MassifId": 14,
+        "MassifName": "标准次元岛溶剂地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 4,
+        "NumberResources": 12000,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 2
+    },
+    {
+        "KEY_INDEX": "15",
+        "MassifId": 15,
+        "MassifName": "富裕次元岛溶剂地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 4,
+        "NumberResources": 14000,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 2
+    },
+    {
+        "KEY_INDEX": "101",
+        "MassifId": 101,
+        "MassifName": "贫瘠废料地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 1,
+        "NumberResources": 20000,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 3
+    },
+    {
+        "KEY_INDEX": "102",
+        "MassifId": 102,
+        "MassifName": "标准废料地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 1,
+        "NumberResources": 24000,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 3
+    },
+    {
+        "KEY_INDEX": "103",
+        "MassifId": 103,
+        "MassifName": "富裕废料地块",
+        "PassTypeId": 6,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 1,
+        "NumberResources": 28000,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 1.0,
+        "TheExtractionLabelPprovided": 3
+    },
+    {
+        "KEY_INDEX": "201",
+        "MassifId": 201,
+        "MassifName": "土地",
+        "PassTypeId": 1,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 0,
+        "NumberResources": 0,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 0,
+        "TheExtractionLabelPprovided": 0
+    },
+    {
+        "KEY_INDEX": "202",
+        "MassifId": 202,
+        "MassifName": "沙土地块",
+        "PassTypeId": 1,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 0,
+        "NumberResources": 0,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 0,
+        "TheExtractionLabelPprovided": 0
+    },
+    {
+        "KEY_INDEX": "203",
+        "MassifId": 203,
+        "MassifName": "沙土悬崖峭壁",
+        "PassTypeId": 2,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 0,
+        "NumberResources": 0,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 0,
+        "TheExtractionLabelPprovided": 0
+    },
+    {
+        "KEY_INDEX": "204",
+        "MassifId": 204,
+        "MassifName": "沙土断崖",
+        "PassTypeId": 2,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 0,
+        "NumberResources": 0,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 0,
+        "TheExtractionLabelPprovided": 0
+    },
+    {
+        "KEY_INDEX": "205",
+        "MassifId": 205,
+        "MassifName": "沙土墙壁",
+        "PassTypeId": 3,
+        "MassifSize": [
+            1.0,
+            1.0
+        ],
+        "ItemIdList": 0,
+        "NumberResources": 0,
+        "PlotPictures": "null",
+        "TheEfficiencyMining": 0,
+        "TheExtractionLabelPprovided": 0
+    }
+]

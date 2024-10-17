@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=3 uid="uid://ybbw6v22akyd"]
+
+[ext_resource type="Script" path="res://src/core/ui/view/archive_view/SaveFileView.cs" id="1_jph5m"]
+[ext_resource type="Texture2D" uid="uid://b406eawhdocx1" path="res://scripts/ui/Base.png" id="1_tb1r3"]
+
+[node name="SaveFile" type="Panel"]
+show_behind_parent = true
+clip_contents = true
+custom_minimum_size = Vector2(520, 162)
+offset_left = -1.0
+offset_right = 519.0
+offset_bottom = 162.0
+focus_mode = 1
+mouse_filter = 1
+script = ExtResource("1_jph5m")
+
+[node name="saveName" type="Label" parent="."]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 15.0
+offset_right = 135.0
+offset_bottom = 65.0
+focus_mode = 1
+text = "存档名称"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gameTime" type="Label" parent="."]
+layout_mode = 2
+offset_left = 384.0
+offset_top = 10.0
+offset_right = 514.0
+offset_bottom = 60.0
+text = "最后游戏时间"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="camp_sprite" type="Sprite2D" parent="."]
+position = Vector2(198, 78)
+scale = Vector2(2, 2)
+texture = ExtResource("1_tb1r3")
+
+[node name="battle_sprite" type="Sprite2D" parent="."]
+position = Vector2(323, 78)
+scale = Vector2(2, 2)
+texture = ExtResource("1_tb1r3")
+
+[node name="science_degree" type="Label" parent="."]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 90.0
+offset_right = 135.0
+offset_bottom = 140.0
+focus_mode = 1
+text = "进度"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="battle_degree" type="Label" parent="."]
+layout_mode = 2
+offset_left = 384.0
+offset_top = 90.0
+offset_right = 514.0
+offset_bottom = 140.0
+text = "战役进度"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 520.0
+offset_bottom = 1.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_top = 161.0
+offset_right = 520.0
+offset_bottom = 162.0
+
+[node name="ColorRect3" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 162.0
+
+[node name="ColorRect4" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 519.0
+offset_right = 520.0
+offset_bottom = 162.0

@@ -1,0 +1,16 @@
+[
+    {
+        "KEY_INDEX": "1_1",
+        "ChapterId": 1,
+        "CopyId": 1,
+        "CopyUiId": 1,
+        "CameraId": 1,
+        "GenerateMapId": 1,
+        "Pos": [
+            4,
+            4
+        ],
+        "NodeId": 3,
+        "CopyIdList": []
+    }
+]

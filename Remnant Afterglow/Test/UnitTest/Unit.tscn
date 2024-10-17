@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://he7nk6f17b61"]
+
+[ext_resource type="Script" path="res://Test/UnitTest/Units.cs" id="1_1tisg"]
+[ext_resource type="Texture2D" uid="uid://ckigp8d0vsnru" path="res://Test/UnitTest/士兵装饰.png" id="1_2816t"]
+[ext_resource type="Texture2D" uid="uid://ca7kq7lumtdhq" path="res://Test/UnitTest/小型作战单元标准六型.png" id="1_miuki"]
+
+[sub_resource type="Animation" id="Animation_xoafb"]
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Draw/底部轮:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_jpeyw"]
+resource_name = "移动"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Draw/底部轮:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uef7h"]
+_data = {
+"RESET": SubResource("Animation_xoafb"),
+"移动": SubResource("Animation_jpeyw")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s1e32"]
+radius = 14.8661
+
+[node name="Unit" type="CharacterBody2D" node_paths=PackedStringArray("agent")]
+motion_mode = 1
+slide_on_ceiling = false
+script = ExtResource("1_1tisg")
+agent = NodePath("Navigate/NavigationAgent2D")
+
+[node name="Draw" type="Node2D" parent="."]
+
+[node name="底部轮" type="Sprite2D" parent="Draw"]
+z_index = 1
+texture = ExtResource("1_miuki")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 0, 80, 48)
+
+[node name="士兵装饰" type="Sprite2D" parent="Draw"]
+z_index = 1
+position = Vector2(0, 5)
+texture = ExtResource("1_2816t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uef7h")
+}
+autoplay = "RESET"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-141, -31)
+polygon = PackedVector2Array(135, 7, 146, 7, 148, 18, 154, 26, 154, 40, 144, 55, 137, 55, 128, 40, 128, 26, 133, 18)
+
+[node name="Area2D" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_s1e32")
+
+[node name="Navigate" type="Node2D" parent="."]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Navigate"]
+path_desired_distance = 15.0
+target_desired_distance = 5.0
+path_max_distance = 20.0
+path_postprocessing = 1
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="Navigate"]
+wait_time = 0.1
+autostart = true

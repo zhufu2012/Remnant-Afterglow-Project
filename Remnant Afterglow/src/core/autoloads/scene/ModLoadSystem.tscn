@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://iqaog78debeb"]
+
+[ext_resource type="Script" path="res://src/core/autoloads/ModLoadSystem.cs" id="1_6uc1l"]
+
+[node name="ModLoadSystem" type="Node"]
+script = ExtResource("1_6uc1l")

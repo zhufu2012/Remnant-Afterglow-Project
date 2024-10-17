@@ -1,0 +1,373 @@
+-ifndef(textDefine_SkillFixInfo_SP_hrl).
+-define(textDefine_SkillFixInfo_SP_hrl, 1).
+-define(SCN213, "Revés del Destino").
+-define(SCD213, "Cuando se usan reliquias para atacar, hay un {0}% de probabilidad de activar el Revés del Destino e infligir {1}% de DAÑO con 100% de efecto de sanguijuela.Enfriamiento: {2} s.").
+-define(SCN41001, "Mejora de Habilidad").
+-define(SCD40001, "Aumenta el daño fijo de la habilidad {0}").
+-define(SCN51001, "Ascensión de Habilidad Temporal").
+-define(SCD51001, "Multiplicador de DAÑO de Habilidad Fija +{0}%").
+-define(BCN1021, "Poder del Dios de la Guerra Fortalecido").
+-define(BCN1031, "Guardia de Thor Fortalecido").
+-define(BCN2011, "Espíritu de Vulcano Fortalecido").
+-define(BCN2021, "Espíritu de Khione Fortalecido").
+-define(BCN3021, "Fuerza de la Naturaleza Fortalecido").
+-define(BCN3031, "Poder de Relámpago Fortalecido").
+-define(BCD1021, "Duración del Poder del Dios de la Guerra +{0} s").
+-define(BCD1031, "Duración de la Guardia de Thor +{0} s").
+-define(BCD2011, "Duración del Espíritu de Vulcano +{0} s").
+-define(BCD2021, "Duración del Espíritu de Khione +{0} s").
+-define(BCD3021, "Duración de la Fuerza de la Naturaleza +{0} s").
+-define(BCD3031, "Duración del Poder de Relámpago +{0} s").
+-define(BCN1001, "Fortalecimiento de Ira").
+-define(BCD1001, "La Ira otorga +{0}% de Bono de ATQ.El Rugido Otorga +{1}% de Índice Crítico.").
+-define(BCN2001, "Impregnar Magia").
+-define(BCD2001, "Todas las duraciones de Empoderamiento +{0} s.").
+-define(BCN3001, "Fortalecimiento de Batalla").
+-define(BCD3001, "Cada acumulación Enfocada otorga {0}% de Bono de DAÑO.Cada acumulación de Trueno otorga +{1}% de Reducción de DAÑO.").
+-define(SCN30001, "Avatar de la Sabiduría: Ascendido").
+-define(SCN30011, "Juez Victorioso: Ascendido").
+-define(SCN30021, "Lanza Giratoria: Ascendido").
+-define(SCN30031, "Escudo de Suspiros: Ascendido").
+-define(SCN30041, "Empuje de Lanza: Ascendido").
+-define(SCN30051, "Lanza Divina: Ascendido").
+-define(SCN30101, "Símbolo de Venganza: Ascendido").
+-define(SCN30111, "Invocación del Cuervo: Ascendido").
+-define(SCN30121, "Sifón de Energía: Ascendido").
+-define(SCN30131, "Ritos del Cuervo: Ascendido").
+-define(SCN30141, "Danza del Cuervo: Ascendido").
+-define(SCN30151, "Remolino de Venganza: Ascendido").
+-define(SCN30201, "Dominación de Thor: Ascendido").
+-define(SCN30211, "Relámpago: Ascendido").
+-define(SCN30221, "Grieta de Trueno: Ascendido").
+-define(SCN30231, "Explosión de Relámpago: Ascendido").
+-define(SCN30241, "Golpe de Trueno: Ascendido").
+-define(SCN30251, "Martillo de Thor: Ascendido").
+-define(SCN30301, "Guardián del Faraón: Ascendido").
+-define(SCN30311, "Corona: Ascendido").
+-define(SCN30321, "Halo Solar: Ascendido").
+-define(SCN30331, "Disco Solar: Ascendido").
+-define(SCN30341, "Maldición Antigua: Ascendido").
+-define(SCN30351, "Viento Solar: Ascendido").
+-define(SCN30901, "").
+-define(SCN31001, "").
+-define(SCN31101, "").
+-define(SCD30001, "DAÑO Básico Infligido +{0}%").
+-define(SCD30011, "DAÑO Básico Infligido +{0}%").
+-define(SCD30021, "DAÑO Básico Infligido +{0}%").
+-define(SCD30031, "DAÑO Básico Infligido +{0}%").
+-define(SCD30041, "DAÑO Básico Infligido +{0}%").
+-define(SCD30051, "DAÑO Básico Infligido +{0}%").
+-define(SCD30101, "DAÑO Básico Infligido +{0}%").
+-define(SCD30111, "DAÑO Básico Infligido +{0}%").
+-define(SCD30121, "DAÑO Básico Infligido +{0}%").
+-define(SCD30131, "DAÑO Básico Infligido +{0}%").
+-define(SCD30141, "DAÑO Básico Infligido +{0}%").
+-define(SCD30151, "DAÑO Básico Infligido +{0}%").
+-define(SCD30201, "DAÑO Básico Infligido +{0}%").
+-define(SCD30211, "DAÑO Básico Infligido +{0}%").
+-define(SCD30221, "DAÑO Básico Infligido +{0}%").
+-define(SCD30231, "DAÑO Básico Infligido +{0}%").
+-define(SCD30241, "DAÑO Básico Infligido +{0}%").
+-define(SCD30251, "DAÑO Básico Infligido +{0}%").
+-define(SCD30301, "DAÑO Básico Infligido +{0}%").
+-define(SCD30311, "DAÑO Básico Infligido +{0}%").
+-define(SCD30321, "DAÑO Básico Infligido +{0}%").
+-define(SCD30331, "DAÑO Básico Infligido +{0}%").
+-define(SCD30341, "DAÑO Básico Infligido +{0}%").
+-define(SCD30351, "DAÑO Básico Infligido +{0}%").
+-define(SCD61001, "Cuando la Ira está activa, multiplicador de DAÑO de Habilidad +{0}%").
+-define(SCD61011, "El poder del Dios de la Guerra proporciona un Índice Crítico adicional del {0}%").
+-define(SCD61021, "La Guardia de Thor proporciona una reducción de bloque adicional de {0}%").
+-define(SCD62001, "Multiplicador de DAÑO de Habilidad proporcionado por cada Empoderamiento +{0}%").
+-define(SCD62011, "Multiplicador de Restauración de Habilidad proporcionado por cada Empoderamiento +{0}%").
+-define(SCD62021, "La habilidad de lanzamiento tiene un {0}% de probabilidad de otorgar el Empoderamiento - Tormenta de Fuego (Bono de DAÑO de Habilidad +{1}%)").
+-define(SCD62041, "La habilidad de lanzamiento tiene un {0}% de probabilidad de otorgar el Empoderamiento - Tormenta de Fuego (Bono de DAÑO de Habilidad +{1}%)").
+-define(SCD63001, "Tiene un {0}% de probabilidad de obtener 2 capas de Enfoque").
+-define(SCD63011, "Tiene un {0}% de probabilidad de obtener 2 capas de Trueno").
+-define(SCD63021, "Multiplicador de Daño de Habilidad aumentado de cada acumulación de Enfoque +{0}%").
+-define(SCD63031, "Multiplicador de DAÑO de Habilidad aumentado de cada acumulación de Trueno +{0}%").
+-define(BCD1041, "Duración de Ira +{0} s").
+-define(BCD1051, "Duración de Rugido +{0} s").
+-define(BCD1061, "Cuando el Rugido está activo, aumenta la probabilidad de infligir aturdimiento un {0}%").
+-define(BCD1071, "Duración del Guardián +{0} s").
+-define(BCD1081, "Duración del Sangrado +{0} s").
+-define(BCD2031, "Cuando finaliza el estado de Fuego de Corazón, tiene un {0}% de probabilidad de volver a agregar el estado").
+-define(BCD2041, "Cuando finaliza el estado de Hielo Sobrenatural, tiene un {0}% de probabilidad de volver a agregarlo").
+-define(BCD3041, "Cuando la Fuerza de la Naturaleza está activa, recibe 1 capa de Enfoque cada {0} s").
+-define(BCD3051, "Cuando el Poder de Relámpago está activo, recibe 1 capa de Trueno cada {0} s").
+-define(SFI_UNITS103, "s").
+-define(SCN117, "Tempestad de Escarcha Fortalecida").
+-define(SCD117, "DAÑO Básico Infligido +{0}%").
+-define(SCN118, "Cono de Hielo Fortalecido").
+-define(SCD118, "DAÑO Básico Infligido +{0}%").
+-define(SCD70001, "").
+-define(SCD41001, "Aumenta el multiplicador de DAÑO de Habilidad fijo un {0}%; Aumenta el DAÑO de Habilidad fijo en {1}").
+-define(SCN80001, "Juez Victorioso: Despierto").
+-define(SCN80011, "Juez Victorioso: Despierto").
+-define(SCN80021, "Lanza Giratoria: Despierto").
+-define(SCN80031, "Escudo de Suspiros: Despierto").
+-define(SCN80041, "Empuje de Lanza: Despierto").
+-define(SCN80051, "Lanza Divina: Despierto").
+-define(SCN80101, "Danza del Cuervo: Despierto").
+-define(SCN80111, "Invocación del Cuervo: Despierto").
+-define(SCN80121, "Sifón de Energía: Despierto").
+-define(SCN80131, "Ritos del Cuervo: Despierto").
+-define(SCN80141, "Danza del Cuervo: Despierto").
+-define(SCN80151, "Remolino de Venganza: Despierto").
+-define(SCN80201, "").
+-define(SCN80211, "Relámpago: Despierto").
+-define(SCN80221, "Grieta de Trueno: Despierto").
+-define(SCN80231, "Explosión de Relámpago: Despierto").
+-define(SCN80241, "Golpe de Trueno: Despierto").
+-define(SCN80251, "Martillo de Thor: Despierto").
+-define(SCN80301, "").
+-define(SCN80311, "Corona: Despierto").
+-define(SCN80321, "Halo Solar: Despierto").
+-define(SCN80331, "Disco Solar: Despierto").
+-define(SCN80341, "Maldición Antigua: Despierto").
+-define(SCN80351, "Viento Solar: Despierto").
+-define(SCN80901, "").
+-define(SCD80901, "").
+-define(SCN81001, "").
+-define(SCN81101, "").
+-define(SCD81001, "").
+-define(SCD80001, "El último golpe tiene un {0}% de probabilidad de cegar (Índice de Golpe -10%) y Placidez (Índice Crítico -20%) al enemigo durante {1} s.").
+-define(SCD80011, "{0}% de probabilidad de infligir Tendones (Velocidad de Movimiento -33%) durante {1} s.").
+-define(SCD80021, "Inflige {0}% de DEF como daño.").
+-define(SCD80031, "{0}% de probabilidad de otorgar un escudo de {1}% de ATQ a los compañeros de equipo.").
+-define(SCD80041, "Inflige daño adicional igual a {0}% de HP Máx.").
+-define(SCD80051, "{0}% de probabilidad de eliminar 1 capa de desventaja.").
+-define(SCD80101, "Al lanzar la habilidad, recupera {0}% de HP Máx.").
+-define(SCD80111, "{0}% de probabilidad de infligir Marchitar cada vez que se lanza la habilidad.").
+-define(SCD80121, "Inflige Sangrado en el objetivo, lo que hace que pierda {0}% de HP.").
+-define(SCD80131, "Inflige Sangrado en el objetivo, lo que hace que pierda {0}% de HP.").
+-define(SCD80141, "{0}% de probabilidad de infligir Marchitar cada vez que se lanza la habilidad.").
+-define(SCD80151, "Cura a todo el equipo con {0}% de ATQ.").
+-define(SCD80201, "Inflige daño adicional igual a {0}% de HP Máx.").
+-define(SCD80211, "{0}% de probabilidad de eliminar un beneficio de los objetivos cercanos.").
+-define(SCD80221, "Inflige daño adicional igual a {0}% de HP Máx.").
+-define(SCD80231, "{0}% de probabilidad de eliminar 2 beneficios de los objetivos cercanos.").
+-define(SCD80241, "Inflige daño adicional igual a {0}% de HP Máx.").
+-define(SCD80251, "Inflige daño adicional igual a {0}% de HP Máx.").
+-define(SCD80301, "").
+-define(SCD80311, "Cada golpe tiene {0}% probabilidad de activar la Quemadura.").
+-define(SCD80321, "{0}% de probabilidad de activar la Quemadura de forma adicional 1 vez más.").
+-define(SCD80331, "{0}% de probabilidad de activar la Quemadura de forma adicional 2 veces más.").
+-define(SCD80341, "{0}% de probabilidad de aturdir al objetivo durante 1,5 s").
+-define(SCD80351, "Cada golpe tiene {0}% de probabilidad de activar la Quemadura 1 vez más.").
+-define(SCN70001, "Juez Victorioso: Fortalecido").
+-define(SCN70011, "Juez Victorioso: Fortalecido").
+-define(SCN70021, "Lanza Giratoria: Fortalecido").
+-define(SCN70031, "Escudo de Suspiros: Fortalecido").
+-define(SCN70041, "Empuje de Lanza: Fortalecido").
+-define(SCN70051, "Lanza Divina: Fortalecido").
+-define(SCN70101, "Danza del Cuervo: Fortalecido").
+-define(SCN70111, "Invocación del Cuervo: Fortalecido").
+-define(SCN70121, "Sifón de Energía: Fortalecido").
+-define(SCN70131, "Ritos del Cuervo: Fortalecido").
+-define(SCN70141, "Danza del Cuervo: Fortalecido").
+-define(SCN70151, "Remolino de Venganza: Fortalecido").
+-define(SCN70201, "").
+-define(SCN70211, "Relámpago: Fortalecido").
+-define(SCN70221, "Grieta de Trueno: Fortalecido").
+-define(SCN70231, "Explosión de Relámpago: Fortalecido").
+-define(SCN70241, "Golpe de Trueno: Fortalecido").
+-define(SCN70251, "Martillo de Thor: Fortalecido").
+-define(SCN70301, "").
+-define(SCN70311, "Corona: Fortalecido").
+-define(SCN70321, "Halo Solar: Fortalecido").
+-define(SCN70331, "Disco Solar: Fortalecido").
+-define(SCN70341, "Maldición Antigua: Fortalecido").
+-define(SCN70351, "Viento Solar: Fortalecido").
+-define(SCN70901, "").
+-define(SCN71001, "").
+-define(SCN71101, "").
+-define(SCD61031, "Ignora {0}% de DEF de enemigos Sangrantes.").
+-define(SCD62061, "Cuando el HP es mayor al {0}%, multiplicador de DAÑO de Habilidad +{1}%.").
+-define(SCD62071, "Probabilidad de infligir el efecto de Congelación +{0}%").
+-define(SCD63061, "Por cada efecto de Enfoque obtenido, aumenta el multiplicador de DAÑO del HP Máx.del objetivo un {0}%.").
+-define(SCD63071, "Por cada efecto de Trueno obtenido, aumenta el Bono de Habilidad un {0}%.").
+-define(SCD10001, "ATQ de Carruaje +{0}%").
+-define(SCN70401, "Rey de Tártaro: Fortalecido").
+-define(SCN70411, "Guadaña de Espectro: Fortalecido").
+-define(SCN70421, "Lobo de Tártaro: Fortalecido").
+-define(SCN70431, "Impacto Espeluznante: Fortalecido").
+-define(SCN70441, "Enredo de Fantasma: Fortalecido").
+-define(SCN70451, "Espacio de Banshee: Fortalecido").
+-define(SCN70501, "Señor de la Guerra: Fortalecido").
+-define(SCN70511, "Habilidad de Cosecha: Fortalecido").
+-define(SCN70521, "Ataque con Machete: Fortalecido").
+-define(SCN70531, "Incursión de Borde: Fortalecido").
+-define(SCN70541, "Estrangular con Machete: Fortalecido").
+-define(SCN70551, "Ejecución Final: Fortalecido").
+-define(SCN80401, "Rey de Tártaro: Despierto").
+-define(SCN80411, "Guadaña de Espectro: Despierto").
+-define(SCN80421, "Lobo de Tártaro: Despierto").
+-define(SCN80431, "Impacto Espeluznante: Despierto").
+-define(SCN80441, "Enredo de Fantasma: Despierto").
+-define(SCN80451, "Espacio de Banshee: Despierto").
+-define(SCN80501, "Señor de la Guerra: Despierto").
+-define(SCN80511, "Habilidad de Cosecha: Despierto").
+-define(SCN80521, "Ataque con Machete: Despierto").
+-define(SCN80531, "Incursión de Borde: Despierto").
+-define(SCN80541, "Estrangular con Machete: Despierto").
+-define(SCN80551, "Ejecución Final: Despierto").
+-define(SCD80401, "El primer DAÑO repartido inflige Fragilidad (Reducción de DAÑO de Habilidad -15%) durante {0}s.").
+-define(SCD80411, "Ignora {0}% de DEF del objetivo.").
+-define(SCD80421, "Cura una vez más para tener un HP igual al {0}% del ATQ.").
+-define(SCD80431, "El primer DAÑO repartido inflige Ablandar (Reducción de DAÑO -10%) durante {0}s.").
+-define(SCD80441, "El primer DAÑO repartido inflige Maldición (Índice de Golpe -20%) durante {0}s.").
+-define(SCD80451, "El primer DAÑO repartido inflige Contaminación (Bono de Curación -20%) durante {0}s.").
+-define(SCD80501, "Tiene un {0}% de probabilidad de eliminar una capa de perjuicio para el lanzador después de una Transformación exitosa.").
+-define(SCD80511, "Índice Crítico de Habilidad +{0}%").
+-define(SCD80521, "Por cada {0}% de HP perdido por el objetivo, gana {1}% de multiplicador de DAÑO de Habilidad.").
+-define(SCD80531, "Por cada {0}% de HP perdido por el objetivo, gana {1}% de multiplicador de DAÑO de Habilidad.").
+-define(SCD80541, "Por cada {0}% de HP perdido por el objetivo, gana {1}% de multiplicador de DAÑO de Habilidad.").
+-define(SCD80551, "Cuando se usa en un Personaje con menos del 50% de HP, el lanzador gana Invencibilidad durante {0}s.").
+-define(SCN70601, "La Primavera Llega: Fortalecido").
+-define(SCN70611, "Ofensa de la Vid: Fortalecido").
+-define(SCN70621, "Sierra de Ratán: Fortalecido").
+-define(SCN70631, "Flores Florecientes: Fortalecido").
+-define(SCN70641, "Reino de la Naturaleza: Fortalecido").
+-define(SCN70651, "Ira de la Tierra: Fortalecido").
+-define(SCN80601, "La Primavera Llega: Despierto").
+-define(SCN80611, "Ofensa de la Vid: Despierto").
+-define(SCN80621, "Sierra de Ratán: Despierto").
+-define(SCN80631, "Flores Florecientes: Despierto").
+-define(SCN80641, "Reino de la Naturaleza: Despierto").
+-define(SCN80651, "Ira de la Tierra: Despierto").
+-define(SCD80601, "Cura a {0} aliado(s) con un HP igual al {1}% del ATQ después de una Transformación exitosa.").
+-define(SCD80611, "Tiene un {0}% de probabilidad de eliminar {1} capa(s) de perjuicio para los aliados.").
+-define(SCD80621, "Inflige Desvincular (ATQ -{0}%) durante {1} s.").
+-define(SCD80631, "Duración de Curación +{0}s").
+-define(SCD80641, "Si el objetivo tiene menos del {0}% de HP, multiplicador de Curación +{1}%.").
+-define(SCD80651, "La Habilidad inflige Veneno (recibe {0}% de DAÑO por segundo) durante {1}s.").
+-define(SCN30401, "Rey de Tártaro: Ascendido").
+-define(SCN30411, "Guadaña de Espectro: Ascendido").
+-define(SCN30421, "Lobo de Tártaro: Ascendido").
+-define(SCN30431, "Impacto Espeluznante: Ascendido").
+-define(SCN30441, "Enredo de Fantasma: Ascendido").
+-define(SCN30451, "Espacio de Banshee: Ascendido").
+-define(SCN30501, "Señor de la Guerra: Ascendido").
+-define(SCN30511, "Habilidad de Cosecha: Ascendido").
+-define(SCN30521, "Ataque con Machete: Ascendido").
+-define(SCN30531, "Incursión de Borde: Ascendido").
+-define(SCN30541, "Estrangular con Machete: Ascendido").
+-define(SCN30551, "Ejecución Final: Ascendido").
+-define(SCN30601, "La Primavera Llega: Ascendido").
+-define(SCN30611, "Ofensa de la Vid: Ascendido").
+-define(SCN30621, "Sierra de Ratán: Ascendido").
+-define(SCN30631, "Flores Florecientes: Ascendido").
+-define(SCN30641, "Reino de la Naturaleza: Ascendido").
+-define(SCN30651, "Ira de la Tierra: Ascendido").
+-define(SCD30401, "DAÑO Básico Infligido +{0}%").
+-define(SCD30411, "DAÑO Básico Infligido +{0}%").
+-define(SCD30421, "DAÑO Básico Infligido +{0}%").
+-define(SCD30431, "DAÑO Básico Infligido +{0}%").
+-define(SCD30441, "DAÑO Básico Infligido +{0}%").
+-define(SCD30451, "DAÑO Básico Infligido +{0}%").
+-define(SCD30501, "DAÑO Básico Infligido +{0}%").
+-define(SCD30511, "DAÑO Básico Infligido +{0}%").
+-define(SCD30521, "DAÑO Básico Infligido +{0}%").
+-define(SCD30531, "DAÑO Básico Infligido +{0}%").
+-define(SCD30541, "DAÑO Básico Infligido +{0}%").
+-define(SCD30551, "DAÑO Básico Infligido +{0}%").
+-define(SCD30601, "DAÑO Básico Infligido +{0}%").
+-define(SCD30611, "DAÑO Básico Infligido +{0}%").
+-define(SCD30621, "DAÑO Básico Infligido +{0}%").
+-define(SCD30631, "DAÑO Básico Infligido +{0}%").
+-define(SCD30641, "Curación básica +{0}%").
+-define(SCD30651, "DAÑO Básico Infligido +{0}%").
+-define(SCD70641, "Curación Fija de Habilidad +{0}").
+-define(SCN70701, "Diosa Lunar: Fortalecido").
+-define(SCN70711, "Flecha lunar: Fortalecido").
+-define(SCN70721, "Impacto de Cuchilla Lunar: Fortalecido").
+-define(SCN70731, "Disparo de Luz de Luna: Fortalecido").
+-define(SCN70741, "Refugio de Luz de Luna: Fortalecido").
+-define(SCN70751, "Esencia Lunar: Fortalecido").
+-define(SCN30701, "Diosa Lunar: Ascendido").
+-define(SCN30711, "Flecha lunar: Ascendido").
+-define(SCN30721, "Impacto de Cuchilla Lunar: Ascendido").
+-define(SCN30731, "Disparo de Luz de Luna: Ascendido").
+-define(SCN30741, "Refugio de Luz de Luna: Ascendido").
+-define(SCN30751, "Esencia Lunar: Ascendido").
+-define(SCN80701, "Diosa Lunar: Despierto").
+-define(SCN80711, "Flecha lunar: Despierto").
+-define(SCN80721, "Impacto de Cuchilla Lunar: Despierto").
+-define(SCN80731, "Disparo de Luz de Luna: Despierto").
+-define(SCN80741, "Refugio de Luz de Luna: Despierto").
+-define(SCN80751, "Esencia Lunar: Despierto").
+-define(SCD80701, "Otorga a los aliados {0}% de ATQ durante {1} s.con una Transformación exitosa.").
+-define(SCD80711, "Tiene un {0}% de probabilidad de Perforar objetivos (DEF -{1}%) durante {2} s.").
+-define(SCD80721, "La habilidad inflige Tendones (VEL de Movimiento -{0}%) durante {1} s.").
+-define(SCD80731, "Duración de Aturdimiento +{0} s.").
+-define(SCD80741, "La absorción de DAÑO del escudo aumentó a {0}%.").
+-define(SCD80751, "Al atacar a enemigos aturdidos, el modificador de DAÑO de la habilidad aumenta un {0}%.").
+-define(BCN4001, "").
+-define(BCD4001, "").
+-define(BCN4002, "").
+-define(BCD4002, "").
+-define(SCN64001, "").
+-define(SCD64001, "").
+-define(SCN64011, "").
+-define(SCD64011, "").
+-define(SCN64021, "").
+-define(SCD64021, "").
+-define(SCN64031, "").
+-define(SCD64031, "").
+-define(SCN64041, "").
+-define(SCD64041, "").
+-define(SCN64051, "").
+-define(SCD64051, "").
+-define(SCN64061, "").
+-define(SCD64061, "").
+-define(SCN64071, "").
+-define(SCD64071, "").
+-define(SCN64081, "").
+-define(SCD64081, "").
+-define(SCN64091, "").
+-define(SCD64091, "").
+-define(SN301001, "").
+-define(SCD61051, "").
+-define(SCD61061, "").
+-define(SCD62081, "").
+-define(SCD62091, "").
+-define(SCD63081, "").
+-define(SCD63091, "").
+-define(SCD64101, "").
+-define(SCD64111, "").
+-define(SCN193091, "").
+-define(SCD193091, "").
+-define(SCN193101, "").
+-define(SCD193101, "").
+-define(SCN193111, "").
+-define(SCD193111, "").
+-define(BCD1042, "").
+-define(BCD1052, "").
+-define(BCD1062, "").
+-define(SCD61032, "").
+-define(SCD61041, "").
+-define(BCD2032, "").
+-define(BCD2042, "").
+-define(SCD62031, "").
+-define(SCD62051, "").
+-define(SCD62072, "").
+-define(SCD63041, "").
+-define(SCD63051, "").
+-define(BCD3042, "").
+-define(BCD3052, "").
+-define(SCD81101, "").
+-define(SCN31201, "").
+-define(SCN71201, "").
+-define(SCN81201, "").
+-define(SCD81201, "").
+-define(SCN170441, "").
+-define(SCD170441, "").
+-define(SCN170451, "").
+-define(SCD170451, "").
+-define(SCN170461, "").
+-define(SCD170461, "").
+-define(SCN170471, "").
+-define(SCD170471, "").
+-endif.
+

@@ -1,0 +1,6 @@
+c#代码 空间:Remnant_Afterglow
+MainView.cs  游戏开始界面UI代码
+view文件夹: 游戏各界面UI代码
+component文件夹：UI组件
+
+

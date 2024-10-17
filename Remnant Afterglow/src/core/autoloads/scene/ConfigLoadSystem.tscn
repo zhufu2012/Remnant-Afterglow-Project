@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d68woole5yk3"]
+
+[ext_resource type="Script" path="res://src/core/autoloads/ConfigLoadSystem.cs" id="1_fk2o1"]
+
+[node name="ConfigLoadSystem" type="Node"]
+script = ExtResource("1_fk2o1")

@@ -1,0 +1,18 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "SeedTypeId": 1,
+        "SeedTypeName": "测试固定种子",
+        "SeedWay": 0,
+        "Seed": 0,
+        "NoiseId": 1
+    },
+    {
+        "KEY_INDEX": "2",
+        "SeedTypeId": 2,
+        "SeedTypeName": "测试固定噪声种子",
+        "SeedWay": 3,
+        "Seed": 392802837,
+        "NoiseId": 1
+    }
+]

@@ -1,0 +1,18 @@
+加载顺序
+IdGenerator：唯一id生成器
+
+ModLoadSystem: 模组加载器 读取模组相关数据
+
+LanguageLoad: 语言加载器 加载语言数据
+
+ConfigLoadSystem: 配置加载器  根据模组数据，语言数据，生成覆盖关系等，
+创建新的配置
+
+ConfigCache   配置缓存，用于快速存储和检索配置信息，可用于：
+1.兵种，子弹等需要快速生成的对象
+2.由外部xlsx表控制的全局配置
+
+SaveLoadSystem:	存档管理器
+
+DeveloperTools：开发者工具
+

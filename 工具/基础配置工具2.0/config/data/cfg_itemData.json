@@ -1,0 +1,11 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "ItemId": 1,
+        "ItemName": "测试道具",
+        "ItemDesc": "测试道具",
+        "InitNum": 10,
+        "BagId": 1,
+        "ItemType": 1
+    }
+]

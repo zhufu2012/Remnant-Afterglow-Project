@@ -1,0 +1,2 @@
+attack_type    攻击效果 文件夹
+object_expand	拓展对象 文件夹

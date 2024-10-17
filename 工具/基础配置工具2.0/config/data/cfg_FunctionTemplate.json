@@ -1,0 +1,14 @@
+[
+    {
+        "KEY_INDEX": "AttrDependency",
+        "TemplateId": "AttrDependency",
+        "TableName": "cfg_AttrDependency",
+        "TableKey": "DependencyId",
+        "TableCode": "Code",
+        "TableReturn": "Relation",
+        "CodePack": "",
+        "CodeVariable": "float BaseValue,float BaseMax,float BaseMin,float BaseRegen,float TargetValue,float TargetMax,float TargetMin,float TargetRegen",
+        "CodeReturn": "float",
+        "VariableType": "Func<float, float, float,float,float,float,float,float,float>"
+    }
+]

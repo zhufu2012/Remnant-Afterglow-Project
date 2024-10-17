@@ -1,0 +1,41 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "GenerateMapId": 1,
+        "GenerateMapName": "测试地图",
+        "Width": 200,
+        "Height": 200,
+        "IsNeedWall": true,
+        "WallThickness": 2,
+        "DefaultMaterialId": 1,
+        "WallMaterialId": 2,
+        "WallImageId": 2,
+        "IsUseNoiseEdit": true,
+        "SeedTypeId": 2,
+        "IsDensityContrary": true,
+        "Density": 400000,
+        "WallParamList": [
+            [
+                1,
+                3
+            ]
+        ],
+        "AdornLayerIdList": [
+            1
+        ],
+        "ExtraDrawIdList": [
+            1
+        ],
+        "BigStructIdList": [
+            1,
+            2
+        ],
+        "IsClearWall": false,
+        "IsClearDefine": false,
+        "MinWallMeasure": 20,
+        "MinDefineMeasure": 20,
+        "IsDrawPass": true,
+        "PassMaterialId": 1,
+        "PassWidth": 1
+    }
+]

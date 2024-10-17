@@ -1,0 +1,16 @@
+{
+    "language_files": [
+        {
+            "file_name": "测试文本",
+            "file_path": "./data/language/data/language_测试文本.json"
+        },
+        {
+            "file_name": "兵种名称文本",
+            "file_path": "./data/language/data/language_兵种名称文本.json"
+        },
+        {
+            "file_name": "炮塔相关文本",
+            "file_path": "./data/language/data/language_炮塔相关文本.json"
+        }
+    ]
+}

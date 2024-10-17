@@ -1,0 +1,23 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "BigMapId": 1,
+        "BigMapDescribe": "测试大地图生成",
+        "Width": 10,
+        "Height": 10,
+        "IsNeedWall": true,
+        "WallThickness": 1,
+        "DefaultNodeId": 2,
+        "WallMaterialId": 1,
+        "IsUseNoiseEdit": true,
+        "SeedTypeId": 2,
+        "IsDensityContrary": true,
+        "Density": 200000,
+        "WallParamList": [],
+        "FixedtCellList": [],
+        "LogicIdList": [],
+        "BackgroundType": 0,
+        "BackgroundImage": "null",
+        "BackgroundShader": ""
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "TowerId": 1,
+        "TowerName": "测试炮塔1",
+        "TempLateList": [
+            1
+        ],
+        "ObjectId": 1,
+        "CampId": 1,
+        "TowerSize": [
+            3,
+            3
+        ],
+        "WeaponList": [
+            [
+                1,
+                0,
+                40,
+                40
+            ]
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    }
+]

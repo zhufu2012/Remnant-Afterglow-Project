@@ -1,0 +1,128 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "ViewId": 1,
+        "ViewName": "默认配置界面",
+        "Zindex": 1,
+        "SizeType": 1,
+        "ViewSize": [
+            1152.0,
+            648.0
+        ],
+        "ViewPos": [
+            20.0,
+            20.0
+        ],
+        "BackdropColor": [
+            100,
+            100,
+            20
+        ],
+        "BackdropPng": "null"
+    },
+    {
+        "KEY_INDEX": "2",
+        "ViewId": 2,
+        "ViewName": "科技树界面",
+        "Zindex": 1,
+        "SizeType": 2,
+        "ViewSize": [
+            1152.0,
+            648.0
+        ],
+        "ViewPos": [
+            20.0,
+            20.0
+        ],
+        "BackdropColor": [
+            0,
+            0,
+            0
+        ],
+        "BackdropPng": "null"
+    },
+    {
+        "KEY_INDEX": "3",
+        "ViewId": 3,
+        "ViewName": "数据库界面",
+        "Zindex": 1,
+        "SizeType": 2,
+        "ViewSize": [
+            1152.0,
+            648.0
+        ],
+        "ViewPos": [
+            20.0,
+            20.0
+        ],
+        "BackdropColor": [
+            0,
+            0,
+            0
+        ],
+        "BackdropPng": "null"
+    },
+    {
+        "KEY_INDEX": "4",
+        "ViewId": 4,
+        "ViewName": "核心插件配置界面",
+        "Zindex": 1,
+        "SizeType": 1,
+        "ViewSize": [
+            1152.0,
+            648.0
+        ],
+        "ViewPos": [
+            20.0,
+            20.0
+        ],
+        "BackdropColor": [
+            0,
+            0,
+            0
+        ],
+        "BackdropPng": "null"
+    },
+    {
+        "KEY_INDEX": "5",
+        "ViewId": 5,
+        "ViewName": "道具配置界面",
+        "Zindex": 1,
+        "SizeType": 1,
+        "ViewSize": [
+            1152.0,
+            648.0
+        ],
+        "ViewPos": [
+            20.0,
+            20.0
+        ],
+        "BackdropColor": [
+            0,
+            0,
+            0
+        ],
+        "BackdropPng": "null"
+    },
+    {
+        "KEY_INDEX": "6",
+        "ViewId": 6,
+        "ViewName": "科技配置界面",
+        "Zindex": 1,
+        "SizeType": 1,
+        "ViewSize": [
+            1152.0,
+            648.0
+        ],
+        "ViewPos": [
+            20.0,
+            20.0
+        ],
+        "BackdropColor": [
+            0,
+            0,
+            0
+        ],
+        "BackdropPng": "null"
+    }
+]

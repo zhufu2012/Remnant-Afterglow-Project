@@ -1,0 +1,50 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "BuildingID": 1,
+        "BuildingName": "城墙",
+        "TempLateList": [
+            1
+        ],
+        "ObjectId": 1,
+        "DefaultCamp": 1,
+        "BuildingSize": 2,
+        "BuildingRules": [
+            1,
+            3
+        ],
+        "AnimaTypeList": []
+    },
+    {
+        "KEY_INDEX": "2",
+        "BuildingID": 2,
+        "BuildingName": "加固城墙",
+        "TempLateList": [
+            1
+        ],
+        "ObjectId": 2,
+        "DefaultCamp": 1,
+        "BuildingSize": 4,
+        "BuildingRules": [
+            1,
+            3
+        ],
+        "AnimaTypeList": []
+    },
+    {
+        "KEY_INDEX": "3",
+        "BuildingID": 3,
+        "BuildingName": "核心节点",
+        "TempLateList": [
+            1
+        ],
+        "ObjectId": 3,
+        "DefaultCamp": 1,
+        "BuildingSize": 8,
+        "BuildingRules": [
+            1,
+            3
+        ],
+        "AnimaTypeList": []
+    }
+]

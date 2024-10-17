@@ -1,0 +1,66 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "CameraId": 1,
+        "AssemblyIdList": [
+            1,
+            2
+        ],
+        "StartPos": [
+            576.0,
+            324.0
+        ],
+        "IsMove": true,
+        "MoveSpeed": 1000,
+        "StartZoom": [
+            1.0,
+            1.0
+        ],
+        "IsZoomIn": true,
+        "IsZoomOut": true,
+        "MaxZoom": 2.0,
+        "MinZoom": 0.5,
+        "ZoomIncrement": [
+            0.05,
+            0.05
+        ],
+        "IsEdgeScroll": false,
+        "EdgeScrollMargin": 50,
+        "BaseEdgeScrollSpeed": 1000,
+        "CursorPoint": "./data/config/images/ID_87836F31451A4C5290FF68B6A8435F6A.png",
+        "CursorGrab": "./data/config/images/ID_FC934E97648E447FA4FDF25D5E6B8D50.png"
+    },
+    {
+        "KEY_INDEX": "2",
+        "CameraId": 2,
+        "AssemblyIdList": [
+            5,
+            6,
+            7,
+            8
+        ],
+        "StartPos": [
+            576.0,
+            324.0
+        ],
+        "IsMove": true,
+        "MoveSpeed": 1000,
+        "StartZoom": [
+            1.0,
+            1.0
+        ],
+        "IsZoomIn": true,
+        "IsZoomOut": true,
+        "MaxZoom": 2.0,
+        "MinZoom": 0.5,
+        "ZoomIncrement": [
+            0.05,
+            0.05
+        ],
+        "IsEdgeScroll": false,
+        "EdgeScrollMargin": 50,
+        "BaseEdgeScrollSpeed": 1000,
+        "CursorPoint": "./data/config/images/ID_87836F31451A4C5290FF68B6A8435F6A.png",
+        "CursorGrab": "./data/config/images/ID_FC934E97648E447FA4FDF25D5E6B8D50.png"
+    }
+]

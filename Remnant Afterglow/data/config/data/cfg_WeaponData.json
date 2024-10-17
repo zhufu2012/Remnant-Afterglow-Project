@@ -1,0 +1,20 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "WeaponId": 1,
+        "ObjectId": 1,
+        "Name": "测试武器1",
+        "Describe": "测试武器1-测试",
+        "Type": 1,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            100,
+            100,
+            100
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    }
+]

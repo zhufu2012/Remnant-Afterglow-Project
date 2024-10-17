@@ -1,0 +1,32 @@
+[
+    {
+        "KEY_INDEX": "0",
+        "ErrorId": 0,
+        "zh_cn": "正常"
+    },
+    {
+        "KEY_INDEX": "1",
+        "ErrorId": 1,
+        "zh_cn": "配置出现问题"
+    },
+    {
+        "KEY_INDEX": "2",
+        "ErrorId": 2,
+        "zh_cn": "参数错误"
+    },
+    {
+        "KEY_INDEX": "3",
+        "ErrorId": 3,
+        "zh_cn": "功能未开启"
+    },
+    {
+        "KEY_INDEX": "4",
+        "ErrorId": 4,
+        "zh_cn": "未知错误"
+    },
+    {
+        "KEY_INDEX": "1001",
+        "ErrorId": 1001,
+        "zh_cn": "存档创建失败，已经存在该名称的存档！"
+    }
+]

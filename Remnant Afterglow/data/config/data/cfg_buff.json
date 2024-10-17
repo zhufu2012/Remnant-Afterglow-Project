@@ -1,0 +1,26 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "KetId": 1,
+        "buffName": "燃烧1",
+        "buff111": "每秒损失1%+15点装甲血量和2%+10点结构值",
+        "EffectValue": 100,
+        "ReduceValue": 20
+    },
+    {
+        "KEY_INDEX": "2",
+        "KetId": 2,
+        "buffName": "燃烧2",
+        "buff111": "每秒损失2%+30点装甲血量和4%+20点结构值",
+        "EffectValue": 250,
+        "ReduceValue": 50
+    },
+    {
+        "KEY_INDEX": "3",
+        "KetId": 3,
+        "buffName": "燃烧3",
+        "buff111": "每秒损失4%+45点装甲血量和8%+40点结构值",
+        "EffectValue": 500,
+        "ReduceValue": 100
+    }
+]

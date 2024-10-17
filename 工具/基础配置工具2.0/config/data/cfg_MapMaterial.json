@@ -1,0 +1,62 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "MaterialId": 1,
+        "MaterialName": "空地",
+        "PassTypeId": 1,
+        "Probability": 0.0001,
+        "ImageSetId": 1,
+        "ImageSetIndex": 20,
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "2",
+        "MaterialId": 2,
+        "MaterialName": "墙壁",
+        "PassTypeId": 3,
+        "Probability": 0.0001,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13,
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "3",
+        "MaterialId": 3,
+        "MaterialName": "水流",
+        "PassTypeId": 2,
+        "Probability": 0.0001,
+        "ImageSetId": 1,
+        "ImageSetIndex": 19,
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "4",
+        "MaterialId": 4,
+        "MaterialName": "数字2",
+        "PassTypeId": 1,
+        "Probability": 1.0,
+        "ImageSetId": 2,
+        "ImageSetIndex": 21,
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "5",
+        "MaterialId": 5,
+        "MaterialName": "数字3",
+        "PassTypeId": 1,
+        "Probability": 1.0,
+        "ImageSetId": 2,
+        "ImageSetIndex": 22,
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "2",
+        "MaterialId": 2,
+        "MaterialName": "悬崖",
+        "PassTypeId": 3,
+        "Probability": 0.0001,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13,
+        "Parame": 1.0
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "WeaponId": 1,
+        "Type": 1,
+        "Range": 40.0,
+        "LaunchTotal": 10,
+        "EmissionInterval": 1,
+        "EmissionNum": 5,
+        "CoolTime": 120,
+        "FirePointList": [
+            [
+                40.0,
+                40.0
+            ],
+            [
+                41.0,
+                40.0
+            ]
+        ],
+        "StartAngle": 0.0,
+        "RotationSpeed": 90.0,
+        "CurrScatteringRange": 2.0
+    }
+]

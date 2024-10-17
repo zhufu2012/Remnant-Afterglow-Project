@@ -1,0 +1,35 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "BrushId": 1,
+        "BrushShowType": true,
+        "BrushPos": [
+            40,
+            40
+        ],
+        "WaveIdList": [
+            1,
+            2
+        ],
+        "ShapeSelect": 2,
+        "Polygon": [
+            [
+                2,
+                2
+            ],
+            [
+                2,
+                -2
+            ],
+            [
+                -2,
+                -2
+            ],
+            [
+                -2,
+                2
+            ]
+        ],
+        "Radius": 1.0
+    }
+]

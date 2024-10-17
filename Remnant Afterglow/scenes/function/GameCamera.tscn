@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7bcuodjj6lb3"]
+
+[ext_resource type="Script" path="res://src/core/controllers/GameCamera.cs" id="1_mxq74"]
+
+[node name="GameCamera" type="Camera2D"]
+script = ExtResource("1_mxq74")
+camera_speed = 1000

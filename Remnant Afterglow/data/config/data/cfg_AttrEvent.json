@@ -1,0 +1,86 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "AttrEventId": 1,
+        "AttrEventDescribe": "自律体-1_结构值清空",
+        "EventType": 0,
+        "IsForever": false,
+        "DelayTime": 1000,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "2",
+        "AttrEventId": 2,
+        "AttrEventDescribe": "自律体-1_装甲血量一半",
+        "EventType": 0,
+        "IsForever": false,
+        "DelayTime": 1000,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "3",
+        "AttrEventId": 3,
+        "AttrEventDescribe": "自律体-1_护盾900",
+        "EventType": 0,
+        "IsForever": false,
+        "DelayTime": 1000,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "4",
+        "AttrEventId": 4,
+        "AttrEventDescribe": "自律体-1_护盾过载恢复",
+        "EventType": 0,
+        "IsForever": false,
+        "DelayTime": 1000,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "5",
+        "AttrEventId": 5,
+        "AttrEventDescribe": "自律体-1_开始就触发",
+        "EventType": 0,
+        "IsForever": false,
+        "DelayTime": 1000,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "6",
+        "AttrEventId": 6,
+        "AttrEventDescribe": "自律体-1_结构值700",
+        "EventType": 0,
+        "IsForever": false,
+        "DelayTime": 1000,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "7",
+        "AttrEventId": 7,
+        "AttrEventDescribe": "护盾过载恢复降到0后，护盾刷新满值",
+        "EventType": 0,
+        "IsForever": false,
+        "DelayTime": 100,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    }
+]

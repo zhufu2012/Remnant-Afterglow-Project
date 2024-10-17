@@ -1,0 +1,373 @@
+-ifndef(textDefine_SkillFixInfo_IN_hrl).
+-define(textDefine_SkillFixInfo_IN_hrl, 1).
+-define(SCN213, "Sirkulasi Yin dan Yang").
+-define(SCD213, "Saat menyerang dengan Relik, ada {0}% peluang memicu Sirkulasi Yin-Yang, menimbulkan {1}% DMG dan menyebabkan 100% Hisap Darah, CD {2} detik.").
+-define(SCN41001, "Level Up Skill").
+-define(SCD40001, "DMG Tetap Skill meningkat {0} poin").
+-define(SCN51001, "Terobosan Skill Temporer").
+-define(SCD51001, "Koefisien tetap DMG Skill meningkat {0}%").
+-define(BCN1021, "Penguatan Kekuatan Dewa Perang").
+-define(BCN1031, "Penguatan Perlindungan Thor").
+-define(BCN2011, "Penguatan Jiwa Dewa Api").
+-define(BCN2021, "Penguatan Jiwa Dewa Es").
+-define(BCN3021, "Penguatan Kekuatan Alami").
+-define(BCN3031, "Penguatan Kekuatan Kilat").
+-define(BCD1021, "Durasi Kekuatan Dewa Perang bertambah {0} detik").
+-define(BCD1031, "Durasi Perlindungan Thor bertambah {0} detik").
+-define(BCD2011, "Durasi Jiwa Dewa Api bertambah {0} detik").
+-define(BCD2021, "Durasi Jiwa Dewa Es bertambah {0} detik").
+-define(BCD3021, "Durasi Kekuatan Alami bertambah {0} detik").
+-define(BCD3031, "Durasi Kekuatan Kilat bertambah {0} detik").
+-define(BCN1001, "Perkuat Tekad").
+-define(BCD1001, "Bonus ATK dari Amarah Perang meningkat {0}%, Rate Crit yang diperoleh dari Meraung meningkat {1}%.").
+-define(BCN2001, "Berkah Sihir").
+-define(BCD2001, "Durasi semua Energi Iblis bertambah {0} detik").
+-define(BCN3001, "Perkuat T").
+-define(BCD3001, "Bonus DMG dari setiap lapis Konsentrat bertambah {0}%, Red DMG dari setiap lapis Petir bertambah {1}%.").
+-define(SCN30001, "Avatar Kebijaksanaan · Terobos").
+-define(SCN30011, "Pengadilan Kemenangan · Terobos").
+-define(SCN30021, "Tombak Topan · Terobos").
+-define(SCN30031, "Perisai Napas · Terobos").
+-define(SCN30041, "Tusukan Tombak · Terobos").
+-define(SCN30051, "Hukuman Langit · Terobos").
+-define(SCN30101, "Sigil Revenge · Terobos").
+-define(SCN30111, "Summon Gagak · Terobos").
+-define(SCN30121, "Penyerap Energi · Terobos").
+-define(SCN30131, "Jurus Gagak · Terobos").
+-define(SCN30141, "Tarian Gagak · Terobos").
+-define(SCN30151, "Topan Revenge · Terobos").
+-define(SCN30201, "Kekuasaan Thor · Terobos").
+-define(SCN30211, "Kilat · Terobos").
+-define(SCN30221, "Retakan Kilat · Terobos").
+-define(SCN30231, "Tebasan Kilat · Terobos").
+-define(SCN30241, "Hantaman Kilat · Terobos").
+-define(SCN30251, "Palu Thor · Terobos").
+-define(SCN30301, "Perlindungan Firaun · Terobos").
+-define(SCN30311, "Korona · Terobos").
+-define(SCN30321, "Cahaya Matahari · Terobos").
+-define(SCN30331, "Aura Matahari · Terobos").
+-define(SCN30341, "Kutukan Kuno · Terobos").
+-define(SCN30351, "Angin Matahari · Terobos").
+-define(SCN30901, "").
+-define(SCN31001, "").
+-define(SCN31101, "").
+-define(SCD30001, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30011, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30021, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30031, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30041, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30051, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30101, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30111, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30121, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30131, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30141, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30151, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30201, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30211, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30221, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30231, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30241, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30251, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30301, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30311, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30321, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30331, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30341, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30351, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD61001, "Koefisien peningkatan DMG Skill dalam status Amarah Perang bertambah {0}%").
+-define(SCD61011, "Kekuatan Dewa Perang ekstra memberikan {0}% bonus Rate Crit").
+-define(SCD61021, "Perlindungan Thor ekstra memberikan {0}% Red DMG Blok").
+-define(SCD62001, "Peningkatan koefisien DMG Skill setiap jenis Energi Iblis bertambah {0}%").
+-define(SCD62011, "Peningkatan koefisien Pulih Skill setiap jenis Energi Iblis bertambah {0}%").
+-define(SCD62021, "Saat melepaskan Skill, ada {0}% peluang ekstra memperoleh Energi Iblis - Meteorit (meningkatkan {1}% Bonus DMG Skill).").
+-define(SCD62041, "Saat melepaskan Skill, ada {0}% peluang ekstra memperoleh Energi Iblis - Meteorit (meningkatkan {1}% Bonus DMG Skill).").
+-define(SCD63001, "{0}% peluang ekstra memperoleh dua lapis Konsentrat").
+-define(SCD63011, "{0}% peluang ekstra memperoleh dua lapis Petir").
+-define(SCD63021, "Peningkatan koefisien DMG Skill setiap lapis status Konsentrat bertambah {0}%").
+-define(SCD63031, "Peningkatan koefisien DMG Skill setiap lapis status Petir bertambah {0}%").
+-define(BCD1041, "Durasi Amarah Perang bertambah {0} detik").
+-define(BCD1051, "Durasi Meraung bertambah {0} detik").
+-define(BCD1061, "Peluang menyebabkan Pusing dalam status Meraung bertambah {0}%").
+-define(BCD1071, "Durasi Perlindungan bertambah {0} detik").
+-define(BCD1081, "Durasi Berdarah bertambah {0} detik").
+-define(BCD2031, "Saat status Api Hati menghilang, ada {0}% peluang kembali memberikan status Api Hati pada diri sendiri.").
+-define(BCD2041, "Saat status Es Ilusi menghilang, ada {0}% peluang kembali memberikan status Es Ilusi pada diri sendiri.").
+-define(BCD3041, "Selama dalam durasi Kekuatan Alami, setiap {0} detik akan memperoleh satu lapis status Konsentrat.").
+-define(BCD3051, "Selama dalam durasi Kekuatan Kilat, setiap {0} detik akan memperoleh satu lapis status Petir.").
+-define(SFI_UNITS103, "Detik").
+-define(SCN117, "Badai Es-Perkuat").
+-define(SCD117, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCN118, "Jarum Es-Perkuat").
+-define(SCD118, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD70001, "").
+-define(SCD41001, "Koefisien DMG Skill secara tetap meningkat {0}%, DMG tetap Skill meningkat {1} poin.").
+-define(SCN80001, "Pengadilan Kemenangan · Bangkit").
+-define(SCN80011, "Pengadilan Kemenangan · Bangkit").
+-define(SCN80021, "Tombak Topan · Bangkit").
+-define(SCN80031, "Perisai Napas · Bangkit").
+-define(SCN80041, "Tusukan Tombak · Bangkit").
+-define(SCN80051, "Hukuman Langit · Bangkit").
+-define(SCN80101, "").
+-define(SCN80111, "Summon Gagak · Bangkit").
+-define(SCN80121, "Penyerap Energi · Bangkit").
+-define(SCN80131, "Jurus Gagak · Bangkit").
+-define(SCN80141, "Tarian Gagak · Bangkit").
+-define(SCN80151, "Topan Revenge · Bangkit").
+-define(SCN80201, "").
+-define(SCN80211, "Kilat · Bangkit").
+-define(SCN80221, "Retakan Kilat · Bangkit").
+-define(SCN80231, "Tebasan Kilat · Bangkit").
+-define(SCN80241, "Hantaman Kilat · Bangkit").
+-define(SCN80251, "Palu Thor · Bangkit").
+-define(SCN80301, "").
+-define(SCN80311, "Korona · Bangkit").
+-define(SCN80321, "Cahaya Matahari · Bangkit").
+-define(SCN80331, "Aura Matahari · Bangkit").
+-define(SCN80341, "Kutukan Kuno · Bangkit").
+-define(SCN80351, "Angin Matahari · Bangkit").
+-define(SCN80901, "").
+-define(SCD80901, "").
+-define(SCN81001, "").
+-define(SCN81101, "").
+-define(SCD81001, "").
+-define(SCD80001, "Di tahap terakhir, ada {0}% peluang menyebabkan Buta (Rate Hit -10%) dan Tenang (Rate Crit -20%), durasi {1} detik.").
+-define(SCD80011, "Ada {0}% peluang menyebabkan Cedera Otot (SPD Gerak -33%), durasi {1} detik.").
+-define(SCD80021, "Skill menambahkan DMG sebesar {0}% DEF").
+-define(SCD80031, "Ada {0}% peluang memberikan Perisai sebesar {1}% ATK diri sendiri pada tim").
+-define(SCD80041, "Menambahkan DMG ekstra sebesar {0}% HP Max target").
+-define(SCD80051, "Ada {0}% peluang menghapuskan satu lapis debuff diri sendiri").
+-define(SCD80101, "Saat dilepaskan, akan Regen {0}% HP Max diri sendiri.").
+-define(SCD80111, "Setiap kali melepaskan, ada {0}% peluang menimbulkan Layu pada target.").
+-define(SCD80121, "Skill menimbulkan {0}% Hisap Darah").
+-define(SCD80131, "Skill menimbulkan {0}% Hisap Darah").
+-define(SCD80141, "Setiap kali melepaskan, ada {0}% peluang menimbulkan Layu pada target.").
+-define(SCD80151, "Setelah dilepaskan, seluruh karakter tim akan Regen HP sebesar {0}% ATK diri sendiri.").
+-define(SCD80201, "Menambahkan DMG ekstra sebesar {0}% HP Max target").
+-define(SCD80211, "Ada {0}% peluang menghapuskan satu lapis buff target di sekitar").
+-define(SCD80221, "Menambahkan DMG ekstra sebesar {0}% HP Max target").
+-define(SCD80231, "Ada {0}% peluang menghapuskan dua lapis buff target di sekitar").
+-define(SCD80241, "Menambahkan DMG ekstra sebesar {0}% HP Max target").
+-define(SCD80251, "Menambahkan DMG ekstra sebesar {0}% HP Max target").
+-define(SCD80301, "").
+-define(SCD80311, "Ada {0}% peluang memicu Bakar setiap kali menimbulkan DMG").
+-define(SCD80321, "Ada {0}% peluang ekstra memicu satu lapis Bakar").
+-define(SCD80331, "Ada {0}% peluang ekstra memicu dua lapis Bakar").
+-define(SCD80341, "Ada {0}% peluang menyebabkan Pusing pada target selama 1.5 detik").
+-define(SCD80351, "Ada {0}% peluang ekstra memicu satu lapis Bakar setiap kali menimbulkan DMG").
+-define(SCN70001, "Pengadilan Kemenangan · Perkuat").
+-define(SCN70011, "Pengadilan Kemenangan · Perkuat").
+-define(SCN70021, "Tombak Topan · Perkuat").
+-define(SCN70031, "Perisai Napas-Perkuat").
+-define(SCN70041, "Tusukan Tombak · Perkuat").
+-define(SCN70051, "Hukuman Langit · Perkuat").
+-define(SCN70101, "").
+-define(SCN70111, "Summon Gagak · Perkuat").
+-define(SCN70121, "Penyerap Energi · Perkuat").
+-define(SCN70131, "Jurus Gagak · Perkuat").
+-define(SCN70141, "Tarian Gagak · Perkuat").
+-define(SCN70151, "Topan Revenge · Perkuat").
+-define(SCN70201, "").
+-define(SCN70211, "Kilat · Perkuat").
+-define(SCN70221, "Retakan Kilat · Perkuat").
+-define(SCN70231, "Tebasan Kilat · Perkuat").
+-define(SCN70241, "Hantaman Kilat · Perkuat").
+-define(SCN70251, "Palu Thor · Perkuat").
+-define(SCN70301, "").
+-define(SCN70311, "Korona · Perkuat").
+-define(SCN70321, "Cahaya Matahari · Perkuat").
+-define(SCN70331, "Aura Matahari · Perkuat").
+-define(SCN70341, "Kutukan Kuno · Perkuat").
+-define(SCN70351, "Angin Matahari · Perkuat").
+-define(SCN70901, "").
+-define(SCN71001, "").
+-define(SCN71101, "").
+-define(SCD61031, "Ekstra mengabaikan {0}% DEF terhadap musuh yang memiliki status Berdarah.").
+-define(SCD62061, "Saat HP lebih dari {0}%, koefisien DMG Skill bertambah {1}%.").
+-define(SCD62071, "Peluang menimbulkan Beku bertambah {0}%.").
+-define(SCD63061, "Setiap ada 1 lapis status Konsentrat, koefisien DMG terhadap Max HP target meningkat {0}%.").
+-define(SCD63071, "Setiap ada 1 lapis status Petir, Bonus Skill yang ditambahkan ekstra bertambah {0}%.").
+-define(SCD10001, "ATK Kereta bertambah {0}%.").
+-define(SCN70401, "Raja Akhirat - Perkuat").
+-define(SCN70411, "Sabit Arwah - Perkuat").
+-define(SCN70421, "Serigala Akhirat - Perkuat").
+-define(SCN70431, "Serbuan Pisau Akhirat - Perkuat").
+-define(SCN70441, "Belitan Arwah - Perkuat").
+-define(SCN70451, "Ruang Banshee - Perkuat").
+-define(SCN70501, "Pemimpin Perang - Perkuat").
+-define(SCN70511, "Skill Perang Panen - Perkuat").
+-define(SCN70521, "Serangan Pisau Terbang - Perkuat").
+-define(SCN70531, "Serangan Pisau Tajam - Perkuat").
+-define(SCN70541, "Cekikan Pisau Terbang - Perkuat").
+-define(SCN70551, "Eksekusi Kematian - Perkuat").
+-define(SCN80401, "Raja Akhirat - Bangkit").
+-define(SCN80411, "Sabit Arwah - Bangkit").
+-define(SCN80421, "Serigala Akhirat - Bangkit").
+-define(SCN80431, "Serbuan Pisau Akhirat - Bangkit").
+-define(SCN80441, "Belitan Arwah - Bangkit").
+-define(SCN80451, "Ruang Banshee - Bangkit").
+-define(SCN80501, "Pemimpin Perang - Bangkit").
+-define(SCN80511, "Skill Perang Panen - Bangkit").
+-define(SCN80521, "Serangan Pisau Terbang - Bangkit").
+-define(SCN80531, "Serangan Pisau Tajam - Bangkit").
+-define(SCN80541, "Cekikan Pisau Terbang - Bangkit").
+-define(SCN80551, "Eksekusi Kematian - Bangkit").
+-define(SCD80401, "DMG di tahap pertama menambahkan Lemah (Red DMG Skill -15%) selama {0} detik.").
+-define(SCD80411, "Abaikan {0}% DEF target.").
+-define(SCD80421, "Ekstra memulihkan HP 1x, nilai pemulihan adalah {0}% ATK.").
+-define(SCD80431, "DMG di tahap pertama menambahkan Melunak (Red DMG -10%) selama {0} detik.").
+-define(SCD80441, "DMG di tahap pertama menambahkan Kutukan (Rate Hit -20%) selama {0} detik.").
+-define(SCD80451, "DMG di tahap pertama menambahkan Cemari (Bonus Pulih -20%) selama {0} detik.").
+-define(SCD80501, "Saat Transform berhasil, berpeluang {0}% menghapus satu lapis status debuff diri sendiri.").
+-define(SCD80511, "Rate Crit Skill bertambah {0}%.").
+-define(SCD80521, "Setiap target kehilangan {0}% HP, koefisien tetap DMG Skill bertambah {1}%.").
+-define(SCD80531, "Setiap target kehilangan {0}% HP, koefisien tetap DMG Skill bertambah {1}%.").
+-define(SCD80541, "Setiap target kehilangan {0}% HP, koefisien tetap DMG Skill bertambah {1}%.").
+-define(SCD80551, "Saat digunakan pada karakter dengan HP di bawah 50%, diri sendiri akan mendapatkan Invincible selama {0} detik.").
+-define(SCN70601, "Tibanya Semi - Perkuat").
+-define(SCN70611, "Serangan Rotan - Perkuat").
+-define(SCN70621, "Gergaji Rotan - Perkuat").
+-define(SCN70631, "Mekarnya Bunga - Perkuat").
+-define(SCN70641, "Zona Alami - Perkuat").
+-define(SCN70651, "Arwah Bumi - Perkuat").
+-define(SCN80601, "Tibanya Semi - Bangkit").
+-define(SCN80611, "Serangan Rotan - Bangkit").
+-define(SCN80621, "Gergaji Rotan - Bangkit").
+-define(SCN80631, "Mekarnya Bunga - Bangkit").
+-define(SCN80641, "Zona Alami · Bangkit").
+-define(SCN80651, "Arwah Bumi - Bangkit").
+-define(SCD80601, "Saat Transform berhasil, akan memulihkan HP dari {1}% ATK {0} sekutu.").
+-define(SCD80611, "Berpeluang {0}% menghapus {1} lapis efek debuff sekutu.").
+-define(SCD80621, "Menambahkan De-force (ATK -{0}%) selama {1} detik.").
+-define(SCD80631, "Durasi waktu pemulihan efek pemulihan bertambah {0} detik.").
+-define(SCD80641, "Saat HP target di bawah {0}%, koefisien pemulihan ekstra meningkat {1}%.").
+-define(SCD80651, "Skill ditambah Keracunan (setiap detik menerima {0}% DMG) selama {1} detik.").
+-define(SCN30401, "Raja Akhirat - Terobos").
+-define(SCN30411, "Sabit Arwah - Terobos").
+-define(SCN30421, "Serigala Akhirat - Terobos").
+-define(SCN30431, "Serbuan Pisau Akhirat - Terobos").
+-define(SCN30441, "Belitan Arwah - Terobos").
+-define(SCN30451, "Ruang Banshee - Terobos").
+-define(SCN30501, "Pemimpin Perang - Terobos").
+-define(SCN30511, "Skill Perang Panen - Terobos").
+-define(SCN30521, "Serangan Pisau Terbang - Terobos").
+-define(SCN30531, "Serangan Pisau Tajam - Terobos").
+-define(SCN30541, "Cekikan Pisau Terbang - Terobos").
+-define(SCN30551, "Eksekusi Kematian - Terobos").
+-define(SCN30601, "Tibanya Semi - Terobos").
+-define(SCN30611, "Serangan Rotan - Terobos").
+-define(SCN30621, "Gergaji Rotan - Terobos").
+-define(SCN30631, "Mekarnya Bunga - Terobos").
+-define(SCN30641, "Zona Alami · Terobos").
+-define(SCN30651, "Arwah Bumi - Terobos").
+-define(SCD30401, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30411, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30421, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30431, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30441, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30451, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30501, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30511, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30521, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30531, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30541, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30551, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30601, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30611, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30621, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30631, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD30641, "Memberikan Regen Dasar +{0}%.").
+-define(SCD30651, "DMG Dasar yang ditimbulkan +{0}%").
+-define(SCD70641, "Pemulihan Tetap Skill meningkat {0} poin").
+-define(SCN70701, "Dewi Rembulan - Perkuat").
+-define(SCN70711, "Panah Dewa Bulan - Perkuat").
+-define(SCN70721, "Serbuan Pisau Bulan - Perkuat").
+-define(SCN70731, "Tembakan Sinar Bulan - Perkuat").
+-define(SCN70741, "Perlindungan Cahaya Bulan - Perkuat").
+-define(SCN70751, "Kondensasi Bulan - Perkuat").
+-define(SCN30701, "Dewi Rembulan - Terobos").
+-define(SCN30711, "Panah Dewa Bulan - Terobos").
+-define(SCN30721, "Serbuan Pisau Bulan - Terobos").
+-define(SCN30731, "Tembakan Sinar Bulan - Terobos").
+-define(SCN30741, "Perlindungan Cahaya Bulan - Terobos").
+-define(SCN30751, "Kondensasi Bulan - Terobos").
+-define(SCN80701, "Dewi Rembulan - Bangkit").
+-define(SCN80711, "Panah Dewa Bulan - Bangkit").
+-define(SCN80721, "Serbuan Pisau Bulan - Bangkit").
+-define(SCN80731, "Tembakan Sinar Bulan - Bangkit").
+-define(SCN80741, "Perlindungan Cahaya Bulan - Bangkit").
+-define(SCN80751, "Kondensasi Bulan - Bangkit").
+-define(SCD80701, "Saat Transform berhasil akan meningkatkan {0}% ATK sekutu selama {1} detik.").
+-define(SCD80711, "Berpeluang {0}% menambahkan Tembus (DEF -{1}%) ke target selama {2} detik.").
+-define(SCD80721, "Skill menambahkan Cedera Otot (SPD Gerak -{0}%) selama {1} detik.").
+-define(SCD80731, "Waktu durasi menambahkan Pusing bertambah {0} detik.").
+-define(SCD80741, "Jumlah penyerapan DMG oleh Perisai meningkat hingga {0}%.").
+-define(SCD80751, "Saat menyerang musuh dengan kondisi Pusing, koefisien tetap DMG skill meningkat {0}%.").
+-define(BCN4001, "").
+-define(BCD4001, "").
+-define(BCN4002, "").
+-define(BCD4002, "").
+-define(SCN64001, "").
+-define(SCD64001, "").
+-define(SCN64011, "").
+-define(SCD64011, "").
+-define(SCN64021, "").
+-define(SCD64021, "").
+-define(SCN64031, "").
+-define(SCD64031, "").
+-define(SCN64041, "").
+-define(SCD64041, "").
+-define(SCN64051, "").
+-define(SCD64051, "").
+-define(SCN64061, "").
+-define(SCD64061, "").
+-define(SCN64071, "").
+-define(SCD64071, "").
+-define(SCN64081, "").
+-define(SCD64081, "").
+-define(SCN64091, "").
+-define(SCD64091, "").
+-define(SN301001, "").
+-define(SCD61051, "").
+-define(SCD61061, "").
+-define(SCD62081, "").
+-define(SCD62091, "").
+-define(SCD63081, "").
+-define(SCD63091, "").
+-define(SCD64101, "").
+-define(SCD64111, "").
+-define(SCN193091, "").
+-define(SCD193091, "").
+-define(SCN193101, "").
+-define(SCD193101, "").
+-define(SCN193111, "").
+-define(SCD193111, "").
+-define(BCD1042, "").
+-define(BCD1052, "").
+-define(BCD1062, "").
+-define(SCD61032, "").
+-define(SCD61041, "").
+-define(BCD2032, "").
+-define(BCD2042, "").
+-define(SCD62031, "").
+-define(SCD62051, "").
+-define(SCD62072, "").
+-define(SCD63041, "").
+-define(SCD63051, "").
+-define(BCD3042, "").
+-define(BCD3052, "").
+-define(SCD81101, "").
+-define(SCN31201, "").
+-define(SCN71201, "").
+-define(SCN81201, "").
+-define(SCD81201, "").
+-define(SCN170441, "").
+-define(SCD170441, "").
+-define(SCN170451, "").
+-define(SCD170451, "").
+-define(SCN170461, "").
+-define(SCD170461, "").
+-define(SCN170471, "").
+-define(SCD170471, "").
+-endif.
+

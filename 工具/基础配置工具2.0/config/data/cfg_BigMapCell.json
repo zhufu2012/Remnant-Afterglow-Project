@@ -1,0 +1,40 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "NodeId": 1,
+        "NodeType": 0,
+        "ImageSetId": 4,
+        "ImageSetIndex": 1,
+        "LogicIdList": [],
+        "IsSelect": false,
+        "IsClick": true,
+        "NodeClickEventList": [],
+        "NodeEnterEventList": []
+    },
+    {
+        "KEY_INDEX": "2",
+        "NodeId": 2,
+        "NodeType": 0,
+        "ImageSetId": 3,
+        "ImageSetIndex": 2,
+        "LogicIdList": [],
+        "IsSelect": false,
+        "IsClick": true,
+        "NodeClickEventList": [],
+        "NodeEnterEventList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "3",
+        "NodeId": 3,
+        "NodeType": 0,
+        "ImageSetId": 4,
+        "ImageSetIndex": 2,
+        "LogicIdList": [],
+        "IsSelect": true,
+        "IsClick": true,
+        "NodeClickEventList": [],
+        "NodeEnterEventList": []
+    }
+]

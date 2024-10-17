@@ -1,0 +1,79 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "PassTypeId": 1,
+        "IsPass": true,
+        "ExamineType": 1,
+        "PassCost": 100,
+        "Type": 0,
+        "PassSpeedParm": 1.0,
+        "BuildInfluence": "",
+        "UnitInfluence": ""
+    },
+    {
+        "KEY_INDEX": "2",
+        "PassTypeId": 2,
+        "IsPass": false,
+        "ExamineType": 2,
+        "PassCost": 0,
+        "Type": 0,
+        "PassSpeedParm": 0.8,
+        "BuildInfluence": "",
+        "UnitInfluence": ""
+    },
+    {
+        "KEY_INDEX": "3",
+        "PassTypeId": 3,
+        "IsPass": false,
+        "ExamineType": 2,
+        "PassCost": 0,
+        "Type": 2,
+        "PassSpeedParm": 1.0,
+        "BuildInfluence": "",
+        "UnitInfluence": ""
+    },
+    {
+        "KEY_INDEX": "4",
+        "PassTypeId": 4,
+        "IsPass": true,
+        "ExamineType": 1,
+        "PassCost": 500,
+        "Type": 0,
+        "PassSpeedParm": 0.8,
+        "BuildInfluence": "减少攻击速度25%",
+        "UnitInfluence": "减少攻击速度25%"
+    },
+    {
+        "KEY_INDEX": "5",
+        "PassTypeId": 5,
+        "IsPass": false,
+        "ExamineType": 1,
+        "PassCost": 0,
+        "Type": 0,
+        "PassSpeedParm": 0.5,
+        "BuildInfluence": "持续对没有抗火标签的建筑造成伤害",
+        "UnitInfluence": "持续对没有抗火标签的单位造成伤害"
+    },
+    {
+        "KEY_INDEX": "6",
+        "PassTypeId": 6,
+        "IsPass": true,
+        "ExamineType": 1,
+        "PassCost": 100,
+        "Type": 0,
+        "PassSpeedParm": 0.0,
+        "BuildInfluence": "",
+        "UnitInfluence": ""
+    },
+    {
+        "KEY_INDEX": "7",
+        "PassTypeId": 7,
+        "IsPass": false,
+        "ExamineType": 1,
+        "PassCost": 0,
+        "Type": 0,
+        "PassSpeedParm": 1.0,
+        "BuildInfluence": "",
+        "UnitInfluence": "杀死陆军和爬行单位"
+    }
+]

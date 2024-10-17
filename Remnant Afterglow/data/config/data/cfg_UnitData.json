@@ -1,0 +1,38 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "UnitId": 1,
+        "UnitName": "自律体-1",
+        "TempLateList": [
+            1
+        ],
+        "ObjectId": 1,
+        "UnitSize": 20,
+        "CampId": 1,
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ]
+    },
+    {
+        "KEY_INDEX": "2",
+        "UnitId": 2,
+        "UnitName": "自律体-2",
+        "TempLateList": [
+            1
+        ],
+        "ObjectId": 2,
+        "UnitSize": 20,
+        "CampId": 1,
+        "AnimaTypeList": [],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ]
+    }
+]

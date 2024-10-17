@@ -1,0 +1,42 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "DiffId": 1,
+        "DiffName": "简单",
+        "DiffDes": "敌人血量-70%\n资源建筑产量130%\n建筑重建时间80%\n积分获得75%",
+        "DiffPng": "./data/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png",
+        "IsUser": true
+    },
+    {
+        "KEY_INDEX": "2",
+        "DiffId": 2,
+        "DiffName": "标准",
+        "DiffDes": "敌人血量-100%\n资源建筑产量100%\n建筑重建时间100%\n积分获得100%",
+        "DiffPng": "./data/config/images/ID_A5BAA4F30A314152873A3175A4E9916B.png",
+        "IsUser": true
+    },
+    {
+        "KEY_INDEX": "3",
+        "DiffId": 3,
+        "DiffName": "困难",
+        "DiffDes": "敌人血量-110%\n资源建筑产量100%\n建筑重建时间110%\n积分获得150%",
+        "DiffPng": "./data/config/images/ID_4694356ECA8846A4B82A719AD0EA8B56.png",
+        "IsUser": true
+    },
+    {
+        "KEY_INDEX": "4",
+        "DiffId": 4,
+        "DiffName": "极难",
+        "DiffDes": "敌人血量-120%\n资源建筑产量100%\n建筑重建时间120%\n积分获得200%",
+        "DiffPng": "./data/config/images/ID_35B7110FD4054ADDB92C738FB5A63384.png",
+        "IsUser": true
+    },
+    {
+        "KEY_INDEX": "5",
+        "DiffId": 5,
+        "DiffName": "灭绝",
+        "DiffDes": "敌人血量-130%\n资源建筑产量100%\n建筑重建时间130%\n在每波队伍中插入精锐单位\n积分获得300%",
+        "DiffPng": "./data/config/images/ID_715E5584D9CC44AEB28D914CE7AF0D8C.png",
+        "IsUser": true
+    }
+]

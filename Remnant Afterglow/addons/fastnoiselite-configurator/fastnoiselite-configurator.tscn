@@ -1,0 +1,689 @@
+[gd_scene load_steps=20 format=3 uid="uid://dokvx037bur88"]
+
+[ext_resource type="FontFile" uid="uid://c83q7bmxvg8gi" path="res://addons/fastnoiselite-configurator/assets/Hack_Regular.ttf" id="1_3c6wn"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/UI.gd" id="1_x7r5x"]
+[ext_resource type="StyleBox" uid="uid://b3agi8bakfpu7" path="res://addons/fastnoiselite-configurator/assets/code-snippet-style.tres" id="2_263un"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/Control/Noise.gd" id="2_faqdp"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/Control/Seed.gd" id="3_r1gtv"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/Control/Size.gd" id="4_bcbty"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/Control/DomainWarp.gd" id="5_2b6m4"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/Control/Fractal.gd" id="6_qljlt"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/Control/Cellular.gd" id="7_54ehr"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/Control/Tool.gd" id="8_jcqrt"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/Preview.gd" id="9_isml3"]
+[ext_resource type="Script" path="res://addons/fastnoiselite-configurator/UI/DebugInfo.gd" id="9_s2ggt"]
+
+[sub_resource type="Theme" id="Theme_lp5bd"]
+CodeSnippet/base_type = &"TextEdit"
+CodeSnippet/colors/selection_color = Color(0.243137, 0.372549, 0.490196, 1)
+CodeSnippet/font_sizes/font_size = 13
+CodeSnippet/fonts/font = ExtResource("1_3c6wn")
+CodeSnippet/styles/focus = ExtResource("2_263un")
+CodeSnippet/styles/normal = ExtResource("2_263un")
+CodeSnippet/styles/read_only = ExtResource("2_263un")
+MarginContainer/constants/margin_bottom = 5
+MarginContainer/constants/margin_left = 5
+MarginContainer/constants/margin_right = 5
+MarginContainer/constants/margin_top = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_5skih"]
+font_color = Color(0.764706, 0.764706, 0.764706, 1)
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_41h1v"]
+number_color = Color(0.227451, 0.435294, 0.662745, 1)
+symbol_color = Color(1, 1, 1, 1)
+keyword_colors = {
+"false": Color(0.623529, 0.270588, 0.6, 1),
+"true": Color(0.623529, 0.270588, 0.6, 1)
+}
+color_regions = {
+"\" \"": Color(0.607843, 0.552941, 0.290196, 1)
+}
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_n8842"]
+noise_type = 2
+seed = 1039518602
+fractal_type = 0
+fractal_octaves = 4
+fractal_lacunarity = 1.0
+fractal_gain = 0.2
+fractal_weighted_strength = 2.0
+cellular_return_type = 3
+domain_warp_enabled = true
+domain_warp_type = 2
+domain_warp_amplitude = 30.01
+domain_warp_frequency = 0.04
+domain_warp_fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2w1io"]
+noise = SubResource("FastNoiseLite_n8842")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vnmdv"]
+font_color = Color(0.701961, 0.701961, 0.701961, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fii6a"]
+font_size = 11
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_lp5bd")
+script = ExtResource("1_x7r5x")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Noise" type="ScrollContainer" parent="HSplitContainer/TabContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_faqdp")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Noise"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Seed" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("3_r1gtv")
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Seed"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Seed"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Seed"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Seed/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1000.0
+value = 1000.0
+rounded = true
+allow_greater = true
+
+[node name="RandomizeButton" type="Button" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Seed/HBoxContainer"]
+layout_mode = 2
+text = "种子随机"
+
+[node name="Type" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Type"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Type"
+
+[node name="OptionButton" type="OptionButton" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Type"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 6
+popup/item_0/text = "Value"
+popup/item_0/id = 5
+popup/item_1/text = "Cubic"
+popup/item_1/id = 4
+popup/item_2/text = "Perlin"
+popup/item_2/id = 3
+popup/item_3/text = "Cellular"
+popup/item_3/id = 2
+popup/item_4/text = "Simplex"
+popup/item_4/id = 0
+popup/item_5/text = "Simplex Smooth"
+popup/item_5/id = 1
+
+[node name="Frequency" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Frequency"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Frequency"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Frequency"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 1000.0
+step = 0.001
+value = 0.01
+allow_greater = true
+
+[node name="Size" type="PanelContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("4_bcbty")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Size"
+label_settings = SubResource("LabelSettings_5skih")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="X" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/X"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "X"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/X"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 128.0
+max_value = 4096.0
+step = 64.0
+value = 512.0
+rounded = true
+allow_greater = true
+custom_arrow_step = 64.0
+
+[node name="Y" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Y"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Y"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Size/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Y"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 128.0
+max_value = 4096.0
+step = 64.0
+value = 512.0
+rounded = true
+allow_greater = true
+custom_arrow_step = 64.0
+
+[node name="DomainWarp" type="PanelContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("5_2b6m4")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Domain warp"
+label_settings = SubResource("LabelSettings_5skih")
+
+[node name="Enabled" type="CheckButton" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Enabled"
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Type" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Type"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Type"
+
+[node name="OptionButton" type="OptionButton" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Type"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+popup/item_0/text = "Simplex"
+popup/item_0/id = 0
+popup/item_1/text = "Simplex Reduced"
+popup/item_1/id = 1
+popup/item_2/text = "Basic Grid"
+popup/item_2/id = 2
+
+[node name="Frequency" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Frequency"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fractal frequency"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Frequency"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+step = 0.01
+value = 0.04
+allow_greater = true
+
+[node name="Amplitude" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Amplitude"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Amplitude"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Amplitude"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+value = 30.01
+allow_greater = true
+
+[node name="FractalGain" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/FractalGain"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fractal gain"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/FractalGain"]
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.0
+value = 0.5
+allow_greater = true
+custom_arrow_step = 0.01
+
+[node name="FractalType" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/FractalType"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fractal type"
+
+[node name="OptionButton" type="OptionButton" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/FractalType"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "Progressive"
+popup/item_1/id = 1
+popup/item_2/text = "Independent"
+popup/item_2/id = 2
+
+[node name="FractalOctaves" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/FractalOctaves"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fractal octaves"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/DomainWarp/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/FractalOctaves"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+value = 5.0
+allow_greater = true
+
+[node name="Fractal" type="PanelContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("6_qljlt")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fractal"
+label_settings = SubResource("LabelSettings_5skih")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Type" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Type"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Type"
+
+[node name="OptionButton" type="OptionButton" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Type"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 4
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "Fbm"
+popup/item_1/id = 1
+popup/item_2/text = "Ridged"
+popup/item_2/id = 2
+popup/item_3/text = "Ping Pong"
+popup/item_3/id = 3
+
+[node name="Gain" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Gain"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Gain"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Gain"]
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.0
+value = 0.2
+allow_greater = true
+custom_arrow_step = 0.01
+
+[node name="Lacunarity" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Lacunarity"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lacunarity"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Lacunarity"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+step = 0.01
+value = 1.0
+allow_greater = true
+
+[node name="Octaves" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Octaves"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Octaves"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Octaves"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+value = 4.0
+rounded = true
+allow_greater = true
+
+[node name="PingPongStrength" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/PingPongStrength"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ping pong strength"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/PingPongStrength"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+step = 0.01
+value = 2.0
+allow_greater = true
+
+[node name="WeightedStrength" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/WeightedStrength"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Weighted strength"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Fractal/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/WeightedStrength"]
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.01
+value = 2.0
+allow_greater = true
+
+[node name="Cellular" type="PanelContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("7_54ehr")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Cellular"
+label_settings = SubResource("LabelSettings_5skih")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="DistanceFunction" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DistanceFunction"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Distance function"
+
+[node name="OptionButton" type="OptionButton" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DistanceFunction"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 4
+popup/item_0/text = "Euclidian"
+popup/item_0/id = 0
+popup/item_1/text = "Euclidian Squared"
+popup/item_1/id = 1
+popup/item_2/text = "Manhattan"
+popup/item_2/id = 2
+popup/item_3/text = "Hybrid"
+popup/item_3/id = 3
+
+[node name="Jitter" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Jitter"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jitter"
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Jitter"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.01
+step = 0.01
+value = 0.45
+allow_greater = true
+
+[node name="ReturnType" type="HBoxContainer" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReturnType"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Return type"
+
+[node name="OptionButton" type="OptionButton" parent="HSplitContainer/TabContainer/Noise/MarginContainer/VBoxContainer/Cellular/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReturnType"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 7
+popup/item_0/text = "Cell Value"
+popup/item_0/id = 0
+popup/item_1/text = "Distance"
+popup/item_1/id = 1
+popup/item_2/text = "Distance 2"
+popup/item_2/id = 2
+popup/item_3/text = "Distance 2 Add"
+popup/item_3/id = 3
+popup/item_4/text = "Distance 2 Sub"
+popup/item_4/id = 4
+popup/item_5/text = "Distance 2 Mul"
+popup/item_5/id = 5
+popup/item_6/text = "Distance 2 Div"
+popup/item_6/id = 6
+
+[node name="Tool" type="ScrollContainer" parent="HSplitContainer/TabContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("8_jcqrt")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TabContainer/Tool"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Tool/MarginContainer"]
+layout_mode = 2
+
+[node name="DebugPanelButton" type="CheckButton" parent="HSplitContainer/TabContainer/Tool/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Show debug info"
+
+[node name="ResetButton" type="Button" parent="HSplitContainer/TabContainer/Tool/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Reset noise parameters"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="HSplitContainer/TabContainer/Tool/MarginContainer/VBoxContainer/ResetButton"]
+initial_position = 2
+dialog_text = "Do you want to reset noise settings to their default values?"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Tool/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HSplitContainer/TabContainer/Tool/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Code snippet:"
+
+[node name="CodeSnippet" type="TextEdit" parent="HSplitContainer/TabContainer/Tool/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+theme_type_variation = &"CodeSnippet"
+text = "{
+	\"noise_type\": 2,
+	\"seed\": 1039518602.000000,
+	\"frequency\": 0.010000,
+	\"domain_warp_enabled\": true,
+	\"domain_warp_amplitude\": 30.010000,
+	\"domain_warp_fractal_gain\": 0.500000,
+	\"domain_warp_fractal_type\": 0,
+	\"domain_warp_frequency\": 0.040000,
+	\"domain_warp_fractal_octaves\": 5.000000,
+	\"domain_warp_type\": 2,
+	\"fractal_type\": 0,
+	\"fractal_gain\": 0.200000,
+	\"fractal_lacunarity\": 1.000000,
+	\"fractal_octaves\": 4.000000,
+	\"fractal_ping_pong_strength\": 2.000000,
+	\"fractal_weighted_strength\": 2.000000,
+	\"cellular_distance_function\": 0,
+	\"cellular_jitter\": 0.450000,
+	\"cellular_return_type\": 3,
+}"
+editable = false
+scroll_fit_content_height = true
+syntax_highlighter = SubResource("CodeHighlighter_41h1v")
+
+[node name="CopyButton" type="Button" parent="HSplitContainer/TabContainer/Tool/MarginContainer/VBoxContainer/VBoxContainer/CodeSnippet"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -47.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Copy"
+
+[node name="Viewport" type="PanelContainer" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HSplitContainer/Viewport"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_2w1io")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("9_isml3")
+
+[node name="DebugInfo" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -157.0
+offset_bottom = 54.0
+grow_horizontal = 0
+script = ExtResource("9_s2ggt")
+
+[node name="MarginContainer" type="MarginContainer" parent="DebugInfo"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugInfo/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DebugInfo/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Debug"
+label_settings = SubResource("LabelSettings_vnmdv")
+horizontal_alignment = 1
+
+[node name="ComputeTime" type="Label" parent="DebugInfo/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Computed in 0,112 seconds"
+label_settings = SubResource("LabelSettings_fii6a")
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
