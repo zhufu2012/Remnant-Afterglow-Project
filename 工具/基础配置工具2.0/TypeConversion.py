@@ -517,7 +517,7 @@ BaseType = {
     'ULONG': (TO_UINT64, 0, 'ulong'),  ##坐标类型
     'RGB': (TO_RGB, (0, 0, 0), 'Color'),  ##坐标类型
     'RGBA': (TO_RGBA, (0, 0, 0, 0), 'Color'),  ##坐标类型
-    '<Vector2I>': (TO_INT_VECTOR_LIST, (0, 0), 'List<Vector2I>'),  ##坐标列表类型
+    '<Vector2I>': (TO_INT_VECTOR_LIST, [], 'List<Vector2I>'),  ##坐标列表类型
     'SequenceMap': (TO_SEQUENCE_MAP, "", 'SequenceMapType'),  ##坐标列表类型
     'BBCode': (TO_STR, "", 'BBCode'),
 }

@@ -7,25 +7,25 @@ namespace Remnant_Afterglow
     public partial class BigMapEvent
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 大地图节点事件id
         /// </summary>
         public int EventId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 事件类型
         ///0 输出点击节点消息
         ///1 进入对应地图 参数1是地图生成id
         /// </summary>
         public int EventType { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 事件参数
         /// </summary>
         public float EventParam1 { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 事件参数
         /// </summary>
         public float EventParam2 { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 事件参数列表
         /// </summary>
         public List<List<float>> EventParamList { get; set; }

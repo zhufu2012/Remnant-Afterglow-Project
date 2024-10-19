@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Texture2Dnamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 MoneyBase 用于 货币界面显示配置,拓展请在expand_class文件下使用partial拓展
@@ -7,50 +8,50 @@ Texture2Dnamespace Remnant_Afterglow
     public partial class MoneyBase
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 货币id
         /// </summary>
         public int MoneyId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 货币类型
         ///1 大地图显示
         ///2 地图显示
         ///3 不可见
         /// </summary>
         public int MoneyType { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 货币名称
         /// </summary>
         public string MoneyName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 货币描述
         /// </summary>
         public string MoneyDescribe { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 基础值
         /// </summary>
         public float NowValue { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 最大值
         /// </summary>
         public float Max { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 最小值
         /// </summary>
         public float Min { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 再生值
         /// </summary>
         public float Regen { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 再生帧数
         /// </summary>
         public float RegenFps { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 货币图片
         /// </summary>
         public Texture2D MoneyImg { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 货币图片界面显示
         /// </summary>
         public Texture2D MoneyImgShow { get; set; }

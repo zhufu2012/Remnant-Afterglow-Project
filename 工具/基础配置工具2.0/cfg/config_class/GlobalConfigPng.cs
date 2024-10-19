@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Texture2Dnamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 GlobalConfigPng 用于 Png数据,拓展请在expand_class文件下使用partial拓展
@@ -7,15 +8,15 @@ Texture2Dnamespace Remnant_Afterglow
     public partial class GlobalConfigPng
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 全局配置id
         /// </summary>
         public string Configid { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 全局配置名称
         /// </summary>
         public string ConfigName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 全局配置值
         ///图片
         /// </summary>

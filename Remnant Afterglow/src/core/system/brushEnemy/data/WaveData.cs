@@ -15,6 +15,10 @@ namespace Remnant_Afterglow
         //当前要刷新的组数
         public int nowGroupId = 1;
         /// <summary>
+        /// 上一次组刷新的帧数,分组刷新中为0表示还没开始刷新
+        /// </summary>
+        public double LastGroupFlushFrame = 0;
+        /// <summary>
         /// 本波已刷新的组号
         /// </summary>
         public List<int> HistoryGroupList = new List<int>();
@@ -31,10 +35,10 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 刷新怪物
+        /// 刷新敌人
         /// </summary>
         /// <returns><<怪物id,阵营id>,数量></returns>
-        public Dictionary<KeyValuePair<int, int>, int> GetUnitDict()
+        public Dictionary<KeyValuePair<int, int>, int> GetUnitDict(double nowTime,double frameNumber)
         {
             Dictionary<KeyValuePair<int, int>, int> dict = new Dictionary<KeyValuePair<int, int>, int>();
             switch (cfgData.WaveType)
@@ -54,18 +58,22 @@ namespace Remnant_Afterglow
                             is_flush_acc = true;
                             return dict;
                         case 2://分组刷新
-                            if (!HistoryGroupList.Contains(nowGroupId))//历史刷新组数中不存在当前要刷新的组
+                            if(LastGroupFlushFrame==0 || frameNumber>=LastGroupFlushFrame + cfgData.WaveTime)//间隔足够时间后
                             {
-                                for (int i = 0; i < list.Count; i++)
+                                if (!HistoryGroupList.Contains(nowGroupId))//历史刷新组数中不存在当前要刷新的组
                                 {
-                                    if (list[i][0] == nowGroupId)
-                                        dict[new KeyValuePair<int, int>(list[i][1], list[i][2])] = list[i][3];
+                                    for (int i = 0; i < list.Count; i++)
+                                    {
+                                        if (list[i][0] == nowGroupId)
+                                            dict[new KeyValuePair<int, int>(list[i][1], list[i][2])] = list[i][3];
+                                    }
+                                    AddHistory(nowGroupId);
+                                    LastGroupFlushFrame = frameNumber;
+                                    nowGroupId++;
                                 }
-                                AddHistory(nowGroupId);
-                                nowGroupId++;
+                                if (dict.Count == 0)
+                                    is_flush_acc = true;
                             }
-                            if (dict.Count == 0)
-                                is_flush_acc = true;
                             return dict;
                         default:
                             return dict;

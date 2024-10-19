@@ -70,13 +70,18 @@ namespace Remnant_Afterglow
         /// </summary>
         public double flush_time = 0;
 
-        //章节id
+        /// <summary>
+        /// 章节id
+        /// </summary>
         public int ChapterId;
-        //关卡id
+        /// <summary>
+        /// 关卡id
+        /// </summary>
         public int CopyId;
 
         public BrushSystem(int ChapterId, int CopyId)
         {
+            Log.PrintList(SaveLoadSystem.NowSaveData.ScienceIdList);
             this.ChapterId = ChapterId;
             this.CopyId = CopyId;
             cfgData = new CopyBrush(ChapterId, CopyId);
@@ -96,7 +101,7 @@ namespace Remnant_Afterglow
             {
                 BrushSpaceList[space_list[i][0]] = space_list[i][1];
             }
-            for (int i = 1; i <= cfgData.WaveNum; i++)
+            for (int i = 1; i <= cfgData.AllWave; i++)
             {
                 if (!BrushSpaceList.ContainsKey(i))
                 {
@@ -215,7 +220,7 @@ namespace Remnant_Afterglow
         {
             //<刷新点id,<<怪物id,阵营id>,数量>>
             Dictionary<int, Dictionary<KeyValuePair<int, int>, int>> dict = new Dictionary<int, Dictionary<KeyValuePair<int, int>, int>>();
-            if (NowWave > 0 && NowWave <= cfgData.WaveNum && is_all_end == false)//波数没刷玩
+            if (NowWave > 0 && NowWave <= cfgData.AllWave && is_all_end == false)//波数大于0并且 当前波数小于等于配置总波数
             {
                 flush_time += delta;
                 if (is_after_time)//是否在刷新间隔中,是刷新间隔就继续增加
@@ -231,7 +236,7 @@ namespace Remnant_Afterglow
                     {
                         if (!brushDataDict[BrushId].CheckAllWaveFlush())//该刷新点所有波数未刷新完
                         {
-                            dict[BrushId] = brushDataDict[BrushId].CalcWaveUnit(NowWave);
+                            dict[BrushId] = brushDataDict[BrushId].CalcWaveUnit(NowWave, nowTime, frameNumber);
                         }
                         else
                         {
@@ -266,8 +271,10 @@ namespace Remnant_Afterglow
             foreach (int BrushId in cfgData.BrushIdList)//遍历刷新点
             {
                 if (!brushDataDict[BrushId].is_flush_acc)
+                {
                     is_end = false;
-                break;
+                    break;
+                }
             }
             return is_end;
         }

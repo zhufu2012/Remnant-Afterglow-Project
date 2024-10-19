@@ -1,5 +1,7 @@
-    //模组信息
-    public class ModInfo
+//模组信息
+using System;
+
+public class ModInfo
     {
         //模组名称
         public string Name { get; set; }

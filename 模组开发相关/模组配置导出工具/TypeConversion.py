@@ -375,7 +375,6 @@ def TO_SHORT(file_path, table_name, Col_x, Col_y, variable):
 
 def TO_SHORT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a string representing a tuple of short values
         values = variable.strip('()').split(',')
         return tuple(int(val.strip()) for val in values)
     except Exception as e:
@@ -386,7 +385,6 @@ def TO_SHORT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
 
 def TO_SHORT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a string with tuples of short values separated by '|'
         tuples = variable.split('|')
         result = []
         for tup in tuples:
@@ -402,7 +400,6 @@ def TO_SHORT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
 
 def TO_PNG(file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a string with tuples of short values separated by '|'
         if str(variable) == "nan":
             raise Exception("")
         else:
@@ -520,7 +517,7 @@ BaseType = {
     'ULONG': (TO_UINT64, 0, 'ulong'),  ##坐标类型
     'RGB': (TO_RGB, (0, 0, 0), 'Color'),  ##坐标类型
     'RGBA': (TO_RGBA, (0, 0, 0, 0), 'Color'),  ##坐标类型
-    '<Vector2I>': (TO_INT_VECTOR_LIST, (0, 0), 'List<Vector2I>'),  ##坐标列表类型
+    '<Vector2I>': (TO_INT_VECTOR_LIST, [], 'List<Vector2I>'),  ##坐标列表类型
     'SequenceMap': (TO_SEQUENCE_MAP, "", 'SequenceMapType'),  ##坐标列表类型
     'BBCode': (TO_STR, "", 'BBCode'),
 }

@@ -7,11 +7,11 @@ namespace Remnant_Afterglow
     public partial class BigMapCellLogic
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 地图节点id
         /// </summary>
         public int NodeId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 地图节点描述
         /// </summary>
         public int NodeIdDescribe { get; set; }

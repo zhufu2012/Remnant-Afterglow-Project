@@ -7,45 +7,45 @@ namespace Remnant_Afterglow
     public partial class MapPassType
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 可通过id
         /// </summary>
         public int PassTypeId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 可通过性
         ///是否可以通行
         ///寻路时先判断是否可通行
         ///再判断后面的参数
         /// </summary>
         public bool IsPass { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 可攻击类型
         ///1 无视
         ///2 武器直射类型禁止
         /// </summary>
         public int ExamineType { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 通过代价
         ///寻路计算时，
         ///通过该地形的代价
         /// </summary>
         public int PassCost { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 通过类型
         ///0无影响
         ///1单位到上面就会停止主动移动2会直接阻止任何陆军和爬行单位通过该地块
         /// </summary>
         public int Type { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 陆军通过时速度参数
         ///通过效率-陆军和爬行通过该地块时移动速度的比例，是个乘率，乘以单位的通过能力，1为没有减速，数字越小减速越多，0为无效
         /// </summary>
         public float PassSpeedParm { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 对其上建筑影响
         /// </summary>
         public string BuildInfluence { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 对其上单位影响
         /// </summary>
         public string UnitInfluence { get; set; }

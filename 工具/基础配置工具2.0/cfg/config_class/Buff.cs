@@ -7,23 +7,23 @@ namespace Remnant_Afterglow
     public partial class Buff
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 主键字段
         /// </summary>
         public int KetId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// buff名称
         /// </summary>
         public string buffName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// buff介绍
         /// </summary>
         public string buff111 { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 效果生效值
         /// </summary>
         public int EffectValue { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 效果随时间降低值（秒）
         /// </summary>
         public int ReduceValue { get; set; }

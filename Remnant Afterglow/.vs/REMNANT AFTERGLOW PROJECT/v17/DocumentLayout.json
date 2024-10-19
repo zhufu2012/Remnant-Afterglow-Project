@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\system\\audioserver\\audioserverinstancetooling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\system\\audioserver\\audioserverinstancetooling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\autoloads\\saveloadsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\autoloads\\saveloadsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\system\\audioserver\\audioserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\system\\audioserver\\audioserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\ui\\view\\archive_view\\saveloadview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\ui\\view\\archive_view\\saveloadview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\system\\audioserver\\audioserverinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\system\\audioserver\\audioserverinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\ui\\set_menu\\audiosettingsmenubuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\ui\\set_menu\\audiosettingsmenubuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\data\\player\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\data\\player\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\system\\bag\\bagsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\system\\bag\\bagsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\system\\bag\\bagbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\system\\bag\\bagbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\utilities\\file_op\\fileutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\utilities\\file_op\\fileutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,115 +22,50 @@
       "DocumentGroups": [
         {
           "DockedHeight": 203,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AudioServerInstanceTooling.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\audioServer\\AudioServerInstanceTooling.cs",
-              "RelativeDocumentMoniker": "src\\core\\system\\audioServer\\AudioServerInstanceTooling.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\audioServer\\AudioServerInstanceTooling.cs",
-              "RelativeToolTip": "src\\core\\system\\audioServer\\AudioServerInstanceTooling.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAawCsAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T21:21:54.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AudioServerInstance.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\audioServer\\AudioServerInstance.cs",
-              "RelativeDocumentMoniker": "src\\core\\system\\audioServer\\AudioServerInstance.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\audioServer\\AudioServerInstance.cs",
-              "RelativeToolTip": "src\\core\\system\\audioServer\\AudioServerInstance.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAcwAAAAAAAAAAA",
+              "Title": "FileUtils.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\utilities\\file_op\\FileUtils.cs",
+              "RelativeDocumentMoniker": "src\\core\\utilities\\file_op\\FileUtils.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\utilities\\file_op\\FileUtils.cs",
+              "RelativeToolTip": "src\\core\\utilities\\file_op\\FileUtils.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAYwKAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T21:16:57.211Z",
+              "WhenOpened": "2024-10-18T22:52:07.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AudioServer.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\audioServer\\AudioServer.cs",
-              "RelativeDocumentMoniker": "src\\core\\system\\audioServer\\AudioServer.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\audioServer\\AudioServer.cs",
-              "RelativeToolTip": "src\\core\\system\\audioServer\\AudioServer.cs",
-              "ViewState": "AQIAAIgAAAAAAAAAAAAnwJkAAAA3AAAA",
+              "Title": "SaveLoadView.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\ui\\view\\archive_view\\SaveLoadView.cs",
+              "RelativeDocumentMoniker": "src\\core\\ui\\view\\archive_view\\SaveLoadView.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\ui\\view\\archive_view\\SaveLoadView.cs",
+              "RelativeToolTip": "src\\core\\ui\\view\\archive_view\\SaveLoadView.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAYwHUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T21:16:52.347Z",
+              "WhenOpened": "2024-10-18T22:46:42.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AudioSettingsMenuBuilder.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\ui\\set_menu\\AudioSettingsMenuBuilder.cs",
-              "RelativeDocumentMoniker": "src\\core\\ui\\set_menu\\AudioSettingsMenuBuilder.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\ui\\set_menu\\AudioSettingsMenuBuilder.cs",
-              "RelativeToolTip": "src\\core\\ui\\set_menu\\AudioSettingsMenuBuilder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAhAAAA",
+              "DocumentIndex": 0,
+              "Title": "SaveLoadSystem.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\autoloads\\SaveLoadSystem.cs",
+              "RelativeDocumentMoniker": "src\\core\\autoloads\\SaveLoadSystem.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\autoloads\\SaveLoadSystem.cs",
+              "RelativeToolTip": "src\\core\\autoloads\\SaveLoadSystem.cs",
+              "ViewState": "AQIAALoAAAAAAAAAAAAuwMoAAACRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T21:16:09.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SceneManager.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\managers\\SceneManager.cs",
-              "RelativeDocumentMoniker": "src\\core\\managers\\SceneManager.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\managers\\SceneManager.cs",
-              "RelativeToolTip": "src\\core\\managers\\SceneManager.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAYwBwAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T21:10:44.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SaveData.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\data\\player\\SaveData.cs",
-              "RelativeDocumentMoniker": "src\\core\\data\\player\\SaveData.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\data\\player\\SaveData.cs",
-              "RelativeToolTip": "src\\core\\data\\player\\SaveData.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAiwEcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T17:35:24.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BagBase.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\bag\\BagBase.cs",
-              "RelativeDocumentMoniker": "src\\core\\system\\bag\\BagBase.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\bag\\BagBase.cs",
-              "RelativeToolTip": "src\\core\\system\\bag\\BagBase.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAwCUAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T17:32:36.374Z",
+              "WhenOpened": "2024-10-18T22:36:11.037Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BagSystem.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\bag\\BagSystem.cs",
-              "RelativeDocumentMoniker": "src\\core\\system\\bag\\BagSystem.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\bag\\BagSystem.cs",
-              "RelativeToolTip": "src\\core\\system\\bag\\BagSystem.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAQwA4AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T17:32:17.3Z",
-              "EditorCaption": ""
             }
           ]
         },

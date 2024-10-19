@@ -54,7 +54,7 @@ def number_to_column_name(n):
 
 ##对一个xlsx文件的子表名称读取 之前的需要导出数据字典  xlsx路径   返回(子表显示名称列表，)
 def OneXlsxDataHandle(path):
-    dicts, image_path = read_text_all(path)
+    dicts, image_path = read_xlsx.read_text_all(path)
     subtable_show_name_list = [table_name for table_name in dicts if table_name.startswith("cfg_")]
     return subtable_show_name_list, image_path
 

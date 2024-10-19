@@ -27,6 +27,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public Dictionary<int, ulong> cycleDict = new Dictionary<int, ulong>();
 
+        public NavigationAgent2D agent = new NavigationAgent2D();
         /// <summary>
         /// 当前帧数
         /// </summary>

@@ -15,17 +15,19 @@ namespace Remnant_Afterglow
 
         public LoadTileSetConfig(int Type)
         {
-            if (Type == 1)
-            {
-                mapImageSet = new MapImageSet(1, MapConstant.TileCellSize, MapConstant.TileCellSize);
-                tileSet = GetTileSetData(1, MapConstant.TileCellSize, MapConstant.TileCellSize);
-            }
-            else
-            {
-                mapImageSet = new MapImageSet(2, MapConstant.BigCellSizeX, MapConstant.BigCellSizeY);
-                tileSet = GetTileSetData(2, MapConstant.BigCellSizeX, MapConstant.BigCellSizeY);
-            }
             this.Type = Type;
+            switch(Type)
+            {
+                case 1://作战地图
+                    mapImageSet = new MapImageSet(1, MapConstant.TileCellSize, MapConstant.TileCellSize);
+                    tileSet = GetTileSetData(1, MapConstant.TileCellSize, MapConstant.TileCellSize);
+                    break;
+                case 2://大地图
+                    mapImageSet = new MapImageSet(2, MapConstant.BigCellSizeX, MapConstant.BigCellSizeY);
+                    tileSet = GetTileSetData(2, MapConstant.BigCellSizeX, MapConstant.BigCellSizeY);
+                    break;
+                default:break;
+            }
         }
 
         public TileSet GetTileSet()

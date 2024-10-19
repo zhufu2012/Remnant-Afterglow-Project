@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Texture2Dnamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 CampBase 用于 阵营基础数据,拓展请在expand_class文件下使用partial拓展
@@ -7,40 +8,40 @@ Texture2Dnamespace Remnant_Afterglow
     public partial class CampBase
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 阵营id
         /// </summary>
         public int CampId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 阵营名称
         /// </summary>
         public string CampName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 阵营描述
         /// </summary>
         public string CampDes { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 默认盟友阵营列表
         ///不会攻击盟友
         /// </summary>
         public List<int> AllyList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 默认中立阵营列表
         ///不会主动攻击中立
         ///攻击了就变成敌对阵营
         /// </summary>
         public List<int> NeutralList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 默认敌对阵营列表
         ///主动攻击敌对阵营
         ///有攻击先后顺序
         /// </summary>
         public List<int> HostileList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 阵营标识图片
         /// </summary>
         public Texture2D CampPng { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否使用
         /// </summary>
         public bool IsUser { get; set; }

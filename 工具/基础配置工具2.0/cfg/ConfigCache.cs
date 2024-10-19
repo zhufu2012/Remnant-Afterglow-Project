@@ -6,6 +6,7 @@ namespace Remnant_Afterglow
     /// </summary>
     public static partial class ConfigCache
     {
+
         /// <summary>
         /// 提前加载所有界面基础配置配置缓存
         /// </summary>
@@ -81,8 +82,7 @@ namespace Remnant_Afterglow
             LoadErrorBase();
         }
 
-
-        #region Ui界面配置
+        #region 界面基础配置配置缓存
         /// <summary>
         /// 界面基础配置配置缓存
         /// </summary>
@@ -136,7 +136,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 主界面更新日志
+        
+        
+        #region 更新日志配置缓存
         /// <summary>
         /// 更新日志配置缓存
         /// </summary>
@@ -190,7 +192,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 数据库界面及成就相关配置
+        
+        
+        #region 数据库成就分页配置缓存
         /// <summary>
         /// 数据库成就分页配置缓存
         /// </summary>
@@ -243,6 +247,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 数据库成就相关配置配置缓存
         /// <summary>
         /// 数据库成就相关配置配置缓存
         /// </summary>
@@ -296,7 +304,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 科技树解锁界面相关配置
+        
+        
+        #region 科技范围配置配置缓存
         /// <summary>
         /// 科技范围配置配置缓存
         /// </summary>
@@ -349,6 +359,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 科技基础显示配置配置缓存
         /// <summary>
         /// 科技基础显示配置配置缓存
         /// </summary>
@@ -401,6 +415,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 科技激活相关数据配置缓存
         /// <summary>
         /// 科技激活相关数据配置缓存
         /// </summary>
@@ -454,7 +472,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 配置界面相关
+        
+        
+        #region 道具配置界面数据配置缓存
         /// <summary>
         /// 道具配置界面数据配置缓存
         /// </summary>
@@ -507,6 +527,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 核心插件配置数据配置缓存
         /// <summary>
         /// 核心插件配置数据配置缓存
         /// </summary>
@@ -559,6 +583,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 科技配置数据配置缓存
         /// <summary>
         /// 科技配置数据配置缓存
         /// </summary>
@@ -612,7 +640,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 配置特殊功能表
+        
+        
+        #region 配置覆盖关系表配置缓存
         /// <summary>
         /// 配置覆盖关系表配置缓存
         /// </summary>
@@ -665,6 +695,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 配置调用关系表配置缓存
         /// <summary>
         /// 配置调用关系表配置缓存
         /// </summary>
@@ -718,7 +752,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 默认配置表
+        
+        
+        #region 全局配置Int数据配置缓存
         /// <summary>
         /// 全局配置Int数据配置缓存
         /// </summary>
@@ -771,6 +807,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region Str数据配置缓存
         /// <summary>
         /// Str数据配置缓存
         /// </summary>
@@ -823,6 +863,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region float数据配置缓存
         /// <summary>
         /// float数据配置缓存
         /// </summary>
@@ -875,6 +919,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region List数据配置缓存
         /// <summary>
         /// List数据配置缓存
         /// </summary>
@@ -927,6 +975,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region Png数据配置缓存
         /// <summary>
         /// Png数据配置缓存
         /// </summary>
@@ -980,7 +1032,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 函数模板
+        
+        
+        #region 函数模板配置缓存
         /// <summary>
         /// 函数模板配置缓存
         /// </summary>
@@ -1034,9 +1088,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 噪声
-        #endregion
-        #region 相机
+        
+        
+        #region 相机基本数据配置缓存
         /// <summary>
         /// 相机基本数据配置缓存
         /// </summary>
@@ -1089,6 +1143,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 相机组件表配置缓存
         /// <summary>
         /// 相机组件表配置缓存
         /// </summary>
@@ -1142,7 +1200,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 帧动画
+        
+        
+        #region 单位帧动画配置配置缓存
         /// <summary>
         /// 单位帧动画配置配置缓存
         /// </summary>
@@ -1195,6 +1255,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 炮塔动画配置缓存
         /// <summary>
         /// 炮塔动画配置缓存
         /// </summary>
@@ -1247,6 +1311,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 建筑动画配置缓存
         /// <summary>
         /// 建筑动画配置缓存
         /// </summary>
@@ -1299,6 +1367,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 武器动画配置缓存
         /// <summary>
         /// 武器动画配置缓存
         /// </summary>
@@ -1351,6 +1423,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 子弹动画配置缓存
         /// <summary>
         /// 子弹动画配置缓存
         /// </summary>
@@ -1404,7 +1480,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 序列图
+        
+        
+        #region 序列图配置配置缓存
         /// <summary>
         /// 序列图配置配置缓存
         /// </summary>
@@ -1458,7 +1536,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 特效
+        
+        
+        #region 特效配置配置缓存
         /// <summary>
         /// 特效配置配置缓存
         /// </summary>
@@ -1512,7 +1592,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 地图生成
+        
+        
+        #region 随机生成地图方式配置缓存
         /// <summary>
         /// 随机生成地图方式配置缓存
         /// </summary>
@@ -1565,6 +1647,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 生成地图用材料配置缓存
         /// <summary>
         /// 生成地图用材料配置缓存
         /// </summary>
@@ -1617,6 +1703,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 地图额外绘制表配置缓存
         /// <summary>
         /// 地图额外绘制表配置缓存
         /// </summary>
@@ -1669,6 +1759,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 地图大型结构配置缓存
         /// <summary>
         /// 地图大型结构配置缓存
         /// </summary>
@@ -1721,6 +1815,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 地图墙壁表配置缓存
         /// <summary>
         /// 地图墙壁表配置缓存
         /// </summary>
@@ -1773,6 +1871,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 地图可通过类型配置缓存
         /// <summary>
         /// 地图可通过类型配置缓存
         /// </summary>
@@ -1826,7 +1928,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 地块
+        
+        
+        #region 资源地块配置缓存
         /// <summary>
         /// 资源地块配置缓存
         /// </summary>
@@ -1880,7 +1984,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 大地图生成
+        
+        
+        #region 生成大地图配置缓存
         /// <summary>
         /// 生成大地图配置缓存
         /// </summary>
@@ -1933,6 +2039,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 大地图大结构配置缓存
         /// <summary>
         /// 大地图大结构配置缓存
         /// </summary>
@@ -1985,6 +2095,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 节点绘制逻辑配置缓存
         /// <summary>
         /// 节点绘制逻辑配置缓存
         /// </summary>
@@ -2037,6 +2151,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 大地图节点事件配置缓存
         /// <summary>
         /// 大地图节点事件配置缓存
         /// </summary>
@@ -2090,7 +2208,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 战役副本相关
+        
+        
+        #region 战役基础数据配置缓存
         /// <summary>
         /// 战役基础数据配置缓存
         /// </summary>
@@ -2143,6 +2263,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 战役关卡基础数据配置缓存
         /// <summary>
         /// 战役关卡基础数据配置缓存
         /// </summary>
@@ -2195,6 +2319,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 战役关卡刷怪数据配置缓存
         /// <summary>
         /// 战役关卡刷怪数据配置缓存
         /// </summary>
@@ -2247,6 +2375,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 刷怪点数据配置缓存
         /// <summary>
         /// 刷怪点数据配置缓存
         /// </summary>
@@ -2299,6 +2431,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 波数配置配置缓存
         /// <summary>
         /// 波数配置配置缓存
         /// </summary>
@@ -2351,6 +2487,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 章节关卡UI数据配置缓存
         /// <summary>
         /// 章节关卡UI数据配置缓存
         /// </summary>
@@ -2404,7 +2544,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 单位配置
+        
+        
+        #region 单位基础表配置缓存
         /// <summary>
         /// 单位基础表配置缓存
         /// </summary>
@@ -2458,7 +2600,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 子弹配置
+        
+        
+        #region 子弹基础表配置缓存
         /// <summary>
         /// 子弹基础表配置缓存
         /// </summary>
@@ -2512,7 +2656,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 实体显示相关配置
+        
+        
+        #region 实体显示方式表配置缓存
         /// <summary>
         /// 实体显示方式表配置缓存
         /// </summary>
@@ -2565,6 +2711,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 底部栏配置缓存
         /// <summary>
         /// 底部栏配置缓存
         /// </summary>
@@ -2617,6 +2767,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 侧边栏配置缓存
         /// <summary>
         /// 侧边栏配置缓存
         /// </summary>
@@ -2670,7 +2824,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 属性配置
+        
+        
+        #region 属性表配置缓存
         /// <summary>
         /// 属性表配置缓存
         /// </summary>
@@ -2723,6 +2879,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 属性模板表配置缓存
         /// <summary>
         /// 属性模板表配置缓存
         /// </summary>
@@ -2775,6 +2935,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 实体属性表配置缓存
         /// <summary>
         /// 实体属性表配置缓存
         /// </summary>
@@ -2827,6 +2991,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 属性计算表配置缓存
         /// <summary>
         /// 属性计算表配置缓存
         /// </summary>
@@ -2879,6 +3047,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 属性依赖表配置缓存
         /// <summary>
         /// 属性依赖表配置缓存
         /// </summary>
@@ -2932,7 +3104,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 建筑配置
+        
+        
+        #region 建筑建筑数据配置缓存
         /// <summary>
         /// 建筑建筑数据配置缓存
         /// </summary>
@@ -2985,6 +3159,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 建造规则配置缓存
         /// <summary>
         /// 建造规则配置缓存
         /// </summary>
@@ -3038,7 +3216,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 武器配置
+        
+        
+        #region 武器基础数据配置缓存
         /// <summary>
         /// 武器基础数据配置缓存
         /// </summary>
@@ -3091,6 +3271,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 武器数据配置缓存
         /// <summary>
         /// 武器数据配置缓存
         /// </summary>
@@ -3144,7 +3328,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 炮塔配置
+        
+        
+        #region 炮塔基础表配置缓存
         /// <summary>
         /// 炮塔基础表配置缓存
         /// </summary>
@@ -3198,7 +3384,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 建造列表相关配置
+        
+        
+        #region 建造列表标签配置缓存
         /// <summary>
         /// 建造列表标签配置缓存
         /// </summary>
@@ -3251,6 +3439,10 @@ namespace Remnant_Afterglow
             }
             return list;
         }
+        #endregion
+        
+        
+        #region 建造子列表配置缓存
         /// <summary>
         /// 建造子列表配置缓存
         /// </summary>
@@ -3304,7 +3496,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region buff
+        
+        
+        #region buff基础配置配置缓存
         /// <summary>
         /// buff基础配置配置缓存
         /// </summary>
@@ -3358,7 +3552,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 阵营相关
+        
+        
+        #region 阵营基础数据配置缓存
         /// <summary>
         /// 阵营基础数据配置缓存
         /// </summary>
@@ -3412,7 +3608,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 难度相关
+        
+        
+        #region 游戏难度相关配置缓存
         /// <summary>
         /// 游戏难度相关配置缓存
         /// </summary>
@@ -3466,7 +3664,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 背包相关
+        
+        
+        #region 配置缓存
         /// <summary>
         /// 配置缓存
         /// </summary>
@@ -3520,7 +3720,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 货币相关
+        
+        
+        #region 货币界面显示配置配置缓存
         /// <summary>
         /// 货币界面显示配置配置缓存
         /// </summary>
@@ -3574,7 +3776,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 道具相关
+        
+        
+        #region 道具基础数据配置缓存
         /// <summary>
         /// 道具基础数据配置缓存
         /// </summary>
@@ -3628,7 +3832,9 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
-        #region 错误码
+        
+        
+        #region 错误码配置缓存
         /// <summary>
         /// 错误码配置缓存
         /// </summary>
@@ -3682,6 +3888,8 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
+        
+        
 
 
         /// <summary>
@@ -3758,6 +3966,5 @@ namespace Remnant_Afterglow
             ItemData_Cache.Clear();
             ErrorBase_Cache.Clear();
         }
-
     }
 }

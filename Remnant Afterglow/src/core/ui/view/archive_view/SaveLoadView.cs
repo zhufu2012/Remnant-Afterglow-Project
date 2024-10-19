@@ -42,7 +42,9 @@ namespace Remnant_Afterglow
 
 		}
 
-		//加载全部存档的界面数据
+		/// <summary>
+		/// 加载全部存档的界面数据
+		/// </summary>
 		public void LoadAllSaveFileUI()
 		{
 			file_list = SaveLoadSystem.GetSaveFileList();

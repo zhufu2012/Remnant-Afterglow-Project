@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Texture2Dnamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 MapBuildLable 用于 建造列表标签,拓展请在expand_class文件下使用partial拓展
@@ -7,15 +8,15 @@ Texture2Dnamespace Remnant_Afterglow
     public partial class MapBuildLable
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 建造列表标签id
         /// </summary>
         public int BuildLableId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 标签名称
         /// </summary>
         public string LableName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 标签图标
         /// </summary>
         public Texture2D LablePng { get; set; }

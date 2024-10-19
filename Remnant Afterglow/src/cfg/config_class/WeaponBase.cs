@@ -7,60 +7,60 @@ namespace Remnant_Afterglow
     public partial class WeaponBase
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 武器id
         /// </summary>
         public int WeaponId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 武器类型
         ///1 射弹类型
         ///2 激光类型
         /// </summary>
         public int Type { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 武器射程
         ///单位（1/20格）
         /// </summary>
         public float Range { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 武器单次发射总量
         /// </summary>
         public int LaunchTotal { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 武器单次发射内间隔(帧数)
         ///0 表示无间隔，一次性射出
         ///1 表示每1帧射出单次发射数个，直到发射完就开始冷却
         ///并且播放冷却动画（无冷却动画播放默认动画）
         /// </summary>
         public int EmissionInterval { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 武器单次发射数
         /// </summary>
         public int EmissionNum { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 武器冷却时间
         ///(帧数)
         /// </summary>
         public int CoolTime { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 武器的开火点列表
         ///子弹生成的位置列表
         ///(坐标x,坐标y)单位像素
         /// </summary>
         public List<List<float>> FirePointList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 初始偏移角度
         ///尽量与动画中炮塔方向一致
         ///正上方为0
         /// </summary>
         public float StartAngle { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 武器转动速度
         ///1表示每秒转1度
         ///90表示每秒转90度（1/4圆）
         /// </summary>
         public float RotationSpeed { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 当前散射半径
         /// </summary>
         public float CurrScatteringRange { get; set; }

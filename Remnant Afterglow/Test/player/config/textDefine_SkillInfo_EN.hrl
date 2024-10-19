@@ -1,0 +1,8894 @@
+-ifndef(textDefine_SkillInfo_EN_hrl).
+-define(textDefine_SkillInfo_EN_hrl, 1).
+-define(SN300, "Fire Spirit Strike").
+-define(SD300, "Release tracking fire to front, deal {0}% DMG to {1} target (monster +{2})").
+-define(SN301, "Water Spirit Strike").
+-define(SD301, "Release rectangular watersword to front, deal {0}% DMG to {1} target (monster +{2})").
+-define(SN302, "Thunder Spirit Strike").
+-define(SD302, "Release lighting chain to nearby, deal {0}% DMG to {1} targets (monster +{2})").
+-define(SN303, "Earth Spirit Strike").
+-define(SD303, "Release rock to target, deal {0}% DMG to {1} targets (monster +{2})").
+-define(SN304, "Fire Spirit Strike II").
+-define(SD304, "Release tracking fire to front, deal {0}% DMG to {1} target (monster +{2})").
+-define(SN305, "Water Spirit Strike II").
+-define(SD305, "Release rectangular watersword to front, deal {0}% DMG to {1} target (monster +{2})").
+-define(SN306, "Thunder Spirit Strike II").
+-define(SD306, "Release lighting chain to nearby, deal {0}% DMG to {1} targets (monster +{2})").
+-define(SN307 , "Earth Spirit Strike II").
+-define(SD307, "Release rock to target, deal {0}% DMG to {1} targets (monster +{2})").
+-define(SN308, "Fire Spirit Strike III").
+-define(SD308, "Release tracking fire to front, deal {0}% DMG to {1} target (monster +{2})").
+-define(SN309, "Water Spirit Strike III").
+-define(SD309, "Release rectangular watersword to front, deal {0}% DMG to {1} target (monster +{2})").
+-define(SN310, "Thunder Spirit Strike III").
+-define(SD310, "Release lighting chain to nearby, deal {0}% DMG to {1} targets (monster +{2})").
+-define(SN311, "Earth Spirit Strike III").
+-define(SD311, "Release rock to target, deal {0}% DMG to {1} targets (monster +{2})").
+-define(SN312, "Fire Spirit I").
+-define(SD312, "Increase {0} Fire Atk").
+-define(SN313, "Water Spirit Ⅰ").
+-define(SD313, "Increase {0} Water Atk").
+-define(SN314, "Thunder Spirit I").
+-define(SD314, "Increase {0} Thunder Atk").
+-define(SN315, "Earth Spirit Ⅰ").
+-define(SD315, "Increase {0} Earth Atk").
+-define(SN316, "Precision I").
+-define(SD316, "Increase {0} Hit").
+-define(SN317, "Agility I").
+-define(SD317, "Increase {0} Dodge").
+-define(SN318, "Explode I").
+-define(SD318, "Increase {0} Crit").
+-define(SN319, "Resilience I").
+-define(SD319, "Increase {0} Tenacity").
+-define(SN320, "Fire Spirit Ⅱ").
+-define(SD320, "Increase {0} Fire Atk").
+-define(SN321, "Water Spirit Ⅱ").
+-define(SD321, "Increase {0} Water Atk").
+-define(SN322, "Thunder Spirit II").
+-define(SD322, "Increase {0} Thunder Atk").
+-define(SN323, "Earth Spirit Ⅱ").
+-define(SD323, "Increase {0} Earth Atk").
+-define(SN324, "Fire Resistance II").
+-define(SD324, "Increase {0} Fire Def").
+-define(SN325, "Water Resistance Ⅱ").
+-define(SD325, "Increase {0} Water Def").
+-define(SN326, "Thunder Resistance II").
+-define(SD326, "Increase {0} Thunder Def").
+-define(SN327, "Earth Resistance II").
+-define(SD327, "Increase {0} Earth Def").
+-define(SN328, "Precision II").
+-define(SD328, "Increase {0} Hit").
+-define(SN329, "Agility II").
+-define(SD329, "Increase {0} Dodge").
+-define(SN330, "Explode II").
+-define(SD330, "Increase {0} Crit").
+-define(SN331, "Resilience II").
+-define(SD331, "Increase {0} Tenacity").
+-define(SN332, "Atk Ⅱ").
+-define(SD332, "Increase {0} Atk").
+-define(SN333, "Def II").
+-define(SD333, "Increase {0} Def").
+-define(SN334, "Sunder Ⅱ").
+-define(SD334, "Increase {0} Sunder").
+-define(SN335, "Armor II").
+-define(SD335, "Increase {0} Armor").
+-define(SN336, "Fire Spirit Ⅲ").
+-define(SD336, "Increase {0} Fire Atk").
+-define(SN337, "Water Spirit Ⅲ").
+-define(SD337, "Increase {0} Water Atk").
+-define(SN338, "Thunder Spirit III").
+-define(SD338, "Increase {0} Thunder Atk").
+-define(SN339, "Earth Spirit Ⅲ").
+-define(SD339, "Increase {0} Earth Atk").
+-define(SN340, "Fire Resistance III").
+-define(SD340, "Increase {0} Fire Def").
+-define(SN341, "Water Resistance Ⅲ").
+-define(SD341, "Increase {0} Water Def").
+-define(SN342, "Thunder Resistance III").
+-define(SD342, "Increase {0} Thunder Def").
+-define(SN343, "Earth Resistance III").
+-define(SD343, "Increase {0} Earth Def").
+-define(SN344, "Precision II").
+-define(SD344, "Increase {0}% Hit Rate").
+-define(SN345, "Agility II").
+-define(SD345, "Increase {0}% Dodge Rate").
+-define(SN346, "Explode II").
+-define(SD346, "Increase {0}% Crit.Rate").
+-define(SN347, "Resilience II").
+-define(SD347, "Increase {0}% Tough Rate").
+-define(SN400, "Defense - Alert").
+-define(SD400, "{0}% chance to obtain Alert effect (Block Rate +20%) for {1} sec when attacked").
+-define(SN401, "Defense - Shield").
+-define(SD401, "{0}% chance to obtain magic shield (Def+65%) for {1} sec when attacked").
+-define(SN402, "Defense - Agility").
+-define(SD402, "{0}% chance to obtain Agility effect (Dodge Rate+10%) for {1} sec when attacked").
+-define(SN403, "First - Iron Bone II").
+-define(SD403, "Obtain Iron Bone (Damage Reduction +40%) for {0} sec 
+when entering into combat").
+-define(SN404, "Broken - Iron Bone II").
+-define(SD404, "Obtain iron bone (DMG RED +40%) for {1} sec when HP is below {0}% and attacked").
+-define(SN405, "Flex - Serene II").
+-define(SD405, "Obtain tranquility effect (Tough Rate +20%) for {0} sec 
+when crit stroke").
+-define(SN406, "Defense - Alert III").
+-define(SD406, "{0}% chance to obtain Alert effect (Block Rate +20%) for {1} sec when attacked").
+-define(SN407, "Defense - Speed").
+-define(SD407, "{0}% chance to obtain marvelous speed (Move Speed +30%) 
+for {1} sec when attacked").
+-define(SN408, "Defense - Harden").
+-define(SD408, "When attacked, has a {0}% chance to gain Harden (DMG Reduction +{2}%) for {1} sec").
+-define(SN409, "Defense - Shield III").
+-define(SD409, "{0}% chance to obtain magic shield (Def+65%) for {1} sec when attacked").
+-define(SN410, "Broken - Honorable Fight").
+-define(SD410, "When attacked with less than {0}% HP, gain Invincibility (DMG immunity) for {1} seconds.").
+-define(SN411, "Defense - Harden").
+-define(SD411, "{0}% chance to obtain Harden (DMG Reduction +10%) for {1} sec when attacked").
+-define(SN412, "Defense - Agility III").
+-define(SD412, "{0}% chance to obtain Agility effect (Dodge Rate+10%) for {1} sec when attacked").
+-define(SN413, "Defense - Iron Bone III").
+-define(SD413, "{0}% chance to obtain iron bone (DMG RED +40%) 
+for {1} sec when attacked").
+-define(SN414, "First - Iron Bone").
+-define(SD414, "Obtain Iron Bone (Damage Reduction +40%) for {0} sec when entering into combat").
+-define(SN415, "Full - Alert").
+-define(SD415, "Obtain Alert effect (Block Rate +20%) for {1} sec 
+when HP is above {0}% and attacked ").
+-define(SN416, "Defense - Shield II").
+-define(SD416, "{0}% chance to obtain magic shield (Def+65%) for {1} sec when attacked").
+-define(SN417, "Defense - Agility II").
+-define(SD417, "{0}% chance to obtain Agility effect (Dodge Rate+10%) for {1} sec when attacked").
+-define(SN418, "Full - Shield").
+-define(SD418, "Obtain magic shield (Def +65%) for {1} sec
+when HP is above {0}% and attacked ").
+-define(SN419, "Full - Agility").
+-define(SD419, "Obtain agility effect (Dodge Rate +10%) for {1} sec when HP is above {0}% and attacked").
+-define(SN420, "Defense - Alert II").
+-define(SD420, "{0}% chance to obtain Alert effect (Block Rate +20%) for {1} sec when attacked").
+-define(SN421, "Full - Alert II").
+-define(SD421, "Obtain Alert effect (Block Rate +20%) for {1} sec when HP is above {0}% and attacked").
+-define(SN422, "Defense - Harden III").
+-define(SD422, "{0}% chance to obtain Harden (DMG Reduction +10%) for {1} sec when attacked").
+-define(SN423, "Full - Shield II").
+-define(SD423, "Obtain magic shield (Def +65%) for {1} sec 
+when HP is above {0}% and attacked ").
+-define(SN424, "Full - Agility II").
+-define(SD424, "Obtain agility effect (Dodge Rate +10%) for {1} sec when HP is above {0}% and attacked").
+-define(SN425, "First - Iron Bone III").
+-define(SD425, "Obtain Iron Bone (Damage Reduction +40%) for {0} sec when entering into combat").
+-define(SN426, "Full - Iron Bone III").
+-define(SD426, "Obtain iron bone (DMG RED+40%) for {1} sec when HP is above {0}% and attacked").
+-define(SN427, "Defense - Seed of Life").
+-define(SD427, "{0}% chance to obtain {1} stacks Seed of Life effect when attacked, (when buff ends, each stack heals 100% plus 5% of the target's lost HP) for {2} sec").
+-define(SN428, "Defense - Harden Study II").
+-define(SD428, "{0}% chance to obtain {1} stack of Harden Study effect (DMG RED +2% with each stack) for {2} sec when attacked").
+-define(SN429, "Full - Harden Study II").
+-define(SD429, "Obtain {1} stack of Harden Study effect (DMG RED +2% with each stack) for {2} sec when HP is above {0}% and attacked").
+-define(SN430, "Attack - Intercept").
+-define(SD430, "{0}% chance to come with block effect (Move Speed -150) for {1} sec when attacking").
+-define(SN431, "Attack - Gallant").
+-define(SD431, "{0}% chance to obtain combat effect (DMG Bonus +10%) for {1} sec when attacking").
+-define(SN432, "Attack - Mania").
+-define(SD432, "{0}% chance to obtain mania effect (Crit Rate +20%) for {1} sec when attacking").
+-define(SN433, "First - Infinite Wrath II").
+-define(SD433, "Obtain Infinite Wrath effect (DMG Bonus +40%) for {0} sec when entering into combat").
+-define(SN434, "Full - Gallant II").
+-define(SD434, "Obtain Gallant effect (DMG Bonus +10%) for {1} sec when HP is above {0}%").
+-define(SN435, "Lose - Precision II").
+-define(SD435, "Obtain precision effect (Hit Rate +10%) for {0} sec 
+when attack is dodged").
+-define(SN436, "Attack - Intercept III").
+-define(SD436, "{0}% chance to come with block effect (Move Speed -150) for {1} sec when attacking").
+-define(SN437, "Attack - Gallant III").
+-define(SD437, "When attacking, has a {0}% chance to gain Gallant (DMG Bonus +10%) for {1} sec").
+-define(SN438, "Attack - Mania III").
+-define(SD438, "{0}% chance to obtain mania effect (Crit Rate +20%) for {1} sec when attacking").
+-define(SN439, "Attack - Insight").
+-define(SD439, "{0}% chance to obtain see through effect (Anti-block Rate +20%) 
+for {1} sec when attacking").
+-define(SN440, "Attack - Mania II").
+-define(SD440, "{0}% chance to obtain mania effect (Crit Rate +20%) for {1} sec when attacking").
+-define(SN441, "Attack - Soften II").
+-define(SD441, "{0}% chance to come with soften effect (DMG RED -10%) for {1} sec when attacking").
+-define(SN442, "Broken - Terror of Devil Eye").
+-define(SD442, "Add fear effect (unable to control) to nearby target for {1} sec 
+when HP is below {0}% and attacked").
+-define(SN443, "Attack - Precision").
+-define(SD443, "{0}% chance to obtain precision effect (Hit Rate +10%) 
+for {1} sec when attacking").
+-define(SN444, "First - Infinite Wrath").
+-define(SD444, "Obtain infinite combat effect (DMG Bonus +40%) for {0} sec 
+when entering into combat ").
+-define(SN445, "Attack - Gallant II").
+-define(SD445, "When attacking, has a {0}% chance to gain Gallant (DMG Bonus +10%) for {1} sec").
+-define(SN446, "Attack - Insight II").
+-define(SD446, "{0}% chance to obtain see through effect (Anti-block Rate +20%) for {1} sec when attacking").
+-define(SN447, "Attack - Infinite Wrath III").
+-define(SD447, "{0}% chance to obtain Infinite Wrath effect (DMG Bonus +40%) 
+for {1} sec when attacking").
+-define(SN448, "Full - Gallant II").
+-define(SD448, "Obtain Gallant effect (DMG Bonus +10%) for {1} sec when HP is above {0}%").
+-define(SN449, "Full - Mania").
+-define(SD449, "Obtain Mania effect (Crit Rate +20% ) for {1} sec 
+when HP is above {0}% and attacking").
+-define(SN450, "Full - Mania II").
+-define(SD450, "Obtain Mania effect (Crit Rate +20%) for {1} sec when HP is above {0}% and attacking").
+-define(SN451, "Full - Insight II").
+-define(SD451, "Obtain See Through effect (Anti-block Rate +20%) for {1} sec when HP is above {0}% and attacking").
+-define(SN452, "Full - Insight").
+-define(SD452, "Obtain See Through effect (Anti-block Rate +20%) for {1} sec 
+when HP is above {0}% and attacking").
+-define(SN453, "Full - Precision").
+-define(SD453, "Obtain precision effect (Hit Rate +10%) for {1} sec 
+when HP is above {0}% and attacking").
+-define(SN454, "Full - Wrath II").
+-define(SD454, "Obtain precision effect (Hit Rate +10%) for {1} sec when HP is above {0}% and attacking").
+-define(SN455, "Full - Precision II").
+-define(SD455, "Obtain precision effect (Hit Rat +10%) for {1} sec 
+when HP is above {0}% and attacking").
+-define(SN456, "Attack - Insight III").
+-define(SD456, "{0}% chance to obtain see through effect (Anti-block Rate +20%) for {1} sec when attacking").
+-define(SN457, "Attack - Infinite Wrath II").
+-define(SD457, "{0}% chance to obtain Infinite Wrath effect (DMG Bonus +40%) 
+for {1} sec when attacking").
+-define(SN458, "Full - Infinite Wrath II").
+-define(SD458, "Obtain Infinite Wrath effect (DMG Bonus +40%) for {1} sec 
+when HP is above {0}%").
+-define(SN459, "First - Infinite Wrath III").
+-define(SD459, "Obtain Infinite Wrath effect (DMG Bonus +40%) for {0} sec when entering into combat").
+-define(SN460, "Full - Infinite Wrath III").
+-define(SD460, "Obtain Infinite Wrath effect (DMG Bonus +40%) for {1} sec 
+when HP is above {0}%").
+-define(SN461, "Attack - Seed of Destruction").
+-define(SD461, "Attacks have a {0}% chance to inflict Seed of Destruction (when the effect ends, each stack deals DMG equal to 100% of 2% of HP lost by the target).Can stack up to {1} times.Duration: {2}s.").
+-define(SN462, "Attack - Precision III").
+-define(SD462, "{0}% chance to obtain precision effect (Hit Rate +10%) for {1} sec when attacking").
+-define(SN463, "Attack - Gallant Study II").
+-define(SD463, "When attacking, has a {0}% chance to gain Gallant Study (Each layer DMG Bonus +2%) {1} layer for {2} sec").
+-define(SN464, "Full - Gallant Study II").
+-define(SD464, "If HP is above {0}%, attacks grant {1} layers of Gallant Study (DMG Bonus +2% per layer) for {2} sec").
+-define(SN465, "Attack - Gallant Study III").
+-define(SD465, "When attacking, has a {0}% chance to gain Gallant Study (Each layer DMG Bonus +2%) {1} layer for {2} sec").
+-define(SN466, "Full - Gallant Study IV").
+-define(SD466, "If HP is above {0}%, attacks grant {1} layers of Gallant Study (DMG Bonus +2% per layer) for {2} sec").
+-define(SN467, "Broken - Gallant Force").
+-define(SD467, "When HP＜{0}%, obtain stack of Gallant Force (trigger {1} stack of Wrath Study(DMG Bonus +2% with each stack)/s for {2}s).Duration: {3}s.Cannot dispel").
+-define(SN800, "Defense - Harden Study III").
+-define(SD800, "{0}% chance to obtain {1} stack of Harden Study effect (DMG RED +2% with each stack) for {2} sec when attacked").
+-define(SN801, "Full - Harden Study III").
+-define(SD801, "Obtain {1} stack of Harden Study effect (DMG RED +2% with each stack) for {2} sec when HP is above {0}% and attacked").
+-define(SN802, "Broken - Hardening Force").
+-define(SD802, "When HP＜{0}% and under attack, obtain stack of Hardening Force (trigger {1} stack of Harden Study(DMG RED +2% with each stack)/s for {2}s).Duration: {3}s.Cannot dispel").
+-define(SN616, "Seed of Life").
+-define(SD616, "{0}% chance to obtain {1} stacks Seed of Life effect when attacked, (when buff ends, each stack heals 100% plus 5% of the target's lost HP) for {2} sec").
+-define(SN617, "Guardian's Gaze").
+-define(SD617, "Obtain DMG RED +{0}% for {1} sec when entering into combat, effect increases {2}% ({3}% at most) with each nearby enemy player").
+-define(SN618, "Judgment of Soul").
+-define(SD618, "{0}% chance to deal {1}% DMG to front targets with {2}% Crit.Rate").
+-define(SN619, "Demon Slayer Prophecy").
+-define(SD619, "Increase {0}% DMG RED to player").
+-define(SN620, "Spiritual Power Prophecy").
+-define(SD620, "Increase {0}% PVE DMG Bonus").
+-define(SN621, "Life Enhancement").
+-define(SD621, "Increase {0}% HP for the Divine Souls").
+-define(SN622, "Attack Enhancement").
+-define(SD622, "Increase {0}% Atk for the Divine Souls").
+-define(SN623, "Defense Enhancement").
+-define(SD623, "Increase {0}% Def for the Divine Souls").
+-define(SN624, "Sunder Enhancement").
+-define(SD624, "Increase {0}% Sunder for the Divine Souls").
+-define(SN625, "All-round Enhancement").
+-define(SD625, "Increase {0}% stat for the Divine Souls").
+-define(SN626, "Life Enhancement").
+-define(SD626, "Increase {0}% HP for the Deity").
+-define(SN627, "Group Life Enhancement").
+-define(SD627, "Increase {0}% HP for all Deity").
+-define(SN628, "Attack Enhancement").
+-define(SD628, "Increase {0}% Atk for the Deity").
+-define(SN629, "Group Attack Enhancement").
+-define(SD629, "Increase {0}% Atk for all Deity").
+-define(SN630, "Defense Enhancement").
+-define(SD630, "Increase {0}% Def for the Deity").
+-define(SN631, "Group Defense Enhancement").
+-define(SD631, "Increase {0}% Def for all Deity").
+-define(SN632, "Sunder Enhancement").
+-define(SD632, "Increase {0}% Sunder for the Deity").
+-define(SN633, "Group Sunder Enhancement").
+-define(SD633, "Increase {0}% Sunder for all Deity").
+-define(SN634, "Stat Enhancement").
+-define(SD634, "Increase {0}% stat for the Deity").
+-define(SN635, "Group Stat Enhancement").
+-define(SD635, "Increase {0}% stat for all Deity").
+-define(SN636, "Life Enhancement").
+-define(SD636, "Increase {0}% HP for the Deity").
+-define(SN637, "Group Life Enhancement").
+-define(SD637, "Increase {0}% HP for all Deity").
+-define(SN638, "Attack Enhancement").
+-define(SD638, "Increase {0}% Atk for the Deity").
+-define(SN639, "Group Attack Enhancement").
+-define(SD639, "Increase {0}% Atk for all Deity").
+-define(SN640, "Defense Enhancement").
+-define(SD640, "Increase {0}% Def for the Deity").
+-define(SN641, "Group Defense Enhancement").
+-define(SD641, "Increase {0}% Def for all Deity").
+-define(SN642, "Sunder Enhancement").
+-define(SD642, "Increase {0}% Sunder for the Deity").
+-define(SN643, "Group Sunder Enhancement").
+-define(SD643, "Increase {0}% Sunder for all Deity").
+-define(SN644, "Stat Enhancement").
+-define(SD644, "Increase {0}% stat for the Deity").
+-define(SN645, "Group Stat Enhancement").
+-define(SD645, "Increase {0}% stat for all Deity").
+-define(SN646, "Life Enhancement").
+-define(SD646, "Increase {0}% HP for the Deity").
+-define(SN647, "Group Life Enhancement").
+-define(SD647, "Increase {0}% HP for all Deity").
+-define(SN648, "DMG Bonus").
+-define(SD648, "Increase {0}% DMG Bonus for player").
+-define(SN649, "Attack Enhancement").
+-define(SD649, "Increase {0}% Atk for the Deity").
+-define(SN650, "Group Attack Enhancement").
+-define(SD650, "Increase {0}% Atk for all Deity").
+-define(SN651, "DMG RED").
+-define(SD651, "Increase {0}% DMG RED for player").
+-define(SN652, "Defense Enhancement").
+-define(SD652, "Increase {0}% Def for the Deity").
+-define(SN653, "Group Defense Enhancement").
+-define(SD653, "Increase {0}% Def for all Deity").
+-define(SN654, "Crit.Rate").
+-define(SD654, "Increase {0}% Crit.Rate for player").
+-define(SN655, "Sunder Enhancement").
+-define(SD655, "Increase {0}% Sunder for the Deity").
+-define(SN656, "Group Sunder Enhancement").
+-define(SD656, "Increase {0}% Sunder for all Deity").
+-define(SN657, "Tough Rate").
+-define(SD657, "Increase {0}% Tough Rate for player").
+-define(SN658, "Stat Enhancement").
+-define(SD658, "Increase {0}% stat for the Deity").
+-define(SN659, "Group Stat Enhancement").
+-define(SD659, "Increase {0}% stat for all Deity").
+-define(SN660, "Block Rate").
+-define(SD660, "Increase {0}% Block Rate for player").
+-define(SN661, "Life Enhancement").
+-define(SD661, "Increase {0}% HP for the Deity").
+-define(SN662, "Group Life Enhancement").
+-define(SD662, "Increase {0}% HP for all Deity").
+-define(SN663, "Anti-block Rate").
+-define(SD663, "Increase {0}% Anti-block Rate for player").
+-define(SN664, "Attack Enhancement").
+-define(SD664, "Increase {0}% Atk for the Deity").
+-define(SN665, "Group Attack Enhancement").
+-define(SD665, "Increase {0}% Atk for all Deity").
+-define(SN666, "Hit Rate").
+-define(SD666, "Increase {0}% Hit Rate for player").
+-define(SN667, "Defense Enhancement").
+-define(SD667, "Increase {0}% Def for the Deity").
+-define(SN668, "Group Defense Enhancement").
+-define(SD668, "Increase {0}% Def for all Deity").
+-define(SN669, "Dodge Rate").
+-define(SD669, "Increase {0}% Dodge Rate for player").
+-define(SN670, "Sunder Enhancement").
+-define(SD670, "Increase {0}% Sunder for the Deity").
+-define(SN671, "Group Sunder Enhancement").
+-define(SD671, "Increase {0}% Sunder for all Deity").
+-define(SN672, "Skill DMG Bonus").
+-define(SD672, "Skill DMG Bonus +{0}%").
+-define(SN673, "Stat Enhancement").
+-define(SD673, "Increase {0}% stat for the Deity").
+-define(SN674, "Group Stat Enhancement").
+-define(SD674, "Increase {0}% stat for all Deity").
+-define(SN675, "Skill DMG RED").
+-define(SD675, "Character Skill DMG Reduction +{0}%").
+-define(SN701, "[Paralysis] Lv.1").
+-define(SD701, "Attack has a {0}% chance to paralyze (cannot be controlled) the target for {1}s.CD: {2}s.").
+-define(SN702, "[Healing] Lv.1").
+-define(SD702, "Attack has a {0}% chance to cure the attacker for {1}% damage dealt.CD: {2}s.").
+-define(SN703, "[Respawn] Level I").
+-define(SD703, "Upon death, heal {0}% HP.CD: {1}s.").
+-define(SN704, "[Protection] Lv.1").
+-define(SD704, "When attacked, there is a {0}% chance to gain DMG Reduction +{1}% for {2}s.CD: {3}s.").
+-define(SN705, "[Paralysis] Lv.2").
+-define(SN706, "[Healing] Lv.2").
+-define(SN707, "[Respawn] Lv.2").
+-define(SN708, "[Protection] Lv.2").
+-define(SN709, "[Paralysis] Lv.3").
+-define(SN710, "[Healing] Lv.3").
+-define(SN711, "[Respawn] Lv.3").
+-define(SN712, "[Protection] Lv.3").
+-define(SN713, "[Paralysis] Lv.4").
+-define(SN714, "[Healing] Lv.4").
+-define(SN715, "[Respawn] Lv.4").
+-define(SN716, "[Protection] Lv.4").
+-define(SN717, "[Paralysis] Lv.5").
+-define(SN718, "[Healing] Lv.5").
+-define(SN719, "[Respawn] Lv.5").
+-define(SN720, "[Protection] Lv.5").
+-define(SN721, "[Paralysis] Lv.6").
+-define(SN722, "[Healing] Lv.6").
+-define(SN723, "[Respawn]  Lv.6").
+-define(SN724, "[Protection] Lv.6").
+-define(SN725, "[Paralysis] Lv.7").
+-define(SN726, "[Healing] Lv.7").
+-define(SN727, "[Respawn] Lv.7").
+-define(SN728, "[Protection] Lv.7").
+-define(SN729, "[Paralysis] Lv.8").
+-define(SN730, "[Healing] Lv.8").
+-define(SN731, "[Respawn] Lv.8").
+-define(SN732, "[Protection] Lv.8").
+-define(SN733, "[Paralysis] Lv.9").
+-define(SN734, "[Healing] Lv.9").
+-define(SN735, "[Respawn] Lv.9").
+-define(SN736, "[Protection] Lv.9").
+-define(SN737, "[Paralysis] Lv.10").
+-define(SN738, "[Healing] Lv.10").
+-define(SN739, "[Respawn] Lv.10").
+-define(SN740, "[Protection] Lv.10").
+-define(SN103, "Blink Slash").
+-define(SN104, "Whirling Cleave").
+-define(SN110, "Tebasan Bulan").
+-define(SN111, "Crescent Slash").
+-define(SN123, "Sundering Flame").
+-define(SN124, "Fire Blast").
+-define(SN128, "Frost Spike").
+-define(SN131, "Ice Strafe").
+-define(SN142, "Whirling Arrow").
+-define(SN150, "Scatter Shot").
+-define(SN151, "Suspended Arrow").
+-define(SN153, "Thunder Bird").
+-define(ST1, "Active ").
+-define(ST2, "Passive").
+-define(BUFFFROM, "Buff Source: ").
+-define(BF1, "[Not clear for now]").
+-define(BF2, "[Statue Skill]").
+-define(BF3, "[Active Skill]").
+-define(BF4, "[Ring of Rage]").
+-define(BF5, "[Ring of Magic Energy]").
+-define(BF6, "[Ring of Hawk Eye]").
+-define(BF7, "[Class Transfer]").
+-define(BF8, "[Active Skill]").
+-define(BF9, "[Hero Skill]").
+-define(BF10, "[Fay Dragon]").
+-define(BF11, "[God Tome]").
+-define(BF12, "[Ring of Eagle Eye]").
+-define(BF13, "[Ring of Falcon]").
+-define(BF14, "[Mount]").
+-define(BF15, "[Ring]").
+-define(BF16, "[Wings]").
+-define(BF17, "[Hero Skill]").
+-define(BF18, "[Accessory]").
+-define(BF19, "[Horcrux]").
+-define(BF20, "[Horcrux]").
+-define(BF21, "[Shenron]").
+-define(BF22, "[Buff Ball]").
+-define(BF23, "[Slaughter]").
+-define(BF24, "[Yggdrasil War]").
+-define(BF25, "[Yggdrasil War Instant Revival]").
+-define(BF26, "[Damage vehicle]").
+-define(BF27, "[Resurrection protection]").
+-define(BF28, "[Reinforce]").
+-define(BF29, "[PVP buff]").
+-define(BF30, "[Cowardice]").
+-define(BF31, "[Roll]").
+-define(BF32, "[Rage]").
+-define(BF33, "Tower").
+-define(BF34, "[Sphinx Room]").
+-define(BF35, "[Suicide]").
+-define(BF36, "[BOSS]").
+-define(BF37, "[Thor's Hammer]").
+-define(BF38, "[Clash of Guild]").
+-define(BF39, "[Wedding Gift]").
+-define(BF40, "[Friends Party]").
+-define(BF41, "[Guild]").
+-define(BF42, "[Advanced EXP Potion]").
+-define(BF43, "EXP Potion").
+-define(BF44, "[Inspire]").
+-define(BF45, "World Level EXP Bonus").
+-define(BF46, "[VIP Privileges bonus]").
+-define(BF47, "[Basic EXP Potion]").
+-define(BF48, "[Medium EXP Potion]").
+-define(BF49, "[Party bonus]").
+-define(BF50, "[War Banner 1]").
+-define(BF51, "[War Banner 2]").
+-define(BF52, "[Praying]").
+-define(BF53, "Clash of Guilds Overlord bonus").
+-define(BF54, "[Clash of Guilds Inspire]").
+-define(BF55, "Clash of Guilds Level 3 Guild Leader Bonus").
+-define(BF56, "[Clash of Guilds S Zone No.1 Guild]").
+-define(BF57, "[Clash of Guilds S Zone No.1 Guild]").
+-define(BF58, "[Clash of Guilds S Zone No.1 Guild]").
+-define(BF59, "[Clash of Guilds S Zone No.1 Guild]").
+-define(BF60, "[Clash of Guilds S Zone No.2 Guild]").
+-define(BF61, "[Dragon Conquest Inspire]").
+-define(BF62, "[Monthly Card Perks]").
+-define(BF63, "[Clash of Guilds S Zone No.2 Guild]").
+-define(BF64, "[Clash of Guilds S Zone No.2 Guild]").
+-define(BF65, "[Clash of Guilds S Zone No.2 Guild]").
+-define(BF66, "[Clash of Guilds S Zone No.3 Guild]").
+-define(BF67, "[Clash of Guilds S Zone No.3 Guild]").
+-define(BF68, "[Clash of Guilds S Zone No.3 Guild]").
+-define(BF69, "[Clash of Guilds S Zone No.3 Guild]").
+-define(BF70, "[Clash of Guilds S Zone No.4 Guild]").
+-define(BF71, "[Clash of Guilds S Zone No.4 Guild]").
+-define(BF72, "[Clash of Guilds S Zone No.4 Guild]").
+-define(BF73, "[Clash of Guilds S Zone No.4 Guild]").
+-define(BF74, "[Clash of Guilds A Zone No.1 Guild]").
+-define(BF75, "[Clash of Guilds A Zone No.1 Guild]").
+-define(BF76, "[Clash of Guilds A Zone No.1 Guild]").
+-define(BF77, "[Clash of Guilds A Zone No.1 Guild]").
+-define(BF78, "[Clash of Guilds A Zone No.2 Guild]").
+-define(BF79, "[Clash of Guilds A Zone No.2 Guild]").
+-define(BF80, "[Clash of Guilds A Zone No.2 Guild]").
+-define(BF81, "[Clash of Guilds A Zone No.2 Guild]").
+-define(BF82, "[Clash of Guilds A Zone No.3 Guild]").
+-define(BF83, "[Clash of Guilds A Zone No.3 Guild]").
+-define(BF84, "[Clash of Guilds A Zone No.3 Guild]").
+-define(BF85, "[Clash of Guilds A Zone No.3 Guild]").
+-define(BF86, "[Clash of Guilds A Zone No.4 Guild]").
+-define(BF87, "[Clash of Guilds A Zone No.4 Guild]").
+-define(BF88, "[Clash of Guilds A Zone No.4 Guild]").
+-define(BF89, "[Clash of Guilds A Zone No.4 Guild]").
+-define(BF90, "[Top 3v3]").
+-define(BF91, "[Divine Weapon]").
+-define(BF92, "[BOSS]").
+-define(BF100, "[Gold Tower]").
+-define(BF101, "").
+-define(BF102, "").
+-define(BF103, "").
+-define(BF104, "").
+-define(BF105, "").
+-define(BF106, "").
+-define(BF201, "[Horse of Athens]").
+-define(BF202, "[Flaming Wolf]").
+-define(BF203, "[Roaring Lion]").
+-define(BF204, "[Velociraptor]").
+-define(BF205, "[Lava Scorpion]").
+-define(BF206, "[Undead Horse]").
+-define(BF207, "[Behemoth]").
+-define(BF208, "[Basilisk]").
+-define(BF209, "[Manticore]").
+-define(BF210, "[Holy Griffin]").
+-define(BF211, "[Killer Tiger]").
+-define(BF212, "[Viking War Bear]").
+-define(BF213, "[Blazing Roar]").
+-define(BF214, "[Poseidon's Warhorse]").
+-define(BF215, "[Pan Satyr]").
+-define(BF216, "[Hog of Fury]").
+-define(BF217, "[Merry-Go-Round]").
+-define(BF218, "[Golden Dragonboat]").
+-define(BF219, "[Angry Toucan]").
+-define(BF220, "[Prehistoric Shark]").
+-define(BF221, "[Speedy Leopard]").
+-define(BF222, "[Giant Crab]").
+-define(BF223, "[Unicorn]").
+-define(BF224, "[Throne of Cunning]").
+-define(BF225, "[Romantic Garland]").
+-define(BF226, "[Great-Edge Rhinoceros]").
+-define(BF227, "[Abnormal Armor]").
+-define(BF228, "[Hell Guardian]").
+-define(BF229, "[Ancient Dragon]").
+-define(BF230, "[Magic Rabbit]").
+-define(BF231, "[Romantic Crescent]").
+-define(BF232, "[Knight of Hell]").
+-define(BF233, "[Mechanical Mantis]").
+-define(BF234, "[Dragon Lich]").
+-define(BF301, "[Blood Dragonwings]").
+-define(BF302, "[Mesmer Wings]").
+-define(BF303, "[Future Wings]").
+-define(BF304, "[Demon's Wings]").
+-define(BF305, "[Sky Wings]").
+-define(BF306, "[Angel's Embrace Wings]").
+-define(BF307, "[Flame Dragonwings]").
+-define(BF308, "[Elven Fantasy]").
+-define(BF309, "[Shadowfiend Wings]").
+-define(BF310, "[Fallen Angel Wings]").
+-define(BF311, "[Iron Blade Wings]").
+-define(BF312, "[Aquamarine Wings]").
+-define(BF313, "[Ice&Fire Wings]").
+-define(BF314, "[Death Knight Wings]").
+-define(BF315, "[Night Wings]").
+-define(BF316, "[Dark Fay]").
+-define(BF317, "[Avarice Wings]").
+-define(BF318, "[Succubus Wings]").
+-define(BF319, "[Darkness Wings]").
+-define(BF320, "[Dreamy Fay]").
+-define(BF321, "[Putridity Wings]").
+-define(BF322, "[Windmill Wings]").
+-define(BF323, "[Frost Wyrm Wings]").
+-define(BF324, "[Dryad Wings]").
+-define(BF325, "[Flourish Wings]").
+-define(BF326, "[Light Wings]").
+-define(BF327, "[Proud Leo Wings]").
+-define(BF328, "[Iron Wings of Storm]").
+-define(BF329, "[Embrace of Demon]").
+-define(BF330, "[Goddess's Pray]").
+-define(BF331, "[Cuirass of Ether]").
+-define(BF332, "[Phoenix]").
+-define(BF333, "[Wings of Hearts]").
+-define(BF334, "[Burning Blade]").
+-define(BF335, "[Sigh of Luna]").
+-define(BF336, "[Divine Frost Wings]").
+-define(BF337, "[Golden Dragon]").
+-define(BF338, "[Crimson Dragon]").
+-define(BF421, "[Little Fay]").
+-define(BF422, "[Blade Saint]").
+-define(BF423, "[Fire Maiden]").
+-define(BF424, "[Paladin]").
+-define(BF425, "[Kitty]").
+-define(BF426, "[Blazing Angel]").
+-define(BF427, "[Tauren Chieftain]").
+-define(BF428, "[Queen of Pain]").
+-define(BF429, "[Kung Fu Panda]").
+-define(BF430, "[Witch of Frost]").
+-define(BF431, "[Butcher of Hatred]").
+-define(BF501, "[Basic Skill]").
+-define(BF502, "[Awakened Skill]").
+-define(BF503, "[Talent Skill]").
+-define(BF504, "[Divine Weapon]").
+-define(BN1, "Temporary Buff").
+-define(BD1, "Temporary Buff description 1:{0} description 2:{1} description 3:{2}").
+-define(BN200, "EXP Bonus").
+-define(BD200, "Mob EXP and AFK EXP +{0}%").
+-define(BN201, "Revive").
+-define(BD201, "Final DMG increases {0}%.Ramp up to infinite stacks.").
+-define(BN202, "Deity Body").
+-define(BD202, "Immune to soft-control and increase {0}% Max.HP").
+-define(BN203, "Stab").
+-define(BD203, "Take {1}% DMG with every {0} movement").
+-define(BN204, "Black Dragon's Scales").
+-define(BD204, "Defense massive DMG").
+-define(BN205, "Fay Guardian").
+-define(BD205, "Increase {0}% DMG RED with every enemy around.{1}% at most").
+-define(BN206, "Combat Will").
+-define(BD206, "Increase {0}% DMG Bonus with every enemy around.{1}% at most").
+-define(BN207, "Red Name").
+-define(BD207, "Become Red Name when slaughter value over 50.Being killed by player will drop Ruby").
+-define(BN208, "Multiple DMG Bonus").
+-define(BD208, "Increase {0}% DMG Bonus.Ramp up to {1} stack").
+-define(BN209, "Minotaur").
+-define(BD209, "Only I can chop down people, no one can chop down me!").
+-define(BN210, "Abyssal Hound").
+-define(BD210, "Woah! You morphed into an Abyssal Hound! Run!").
+-define(BN211, "Power of Mountain").
+-define(BD211, "Increase {0}% DMG RED and Block Rate.Recover {1}% HP altogether").
+-define(BN212, "Power of Flame").
+-define(BD212, "Increase {0}% DMG Bonus and Crit.Rate.Recover {1}% Rage").
+-define(BN213, "Power of Gale").
+-define(BD213, "Increase {0}% DMG Bonus and Move Speed.Recover {1}% HP altogether").
+-define(BN214, "Power of Thunder").
+-define(BD214, "Increase {0}% Crit.Rate and Move Speed.Recover {1}% Rage").
+-define(BN215, "Multiple DMG RED").
+-define(BD215, "Increase {0}% DMG RED.Ramp up to {1} stack").
+-define(BN216, "Divine Protection").
+-define(BD216, "Dodge Rate and Block Rate +{0}%").
+-define(BN217, "Statue").
+-define(BD217, "Out of control duration with each stack -{0}%").
+-define(BN218, "Big Surprise").
+-define(BD218, "You have become an indescribable...").
+-define(BN219, "Statue").
+-define(BD219, "Bring it on! Do not run!").
+-define(BN220, "Intercept").
+-define(BD220, "Being intercepted! Move Speed -{0}").
+-define(BN221, "Alert").
+-define(BD221, "Alert state! Block Rate +{0}%").
+-define(BN222, "Magic Shield").
+-define(BD222, "Magic protection! Def +{0}%").
+-define(BN223, "Agility").
+-define(BD223, "Become dexterous! Dodge +{0}%").
+-define(BN224, "Delink").
+-define(BD224, "Feeble hands! Atk -{0}%").
+-define(BN225, "Passivate").
+-define(BD225, "Stiff body! Sunder -{0}%").
+-define(BN226, "Pierce").
+-define(BD226, "Armor broke! Def -{0}%").
+-define(BN227, "Harden").
+-define(BD227, "Skin hardened! DMG RED +{0}%").
+-define(BN228, "Gallant").
+-define(BD228, "Wrath aroused! DMG Bonus +{0}%").
+-define(BN229, "Mania").
+-define(BD229, "Fury leaked! Crit.Rate +{0}%").
+-define(BN230, "Scorch").
+-define(BD230, "Open fire! DOT taken! ").
+-define(BN231, "Iron Bone").
+-define(BD231, "Body steeled! DMG RED +{0}%").
+-define(BN232, "Tranquility").
+-define(BD232, "Peaceful mind! Crit Resistance +{0}%").
+-define(BN233, "Infinite Wrath").
+-define(BD233, "Wrath emerged! DMG Bonus +{0}%").
+-define(BN234, "Precision").
+-define(BD234, "Focused mind! Hit Rate +{0}%").
+-define(BN235, "Root").
+-define(BD235, "Stiff legs! Unable to move").
+-define(BN236, "Feet Lock").
+-define(BD236, "Fumbled move! Unable to roll").
+-define(BN237, "Ichor").
+-define(BD237, "Physique strengthened! Max.HP +{0}%").
+-define(BN238, "Marvelous Speed").
+-define(BD238, "Agile skill! Move Speed +{0}%").
+-define(BN239, "Stun").
+-define(BD239, "Stunned! Unable to control").
+-define(BN240, "Freeze").
+-define(BD240, "Frozen! Unable to control").
+-define(BN241, "Paralyze").
+-define(BD241, "Paralyzed! Unable to control").
+-define(BN242, "Terror").
+-define(BD242, "Intimidated! Unable to control").
+-define(BN243, "Slowness of Feet").
+-define(BD243, "Numb feet! Move Speed -{0}%").
+-define(BN244, "Sensation Loss").
+-define(BD244, "Confused! Hit Rate -{0}%").
+-define(BN245, "Hamstring").
+-define(BD245, "Legs hurt! Move Speed -{0}%").
+-define(BN246, "Invincible").
+-define(BD246, "Being blessed! Immune to DMG").
+-define(BN247, "Block Mastery").
+-define(BD247, "Proficient block skill! Block Rate and Block Decrease +{0}%").
+-define(BN248, "Windwalker").
+-define(BD248, "Wind Spirit protected! Dodge Rate +{0}%").
+-define(BN249, "Rage Force").
+-define(BD249, "Fury outbroke! Crit.Rate +{0}%").
+-define(BN250, "Consummate").
+-define(BD250, "Extract rage! Rage Recover +{0}%").
+-define(BN251, "Full Alert").
+-define(BD251, "Focused protection! Block Rate +{0}%").
+-define(BN252, "Iron Wall").
+-define(BD252, "Armor promoted! Def +{0}%").
+-define(BN253, "Deity Wandering").
+-define(BD253, "Unpredictable steps! Move restriction effect nullified").
+-define(BN254, "Demon Soul").
+-define(BD254, "Powerful soul force! Unable to control effect nullified").
+-define(BN255, "Bleed").
+-define(BD255, "Arterial rupture! {1}% of current life's damage every {0} seconds").
+-define(BN256, "Blood Venom").
+-define(BD256, "Blood contaminated! Max.HP-{0}%.Ramp up to {1} stack").
+-define(BN257, "Demoralize").
+-define(BD257, "Demoralized! DMG Bonus -{0}%").
+-define(BN258, "Blunt").
+-define(BD258, "Slow response! Dodge Rate -{0}%").
+-define(BN259, "Seed of Destruction").
+-define(BD259, "Destruction takes root! Each layer at the end of the buff deals {0}% of the basic damage and an extra damage of {1}% of the target's lost HP").
+-define(BN260, "Lazy Eyes").
+-define(BD260, "Mind dementia! Dodge Rate -{0}%").
+-define(BN261, "Silence").
+-define(BD261, "Cannot yell move name! Unable to use player active skill").
+-define(BN262, "STR").
+-define(BD262, "Strength refreshed! Atk +{0}%").
+-define(BN263, "Sharp").
+-define(BD263, "Sharpen the knife! Sunder +{0}%").
+-define(BN264, "Gallant Study").
+-define(BD264, "Increase Wrath gradually! DMG Bonus +{0}% with each stack").
+-define(BN265, "Harden Study").
+-define(BD265, "Increase Harden gradually! DMG RED +{0}% with each stack").
+-define(BN266, "Precision Study").
+-define(BD266, "Increase Precision gradually! Hit Rate +{0}% with each stack").
+-define(BN267, "Agility Study").
+-define(BD267, "Increase Agility gradually! Dodge Rate +{0}% with each stack").
+-define(BN268, "Block Study").
+-define(BD268, "Increase Block gradually! Block Rate +{0}% with each stack").
+-define(BN269, "Seed of Life").
+-define(BD269, "Life takes root! Heals at each end of the buff for {0}% of the basic healing and an extra healing of {1}% of the target's lost HP").
+-define(BN270, "Precision Master").
+-define(BD270, "Crack shot! Hit Rate +{0}%").
+-define(BN271, "Divine Walk").
+-define(BD271, "Force of resisting block! Control duration -{0}%").
+-define(BN272, "Shenron Soar").
+-define(BD272, "Physique of dragon! Control duration -{0}%").
+-define(BN273, "Insight").
+-define(BD273, "See through the move! Anti-block Rate +{0}%").
+-define(BN274, "Energy Shield").
+-define(BD274, "Gather energy! Energy points that can withstand {0}% DMG").
+-define(BN275, "Gallant").
+-define(BD275, "Heroic! Skill Damage + {0}%").
+-define(BN276, "Justice").
+-define(BD276, "Justice reduced! Final damage + {0}%").
+-define(BN277, "Technique").
+-define(BD277, "Skill DMG + {0}%").
+-define(BN278, "Rusty").
+-define(BD278, "Skill DMG - {0}%").
+-define(BN279, "Contaminated").
+-define(BD279, "Healing - {0}%").
+-define(BN280, "Fatal").
+-define(BD280, "Healing - {0}%").
+-define(BN281, "Precise Technique").
+-define(BD281, "Precise Technique! Skill DMG +{0}%").
+-define(BN282, "Out of practice").
+-define(BD282, "Skill DMG - {0}%").
+-define(BN283, "Technique Research").
+-define(BD283, "Improve techniques gradually! Every layer gives Skill DMG +{0}%.").
+-define(BN300, "Tyrannical").
+-define(BD300, "Crit.Rate +{0}%").
+-define(BN301, "Brutality").
+-define(BD301, "DMG Bonus+{0}%").
+-define(BN302, "Precision").
+-define(BD302, "Hit Rate+{0}%").
+-define(BN303, "Root").
+-define(BD303, "Unable to move").
+-define(BN304, "Slow").
+-define(BD304, "Move Speed -{0}%").
+-define(BN305, "Feet Lock").
+-define(BD305, "Unable to use Roll skill").
+-define(BN306, "Speedup").
+-define(BD306, "Move Speed +{0}%").
+-define(BN307, "Recover").
+-define(BD307, "Recover {0}% HP every {1} sec").
+-define(BN308, "Invincible").
+-define(BD308, "Immune to all DMG.").
+-define(BN309, "Block").
+-define(BD309, "Block Rate +{0}%").
+-define(BN310, "Iron Defense").
+-define(BD310, "Damage Reduction+{0}%").
+-define(BN311, "Frailty").
+-define(BD311, "DMG Bonus-{0}%").
+-define(BN312, "Stun").
+-define(BD312, "Unable to control").
+-define(BN313, "Massacre").
+-define(BD313, "DMG to monsters +{0}%").
+-define(BN314, "Ire").
+-define(BD314, "Rage Recover +{0}%").
+-define(BN315, "Reinforce").
+-define(BD315, "DMG taken -{0}%").
+-define(BN316, "Terror").
+-define(BD316, "Intimidated, flee in disorder").
+-define(BN317, "Resolve").
+-define(BD317, "DMG taken from player -{0}%").
+-define(BN318, "Dodge").
+-define(BD318, "Dodge Rate+{0}%").
+-define(BN319, "Shape Shift").
+-define(BD319, "Shape transformed by mysterious force").
+-define(BN320, "Thor's Hammer").
+-define(BD320, "Tested by lightning from Thor's Hammer, sustain DMG equals {0}%X of Max HP every {1} sec").
+-define(BN321, "Vanguard").
+-define(BD321, "DMG RED +{0}%.Effect increases {1}% with each enemy player around.{2}% at most").
+-define(BN322, "Boundary of Frost Land").
+-define(BD322, "Frozen, immune to DMG and unable to control").
+-define(BN323, "Dragon Pillar Guardian").
+-define(BD323, "Nidhogg’s Blessing, DMG Bonus +{0}% and DMG RED +{1}%").
+-define(BN324, "Bless").
+-define(BD324, "Every layer gives Skill DMG Bonus +{0}%.Can add {1} layers").
+-define(BN325, "Guardian").
+-define(BD325, "Every layer makes DMG RED +{0}%.Can add {1} layers").
+-define(BN326, "Top Power").
+-define(BD326, "HP +{0}0,000; ATK +{1}0,000; DEF +{2}0,000; Sunder +{3}0,000").
+-define(BN327, "Neptune's Shield").
+-define(BD327, "Ocean protection.Absorbs {1}0,000 damage; Decreases the enemy's damage to {0}0,000; Restores {2}% HP/s").
+-define(BN328, "Tide Shield").
+-define(BD328, "Tidal Protection.Absorbs {0}% damage; Deals {1}% damage to nearby enemies before disappearing").
+-define(BN329, "Wave Shield").
+-define(BD329, "Wave Protection.Absorbs {0}% damage; During skill period, restores {1}% HP/s").
+-define(BN330, "Gallant Force").
+-define(BD330, "Gain {0} layers of Battle Research/s.Duration: {1}s(DMG Bonus +2% with each stack)").
+-define(BN331, "Hardening Force").
+-define(BD331, "Gain {0} layers of Harden Study/s.Duration: {1}s (DMG RED +2% with each stack)").
+-define(BN332, "Plane Energy Shield").
+-define(BD332, "Absorbs {1}0,000 damage; Decreases the enemy's damage to {0}0,000").
+-define(BN333, "Fiend Deterrence").
+-define(BD333, "Gain higher DEF with more players present").
+-define(BN334, "Quietus Firecircle").
+-define(BD334, "DMG Bonus +{0}%, decreases {1}% with each enemy around up to {2}%").
+-define(BN30188, "").
+-define(BD30188, "").
+-define(BN10101, "Friends Party").
+-define(BD10101, "Intimacy level {0}
+Atk +{1}.HP +{2}").
+-define(BN10201, "First Guild Leader bonus").
+-define(BN10202, "First Guild Leader bonus").
+-define(BN10203, "First Guild Leader bonus").
+-define(BN10204, "First Guild Leader bonus").
+-define(BN10205, "First Guild Leader bonus").
+-define(BN10206, "First Guild Leader bonus").
+-define(BN10207, "First Guild Leader bonus").
+-define(BN10208, "First Guild Leader bonus").
+-define(BN10209, "First Guild Leader bonus").
+-define(BN10210, "First Guild Leader bonus").
+-define(BN10211, "First Guild Enforcer Bonus").
+-define(BN10212, "First Guild Lawman bonus").
+-define(BN10213, "First Guild Lawman bonus").
+-define(BN10214, "First Guild Lawman bonus").
+-define(BN10215, "First Guild Lawman bonus").
+-define(BN10216, "First Guild Lawman bonus").
+-define(BN10217, "First Guild Lawman bonus").
+-define(BN10218, "First Guild Lawman bonus").
+-define(BN10219, "First Guild Lawman bonus").
+-define(BN10220, "First Guild Lawman bonus").
+-define(BN10221, "First Guild Deputy Leader bonus").
+-define(BN10222, "First Guild Deputy Leader bonus").
+-define(BN10223, "First Guild Deputy Leader bonus").
+-define(BN10224, "First Guild Deputy Leader bonus").
+-define(BN10225, "First Guild Deputy Leader bonus").
+-define(BN10226, "First Guild Deputy Leader bonus").
+-define(BN10227, "First Guild Deputy Leader bonus").
+-define(BN10228, "First Guild Deputy Leader bonus").
+-define(BN10229, "First Guild Deputy Leader bonus").
+-define(BN10230, "First Guild Deputy Leader bonus").
+-define(BN10231, "First Guild Elder bonus").
+-define(BN10232, "First Guild Elder bonus").
+-define(BN10233, "First Guild Elder bonus").
+-define(BN10234, "First Guild Elder bonus").
+-define(BN10235, "First Guild Elder bonus").
+-define(BN10236, "First Guild Elder bonus").
+-define(BN10237, "First Guild Elder bonus").
+-define(BN10238, "First Guild Elder bonus").
+-define(BN10239, "First Guild Elder bonus").
+-define(BN10240, "First Guild Elder bonus").
+-define(BN10241, "First Guild Elite bonus").
+-define(BN10242, "First Guild Elite bonus").
+-define(BN10243, "First Guild Elite bonus").
+-define(BN10244, "First Guild Elite bonus").
+-define(BN10245, "First Guild Elite bonus").
+-define(BN10246, "First Guild Elite bonus").
+-define(BN10247, "First Guild Elite bonus").
+-define(BN10248, "First Guild Elite bonus").
+-define(BN10249, "First Guild Elite bonus").
+-define(BN10250, "First Guild Elite bonus").
+-define(BN10251, "First Guildmates bonus").
+-define(BN10252, "First Guild Member bonus").
+-define(BN10253, "First Guild Member bonus").
+-define(BN10254, "First Guild Member bonus").
+-define(BN10255, "First Guild Member bonus").
+-define(BN10256, "First Guild Member bonus").
+-define(BN10257, "First Guild Member bonus").
+-define(BN10258, "First Guild Member bonus").
+-define(BN10259, "First Guild Member bonus").
+-define(BN10260, "First Guild Member bonus").
+-define(BN10261, "Second Guild Leader bonus").
+-define(BN10262, "Second Guild Leader bonus").
+-define(BN10263, "Second Guild Leader bonus").
+-define(BN10264, "Second Guild Leader bonus").
+-define(BN10265, "Second Guild Leader bonus").
+-define(BN10266, "Second Guild Leader bonus").
+-define(BN10267, "Second Guild Leader bonus").
+-define(BN10268, "Second Guild Leader bonus").
+-define(BN10269, "Second Guild Leader bonus").
+-define(BN10270, "Second Guild Leader bonus").
+-define(BN10271, "Second Guild Enforcer Bonus").
+-define(BN10272, "Second Guild Lawman bonus").
+-define(BN10273, "Second Guild Lawman bonus").
+-define(BN10274, "Second Guild Lawman bonus").
+-define(BN10275, "Second Guild Lawman bonus").
+-define(BN10276, "Second Guild Lawman bonus").
+-define(BN10277, "Second Guild Lawman bonus").
+-define(BN10278, "Second Guild Lawman bonus").
+-define(BN10279, "Second Guild Lawman bonus").
+-define(BN10280, "Second Guild Lawman bonus").
+-define(BN10281, "Second Guild Deputy Leader bonus").
+-define(BN10282, "Second Guild Deputy Leader bonus").
+-define(BN10283, "Second Guild Deputy Leader bonus").
+-define(BN10284, "Second Guild Deputy Leader bonus").
+-define(BN10285, "Second Guild Deputy Leader bonus").
+-define(BN10286, "Second Guild Deputy Leader bonus").
+-define(BN10287, "Second Guild Deputy Leader bonus").
+-define(BN10288, "Second Guild Deputy Leader bonus").
+-define(BN10289, "Second Guild Deputy Leader bonus").
+-define(BN10290, "Second Guild Deputy Leader bonus").
+-define(BN10291, "Second Guild Elder bonus").
+-define(BN10292, "Second Guild Elder bonus").
+-define(BN10293, "Second Guild Elder bonus").
+-define(BN10294, "Second Guild Elder bonus").
+-define(BN10295, "Second Guild Elder bonus").
+-define(BN10296, "Second Guild Elder bonus").
+-define(BN10297, "Second Guild Elder bonus").
+-define(BN10298, "Second Guild Elder bonus").
+-define(BN10299, "Second Guild Elder bonus").
+-define(BN10300, "Second Guild Elder bonus").
+-define(BN10301, "Second Guild Elite bonus").
+-define(BN10302, "Second Guild Elite bonus").
+-define(BN10303, "Second Guild Elite bonus").
+-define(BN10304, "Second Guild Elite bonus").
+-define(BN10305, "Second Guild Elite bonus").
+-define(BN10306, "Second Guild Elite bonus").
+-define(BN10307, "Second Guild Elite bonus").
+-define(BN10308, "Second Guild Elite bonus").
+-define(BN10309, "Second Guild Elite bonus").
+-define(BN10310, "Second Guild Elite bonus").
+-define(BN10311, "Second Guildmates bonus").
+-define(BN10312, "Second Guild Member bonus").
+-define(BN10313, "Second Guild Member bonus").
+-define(BN10314, "Second Guild Member bonus").
+-define(BN10315, "Second Guild Member bonus").
+-define(BN10316, "Second Guild Member bonus").
+-define(BN10317, "Second Guild Member bonus").
+-define(BN10318, "Second Guild Member bonus").
+-define(BN10319, "Second Guild Member bonus").
+-define(BN10320, "Second Guild Member bonus").
+-define(BN10321, "Third Guild Leader bonus").
+-define(BN10322, "Third Guild Leader bonus").
+-define(BN10323, "Third Guild Leader bonus").
+-define(BN10324, "Third Guild Leader bonus").
+-define(BN10325, "Third Guild Leader bonus").
+-define(BN10326, "Third Guild Leader bonus").
+-define(BN10327, "Third Guild Leader bonus").
+-define(BN10328, "Third Guild Leader bonus").
+-define(BN10329, "Third Guild Leader bonus").
+-define(BN10330, "Third Guild Leader bonus").
+-define(BN10331, "Third Guild Enforcer Bonus").
+-define(BN10332, "Third Guild Lawman bonus").
+-define(BN10333, "Third Guild Lawman bonus").
+-define(BN10334, "Third Guild Lawman bonus").
+-define(BN10335, "Third Guild Lawman bonus").
+-define(BN10336, "Third Guild Lawman bonus").
+-define(BN10337, "Third Guild Lawman bonus").
+-define(BN10338, "Third Guild Lawman bonus").
+-define(BN10339, "Third Guild Lawman bonus").
+-define(BN10340, "Third Guild Lawman bonus").
+-define(BN10341, "Third Guild Deputy Leader bonus").
+-define(BN10342, "Third Guild Deputy Leader bonus").
+-define(BN10343, "Third Guild Deputy Leader bonus").
+-define(BN10344, "Third Guild Deputy Leader bonus").
+-define(BN10345, "Third Guild Deputy Leader bonus").
+-define(BN10346, "Third Guild Deputy Leader bonus").
+-define(BN10347, "Third Guild Deputy Leader bonus").
+-define(BN10348, "Third Guild Deputy Leader bonus").
+-define(BN10349, "Third Guild Deputy Leader bonus").
+-define(BN10350, "Third Guild Deputy Leader bonus").
+-define(BN10351, "Third Guild Elder bonus").
+-define(BN10352, "Third Guild Elder bonus").
+-define(BN10353, "Third Guild Elder bonus").
+-define(BN10354, "Third Guild Elder bonus").
+-define(BN10355, "Third Guild Elder bonus").
+-define(BN10356, "Third Guild Elder bonus").
+-define(BN10357, "Third Guild Elder bonus").
+-define(BN10358, "Third Guild Elder bonus").
+-define(BN10359, "Third Guild Elder bonus").
+-define(BN10360, "Third Guild Elder bonus").
+-define(BN10361, "Third Guild Elite bonus").
+-define(BN10362, "Third Guild Elite bonus").
+-define(BN10363, "Third Guild Elite bonus").
+-define(BN10364, "Third Guild Elite bonus").
+-define(BN10365, "Third Guild Elite bonus").
+-define(BN10366, "Third Guild Elite bonus").
+-define(BN10367, "Third Guild Elite bonus").
+-define(BN10368, "Third Guild Elite bonus").
+-define(BN10369, "Third Guild Elite bonus").
+-define(BN10370, "Third Guild Elite bonus").
+-define(BN10371, "Third Guildmates bonus").
+-define(BN10372, "Third Guild Member bonus").
+-define(BN10373, "Third Guild Member bonus").
+-define(BN10374, "Third Guild Member bonus").
+-define(BN10375, "Third Guild Member bonus").
+-define(BN10376, "Third Guild Member bonus").
+-define(BN10377, "Third Guild Member bonus").
+-define(BN10378, "Third Guild Member bonus").
+-define(BN10379, "Third Guild Member bonus").
+-define(BN10380, "Third Guild Member bonus").
+-define(BN10381, "Guild Leader bonus").
+-define(BN10382, "Guild Leader bonus").
+-define(BN10383, "Guild Leader bonus").
+-define(BN10384, "Guild Leader bonus").
+-define(BN10385, "Guild Leader bonus").
+-define(BN10386, "Guild Leader bonus").
+-define(BN10387, "Guild Leader bonus").
+-define(BN10388, "Guild Leader bonus").
+-define(BN10389, "Guild Leader bonus").
+-define(BN10390, "Guild Leader bonus").
+-define(BN10391, "Guild Enforcer Bonus").
+-define(BN10392, "Guild Lawman bonus").
+-define(BN10393, "Guild Lawman bonus").
+-define(BN10394, "Guild Lawman bonus").
+-define(BN10395, "Guild Lawman bonus").
+-define(BN10396, "Guild Lawman bonus").
+-define(BN10397, "Guild Lawman bonus").
+-define(BN10398, "Guild Lawman bonus").
+-define(BN10399, "Guild Lawman bonus").
+-define(BN10400, "Guild Lawman bonus").
+-define(BN10401, "Guild Deputy Leader bonus").
+-define(BN10402, "Guild Deputy Leader bonus").
+-define(BN10403, "Guild Deputy Leader bonus").
+-define(BN10404, "Guild Deputy Leader bonus").
+-define(BN10405, "Guild Deputy Leader bonus").
+-define(BN10406, "Guild Deputy Leader bonus").
+-define(BN10407, "Guild Deputy Leader bonus").
+-define(BN10408, "Guild Deputy Leader bonus").
+-define(BN10409, "Guild Deputy Leader bonus").
+-define(BN10410, "Guild Deputy Leader bonus").
+-define(BN10411, "Guild Elder bonus").
+-define(BN10412, "Guild Elder bonus").
+-define(BN10413, "Guild Elder bonus").
+-define(BN10414, "Guild Elder bonus").
+-define(BN10415, "Guild Elder bonus").
+-define(BN10416, "Guild Elder bonus").
+-define(BN10417, "Guild Elder bonus").
+-define(BN10418, "Guild Elder bonus").
+-define(BN10419, "Guild Elder bonus").
+-define(BN10420, "Guild Elder bonus").
+-define(BN10421, "Guild Elite bonus").
+-define(BN10422, "Guild Elite bonus").
+-define(BN10423, "Guild Elite bonus").
+-define(BN10424, "Guild Elite bonus").
+-define(BN10425, "Guild Elite bonus").
+-define(BN10426, "Guild Elite bonus").
+-define(BN10427, "Guild Elite bonus").
+-define(BN10428, "Guild Elite bonus").
+-define(BN10429, "Guild Elite bonus").
+-define(BN10430, "Guild Elite bonus").
+-define(BN10431, "Guildmates bonus").
+-define(BN10432, "Guild Member bonus").
+-define(BN10433, "Guild Member bonus").
+-define(BN10434, "Guild Member bonus").
+-define(BN10435, "Guild Member bonus").
+-define(BN10436, "Guild Member bonus").
+-define(BN10437, "Guild Member bonus").
+-define(BN10438, "Guild Member bonus").
+-define(BN10439, "Guild Member bonus").
+-define(BN10440, "Guild Member bonus").
+-define(BD10201, "Guild Level: {0}, bonus stat: Atk +{1}, HP +{2}, Sunder +{3}, Def +{4}").
+-define(BN30025, "Increase Max.HP").
+-define(BD30025, "MAX HP +{0}%").
+-define(BN100001, "World Ranking EXP Bonus").
+-define(BD100001, "World Level EXP increases by <color=#dd2b2b>{0}%</color>").
+-define(BN100002, "VIP Privileges bonus").
+-define(BD100002, "Mob, Story Raids and AFK EXP +{0}%").
+-define(BN100003, "VIP Privileges bonus").
+-define(BD100003, "Mob, Story Raids and AFK EXP +{0}%").
+-define(BN100004, "VIP Privileges bonus").
+-define(BD100004, "Mob, Story Raids and AFK EXP +{0}%").
+-define(BN1001001, "Praying EXP Bonus").
+-define(BD1001001, "Mob and AFK EXP bonus {0}%").
+-define(BN1000201, "1.5X EXP Potion").
+-define(BN1000202, "2X EXP Potion").
+-define(BN1000203, "3X EXP Potion").
+-define(BN1000204, "2.5X EXP Potion").
+-define(BN1000301, "Team-up Bonus (2 players)").
+-define(BN1000302, "Team-up Bonus (3 players)").
+-define(BN1000303, "Team-up Bonus (4 players)").
+-define(BN1000304, "Inspire").
+-define(BN1000305, "War Banner 1 EXP Bonus").
+-define(BN1000306, "War Banner 2 EXP Bonus").
+-define(BD1000201, "Mob EXP +{0}%, AFK EXP +{1}%").
+-define(BD1000202, "Mob EXP +{0}%").
+-define(BD1000203, "Mob EXP +{0}%, AFK EXP +{1}%").
+-define(BD1000204, "Mob EXP +{0}%, AFK EXP +{1}%").
+-define(BD1000301, "Monster kill EXP bonus {0}%").
+-define(BD1000302, "Monster kill EXP bonus {0}%").
+-define(BD1000303, "Monster kill EXP bonus {0}%").
+-define(BD1000304, "Increase {0}% final DMG.Ramp up to {1} stack").
+-define(BD1000305, "Mob EXP +{0}%").
+-define(BD1000306, "Mob EXP +{0}%").
+-define(BN1001500, "Arcus Dominator").
+-define(BD1001500, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001501, "Guild Challenge Winning Streak Inspire").
+-define(BD1001501, "Increase {0}% final DMG").
+-define(BN1001510, "Dragon King of Storm").
+-define(BD1001510, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001511, "Server Dominion_S1").
+-define(BD1001511, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001512, "Server Dominion_S1").
+-define(BD1001512, "HP +5990, ATK +284, DEF +105, Sunder +113").
+-define(BN1001513, "Server Dominion_S1").
+-define(BD1001513, "HP +5391, ATK +255, DEF +95, Sunder +101").
+-define(BN1001514, "Server Dominion_S1").
+-define(BD1001514, "HP +4792, ATK +227, DEF +84, Sunder +90").
+-define(BN1001515, "Server Dominion_S2").
+-define(BD1001515, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001516, "Server Dominion_S2").
+-define(BD1001516, "HP +5691, ATK +270, DEF +100, Sunder +107").
+-define(BN1001517, "Server Dominion_S2").
+-define(BD1001517, "HP +5121, ATK +243, DEF +90, Sunder +96").
+-define(BN1001518, "Inspire").
+-define(BD1001518, "DMG Reduction +{0}%, stacks up to {1} times").
+-define(BN1001519, "Inspire").
+-define(BD1001519, "DMG Bonus +{0}%, stacks up to {1} times").
+-define(BN1001520, "Server Dominion_S2").
+-define(BD1001520, "HP +4552, ATK +216, DEF +80, Sunder +86").
+-define(BN1001521, "Server Dominion_S3").
+-define(BD1001521, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001522, "Server Dominion_S3").
+-define(BD1001522, "HP +5391, ATK +255, DEF +95, Sunder +101").
+-define(BN1001523, "Server Dominion_S3").
+-define(BD1001523, "HP +4852, ATK +230, DEF +85, Sunder +91").
+-define(BN1001524, "Server Dominion_S3").
+-define(BD1001524, "HP +4313, ATK +204, DEF +76, Sunder +81").
+-define(BN1001525, "Server Dominion_S4").
+-define(BD1001525, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001526, "Server Dominion_S4").
+-define(BD1001526, "HP +5092, ATK +241, DEF +89, Sunder +96").
+-define(BN1001527, "Server Dominion_S4").
+-define(BD1001527, "HP +4582, ATK +217, DEF +80, Sunder +86").
+-define(BN1001528, "Server Dominion_S4").
+-define(BD1001528, "HP +4073, ATK +193, DEF +71, Sunder +77").
+-define(BN1001529, "Server Dominion_A1").
+-define(BD1001529, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001530, "Server Dominion_A1").
+-define(BD1001530, "HP +4493, ATK +213, DEF +79, Sunder +84").
+-define(BN1001531, "Server Dominion_A1").
+-define(BD1001531, "HP +4043, ATK +192, DEF +71, Sunder +76").
+-define(BN1001532, "Server Dominion_A1").
+-define(BD1001532, "HP +3594, ATK +170, DEF +63, Sunder +68").
+-define(BN1001533, "Server Dominion_A2").
+-define(BD1001533, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001534, "Server Dominion_A2").
+-define(BD1001534, "HP +4193, ATK +199, DEF +74, Sunder +79").
+-define(BN1001535, "Server Dominion_A2").
+-define(BD1001535, "HP +3774, ATK +179, DEF +66, Sunder +71").
+-define(BN1001536, "Server Dominion_A2").
+-define(BD1001536, "HP +3354, ATK +159, DEF +59, Sunder +63").
+-define(BN1001537, "Server Dominion_A3").
+-define(BD1001537, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001538, "Server Dominion_A3").
+-define(BD1001538, "HP +3894, ATK +184, DEF +68, Sunder +73").
+-define(BN1001539, "Server Dominion_A3").
+-define(BD1001539, "HP +3504, ATK +166, DEF +61, Sunder +66").
+-define(BN1001540, "Server Dominion_A3").
+-define(BD1001540, "HP +3115, ATK +148, DEF +55, Sunder +59").
+-define(BN1001541, "Server Dominion_A4").
+-define(BD1001541, "ATK, HP, Sunder and DEF Bonus + {0}%").
+-define(BN1001542, "Server Dominion_A4").
+-define(BD1001542, "HP +3594, ATK +170, DEF +63, Sunder +68").
+-define(BN1001543, "Server Dominion_A4").
+-define(BD1001543, "HP +3235, ATK +153, DEF +57, Sunder +61").
+-define(BN1001544, "Server Dominion_A4").
+-define(BD1001544, "HP +2875, ATK +136, DEF +50, Sunder +54").
+-define(BN1001600, "AFK EXP Bonus").
+-define(BD1001600, "AFK EXP +{0}%").
+-define(BN1001601, "Monthly Card Perks").
+-define(BD1001601, "Ultimate Equipment drop +{0}%").
+-define(BN1001602, "Server Motivation").
+-define(BN1001603, "Server Motivation").
+-define(BN1001604, "Server Motivation").
+-define(BN1001605, "Server Motivation").
+-define(BD1001602, "Story Dungeon DMG +{0}%, Story Dungeon EXP +{1}%").
+-define(BD1001603, "Story Dungeon DMG +{0}%, Story Dungeon EXP +{1}%").
+-define(BD1001604, "Story Dungeon DMG +{0}%, Story Dungeon EXP +{1}%").
+-define(BD1001605, "Story Raid DMG +{0}%, Story Raid EXP +{1}%").
+-define(BN1001606, "God Knight Order").
+-define(BD1001606, "Death Wood premium gear drop chance +{0}%").
+-define(BF1001606, "God Knight Order").
+-define(SN307101, "Enhanced Explode I").
+-define(SN307201, "Enhanced Explode Ⅱ").
+-define(SN307301, "Enhanced Explode Ⅲ").
+-define(SN307401, "Enhanced Explode Ⅳ").
+-define(SN308101, "Honor Ⅰ").
+-define(SN308201, "Honor Ⅱ").
+-define(SN308301, "Honor Ⅲ").
+-define(SN308401, "Honor Ⅳ").
+-define(SN309201, "Hawk Eye II").
+-define(SN309301, "Hawk Eye Ⅲ").
+-define(SN309401, "Hawk Eye Ⅳ").
+-define(SN310201, "Critical Damage Ⅱ").
+-define(SN310301, "Critical Damage Ⅲ").
+-define(SN310401, "Critical Damage Ⅳ").
+-define(SN311201, "Critical Hit DMG Ⅱ").
+-define(SN311301, "Critical Hit DMG Ⅲ").
+-define(SN311401, "Critical Hit DMG Ⅳ").
+-define(SN312301, "DMG Ⅲ").
+-define(SN312401, "DMG Ⅳ").
+-define(SN313301, "Critical Hit Ⅲ").
+-define(SN313401, "Critical Hit Ⅳ").
+-define(SN407101, "Critical Strike Resistance I").
+-define(SN407201, "Critical Strike Resistance Ⅱ").
+-define(SN407301, "Critical Strike Resistance Ⅲ").
+-define(SN407401, "Critical Strike Resistance Ⅳ").
+-define(SN408201, "Dexterity II").
+-define(SN408301, "Dexterity Ⅲ").
+-define(SN408401, "Dexterity Ⅳ").
+-define(SN409301, "DMG Decrease Ⅲ").
+-define(SN409401, "DMG Decrease Ⅳ").
+-define(SN410301, "Critical Hit Resistance Ⅲ").
+-define(SN410401, "Critical Hit Resistance Ⅳ").
+-define(SN501101, "Fire Spirit I").
+-define(SN501201, "Fire Spirit Ⅱ").
+-define(SN501301, "Fire Spirit Ⅲ").
+-define(SN501401, "Fire Spirit Ⅳ").
+-define(SN502101, "Water Spirit I").
+-define(SN502201, "Water Spirit Ⅱ").
+-define(SN502301, "Water Spirit Ⅲ").
+-define(SN502401, "Water Spirit Ⅳ").
+-define(SN503101, "Wind Spirit I").
+-define(SN503201, "Wind Spirit Ⅱ").
+-define(SN503301, "Wind Spirit Ⅲ").
+-define(SN503401, "Wind Spirit Ⅳ").
+-define(SN504101, "Earth Spirit I").
+-define(SN504201, "Earth Spirit Ⅱ").
+-define(SN504301, "Earth Spirit Ⅲ").
+-define(SN504401, "Earth Spirit Ⅳ").
+-define(SN505101, "Fire Resistance I").
+-define(SN505201, "Fire Resistance Ⅱ").
+-define(SN505301, "Fire Resistance Ⅲ").
+-define(SN505401, "Fire Resistance Ⅳ").
+-define(SN506101, "Water Resistance I").
+-define(SN506201, "Water Resistance Ⅱ").
+-define(SN506301, "Water Resistance Ⅲ").
+-define(SN506401, "Water Resistance Ⅳ").
+-define(SN507101, "Wind Resistance I").
+-define(SN507201, "Wind Resistance Ⅱ").
+-define(SN507301, "Wind Resistance Ⅲ").
+-define(SN507401, "Wind Resistance Ⅳ").
+-define(SN508101, "Earth Resistance I").
+-define(SN508201, "Earth Resistance Ⅱ").
+-define(SN508301, "Earth Resistance Ⅲ").
+-define(SN508401, "Earth Resistance Ⅳ").
+-define(SN509101, "Specialization Ⅰ").
+-define(SN509201, "Specialization Ⅱ").
+-define(SN509301, "Specialization Ⅲ").
+-define(SN509401, "Specialization Ⅳ").
+-define(SN509501, "Resilience Ⅰ").
+-define(SN509601, "Resilience Ⅱ").
+-define(SN509701, "Resilience Ⅲ").
+-define(SN509801, "Resilience Ⅳ").
+-define(SN510201, "Honor Ⅱ").
+-define(SN510301, "Honor Ⅲ").
+-define(SN510401, "Honor Ⅳ").
+-define(SN511201, "Protection II").
+-define(SN511301, "Protection Ⅲ").
+-define(SN511401, "Protection Ⅳ").
+-define(SN512301, "Bash Ⅲ").
+-define(SN512401, "Bash Ⅳ").
+-define(SN513301, "Frailty III").
+-define(SN513401, "Frailty Ⅳ").
+-define(SN514301, "Excellence Ⅲ").
+-define(SN514401, "Excellence Ⅳ").
+-define(SN515301, "Excellence Resistance Ⅲ").
+-define(SN515401, "Excellence Resistance Ⅳ").
+-define(SN601101, "Iron Armor Defense I").
+-define(SN602101, "Life after Life I").
+-define(SN603101, "Attack Enhancement Ⅰ").
+-define(SN604101, "Brutal Tearing I").
+-define(SN605101, "Iron Armor Defense Ⅱ").
+-define(SN606101, "Life after Life Ⅱ").
+-define(SN607101, "Attack Enhancement Ⅱ").
+-define(SN608101, "Brutal Tearing Ⅱ").
+-define(SN609101, "Iron Armor Defense Ⅲ").
+-define(SN610101, "Life after Life Ⅲ").
+-define(SN611101, "Attack Enhancement Ⅲ").
+-define(SN612101, "Ferocious Rip Ⅲ").
+-define(SN613101, "Iron Armor Defense IV").
+-define(SN614101, "Brutal Tearing IV").
+-define(SN614201, "Resilience").
+-define(SN615101, "Brutal Tearing V").
+-define(SN616101, "Iron Armor Defense V").
+-define(SN617101, "Life after Life V").
+-define(SN617201, "Block Red").
+-define(SN618101, "Attack Enhancement V").
+-define(SN619101, "Brutal Tearing VI").
+-define(SN620101, "Iron Armor Defense VI").
+-define(SN620201, "Block Pierce").
+-define(SN621101, "Life after Life VI").
+-define(SN621201, "Excellent DMG Reduction").
+-define(SN622101, "Attack Enhancement VI").
+-define(SN622201, "Excellent DMG Bonus").
+-define(SN623101, "Pact Resonance Ⅰ").
+-define(SN623201, "Skill DMG Reduction").
+-define(SN624101, "Pact Resonance Ⅰ").
+-define(SN624201, "DMG Red").
+-define(SN701101, "Fast Growth").
+-define(SN702101, "Scorn").
+-define(SN703101, "Dauntless").
+-define(SN704101, "Honor").
+-define(SN705101, "Attack Increase").
+-define(SN706101, "Growth Increase").
+-define(SN707101, "Rapid Growth").
+-define(SN801101, "ATK Ⅰ").
+-define(SN801102, "ATK Ⅱ").
+-define(SN801103, "ATK Ⅲ").
+-define(SN801104, "ATK Ⅳ").
+-define(SN801105, "ATK V").
+-define(SN801201, "HP Ⅰ").
+-define(SN801202, "HP Ⅱ").
+-define(SN801203, "HP Ⅲ").
+-define(SN801204, "HP Ⅳ").
+-define(SN801205, "HP V").
+-define(SN801301, "Hit Ⅰ").
+-define(SN801302, "Hit Ⅱ").
+-define(SN801303, "Hit Ⅲ").
+-define(SN801304, "Hit Ⅳ").
+-define(SN801305, "Hit V").
+-define(SN801401, "Dodge Ⅰ").
+-define(SN801402, "Dodge Ⅱ").
+-define(SN801403, "Dodge Ⅲ").
+-define(SN801404, "Dodge Ⅳ").
+-define(SN801405, "Dodge V").
+-define(SN802101, "Sunder Ⅰ").
+-define(SN802102, "Sunder Ⅱ").
+-define(SN802103, "Sunder Ⅲ").
+-define(SN802104, "Sunder Ⅳ").
+-define(SN802105, "Sunder V").
+-define(SN802201, "Def Ⅰ").
+-define(SN802202, "Def Ⅱ").
+-define(SN802203, "Def Ⅲ").
+-define(SN802204, "Def Ⅳ").
+-define(SN802205, "Def V").
+-define(SN802301, "Crit Ⅰ").
+-define(SN802302, "Crit Ⅱ").
+-define(SN802303, "Crit Ⅲ").
+-define(SN802304, "Crit Ⅳ").
+-define(SN802305, "Crit V").
+-define(SN802401, "Tenacity Ⅰ").
+-define(SN802402, "Tenacity Ⅱ").
+-define(SN802403, "Tenacity Ⅲ").
+-define(SN802404, "Tenacity Ⅳ").
+-define(SN802405, "Tenacity V").
+-define(SN803101, "Explosion I").
+-define(SN803102, "Explosion Ⅱ").
+-define(SN803103, "Explosion Ⅲ").
+-define(SN803104, "Explosion Ⅳ").
+-define(SN803105, "Explosion V").
+-define(SN803201, "Resilience Ⅰ").
+-define(SN803202, "Resilience Ⅱ").
+-define(SN803203, "Resilience Ⅲ").
+-define(SN803204, "Resilience Ⅳ").
+-define(SN803205, "Resilience V").
+-define(SN803301, "Block Resistance I").
+-define(SN803302, "Block Resistance Ⅱ").
+-define(SN803303, "Block Resistance Ⅲ").
+-define(SN803304, "Block Resistance Ⅳ").
+-define(SN803305, "Block Resistance V").
+-define(SN803401, "Block Ⅰ").
+-define(SN803402, "Block Ⅱ").
+-define(SN803403, "Block Ⅲ").
+-define(SN803404, "Block Ⅳ").
+-define(SN803405, "Block V").
+-define(SD307101, "Character Crit Rate +{0}% after equipping the skill").
+-define(SD307201, "Character Crit.Rating increases {0}% after equipping the skill").
+-define(SD307301, "Character Crit.Rating increases {0}% after equipping the skill").
+-define(SD307401, "Character Crit.Rating increases {0}% after equipping the skill").
+-define(SD308101, "Character PVP DMG Bonus increases {0}% after equipping the skill").
+-define(SD308201, "Character PVP Damage Bonus increases {0}% after equipping the skill").
+-define(SD308301, "Character PVP Damage Bonus increases {0}% after equipping the skill").
+-define(SD308401, "Character PVP Damage Bonus increases {0}% after equipping the skill").
+-define(SD309201, "Character Hit Rate + {0}% after equipping the skill").
+-define(SD309301, "Character Hit Rating increases {0}% after equipping the skill").
+-define(SD309401, "Character Hit Rating increases {0}% after equipping the skill").
+-define(SD310201, "Character Crit DMG Bonus + {0}% after equipping the skill").
+-define(SD310301, "Character Crit DMG Bonus + {0}% after equipping the skill").
+-define(SD310401, "Character Crit DMG Bonus + {0}% after equipping the skill").
+-define(SD311201, "Character Focus ATK Bonus Increase increases {0}% after equipping the skill").
+-define(SD311301, "Character Focus DMG Bonus + {0}% after equipping the skill").
+-define(SD311401, "Character Focus DMG Bonus + {0}% after equipping the skill").
+-define(SD312301, "Character DMG increases {0}% after equipping the skill").
+-define(SD312401, "Character DMG increases {0}% after equipping the skill").
+-define(SD313301, "Character Focus Rate +{0}% after equipping the skill").
+-define(SD313401, "Character Focus Rate +{0}% after equipping the skill").
+-define(SD407101, "Character Tough Rate +{0}% after equipping the skill").
+-define(SD407201, "Character Tough Rate +{0}% after equipping the skill").
+-define(SD407301, "Character Tough Rate +{0}% after equipping the skill").
+-define(SD407401, "Character Tough Rate +{0}% after equipping the skill").
+-define(SD408201, "Character Dodge Rate + {0}% after equipping the skill").
+-define(SD408301, "Character Dodge Rate + {0}% after equipping the skill").
+-define(SD408401, "Character Dodge Rate + {0}% after equipping the skill").
+-define(SD409301, "Character Damage Decrease increases {0}% after equipping the skill").
+-define(SD409401, "Character Damage Decrease increases {0}% after equipping the skill").
+-define(SD410301, "Character Anti-Focus Rate +{0}% after equipping the skill").
+-define(SD410401, "Character Anti-Focus Rate +{0}% after equipping the skill").
+-define(SD501101, "Character Fire Atk increases {0} after equipping the skill").
+-define(SD501201, "Character Fire Atk increases {0} after equipping the skill").
+-define(SD501301, "Character Fire Atk increases {0} after equipping the skill").
+-define(SD501401, "Character Fire Atk increases {0} after equipping the skill").
+-define(SD502101, "Character Water Atk increases {0} after equipping the skill").
+-define(SD502201, "Character Water Atk increases {0} after equipping the skill").
+-define(SD502301, "Character Water Atk increases {0} after equipping the skill").
+-define(SD502401, "Character Water Atk increases {0} after equipping the skill").
+-define(SD503101, "Character Wind ATK +{0} after equipping the skill").
+-define(SD503201, "Character Wind ATK +{0} after equipping the skill").
+-define(SD503301, "Character Wind ATK +{0} after equipping the skill").
+-define(SD503401, "Character Wind ATK +{0} after equipping the skill").
+-define(SD504101, "Character Earth Atk increases {0} after equipping the skill").
+-define(SD504201, "Character Earth Atk increases {0} after equipping the skill").
+-define(SD504301, "Character Earth Atk increases {0} after equipping the skill").
+-define(SD504401, "Character Earth Atk increases {0} after equipping the skill").
+-define(SD505101, "Character Fire Def increases {0} after equipping the skill").
+-define(SD505201, "Character Fire Def increases {0} after equipping the skill").
+-define(SD505301, "Character Fire Def increases {0} after equipping the skill").
+-define(SD505401, "Character Fire Def increases {0} after equipping the skill").
+-define(SD506101, "Character Water Def increases {0} after equipping the skill").
+-define(SD506201, "Character Water Def increases {0} after equipping the skill").
+-define(SD506301, "Character Water Def increases {0} after equipping the skill").
+-define(SD506401, "Character Water Def increases {0} after equipping the skill").
+-define(SD507101, "Character Wind Def increases {0} after equipping the skill").
+-define(SD507201, "Character Wind Def increases {0} after equipping the skill").
+-define(SD507301, "Character Wind Def increases {0} after equipping the skill").
+-define(SD507401, "Character Wind Def increases {0} after equipping the skill").
+-define(SD508101, "Character Earth Def increases {0} after equipping the skill").
+-define(SD508201, "Character Earth Def increases {0} after equipping the skill").
+-define(SD508301, "Character Earth Def increases {0} after equipping the skill").
+-define(SD508401, "Character Earth Def increases {0} after equipping the skill").
+-define(SD509101, "Character Skill DMG Bonus +{0}%").
+-define(SD509201, "Character Skill DMG Bonus +{0}%").
+-define(SD509301, "Character Skill DMG Bonus +{0}%").
+-define(SD509401, "Character Skill DMG Bonus +{0}%").
+-define(SD509501, "Equip this skill to grant the character Skill DMG Reduction +{0}%").
+-define(SD509601, "Equip this skill to grant the character Skill DMG Reduction +{0}%").
+-define(SD509701, "Equip this skill to grant the character Skill DMG Reduction +{0}%").
+-define(SD509801, "Equip this skill to grant the character Skill DMG Reduction +{0}%").
+-define(SD510201, "Character DMG Bonus +{0}% after equipping the skill").
+-define(SD510301, "Character DMG Bonus +{0}% after equipping the skill").
+-define(SD510401, "Character DMG Bonus +{0}% after equipping the skill").
+-define(SD511201, "Character DMG Reduction + {0}% after equipping the skill").
+-define(SD511301, "Character DMG Reduction + {0}% after equipping the skill").
+-define(SD511401, "Character DMG Reduction + {0}% after equipping the skill").
+-define(SD512301, "Character Smite Rate + {0}% after equipping the skill").
+-define(SD512401, "Character Smite Rate + 2.8% after equipping the skill").
+-define(SD513301, "Character Frailty Rate {0}% after equipping the skill").
+-define(SD513401, "Character Frailty Rate {0}% after equipping the skill").
+-define(SD514301, "Character Excellent Rate + {0}% after equipping the skill").
+-define(SD514401, "Character Excellent Rate + {0}% after equipping the skill").
+-define(SD515301, "Character Anti-Excellent Rate +{0}% after equipping the skill").
+-define(SD515401, "Character Anti-Excellent Rate +{0}% after equipping the skill").
+-define(SD601101, "Current Gold Pact (Gear Included) DEF +{0}%").
+-define(SD602101, "Current Gold Pact (Gear Included) HP +{0}%").
+-define(SD603101, "Current Gold Pact (Gear Included) ATK+{0}%").
+-define(SD604101, "Current Gold Pact (Gear Included) Sunder +{0}%").
+-define(SD605101, "Current Gold Pact (Gear Included) DEF +{0}%").
+-define(SD606101, "Current Gold Pact (Gear Included) HP +{0}%").
+-define(SD607101, "Current Gold Pact (Gear Included) ATK+{0}%").
+-define(SD608101, "Current Gold Pact (Gear Included) Sunder +{0}%").
+-define(SD609101, "Current Gold Pact (Gear Included) DEF +{0}%").
+-define(SD610101, "Current Gold Pact (Gear Included) HP +{0}%").
+-define(SD611101, "Current Gold Pact (Gear Included) ATK+{0}%").
+-define(SD612101, "Current Gold Pact (Gear Included) Sunder +{0}%").
+-define(SD613101, "Current Gold Pact (Gear Included) DEF +{0}%").
+-define(SD614101, "Current Gold Pact (Gear Included) Sunder +{0}%").
+-define(SD614201, "Tough Rate increases {0}%").
+-define(SD615101, "Current Gold Pact (Gear Included) Sunder bonus {0}%").
+-define(SD616101, "Current Gold Pact (Gear Included) Def bonus {0}%").
+-define(SD617101, "Current Gold Pact (Gear Included) HP bonus {0}%").
+-define(SD617201, "Block Pierce Bonus +{0}%").
+-define(SD618101, "Current Gold Pact (Gear Included) Atk bonus {0}%").
+-define(SD619101, "Current Gold Pact (Gear Included) Sunder bonus {0}%").
+-define(SD620101, "Current Gold Pact (Gear Included) Def bonus {0}%").
+-define(SD620201, "Block Pierce Reduction +{0}%").
+-define(SD621101, "Current Gold Pact (Gear Included) HP bonus {0}%").
+-define(SD621201, "Excellent DMG Reduction +{0}%").
+-define(SD622101, "Current Gold Pact (Gear Included) Atk bonus {0}%").
+-define(SD622201, "Excellent DMG Bonus +{0}%").
+-define(SD623101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD623201, "Skill DMG Reduction +{0}%").
+-define(SD624101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD624201, "DMG Reduction + {0}%").
+-define(SD701101, "AFK EXP +{0}%").
+-define(SD702101, "DMG dealt to Minions +{0}%").
+-define(SD703101, "DMG dealt to bosses +{0}%").
+-define(SD704101, "PVP DMG Reduction +{0}%").
+-define(SD705101, "PVE DMG Bonus +{0}%, every 10 levels +{1} ATK").
+-define(SD706101, "Mob EXP +{0}%").
+-define(SD707101, "Mob EXP +{0}%").
+-define(SD801101, "Character Atk increases {0} after unlocking the skill").
+-define(SD801102, "Character Atk increases {0} after unlocking the skill ").
+-define(SD801103, "Character Atk increases {0} after unlocking the skill ").
+-define(SD801104, "Character Atk increases {0} after unlocking the skill ").
+-define(SD801105, "Character Atk increases {0} after unlocking the skill ").
+-define(SD801201, "Character HP increases {0} after unlocking the skill").
+-define(SD801202, "Character HP increases {0} after unlocking the skill").
+-define(SD801203, "Character HP increases {0} after unlocking the skill").
+-define(SD801204, "Character HP increases {0} after unlocking the skill").
+-define(SD801205, "Character HP increases {0} after unlocking the skill").
+-define(SD801301, "Character Hit increases {0} after unlocking the skill").
+-define(SD801302, "Character Hit Value increases {0} after unlocking the skill").
+-define(SD801303, "Character Hit Value increases {0} after unlocking the skill").
+-define(SD801304, "Character Hit Value increases {0} after unlocking the skill").
+-define(SD801305, "Character Hit Value increases {0} after unlocking the skill").
+-define(SD801401, "Character Dodge increases {0} after unlocking the skill").
+-define(SD801402, "Character Dodge Value increases {0} after unlocking the skill").
+-define(SD801403, "Character Dodge Value increases {0} after unlocking the skill").
+-define(SD801404, "Character Dodge Value increases {0} after unlocking the skill").
+-define(SD801405, "Character Dodge Value increases {0} after unlocking the skill").
+-define(SD802101, "Character Sunder increases {0} after unlocking the skill").
+-define(SD802102, "Character AP increases {0} after unlocking the skill").
+-define(SD802103, "Character AP increases {0} after unlocking the skill").
+-define(SD802104, "Character AP increases {0} after unlocking the skill").
+-define(SD802105, "Character AP increases {0} after unlocking the skill").
+-define(SD802201, "Character Def increases {0} after unlocking the skill").
+-define(SD802202, "Character Def increases {0} after unlocking the skill").
+-define(SD802203, "Character Def increases {0} after unlocking the skill").
+-define(SD802204, "Character Def increases {0} after unlocking the skill").
+-define(SD802205, "Character Def increases {0} after unlocking the skill").
+-define(SD802301, "Character Crit Value increases {0} after unlocking the skill").
+-define(SD802302, "Character Crit Value increases {0} after unlocking the skill").
+-define(SD802303, "Character Crit Value increases {0} after unlocking the skill").
+-define(SD802304, "Character Crit Value increases {0} after unlocking the skill").
+-define(SD802305, "Character Crit Value increases {0} after unlocking the skill").
+-define(SD802401, "Character Tenacity increases by {0} after unlocking the skill").
+-define(SD802402, "Character Tenacity Value increases {0} after unlocking the skill").
+-define(SD802403, "Character Tenacity Value increases {0} after unlocking the skill").
+-define(SD802404, "Character Tenacity increases {0} after unlocking the skill").
+-define(SD802405, "Character Tenacity increases {0} after unlocking the skill").
+-define(SD803101, "Character Crit Rate +{0}% after unlocking the skill").
+-define(SD803102, "Character Crit.Rating increases {0} after unlocking the skill").
+-define(SD803103, "Character Crit.Rating increases {0} after unlocking the skill").
+-define(SD803104, "Character Crit.Rating increases {0} after unlocking the skill").
+-define(SD803105, "Character Crit.Rating increases {0} after unlocking the skill").
+-define(SD803201, "Character Tough Rate + {0}% after unlocking the skill").
+-define(SD803202, "Character Resilience Rating increases {0} after unlocking the skill").
+-define(SD803203, "Character Resilience Rating increases {0} after unlocking the skill").
+-define(SD803204, "Character Resilience Rating increases {0} after unlocking the skill").
+-define(SD803205, "Character Resilience Rating increases {0} after unlocking the skill").
+-define(SD803301, "Character Anti-block Rate increases {0}% after unlocking the skill").
+-define(SD803302, "Character Negate Block Rating increases {0} after unlocking the skill").
+-define(SD803303, "Character Negate Block Rating increases {0} after unlocking the skill").
+-define(SD803304, "Character Negate Block Rating increases {0} after unlocking the skill").
+-define(SD803305, "Character Negate Block Rating increases {0} after unlocking the skill").
+-define(SD803401, "Character Block Rate increases {0}% after unlocking the skill").
+-define(SD803402, "Character Block Rating increases {0} after unlocking the skill").
+-define(SD803403, "Character Block Rating increases {0} after unlocking the skill").
+-define(SD803404, "Character Block Rating increases {0} after unlocking the skill").
+-define(SD803405, "Character Block Rating increases {0} after unlocking the skill").
+-define(SN1004001, "Stand Fast with a Sword").
+-define(SD1004001, "ATK +{0}
+HP +{1}
+Sunder +{2}
+DEF +{3}
+ATK Bonus +{4}%
+HP Bonus +{5}%
+Sunder Bonus +{6}%
+DEF Bonus +{7}%").
+-define(SN1004002, "Hilt - Dance").
+-define(SN1004003, "Sword Sheath - Ming").
+-define(SN1004004, "Sword Ridge - Zheng").
+-define(SN1004005, "Edge - Zhan").
+-define(SN1004006, "Hidden Dragon").
+-define(SN1004007, "Hilt - You").
+-define(SN1004008, "Sword Sheath - Stealth").
+-define(SN1004009, "Sword Ridge - Xi").
+-define(SN1004010, "Edge - Mi").
+-define(SN1004011, "Ruling of Justice").
+-define(SN1004012, "Hilt - Jiao").
+-define(SN1004013, "Sword Sheath - Jie").
+-define(SN1004014, "Sword Ridge - Zha").
+-define(SN1004015, "Edge - Gui").
+-define(SN1004016, "Reign of Thunder").
+-define(SN1004017, "Hilt - Dou").
+-define(SN1004018, "Sword Sheath - Wu").
+-define(SN1004019, "Sword Ridge - Sheng").
+-define(SN1004020, "Edge - Feng").
+-define(SN1004026, "Death Whisperer").
+-define(SN1004027, "Axe Base - Stop").
+-define(SN1004028, "Axe Handle - Wound").
+-define(SN1004029, "Axe Spine - Grief").
+-define(SN1004030, "Axe Blade - Death").
+-define(SN1004031, "Gilding Divine Sword").
+-define(SN1004032, "Hilt - Wu").
+-define(SN1004033, "Sword Sheath - Slash").
+-define(SN1004034, "Sword Ridge - Xi").
+-define(SN1004035, "Edge - Sheng").
+-define(SN1005001, "Holy Blessing").
+-define(SN1005002, "Wand Body - Protect").
+-define(SN1005003, "Wand Head - Guard").
+-define(SN1005004, "Wand Tail - Bi").
+-define(SN1005005, "Magic Stone - Illusion").
+-define(SN1005006, "Descending of Dragons").
+-define(SN1005007, "Wand Body - Wind").
+-define(SN1005008, "Wand Head - Wind").
+-define(SN1005009, "Wand Tail - Lei").
+-define(SN1005010, "Magic Stone - Yin").
+-define(SN1005011, "Eternal Promise").
+-define(SN1005012, "Wand Body - Link").
+-define(SN1005013, "Wand Head - Protect").
+-define(SN1005014, "Wand Tail - Xing").
+-define(SN1005015, "Magic Stone - Jian").
+-define(SN1005016, "Magic Protection").
+-define(SN1005017, "Wand Body - Chen").
+-define(SN1005018, "Wand Head - Cast").
+-define(SN1005019, "Wand Tail - Ming").
+-define(SN1005020, "Magic Stone - Order").
+-define(SN1005026, "Phoenix Fire").
+-define(SN1005027, "Wand Body - Burn").
+-define(SN1005028, "Wand Head - Scorch").
+-define(SN1005029, "Staff End - Immolate").
+-define(SN1005030, "Magic Stone - Sacred").
+-define(SN1005031, "Gilding Holy Staff").
+-define(SN1005032, "Wand Body - Thunder").
+-define(SN1005033, "Wand Head - Scorch").
+-define(SN1005034, "Wand Tail - Bi").
+-define(SN1005035, "Magic Stone - Order").
+-define(SN1006001, "Shooting the Sun").
+-define(SN1006002, "Bow Arm - Ren").
+-define(SN1006003, "Bow End - Xiao").
+-define(SN1006004, "Bow String - Jing").
+-define(SN1006005, "Arrow Stand – Ji").
+-define(SN1006006, "Devour").
+-define(SN1006007, "Bow Arm - Fu").
+-define(SN1006008, "Bow End - Shan").
+-define(SN1006009, "Bow String - Xuan").
+-define(SN1006010, "Arrow Stand - Bian").
+-define(SN1006011, "Frost Seal").
+-define(SN1006012, "Bow Arm - Jie").
+-define(SN1006013, "Bow End - Chan").
+-define(SN1006014, "Bow String - Lie").
+-define(SN1006015, "Arrow Stand - Ling").
+-define(SN1006016, "Divine Flame").
+-define(SN1006017, "Bow Arm - Chi").
+-define(SN1006018, "Bow End - Zhuo").
+-define(SN1006019, "Bow String - Ran").
+-define(SN1006020, "Arrow Stand - Burst").
+-define(SN1006026, "Sky Splitter").
+-define(SN1006027, "Bow Arm - Smash").
+-define(SN1006028, "Bow End - Split").
+-define(SN1006029, "Bow String - Bury").
+-define(SN1006030, "Arrow Stand - Light").
+-define(SN1006031, "Gilding Shrine").
+-define(SN1006032, "Bow Arm - Ji").
+-define(SN1006033, "Bow End - Ling").
+-define(SN1006034, "Bow String - Lie").
+-define(SN1006035, "Arrow Stand - Sky").
+-define(EASYSD150031, "Mob EXP +{0}%, AFK EXP +{1}%").
+-define(EASYSD150032, "Skill DMG Bonus +{0}%").
+-define(EASYSD150033, "Mob EXP +{0}%, AFK EXP +{1}%").
+-define(EASYSD150034, "Final Damage Decrease +{0}%, Critical Damage Decrease +{1}%").
+-define(EASYSD1004001, "Divine Weapon Empower Skill").
+-define(SN239, "Realm of Sword").
+-define(SN240, "Heaven Sword").
+-define(SN241, "Baptism of Sword").
+-define(SN242, "Unification").
+-define(SN243, "Swords Storm").
+-define(SN244, "Soul of Vengeance").
+-define(SN245, "Draw Slash").
+-define(SN246, "Cross Soul Slash").
+-define(SN247, "Mirror Strike").
+-define(SN248, "Haunting Shadow").
+-define(SN468, "First - Gallant Study II").
+-define(SD468, "When entering combat, gain Gallant Study (Each layer DMG Bonus +2%) {0} layer for {1} sec").
+-define(SN469, "Full - Gallant Study III").
+-define(SD469, "If HP is above {0}%, when attacking, has a % chance to gain Gallant Study (Each layer DMG Bonus +2%) {1} layer for {2} sec").
+-define(SN470, "Defense - Gallant Study III").
+-define(SD470, "When attacked, has a {0}% chance to gain Gallant Study (Each layer DMG Bonus +2%) {1} layer for {2} sec").
+-define(SN471, "First - Gallant Force").
+-define(SD471, "When entering combat, gain Gallant Force (trigger Wrath Study each second (Each layer DMG Bonus +2%) {0} layer for {1} sec) for {2} sec, cannot be dispelled").
+-define(SN472, "Defense - Gallant Study II").
+-define(SD472, "When attacked, has a {0}% chance to gain Gallant Study (Each layer DMG Bonus +2%) {1} layer for {2} sec").
+-define(SN473, "Attack - Technique II").
+-define(SD473, "{0}% chance to obtain Technique effect (Skill DMG+15%) for {1} sec when attacking").
+-define(SN474, "First - Gallant Study III").
+-define(SD474, "When entering combat, gain Gallant Study (Each layer DMG Bonus +2%) {0} layer for {1} sec").
+-define(SN475, "Full - Technique III").
+-define(SD475, "Obtain Technique effect (Skill DMG+15%) for {1} sec when HP is above {0}%").
+-define(SN476, "Attack - Death's Gaze").
+-define(SD476, "{0}% chance to obtain Death's Gaze effect (Final DMG+{1}%.Effect decreases {2}% with each enemy around, {3}% at most) for {4} sec when attacking").
+-define(SN477, "Full - Technique II").
+-define(SD477, "Obtain Technique effect (Skill DMG+15%) for {1} sec when HP is above {0}%").
+-define(SN478, "Defense - Technique II").
+-define(SD478, "{0}% chance to obtain Technique effect (Skill DMG+15%) for {1} sec when attacked").
+-define(SN479, "Attack - Technique III").
+-define(SD479, "{0}% chance to obtain Technique effect (Skill DMG+15%) for {1} sec when attacking").
+-define(SN480, "Defense - Technique III").
+-define(SD480, "{0}% chance to obtain Technique effect (Skill DMG+15%) for {1} sec when attacked").
+-define(SN481, "Lose - Infinite Wrath Ⅳ").
+-define(SD481, "Obtain Infinite Wrath effect (DMG Bonus+40%) for {0} sec when attack gets dodged").
+-define(SN482, "Speed - Gallant II").
+-define(SD482, "When attacking, has a {0}% chance to gain Gallant (DMG Bonus +10%) for {1} sec").
+-define(SN483, "Speed - Mania II").
+-define(SD483, "{0}% chance to obtain mania effect (Crit Rate +20%) for {1} sec when attacking").
+-define(SN484, "Speed - Gallant III").
+-define(SD484, "When attacking, has a {0}% chance to gain Gallant (DMG Bonus +10%) for {1} sec").
+-define(SN485, "Speed - Mania III").
+-define(SD485, "{0}% chance to obtain mania effect (Crit Rate +20%) for {1} sec when attacking").
+-define(SN486, "Speed - Infinite Wrath IV").
+-define(SD486, "{0}% chance to obtain Infinite Wrath effect (DMG Bonus +40%) for {1} sec when attacking").
+-define(SN487, "Speed - Precision I").
+-define(SD487, "{0}% chance to obtain precision effect (Hit Rate +10%) for {1} sec when attacking").
+-define(SN488, "Speed - Precision II").
+-define(SD488, "{0}% chance to obtain precision effect (Hit Rate +10%) for {1} sec when attacking").
+-define(SN489, "Speed - Precision III").
+-define(SD489, "{0}% chance to obtain precision effect (Hit Rate +10%) for {1} sec when attacking").
+-define(SN490, "Speed - Precision IV").
+-define(SD490, "{0}% chance to obtain precision effect (Hit Rate +{2}%) for {1} sec when attacking").
+-define(SN803, "Defense - Iron Bone II").
+-define(SD803, "{0}% chance to obtain Iron Bone (DMG RED +40%) for {1} sec when attacked").
+-define(SN804, "First - Harden Study II").
+-define(SD804, "Obtain {0} stack of Harden Study effect (DMG RED +2% with each stack) for {1} sec when entering into combat").
+-define(SN805, "Full - Alert III").
+-define(SD805, "Obtain Alert effect (Block Rate +20%) for {1} sec when HP is above {0}% and attacked").
+-define(SN806, "Attack - Harden Study III").
+-define(SD806, "{0}% chance to obtain {1} stack of Harden Study effect (DMG RED +2% with each stack) for {2} sec when attacking").
+-define(SN807, "First - Hardening Force").
+-define(SD807, "Obtain Hardening Force effect (trigger {0} stack of Harden Study per sec (DMG RED +2% with each stack) for {1} sec) for {2} sec when entering into combat.Unable to dispel").
+-define(SN808, "Attack - Harden Study II").
+-define(SD808, "{0}% chance to obtain {1} stack of Harden Study effect (DMG RED +2% with each stack) for {2} sec when attacking").
+-define(SN809, "Defense - Resolve II").
+-define(SD809, "{0}% chance to obtain Resolve effect (Skill DMG RED +15%) for {1} sec when attacked").
+-define(SN810, "First - Harden Study III").
+-define(SD810, "Obtain {0} stack of Harden Study effect (DMG RED +2% with each stack) for {1} sec when entering into combat").
+-define(SN811, "Full - Resolve III").
+-define(SD811, "Obtain Resolve effect (Skill DMG RED +15%) for {1} sec when HP is above {0}% and attacked").
+-define(SN812, "Defense - Undead Will").
+-define(SD812, "{0}% chance to obtain Undead Will effect (Final DMG RED +{1}% with each enemy around, {2}% at most) for {3} sec when attacked").
+-define(SN813, "Full - Resolve II").
+-define(SD813, "Obtain Resolve effect (Skill DMG RED +15%) for {1} sec when HP is above {0}% and attacked").
+-define(SN814, "Attack - Resolve II").
+-define(SD814, "{0}% chance to obtain Resolve effect (Skill DMG RED +15%) for {1} sec when attacking").
+-define(SN815, "Defense - Resolve III").
+-define(SD815, "{0}% chance to obtain Resolve effect (Skill DMG RED +15%) for {1} sec when attacked").
+-define(SN816, "Attack - Resolve III").
+-define(SD816, "{0}% chance to obtain Resolve effect (Skill DMG RED +15%) for {1} sec when attacking").
+-define(SN817, "Dodge - Iron Bone Ⅳ").
+-define(SD817, "Obtain Iron Bone effect (DMG RED +40%) for {0} sec when dodging attack").
+-define(SN818, "Counter - Harden II").
+-define(SD818, "{0}% chance to obtain Harden (DMG Reduction +10%) for {1} sec when attacked").
+-define(SN819, "Counter - Shield II").
+-define(SD819, "{0}% chance to obtain magic shield (Def+65%) for {1} sec when attacked").
+-define(SN820, "Counter - Harden III").
+-define(SD820, "{0}% chance to obtain Harden (DMG Reduction +10%) for {1} sec when attacked").
+-define(SN821, "Counter - Shield III").
+-define(SD821, "{0}% chance to obtain magic shield (Def+65%) for {1} sec when attacked").
+-define(SN822, "Counter - Iron Bone IV").
+-define(SD822, "{0}% chance to obtain iron bone (DMG RED +40%) for {1} sec when attacked").
+-define(SN823, "Counter - Agility I").
+-define(SD823, "{0}% chance to obtain Agility effect (Dodge Rate+10%) for {1} sec when attacked").
+-define(SN824, "Counter - Agility II").
+-define(SD824, "{0}% chance to obtain Agility effect (Dodge Rate+10%) for {1} sec when attacked").
+-define(SN825, "Counter - Agility III").
+-define(SD825, "{0}% chance to obtain Agility effect (Dodge Rate+10%) for {1} sec when attacked").
+-define(SN826, "Counter - Agility IV").
+-define(SD826, "{0}% chance to obtain Agility effect (Dodge Rate+10%) for {1} sec when attacked").
+-define(SN850, "Counter - Agility V").
+-define(SD850, "{0}% chance to obtain Agility effect (Dodge Rate+25%) for {1} sec when attacked").
+-define(BF235, "[Silverclad Wolf]").
+-define(BF236, "[Nightmare Steed]").
+-define(BF237, "[Abyss Beetle]").
+-define(BF238, "[Fierce Beast]").
+-define(BF239, "[Demon Chariot]").
+-define(BF240, "[Stygian Cavalry]").
+-define(BF241, "[Magical Broom]").
+-define(BF242, "[Wicked Pumpkin]").
+-define(BF243, "[Sword Spider]").
+-define(BF244, "[Undead Phoenix]").
+-define(BF245, "[Detective Hound]").
+-define(BF246, "[Treasure Seaturtle]").
+-define(BF247, "[Parrot Chief]").
+-define(BF248, "[Venom Drake]").
+-define(BF249, "[Panda Blademaster]").
+-define(BF250, "[Christmas Reindeer]").
+-define(BF251, "[Vanguard Moose]").
+-define(BF252, "[Saber-toothed Frost Beast]").
+-define(BF253, "[Feathered Serpent]").
+-define(BF254, "[Scorpion-tailed & Dragon-winged Beast]").
+-define(BF339, "[Kiss of Fay]").
+-define(BF340, "[Sunbird]").
+-define(BF341, "[Polychrome Dragon Wing]").
+-define(BF342, "[Archangel]").
+-define(BF343, "[Scorpion Warbanner]").
+-define(BF344, "[Fay Wings]").
+-define(BF345, "[Space Cape]").
+-define(BF346, "[Angel and Demon]").
+-define(BF347, "[Death Arrives]").
+-define(BF348, "[War Totem]").
+-define(BF349, "[Hero Warbanner]").
+-define(BF350, "[Holy Void Wings]").
+-define(BF351, "[Iceblue Champion]").
+-define(BF352, "[Purple Wing Dragon]").
+-define(BF353, "[Cape of Blades]").
+-define(BF354, "[Abysm Crystal]").
+-define(BF355, "[Christmas Wings]").
+-define(BF356, "[Collision of Angels]").
+-define(BF357, "[Dragon of Life]").
+-define(BF409, "[God of War]").
+-define(BF410, "[Goddess of Revenge]").
+-define(BF432, "[Blasting Fire Spirit]").
+-define(BF433, "[Mysterious Water Spirit]").
+-define(BF434, "[Calm Earth Spirit]").
+-define(BF435, "[Flash Wind Soul]").
+-define(BF436, "[Lava King Kong]").
+-define(BF437, "[Jealous Maiden]").
+-define(BN284, "Soften").
+-define(BD284, "Corrode skin! DMG RED-{0}%").
+-define(BN285, "Resolve").
+-define(BD285, "Skill DMG RED+{0}%").
+-define(BN335, "Water Spirit's Protection").
+-define(BD335, "Absorb {0}% DMG").
+-define(BN336, "Water Spirit's Blessing").
+-define(BD336, "Absorb {0}0 K DMG.ATK of DMG source decrease to {1}0 K and recover {2}% HP per sec").
+-define(BN337, "Water Spirit Aura").
+-define(BD337, "Recover {0}% HP and {1}% Healing Effect per sec").
+-define(BN338, "Thunderous Roar").
+-define(BD338, "DMG Bonus+{0}% with each enemy around, {1}% at most").
+-define(BN339, "Water Spirit's Reinforcement").
+-define(BD339, "Deal healing {0}% of DMG per sec").
+-define(BN340, "Undead Will").
+-define(BD340, "Final DMG RED+{0}% with every enemy around, {1}% at most").
+-define(BN341, "Death's Gaze").
+-define(BD341, "Final DMG RED+{0}%.Effect decrease {1}% with every enemy around, {2}% at most").
+-define(BN344, "Blade Saint").
+-define(BD344, "Incarnate into Blade Saint").
+-define(BN345, "Panda Warrior").
+-define(BD345, "Incarnate into Panda Warrior").
+-define(BN346, "Cantus Shroud").
+-define(BD346, "Hit Rate and Dodge Rate+{0}% with every stack.Trigger Cantus Surge when stack to {1}.Duration: {2}s").
+-define(BN347, "Cantus Surge").
+-define(BD347, "Exciting mood, Hit Rate and Dodge Rate+{0}%").
+-define(BN348, "Magic Sound Shroud").
+-define(BD348, "Move Speed-{0}% with every stack.Trigger Magical Sound Surge (Stun for {2} sec) at {1} stack").
+-define(BN349, "Magic Sound Surge").
+-define(BD349, "Dizzy, unable to control").
+-define(BD11001, "Final DMG Bonus +{0}% and Final DMG RED +{1}%").
+-define(BD11002, "EXP from killing monsters and AFK +{0}%").
+-define(BD113, "Incarnate into Crescent Goddess").
+-define(BD12001, "DMG taken from player -{0}%").
+-define(BD12011, "DMG to player +{0}%").
+-define(BD175, "Increases {0}% Skill DMG Bonus for self and teammate").
+-define(BD350, "Strong and vigorous! Focus ATK RED Rate +{0}%").
+-define(BD351, "A sudden flash of inspiration! Focuse ATK Rate +{0}%").
+-define(BD352, "Obtained Shelter! Healing effect +{0}%, DMG RED +{1}%").
+-define(BF12001, "[Ancient Divine Equipment]").
+-define(BF255, "[Giant Swamp Frog]").
+-define(BF256, "[Ghost Spartan Drake]").
+-define(BF257, "[Monster Nian]").
+-define(BF258, "[Oriental Dragon]").
+-define(BF259, "[Triceratops]").
+-define(BF358, "[Glorious Wings]").
+-define(BF359, "[Happiness Wings]").
+-define(BF360, "[Colorful Crystal Butterfly]").
+-define(BF361, "[Dragon of Darkness]").
+-define(BF362, "[Splendid Flag]").
+-define(BF411, "Crescent Goddess").
+-define(BF505, "[Blood Spirit Aura]").
+-define(BN11001, "Border Battle Buff").
+-define(BN11002, "Border EXP Buff").
+-define(BN113, "Crescent Goddess Arrives").
+-define(BN350, "Vigorous").
+-define(BN351, "Aura").
+-define(BN352, "Shelter").
+-define(SD160, "Deal total {0}%+{1} DMG to {2} targets (monster +{3}) [Awaken enhances effect]").
+-define(SD161, "Roll forward quickly").
+-define(SD162, "Deal {0}%+{1} DMG to {4} targets (monster +{5}), {2}% chance to come with block effect (Move Speed -150) for {3} sec [Talents enhances effect]").
+-define(SD163, "Deal {0}%+{1} DMG to {3} targets (monster +{4}), come with Skill DMG +{2}% [Talents enhances effect]").
+-define(SD164, "Deal {0}%+{1} DMG to {4} targets (monster +{5}), {2}% chance to trigger STR (ATK +13%) for {3} sec [Talents enhances effect]").
+-define(SD165, "Deal {0}%+{1} DMG to {4} targets (monster +{5}), {2}% chance to come with Blunt (Dodge -10%) for {3} sec [Talents enhances effect]").
+-define(SD166, "Deal {0}%+{1} DMG to {3} targets (monster +{4}), every DMG comes with hamstring effect (Move Speed -30%) for {2} sec [Talents enhances effect]").
+-define(SD167, "Possessed by sword will, deals {0}% + {1} DMG to {2} targets (monster +{3}) around and recovers 25% HP.The skill can be used again within 3 seconds after skill release to teleport to the target's front [Talents enhances effect]").
+-define(SD168, "Deal {0}%+{1} DMG to {2} targets (monster +{3}), and teleport to the target's front [Talents enhances effect]").
+-define(SD169, "Deal {0}%+{1} DMG to {2} targets (monster +{3}) [Talents enhances effect]").
+-define(SD170, "Deal {0}%+{1} DMG to {2} targets (monster +{3}), and teleport to the target's back [Talents enhances effect]").
+-define(SD171, "Deal {0}%+{1} DMG to {3} targets (monster +{4}), come with {2}% leech effect [Talents enhances effect]").
+-define(SD172, "Deal {0}%+{1} DMG to {2} targets (monster +{3}), come with Suction Force [Talents enhances effect]").
+-define(SD173, "Deal {0}%+{1} DMG to {2} targets (monster +{3}), invincible during the period [Talents enhances effect]").
+-define(SD174, "Deal {0}%+{1} DMG to {3} targets (monster +{4}), the team gains a Precise Technique (SKill DMG +60%) for {2} secs [Talents enhances effect]").
+-define(SD175, "Increases {0}% Skill DMG Bonus for self and teammate").
+-define(SD240001, "When HP is lower than {0}%, get {1}% PVP DMG Reduction for {2} seconds, with {3} seconds CD").
+-define(SD240011, "When HP is lower than {0}%, get {1}% PVP DMG Bonus for {2} seconds, with {3} seconds CD").
+-define(SD249, "Incarnate into Crescent Goddess for {1} sec.Deal {0}% damage to {6} nearby targets(monster+{7}).{2}% chance to provide {3} stacks of Cantus Surge(Hit Rate and Dodge Rate+2% with every stack.When it reaches to 5 stacks, triggers Cantus Surge: Hit Rate and Dodge Rate+35% for 4 sec) to teammates nearby for {4} sec.Available for {5} times at most").
+-define(SD250, "Deal {0}% damage to {4} targets(monster+{5}).{1}% chance to add {2} stacks Magic Sound Shroud(Move Speed-20% every time.When it reaches to 3 stacks, triggers Magic Sound Surge: Stun for 2 sec) for {3} sec").
+-define(SD251, "Deal {0}% damage to {5} targets(monster+{6}).{1}% chance to provide {2} stacks of Cantus Surge to teammates nearby for {3} sec.Available for {4} times at most").
+-define(SD252, "Deal {0}% damage to {5} targets(monster+{6}).{1}% chance to add {2} stacks of Magic Sound Shroud for {3} sec.Available for {4} times at most").
+-define(SD253, "Deal {0}% damage to {8} targets(monster+{9}).{1}% chance to add {2} stacks of Magic Sound Shroud for {3} sec.{4}% chance to provide {5} stacks of Cantus Surge to teammates nearby for {6} sec.Available for {7} times at most").
+-define(SD41520, "Obtain Enhanced Alert effect (Block Rate +{2}%) for {1} sec when HP is above {0}% and attacked").
+-define(SD48620, "{0}% chance to obtain Enhanced Infinite Wrath (DMG Bonus +{2}%) for {1} sec when attacking").
+-define(SN491, "Attack - Technique I").
+-define(SD491, "{0}% chance to obtain Technique effect (Skill DMG+15%) for {1} sec when attacking").
+-define(SD50320, "Make player obtain enhanced harden effect (DMG RED +{1}%) for {0} sec").
+-define(SD50820, "Make player obtain enhanced Wrath effect (DMG Bonus +{1}%) for {0} sec").
+-define(SD51320, "Make player obtain enhanced cranky effect (Crit.Rate +{1}%) for {0} sec").
+-define(SD51820, "Add enhanced passivate effect (Sunder -{1}%) and block effect (Move Speed -150) to nearby target for {0} secs").
+-define(SD55820, "Player obtains DMG Bonus+{0}% for {3} sec.Effect decreases {1}% with each enemy around up to {2}%").
+-define(SD56420, "{0}% chance to obtain Water Spirit‘s Protection (Absorb {1}% DMG for 4 sec) when attacked").
+-define(SD57420, "{0}% chance to trigger Lightning Chain (Deal {1}% DMG to target nearby, 50% chance to trigger Lightning Chain again) when attacking").
+-define(SD57820, "Make player obtain Infinite Wrath (DMG Bonus +{1}%) for {0} sec").
+-define(SD57920, "{0}% chance to trigger Earth Blast (Deal {1}% DMG to 3 targets nearby(monster+2)) when attacking").
+-define(SD58420, "{0}% chance to trigger Secret Snake (Deal {1}% DMG to single target, come with Soften for 4 sec) when attacking").
+-define(SD684, "When HP is lower than {0}%, recovers Divine Shield by {1}% and Divine Shield's DMG Tough Rate +{2}% for {3} secs").
+-define(SD685, "When hit by a Crit attack, recover 10% of Divine Shield Value").
+-define(SD686, "Increase Divine Shield DMG RED by an extra {0}").
+-define(SD827, "{0}% chance to obtain Resolve effect (Skill DMG RED +15%) for {1} sec when attacked").
+-define(SN249, "Star Moon Radiance").
+-define(SN250, "Moon Chapter").
+-define(SN251, "Radiant Surge").
+-define(SN252, "Notes' Spree").
+-define(SN253, "Hyper Time").
+-define(SN827, "Defense - Resolve I").
+-define(SS246, "Incarnate into Crescent Goddess to provide buffs to the team").
+-define(SS247, "Play electric guitar to give debuffs").
+-define(SS248, "The music influences things nearby and provides buffs to the team").
+-define(SS249, "Note shockwave hits the front and gives debuffs").
+-define(SS250, "Note hits nearby, gives debuffs and provides buffs to the team").
+-define(SS511, "High chance to increase Dodge Rate when attacked").
+-define(SS512, "High chance to increase Dodge Rate when attacked").
+-define(SS513, "High chance to increase Dodge Rate when attacked").
+-define(SS514, "High chance to increase Dodge Rate when attacked").
+-define(SS515, "High chance to increase Hit Rate when attacking").
+-define(SS516, "High chance to increase Hit Rate when attacking").
+-define(SS517, "High chance to increase Hit Rate when attacking").
+-define(SS518, "High chance to increase Hit Rate when attacking").
+-define(SS519, "Attacks have a chance to increase Skill DMG").
+-define(SS520, "Chance to increase Skill DMG Reduction when attacked").
+-define(SN585, "Woven Fate").
+-define(SD585, "Deal {0}% DMG to {2} targets (monster+{3}).{1}% chance to trigger Holy Verdict (deal 100% DMG with Holy Flame (DMG RED -10%, can be ramp up to 5 stacks) to one target for 6 sec)").
+-define(SN586, "Celestial Lead").
+-define(SD586, "Deal {0}% DMG to {2} targets (monster+{3}).{1}% chance to trigger Holy Verdict").
+-define(SN587, "Dawn Light").
+-define(SD587, "Deal {0}% DMG to {3} targets (monster+{4}).{1}% chance to trigger Holy Verdict, ramp up to {2} stacks at most.").
+-define(SN588, "Holy Announcement").
+-define(SD588, "Deal {0}% DMG to {3} targets (monster+{4}).{1}% chance to trigger Holy Verdict, ramp up to {2} stacks at most.Every time the target loses {5}% HP, your basic DMG +{6}% (ramp up to {7}% at most)").
+-define(SN589, "Holy Verdict").
+-define(SD589, "When attacking, {0}% chance to trigger Holy Verdict (deal {1}% DMG with Holy Flame to one target for 6 sec").
+-define(BN356, "Holy Flame").
+-define(BD356, "Surrounded by Holy Flame! DMG RED -{0}%, can be ramp up to 5 stacks").
+-define(BF438, "[Valkyrie]").
+-define(SS403, "Deal massive DMG with chances of triggering group DMG").
+-define(SS404, "Deal slight DMG with chances of triggering group DMG").
+-define(SS405, "Deal medium DMG with chances of triggering group DMG").
+-define(SS406, "Deal medium DMG with chances of triggering group DMG").
+-define(SS407, "When attacking, there are chances of triggering group DMG").
+-define(SS408, "Enhance DMG of Woven Fate").
+-define(BF363, "[Blackgold Divine Wings]").
+-define(BF364, "[Flame Dragon Wings]").
+-define(BF365, "[Dragon of Fire]").
+-define(BF260, "[Abyss Wasp]").
+-define(BF261, "[Dragon Parasite]").
+-define(BF262, "[Dragonhawk of Seven Colors]").
+-define(BN353, "Vehemence").
+-define(BD353, "Burn with wrath! Crit.Rate+{0}%, Crit.DMG Bonus+{1}%").
+-define(BN354, "Revitalize").
+-define(BD354, "Celestial Blessing! Healing Effect+{0}%").
+-define(BN355, "Calm").
+-define(BD355, "Imperturbable! Tough Rate+{0}%, Crit.DMG RED+{1}%").
+-define(SN492, "Attack - Fatal").
+-define(SD492, "When attacking, {0}% chance to give a target Fatal effect (healing effect-50%) for {1} sec").
+-define(SN493, "Attack - Vehemence").
+-define(SD493, "When attacking, {0}% chance to obtain Vehemence (Crit.Rate & Crit.DMG Bonus+20%) for {1} sec").
+-define(SN494, "Attack - Precision Master").
+-define(SD494, "When attacking, {0}% chance to obtain Precision Master (Hit Rate+30%) for {1} sec").
+-define(SN828, "Defense - Revitalize").
+-define(SD828, "When attacked, {0}% chance of getting God's Blessing(Healing effect+50%) for {1} sec").
+-define(SN829, "Defense - Calm").
+-define(SD829, "When attacked, {0}% chance to get Calm (Tough Rate & Crit.DMG RED+30%) for {1} sec").
+-define(SN830, "Defense - Windwalker").
+-define(SD830, "When attacked, {0}% chance to get Windwalker (Dodge Rate+30%) for {1} sec").
+-define(SS521, "When attacking, there's a chance to decrease the target's healing effect").
+-define(SS522, "When attacking, there's a chance to increase Crit.Rate and Crit.DMG").
+-define(SS523, "Attacks have a chance to increase Hit Rate").
+-define(SS524, "When attacked, there's a chance to increase healing effect").
+-define(SS525, "When attacked, there's a chance to increase Tough Rate and Crit.DMG RED").
+-define(SS526, "When attacked, there's a chance to increase Dodge").
+-define(SN1006021, "Verdant Havoc").
+-define(SN1006022, "Bow Arm - Armor").
+-define(SN1006023, "Upper Limb - Solidify").
+-define(SN1006024, "Bow String - Sky").
+-define(SN1006025, "Arrow Stand - Havoc").
+-define(SN1007021, "Power of Stars").
+-define(SN1007022, "Hilt - Butterfly").
+-define(SN1007023, "Sword Sheath - Wings").
+-define(SN1007024, "Sword Ridge - Starry").
+-define(SN1007025, "Edge - Stars").
+-define(SN1005021, "Crucio Curse").
+-define(SN1005022, "Wand Body - Toxic").
+-define(SN1005023, "Wand Head - Evil").
+-define(SN1005024, "Staff End - Taboo").
+-define(SN1005025, "Magic Stone - Curse").
+-define(SN1004021, "Bonedeep Hatred").
+-define(SN1004022, "Hilt - Bone").
+-define(SN1004023, "Sword Sheath - Hatred").
+-define(SN1004024, "Sword Ridge - Deep").
+-define(SN1004025, "Edge - Stab").
+-define(SN160, "New Moon").
+-define(SN161, "Roll").
+-define(SD82220, "{0}% chance to obtain enhanced Iron Bone(DMG RED +{2}%) for {1} sec when attacked").
+-define(SN625201, "Final DMG Red").
+-define(SN626201, "Skill DMG").
+-define(SN627201, "DMG Bonus").
+-define(SN628201, "Final DMG").
+-define(SN629201, "Anti-Crit Rate").
+-define(SN630201, "Anti-Excellent Rate").
+-define(SN640101, "Pact Resonance Ⅲ").
+-define(SN640201, "Multi-strike
+Rate").
+-define(SN650201, "DMG Bonus").
+-define(SN660101, "Spirit Resonance IV").
+-define(SN660201, "Anti-Excellent").
+-define(SN670101, "Spirit Resonance IV").
+-define(SN670201, "Skill DMG Bonus").
+-define(SD625201, "Final DMG Reduction +{0}%").
+-define(SD626201, "Skill DMG Bonus +{0}%").
+-define(SD627201, "DMG Bonus increases by {0}%").
+-define(SD628201, "Final DMG Bonus +{0}%").
+-define(SD629201, "Anti-Focus Rate +{0}%").
+-define(SD630201, "Anti-Excellent Rate +{0}%").
+-define(SD640101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD640201, "Multi-strike Cap Rate +{0}%").
+-define(SD650201, "DMG Bonus +{0}%").
+-define(SD660101, "All Deities (Gear included) all stats bonus +{0}%").
+-define(SD660201, "Anti-Excellent Rate +{0}%").
+-define(SD670101, "All Deities (Gear included) all stats bonus +{0}%").
+-define(SD670201, "Skill DMG +{0}%").
+-define(SD680101, "All Deities (Gear included) all stats bonus +{0}%").
+-define(SD680201, "Anti-Lethal Rate +{0}%").
+-define(SD690101, "All Deities (Gear included) all stats bonus +{0}%").
+-define(SD690201, "Final DMG +{0}%").
+-define(BF95, "[Ruin Altar]").
+-define(BN1001611, "D.Armor Top Drops Chance Bonus").
+-define(BD1001611, "D.Armor Top Drops +{0}%").
+-define(EASYSD240001, "Increases PVP DMG Reduction when HP is lower than {0}%").
+-define(EASYSD240011, "Increases PVP DMG Bonus when HP is lower than {0}%").
+-define(SN1007001, "Sword Dance Storm").
+-define(SN1007002, "Hilt - Fury").
+-define(SN1007003, "Sword Sheath - Glyph").
+-define(SN1007004, "Sword Ridge - Punishment").
+-define(SN1007005, "Edge - Arrowhead").
+-define(SN1007006, "Dormant Phantom").
+-define(SN1007007, "Hilt - Shadow").
+-define(SN1007008, "Sword Sheath - Magic").
+-define(SN1007009, "Sword Ridge - Soul").
+-define(SN1007010, "Edge - Nightmare").
+-define(SN1007011, "Magic Trial").
+-define(SN1007012, "Hilt - Law").
+-define(SN1007013, "Sword Sheath - Discipline").
+-define(SN1007014, "Sword Ridge - Justice").
+-define(SN1007015, "Edge - Penalty").
+-define(SN1007016, "Like a Shadow").
+-define(SN1007017, "Hilt - Spirit").
+-define(SN1007018, "Sword Sheath - Night").
+-define(SN1007019, "Sword Ridge - Hell").
+-define(SN1007020, "Edge - Myth").
+-define(SN1007026, "Nether Discipline").
+-define(SN1007027, "Hilt - Nether").
+-define(SN1007028, "Sword Sheath - Soul").
+-define(SN1007029, "Sword Ridge - Quiet").
+-define(SN1007030, "Edge - Dark").
+-define(SN1007031, "Gilding Blood Blade").
+-define(SN1007032, "Hilt - Yin").
+-define(SN1007033, "Sword Sheath - Soul").
+-define(SN1007034, "Sword Ridge - Justice").
+-define(SN1007035, "Edge - Ji").
+-define(SN162, "Speedy Wave").
+-define(SN163, "Void Spin").
+-define(SN164, "Shadow Spike").
+-define(SN165, "Magic Slash").
+-define(SN166, "Sparkling Comet").
+-define(SN167, "Storm Ramble").
+-define(SN168, "Shocking Steps").
+-define(SN169, "Sword Awakening").
+-define(SN170, "Ghost Sword Dance").
+-define(SN171, "Slaying Sprint").
+-define(SN172, "Sword Rainbow").
+-define(SN173, "Infinite Punishment").
+-define(SN174, "Star Dust").
+-define(SN175, "Blood Spirit Aura").
+-define(SN625101, "Pact Resonance Ⅰ").
+-define(SD625101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(BN12001, "Ancient God Set - DMG RED").
+-define(BN12011, "Ancient God Set - DMG Bonus").
+-define(SN676, "Light Resuscitation").
+-define(SN677, "Paralysis Removal").
+-define(SN678, "Broken Glimmer").
+-define(SN679, "Light Suck").
+-define(SN680, "Broken Purification").
+-define(SN682, "Light Embrace").
+-define(SN683, "Broken Will").
+-define(BF94, "[Border]").
+-define(SN806001, "Resurrection").
+-define(SN806011, "Holy Light").
+-define(SN806021, "Ether").
+-define(SN806031, "Brightness").
+-define(SN806041, "Punish").
+-define(SN806051, "Sacrifice").
+-define(SN806061, "Geniality").
+-define(SN806071, "Hype").
+-define(SN806081, "Stateliness").
+-define(SN806091, "Dominion").
+-define(SN806101, "Resurrection").
+-define(SN806111, "Holy Light").
+-define(SN806121, "Ruling").
+-define(SN806131, "Fairness").
+-define(SN806141, "Excitation").
+-define(SN806151, "Arrogance").
+-define(SN806161, "Forbearance").
+-define(SN806171, "Ecstasy").
+-define(SN806181, "Twin").
+-define(SN806191, "Telepathy").
+-define(SN806201, "Geniality").
+-define(SN806211, "Hype").
+-define(SN806221, "Stateliness").
+-define(SN806231, "Dominion").
+-define(SN806241, "Resurrection").
+-define(SN806251, "Holy Light").
+-define(SN806261, "Ruling").
+-define(SN806271, "Fairness").
+-define(SN806281, "Excitation").
+-define(SN806291, "Arrogance").
+-define(SN806301, "Forbearance").
+-define(SN806311, "Ecstasy").
+-define(SN806321, "Twin").
+-define(SN806331, "Telepathy").
+-define(SN806341, "Geniality").
+-define(SN806351, "Hype").
+-define(SN806361, "Stateliness").
+-define(SN806371, "Dominion").
+-define(SN806381, "Resurrection").
+-define(SN806391, "Holy Light").
+-define(SN806401, "Ruling").
+-define(SN806411, "Fairness").
+-define(SN806421, "Excitation").
+-define(SN806431, "Arrogance").
+-define(SN806441, "Forbearance").
+-define(SN806451, "Ecstasy").
+-define(SN806461, "Twin").
+-define(SN806471, "Telepathy").
+-define(SN806481, "Geniality").
+-define(SN806491, "Hype").
+-define(SN806501, "Stateliness").
+-define(SN806511, "Dominion").
+-define(SN806521, "Resurrection").
+-define(SN806531, "Holy Light").
+-define(SN806541, "Ruling").
+-define(SN806551, "Fairness").
+-define(SN806561, "Resurrection").
+-define(SN806571, "Holy Light").
+-define(SN806581, "Ruling").
+-define(SN806591, "Fairness").
+-define(SN806601, "Excitation").
+-define(SN806611, "Arrogance").
+-define(SN806621, "Forbearance").
+-define(SN806631, "Ecstasy").
+-define(SN806641, "Twin").
+-define(SN806651, "Telepathy").
+-define(SN806661, "Geniality").
+-define(SN806671, "Hype").
+-define(SN806681, "Stateliness").
+-define(SN806691, "Dominion").
+-define(SN806701, "Resurrection").
+-define(SN806711, "Holy Light").
+-define(SD806001, "Equip this skill to grant the character Fire ATK +{0}%").
+-define(SD806011, "Equip this skill to grant the character Fire DEF +{0}%").
+-define(SD806021, "Equip this skill to grant the character Water ATK +{0}%").
+-define(SD806031, "Equip this skill to grant the character Water DEF +{0}%").
+-define(SD806041, "Equip this skill to grant the character Wind ATK +{0}%").
+-define(SD806051, "Equip this skill to grant the character Wind DEF +{0}%").
+-define(SD806061, "Equip this skill to grant the character Earth ATK +{0}%").
+-define(SD806071, "Equip this skill to grant the character Earth DEF +{0}%").
+-define(SD806081, "Equip this skill to grant the character Fire ATK +{0}%").
+-define(SD806091, "Equip this skill to grant the character Fire DEF +{0}%").
+-define(SD806101, "Equip this skill to grant the character Water ATK +{0}%").
+-define(SD806111, "Equip this skill to grant the character Water DEF +{0}%").
+-define(SD806121, "Equip this skill to grant the character Wind ATK +{0}%").
+-define(SD806131, "Equip this skill to grant the character Wind DEF +{0}%").
+-define(SD806141, "Equip this skill to grant the character Earth ATK +{0}%").
+-define(SD806151, "Equip this skill to grant the character Earth DEF +{0}%").
+-define(SD806161, "Equip this skill to grant the character Fire ATK +{0}%").
+-define(SD806171, "Equip this skill to grant the character Fire DEF +{0}%").
+-define(SD806181, "Equip this skill to grant the character Water ATK +{0}%").
+-define(SD806191, "Equip this skill to grant the character Water DEF +{0}%").
+-define(SD806201, "Equip this skill to grant the character Wind ATK +{0}%").
+-define(SD806211, "Equip this skill to grant the character Wind DEF +{0}%").
+-define(SD806221, "Equip this skill to grant the character Earth ATK +{0}%").
+-define(SD806231, "Equip this skill to grant the character Earth DEF +{0}%").
+-define(SD806241, "Equip this skill to grant the character Fire ATK +{0}%").
+-define(SD806251, "Equip this skill to grant the character Fire DEF +{0}%").
+-define(SD806261, "Equip this skill to grant the character Water ATK +{0}%").
+-define(SD806271, "Equip this skill to grant the character Water DEF +{0}%").
+-define(SD806281, "Equip this skill to grant the character Wind ATK +{0}%").
+-define(SD806291, "Equip this skill to grant the character Wind DEF +{0}%").
+-define(SD806301, "Equip this skill to grant the character Earth ATK +{0}%").
+-define(SD806311, "Equip this skill to grant the character Earth DEF +{0}%").
+-define(SD806321, "Equip this skill to grant the character Fire ATK +{0}%").
+-define(SD806331, "Equip this skill to grant the character Fire DEF +{0}%").
+-define(SD806341, "Equip this skill to grant the character Water ATK +{0}%").
+-define(SD806351, "Equip this skill to grant the character Water DEF +{0}%").
+-define(SD806361, "Equip this skill to grant the character Wind ATK +{0}%").
+-define(SD806371, "Equip this skill to grant the character Wind DEF +{0}%").
+-define(SD806381, "Equip this skill to grant the character Earth ATK +{0}%").
+-define(SD806391, "Equip this skill to grant the character Earth DEF +{0}%").
+-define(SD806401, "Equip this skill to grant the character Fire ATK +{0}%").
+-define(SD806411, "Equip this skill to grant the character Fire DEF +{0}%").
+-define(SD806421, "Equip this skill to grant the character Water ATK +{0}%").
+-define(SD806431, "Equip this skill to grant the character Water DEF +{0}%").
+-define(SD806441, "Equip this skill to grant the character Wind ATK +{0}%").
+-define(SD806451, "Equip this skill to grant the character Wind DEF +{0}%").
+-define(SD806461, "Equip this skill to grant the character Earth ATK +{0}%").
+-define(SD806471, "Equip this skill to grant the character Earth DEF +{0}%").
+-define(SD806481, "Equip this skill to grant the character Fire ATK +{0}%").
+-define(SD806491, "Equip this skill to grant the character Fire DEF +{0}%").
+-define(SD806501, "Equip this skill to grant the character Water ATK +{0}%").
+-define(SD806511, "Equip this skill to grant the character Water DEF +{0}%").
+-define(SD806521, "Equip this skill to grant the character Wind ATK +{0}%").
+-define(SD806531, "Equip this skill to grant the character Wind DEF +{0}%").
+-define(SD806541, "Equip this skill to grant the character Earth ATK +{0}%").
+-define(SD806551, "Equip this skill to grant the character Earth DEF +{0}%").
+-define(SD806561, "Equip this skill to grant the character Fire ATK +{0}%").
+-define(SD806571, "Equip this skill to grant the character Fire DEF +{0}%").
+-define(SD806581, "Equip this skill to grant the character Water ATK +{0}%").
+-define(SD806591, "Equip this skill to grant the character Water DEF +{0}%").
+-define(SD806601, "Equip this skill to grant the character Wind ATK +{0}%").
+-define(SD806611, "Equip this skill to grant the character Wind DEF +{0}%").
+-define(SD806621, "Equip this skill to grant the character Earth ATK +{0}%").
+-define(SD806631, "Equip this skill to grant the character Earth DEF +{0}%").
+-define(SD806641, "Equip this skill to grant the character Fire ATK +{0}%").
+-define(SD806651, "Equip this skill to grant the character Fire DEF +{0}%").
+-define(SD806661, "Equip this skill to grant the character Water ATK +{0}%").
+-define(SD806671, "Equip this skill to grant the character Water DEF +{0}%").
+-define(SD806681, "Equip this skill to grant the character Wind ATK +{0}%").
+-define(SD806691, "Equip this skill to grant the character Wind DEF +{0}%").
+-define(SD806701, "Equip this skill to grant the character Earth ATK +{0}%").
+-define(SD806711, "Equip this skill to grant the character Earth DEF +{0}%").
+-define(SN904001, "Attack - Mania").
+-define(SD904001, "When the skill is equipped, has a {0}% chance to obtain Mania effect (Crit Rate +20%) for {1} secs when attacking").
+-define(SN904002, "Attack - Insight").
+-define(SD904002, "When the skill is equipped, has a {0}% chance to obtain See Through effect (Anti-block Rate +20%) for {1} secs when attacking").
+-define(SN904003, "Attack - Wrath").
+-define(SD904003, "When the skill is equipped, has a {0}% chance to obtain Wrath effect (DMG Bonus +20%) for {1} secs when attacking").
+-define(SN904004, "Crit - Gallant").
+-define(SD904004, "When the skill is equipped, has a {0}% chance to obtain Brave effect (Skill DMG +20%) for {1} secs when launching a critical hit").
+-define(SN904005, "Crit - Wrath").
+-define(SD904005, "When the skill is equipped, has a {0}% chance to obtain Wrath effect (DMG Bonus +20%) for {1} secs when launching a critical hit").
+-define(SN904006, "Crit - Justice").
+-define(SD904006, "When the skill is equipped, has a {0}% chance to obtain Justice effect (Final DMG +20%) for {1} secs when launching a critical hit").
+-define(EASYSD806001, "Character HP +{0}%").
+-define(EASYSD806011, "Character Sunder +{0}%").
+-define(EASYSD806021, "Character DEF +{0}%").
+-define(EASYSD806031, "Character ATK +{0}%").
+-define(EASYSD806041, "Character Crit Rate +{0}%").
+-define(EASYSD806051, "Character Tough Rate +{0}%").
+-define(EASYSD806061, "Character DMG Bonus + {0}%").
+-define(EASYSD806071, "Character DMG Reduction + {0}%").
+-define(EASYSD806081, "Character Focus Rate +{0}%").
+-define(EASYSD806091, "Character Anti-Focus Rate +{0}%").
+-define(EASYSD806101, "Character Final DMG Bonus +{0}%").
+-define(EASYSD806111, "Character Final DMG Reduction +{0}%").
+-define(EASYSD806121, "Character Excellent Rate + {0}%").
+-define(EASYSD806131, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD806141, "Character HP +{0}%").
+-define(EASYSD806151, "Character Sunder +{0}%").
+-define(EASYSD806161, "Character DEF +{0}%").
+-define(EASYSD806171, "Character ATK +{0}%").
+-define(EASYSD806181, "Character Crit Rate +{0}%").
+-define(EASYSD806191, "Character Tough Rate +{0}%").
+-define(EASYSD806201, "Character DMG Bonus + {0}%").
+-define(EASYSD806211, "Character DMG Reduction + {0}%").
+-define(EASYSD806221, "Character Focus Rate +{0}%").
+-define(EASYSD806231, "Character Anti-Focus Rate +{0}%").
+-define(EASYSD806241, "Character Final DMG Bonus +{0}%").
+-define(EASYSD806251, "Character Final DMG Reduction +{0}%").
+-define(EASYSD806261, "Character Excellent Rate + {0}%").
+-define(EASYSD806271, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD806281, "Character HP +{0}%").
+-define(EASYSD806291, "Character Sunder +{0}%").
+-define(EASYSD806301, "Character DEF +{0}%").
+-define(EASYSD806311, "Character ATK +{0}%").
+-define(EASYSD806321, "Character Crit Rate +{0}%").
+-define(EASYSD806331, "Character Tough Rate +{0}%").
+-define(EASYSD806341, "Character DMG Bonus + {0}%").
+-define(EASYSD806351, "Character DMG Reduction + {0}%").
+-define(EASYSD806361, "Character Focus Rate +{0}%").
+-define(EASYSD806371, "Character Anti-Focus Rate +{0}%").
+-define(EASYSD806381, "Character Final DMG Bonus +{0}%").
+-define(EASYSD806391, "Character Final DMG Reduction +{0}%").
+-define(EASYSD806401, "Character Excellent Rate + {0}%").
+-define(EASYSD806411, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD806421, "Character HP +{0}%").
+-define(EASYSD806431, "Character Sunder +{0}%").
+-define(EASYSD806441, "Character DEF +{0}%").
+-define(EASYSD806451, "Character ATK +{0}%").
+-define(EASYSD806461, "Character Crit Rate +{0}%").
+-define(EASYSD806471, "Character Tough Rate +{0}%").
+-define(EASYSD806481, "Character DMG Bonus + {0}%").
+-define(EASYSD806491, "Character DMG Reduction + {0}%").
+-define(EASYSD806501, "Character Focus Rate +{0}%").
+-define(EASYSD806511, "Character Anti-Focus Rate +{0}%").
+-define(EASYSD806521, "Character Final DMG Bonus +{0}%").
+-define(EASYSD806531, "Character Final DMG Reduction +{0}%").
+-define(EASYSD806541, "Character Excellent Rate + {0}%").
+-define(EASYSD806551, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD806561, "Character HP +{0}%").
+-define(EASYSD806571, "Character Sunder +{0}%").
+-define(EASYSD806581, "Character DEF +{0}%").
+-define(EASYSD806591, "Character ATK +{0}%").
+-define(EASYSD806601, "Character Crit Rate +{0}%").
+-define(EASYSD806611, "Character Tough Rate +{0}%").
+-define(EASYSD806621, "Character DMG Bonus + {0}%").
+-define(EASYSD806631, "Character DMG Reduction + {0}%").
+-define(EASYSD806641, "Character Focus Rate +{0}%").
+-define(EASYSD806651, "Character Anti-Focus Rate +{0}%").
+-define(EASYSD806661, "Character Final DMG Bonus +{0}%").
+-define(EASYSD806671, "Character Final DMG Reduction +{0}%").
+-define(EASYSD806681, "Character Excellent Rate + {0}%").
+-define(EASYSD806691, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD806701, "Character HP +{0}%").
+-define(EASYSD806711, "Character Sunder +{0}%").
+-define(GENIUSATTR_NAME5010, "STR Enhancement").
+-define(GENIUSATTR_NAME5011, "STR Enhancement").
+-define(GENIUSATTR_NAME5012, "STR Enhancement").
+-define(GENIUSATTR_NAME5013, "STR Enhancement").
+-define(GENIUSATTR_NAME5020, "Physical Enhancement").
+-define(GENIUSATTR_NAME5021, "Physical Enhancement").
+-define(GENIUSATTR_NAME5022, "Physical Enhancement").
+-define(GENIUSATTR_NAME5023, "Physical Enhancement").
+-define(GENIUSATTR_NAME5030, "Piercing Enhancement").
+-define(GENIUSATTR_NAME5031, "Piercing Enhancement").
+-define(GENIUSATTR_NAME5032, "Piercing Enhancement").
+-define(GENIUSATTR_NAME5033, "Piercing Enhancement").
+-define(GENIUSATTR_NAME5040, "Will Enhancement").
+-define(GENIUSATTR_NAME5041, "Will Enhancement").
+-define(GENIUSATTR_NAME5042, "Will Enhancement").
+-define(GENIUSATTR_NAME5043, "Will Enhancement").
+-define(GENIUSATTR_NAME5050, "Precision Enhancement").
+-define(GENIUSATTR_NAME5051, "Precision Enhancement").
+-define(GENIUSATTR_NAME5052, "Precision Enhancement").
+-define(GENIUSATTR_NAME5053, "Precision Enhancement").
+-define(GENIUSATTR_NAME5060, "Agility Enhancement").
+-define(GENIUSATTR_NAME5061, "Agility Enhancement").
+-define(GENIUSATTR_NAME5062, "Agility Enhancement").
+-define(GENIUSATTR_NAME5063, "Agility Enhancement").
+-define(GENIUSATTR_NAME5070, "Elemental Spear").
+-define(GENIUSATTR_NAME5071, "Elemental Spear").
+-define(GENIUSATTR_NAME5072, "Elemental Spear").
+-define(GENIUSATTR_NAME5073, "Elemental Spear").
+-define(GENIUSATTR_NAME5080, "Elemental Shield").
+-define(GENIUSATTR_NAME5081, "Elemental Shield").
+-define(GENIUSATTR_NAME5082, "Elemental Shield").
+-define(GENIUSATTR_NAME5083, "Elemental Shield").
+-define(GENIUSATTR_NAME5090, "Focuse ATK Enhancement").
+-define(GENIUSATTR_NAME5091, "Focused ATK Enhancement").
+-define(GENIUSATTR_NAME5092, "Focused ATK Enhancement").
+-define(GENIUSATTR_NAME5093, "Focused ATK Enhancement").
+-define(GENIUSATTR_NAME5100, "Perception Enhancement").
+-define(GENIUSATTR_NAME5101, "Perception Enhancement").
+-define(GENIUSATTR_NAME5102, "Perception Enhancement").
+-define(GENIUSATTR_NAME5103, "Perception Enhancement").
+-define(GENIUSATTR_NAME5110, "War God's Might").
+-define(GENIUSATTR_NAME5111, "Power of God of War").
+-define(GENIUSATTR_NAME5112, "Power of God of War").
+-define(GENIUSATTR_NAME5113, "Power of God of War").
+-define(GENIUSATTR_NAME5120, "Guardian Force").
+-define(GENIUSATTR_NAME5121, "Guardian Force").
+-define(GENIUSATTR_NAME5122, "Guardian Force").
+-define(GENIUSATTR_NAME5123, "Guardian Force").
+-define(GENIUSATTR_DES5010, "Level 0 Talents").
+-define(GENIUSATTR_DES5011, "ATK +<color=#00FF00>1958</color>").
+-define(GENIUSATTR_DES5012, "ATK +<color=#00FF00>3916</color>").
+-define(GENIUSATTR_DES5013, "ATK +<color=#00FF00>5874</color>").
+-define(GENIUSATTR_DES5020, "Level 0 Talents").
+-define(GENIUSATTR_DES5021, "HP +<color=#00FF00>43520</color>").
+-define(GENIUSATTR_DES5022, "HP +<color=#00FF00>87040</color>").
+-define(GENIUSATTR_DES5023, "HP +<color=#00FF00>130560</color>").
+-define(GENIUSATTR_DES5030, "Level 0 Talents").
+-define(GENIUSATTR_DES5031, "Sunder +<color=#00FF00>2513</color>").
+-define(GENIUSATTR_DES5032, "Sunder +<color=#00FF00>5026</color>").
+-define(GENIUSATTR_DES5033, "Sunder +<color=#00FF00>7539</color>").
+-define(GENIUSATTR_DES5040, "Level 0 Talents").
+-define(GENIUSATTR_DES5041, "DEF +<color=#00FF00>2513</color>").
+-define(GENIUSATTR_DES5042, "DEF +<color=#00FF00>5026</color>").
+-define(GENIUSATTR_DES5043, "DEF +<color=#00FF00>7539</color>").
+-define(GENIUSATTR_DES5050, "Level 0 Talents").
+-define(GENIUSATTR_DES5051, "Hit Rate +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5052, "Hit Rate +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5053, "Hit Rate +<color=#00FF00>3.15</color>%").
+-define(GENIUSATTR_DES5060, "Level 0 Talents").
+-define(GENIUSATTR_DES5061, "Dodge Rate +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5062, "Dodge Rate +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5063, "Dodge Rate +<color=#00FF00>3.15</color>%").
+-define(GENIUSATTR_DES5070, "Level 0 Talents").
+-define(GENIUSATTR_DES5071, "Elemental Atk +<color=#00FF00>649</color>").
+-define(GENIUSATTR_DES5072, "Elemental Atk +<color=#00FF00>1298</color>").
+-define(GENIUSATTR_DES5073, "Elemental Atk +<color=#00FF00>1947</color>").
+-define(GENIUSATTR_DES5080, "Level 0 Talents").
+-define(GENIUSATTR_DES5081, "Elemental Defense +<color=#00FF00>649</color>").
+-define(GENIUSATTR_DES5082, "Elemental Defense +<color=#00FF00>1298</color>").
+-define(GENIUSATTR_DES5083, "Elemental Defense +<color=#00FF00>1947</color>").
+-define(GENIUSATTR_DES5090, "Level 0 Talents").
+-define(GENIUSATTR_DES5091, "Focus ATK Rate +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5092, "Focus ATK Rate +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5093, "Focus ATK Rate +<color=#00FF00>3.15</color>%").
+-define(GENIUSATTR_DES5100, "Level 0 Talents").
+-define(GENIUSATTR_DES5101, "Anti-Focus Rate +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5102, "Anti-Focus Rate +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5103, "Anti-Focus Rate +<color=#00FF00>3.15</color>%").
+-define(GENIUSATTR_DES5110, "Level 0 Talents").
+-define(GENIUSATTR_DES5111, "Final DMG +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5112, "Final DMG +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5113, "Final DMG +<color=#00FF00>3.15</color>%").
+-define(GENIUSATTR_DES5120, "Level 0 Talents").
+-define(GENIUSATTR_DES5121, "Final DMG RED +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5122, "Final DMG RED +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5123, "Final DMG RED +<color=#00FF00>3.15</color>%").
+-define(SN685, "Military Shield").
+-define(SN686, "Iron Will").
+-define(SS297, "Using Relics to attack can negate part of target Def").
+-define(BF413, "[Tempest Goddess]").
+-define(BF414, "[Justice Goddess]").
+-define(BF415, "[预备神15]").
+-define(BF416, "[预备神16]").
+-define(BF417, "[预备神17]").
+-define(BF418, "[预备神18]").
+-define(BF419, "[预备神19]").
+-define(BF420, "[预备神20]").
+-define(BF439, "[Lilith]").
+-define(SN240001, "Ancient God Set - DMG RED").
+-define(SN240011, "Ancient God Set - DMG Bonus").
+-define(SN626101, "Pact Resonance Ⅰ").
+-define(SN627101, "Pact Resonance Ⅰ").
+-define(SN628101, "Pact Resonance Ⅰ").
+-define(SN629101, "Pact Resonance Ⅱ").
+-define(SN630101, "Pact Resonance Ⅱ").
+-define(SD626101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD627101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD628101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD629101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD630101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD625101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD625201, "Final DMG Reduction +{0}%").
+-define(EASYSD626101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD626201, "Skill DMG Bonus +{0}%").
+-define(EASYSD627101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD627201, "DMG Bonus increases by {0}%").
+-define(EASYSD628101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD628201, "Final DMG Bonus +{0}%").
+-define(EASYSD629101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD629201, "Anti-Focus Rate +{0}%").
+-define(EASYSD630101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD630201, "Anti-Excellent Rate +{0}%").
+-define(LONG1230707, "Temporary Nidhogg").
+-define(BN175, "Blood Spirit Aura").
+-define(SN495, "Crit - Aura").
+-define(SD495, "Obtain Aura (Focus ATK Rate +15%) for {0} sec when launching a crit hit, with {1} sec CD").
+-define(SN496, "Attack - Bleed").
+-define(SD496, "33% chance to inflict Bleeding (deal 2% DMG of current HP every 2 sec up to 2% of own Max HP) to a target for 8 sec when attacking, CD: {0} sec").
+-define(SN497, "Attack - Suppress Soul").
+-define(SD497, "{0}% chance to clear {1} layers of buff from an enemy when attacking, with {2} sec CD").
+-define(SN831, "Flex - Hard Armor").
+-define(SD831, "Obtain Hard Armor (Focus ATK RED Rate +15%) for {0} sec when undertaking crit hit, with {1} sec CD").
+-define(SN832, "Defense - Regen").
+-define(SD832, "When attacked, has a {0}% chance to gain Regen (Healing 2% of lost HP every 2 sec) for {1} sec.CD: {2} sec").
+-define(SN833, "Defense - Soul Gathering").
+-define(SD833, "50% chance to clear {0} layers of self debuff when attacked, with {1} sec CD").
+-define(SS527, "Increase Focus ATK Rate when launching a crit hit").
+-define(SS528, "There's a chance to add DMG over time when attacking").
+-define(SS529, "There's a chance to clear buff from enemies when attacking").
+-define(SS530, "Increase Focus ATK RED Rate when undertaking crit hit").
+-define(SS531, "There's a chance to add continuous recovery when attacked").
+-define(SS532, "There's a chance to clear self debuff when attacked").
+-define(BF366, "[Lost Wings]").
+-define(BF367, "[Aureus Wings]").
+-define(BF263, "[Shadow Raven]").
+-define(BF264, "[Redthorn Flame]").
+-define(BN357, "Aura").
+-define(BD357, "Aura appears! Focus ATK Rate +{0}%").
+-define(BN358, "Hard Armor").
+-define(BD358, "Hard Armor guards! Focus ATK RED Rate +{0}%").
+-define(BN359, "Rebirth").
+-define(BD359, "Wound healing! Heal {1}% lost HP every {0} sec").
+-define(BN360, "Darkness").
+-define(BD360, "Hit Rate & Dodge Rate -{0}% when being in the darkness, can be ramped up to {1} stack").
+-define(BN718, "Chariot").
+-define(BD718, "Transformed to a chariot").
+-define(BN1000307, "Self Inspire").
+-define(BN1000308, "Guild Inspire").
+-define(GENIUSATTR_NAME6100, "Wind Blessing").
+-define(GENIUSATTR_NAME6200, "Mount Enhancement").
+-define(GENIUSATTR_NAME6300, "Wind Guard").
+-define(GENIUSATTR_NAME6400, "Hero Enhancement").
+-define(GENIUSATTR_NAME6500, "Nidhogg Enhancement").
+-define(GENIUSATTR_NAME6600, "Wings Enhancement").
+-define(GENIUSATTR_NAME7100, "Water Blessing").
+-define(GENIUSATTR_NAME7300, "Water Guard").
+-define(GENIUSATTR_NAME8100, "Fire Blessing").
+-define(GENIUSATTR_NAME8300, "Fire Guard").
+-define(GENIUSATTR_NAME9100, "Earth Blessing").
+-define(GENIUSATTR_NAME9300, "Earth Guard").
+-define(GENIUSATTR_DES6100, "Level 0 Talents").
+-define(GENIUSATTR_DES6101, "Wind ATK Bonus +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES6102, "Wind ATK Bonus +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES6103, "Wind ATK Bonus +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES6104, "Wind ATK Bonus +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES6105, "Wind ATK Bonus +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES6106, "Wind ATK Bonus +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES6107, "Wind ATK Bonus +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES6108, "Wind ATK Bonus +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES6109, "Wind ATK Bonus +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES6110, "Wind ATK Bonus +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES6200, "Level 0 Talents").
+-define(GENIUSATTR_DES6201, "Mounts Basic Stats +<color=#00FF00>2.5</color>%").
+-define(GENIUSATTR_DES6202, "Mounts Basic Stats +<color=#00FF00>5</color>%").
+-define(GENIUSATTR_DES6203, "Mounts Basic Stats +<color=#00FF00>7.5</color>%").
+-define(GENIUSATTR_DES6204, "Mounts Basic Stats +<color=#00FF00>10</color>%").
+-define(GENIUSATTR_DES6205, "Mounts Basic Stats +<color=#00FF00>12.5</color>%").
+-define(GENIUSATTR_DES6206, "Mounts Basic Stats +<color=#00FF00>15</color>%").
+-define(GENIUSATTR_DES6207, "Mounts Basic Stats +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES6208, "Mounts Basic Stats +<color=#00FF00>20</color>%").
+-define(GENIUSATTR_DES6209, "Mounts Basic Stats +<color=#00FF00>22.5</color>%").
+-define(GENIUSATTR_DES6210, "Mounts Basic Stats +<color=#00FF00>25</color>%").
+-define(GENIUSATTR_DES6300, "Level 0 Talents").
+-define(GENIUSATTR_DES6301, "Wind DEF Bonus +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES6302, "Wind DEF Bonus +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES6303, "Wind DEF Bonus +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES6304, "Wind DEF Bonus +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES6305, "Wind DEF Bonus +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES6306, "Wind DEF Bonus +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES6307, "Wind DEF Bonus +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES6308, "Wind DEF Bonus +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES6309, "Wind DEF Bonus +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES6310, "Wind DEF Bonus +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES6400, "Level 0 Talents").
+-define(GENIUSATTR_DES6401, "Hero Basic Stats +<color=#00FF00> 6</color> %").
+-define(GENIUSATTR_DES6402, "Hero Basic Stats +<color=#00FF00> 12</color> %").
+-define(GENIUSATTR_DES6403, "Hero Basic Stats +<color=#00FF00> 18</color> %").
+-define(GENIUSATTR_DES6404, "Hero Basic Stats +<color=#00FF00> 24</color> %").
+-define(GENIUSATTR_DES6405, "Hero Basic Stats +<color=#00FF00> 30</color> %").
+-define(GENIUSATTR_DES6406, "Hero Basic Stats +<color=#00FF00> 36</color> %").
+-define(GENIUSATTR_DES6407, "Hero Basic Stats +<color=#00FF00> 42</color> %").
+-define(GENIUSATTR_DES6408, "Hero Basic Stats +<color=#00FF00> 48</color> %").
+-define(GENIUSATTR_DES6409, "Hero Basic Stats +<color=#00FF00> 54</color> %").
+-define(GENIUSATTR_DES6410, "Hero Basic Stats +<color=#00FF00> 60</color> %").
+-define(GENIUSATTR_DES6500, "Level 0 Talents").
+-define(GENIUSATTR_DES6501, "God Base Stats +<color=#00FF00>5</color>%").
+-define(GENIUSATTR_DES6502, "Divine Dragons Basic Stats +<color=#00FF00>10</color>%").
+-define(GENIUSATTR_DES6503, "Divine Dragons Basic Stats +<color=#00FF00>15</color>%").
+-define(GENIUSATTR_DES6504, "Divine Dragons Basic Stats +<color=#00FF00>20</color>%").
+-define(GENIUSATTR_DES6505, "Divine Dragons Basic Stats +<color=#00FF00>25</color>%").
+-define(GENIUSATTR_DES6506, "Divine Dragons Basic Stats +<color=#00FF00>30</color>%").
+-define(GENIUSATTR_DES6507, "Divine Dragons Basic Stats +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES6508, "Divine Dragons Basic Stats +<color=#00FF00>40</color>%").
+-define(GENIUSATTR_DES6509, "Divine Dragons Basic Stats +<color=#00FF00>45</color>%").
+-define(GENIUSATTR_DES6510, "Divine Dragons Basic Stats +<color=#00FF00>50</color>%").
+-define(GENIUSATTR_DES6600, "Level 0 Talents").
+-define(GENIUSATTR_DES6601, "Wings Basic Stats +<color=#00FF00>2.5</color>%").
+-define(GENIUSATTR_DES6602, "Wings Basic Stats +<color=#00FF00>5</color>%").
+-define(GENIUSATTR_DES6603, "Wings Basic Stats +<color=#00FF00>7.5</color>%").
+-define(GENIUSATTR_DES6604, "Wings Basic Stats +<color=#00FF00>10</color>%").
+-define(GENIUSATTR_DES6605, "Wings Basic Stats +<color=#00FF00>12.5</color>%").
+-define(GENIUSATTR_DES6606, "Wings Basic Stats +<color=#00FF00>15</color>%").
+-define(GENIUSATTR_DES6607, "Wings Basic Stats +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES6608, "Wings Basic Stats +<color=#00FF00>20</color>%").
+-define(GENIUSATTR_DES6609, "Wings Basic Stats +<color=#00FF00>22.5</color>%").
+-define(GENIUSATTR_DES6610, "Wings Basic Stats +<color=#00FF00>25</color>%").
+-define(GENIUSATTR_DES7100, "Level 0 Talents").
+-define(GENIUSATTR_DES7101, "Water ATK Bonus +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES7102, "Water ATK Bonus +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES7103, "Water ATK Bonus +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES7104, "Water ATK Bonus +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES7105, "Water ATK Bonus +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES7106, "Water ATK Bonus +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES7107, "Water ATK Bonus +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES7108, "Water ATK Bonus +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES7109, "Water ATK Bonus +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES7110, "Water ATK Bonus +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES7300, "Level 0 Talents").
+-define(GENIUSATTR_DES7301, "Water DEF Bonus +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES7302, "Water DEF Bonus +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES7303, "Water DEF Bonus +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES7304, "Water DEF Bonus +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES7305, "Water DEF Bonus +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES7306, "Water DEF Bonus +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES7307, "Water DEF Bonus +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES7308, "Water DEF Bonus +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES7309, "Water DEF Bonus +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES7310, "Water DEF Bonus +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES8100, "Level 0 Talents").
+-define(GENIUSATTR_DES8101, "Fire ATK Bonus +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES8102, "Fire ATK Bonus +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES8103, "Fire ATK Bonus +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES8104, "Fire ATK Bonus +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES8105, "Fire ATK Bonus +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES8106, "Fire ATK Bonus +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES8107, "Fire ATK Bonus +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES8108, "Fire ATK Bonus +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES8109, "Fire ATK Bonus +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES8110, "Fire ATK Bonus +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES8300, "Level 0 Talents").
+-define(GENIUSATTR_DES8301, "Fire DEF Bonus +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES8302, "Fire DEF Bonus +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES8303, "Fire DEF Bonus +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES8304, "Fire DEF Bonus +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES8305, "Fire DEF Bonus +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES8306, "Fire DEF Bonus +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES8307, "Fire DEF Bonus +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES8308, "Fire DEF Bonus +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES8309, "Fire DEF Bonus +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES8310, "Fire DEF Bonus +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES9100, "Level 0 Talents").
+-define(GENIUSATTR_DES9101, "Earth ATK Bonus +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES9102, "Earth ATK Bonus +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES9103, "Earth ATK Bonus +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES9104, "Earth ATK Bonus +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES9105, "Earth ATK Bonus +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES9106, "Earth ATK Bonus +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES9107, "Earth ATK Bonus +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES9108, "Earth ATK Bonus +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES9109, "Earth ATK Bonus +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES9110, "Earth ATK Bonus +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES9300, "Level 0 Talents").
+-define(GENIUSATTR_DES9301, "Earth DEF Bonus +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES9302, "Earth DEF Bonus +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES9303, "Earth DEF Bonus +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES9304, "Earth DEF Bonus +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES9305, "Earth DEF Bonus +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES9306, "Earth DEF Bonus +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES9307, "Earth DEF Bonus +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES9308, "Earth DEF Bonus +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES9309, "Earth DEF Bonus +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES9310, "Earth DEF Bonus +<color=#00FF00>35</color>%").
+-define(SHSN101, "Superior EXP Guardian").
+-define(SHSN102, "Superior Skill Guardian").
+-define(SHSN103, "Basic Crit Guardian").
+-define(SHSN104, "Exquisite Crit Guardian").
+-define(SHSN105, "Superior Crit Guardian").
+-define(SHSN106, "Basic Focus Guardian").
+-define(SHSN107, "Exquisite Focus Guardian").
+-define(SHSN108, "Superior Focus Guardian").
+-define(SHSN109, "Basic DMG Bonus Guardian").
+-define(SHSN110, "Exquisite DMG Bonus Guardian").
+-define(SHSN111, "Superior DMG Bonus Guardian").
+-define(SHSN112, "Basic Block Guardian").
+-define(SHSN113, "Exquisite Block Guardian").
+-define(SHSN114, "Superior Block Guardian").
+-define(SHSN115, "Basic Excellence Guardian").
+-define(SHSN116, "Exquisite Excellence Guardian").
+-define(SHSN117, "Superior Excellence Guardian").
+-define(SHSN118, "Basic Lethal Guardian").
+-define(SHSN119, "Exquisite Lethal Guardian").
+-define(SHSN120, "Superior Lethal Guardian").
+-define(SHSN121, "Basic Smite Guardian").
+-define(SHSN122, "Exquisite Smite Guardian").
+-define(SHSN123, "Superior Smite Guardian").
+-define(SHSN124, "Basic Final DMG RED Guardian").
+-define(SHSN125, "Exquisite DMG RED Guardian").
+-define(SHSN126, "Superior DMG RED Guardian").
+-define(SHSD101, "Mob EXP +{0}%, AFK EXP +{1}%, Final DMG +{2}%").
+-define(SHSD102, "Skill DMG Bonus +{0}%, Focus ATK RED +{1}%").
+-define(SHSD103, "PvE DMG +{0}%").
+-define(SHSD104, "PVE DMG +{0}%, Elite DMG Reduction +{1}%").
+-define(SHSD105, "PVE DMG +{0}%, Elite DMG Reduction +{1}%").
+-define(SHSD106, "Crit.Rate +{0}%").
+-define(SHSD107, "Crit.Rate +{0}%, Focus DMG Reduction +{1}%").
+-define(SHSD108, "Crit.Rate +{0}%, Focus DMG Reduction +{1}%").
+-define(SHSD109, "DMG Bonus +{0}%").
+-define(SHSD110, "DMG Bonus +{0}%, DMG Reduction +{1}%").
+-define(SHSD111, "DMG Bonus +{0}%, DMG Reduction +{1}%").
+-define(SHSD112, "Block Rate +{0}%").
+-define(SHSD113, "Block Rate +{0}%, Anti-block Rate +{1}%").
+-define(SHSD114, "Block Rate +{0}%, Anti-block Rate +{1}%").
+-define(SHSD115, "Excellent DMG Bonus +{0}%").
+-define(SHSD116, "Excellent DMG Bonus +{0}%, Excellent DMG Reduction +{1}%").
+-define(SHSD117, "Excellent DMG Bonus +{0}%, Excellent DMG Reduction +{1}%").
+-define(SHSD118, "Lethal DMG Bonus +{0}%").
+-define(SHSD119, "Lethal DMG Bonus +{0}%, Lethal DMG Reduction +{1}%").
+-define(SHSD120, "Lethal DMG Bonus +{0}%, Lethal DMG Reduction +{1}%").
+-define(SHSD121, "Smite Rate +{0}%").
+-define(SHSD122, "Smite Rate +{0}%, Frailty Rate +{1}%").
+-define(SHSD123, "Smite Rate +{0}%, Frailty Rate +{1}%").
+-define(SHSD124, "Final DMG Bonus +{0}%").
+-define(SHSD125, "Final DMG Bonus +{0}% and Final DMG Reduction +{1}%").
+-define(SHSD126, "Final DMG Bonus +{0}% and Final DMG Reduction +{1}%").
+-define(EASYSD150035, "Mob EXP +{0}%, AFK EXP +{1}%, Boss DMG +{2}%").
+-define(EASYSD150036, "Skill DMG Bonus +{0}%, Skill DMG Reduction +{1}%").
+-define(EASYSD150037, "Crit DMG Bonus +{0}%").
+-define(EASYSD150038, "Crit DMG Bonus +{0}%, Crit DMG Reduction +{1}%").
+-define(EASYSD150039, "Crit DMG Bonus +{0}%, Crit DMG Reduction +{1}%").
+-define(EASYSD150040, "Focus DMG Bonus +{0}%").
+-define(EASYSD150041, "Focus DMG Bonus +{0}%, Focus DMG Reduction +{1}%").
+-define(EASYSD150042, "Focus DMG Bonus +{0}%, Focus DMG Reduction +{1}%").
+-define(EASYSD150043, "DMG Bonus +{0}%").
+-define(EASYSD150044, "DMG Bonus +{0}%, DMG Reduction +{1}%").
+-define(EASYSD150045, "DMG Bonus +{0}%, DMG Reduction +{1}%").
+-define(EASYSD150046, "Block Rate +{0}%").
+-define(EASYSD150047, "Block Rate +{0}%, Anti-block Rate +{1}%").
+-define(EASYSD150048, "Block Rate +{0}%, Anti-block Rate +{1}%").
+-define(EASYSD150049, "Excellent DMG Bonus +{0}%").
+-define(EASYSD150050, "Excellent DMG Bonus +{0}%, Excellent DMG Reduction +{1}%").
+-define(EASYSD150051, "Excellent DMG Bonus +{0}%, Excellent DMG Reduction +{1}%").
+-define(EASYSD150052, "Lethal DMG Bonus +{0}%").
+-define(EASYSD150053, "Lethal DMG Bonus +{0}%, Lethal DMG Reduction +{1}%").
+-define(EASYSD150054, "Lethal DMG Bonus +{0}%, Lethal DMG Reduction +{1}%").
+-define(EASYSD150055, "Smite Rate +{0}%").
+-define(EASYSD150056, "Smite Rate +{0}%, Frailty Rate +{1}%").
+-define(EASYSD150057, "Smite Rate +{0}%, Frailty Rate +{1}%").
+-define(EASYSD150058, "Final DMG Bonus +{0}%").
+-define(EASYSD150059, "Final DMG Bonus +{0}% and Final DMG Reduction +{1}%").
+-define(EASYSD150060, "Final DMG Bonus +{0}% and Final DMG Reduction +{1}%").
+-define(SN836, "Defense - Strong Armor").
+-define(SD836, "When attacked, have a {0}% chance to obtain Strong Armor (Anti-Focus Rate +{1}%) for {2} sec.").
+-define(SN837, "Attack - Spirit Light").
+-define(SD837, "Attacks have a {0}% chance to obtain Spirit Light (Focuse Hit +{1}%) for {2} sec.").
+-define(BF266, "[Cosmic Serpent]").
+-define(BF369, "[Tempest Divine Wings]").
+-define(SS535, "There's a chance to increase Focus ATK RED Rate when attacked").
+-define(SS536, "There's a chance to increase Focus ATK Rate when attacking").
+-define(BN361, "First Aid").
+-define(BD361, "Heal for {0}% of max HP, then heal for the same amount again 6s later.").
+-define(BN362, "Explosion").
+-define(BD362, "Take DMG equal to {0}% of max HP, then take the same amount of damage again 6s later.").
+-define(SN834, "Defense - First Aid").
+-define(SD834, "If hit by an attack when under {0}% HP, gain First Aid (Heal for {1}% of max HP, then heal for the same amount again 6s later).").
+-define(SN835, "Attack - Explosion").
+-define(SD835, "Attacks have a {0}% chance to inflict one target with Explosion (Take DMG equal to {1}% of max HP, then take the same amount of damage again 6s later).").
+-define(SS533, "There's a chance to heal for massive HP when attacked.").
+-define(SS534, "When attacking, may add extra DMG twice.").
+-define(BF265, "[Chimera]").
+-define(BF368, "[Abyss Dragon]").
+-define(SS303, "When using relics to attack, may trigger extra DMG with leech.").
+-define(XMSN1001, "Pharaoh's Might").
+-define(XMSD1001, "When attacking while HP is above 70%, gain a {0}% chance to trigger Pharaoh's Might (ATK +45%) for 8s.").
+-define(XMSN1002, "Precision Strike").
+-define(XMSD1002, "If an attack is dodged, there's a {0}% chance to gain Precision (Hit +30%) for 8 seconds.").
+-define(XMSN1003, "Pharaoh's Wings").
+-define(XMSD1003, "When attacking while HP is above 70%, gain 1 stack of Pharaoh's Blood.At 3 stacks, remove this status and trigger Pharaoh's Wings to deal {0}% DMG to enemies in front.").
+-define(XMSN2001, "Life Revival").
+-define(XMSD2001, "When attacked with less than 30% HP, restores {0}% of your Max HP.").
+-define(XMSN2002, "Life Inspiring").
+-define(XMSD2002, "When HP is less than 50% and there are more than 2 enemies nearby, restores the HP of you and surrounding allies by {0}% of Max HP.").
+-define(XMSN2003, "Blood of Life").
+-define(XMSD2003, "When HP is less than 70%, gain 1 stack of Blood of Life.Once you have 3 stacks, this buff is removed and HP is restored by {0}% of DMG.").
+-define(XMSN3001, "Vigil of Revenge").
+-define(XMSD3001, "When attacked with less than 50% HP, gain Alert (Block Rate +{0}%) for 10 seconds.").
+-define(XMSN3002, "Body of Revenge").
+-define(XMSD3002, "When attacked while HP is below 20%, trigger Revenge Body (DMG Reduction +{0}%) for 10s.").
+-define(XMSN3003, "Blood of Revenge").
+-define(XMSD3003, "When attacked while HP is below 70%, trigger 1 stack of Blood of Revenge.At 3 stacks, remove the status and gain 1 layer of shield that fends off {0}% DMG.").
+-define(XMSN4001, "Enraged Strike").
+-define(XMSD4001, "When attacking with less than 2 enemies nearby, there's a {0}% chance to gain Wrath (Crit.Rate and Crit.Damage +20%) for 10 seconds.").
+-define(XMSN4002, "Sundering Judgment").
+-define(XMSD4002, "Upon scoring a Crit, trigger Sundering Judgment and deal {0}% DMG to 1 enemy.").
+-define(XMSN4003, "Bloodthirsty Fury").
+-define(XMSD4003, "{0}% chance to restore 3.5% of Max HP with each Critical Attack.").
+-define(XMSN5001, "Tartarus Power").
+-define(XMSD5001, "When Destroy Soul buff is active, attacking heals {0}% ATK of HP.Healing triggers once every {1}s.").
+-define(XMSN5002, "Soul Reaper").
+-define(XMSD5002, "Attacking has a {0}% chance to inflict Sharp (Sunder +55%) for {1}s").
+-define(XMSN5003, "Hades Smash").
+-define(XMSD5003, "Attacking has a {0}% chance to trigger Hades Strike, hitting 3 enemies to deal {1}% DMG and bonus DMG equal to the caster's {2}% Sunder.").
+-define(XMSN6001, "Time Freeze").
+-define(XMSD6001, "When HP is below {0}%, being attacked has a {1}% chance to trigger Time Freeze, stunning {2} enemies for {3}s").
+-define(XMSN6002, "Venus' Blessing").
+-define(XMSD6002, "Blocking has a {0}% chance to trigger Demon Soul (immune to crowd control) for {1}s").
+-define(XMSN6003, "Bright Purification").
+-define(XMSD6003, "Blocking can dispel {0} stack(s) of debuff from self.").
+-define(XMSN7001, "Natural Absorption").
+-define(XMSD7001, "Attacking has a {0}% chance to trigger Natural Absorption, hitting {1} enemies to deal {2}% DMG with {3}% Leech.").
+-define(XMSN7002, "Earth's Heart").
+-define(XMSD7002, "Dodging an enemy attack has a {0}% chance to heal {1}% of Max HP.").
+-define(XMSN7003, "Nature's Mark").
+-define(XMSD7003, "Dodging an enemy attack has a {0}% chance to restore {1} Fury.").
+-define(XMSN8001, "Lunar Eclipse").
+-define(XMSD8001, "When there are more than {0} nearby enemies, attacking has a {1}% chance to trigger Lunar Eclipse (skill DMG +{2}%, for every extra enemy nearby, gain {3}% to a max of {4}%).").
+-define(XMSN8002, "Moon Guardian").
+-define(XMSD8002, "When there are more than {0} nearby enemies, attacking has a {1}% chance to trigger Moon Guardian (Skill DMG Reduction+{2}%, for every extra enemy nearby, gain {3}% to a max of {4}%).").
+-define(XMSN8003, "Moon's Wrath").
+-define(XMSD8003, "When there are more than {0} nearby enemies, attack has a {1}% chance to trigger Moon's Wrath that deals {2}% damage and ignore targets' DEF and Dodge.").
+-define(XMBN001, "Pharaoh's Blood").
+-define(XMBD001, "Gain 3 stacks of this to trigger the skill Pharaoh's Wings and attack enemies before the caster.").
+-define(XMBN002, "Blood of Life").
+-define(XMBD002, "After stacking 3 times, triggers HP recovery.").
+-define(XMBN003, "Blood of Revenge").
+-define(XMBD003, "After stacking 3 times, triggers Shield.").
+-define(XMBN004, "Shield of Revenge").
+-define(XMBD004, "A shield created by the Blood of Revenge.Can block a certain amount of DMG.").
+-define(XMBN005, "Lunar Eclipse").
+-define(XMBD005, "Skill DMG RED increased by {0}% and an additional 20% for each additional enemy nearby (goes up to 100%).").
+-define(XMBN006, "Moon Guardian").
+-define(XMBD006, "Skill DMG RED increased by {0}% and an additional 20% for each additional enemy nearby (goes up to 100%).").
+-define(XMBN007, "Ray of Abundance").
+-define(XMBD007, "Ray of Abundance! Block Reduction +{0}%").
+-define(XMBN008, "Sharp").
+-define(XMBD008, "Sharpened blade! Sunder +{0}%").
+-define(XMBN009, "Health Force").
+-define(XMBD009, "Life force! Max HP +{0}%").
+-define(XMBN010, "Destroy Soul").
+-define(XMBD010, "Destroy Soul! Concentrate Rate +{0}%").
+-define(XMSN1000, "Strength").
+-define(XMSD1000, "Attacks have {0}% chance to add allies' Strength (ATK +13%) for {1}s.").
+-define(XMSN2000, "HP").
+-define(XMSD2000, "When taking damage more than {0}% of Max HP, restore HP equals to {1}% of ATK.").
+-define(XMSN3000, "Defense").
+-define(XMSD3000, "When attacked, has a {0}% chance to apply a magic shield to allies (DEF +65%) for {1}s.").
+-define(XMSN4000, "Mania").
+-define(XMSD4000, "Attacks have {0}% chance to add allies' Mania (Crit Rate +20%) for {1}s.").
+-define(XMSN5000, "Destroy Soul").
+-define(XMSD5000, "After battle starts, gain a Destroy Soul buff which grants {0}% Concentrate Rate for {1}s.").
+-define(XMSN6000, "Ray of Abundance").
+-define(XMSD6000, "Blocking has a {0}% chance to give a Ray of Abundance buff to gain {1}% Block Reduction.").
+-define(XMSN7000, "Health Force").
+-define(XMSD7000, "Dodging has a {0}% chance to trigger Health Force to gain {1}% Max HP for {2}s.").
+-define(XMSN8000, "Moon Goddess' Guardian").
+-define(XMSD8000, "When there are {0} or more nearby enemies, there is a {1}% chance to trigger Energy Shield (absorbs {2}% DMG) up to {3}s.").
+-define(BF1002, "[Bloodline]").
+-define(BF1004, "[Tower of Babel]").
+-define(BF1005, "[God D.Armor]").
+-define(BN801, "Dragon Energy").
+-define(BD801, "Dragon Energy surrounds you! Dragon's Pulse triggered according to stacks").
+-define(BN802, "Surge").
+-define(BD802, "Undercurrent Surges! Continuously restoring lost HP").
+-define(BN803, "Inferno Shield").
+-define(BD803, "Darkness is condensing into a shield! Shield increased.").
+-define(BN804, "Darkness Purification").
+-define(BD804, "Removes 2 debuffs every 5 seconds for 15 seconds.").
+-define(BN805, "Shadow Reaper").
+-define(BD805, "Hit and DMG Bonus +{0}%").
+-define(BN806, "Blackwyrm Ichor").
+-define(BD806, "Blessings of the Blackwyrm Ichor! Continuously restoring HP").
+-define(BN807, "Pendulum of Darkness").
+-define(BD807, "A high amount of Slow will be triggered after this Status expires.").
+-define(BN808, "Pendulum of Darkness").
+-define(BD808, "Movement Speed decreases by 99%").
+-define(BN809, "Extinction").
+-define(BD809, "Gain 5 stacks to trigger Epic of Extinction").
+-define(BN810, "Lethal").
+-define(BD810, "Fatal Strike! Lethal DMG Rate + {0}%").
+-define(BN811, "Anti-healing").
+-define(BD811, "Healing effects decreased by 99%").
+-define(BN812, "Pitch Black Zone").
+-define(BD812, "In Allies' Pitch Black Zone, Dodge Rate +{0}%, Movement Speed +{1}%").
+-define(BN813, "Pitch Black Zone").
+-define(BD813, "In Enemies' Pitch Black Zone, Sunder -{0}%, Movement Speed -{1}%, Hit Rate -{2}%").
+-define(BN814, "Pitch Black Points").
+-define(BD814, "Skill DMG RED increases by {0}% with each stack").
+-define(BN815, "Apotheosis").
+-define(BD815, "Transformed into Divine Dragon of Darkness").
+-define(BN816, "Holy Armor Protection").
+-define(BD816, "Activated when Holy Armor Point reaches {0}, PVP DMG DEF+{1}%").
+-define(BN817, "Amplify Holy Armor").
+-define(BD817, "Activated when Holy Armor Points are maxed, Soft CC Resistance+{0}%").
+-define(BN818, "Amplify Holy Armor").
+-define(BD818, "Activated when Holy Armor Points are maxed, Soft CC Resistance+{0}%, Max.HP+{1}%").
+-define(BN819, "Amplify Holy Armor").
+-define(BD819, "Activated when Holy Armor Points are maxed, Soft CC Resistance+{0}%, Hard CC Resistance+{1}%, Max.HP+{2}%").
+-define(BN820, "Blessing of Holy Armor").
+-define(BD820, "Activated when Holy Armor Points are maxed, damage taken won't exceed {0}% of Max.HP.").
+-define(SN838, "Broken - Hell Guardian").
+-define(SD838, "When attacked with less than {0}% HP, gain Invincibility (DMG immunity) for {1} seconds.").
+-define(SN839, "Broken - Charming Voice").
+-define(SD839, "When attacked with less than {0}% HP, inflict Charm (unable to control) on surrounding targets for {1} seconds.").
+-define(SN840, "Broken - Blazing Guardian").
+-define(SD840, "When attacked with less than {0}% HP, gain Reignition (grants Shield equivalent to {1}% of Max HP, restoring {2}% of Max HP every second for the duration) for {3} seconds.").
+-define(SN841, "Full - God's Blessing Light").
+-define(SD841, "When attacking with more than {0}% HP, there's a {1}% chance to inflict Silence (unable to use active Skills) on surrounding targets for {2} seconds.").
+-define(BF267, "[Dark Crystal Dragons]").
+-define(BF370, "[Succubus Wings]").
+-define(BF268, "[Flaming Wardens]").
+-define(BF371, "[God's Blessing Wings]").
+-define(SS537, "Gain Invulnerability when attacked with low HP.").
+-define(SS538, "Inflict Charm on enemies when attacked with low HP.").
+-define(SS539, "Gain Shield and Recovery when attacked with low HP.").
+-define(SS540, "Inflict Silence on enemies when attacked with low HP.").
+-define(BN365, "Reignition").
+-define(BD365, "Grants Shield equivalent to {0}% of Max HP, restoring {1}% of Max HP every second for the duration.").
+-define(SYSD11004, "When attacking, there's a {0}% chance to trigger Fatal Blow and increase Lethal DMG Rate +{2}% within {1} second.Cooldown: {3} seconds.").
+-define(SYSD11005, "When attacked, there's a {0}% chance to trigger Celestial Guard and gain Shield with {1}0, 000 Energy.The damage taken each time is fixed at {2}0, 000 for the duration.Cooldown: {3} seconds.").
+-define(SYSD11006, "When attacking, there's a {0}% chance to trigger Energy Absorb.The nearest enemy will lose {1} Fury and you will recover {2} Fury for yourself.Cooldown: {3} seconds.").
+-define(SYSN11004, "Fatal Blow").
+-define(SYSN11005, "Celestial Guard").
+-define(SYSN11006, "Energy Absorb").
+-define(BN2018, "Energy Shield").
+-define(BD2018, "Absorbs {0}0, 000 damage and decreases the enemy's damage to {1}0, 000").
+-define(SN51500, "Flow of Light").
+-define(SD51500, "Restores the character's HP equal to {0}% of DMG, and gains Ichor of Holy Light (Max.HP+{1}%) for {2} sec.").
+-define(SN51900, "Protection of Light").
+-define(SD51900, "When attacked, there's a {1}% chance to grant character healing equal to {0}% of DMG and restore {2} Fury.").
+-define(BN23700, "Ichor of Holy Light").
+-define(BD23700, "Holy light blessing! Max.HP +{0}% (Cannot be stacked with Ichor)").
+-define(SN842, "Crowd - Frighten").
+-define(SD842, "When attacking with more than {0} enemies nearby, inflict Shock (DMG Bonus-30%) to {1} targets nearby for {2} seconds.").
+-define(SN843, "Crowd - Corruption").
+-define(SD843, "When attacking with more than {0} enemies nearby, inflict Rot (DMG RED-{3}%) on {1} targets nearby for {2} seconds.").
+-define(SS541, "Enemies' DMG Bonus decreases when there are many enemies nearby.").
+-define(SS542, "Enemies' DMG RED will be reduced when there are many enemies nearby.").
+-define(BF269, "Imaginary Being of the Comet").
+-define(BF372, "Scarlet Scorpion Wing").
+-define(BN30086, "Speedup").
+-define(BD30086, "I'm flying!").
+-define(SN250001, "Path of Growth").
+-define(SN250002, "Faster Growth").
+-define(SN250003, "Demon Hunter").
+-define(SN250004, "Fury").
+-define(SN250005, "Potential").
+-define(SN250006, "Growth").
+-define(SD250001, "Story Raid EXP +{0}%").
+-define(SD250002, "AFK EXP +{0}%").
+-define(SD250003, "Mob EXP +{0}%").
+-define(SD250004, "Fury gained +{0}%").
+-define(SD250005, "Initial Fury +{0}%").
+-define(SD250006, "Statue Skill Casting Duration +{0}s").
+-define(SN251001, "Growth Blessing").
+-define(SD251001, "AFK EXP +{0}%, Mob EXP +{1}%").
+-define(SN251002, "Growth Shelter").
+-define(SD251002, "AFK EXP +{0}%").
+-define(BN8001, "Event EXP Bonus").
+-define(BD8001, "Mob EXP +{0}%").
+-define(BF8001, "[Event]").
+-define(BN8006, "Dragon Badge EXP Bonus").
+-define(BD8006, "Mob EXP +{0}%").
+-define(BF8006, "[Dragon Badge]").
+-define(BN8016, "Ult Lifetime Card EXP Bonus").
+-define(BD8016, "Mob EXP +{0}%").
+-define(BF8016, "[Ult Lifetime Card]").
+-define(BN8017, "Lifetime Card EXP Bonus").
+-define(BD8017, "AFK EXP +{0}%").
+-define(BF8017, "[Lifetime Card]").
+-define(BN4012, "Energy Shield").
+-define(BD4012, "Energy Shield! Blocks DMG equal to {0}% of Max HP.").
+-define(SN110100, "Avatar of Wisdom").
+-define(SN110101, "Spear Thrust").
+-define(SN110105, "Whirling Spear").
+-define(SN110106, "Shield of Sighs").
+-define(SN110107, "Spear Thrust").
+-define(SN110108, "Divine Judgment").
+-define(SN110200, "Revenge Sigil").
+-define(SN110201, "Raven Call").
+-define(SN110205, "Energy Siphon").
+-define(SN110206, "Raven Rites").
+-define(SN110207, "Raven Dance").
+-define(SN110208, "Revenge Swirl").
+-define(SN110300, "Thor's Dominion").
+-define(SN110301, "Lightning").
+-define(SN110305, "Thunder Crack").
+-define(SN110306, "Lightning Blast").
+-define(SN110307, "Smiting Thunder").
+-define(SN110308, "Thor's Hammer").
+-define(SN110400, "Pharaoh Guardian").
+-define(SN110401, "Corona").
+-define(SN110405, "Solar Halo").
+-define(SN110406, "Solar Disc").
+-define(SN110407, "Ancient Curse").
+-define(SN110408, "Solar Wind").
+-define(SN110011, "Aptitude Upgrade").
+-define(SD110011, "Increase all Stats Aptitudes of the linked Hero by {0}%.").
+-define(SN110012, "").
+-define(SD110012, "").
+-define(SD110100, "Morph into Athena for {0}s.During the transformation, you will get Lv.{1} Athena Skill.").
+-define(SD110101, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD110105, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD110106, "To {2} nearby targets (monsters + {3}), deal {0}% DMG.After casting, team gains Vigilance (Block Rate +20%) for {1}s.").
+-define(SD110107, "To {2} nearby targets (monsters + {3}), deal {0}% DMG.Last hit also has Pierce (DEF -50%) for {1}s.").
+-define(SD110108, "To {2} nearby targets (monsters + {3}), deal {0}% DMG.After casting, team gains Block Mastery (Block Rate and Block Reduction +30%) for {1}s.").
+-define(SD110200, "Morph into Morrigan for {0}s.During the transformation, you will get Lv.{1} Morrigan Skill.").
+-define(SD110201, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD110205, "To {3} nearby targets (monsters + {4}), deal {0}% DMG, {1}% Leech, and inflict Wilt (Block and Dodge rates -20%) on the target for {2}s.").
+-define(SD110206, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.Skill casting also knocks back target enemies.").
+-define(SD110207, "To {2} nearby targets (monsters + {3}), deal {0}% DMG with {1}% Leech.").
+-define(SD110208, "To {2} nearby targets (monsters + {3}), deal {0}% DMG and gain {1}% DMG multiplier to wilted enemies.").
+-define(SD110300, "Morph into Thor for {0}s.During the transformation, you will get Lv.{1} Thor Skill.").
+-define(SD110301, "To {1} targets (monsters + {2}), deals {0}% Character DMG").
+-define(SD110302, "To {2} targets (monsters + {3}), deals {0}% Character DMG + {1}% Hero DMG in total").
+-define(SD110303, "To {3} targets (monsters + {4}), deals {0}% Character DMG, with a {1}% chance to inflict Paralyze for {2}s.").
+-define(SD110305, "To {4} targets (monsters + {5}), deals {0}% Character DMG + {1}% Hero DMG, with a {2}% chance to inflict Paralyze for {3}s.").
+-define(SD110306, "To {3} nearby targets (monsters + {4}), deals {0}% Character DMG, knocks back enemies, with a {1}% chance to inflict Paralyze for {2}s.").
+-define(SD110307, "To {2} nearby targets (monsters + {3}), deals {0}% Character DMG and pulls in enemies.After casting, Thunder near caster continues to deal {1}% DMG to nearby enemies.").
+-define(SD110308, "To {3} nearby targets (monsters + {4}), deals {0}% Character DMG and inflict Stun for {1}s, and + {2}% DMG multiplier versus Paralyzed enemies.").
+-define(SD110400, "Transforms into Horus for {1}s.To {5} nearby targets (monsters + {6}), deal {0}% DMG.During transformation, caster receives {2}% less DMG.Each DMG dealt has {3}% chance of inflicting Burn (deal 10% DMG per second) for {4}s.").
+-define(SD110401, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD110405, "To {2} nearby targets (monsters + {3}), deal {0}% DMG and applies 1 Burn stack (deal 10% DMG per second) for {1}s.").
+-define(SD110406, "To {2} nearby targets (monsters + {3}), deal {0}% DMG and applies 2 Burn stack (deal 10% DMG per second) for {1}s.").
+-define(SD110407, "To {3} nearby targets (monsters + {4}), deal {0}% DMG, inflict 1 Burn stack (deal 10% DMG per second) for {1}s, and inflicts Hold (unable to move) to the target for {2}s.").
+-define(SD110408, "To {2} nearby targets (monsters + {3}), deal {0}% DMG.Each DMG dealt also inflicts 1 Burn stack (deals 10% DMG per second) for {1}s.").
+-define(BN20041, "Athena's Descent").
+-define(BD20041, "Shapeshift into Athena").
+-define(BN20042, "Morrigan's Descent").
+-define(BD20042, "Shapeshift into Morrigan").
+-define(BN20043, "Thor's Descent").
+-define(BD20043, "Shapeshift into Thor").
+-define(BN20044, "Horus' Descent").
+-define(BD20044, "Shapeshift into Horus").
+-define(BN23004, "Wilt").
+-define(BD23004, "Block Rate -{0}%, Dodge -{1}%").
+-define(BN23009, "Burn").
+-define(BD23009, "Each stack deals {0}% DMG.Stacks up to {1} times.").
+-define(BF401, "[Athena]").
+-define(BF402, "[Morrigan]").
+-define(BF403, "[Thor]").
+-define(BF404, "[Horus]").
+-define(SN120201, "Heavy Hammer").
+-define(SN120241, "Seismic Crack").
+-define(SN120261, "Hammer Strike").
+-define(SN120281, "Mighty Hammer").
+-define(SD120201, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD120241, "To {3} nearby targets (monsters + {4}), deal {0}% DMG and {1}% chance to inflict Hamstring (Move Speed -30%) for {2}s.").
+-define(SD120261, "Attacks have {0}% chance to stun {1} target(s) for {2}s.").
+-define(SD120281, "To {2} nearby targets (monsters + {3}), deal {0}% DMG and inflict stun for {1}s.").
+-define(BF601, "Merlin").
+-define(BF602, "[Herakliss]").
+-define(BF603, "[Gilgamesh]").
+-define(BF604, "[Ifrit]").
+-define(BF605, "[Brunhild]").
+-define(BF606, "[Siegfried]").
+-define(BF607, "[Queen of Egypt]").
+-define(BF608, "[Joan of Arc]").
+-define(SN106001, "Light Bolt").
+-define(SN106002, "Light Bolt").
+-define(SN106003, "Light Bolt").
+-define(SN106006, "Scatter Shot").
+-define(SN106007, "Whirling Arrow").
+-define(SN106008, "Suspended Arrow").
+-define(SN106009, "Thunder Bird").
+-define(SN106011, "Thunder Bolts").
+-define(SN106012, "Realm of Nature").
+-define(SN106021, "Hailing Arrows").
+-define(SN106022, "Thunder Zone").
+-define(SN106023, "Arrow Rain").
+-define(SD106001, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD106002, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD106003, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD106006, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains 1 stack of Focus (DMG Bonus +3%) for {2}s.").
+-define(SD106007, "To {12} nearby targets (monsters + {13}), deal {0}%+{1} DMG.After casting, caster gains 1 stack of Thunder (+2% DMG reduction) for {2}s.At 3, 5, 7, and 9 stacks, whole team gains a buff.3 stacks: Skill DMG +{3}% for {4}s.5 stacks: Skill DMG Reduction +{5}% for {6}s.7 stacks: Hit and Dodge rates +{7}% for {8}s and heal {9}% multiplier of HP.9 stacks: Final DMG bonus +{10}% for {11}s.").
+-define(SD106008, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, consume all Focus stacks, each stack giving +{2}% Skill DMG multiplier.").
+-define(SD106009, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, consume all Thunder stacks, each stack giving +{2}% Skill DMG multiplier.").
+-define(SD106011, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains 3 stacks of Thunder (DMG Reduction +2%) for {2}s.").
+-define(SD106012, "Acquired Force of Nature.When active, gain {0}% DMG Bonus for {1}s.").
+-define(SD106021, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains 3 stacks of Focus (DMG Bonus +3%) for {2}s.").
+-define(SD106022, "Team receives Lightning Power.When buff is active, get +{0}% DMG bonus for {1}s.").
+-define(SD106023, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, consume all Focus stacks, each stack giving +{2}% Skill DMG multiplier.").
+-define(SN105001, "Elemental Blast").
+-define(SN105002, "Elemental Blast").
+-define(SN105003, "Elemental Blast").
+-define(SN105006, "Fire Blast").
+-define(SN105007, "Frost Impact").
+-define(SN105008, "Sundering Flame").
+-define(SN105009, "Glacial Blast").
+-define(SN105011, "Ice Dungeon").
+-define(SN105012, "Vulcan's Descent").
+-define(SN105021, "Fire Spiral").
+-define(SN105022, "Khione's Descent").
+-define(SN105023, "Falling Flame").
+-define(SN105024, "Ice Shock").
+-define(SD105001, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD105002, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD105003, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD105006, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains Empower: Heart Fire (Crit Rate +6%) for {2}s.").
+-define(SD105007, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains Empower: Eldritch Ice (Block Rate +6%) for {2}s.").
+-define(SD105008, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.For every Ice Empower active on the caster, further gain {2}% Skill DMG multiplier.").
+-define(SD105009, "Deals {0}%+ {1} DMG to {3} targets (Monsters + {4}).For every Ice Empower active on the caster, heal self by {2}% multiplier of HP.").
+-define(SD105011, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains Empower: Azure Ice (Skill DMG Reduction +4.5%) for {2}s.").
+-define(SD105012, "Acquired Vulcan's Spirit.Every {0}s, target {1} nearby enemies and deal {2}% DMG.Lasts for {3}s.").
+-define(SD105021, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains Empower: Spirit Fire (Skill DMG Reduction +4.5%) for {2}s.").
+-define(SD105022, "Acquired Khione's Spirit.Every {0}s, heal self by {1}% multiplier of HP.Lasts {2}s.").
+-define(SD105023, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains Empower: Spirit Fire (Skill DMG Reduction +4.5%) for {2}s.").
+-define(SD105024, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains Empower: Eldritch Ice (Block Rate +6%) for {2}s.").
+-define(SN104001, "Cleave").
+-define(SN104002, "Cleave").
+-define(SN104003, "Cleave").
+-define(SN104006, "Crescent Slash").
+-define(SN104007, "Moon Slash").
+-define(SN104008, "Whirling Cleave").
+-define(SN104009, "Blink Slash").
+-define(SN104011, "Thunder Zone").
+-define(SN104012, "War God's Descent").
+-define(SN104021, "Breaking Cleave").
+-define(SN104022, "Thor's Blessing").
+-define(SN104023, "Fearless Cleave").
+-define(SD104001, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD104002, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD104003, "To {1} nearby targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD104006, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains Wrath (ATK +6%) for {2}s.").
+-define(SD104007, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, team gains Roar buff (Crit Rate +5%) for {2}s.").
+-define(SD104008, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.When Wrath is active, +{2}% Skill DMG multiplier.").
+-define(SD104009, "To {4} nearby targets (monsters + {5}), deal {0}%+{1} DMG.When Roar is active, gain {2}% chance to inflict Stun for {3}s.").
+-define(SD104011, "Deals {0}%+ {1} DMG to {3} targets (Monsters + {4}).Grants self a Guardian under Roar status (DEF + 30%) for {2}s [comes with a high Hate].").
+-define(SD104012, "Gives self War God's Might.When it is active, gain {0}% chance to target {1} enemies and deal {2}% DMG.Triggers once every {3}s.Buff lasts {4}s.").
+-define(SD104021, "To {3} nearby targets (monsters + {4}), deal {0}%+{1}DMG.When Wrath is active, casting inflicts Bleed (deal 10% DMG per second) for {2}s to the target.").
+-define(SD104022, "Gives self Thor's Guard.When active, + {0}% Block Rate.Lasts {1}s.").
+-define(SD104023, "To {3} nearby targets (monsters + {4}), deal {0}%+{1} DMG.After casting, caster gains Wrath (ATK +6%) for {2}s.").
+-define(BN100101, "ATK Ⅰ").
+-define(BN100102, "Guardian Ⅰ").
+-define(BN100103, "Crit Ⅰ").
+-define(BN100104, "Block Ⅰ").
+-define(BN100201, "ATK Ⅱ").
+-define(BN100202, "Guardian Ⅱ").
+-define(BN100203, "Crit Ⅱ").
+-define(BN100204, "Block Ⅱ").
+-define(BN100301, "ATK Ⅲ").
+-define(BN100302, "Guardian Ⅲ").
+-define(BN100303, "Excellence Ⅲ").
+-define(BN100304, "Dodge Ⅲ").
+-define(BN100401, "ATK Ⅳ").
+-define(BN100402, "Guardian Ⅳ").
+-define(BN100403, "Lethal Ⅳ").
+-define(BN100404, "Recover Ⅳ").
+-define(BN100501, "ATK Ⅴ").
+-define(BN100502, "Guardian Ⅴ").
+-define(BN100503, "Fatal Strike Ⅴ").
+-define(BN100504, "The Chosen One").
+-define(BD100101, "ATK +5%").
+-define(BD100102, "DMG Reduction +5%").
+-define(BD100103, "Crit +10%").
+-define(BD100104, "Block +10%").
+-define(BD100201, "ATK +10%").
+-define(BD100202, "DMG Reduction +10%").
+-define(BD100203, "Crit +20%").
+-define(BD100204, "Block +20%").
+-define(BD100301, "ATK +15%").
+-define(BD100302, "DMG Reduction +15%").
+-define(BD100303, "Excellence +15%").
+-define(BD100304, "Dodge +15%").
+-define(BD100401, "ATK +20%").
+-define(BD100402, "DMG Reduction +20%").
+-define(BD100403, "Lethal +15%").
+-define(BD100404, "Every 10s, heal for 5% of Max HP.").
+-define(BD100501, "ATK +50%").
+-define(BD100502, "DMG Reduction +50%").
+-define(BD100503, "Pursuit Strike Rate +25%").
+-define(BD100504, "Powerful hidden blessing which provides tons of stats bonus.").
+-define(SN120101, "Elemental Orb").
+-define(SN120141, "Blazing Heavens").
+-define(SN120161, "Healing Guard").
+-define(SN120181, "Ice Shield").
+-define(SD120101, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD120141, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD120161, "When attacked, gain {0}% chance to heal self for {1}% ATK.").
+-define(SD120181, "Give the team Ice Guardian (DMG Reduction +{0}% and heal master's HP equals {1}% of ATK while in effect) for {2} sec").
+-define(BN25001, "Icy Guard").
+-define(BD25001, "DMG Reduction +{0}%").
+-define(BN25002, "Icy Guard").
+-define(BD25002, "Healing over time").
+-define(BF100101, "[Blessing]").
+-define(SN104101, "Deadly Blade").
+-define(SN104111, "Wrath Enhance").
+-define(SN104121, "Battle Heal").
+-define(SN104131, "Fighting Spirit").
+-define(SN104141, "Thunder Blast").
+-define(SN105101, "Fire Jet").
+-define(SN105111, "Magic Imbue").
+-define(SN105121, "HP Regen").
+-define(SN105131, "Uplift").
+-define(SN105141, "Frost Heal").
+-define(SN106101, "Lightning Arrow").
+-define(SN106111, "Battle Enhance").
+-define(SN106121, "Nature's Healing").
+-define(SN106131, "Excitation").
+-define(SN106141, "Mine").
+-define(SD104101, "Attacks have {2}% chance of dealing ({0}%+{1}) extra damage; The skill deals {3}% extra PvE damage.").
+-define(SD104111, "Wrath gives +{0}% ATK Bonus.Roar gives +{1}% Crit Rate Bonus.").
+-define(SD104121, "Every {0}s, heal self for {1}% Max HP.").
+-define(SD104131, "When entering combat, Crit Rate +{0}% for {1}s.").
+-define(SD104141, "When there're 2 or more nearby enemies, attacks have a {0}% chance to deal {1}% DMG to 3 enemies.For every {2}% HP lost by self, gain {3}% Skill DMG multiplier.").
+-define(SD105101, "Attacks have {2}% chance of dealing ({0}%+{1}) extra damage; The skill deals {3}% extra PvE damage.").
+-define(SD105111, "All Empower durations +{0}s.").
+-define(SD105121, "Every {0}s, heal self for {1}% Max HP.").
+-define(SD105131, "When entering combat, Skill DMG Bonus +{0}% for {1}s.").
+-define(SD105141, "When there are 2 or more nearby enemies, attacks have a {0}% chance to deal {1}% DMG to 3 enemies and heal self for {2}% ATK.").
+-define(SD106101, "Attacks have {2}% chance of dealing ({0}%+{1}) extra damage; The skill deals {3}% extra PvE damage.").
+-define(SD106111, "Every Focus stack gives +{0}% DMG Bonus.Every Thunder stack gives +{1}% DMG Reduction.").
+-define(SD106121, "Every {0}s, heal self for {1}% Max HP.").
+-define(SD106131, "When entering combat, DMG Bonus +{0}% for {1}s.").
+-define(SD106141, "When there're 2 or more nearby enemies, attacks have a {0}% chance to deal {1}% DMG to 3 enemies.For every {2}% HP lost by the target, gain {3}% Skill DMG multiplier.").
+-define(BN61001, "Wrath").
+-define(BN61002, "Roar").
+-define(BN61005, "War God's Might").
+-define(BN61006, "Guardian").
+-define(BN61007, "Bleed").
+-define(BN61008, "Thor's Guard").
+-define(BN61101, "Battle Heal").
+-define(BN61111, "Fighting Spirit").
+-define(BN62001, "Heart Fire").
+-define(BN62002, "Eldritch Ice").
+-define(BN62003, "Vulcan's Spirit").
+-define(BN62004, "Azure Ice").
+-define(BN62005, "Spirit Fire").
+-define(BN62006, "Khione's Spirit").
+-define(BN62101, "HP Regen").
+-define(BN62111, "Uplift").
+-define(BN63001, "Focus").
+-define(BN63002, "Thunder").
+-define(BN63003, "Force of Nature").
+-define(BN63004, "Focus").
+-define(BN63005, "Thunder").
+-define(BN63006, "Lightning Power").
+-define(BN63007, "Thunder").
+-define(BN63008, "Thunder").
+-define(BN63009, "Thunder").
+-define(BN63010, "Thunder").
+-define(BN63101, "Nature's Healing").
+-define(BN63111, "Excitation").
+-define(BD61001, "ATK +{0}%").
+-define(BD61002, "Crit Rate +{0}%").
+-define(BD61005, "When buff is active, attacks have {0}% chance to deal {1}% DMG.").
+-define(BD61006, "DEF +{0}%").
+-define(BD61007, "Deal {0}% DMG per second.").
+-define(BD61008, "Block Rate +{0}%").
+-define(BD61101, "Every {0}s, heal for {1}% Max HP.").
+-define(BD61111, "Crit Rate +{0}%").
+-define(BD62001, "Crit Rate +{0}%").
+-define(BD62002, "Tough Rate +{0}%").
+-define(BD62003, "Every {0}s, deal {1}% DMG to nearby enemies.").
+-define(BD62004, "Skill DMG Reduction +{0}%").
+-define(BD62005, "DMG Reduction + {0}%").
+-define(BD62006, "Every {0}s, heal self for {1}% ATK.").
+-define(BD62101, "Every {0}s, heal for {1}% Max HP.").
+-define(BD62111, "Skill DMG Bonus +{0}%").
+-define(BD63001, "DMG Bonus +{0}%").
+-define(BD63002, "DMG Reduction + {0}%").
+-define(BD63003, "DMG Bonus +{0}%").
+-define(BD63004, "DMG Bonus +{0}%").
+-define(BD63005, "DMG Reduction + {0}%").
+-define(BD63006, "DMG Bonus +{0}%").
+-define(BD63007, "Skill DMG Bonus +{0}%").
+-define(BD63008, "Skill DMG Reduction +{0}%").
+-define(BD63009, "Hit and Dodge Rate +{0}%").
+-define(BD63010, "Final DMG Bonus +{0}%").
+-define(BD63101, "Every {0}s, heal for {1}% Max HP.").
+-define(BD63111, "DMG Bonus +{0}%").
+-define(BN62018, "Ice").
+-define(BN62019, "Firestorm").
+-define(BD62018, "Skill DMG Bonus +{0}%").
+-define(BD62019, "Skill DMG Bonus +{0}%").
+-define(BN62020, "Vulcan Blessing").
+-define(BN62022, "Khione Blessing").
+-define(BD62020, "ATK +{0}%").
+-define(BD62022, "Healing +{0}%").
+-define(BN61019, "War God's Might").
+-define(BN61021, "Thor's Guard").
+-define(BD61019, "Crit Rate +{0}%").
+-define(BD61021, "Block Reduction +{0}%").
+-define(SN301101, "Sunder I").
+-define(SN301201, "Sunder Ⅱ").
+-define(SN301301, "Sunder III").
+-define(SN301401, "Sunder IV").
+-define(SN301501, "Bash I").
+-define(SN301601, "Bash II").
+-define(SN301701, "Bash III ").
+-define(SN301801, "Bash IV").
+-define(SN301901, "Crit I").
+-define(SN302001, "Crit II").
+-define(SN302101, "Crit III").
+-define(SN302201, "Crit IV").
+-define(SN302301, "Precision I").
+-define(SN302401, "Precision II").
+-define(SN302501, "Precision III").
+-define(SN302601, "Precision IV").
+-define(SN302701, "Judgment II").
+-define(SN302801, "Judgment III").
+-define(SN302901, "Judgment IV").
+-define(SN303001, "Dominatus II").
+-define(SN303101, "Dominatus III").
+-define(SN303201, "Dominatus IV").
+-define(SN303301, "Crit DMG II").
+-define(SN303401, "Crit DMG III").
+-define(SN303501, "Crit DMG IV").
+-define(SN303601, "Insight II").
+-define(SN303701, "Insight III").
+-define(SN303801, "Insight IV").
+-define(SN303901, "Calibration II").
+-define(SN304001, "Calibration III").
+-define(SN304101, "Calibration IV").
+-define(SN304201, "Soul Smash II").
+-define(SN304301, "Soul Smash III").
+-define(SN304401, "Soul Smash IV").
+-define(SN304501, "Intimidate II").
+-define(SN304601, "Intimidate III").
+-define(SN304701, "Intimidate IV").
+-define(SN304801, "Overpower II").
+-define(SN304901, "Overpower III").
+-define(SN305001, "Overpower IV").
+-define(SN305101, "Morale II").
+-define(SN305201, "Morale III").
+-define(SN305301, "Morale IV").
+-define(SN305401, "Explode II").
+-define(SN305501, "Explode III").
+-define(SN305601, "Blast IV").
+-define(SN305701, "Berserk II").
+-define(SN305801, "Berserk III").
+-define(SN305901, "Berserk IV").
+-define(SN306001, "Fatal Blow III").
+-define(SN306101, "Fatal Blow IV").
+-define(SN306201, "Power Strike III").
+-define(SN306301, "Power Strike IV").
+-define(SN306401, "Pursuit Strike III").
+-define(SN306501, "Pursuit Strike IV").
+-define(SN306601, "Multi-strike III").
+-define(SN306701, "Multi-strike IV").
+-define(SN306801, "Final DMG III").
+-define(SN306901, "Final DMG IV").
+-define(SN401101, "Abundance I").
+-define(SN401201, "Abundance II").
+-define(SN401301, "Abundance III").
+-define(SN401401, "Abundance IV").
+-define(SN401501, "DEF I").
+-define(SN401601, "Def II").
+-define(SN401701, "DEF III").
+-define(SN401801, "DEF IV").
+-define(SN401901, "Tenacity I").
+-define(SN402001, "Tenacity II").
+-define(SN402101, "Tenacity III").
+-define(SN402201, "Tenacity IV").
+-define(SN402301, "Dodge I").
+-define(SN402401, "Dodge II").
+-define(SN402501, "Dodge III").
+-define(SN402601, "Dodge IV").
+-define(SN402701, "Robust II").
+-define(SN402801, "Robust III").
+-define(SN402901, "Robust IV").
+-define(SN403001, "Parry II").
+-define(SN403101, "Parry III").
+-define(SN403201, "Parry IV").
+-define(SN403301, "Endure II").
+-define(SN403401, "Endure III").
+-define(SN403501, "Endure IV").
+-define(SN403601, "Hype II").
+-define(SN403701, "Hype III").
+-define(SN403801, "Hype IV").
+-define(SN403901, "Swift II").
+-define(SN404001, "Swift III").
+-define(SN404101, "Swift IV").
+-define(SN404201, "Thick Armor II").
+-define(SN404301, "Thick Armor III").
+-define(SN404401, "Thick Armor IV").
+-define(SN404501, "Warding II").
+-define(SN404601, "Warding III").
+-define(SN404701, "Warding IV").
+-define(SN404801, "Safeguard II").
+-define(SN404901, "Safeguard III").
+-define(SN405001, "Safeguard IV").
+-define(SN405101, "Tenacious II").
+-define(SN405201, "Tenacious III").
+-define(SN405301, "Tenacious IV").
+-define(SN405401, "Resistance II").
+-define(SN405501, "Resistance III").
+-define(SN405601, "Resistance IV").
+-define(SN405701, "Protect II").
+-define(SN405801, "Protect III").
+-define(SN405901, "Protect IV").
+-define(SN406001, "Lethal Resistance III").
+-define(SN406101, "Lethal Resistance IV").
+-define(SN406201, "Skill Resist III").
+-define(SN406301, "Skill Resist IV").
+-define(SN406401, "Pursuit Resistance III").
+-define(SN406501, "Death Resistance IV").
+-define(SN406601, "Lethal Parrying III").
+-define(SN406701, "Lethal Parrying IV").
+-define(SN406801, "Final Reduction III").
+-define(SN406901, "Final Reduction IV").
+-define(SD301101, "Equip this skill to grant the character Sunder +{0}").
+-define(SD301201, "Equip this skill to grant the character Sunder +{0}").
+-define(SD301301, "Equip this skill to grant the character Sunder +{0}").
+-define(SD301401, "Equip this skill to grant the character Sunder +{0}").
+-define(SD301501, "Equip this skill to grant the character ATK +{0}").
+-define(SD301601, "Equip this skill to grant the character ATK +{0}").
+-define(SD301701, "Equip this skill to grant the character ATK +{0}").
+-define(SD301801, "Equip this skill to grant the character ATK +{0}").
+-define(SD301901, "Equip this skill to grant the character Crit +{0}").
+-define(SD302001, "Equip this skill to grant the character Crit +{0}").
+-define(SD302101, "Equip this skill to grant the character Crit +{0}").
+-define(SD302201, "Equip this skill to grant the character Crit +{0}").
+-define(SD302301, "Equip this skill to grant the character Hit +{0}").
+-define(SD302401, "Equip this skill to grant the character Hit +{0}").
+-define(SD302501, "Equip this skill to grant the character Hit +{0}").
+-define(SD302601, "Equip this skill to grant the character Hit +{0}").
+-define(SD302701, "Character Crit Rate +{0}% after equipping the skill").
+-define(SD302801, "Equip this skill to grant the character Crit Rate +{0}%").
+-define(SD302901, "Equip this skill to grant the character Crit Rate +{0}%").
+-define(SD303001, "Character Focus Rate +{0}% after equipping the skill").
+-define(SD303101, "Equip this skill to grant the character Concentration Rate +{0}%").
+-define(SD303201, "Equip this skill to grant the character Concentration Rate +{0}%").
+-define(SD303301, "Character Crit DMG Bonus + {0}% after equipping the skill").
+-define(SD303401, "Equip this skill to grant the character Crit DMG Bonus +{0}%").
+-define(SD303501, "Equip this skill to grant the character Crit DMG Bonus +{0}%").
+-define(SD303601, "Character Focus DMG Bonus + {0}% after equipping the skill").
+-define(SD303701, "Equip this skill to grant the character Concentration DMG Bonus +{0}%").
+-define(SD303801, "Equip this skill to grant the character Concentration DMG Bonus +{0}%").
+-define(SD303901, "Character Hit Rate + {0}% after equipping the skill").
+-define(SD304001, "Equip this skill to grant the character Hit Rate +{0}%").
+-define(SD304101, "Equip this skill to grant the character Hit Rate +{0}%").
+-define(SD304201, "Equip this skill to grant the character PvE DMG Bonus +{0}%").
+-define(SD304301, "Equip this skill to grant the character PvE DMG Bonus +{0}%").
+-define(SD304401, "Equip this skill to grant the character PvE DMG Bonus +{0}%").
+-define(SD304501, "Character Excellent Rate + {0}% after equipping the skill").
+-define(SD304601, "Equip this skill to grant the character Excellent Rate +{0}%").
+-define(SD304701, "Equip this skill to grant the character Excellent Rate +{0}%").
+-define(SD304801, "Equip this skill to grant the character Excellent DMG Bonus +{0}%").
+-define(SD304901, "Equip this skill to grant the character Excellent DMG Bonus +{0}%").
+-define(SD305001, "Equip this skill to grant the character Excellent DMG Bonus +{0}%").
+-define(SD305101, "Equip this skill to grant the character PvP DMG Bonus +{0}%").
+-define(SD305201, "Equip this skill to grant the character PvP DMG Bonus +{0}%").
+-define(SD305301, "Equip this skill to grant the character PvP DMG Bonus +{0}%").
+-define(SD305401, "Character Skill DMG Bonus +{0}%").
+-define(SD305501, "Equip this skill to grant the character Skill DMG Bonus +{0}%").
+-define(SD305601, "Equip this skill to grant the character Skill DMG Bonus +{0}%").
+-define(SD305701, "Character DMG Bonus +{0}% after equipping the skill").
+-define(SD305801, "Equip this skill to grant the character DMG Bonus +{0}%").
+-define(SD305901, "Equip this skill to grant the character DMG Bonus +{0}%").
+-define(SD306001, "Equip this skill to grant the character Lethal Rate +{0}%").
+-define(SD306101, "Equip this skill to grant the character Lethal Rate +{0}%").
+-define(SD306201, "Character Smite Rate + {0}% after equipping the skill").
+-define(SD306301, "Character Smite Rate + {0}% after equipping the skill").
+-define(SD306401, "Equip this skill to grant the character Pursuit Rate +{0}%").
+-define(SD306501, "Equip this skill to grant the character Pursuit Rate +{0}%").
+-define(SD306601, "Equip this skill to grant the character Multi-strike Rate +{0}%").
+-define(SD306701, "Equip this skill to grant the character Multi-strike Rate +{0}%").
+-define(SD306801, "Character Final DMG Bonus +{0}% after equipping the skill").
+-define(SD306901, "Character Final DMG Bonus +{0}% after equipping the skill").
+-define(SD401101, "Equip this skill to grant the character HP +{0}").
+-define(SD401201, "Equip this skill to grant the character HP +{0}").
+-define(SD401301, "Equip this skill to grant the character HP +{0}").
+-define(SD401401, "Equip this skill to grant the character HP +{0}").
+-define(SD401501, "Equip this skill to grant the character DEF +{0}").
+-define(SD401601, "Equip this skill to grant the character DEF +{0}").
+-define(SD401701, "Equip this skill to grant the character DEF +{0}").
+-define(SD401801, "Equip this skill to grant the character DEF +{0}").
+-define(SD401901, "Equip this skill to grant the character Tenacity +{0}").
+-define(SD402001, "Equip this skill to grant the character Tenacity +{0}").
+-define(SD402101, "Equip this skill to grant the character Tenacity +{0}").
+-define(SD402201, "Equip this skill to grant the character Tenacity +{0}").
+-define(SD402301, "Equip this skill to grant the character Dodge +{0}").
+-define(SD402401, "Equip this skill to grant the character Dodge +{0}").
+-define(SD402501, "Equip this skill to grant the character Dodge +{0}").
+-define(SD402601, "Equip this skill to grant the character Dodge +{0}").
+-define(SD402701, "Character Tough Rate +{0}% after equipping the skill").
+-define(SD402801, "Equip this skill to grant the character Toughness +{0}%").
+-define(SD402901, "Equip this skill to grant the character Toughness +{0}%").
+-define(SD403001, "Character Anti-Focus Rate +{0}% after equipping the skill").
+-define(SD403101, "Character Anti-Focus Rate +{0}% after equipping the skill").
+-define(SD403201, "Character Anti-Focus Rate +{0}% after equipping the skill").
+-define(SD403301, "Equip this skill to grant the character Crit DMG Reduction +{0}%").
+-define(SD403401, "Equip this skill to grant the character Crit DMG Reduction +{0}%").
+-define(SD403501, "Equip this skill to grant the character Crit DMG Reduction +{0}%").
+-define(SD403601, "Equip this skill to grant the character Focus DMG Reduction + {0}%").
+-define(SD403701, "Equip this skill to grant the character Focus DMG Reduction +{0}%").
+-define(SD403801, "Equip this skill to grant the character Focus DMG Reduction +{0}%").
+-define(SD403901, "Character Dodge Rate + {0}% after equipping the skill").
+-define(SD404001, "Equip this skill to grant the character Dodge +{0}%").
+-define(SD404101, "Equip this skill to grant the character Dodge +{0}%").
+-define(SD404201, "Equip this skill to grant the character PvE DMG Reduction +{0}%").
+-define(SD404301, "Equip this skill to grant the character PvE DMG Reduction +{0}%").
+-define(SD404401, "Equip this skill to grant the character PvE DMG Reduction +{0}%").
+-define(SD404501, "Character Anti-Excellent Rate +{0}% after equipping the skill").
+-define(SD404601, "Equip this skill to grant the character Anti-Excellent Rate +{0}%").
+-define(SD404701, "Equip this skill to grant the character Anti-Excellent Rate +{0}%").
+-define(SD404801, "Equip this skill to grant the character Excellent DMG Reduction +{0}%").
+-define(SD404901, "Equip this skill to grant the character Excellent DMG Reduction +{0}%").
+-define(SD405001, "Equip this skill to grant the character Excellent DMG Reduction +{0}%").
+-define(SD405101, "Equip this skill to grant the character PvP DMG Reduction +{0}%").
+-define(SD405201, "Equip this skill to grant the character PvP DMG Reduction +{0}%").
+-define(SD405301, "Equip this skill to grant the character PvP DMG Reduction +{0}%").
+-define(SD405401, "Equip this skill to grant the character Skill DMG Reduction +{0}%").
+-define(SD405501, "Equip this skill to grant the character Skill DMG Reduction +{0}%").
+-define(SD405601, "Equip this skill to grant the character Skill DMG Reduction +{0}%").
+-define(SD405701, "Character DMG Reduction + {0}% after equipping the skill").
+-define(SD405801, "Equip this skill to grant the character DMG Reduction +{0}%").
+-define(SD405901, "Equip this skill to grant the character DMG Reduction +{0}%").
+-define(SD406001, "Equip this skill to grant the character Anti-Lethal Rate +{0}%").
+-define(SD406101, "Equip this skill to grant the character Anti-Lethal Rate +{0}%").
+-define(SD406201, "Character Frailty Rate {0}% after equipping the skill").
+-define(SD406301, "Character Frailty Rate {0}% after equipping the skill").
+-define(SD406401, "Equip this skill to grant the character Pursuit Res Rate +{0}%").
+-define(SD406501, "Equip this skill to grant the character Pursuit Res Rate +{0}%").
+-define(SD406601, "Equip this skill to grant the character Multi-strike Res Rate +{0}%").
+-define(SD406701, "Equip this skill to grant the character Multi-strike Res Rate +{0}%").
+-define(SD406801, "Character Final DMG Reduction +{0}% after equipping the skill").
+-define(SD406901, "Character Final DMG Reduction +{0}% after equipping the skill").
+-define(BN286, "Petrify").
+-define(BN287, "Entrance").
+-define(BN288, "Poison").
+-define(BN289, "Bleed").
+-define(BN290, "Vulnerable").
+-define(BN291, "Curse").
+-define(BN292, "Enhance").
+-define(BD286, "You have been petrified!").
+-define(BD287, "You have been entranced!").
+-define(BD288, "You have been poisoned! DOT taken! ").
+-define(BD289, "You are bleeding! DOT taken! ").
+-define(BD290, "{0}% increase in damage taken!").
+-define(BD291, "Hit Rate -{0}%").
+-define(BD292, "DMG Bonus +{0}%").
+-define(BD364, "Entranced! Out of Control").
+-define(BN80001, "Calming Voice I").
+-define(BN80002, "Calming Voice II").
+-define(BN80003, "Calming Voice III").
+-define(BN80004, "Calming Voice IV").
+-define(BN80005, "Calming Voice V").
+-define(BN80011, "Lucky Mirror I").
+-define(BN80012, "Lucky Mirror II").
+-define(BN80013, "Lucky Mirror III").
+-define(BN80014, "Lucky Mirror IV").
+-define(BN80015, "Lucky Mirror V").
+-define(BN80021, "Resolute Song I").
+-define(BN80022, "Resolute Song II").
+-define(BN80023, "Resolute Song III").
+-define(BN80024, "Resolute Song IV").
+-define(BN80025, "Resolute Song V").
+-define(BN80031, "Heart of Courage I").
+-define(BN80032, "Heart of Courage II").
+-define(BN80033, "Heart of Courage III").
+-define(BN80034, "Heart of Courage IV").
+-define(BN80035, "Heart of Courage V").
+-define(BN80041, "Tepid Stone I").
+-define(BN80042, "Tepid Stone II").
+-define(BN80043, "Tepid Stone III").
+-define(BN80044, "Tepid Stone IV").
+-define(BN80045, "Tepid Stone V").
+-define(BN80051, "Anti-Paralysis Fruit I").
+-define(BN80052, "Anti-Paralysis Fruit II").
+-define(BN80053, "Anti-Paralysis Fruit III").
+-define(BN80054, "Anti-Paralysis Fruit IV").
+-define(BN80055, "Anti-Paralysis Fruit V").
+-define(BN80061, "Freezing Stone I").
+-define(BN80062, "Freezing Stone II").
+-define(BN80063, "Freezing Stone III").
+-define(BN80064, "Freezing Stone IV").
+-define(BN80065, "Freezing Stone V").
+-define(BN80071, "Heart of Purification I").
+-define(BN80072, "Heart of Purification II").
+-define(BN80073, "Heart of Purification III").
+-define(BN80074, "Heart of Purification IV").
+-define(BN80075, "Heart of Purification V").
+-define(BN80081, "Anti-bleeding Ring I").
+-define(BN80082, "Anti-bleeding Ring II").
+-define(BN80083, "Anti-bleeding Ring III").
+-define(BN80084, "Anti-bleeding Ring IV").
+-define(BN80085, "Anti-bleeding Ring V").
+-define(BN80091, "Heart of Strength I").
+-define(BN80092, "Heart of Strength II").
+-define(BN80093, "Heart of Strength III").
+-define(BN80094, "Heart of Strength IV").
+-define(BN80095, "Heart of Strength V").
+-define(BN80101, "Purity Stone I").
+-define(BN80102, "Purity Stone II").
+-define(BN80103, "Purity Stone III").
+-define(BN80104, "Purity Stone IV").
+-define(BN80105, "Purity Stone V").
+-define(BN80111, "Unwieldy Jug I").
+-define(BN80112, "Unwieldy Jug II").
+-define(BN80113, "Unwieldy Jug III").
+-define(BN80114, "Unwieldy Jug IV").
+-define(BN80115, "Unwieldy Jug V").
+-define(BN80121, "Cursed Blade I").
+-define(BN80122, "Cursed Blade II").
+-define(BN80123, "Cursed Blade III").
+-define(BN80124, "Cursed Blade IV").
+-define(BN80125, "Cursed Blade V").
+-define(BN80131, "Loki's Axe I").
+-define(BN80132, "Loki's Axe II").
+-define(BN80133, "Loki's Axe III").
+-define(BN80134, "Loki's Axe IV").
+-define(BN80135, "Loki's Axe V").
+-define(BN80141, "Chaos Massacre I").
+-define(BN80142, "Chaos Massacre II").
+-define(BN80143, "Chaos Massacre III").
+-define(BN80144, "Chaos Massacre IV").
+-define(BN80145, "Chaos Massacre V").
+-define(BN80151, "Dark Massacre I").
+-define(BN80152, "Dark Massacre II").
+-define(BN80153, "Dark Massacre III").
+-define(BN80154, "Dark Massacre IV").
+-define(BN80155, "Dark Massacre V").
+-define(BN80161, "Death Massacre I").
+-define(BN80162, "Death Massacre II").
+-define(BN80163, "Death Massacre III").
+-define(BN80164, "Death Massacre IV").
+-define(BN80165, "Death Massacre V").
+-define(BN80171, "War Massacre I").
+-define(BN80172, "War Massacre II").
+-define(BN80173, "War Massacre III").
+-define(BN80174, "War Massacre IV").
+-define(BN80175, "War Massacre V").
+-define(BN80181, "Chaos Talisman I").
+-define(BN80182, "Chaos Talisman II").
+-define(BN80183, "Chaos Talisman III").
+-define(BN80184, "Chaos Talisman IV").
+-define(BN80185, "Chaos Talisman V").
+-define(BN80191, "Dark Talisman I").
+-define(BN80192, "Dark Talisman II").
+-define(BN80193, "Dark Talisman III").
+-define(BN80194, "Dark Talisman IV").
+-define(BN80195, "Dark Talisman V").
+-define(BN80201, "Death Talisman I").
+-define(BN80202, "Death Talisman II").
+-define(BN80203, "Death Talisman III").
+-define(BN80204, "Death Talisman IV").
+-define(BN80205, "Death Talisman V").
+-define(BN80211, "War Talisman I").
+-define(BN80212, "War Talisman II").
+-define(BN80213, "War Talisman III").
+-define(BN80214, "War Talisman IV").
+-define(BN80215, "War Talisman V").
+-define(BN80221, "Daylight Blessings I").
+-define(BN80222, "Daylight Blessings II").
+-define(BN80223, "Daylight Blessings III").
+-define(BN80224, "Daylight Blessings IV").
+-define(BN80225, "Daylight Blessings V").
+-define(BN80231, "Twilight Blessings I").
+-define(BN80232, "Twilight Blessings II").
+-define(BN80233, "Twilight Blessings III").
+-define(BN80234, "Twilight Blessings IV").
+-define(BN80235, "Twilight Blessings V").
+-define(BN80241, "Night Blessings I").
+-define(BN80242, "Night Blessings II").
+-define(BN80243, "Night Blessings III").
+-define(BN80244, "Night Blessings IV").
+-define(BN80245, "Night Blessings V").
+-define(BN80251, "Daylight Invocation I").
+-define(BN80252, "Daylight Invocation II").
+-define(BN80253, "Daylight Invocation III").
+-define(BN80254, "Daylight Invocation IV").
+-define(BN80255, "Daylight Invocation V").
+-define(BN80261, "Twilight Invocation I").
+-define(BN80262, "Twilight Invocation II").
+-define(BN80263, "Twilight Invocation III").
+-define(BN80264, "Twilight Invocation IV").
+-define(BN80265, "Twilight Invocation V").
+-define(BN80271, "Nighttime Invocation I").
+-define(BN80272, "Nighttime Invocation II").
+-define(BN80273, "Nighttime Invocation III").
+-define(BN80274, "Nighttime Invocation IV").
+-define(BN80275, "Nighttime Invocation V").
+-define(BN80281, "Sunny Goblet I").
+-define(BN80282, "Sunny Goblet II").
+-define(BN80283, "Sunny Goblet III").
+-define(BN80284, "Sunny Goblet IV").
+-define(BN80285, "Sunny Goblet V").
+-define(BN80291, "Rain Goblet I").
+-define(BN80292, "Rain Goblet II").
+-define(BN80293, "Rain Goblet III").
+-define(BN80294, "Rain Goblet IV").
+-define(BN80295, "Rain Goblet V").
+-define(BN80301, "Snow Goblet I").
+-define(BN80302, "Snow Goblet II").
+-define(BN80303, "Snow Goblet III").
+-define(BN80304, "Snow Goblet IV").
+-define(BN80305, "Snow Goblet V").
+-define(BN80311, "Sunny Runestone I").
+-define(BN80312, "Sunny Runestone II").
+-define(BN80313, "Sunny Runestone III").
+-define(BN80314, "Sunny Runestone IV").
+-define(BN80315, "Sunny Runestone V").
+-define(BN80321, "Rain Runestone I").
+-define(BN80322, "Rain Runestone II").
+-define(BN80323, "Rain Runestone III").
+-define(BN80324, "Rain Runestone IV").
+-define(BN80325, "Rain Runestone V").
+-define(BN80331, "Snow Runestone I").
+-define(BN80332, "Snow Runestone II").
+-define(BN80333, "Snow Runestone III").
+-define(BN80334, "Snow Runestone IV").
+-define(BN80335, "Snow Runestone V").
+-define(BN80341, "Thunder Goblet I").
+-define(BN80342, "Thunder Goblet II").
+-define(BN80343, "Thunder Goblet III").
+-define(BN80344, "Thunder Goblet IV").
+-define(BN80345, "Thunder Goblet V").
+-define(BN80351, "Thunder Runestone I").
+-define(BN80352, "Thunder Runestone II").
+-define(BN80353, "Thunder Runestone III").
+-define(BN80354, "Thunder Runestone IV").
+-define(BN80355, "Thunder Runestone V").
+-define(BN80361, "Force of Nature I").
+-define(BN80362, "Force of Nature II").
+-define(BN80363, "Force of Nature III").
+-define(BN80364, "Force of Nature IV").
+-define(BN80365, "Force of Nature V").
+-define(BN80371, "Attacker Boots I").
+-define(BN80372, "Attacker Boots II").
+-define(BN80373, "Attacker Boots III").
+-define(BN80374, "Attacker Boots IV").
+-define(BN80375, "Attacker Boots V").
+-define(BN80381, "Defender Boots I").
+-define(BN80382, "Defender Boots II").
+-define(BN80383, "Defender Boots III").
+-define(BN80384, "Defender Boots IV").
+-define(BN80385, "Defender Boots V").
+-define(BN80391, "Blockage Boots I").
+-define(BN80392, "Blockage Boots II").
+-define(BN80393, "Blockage Boots III").
+-define(BN80394, "Blockage Boots IV").
+-define(BN80395, "Blockage Boots V").
+-define(BN80401, "Crit Boots I").
+-define(BN80402, "Crit Boots II").
+-define(BN80403, "Crit Boots III").
+-define(BN80404, "Crit Boots IV").
+-define(BN80405, "Crit Boots V").
+-define(BN80411, "Fury Boots I").
+-define(BN80412, "Fury Boots II").
+-define(BN80413, "Fury Boots III").
+-define(BN80414, "Fury Boots IV").
+-define(BN80415, "Fury Boots V").
+-define(BD80001, "{0}% chance to resist Stun effect from skill attacks").
+-define(BD80002, "{0}% chance to resist Stun effect from skill attacks").
+-define(BD80003, "{0}% chance to resist Stun effect from skill attacks").
+-define(BD80004, "{0}% chance to resist Stun effect from skill attacks").
+-define(BD80005, "{0}% chance to resist Stun effect from skill attacks").
+-define(BD80011, "{0}% chance to resist Petrify effect from skill attacks").
+-define(BD80012, "{0}% chance to resist Petrify effect from skill attacks").
+-define(BD80013, "{0}% chance to resist Petrify effect from skill attacks").
+-define(BD80014, "{0}% chance to resist Petrify effect from skill attacks").
+-define(BD80015, "{0}% chance to resist Petrify effect from skill attacks").
+-define(BD80021, "{0}% chance to resist Entrance effect from skill attacks").
+-define(BD80022, "{0}% chance to resist Entrance effect from skill attacks").
+-define(BD80023, "{0}% chance to resist Entrance effect from skill attacks").
+-define(BD80024, "{0}% chance to resist Entrance effect from skill attacks").
+-define(BD80025, "{0}% chance to resist Entrance effect from skill attacks").
+-define(BD80031, "{0}% chance to resist Frighten effect from skill attacks").
+-define(BD80032, "{0}% chance to resist Frighten effect from skill attacks").
+-define(BD80033, "{0}% chance to resist Frighten effect from skill attacks").
+-define(BD80034, "{0}% chance to resist Frighten effect from skill attacks").
+-define(BD80035, "{0}% chance to resist Frighten effect from skill attacks").
+-define(BD80041, "{0}% chance to resist Freeze effect from skill attacks").
+-define(BD80042, "{0}% chance to resist Freeze effect from skill attacks").
+-define(BD80043, "{0}% chance to resist Freeze effect from skill attacks").
+-define(BD80044, "{0}% chance to resist Freeze effect from skill attacks").
+-define(BD80045, "{0}% chance to resist Freeze effect from skill attacks").
+-define(BD80051, "{0}% chance to resist Paralyze effect from skill attacks").
+-define(BD80052, "{0}% chance to resist Paralyze effect from skill attacks").
+-define(BD80053, "{0}% chance to resist Paralyze effect from skill attacks").
+-define(BD80054, "{0}% chance to resist Paralyze effect from skill attacks").
+-define(BD80055, "{0}% chance to resist Paralyze effect from skill attacks").
+-define(BD80061, "{0}% chance to resist Scorch effect from skill attacks").
+-define(BD80062, "{0}% chance to resist Scorch effect from skill attacks").
+-define(BD80063, "{0}% chance to resist Scorch effect from skill attacks").
+-define(BD80064, "{0}% chance to resist Scorch effect from skill attacks").
+-define(BD80065, "{0}% chance to resist Scorch effect from skill attacks").
+-define(BD80071, "{0}% chance to resist Poison effect from skill attacks").
+-define(BD80072, "{0}% chance to resist Poison effect from skill attacks").
+-define(BD80073, "{0}% chance to resist Poison effect from skill attacks").
+-define(BD80074, "{0}% chance to resist Poison effect from skill attacks").
+-define(BD80075, "{0}% chance to resist Poison effect from skill attacks").
+-define(BD80081, "{0}% chance to resist Bleed effect from skill attacks").
+-define(BD80082, "{0}% chance to resist Bleed effect from skill attacks").
+-define(BD80083, "{0}% chance to resist Bleed effect from skill attacks").
+-define(BD80084, "{0}% chance to resist Bleed effect from skill attacks").
+-define(BD80085, "{0}% chance to resist Bleed effect from skill attacks").
+-define(BD80091, "{0}% chance to resist Vulnerable effect from skill attacks").
+-define(BD80092, "{0}% chance to resist Vulnerable effect from skill attacks").
+-define(BD80093, "{0}% chance to resist Vulnerable effect from skill attacks").
+-define(BD80094, "{0}% chance to resist Vulnerable effect from skill attacks").
+-define(BD80095, "{0}% chance to resist Vulnerable effect from skill attacks").
+-define(BD80101, "{0}% chance to resist Curse effect from skill attacks").
+-define(BD80102, "{0}% chance to resist Curse effect from skill attacks").
+-define(BD80103, "{0}% chance to resist Curse effect from skill attacks").
+-define(BD80104, "{0}% chance to resist Curse effect from skill attacks").
+-define(BD80105, "{0}% chance to resist Curse effect from skill attacks").
+-define(BD80111, "{0}% chance to resist KO effect from skill attacks").
+-define(BD80112, "{0}% chance to resist KO effect from skill attacks").
+-define(BD80113, "{0}% chance to resist KO effect from skill attacks").
+-define(BD80114, "{0}% chance to resist KO effect from skill attacks").
+-define(BD80115, "{0}% chance to resist KO effect from skill attacks").
+-define(BD80121, "Attacks have a {0}% chance to remove all Enhance effects on the enemy.CD: {1}s").
+-define(BD80122, "Attacks have a {0}% chance to remove all Enhance effects on the enemy.CD: {1}s").
+-define(BD80123, "Attacks have a {0}% chance to remove all Enhance effects on the enemy.CD: {1}s").
+-define(BD80124, "Attacks have a {0}% chance to remove all Enhance effects on the enemy.CD: {1}s").
+-define(BD80125, "Attacks have a {0}% chance to remove all Enhance effects on the enemy.CD: {1}s").
+-define(BD80131, "Attacks have a {0}% chance to inflict Loki's Axe (Healing -{1}%) on the enemy.CD: {2}s").
+-define(BD80132, "Attacks have a {0}% chance to inflict Loki's Axe (Healing -{1}%) on the enemy.CD: {2}s").
+-define(BD80133, "Attacks have a {0}% chance to inflict Loki's Axe (Healing -{1}%) on the enemy.CD: {2}s").
+-define(BD80134, "Attacks have a {0}% chance to inflict Loki's Axe (Healing -{1}%) on the enemy.CD: {2}s").
+-define(BD80135, "Attacks have a {0}% chance to inflict Loki's Axe (Healing -{1}%) on the enemy.CD: {2}s").
+-define(BD80141, "Deal +{0}% DMG to Chaos enemies").
+-define(BD80142, "Deal +{0}% DMG to Chaos enemies").
+-define(BD80143, "Deal +{0}% DMG to Chaos enemies").
+-define(BD80144, "Deal +{0}% DMG to Chaos enemies").
+-define(BD80145, "Deal +{0}% DMG to Chaos enemies").
+-define(BD80151, "Deal +{0}% DMG to Dark type enemies").
+-define(BD80152, "Deal +{0}% DMG to Dark type enemies").
+-define(BD80153, "Deal +{0}% DMG to Dark type enemies").
+-define(BD80154, "Deal +{0}% DMG to Dark type enemies").
+-define(BD80155, "Deal +{0}% DMG to Dark type enemies").
+-define(BD80161, "Deal +{0}% DMG to Death enemies").
+-define(BD80162, "Deal +{0}% DMG to Death enemies").
+-define(BD80163, "Deal +{0}% DMG to Death enemies").
+-define(BD80164, "Deal +{0}% DMG to Death enemies").
+-define(BD80165, "Deal +{0}% DMG to Death enemies").
+-define(BD80171, "Deal +{0}% DMG to War enemies").
+-define(BD80172, "Deal +{0}% DMG to War enemies").
+-define(BD80173, "Deal +{0}% DMG to War enemies").
+-define(BD80174, "Deal +{0}% DMG to War enemies").
+-define(BD80175, "Deal +{0}% DMG to War enemies").
+-define(BD80181, "Take -{0}% DMG from Chaos enemies").
+-define(BD80182, "Take -{0}% DMG from Chaos enemies").
+-define(BD80183, "Take -{0}% DMG from Chaos enemies").
+-define(BD80184, "Take -{0}% DMG from Chaos enemies").
+-define(BD80185, "Take -{0}% DMG from Chaos enemies").
+-define(BD80191, "Take -{0}% DMG from Dark type enemies").
+-define(BD80192, "Take -{0}% DMG from Dark type enemies").
+-define(BD80193, "Take -{0}% DMG from Dark type enemies").
+-define(BD80194, "Take -{0}% DMG from Dark type enemies").
+-define(BD80195, "Take -{0}% DMG from Dark type enemies").
+-define(BD80201, "Take -{0}% DMG from Death enemies").
+-define(BD80202, "Take -{0}% DMG from Death enemies").
+-define(BD80203, "Take -{0}% DMG from Death enemies").
+-define(BD80204, "Take -{0}% DMG from Death enemies").
+-define(BD80205, "Take -{0}% DMG from Death enemies").
+-define(BD80211, "Take -{0}% DMG from War enemies").
+-define(BD80212, "Take -{0}% DMG from War enemies").
+-define(BD80213, "Take -{0}% DMG from War enemies").
+-define(BD80214, "Take -{0}% DMG from War enemies").
+-define(BD80215, "Take -{0}% DMG from War enemies").
+-define(BD80221, "Deal +{0}% DMG during daytime").
+-define(BD80222, "Deal +{0}% DMG during daytime").
+-define(BD80223, "Deal +{0}% DMG during daytime").
+-define(BD80224, "Deal +{0}% DMG during daytime").
+-define(BD80225, "Deal +{0}% DMG during daytime").
+-define(BD80231, "Deal +{0}% DMG during twilight").
+-define(BD80232, "Deal +{0}% DMG during twilight").
+-define(BD80233, "Deal +{0}% DMG during twilight").
+-define(BD80234, "Deal +{0}% DMG during twilight").
+-define(BD80235, "Deal +{0}% DMG during twilight").
+-define(BD80241, "Deal +{0}% DMG during nighttime").
+-define(BD80242, "Deal +{0}% DMG during nighttime").
+-define(BD80243, "Deal +{0}% DMG during nighttime").
+-define(BD80244, "Deal +{0}% DMG during nighttime").
+-define(BD80245, "Deal +{0}% DMG during nighttime").
+-define(BD80251, "Take -{0}% DMG during daytime").
+-define(BD80252, "Take -{0}% DMG during daytime").
+-define(BD80253, "Take -{0}% DMG during daytime").
+-define(BD80254, "Take -{0}% DMG during daytime").
+-define(BD80255, "Take -{0}% DMG during daytime").
+-define(BD80261, "Take -{0}% DMG during twilight").
+-define(BD80262, "Take -{0}% DMG during twilight").
+-define(BD80263, "Take -{0}% DMG during twilight").
+-define(BD80264, "Take -{0}% DMG during twilight").
+-define(BD80265, "Take -{0}% DMG during twilight").
+-define(BD80271, "Take -{0}% DMG during nighttime").
+-define(BD80272, "Take -{0}% DMG during nighttime").
+-define(BD80273, "Take -{0}% DMG during nighttime").
+-define(BD80274, "Take -{0}% DMG during nighttime").
+-define(BD80275, "Take -{0}% DMG during nighttime").
+-define(BD80281, "Deal +{0}% DMG when the weather is sunny").
+-define(BD80282, "Deal +{0}% DMG when the weather is sunny").
+-define(BD80283, "Deal +{0}% DMG when the weather is sunny").
+-define(BD80284, "Deal +{0}% DMG when the weather is sunny").
+-define(BD80285, "Deal +{0}% DMG when the weather is sunny").
+-define(BD80291, "Deal +{0}% DMG when the weather is rainy").
+-define(BD80292, "Deal +{0}% DMG when the weather is rainy").
+-define(BD80293, "Deal +{0}% DMG when the weather is rainy").
+-define(BD80294, "Deal +{0}% DMG when the weather is rainy").
+-define(BD80295, "Deal +{0}% DMG when the weather is rainy").
+-define(BD80301, "Deal +{0}% DMG when the weather is snowy").
+-define(BD80302, "Deal +{0}% DMG when the weather is snowy").
+-define(BD80303, "Deal +{0}% DMG when the weather is snowy").
+-define(BD80304, "Deal +{0}% DMG when the weather is snowy").
+-define(BD80305, "Deal +{0}% DMG when the weather is snowy").
+-define(BD80311, "Take -{0}% DMG when the weather is sunny").
+-define(BD80312, "Take -{0}% DMG when the weather is sunny").
+-define(BD80313, "Take -{0}% DMG when the weather is sunny").
+-define(BD80314, "Take -{0}% DMG when the weather is sunny").
+-define(BD80315, "Take -{0}% DMG when the weather is sunny").
+-define(BD80321, "Take -{0}% DMG when the weather is rainy").
+-define(BD80322, "Take -{0}% DMG when the weather is rainy").
+-define(BD80323, "Take -{0}% DMG when the weather is rainy").
+-define(BD80324, "Take -{0}% DMG when the weather is rainy").
+-define(BD80325, "Take -{0}% DMG when the weather is rainy").
+-define(BD80331, "Take -{0}% DMG when the weather is snowy").
+-define(BD80332, "Take -{0}% DMG when the weather is snowy").
+-define(BD80333, "Take -{0}% DMG when the weather is snowy").
+-define(BD80334, "Take -{0}% DMG when the weather is snowy").
+-define(BD80335, "Take -{0}% DMG when the weather is snowy").
+-define(BD80341, "Deal +{0}% DMG when the weather is thunderous").
+-define(BD80342, "Deal +{0}% DMG when the weather is thunderous").
+-define(BD80343, "Deal +{0}% DMG when the weather is thunderous").
+-define(BD80344, "Deal +{0}% DMG when the weather is thunderous").
+-define(BD80345, "Deal +{0}% DMG when the weather is thunderous").
+-define(BD80351, "Take -{0}% DMG when the weather is thunderous").
+-define(BD80352, "Take -{0}% DMG when the weather is thunderous").
+-define(BD80353, "Take -{0}% DMG when the weather is thunderous").
+-define(BD80354, "Take -{0}% DMG when the weather is thunderous").
+-define(BD80355, "Take -{0}% DMG when the weather is thunderous").
+-define(BD80361, "Heal for {1}% of ATK every {0}s").
+-define(BD80362, "Heal for {1}% of ATK every {0}s").
+-define(BD80363, "Heal for {1}% of ATK every {0}s").
+-define(BD80364, "Heal for {1}% of ATK every {0}s").
+-define(BD80365, "Heal for {1}% of ATK every {0}s").
+-define(BD80371, "ATK +{0}%").
+-define(BD80372, "ATK +{0}%").
+-define(BD80373, "ATK +{0}%").
+-define(BD80374, "ATK +{0}%").
+-define(BD80375, "ATK +{0}%").
+-define(BD80381, "DEF +{0}%").
+-define(BD80382, "DEF +{0}%").
+-define(BD80383, "DEF +{0}%").
+-define(BD80384, "DEF +{0}%").
+-define(BD80385, "DEF +{0}%").
+-define(BD80391, "Block Rate +{0}%").
+-define(BD80392, "Block Rate +{0}%").
+-define(BD80393, "Block Rate +{0}%").
+-define(BD80394, "Block Rate +{0}%").
+-define(BD80395, "Block Rate +{0}%").
+-define(BD80401, "Crit Rate +{0}%").
+-define(BD80402, "Crit Rate +{0}%").
+-define(BD80403, "Crit Rate +{0}%").
+-define(BD80404, "Crit Rate +{0}%").
+-define(BD80405, "Crit Rate +{0}%").
+-define(BD80411, "Fury gain speed +{0}%").
+-define(BD80412, "Fury gain speed +{0}%").
+-define(BD80413, "Fury gain speed +{0}%").
+-define(BD80414, "Fury gain speed +{0}%").
+-define(BD80415, "Fury gain speed +{0}%").
+-define(SD600, "Mob EXP +{0}%, AFK EXP +{1}%").
+-define(SN601, "Basic Skill Guardian").
+-define(SD601, "Skill DMG Bonus +{0}%").
+-define(SN602, "Rank-up EXP Guardian").
+-define(SD602, "Mob EXP +{0}%, AFK EXP +{1}%").
+-define(SN603, "Rank-up Defense Guardian").
+-define(SD603, "Skill DMG Bonus +{0}%, Skill DMG Reduction +{1}%").
+-define(EASYSD701101, "AFK EXP +{0}%").
+-define(EASYSD702101, "DMG dealt to Minions +{0}%").
+-define(EASYSD703101, "DMG dealt to bosses +{0}%").
+-define(EASYSD704101, "PVP DMG Reduction +{0}%").
+-define(EASYSD705101, "PVE DMG Bonus +{0}%, every 10 levels +{1} ATK").
+-define(EASYSD706101, "Mob EXP +{0}%").
+-define(EASYSD707101, "Mob EXP +{0}%").
+-define(SKILLCIZHUI_1, "Wrath").
+-define(SKILLCIZHUI_2, "War God's Might").
+-define(SKILLCIZHUI_3, "Focus").
+-define(SKILLCIZHUI_4, "Force of Nature").
+-define(SKILLCIZHUI_5, "Roar").
+-define(SKILLCIZHUI_6, "Thor's Guard").
+-define(SKILLCIZHUI_7, "Ice Empower").
+-define(SKILLCIZHUI_8, "Khione's Spirit").
+-define(SKILLCIZHUI_9, "Thunder").
+-define(SKILLCIZHUI_10, "Lightning Power").
+-define(SKILLCIZHUI_11, "Vulcan's Spirit").
+-define(SKILLCIZHUI_12, "Fire Empower").
+-define(SKILLCIZHUI_13, "Single Enhance").
+-define(SKILLCIZHUI_14, "Group Block").
+-define(SKILLCIZHUI_15, "Forceful").
+-define(SKILLCIZHUI_16, "Thor's Blessing").
+-define(SKILLCIZHUI_17, "Group Damage").
+-define(SKILLCIZHUI_18, "Stack").
+-define(SKILLCIZHUI_19, "Thunder Channel").
+-define(SKILLCIZHUI_20, "Spiritual Focus").
+-define(SKILLCIZHUI_21, "Effective Thunder").
+-define(SKILLCIZHUI_22, "Blast").
+-define(SKILLCIZHUI_23, "Damage Boost").
+-define(SKILLCIZHUI_24, "Slash Kill").
+-define(SKILLCIZHUI_25, "Crit").
+-define(SKILLCIZHUI_26, "Ignore Defense").
+-define(SKILLCIZHUI_27, "Bleed").
+-define(SKILLCIZHUI_28, "Stun").
+-define(SKILLCIZHUI_29, "Weaken").
+-define(SKILLCIZHUI_30, "Dispel").
+-define(SKILLCIZHUI_31, "Scorch").
+-define(SKILLCIZHUI_32, "Poison").
+-define(SKILLCIZHUI_33, "Paralyze").
+-define(SKILLCIZHUI_34, "Freeze").
+-define(SKILLCIZHUI_35, "Immune").
+-define(SKILLCIZHUI_36, "Guardian").
+-define(SKILLCIZHUI_37, "Block").
+-define(SKILLCIZHUI_38, "Shield").
+-define(SKILLCIZHUI_39, "Group Heal").
+-define(SKILLCIZHUI_40, "Dispel").
+-define(SKILLCIZHUI_41, "Purify").
+-define(SKILLCIZHUI_42, "Block").
+-define(SKILLCIZHUI_43, "DMG Reduction").
+-define(SKILLCIZHUI_44, "Group Buff").
+-define(SKILLCIZHUI_45, "Terminate").
+-define(SKILLCIZHUI_46, "Wrath ↑↑").
+-define(SKILLCIZHUI_47, "Roar ↑↑").
+-define(SKILLCIZHUI_48, "Blast ↑↑").
+-define(SKILLCIZHUI_49, "Stun ↑↑").
+-define(SKILLCIZHUI_50, "Guardian ↑↑").
+-define(SKILLCIZHUI_51, "Crit ↑↑").
+-define(SKILLCIZHUI_52, "Bleed ↑↑").
+-define(SKILLCIZHUI_53, "Block Reduction ↑↑").
+-define(SKILLCIZHUI_54, "Ignore Defense").
+-define(SKILLCIZHUI_55, "Resolve").
+-define(SKILLCIZHUI_56, "Forceful ↑↑").
+-define(SKILLCIZHUI_57, "Thor's Blessing ↑↑").
+-define(SKILLCIZHUI_58, "Ignore Defense ↑↑").
+-define(SKILLCIZHUI_59, "Shield ↑↑").
+-define(SKILLCIZHUI_60, "Empower ↑↑").
+-define(SKILLCIZHUI_61, "Empower ↑↑").
+-define(SKILLCIZHUI_62, "Blast ↑↑").
+-define(SKILLCIZHUI_63, "Heal ↑↑").
+-define(SKILLCIZHUI_64, "Damage Boost").
+-define(SKILLCIZHUI_65, "ATK").
+-define(SKILLCIZHUI_66, "Empower ↑↑").
+-define(SKILLCIZHUI_67, "Heal ↑↑").
+-define(SKILLCIZHUI_68, "Blast").
+-define(SKILLCIZHUI_69, "Freeze ↑↑").
+-define(SKILLCIZHUI_70, "Empower ↑↑").
+-define(SKILLCIZHUI_71, "Empower ↑↑").
+-define(SKILLCIZHUI_72, "Empower ↑↑").
+-define(SKILLCIZHUI_73, "Empower ↑↑").
+-define(SKILLCIZHUI_74, "Focus ↑↑").
+-define(SKILLCIZHUI_75, "Thunder ↑↑").
+-define(SKILLCIZHUI_76, "Blast ↑↑").
+-define(SKILLCIZHUI_77, "Blast ↑↑").
+-define(SKILLCIZHUI_78, "Purify").
+-define(SKILLCIZHUI_79, "Focus").
+-define(SKILLCIZHUI_80, "Purify").
+-define(SKILLCIZHUI_81, "Thunder").
+-define(SKILLCIZHUI_82, "Blast ↑↑").
+-define(SKILLCIZHUI_83, "Blast ↑↑").
+-define(SKILLCIZHUI_84, "Poison ↑↑").
+-define(SKILLCIZHUI_85, "Pierce").
+-define(SKILLCIZHUI_86, "Spiritual Focus ↑↑").
+-define(SKILLCIZHUI_87, "Effective Thunder ↑↑").
+-define(SKILLCIZHUI_88, "Shield").
+-define(SKILLCIZHUI_89, "Invincible").
+-define(SKILLCIZHUI_90, "Heal").
+-define(SKILLCIZHUI_91, "Healing Bonus").
+-define(SKILLCIZHUI_92, "Group Healing").
+-define(SKILLCIZHUI_93, "Dispel Buff").
+-define(SKILLCIZHUI_94, "Damage Boost").
+-define(SKILLCIZHUI_95, "Group Damage").
+-define(SKILLCIZHUI_96, "Dispel Debuff").
+-define(SKILLCIZHUI_97, "Fury Regen").
+-define(SKILLCIZHUI_98, "<color=#FF6D6D>Basic</color>").
+-define(SKILLCIZHUI_99, "<color=#8EC2FF>Damage</color>").
+-define(SKILLCIZHUI_100, "<color=#FF6D6D>Basic</color>").
+-define(SKILLCIZHUI_101, "<color=#8EC2FF>Burst</color>").
+-define(SKILLCIZHUI_102, "<color=#FF6D6D>Damage</color>").
+-define(SKILLCIZHUI_103, "<color=#8EC2FF>AOE</color>").
+-define(SKILLCIZHUI_104, "<color=#FF6D6D>Damage</color>").
+-define(SKILLCIZHUI_105, "<color=#8EC2FF>Burst</color>").
+-define(SKILLCIZHUI_106, "").
+-define(SKILLCIZHUI_107, "").
+-define(SKILLCIZHUI_108, "").
+-define(SKILLCIZHUI_109, "").
+-define(SKILLCIZHUI_110, "").
+-define(SKILLCIZHUI_111, "").
+-define(SKILLCIZHUI_112, "").
+-define(SKILLCIZHUI_113, "").
+-define(SKILLCIZHUI_114, "").
+-define(SKILLCIZHUI_115, "").
+-define(SKILLCIZHUI_116, "").
+-define(BN51010, "Pharaoh's Might").
+-define(BD51010, "ATK +45%").
+-define(BN51321, "Body of Revenge").
+-define(BD51321, "DMG Reduction +{0}%").
+-define(BF96, "[Basic Mark]").
+-define(BF97, "[Medium Mark]").
+-define(BF98, "[Ultra Mark]").
+-define(BF99, "[Kings of 1v1]").
+-define(BN1000205, "Mark Bonus").
+-define(BN1000206, "Mark Bonus").
+-define(BN1000207, "Mark Bonus").
+-define(BD1000205, "Mob/AFK EXP +{0}%, Skill DMG Bonus +{1}%").
+-define(BD1000206, "Mob/AFK EXP +{0}%, Skill DMG Bonus +{1}%").
+-define(BD1000207, "Mob/AFK EXP +{0}%, Skill DMG Bonus +{1}%").
+-define(SS120101, "Merlin deals Elemental DMG to the enemy").
+-define(SS120141, "Merlin deals Fire DMG to the enemy").
+-define(SS120161, "Chance to recover HP when attacked").
+-define(SS120181, "Merlin heals owner and increases owner's DMG Reduction").
+-define(SS120201, "Wields a heavy hammer to deal damage to the enemy").
+-define(SS120241, "Hits the ground hard, dealing damage to nearby enemies, with a chance to slow them").
+-define(SS120261, "Chance to inflict control with attack").
+-define(SS120281, "Smites the enemy with a giant hammer, dealing massive damage with a chance to control them").
+-define(SS110100, "Shapeshifts into block master Athena to punish the enemy").
+-define(SS110101, "Strikes the enemy repeatedly, dealing a small amount of damage").
+-define(SS110105, "Slashes nearby targets, dealing a moderate amount of damage").
+-define(SS110106, "Gains a solid shield, dealing area damage and increasing Block").
+-define(SS110107, "Punishes the enemy, dealing damage.The attack pierces the enemy").
+-define(SS110108, "Enhances allies by increasing their Block, and deals damage to enemies").
+-define(SS110200, "Shapeshifts into Morrigan, a master of healing and debuffing").
+-define(SS110201, "Wields a staff to deal damage").
+-define(SS110205, "Absorbs energy, deals damage and recovers HP").
+-define(SS110206, "Shapeshifts into a crow that can deal damage to enemies and knock them back").
+-define(SS110207, "Unleashes energy to deal damage and recover HP").
+-define(SS110208, "Causes a whirlwind to deal massive damage").
+-define(SS110300, "Shapeshifts into Thor, with a chance to paralyze the enemy").
+-define(SS110301, "Attacks the enemy with Thor's Hammer").
+-define(SS110305, "Attacks the enemy with Thor's Hammer, with a chance to paralyze them").
+-define(SS110306, "Sprints forward for some distance, with a chance to paralyze the enemy").
+-define(SS110307, "Unleashes the power of the Thunder God to damage enemies while creating an electric field nearby").
+-define(SS110308, "Attacks the enemy with Thor's Hammer, dealing massive damage").
+-define(SS110400, "Shapeshifts into Horus who will burn nearby enemies").
+-define(SS110401, "Wields a sceptre to deal damage to enemies").
+-define(SS110405, "Unleashes holy light to deal damage.The enemy will be burned").
+-define(SS110406, "Unleashes solar powers to deal damage.The enemy will be burned").
+-define(SS110407, "Curses the enemy, dealing damage and immobilizing them").
+-define(SS110408, "Causes a whirlwind to deal much damage and burn enemies").
+-define(EASYSD301101, "Character Sunder +{0}").
+-define(EASYSD301201, "Character Sunder +{0}").
+-define(EASYSD301301, "Character Sunder +{0}").
+-define(EASYSD301401, "Character Sunder +{0}").
+-define(EASYSD301501, "Character ATK +{0}").
+-define(EASYSD301601, "Character ATK +{0}").
+-define(EASYSD301701, "Character ATK +{0}").
+-define(EASYSD301801, "Character ATK +{0}").
+-define(EASYSD301901, "Character Crit +{0}").
+-define(EASYSD302001, "Character Crit +{0}").
+-define(EASYSD302101, "Character Crit +{0}").
+-define(EASYSD302201, "Character Crit +{0}").
+-define(EASYSD302301, "Character Hit +{0}").
+-define(EASYSD302401, "Character Hit +{0}").
+-define(EASYSD302501, "Character Hit +{0}").
+-define(EASYSD302601, "Character Hit +{0}").
+-define(EASYSD302701, "Character Crit Rate +{0}%").
+-define(EASYSD302801, "Character Crit Rate +{0}%").
+-define(EASYSD302901, "Character Crit Rate +{0}%").
+-define(EASYSD303001, "Character Focus Rate +{0}%").
+-define(EASYSD303101, "Character Focus Rate +{0}%").
+-define(EASYSD303201, "Character Focus Rate +{0}%").
+-define(EASYSD303301, "Character Crit DMG Bonus +{0}%").
+-define(EASYSD303401, "Character Crit DMG Bonus +{0}%").
+-define(EASYSD303501, "Character Crit DMG Bonus +{0}%").
+-define(EASYSD303601, "Character Focus DMG Bonus +{0}%").
+-define(EASYSD303701, "Character Focus DMG Bonus +{0}%").
+-define(EASYSD303801, "Character Focus DMG Bonus +{0}%").
+-define(EASYSD303901, "Character Hit Rate +{0}%").
+-define(EASYSD304001, "Character Hit Rate +{0}%").
+-define(EASYSD304101, "Character Hit Rate +{0}%").
+-define(EASYSD304201, "Character PVE DMG Bonus +{0}%").
+-define(EASYSD304301, "Character PVE DMG Bonus +{0}%").
+-define(EASYSD304401, "Character PVE DMG Bonus +{0}%").
+-define(EASYSD304501, "Character Excellent Rate + {0}%").
+-define(EASYSD304601, "Character Excellent Rate +{0}%").
+-define(EASYSD304701, "Character Excellent Rate +{0}%").
+-define(EASYSD304801, "Character Excellent DMG Bonus +{0}%").
+-define(EASYSD304901, "Character Excellent DMG Bonus +{0}%").
+-define(EASYSD305001, "Character Excellent DMG Bonus +{0}%").
+-define(EASYSD305101, "Character PVP DMG Bonus +{0}%").
+-define(EASYSD305201, "Character PVP DMG Bonus +{0}%").
+-define(EASYSD305301, "Character PVP DMG Bonus +{0}%").
+-define(EASYSD305401, "Character Skill DMG Bonus +{0}%").
+-define(EASYSD305501, "Character Skill DMG Bonus +{0}%").
+-define(EASYSD305601, "Character Skill DMG Bonus +{0}%").
+-define(EASYSD305701, "Character DMG Bonus + {0}%").
+-define(EASYSD305801, "Character DMG Bonus +{0}%").
+-define(EASYSD305901, "Character DMG Bonus +{0}%").
+-define(EASYSD306001, "Character Lethal Rate +{0}%").
+-define(EASYSD306101, "Character Lethal Rate +{0}%").
+-define(EASYSD306201, "Character Smite Rate +{0}%").
+-define(EASYSD306301, "Character Smite Rate +{0}%").
+-define(EASYSD306401, "Character Pursuit Rate +{0}%").
+-define(EASYSD306501, "Character Pursuit Rate +{0}%").
+-define(EASYSD306601, "Character Multi-strike Rate +{0}%").
+-define(EASYSD306701, "Character Multi-strike Rate +{0}%").
+-define(EASYSD306801, "Character Final DMG Bonus +{0}%").
+-define(EASYSD306901, "Character Final DMG Bonus +{0}%").
+-define(EASYSD401101, "Character HP +{0}").
+-define(EASYSD401201, "Character HP +{0}").
+-define(EASYSD401301, "Character HP +{0}").
+-define(EASYSD401401, "Character HP +{0}").
+-define(EASYSD401501, "Character DEF +{0}").
+-define(EASYSD401601, "Character DEF +{0}").
+-define(EASYSD401701, "Character DEF +{0}").
+-define(EASYSD401801, "Character DEF +{0}").
+-define(EASYSD401901, "Character Tenacity +{0}").
+-define(EASYSD402001, "Character Tenacity +{0}").
+-define(EASYSD402101, "Character Tenacity +{0}").
+-define(EASYSD402201, "Character Tenacity +{0}").
+-define(EASYSD402301, "Character Dodge +{0}").
+-define(EASYSD402401, "Character Dodge +{0}").
+-define(EASYSD402501, "Character Dodge +{0}").
+-define(EASYSD402601, "Character Dodge +{0}").
+-define(EASYSD402701, "Character Tough Rate +{0}%").
+-define(EASYSD402801, "Character Toughness +{0}%").
+-define(EASYSD402901, "Character Toughness +{0}%").
+-define(EASYSD403001, "Character Anti-Focus Rate +{0}%").
+-define(EASYSD403101, "Character Anti-Focus Rate +{0}%").
+-define(EASYSD403201, "Character Anti-Focus Rate +{0}%").
+-define(EASYSD403301, "Character Crit DMG Reduction +{0}%").
+-define(EASYSD403401, "Character Crit DMG Reduction +{0}%").
+-define(EASYSD403501, "Character Crit DMG Reduction +{0}%").
+-define(EASYSD403601, "Character Focus DMG Reduction +{0}%").
+-define(EASYSD403701, "Character Focus DMG Reduction +{0}%").
+-define(EASYSD403801, "Character Focus DMG Reduction +{0}%").
+-define(EASYSD403901, "Character Dodge Rate +{0}%").
+-define(EASYSD404001, "Character Dodge Rate +{0}%").
+-define(EASYSD404101, "Character Dodge Rate +{0}%").
+-define(EASYSD404201, "Character PVE DMG Reduction +{0}%").
+-define(EASYSD404301, "Character PVE DMG Reduction +{0}%").
+-define(EASYSD404401, "Character PVE DMG Reduction +{0}%").
+-define(EASYSD404501, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD404601, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD404701, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD404801, "Character Excellent DMG Reduction +{0}%").
+-define(EASYSD404901, "Character Excellent DMG Reduction +{0}%").
+-define(EASYSD405001, "Character Excellent DMG Reduction +{0}%").
+-define(EASYSD405101, "Character PVP DMG Reduction +{0}%").
+-define(EASYSD405201, "Character PVP DMG Reduction +{0}%").
+-define(EASYSD405301, "Character PVP DMG Reduction +{0}%").
+-define(EASYSD405401, "Character Skill DMG Reduction +{0}%").
+-define(EASYSD405501, "Character Skill DMG Reduction +{0}%").
+-define(EASYSD405601, "Character Skill DMG Reduction +{0}%").
+-define(EASYSD405701, "Character DMG Reduction + {0}%").
+-define(EASYSD405801, "Character DMG Reduction +{0}%").
+-define(EASYSD405901, "Character DMG Reduction +{0}%").
+-define(EASYSD406001, "Character Anti-Lethal Rate +{0}%").
+-define(EASYSD406101, "Character Anti-Lethal Rate +{0}%").
+-define(EASYSD406201, "Character Frailty Rate +{0}%").
+-define(EASYSD406301, "Character Frailty Rate +{0}%").
+-define(EASYSD406401, "Character Pursuit Res Rate +{0}%").
+-define(EASYSD406501, "Character Pursuit Res Rate +{0}%").
+-define(EASYSD406601, "Character Multi-strike Res Rate +{0}%").
+-define(EASYSD406701, "Character Multi-strike Res Rate +{0}%").
+-define(EASYSD406801, "Character Final DMG Reduction +{0}%").
+-define(EASYSD406901, "Character Final DMG Reduction +{0}%").
+-define(EASYSD501101, "Character Fire ATK +{0}").
+-define(EASYSD501201, "Character Fire ATK +{0}").
+-define(EASYSD501301, "Character Fire ATK +{0}").
+-define(EASYSD501401, "Character Fire ATK +{0}").
+-define(EASYSD502101, "Character Water ATK +{0}").
+-define(EASYSD502201, "Character Water ATK +{0}").
+-define(EASYSD502301, "Character Water ATK +{0}").
+-define(EASYSD502401, "Character Water ATK +{0}").
+-define(EASYSD503101, "Character Wind ATK +{0}").
+-define(EASYSD503201, "Character Wind ATK +{0}").
+-define(EASYSD503301, "Character Wind ATK +{0}").
+-define(EASYSD503401, "Character Wind ATK +{0}").
+-define(EASYSD504101, "Character Earth ATK +{0}").
+-define(EASYSD504201, "Character Earth ATK +{0}").
+-define(EASYSD504301, "Character Earth ATK +{0}").
+-define(EASYSD504401, "Character Earth ATK +{0}").
+-define(EASYSD505101, "Character Fire DEF +{0}").
+-define(EASYSD505201, "Character Fire DEF +{0}").
+-define(EASYSD505301, "Character Fire DEF +{0}").
+-define(EASYSD505401, "Character Fire DEF +{0}").
+-define(EASYSD506101, "Character Water DEF +{0}").
+-define(EASYSD506201, "Character Water DEF +{0}").
+-define(EASYSD506301, "Character Water DEF +{0}").
+-define(EASYSD506401, "Character Water DEF +{0}").
+-define(EASYSD507101, "Character Wind DEF +{0}").
+-define(EASYSD507201, "Character Wind DEF +{0}").
+-define(EASYSD507301, "Character Wind DEF +{0}").
+-define(EASYSD507401, "Character Wind DEF +{0}").
+-define(EASYSD508101, "Character Earth DEF +{0}").
+-define(EASYSD508201, "Character Earth DEF +{0}").
+-define(EASYSD508301, "Character Earth DEF +{0}").
+-define(EASYSD508401, "Character Earth DEF +{0}").
+-define(EASYSD509101, "Character Skill DMG Bonus +{0}%").
+-define(EASYSD509201, "Character Skill DMG Bonus +{0}%").
+-define(EASYSD509301, "Character Skill DMG Bonus +{0}%").
+-define(EASYSD509401, "Character Skill DMG Bonus +{0}%").
+-define(EASYSD510201, "Character DMG Bonus + {0}%").
+-define(EASYSD510301, "Character DMG Bonus +{0}%").
+-define(EASYSD510401, "Character DMG Bonus +{0}%").
+-define(EASYSD511201, "Character DMG Reduction + {0}%").
+-define(EASYSD511301, "Character DMG Reduction +{0}%").
+-define(EASYSD511401, "Character DMG Reduction +{0}%").
+-define(EASYSD512301, "Character Smite Rate +{0}%").
+-define(EASYSD512401, "Character Smite Rate +2.8%").
+-define(EASYSD513301, "Character Frailty Rate +{0}%").
+-define(EASYSD513401, "Character Frailty Rate +{0}%").
+-define(EASYSD514301, "Character Excellent Rate + {0}%").
+-define(EASYSD514401, "Character Excellent Rate + {0}%").
+-define(EASYSD515301, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD515401, "Character Anti-Excellent Rate +{0}%").
+-define(EASYSD601101, "Current Gold Pact (Gear Included) DEF +{0}%").
+-define(EASYSD602101, "Current Gold Pact (Gear Included) HP +{0}%").
+-define(EASYSD603101, "Current Gold Pact (Gear Included) ATK+{0}%").
+-define(EASYSD604101, "Current Gold Pact (Gear Included) Sunder +{0}%").
+-define(EASYSD605101, "Current Gold Pact (Gear Included) DEF +{0}%").
+-define(EASYSD606101, "Current Gold Pact (Gear Included) HP +{0}%").
+-define(EASYSD607101, "Current Gold Pact (Gear Included) ATK+{0}%").
+-define(EASYSD608101, "Current Gold Pact (Gear Included) Sunder +{0}%").
+-define(EASYSD609101, "Current Gold Pact (Gear Included) DEF +{0}%").
+-define(EASYSD610101, "Current Gold Pact (Gear Included) HP +{0}%").
+-define(EASYSD611101, "Current Gold Pact (Gear Included) ATK+{0}%").
+-define(EASYSD612101, "Current Gold Pact (Gear Included) Sunder +{0}%").
+-define(EASYSD613101, "Current Gold Pact (Gear Included) DEF +{0}%").
+-define(EASYSD614101, "Current Gold Pact (Gear Included) Sunder +{0}%").
+-define(EASYSD614201, "Tough Rate +{0}%").
+-define(EASYSD615101, "Overall Gold Pact (Gear Included) Sunder +{0}%").
+-define(EASYSD616101, "Overall Gold Pact (Gear Included) DEF +{0}%").
+-define(EASYSD617101, "Overall Gold Pact (Gear Included) HP +{0}%").
+-define(EASYSD617201, "Block Pierce Bonus +{0}%").
+-define(EASYSD618101, "Overall Gold Pact (Gear Included) ATK +{0}%").
+-define(EASYSD619101, "Overall Gold Pact (Gear Included) Sunder +{0}%").
+-define(EASYSD620101, "Overall Gold Pact (Gear Included) DEF +{0}%").
+-define(EASYSD620201, "Block Pierce Reduction +{0}%").
+-define(EASYSD621101, "Overall Gold Pact (Gear Included) HP +{0}%").
+-define(EASYSD621201, "Excellent DMG Reduction +{0}%").
+-define(EASYSD622101, "Overall Gold Pact (Gear Included) ATK +{0}%").
+-define(EASYSD622201, "Excellent DMG Bonus +{0}%").
+-define(EASYSD623101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD623201, "Skill DMG Reduction +{0}%").
+-define(EASYSD624101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD624201, "DMG Reduction + {0}%").
+-define(SS101, "Chance to increase Block when attacked").
+-define(SS102, "Chance to increase DEF when attacked").
+-define(SS103, "Chance to increase Dodge Rate when attacked").
+-define(SS104, "Greatly reduces DMG Taken upon entering battle").
+-define(SS105, "Greatly reduces DMG Taken when attacked without full HP").
+-define(SS106, "Increases Crit Res when taking critical damage").
+-define(SS107, "Chance to increase Block Rate when attacked").
+-define(SS108, "Chance to increase Move Speed when attacked").
+-define(SS109, "Chance to ignore damage when attacked").
+-define(SS110, "Chance to increase DEF greatly when attacked").
+-define(SS111, "Becomes invincible when attacked to death").
+-define(SS112, "Chance to ignore damage when attacked").
+-define(SS113, "Chance to increase Dodge Rate when attacked").
+-define(SS114, "Chance to greatly reduce DMG Taken when attacked").
+-define(SS115, "Greatly reduces DMG Taken upon entering battle").
+-define(SS116, "Chance to increase Block Rate when attacked with high HP").
+-define(SS117, "Chance to increase DEF when attacked").
+-define(SS118, "Chance to increase Dodge Rate when attacked").
+-define(SS119, "Chance to increase DEF when attacked with high HP").
+-define(SS120, "Chance to increase Dodge Rate when attacked with high HP").
+-define(SS121, "Chance to increase Block Rate when attacked").
+-define(SS122, "Chance to increase Block Rate when attacked with high HP").
+-define(SS123, "Chance to increase DMG Reduction when attacked").
+-define(SS124, "Chance to increase DEF when attacked with high HP").
+-define(SS125, "Chance to increase Dodge Rate when attacked with high HP").
+-define(SS126, "Greatly reduces DMG Taken upon entering battle").
+-define(SS127, "Greatly reduces DMG Taken when attacked with high HP").
+-define(SS128, "Chance to recover HP when attacked").
+-define(SS129, "Chance to increase DMG Reduction when attacked").
+-define(SS130, "Chance to increase DMG Reduction when attacked with high HP").
+-define(SS131, "Chance to increase DMG Reduction when attacked").
+-define(SS132, "Chance to increase DMG Reduction when attacked with high HP").
+-define(SS133, "Chance to increase DMG Reduction when Attacking If HP is not full").
+-define(SS134, "Chance to greatly increase DMG Reduction when attacked").
+-define(SS135, "Greatly increases DMG Reduction upon entering battle").
+-define(SS136, "Chance to increase Block Rate when attacked with high HP").
+-define(SS137, "Attacks have a chance to increase DMG Reduction").
+-define(SS138, "Gradually increases DMG Reduction upon entering battle").
+-define(SS139, "Attacks have a chance to increase DMG Reduction").
+-define(SS140, "Chance to increase Skill DMG Reduction when attacked").
+-define(SS141, "Chance to increase DMG Reduction upon entering battle").
+-define(SS142, "Chance to increase Skill DMG Reduction when attacked with high HP").
+-define(SS143, "Chance to increase Final DMG Reduction when attacked").
+-define(SS144, "Chance to increase Skill DMG Reduction when attacked with high HP").
+-define(SS145, "Attacks have a chance to increase Skill DMG Reduction").
+-define(SS146, "Chance to increase Skill DMG Reduction when attacked").
+-define(SS147, "Attacks have a chance to increase Skill DMG Reduction").
+-define(SS148, "Greatly increases DMG Reduction when dodging").
+-define(SS149, "There is a high chance to increase DMG Reduction when attacked").
+-define(SS150, "There is a high chance to increase DEF when attacked").
+-define(SS151, "Attacks have a chance to temporarily reduce Move Speed of the enemy").
+-define(SS152, "Attacks have a chance to increase DMG temporarily").
+-define(SS153, "Attacks have a chance to increase Crit Rate temporarily").
+-define(SS154, "Greatly increases DMG upon entering battle").
+-define(SS155, "Increases DMG when attacked before injured heavily").
+-define(SS156, "Increases Hit Rate after own attacks are dodged").
+-define(SS157, "Attacks have a chance to reduce Move Speed of the enemy for a long time").
+-define(SS158, "Attacks have a chance to increase DMG for a long time").
+-define(SS159, "Attacks have a chance to increase Crit Rate for a long time").
+-define(SS160, "Attacks have a chance to increase Block Pierce Rate").
+-define(SS161, "Attacks have a chance to increase Crit Rate temporarily").
+-define(SS162, "Attacks have a chance to reduce DMG Reduction of the enemy").
+-define(SS163, "Frightens the enemy when attacked to death").
+-define(SS164, "Attacks have a chance to increase Hit Rate").
+-define(SS165, "Greatly increases DMG upon entering battle").
+-define(SS166, "Attacks have a chance to increase DMG").
+-define(SS167, "Attacks have a chance to increase Block Pierce").
+-define(SS168, "Attacks have a chance to greatly increase DMG").
+-define(SS169, "Increases DMG Bonus when attacking with high HP").
+-define(SS170, "Increases Crit Rate when attacking with high HP").
+-define(SS171, "Increases Crit Rate when attacking with high HP").
+-define(SS172, "Increases Anti-block Rate when attacking with high HP").
+-define(SS173, "Increases Anti-block Rate when attacking with high HP").
+-define(SS174, "Increases Hit Rate when attacking with high HP").
+-define(SS175, "Increases DMG Bonus when attacking with high HP").
+-define(SS176, "Increases Hit Rate when attacking with high HP").
+-define(SS177, "Attacks have a chance to increase Anti-block Rate").
+-define(SS178, "Attacks have a chance to greatly increase DMG").
+-define(SS179, "Greatly increases DMG when attacking with high HP").
+-define(SS180, "Greatly increases DMG upon entering battle").
+-define(SS181, "Greatly increases DMG when attacking with high HP").
+-define(SS182, "Attacks have a chance to deal extra DMG").
+-define(SS183, "Attacks have a chance to increase Precision").
+-define(SS184, "Attacks have a chance to increase DMG Bonus").
+-define(SS185, "Increases DMG Bonus when attacking with high HP").
+-define(SS186, "Attacks have a chance to increase DMG Bonus").
+-define(SS187, "Increases DMG Bonus when attacking with high HP").
+-define(SS188, "Attacking If HP is not full increases DMG Bonus").
+-define(SS189, "Increases DMG Bonus upon entering battle").
+-define(SS190, "Increases DMG Bonus when attacking with high HP").
+-define(SS191, "Chance to increase DMG Bonus when attacked").
+-define(SS192, "Gradually increases DMG Bonus upon entering battle").
+-define(SS193, "Chance to increase DMG Bonus when attacked").
+-define(SS194, "Attacks have a chance to increase Skill DMG").
+-define(SS195, "Increases DMG Bonus upon entering battle").
+-define(SS196, "Increases Skill DMG when attacking with high HP").
+-define(SS197, "Attacks have a chance to increase Final DMG").
+-define(SS198, "Increases Skill DMG when attacked with high HP").
+-define(SS199, "Attacks have a chance to increase Skill DMG").
+-define(SS200, "Chance to increase Skill DMG when attacked").
+-define(SS501, "Attacks have a chance to increase Skill DMG").
+-define(SS502, "Greatly increases DMG Bonus when dodging").
+-define(SS503, "Attacks have a high chance to increase DMG Bonus").
+-define(SS504, "Attacks have a high chance to increase Crit Rate").
+-define(SS505, "Attacks have a high chance to increase DMG Bonus").
+-define(SS506, "Attacks have a high chance to increase Crit Rate").
+-define(SS507, "Attacks have a high chance to greatly increase DMG Bonus").
+-define(SS508, "There is a high chance to increase DMG Reduction when attacked").
+-define(SS509, "There is a high chance to increase DEF when attacked").
+-define(SS510, "There is a high chance to greatly increase DMG Reduction when attacked").
+-define(SS543, "Reduces the enemy's Skill DMG Reduction when attacking").
+-define(SS544, "Increases DEF when attacked with high HP").
+-define(SS545, "Reduces the enemy's Crit Rate when attacked").
+-define(SS546, "Reduces the enemy's Dodge Rate when attacking").
+-define(SS547, "Chance to increase the enemy's DMG Taken when attacked").
+-define(SS548, "Chance to reduce own DMG Taken when attacked").
+-define(SS549, "Gains a shield when attacked").
+-define(SS550, "Increases own Focus Rate in combat").
+-define(SS551, "Reduces the enemy's Block Rate when attacking with high HP").
+-define(SS552, "Increases Anti-Focus Rate in combat").
+-define(SS553, "Reduces the enemy's Anti-block Rate when attacking with high HP").
+-define(SS554, "Chance to reduce the enemy's Tough Rate when attacking").
+-define(SS555, "Chance to reduce the enemy's Dodge Rate when attacking").
+-define(SS556, "Chance to reduce the enemy's Hit Rate when attacked").
+-define(SS557, "Attacks have a chance to increase Final DMG").
+-define(SS558, "Chance to increase Final DMG Reduction when attacked").
+-define(SS559, "Inflicts Lethal when attacking with high HP").
+-define(SS560, "Chance to gain Bliss when attacked with low HP").
+-define(SS561, "Chance to increase Final DMG when attacked").
+-define(SS562, "Chance to inflict Bleed when attacked").
+-define(SS563, "Increases Final DMG when attacking with high HP").
+-define(SS564, "Inflicts Bleed when attacking with high HP").
+-define(SS565, "Attacking If HP is not full increases Final DMG").
+-define(SS566, "Attacking If HP is not full inflicts Bleed").
+-define(SS567, "Chance to increase Lethal Rate when attacked").
+-define(BN23016, "Shield").
+-define(BD23016, "Blocks a certain amount of damage").
+-define(BN81331, "Fang of Wrath V").
+-define(BN81341, "Focusing Voice V").
+-define(BN81351, "Calming Voice V").
+-define(BN81361, "Lucky Mirror V").
+-define(BN81371, "Resolute Song V").
+-define(BN81381, "Heart of Courage V").
+-define(BN81391, "Tepid Stone V").
+-define(BN81401, "Anti-Paralysis Fruit V").
+-define(BN81411, "Freezing Stone V").
+-define(BN81421, "Heart of Purification V").
+-define(BN81431, "Anti-bleeding Ring V").
+-define(BN81441, "Heart of Strength V").
+-define(BN81451, "Purity Stone V").
+-define(BN81461, "Unwieldy Jug V").
+-define(BN81471, "Cursed Blade V").
+-define(BN81481, "Loki's Axe V").
+-define(BN81491, "Chaos Massacre V").
+-define(BN81501, "Dark Massacre V").
+-define(BN81511, "Death Massacre V").
+-define(BN81521, "War Massacre V").
+-define(BN81531, "Daylight Blessings V").
+-define(BN81541, "Twilight Blessings V").
+-define(BN81551, "Night Blessings V").
+-define(BN81561, "Sunny Goblet V").
+-define(BN81571, "Rain Goblet V").
+-define(BN81581, "Snow Goblet V").
+-define(BN81591, "Thunder Goblet V").
+-define(BD81001, "Base ATK DMG +{0}%").
+-define(BD81011, "Heal for {1}% of ATK every {0}s").
+-define(BD81021, "ATK +{0}%").
+-define(BD81031, "Crit Rate +{0}%").
+-define(BD81041, "Crit DMG +{0}%").
+-define(BD81051, "Block Rate +{0}%").
+-define(BD81061, "Block Reduction +{0}%").
+-define(BD81071, "Warrior Skill DMG +{0}%").
+-define(BD81081, "Warrior Skill CD -{0}s").
+-define(BD81091, "Warrior Skill Crit Rate +{0}%").
+-define(BD81101, "Warrior Skill Crit DMG +{0}%").
+-define(BD81111, "Mage Skill DMG +{0}%").
+-define(BD81121, "Mage Skill CD -{0}s").
+-define(BD81131, "Mage Skill Crit Rate +{0}%").
+-define(BD81141, "Mage Skill Crit DMG +{0}%").
+-define(BD81151, "Archer Skill DMG +{0}%").
+-define(BD81161, "Archer Skill CD -{0}s").
+-define(BD81171, "Archer Skill Crit Rate +{0}%").
+-define(BD81181, "Archer Skill Crit DMG +{0}%").
+-define(BD81191, "Fury gain speed +{0}%").
+-define(BD81201, "Statue Skill Casting Time +{0}s").
+-define(BD81211, "Athena's Skill DMG +{0}%").
+-define(BD81221, "Athena's Skill Crit Rate +{0}%").
+-define(BD81231, "Athena's Skill Crit DMG +{0}%").
+-define(BD81241, "Morrigan's Skill DMG +{0}%").
+-define(BD81251, "Morrigan's Skill Crit Rate +{0}%").
+-define(BD81261, "Morrigan's Skill Crit DMG +{0}%").
+-define(BD81271, "Horus' Skill DMG +{0}%").
+-define(BD81281, "Horus' Skill Crit Rate +{0}%").
+-define(BD81291, "Horus' Skill Crit DMG +{0}%").
+-define(BD81301, "All Statues' Skill DMG +{0}%").
+-define(BD81311, "All Statues' Skill Crit Rate +{0}%").
+-define(BD81321, "All Statues' Skill Crit DMG +{0}%").
+-define(BD81331, "Auto refill Fury upon entering a boss fight").
+-define(BD81341, "Ignores early-warning skill DMG and effects when casting the Statue Skill.").
+-define(BD81351, "Immune to Stun; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81361, "Immune to Petrify; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81371, "Immune to Entrance; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81381, "Immune to Frighten; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81391, "Immune to Freeze; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81401, "Immune to Paralyze; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81411, "Immune to Scorch; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81421, "Immune to Poison; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81431, "Immune to Bleed; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81441, "Immune to Vulnerable; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81451, "Immune to Curse; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81461, "Immune to KO; When attacked by such debuff, increases DMG Bonus by {0}% for {1}s").
+-define(BD81471, "Attacks remove Enhance effect, and then increase DMG Bonus by {0}% for {1}s").
+-define(BD81481, "After attacking, inflicts Loki's Axe, reducing the enemy's healing effect by 100%").
+-define(BD81491, "Deals {0}% more damage to enemies in the Chaos Faction").
+-define(BD81501, "Deals {0}% more damage to enemies in the Dark Faction").
+-define(BD81511, "Deals {0}% more damage to enemies in the Undead Faction").
+-define(BD81521, "Deals {0}% more damage to enemies in the War Faction").
+-define(BD81531, "DMG dealt to enemies increased by {0}% during day time").
+-define(BD81541, "DMG dealt to enemies increased by {0}% at dusk").
+-define(BD81551, "DMG dealt to enemies increased by {0}% at night").
+-define(BD81561, "DMG dealt to enemies increased by {0}% on sunny days").
+-define(BD81571, "DMG dealt to enemies increased by {0}% on rainy days").
+-define(BD81581, "DMG dealt to enemies increased by {0}% on snowy days").
+-define(BD81591, "DMG dealt to enemies increased by {0}% on thundery days").
+-define(BN81001, "Sharp Claw I").
+-define(BN81002, "Sharp Claw II").
+-define(BN81003, "Sharp Claw III").
+-define(BN81011, "Force of Nature I").
+-define(BN81012, "Force of Nature II").
+-define(BN81013, "Force of Nature III").
+-define(BN81021, "Piercing Spear I").
+-define(BN81022, "Piercing Spear II").
+-define(BN81023, "Piercing Spear III").
+-define(BN81031, "Axe of Crit I").
+-define(BN81032, "Axe of Crit II").
+-define(BN81033, "Axe of Crit III").
+-define(BN81041, "Hammer of Crit DMG I").
+-define(BN81042, "Hammer of Crit DMG II").
+-define(BN81043, "Hammer of Crit DMG III").
+-define(BN81051, "Enchanted Ring I").
+-define(BN81052, "Enchanted Ring II").
+-define(BN81053, "Enchanted Ring III").
+-define(BN81061, "Guardian Necklace I").
+-define(BN81062, "Guardian Necklace II").
+-define(BN81063, "Guardian Necklace III").
+-define(BN81073, "Vanguard Blade III").
+-define(BN81074, "Vanguard Blade IV").
+-define(BN81083, "Cooling Blade III").
+-define(BN81084, "Cooling Blade IV").
+-define(BN81093, "Blade of Crit III").
+-define(BN81094, "Blade of Crit IV").
+-define(BN81103, "Blade of Crit DMG III").
+-define(BN81104, "Blade of Crit DMG IV").
+-define(BN81113, "Vanguard Orb III").
+-define(BN81114, "Vanguard Orb IV").
+-define(BN81123, "Cooling Orb III").
+-define(BN81124, "Cooling Orb IV").
+-define(BN81133, "Orb of Crit III").
+-define(BN81134, "Orb of Crit IV").
+-define(BN81143, "Orb of Crit DMG III").
+-define(BN81144, "Orb of Crit DMG IV").
+-define(BN81153, "Vanguard Jug III").
+-define(BN81154, "Vanguard Jug IV").
+-define(BN81163, "Cooling Jug III").
+-define(BN81164, "Cooling Jug IV").
+-define(BN81173, "Jug of Crit III").
+-define(BN81174, "Jug of Crit IV").
+-define(BN81183, "Jug of Crit DMG III").
+-define(BN81184, "Jug of Crit DMG IV").
+-define(BN81191, "Fury Bottle I").
+-define(BN81192, "Fury Bottle II").
+-define(BN81193, "Fury Bottle III").
+-define(BN81194, "Fury Bottle IV").
+-define(BN81195, "Fury Bottle V").
+-define(BN81201, "Time-lapse Mirror I").
+-define(BN81202, "Time-lapse Mirror II").
+-define(BN81203, "Time-lapse Mirror III").
+-define(BN81204, "Time-lapse Mirror IV").
+-define(BN81205, "Time-lapse Mirror V").
+-define(BN81214, "Spear of Wisdom IV").
+-define(BN81215, "Spear of Wisdom V").
+-define(BN81224, "Axe of Wisdom IV").
+-define(BN81225, "Axe of Wisdom V").
+-define(BN81234, "Hammer of Wisdom IV").
+-define(BN81235, "Hammer of Wisdom V").
+-define(BN81244, "Spear of Revenge IV").
+-define(BN81245, "Spear of Revenge V").
+-define(BN81254, "Axe of Revenge IV").
+-define(BN81255, "Axe of Revenge V").
+-define(BN81264, "Hammer of Revenge IV").
+-define(BN81265, "Hammer of Revenge V").
+-define(BN81274, "Pharaoh's Spear IV").
+-define(BN81275, "Pharaoh's Spear V").
+-define(BN81284, "Pharaoh's Axe IV").
+-define(BN81285, "Pharaoh's Axe V").
+-define(BN81294, "Pharaoh's Hammer IV").
+-define(BN81295, "Pharaoh's Hammer V").
+-define(BN81304, "Spear of the Almighty IV").
+-define(BN81305, "Spear of the Almighty V").
+-define(BN81314, "Axe of the Almighty IV").
+-define(BN81315, "Axe of the Almighty V").
+-define(BN81324, "Hammer of the Almighty IV").
+-define(BN81325, "Hammer of the Almighty V").
+-define(BN293, "Loki's Axe").
+-define(BD293, "Healing - {0}%").
+-define(BN294, "").
+-define(BN295, "").
+-define(BN296, "").
+-define(BN297, "").
+-define(BN298, "").
+-define(BN299, "").
+-define(BD294, "").
+-define(BD295, "").
+-define(BD296, "").
+-define(BD297, "").
+-define(BD298, "").
+-define(BD299, "").
+-define(BOSSSN1, "Stun").
+-define(BOSSSN2, "KO").
+-define(BOSSSN3, "Petrify").
+-define(BOSSSN4, "Entrance").
+-define(BOSSSN5, "Fear").
+-define(BOSSSN6, "Freeze").
+-define(BOSSSN7, "Paralyze").
+-define(BOSSSN8, "Scorch").
+-define(BOSSSN9, "Poison").
+-define(BOSSSN10, "Bleed").
+-define(BOSSSN11, "Vulnerable").
+-define(BOSSSN12, "Curse").
+-define(BOSSSN13, "Enhancement").
+-define(BOSSSN14, "Heal").
+-define(BOSSSN15, "Destruction").
+-define(SN271001, "Athena's Blessing").
+-define(SN271002, "Morrigan's Blessing").
+-define(SN271003, "Thor's Blessing").
+-define(SN271004, "Horus's Blessing").
+-define(SN271005, "Hades' Blessing").
+-define(SN271006, "Ishtar's Blessing").
+-define(SN271007, "Freya's Blessing").
+-define(SN271008, "SN271008").
+-define(SN271009, "SN271009").
+-define(SN271010, "SN271010").
+-define(SN271011, "SN271011").
+-define(SN271012, "SN271012").
+-define(SN271013, "SN271013").
+-define(SN271014, "SN271014").
+-define(SN272001, "Athena's Purification").
+-define(SN272002, "Morrigan's Purification").
+-define(SN272003, "Thor's Purification").
+-define(SN272004, "Horus' Purification").
+-define(SN272005, "Hades' Purification").
+-define(SN272006, "Ishtar's Purification").
+-define(SN272007, "Freya's Purification").
+-define(SN272008, "SN272008").
+-define(SN272009, "SN272009").
+-define(SN272010, "SN272010").
+-define(SN272011, "SN272011").
+-define(SN272012, "SN272012").
+-define(SN272013, "SN272013").
+-define(SN272014, "SN272014").
+-define(SN273001, "Athena Cure").
+-define(SN273002, "Morrigan Cure").
+-define(SN273003, "Thor Cure").
+-define(SN273004, "Horus Cure").
+-define(SN273005, "Hades' Cure").
+-define(SN273006, "Ishtar's Cure").
+-define(SN273007, "Freya's Cure").
+-define(SN273008, "Seven-sea Cure").
+-define(SN273009, "War Cure").
+-define(SN273010, "Revenge Cure").
+-define(SN273011, "Crescent Cure").
+-define(SN273012, "Night Cure").
+-define(SN273013, "Justice Cure").
+-define(SN273014, "Tempest Cure").
+-define(SN274001, "Athena Strike").
+-define(SN274002, "Morrigan Strike").
+-define(SN274003, "Thor Strike").
+-define(SN274004, "Horus Strike").
+-define(SN274005, "Hades' Strike").
+-define(SN274006, "Ishtar's Strike").
+-define(SN274007, "Freya's Strike").
+-define(SN274008, "Seven-sea Strike").
+-define(SN274009, "War Strike").
+-define(SN274010, "Revenge Strike").
+-define(SN274011, "Crescent Strike").
+-define(SN274012, "Night Strike").
+-define(SN274013, "Justice Strike").
+-define(SN274014, "Tempest Strike").
+-define(SD271001, "When attack crits, has a {0}% chance to get Athena's Blessing (DEF +100%) for {1}s.").
+-define(SD271002, "When taking critical attack, has a {0}% chance to trigger Morrigan's Blessing (restores 1.5% max HP every 2s) for {1}s.").
+-define(SD271003, "When blocking, has a {0}% chance to trigger Thor's Blessing (Block Rate and Block RED +20%) for {1}s.").
+-define(SD271004, "When dealing Focus Attack, has a {0}% chance to trigger Horus' Blessing (Crit Rate +30%) for {1}s.").
+-define(SD271005, "Dodging an attack has a {0}% chance to trigger Hades' Blessing (DMG Bonus +15%) for {1}s").
+-define(SD271006, "Dealing an excellent attack has a {0}% chance to trigger Ishtar's Blessing (Dodge Rate +15%) for {1}s").
+-define(SD271007, "Being hit by a critical attack has a {0}% chance to trigger Freya's Blessing (Healing Effect +30%) for {1}s").
+-define(SD271008, "When dodging, has a {0}% chance to trigger God's Blessing (Healing Effect +30%) for {1}s.").
+-define(SD271009, "When dealing Lethal Attack, has a {0}% chance to trigger God's Blessing (ATK +20%) for {1}s.").
+-define(SD271010, "When blocked, has a {0}% chance to trigger Erinyes Blessing (deal 2.5% Max HP of DMG to nearby enemies every 2s) for {1}s.").
+-define(SD271011, "When target's HP is below 50%, has a {0}% chance to trigger Crescent Goddess's Blessing (DMG RED +15%) for {1}s.").
+-define(SD271012, "When target's HP is more than 50%, has a {0}% chance to trigger Night Goddess' Blessing (Hit and Dodge +7.5%) for {1}s.").
+-define(SD271013, "When taking a single damage of more than 10% max HP, has a {0}% chance to trigger Justice Goddess' Blessing (Resistance +5%) for {1}s.").
+-define(SD271014, "When taking a single damage of less than 10% max HP, has a {0}% chance to trigger Tempest Goddess' Blessing (Control Time -30%) for 4.5s.").
+-define(SD272001, "When dealing critical strike, removes {1} buffs of {0} enemies nearby.").
+-define(SD272002, "When taking critical strike, removes {1} buffs of {0} enemies nearby.").
+-define(SD272003, "When blocking, removes {1} buffs of {0} enemies nearby.").
+-define(SD272004, "When dealing Focus Attack, removes {1} buffs of {0} enemies nearby.").
+-define(SD272005, "When dodged, removes {1} buffs of {0} enemies nearby.").
+-define(SD272006, "When dealing Excellent attack, removes {1} buffs of {0} enemies nearby.").
+-define(SD272007, "When taking Focus Attack, removes {1} buffs of {0} enemies nearby.").
+-define(SD272008, "When dodging, removes {1} buffs of {0} enemies nearby.").
+-define(SD272009, "When dealing Lethal attack, removes {1} buffs of {0} enemies nearby.").
+-define(SD272010, "When blocked, removes {1} buffs of {0} enemies nearby.").
+-define(SD272011, "When target's HP is below 50%, removes {1} buffs of {0} enemies nearby.").
+-define(SD272012, "When target's HP is higher than 50%, removes {1} buffs of {0} enemies nearby.").
+-define(SD272013, "When taking a single damage of more than 10% max HP, removes {1} buffs of {0} enemies nearby.").
+-define(SD272014, "When taking a single damage of less than 10% max HP, removes {1} buffs of {0} enemies nearby.").
+-define(SD273001, "When dealing critical strike, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273002, "When taking critical strike, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273003, "When blocking, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273004, "When dealing Focus Attack, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273005, "When dodged, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273006, "When dealing Excellent attack, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273007, "When taking Focus Attack, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273008, "When dodging, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273009, "When dealing Lethal attack, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273010, "When blocked, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273011, "When target's HP is below 50%, has a {0}% chance to restore self by {1}% max HP.").
+-define(SD273012, "When target's HP is above 50%, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273013, "When taking a single damage of more than 10% max HP, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD273014, "When taking a single damage of less than 10% max HP, has a {0}% chance to heal self by {1}% max HP.").
+-define(SD274001, "When dealing critical strike, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274002, "When taking critical strike, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274003, "When blocking, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274004, "When dealing Focus Attack, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274005, "When dodged, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274006, "When dealing Excellent attack, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274007, "When taking Focus Attack, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274008, "When dodging, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274009, "When dealing Lethal attack, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274010, "When blocked, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274011, "When target's HP is below 50%, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274012, "When target's HP is above 50%, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274013, "When taking a single damage of more than 10% max HP, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SD274014, "When taking a single damage of less than 10% max HP, has a {0}% chance to inflict extra {1}% damage to enemies nearby.").
+-define(SN104031, "Blast Sword").
+-define(SN104032, "Giant Sword").
+-define(SN105031, "Fire Burst").
+-define(SN105032, "Ice Strafe").
+-define(SN106031, "Punishing Arrow").
+-define(SN106032, "Crossing Arrow").
+-define(SN104151, "Sword Will").
+-define(SN104161, "Blade Castigation").
+-define(SN105151, "Magic Will").
+-define(SN105161, "Flame Spray").
+-define(SN106151, "Bow Will").
+-define(SN106161, "Lighting Spray").
+-define(SD104031, "Deals {0}%+ {1} damage to {3} targets (Monsters + {4}).Skill DMG multiplier increases by {2}% to Bleeding enemies.").
+-define(SD104032, "Deals {0}%+ {1} damage to {4} targets (Monsters + {5}).When releasing skill under Guardian status, grants self an energy shield (block damage of {2}% ATK) for {3}s.").
+-define(SD105031, "Deals {0}%+ {1} damage to {4} targets (Monsters + {5}).After releasing the skill, grants self Empower - Inferno Fire (DMG Bonus +3%) for {2}s and inflicts Fragile effect on the target (Skill DMG RED -15%) for {3}s.").
+-define(SD105032, "Deals {0}%+ {1} damage to {5} targets (Monsters + {6}).After releasing the skill, grants self Empower - Ice (DMG Bonus +3%) for {2}s and has a {3}% chance to freeze the enemy for {4}s.").
+-define(SD106031, "Deals {0}%+ {1} damage to {3} targets (Monsters + {4}) and gains 2 layers of Focus status.After releasing the skill, each layer inflicts extra damage of {2}% target's max HP.").
+-define(SD106032, "Deals {0}%+ {1} damage to {3} targets (Monsters + {4}) and gains 2 layers of Thunder status.After releasing the skill, each layer inflicts extra {2}% Skill DMG Bonus.").
+-define(SD104151, "When taking attack with less than {0}% HP, increases {1}% PvP DMG RED for {2}s.").
+-define(SD104161, "When there are 0 or 1 nearby enemy, attacks have a {0}% chance to deal {1}% damage to 1 enemy.For every {2}% HP lost, caster gains {3}% Skill DMG multiplier.").
+-define(SD105151, "When taking attack with less than {0}% HP, increases {1}% PvP DMG RED for {2}s.").
+-define(SD105161, "When there are 0 or 1 nearby enemy, attacks have a {0}% chance to deal {1}% damage to 1 enemy.").
+-define(SD106151, "When taking attack with less than {0}% HP, increases {1}% PvP DMG RED for {2}s.").
+-define(SD106161, "When there are 0 or 1 nearby enemy, attacks have a {0}% chance to deal {1}% DMG to 1 enemy.For every {2}% HP lost by the target, gains {3}% Skill DMG multiplier.").
+-define(BN61131, "Will").
+-define(BD61131, "PvP DMG RED +{0}%").
+-define(BN62026, "Inferno Fire").
+-define(BD62026, "DMG Bonus +{0}%").
+-define(BN62027, "Ice").
+-define(BD62027, "DMG Bonus +{0}%").
+-define(SKILLPRACTICETEXT2, "PvE Enhance: Skill Crit Rate +<color=#76E86A>20%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>3.1</color>s").
+-define(SKILLPRACTICETEXT3, "PvE Enhance: Skill DMG Bonus +<color=#76E86A>10%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>3.2</color>s").
+-define(SKILLPRACTICETEXT4, "PvE Enhance: Skill Crit Rate +<color=#76E86A>20%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>3.3</color>s").
+-define(SKILLPRACTICETEXT5, "PvE Enhance: Skill DMG Bonus +<color=#76E86A>10%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>3.4</color>s").
+-define(SKILLPRACTICETEXT6, "PvE Enhance: Skill Crit Rate +<color=#76E86A>20%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>3.5</color>s").
+-define(SKILLPRACTICETEXT7, "PvE Enhance: Skill DMG Bonus +<color=#76E86A>10%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>3.6</color>s").
+-define(SKILLPRACTICETEXT8, "PvE Enhance: Skill Concentrate Rate +<color=#76E86A>10%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>3.7</color>s").
+-define(SKILLPRACTICETEXT9, "PvE Enhance: Skill DMG Bonus +<color=#76E86A>10%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>3.8</color>s").
+-define(SKILLPRACTICETEXT10, "PvE Enhance: Skill Concentrate Rate +<color=#76E86A>10%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4</color>s").
+-define(SKILLPRACTICETEXT11, "PvE Enhance: Skill DMG Bonus +<color=#76E86A>10%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4.1</color>s").
+-define(SKILLPRACTICETEXT12, "PvE Enhance: Skill Excellent Rate +<color=#76E86A>5%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4.2</color>s").
+-define(SKILLPRACTICETEXT13, "PvE Enhance: Skill Excellent Rate +<color=#76E86A>5%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4.3</color>s").
+-define(SKILLPRACTICETEXT14, "PvE Enhance: Skill Excellent Rate +<color=#76E86A>5%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4.4</color>s").
+-define(SKILLPRACTICETEXT15, "PvE Enhance: Skill Lethal Rate + <color=#76E86A>4%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4.5</color>s").
+-define(SKILLPRACTICETEXT16, "PvE Enhance: Skill Lethal Rate + <color=#76E86A>4%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4.6</color>s").
+-define(SKILLPRACTICETEXT17, "PvE Enhance: Skill Lethal Rate + <color=#76E86A>4%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4.7</color>s").
+-define(SKILLPRACTICETEXT18, "PvE Enhance: Skill Pursuit Strike Rate +<color=#76E86A>3%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4.8</color>s").
+-define(SKILLPRACTICETEXT19, "PvE Enhance: Skill Pursuit Strike Rate +<color=#76E86A>3%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>4.9</color>s").
+-define(SKILLPRACTICETEXT20, "PvE Enhance: Skill Pursuit Strike Rate +<color=#76E86A>3%</color>
+PvP Enhance: Ultima Guardian duration increased to <color=#76E86A>5</color>s").
+-define(SN120301, "Mountain Cleave").
+-define(SN120341, "Whirling Axe").
+-define(SN120361, "Valor").
+-define(SN120381, "Whirling Cleave").
+-define(SN120401, "Sky Fire").
+-define(SN120441, "Fire Bird").
+-define(SN120461, "Burning").
+-define(SN120481, "Fel Star").
+-define(SN120501, "Arc Slash").
+-define(SN120541, "Crescent Slash").
+-define(SN120561, "Counter").
+-define(SN120581, "Sword Dance").
+-define(SN120601, "Sword Shadow").
+-define(SN120641, "Hurricane Blade").
+-define(SN120661, "Armor Break").
+-define(SN120681, "Chaos Blade").
+-define(SN120701, "Light Orb").
+-define(SN120741, "Nature Glow").
+-define(SN120761, "Mudstone").
+-define(SN120781, "Light Shock").
+-define(SD120301, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD120341, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD120361, "When attacking, has a {0}% chance to grants Wrath to self (DMG Bonus +{1}%) for {2}s.").
+-define(SD120381, "Strikes the enemy with Twin Axes, dealing {0}% damage to {1} targets (Monsters + {2}).").
+-define(SD120401, "Deals {0}% damage to {5} targets (Monsters + {6}), with a {1} chance to inflict Scorch effect (takes {3}% DMG every {2}s) for {4}s.").
+-define(SD120441, "Deals {0}% damage to {4} targets (Monsters + {5}), with Scorch effect (takes {2}% DMG every {1}s) for {3}s.").
+-define(SD120461, "Attack inflicts Scorch effect (takes damage of {2}% self ATK every {1}s) on {0} targets for {3}s.").
+-define(SD120481, "Deals {0}% damage to {4} targets (Monsters + {5}).Each stage of attack inflicts Scorch effect (takes {2}% damage every {1}s) for {3}s.").
+-define(SD120501, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD120541, "Deals {0}% damage to {3} targets (Monsters + {4}), with a {1}% chance to inflict Soften effect (DMG RED -10%) for {2}s.").
+-define(SD120561, "When attacked, has a {0}% chance to deal {2}% damage to {1} nearby targets.").
+-define(SD120581, "Strikes enemies around continually, dealing {0}% damage to {1} targets (Monsters + {2}).").
+-define(SD120601, "Deals {0}% damage to {5} targets (Monsters + {6}), with a {1}% chance to inflict Sword Shadow effect (each stage reduces {2}% DEF, up to {3} stages) for {4}s.").
+-define(SD120641, "Deals {0}% damage to {4} targets (Monsters + {5}), with Sword Shadow effect (each stage reduces {1}% DEF, up to {2} stages) for {3}s.").
+-define(SD120661, "Attack has a {0}% chance to deal {2}% damage to {1} targets with Sword Shadow effect (each stage reduces {3}% DEF, up to {4} stages) for {5}s.").
+-define(SD120681, "Deals {0}% damage to {4} targets (Monsters + {5}).The first and last stages of damage inflict Sword Shadow effect (each stage reduces {1}% DEF, up to {2} stages) for {3}s.").
+-define(SD120701, "Deals {0}% damage to {3} targets (Monsters + {4}), with a {1}% chance to inflict Hamstring effect (Move Speed -30%) for {2}s.").
+-define(SD120741, "Deals {0}% damage to {2} targets (Monsters + {3}) inflicts Petrify effect (cannot move) for {1}s.").
+-define(SD120761, "When attacked, has a {0}% chance to inflict Petrify effect (cannot move) on {1} targets for {2}s.").
+-define(SD120781, "Deals {0}% damage to {2} targets (Monsters + {3}) inflicts Petrify effect (cannot move) for {1}s.").
+-define(SS120301, "Wields a heavy axe to deal damage to the enemy.").
+-define(SS120341, "Throws a flying axe to deal damage to the enemy.").
+-define(SS120361, "Attacks have a chance to increase DMG").
+-define(SS120381, "Creates whirlwind around to deal continual damage to the enemy.").
+-define(SS120401, "Releases flame for a chance to scorch the enemy.").
+-define(SS120441, "Releases flame to scorch the enemy.").
+-define(SS120461, "Attack has a chance to scorch the enemy.").
+-define(SS120481, "Releases flame to inflict scorching damage multiple times.").
+-define(SS120501, "Cleave the enemy to deal damage.").
+-define(SS120541, "Deals damage and has a chance to increase enemies' damage taken.").
+-define(SS120561, "When taking attack, deals damage to nearby enemies.").
+-define(SS120581, "Creates whirlwind around to deal continual damage to the enemy.").
+-define(SS120601, "Deals damage and reduces DEF.").
+-define(SS120641, "Deals damage and reduces DEF.").
+-define(SS120661, "Attack has a chance to deal extra damage and reduces DEF.").
+-define(SS120681, "Sword aura deals multiple stages of damage and reduces DEF.").
+-define(SS120701, "Deals damage and has a chance to reduce Speed of the enemy.").
+-define(SS120741, "Deals a small amount of damage and petrifies the enemy.").
+-define(SS120761, "When attacked, has a chance to petrify the enemy.").
+-define(SS120781, "Deals a great amount of damage and petrifies the enemy.").
+-define(BN25110, "Sword Shadow").
+-define(BD25110, "DEF -{0}%, can stack up to 5 layers.").
+-define(SN261101, "Athena's Guardian").
+-define(SN261102, "Athena's Guardian").
+-define(SN261103, "Spear Thrust").
+-define(SN261104, "Spear Thrust").
+-define(SN261201, "Morrigan's Guardian").
+-define(SN261202, "Morrigan's Guardian").
+-define(SN261203, "Revenge Swirl").
+-define(SN261204, "Revenge Swirl").
+-define(SN261301, "Thor's Guardian").
+-define(SN261302, "Thor's Guardian").
+-define(SN261303, "Smiting Thunder").
+-define(SN261304, "Smiting Thunder").
+-define(SN261401, "Horus' Guardian").
+-define(SN261402, "Horus' Guardian").
+-define(SN261403, "Solar Halo").
+-define(SN261404, "Solar Halo").
+-define(SN261501, "Hades' Guardian").
+-define(SN261502, "Hades' Guardian").
+-define(SN261503, "Spectre Scythe").
+-define(SN261504, "Spectre Scythe").
+-define(SN261601, "Ishtar's Guardian").
+-define(SN261602, "Ishtar's Guardian").
+-define(SN261603, "Cutlass Strangle").
+-define(SN261604, "Cutlass Strangle").
+-define(SN261701, "Freya's Guardian").
+-define(SN261702, "Freya's Guardian").
+-define(SN261703, "Earth's Wrath").
+-define(SN261704, "Earth's Wrath").
+-define(SD261501, "Attacking has a {0}% chance to trigger Hades' Blessing (DMG Bonus +15%) for {1}s").
+-define(SD261502, "Attacking has a {0}% chance to trigger Hades' Blessing (DMG Bonus +15%) for {1}s").
+-define(SD261503, "Attacking has a {0}% chance to trigger the Spectre Scythe that hits {1} target(s) to deal {2}% DMG").
+-define(SD261504, "Attacking has a {0}% chance to trigger the Spectre Scythe that hits {1} target(s) to deal {2}% DMG").
+-define(SD261601, "Being attacked has a {0}% chance to trigger Ishtar's Blessing (Dodge Rate +15%) for {1}s").
+-define(SD261602, "Being attacked has a {0}% chance to trigger Ishtar's Blessing (Dodge Rate +15%) for {1}s").
+-define(SD261603, "Being attacked has a {0}% chance to trigger Cutlass Strangle that hits {1} target(s) to deal {2}% DMG").
+-define(SD261604, "Being attacked has a {0}% chance to trigger Cutlass Strangle that hits {1} target(s) to deal {2}% DMG").
+-define(SD261701, "Being attacked has a {0}% chance to trigger Freya's Blessing (Healing Effect +30%) for {1}s").
+-define(SD261702, "Being attacked has a {0}% chance to trigger Freya's Blessing (Healing Effect +30%) for {1}s").
+-define(SD261703, "Being attacked has a {0}% chance to trigger Earth's Wrath that hits {1} target(s) to deal {2}% DMG").
+-define(SD261704, "Being attacked has a {0}% chance to trigger Earth's Wrath that hits {1} target(s) to deal {2}% DMG").
+-define(SD261101, "When attacked, has a {0}% chance to trigger Athena's Blessing (DEF +100%) for {1}s.").
+-define(SD261102, "When attacked, has a {0}% chance to trigger Athena's Blessing (DEF +100%) for {1}s.").
+-define(SD261103, "When attacked, has a {0}% chance to trigger Spear Thrust and deals {2}% damage to {1} targets.").
+-define(SD261104, "When attacked, has a {0}% chance to trigger Spear Thrust and deals {2}% damage to {1} targets.").
+-define(SD261201, "When attacked, has a {0}% chance to trigger Morrigan's Blessing (restores 2.5% max HP every 2s) for {1}s.").
+-define(SD261202, "When attacked, has a {0}% chance to trigger Morrigan's Blessing (restores 2.5% max HP every 2s) for {1}s.").
+-define(SD261203, "When attacked, has a {0}% chance to trigger Revenge Swirl and deals {2}% damage to {1} targets.").
+-define(SD261204, "When attacked, has a {0}% chance to trigger Revenge Swirl and deals {2}% damage to {1} targets.").
+-define(SD261301, "When attacked, has a {0}% chance to trigger Thor's Blessing (Block Rate and Block RED +20%) for {1}s.").
+-define(SD261302, "When attacked, has a {0}% chance to trigger Thor's Blessing (Block Rate and Block RED +20%) for {1}s.").
+-define(SD261303, "When attacked, has a {0}% chance to trigger Smiting Thunder and deals {2}% damage to {1} targets.").
+-define(SD261304, "When attacked, has a {0}% chance to trigger Smiting Thunder and deals {2}% damage to {1} targets.").
+-define(SD261401, "When attacking, has a {0}% chance to trigger Horus' Blessing (Crit Rate +30%) for {1}s.").
+-define(SD261402, "When attacking, has a {0}% chance to trigger Horus' Blessing (Crit Rate +30%) for {1}s.").
+-define(SD261403, "When attacking, has a {0}% chance to trigger Solar Halo and deals {2}% damage to {1} targets.").
+-define(SD261404, "When attacking, has a {0}% chance to trigger Solar Halo and deals {2}% damage to {1} targets.").
+-define(BN366, "Frighten").
+-define(BD366, "Frightened! DMG Bonus -{0}%").
+-define(BN367, "Corruption").
+-define(BD367, "Corrupted! DMG RED -{0}%").
+-define(BN368, "Fragile").
+-define(BD368, "Fragile! Skill DMG RED -{0}%").
+-define(BN369, "Placidity").
+-define(BD369, "Wrath placid! Crit Rate -{0}%").
+-define(BN370, "Unfamiliar Skill").
+-define(BD370, "Unfamiliar Skill! Skill DMG RED -{0}%").
+-define(BN371, "Proficient Skill").
+-define(BD371, "Proficient Skill! Skill DMG RED +{0}%").
+-define(BN372, "Heaviness").
+-define(BD372, "Heavy Body! Block Rate -{0}%").
+-define(BN373, "Disturb").
+-define(BD373, "Disturbed! Anti-block Rate -{0}%").
+-define(BN374, "Fragility").
+-define(BD374, "Fragility! Tough Rate -{0}%").
+-define(BN375, "Condensation").
+-define(BD375, "Move Speed -{0}%, ATK -{1}%").
+-define(BN376, "Divine Will").
+-define(BD376, "God's Will! Final DMG +{0}%").
+-define(BN377, "Divine Grace").
+-define(BD377, "God's Grace! Final DMG RED +{0}%").
+-define(SD282001, "When attacking enemies under Stun status, increases Focus Rate by {0}% and Focus DMG Bonus by {1}% for {2}s.CD: {3}s.").
+-define(SD282002, "When attacked under Stun status, increases Dodge Rate by {0}% for {1}s and restores HP of {2}% ATK.CD: {3}s.").
+-define(SD282003, "When attacking enemies under Petrify status, increases Focus Rate by {0}% and Focus DMG Bonus by {1}% for {2}s.CD: {3}s.").
+-define(SD282004, "When attacked under Petrify status, increases Dodge Rate by {0}% for {1}s and restores HP of {2}% ATK.CD: {3}s.").
+-define(SD282005, "When attacking enemies under Freeze status, increases Focus Rate by {0}% and Focus DMG Bonus by {1}% for {2}s.CD: {3}s.").
+-define(SD282006, "When attacked under Freeze status, increases Dodge Rate by {0}% for {1}s and restores HP of {2}% ATK.CD: {3}s.").
+-define(SD282007, "When attacking enemies under Paralyze status, increases Focus Rate by {0}% and Focus DMG Bonus by {1}% for {2}s.CD: {3}s.").
+-define(SD282008, "When attacked under Paralyze status, increases Dodge Rate by {0}% for {1}s and restores HP of {2}% ATK.CD: {3}s.").
+-define(SD282009, "When attacking enemies with reduced Speed, increases Crit Rate by {0}% and DMG Bonus by {1}% for {2}s.CD: {3}s.").
+-define(SD282010, "When attacked under Speed reduced status, increases Tough Rate by {0}% and DMG RED by {1}% for {2}s.CD: {3}s.").
+-define(SD282011, "When attacking enemies under control, increases Anti-block Rate by {0}% and Sunder by {1}% for {2}s.CD: {3}s.").
+-define(SD282012, "When attacked under Speed reduced status, increases Block Rate by {0}% and DEF by {1}% for {2}s.CD: {3}s.").
+-define(BN55001, "Mark").
+-define(BD55001, "Focus Rate +{0}%, Focus DMG Bonus +{1}%").
+-define(BD55002, "Dodge Rate +{0}%").
+-define(BD55009, "Crit Rate +{0}%, DMG Bonus +{1}%").
+-define(BD55010, "Tough Rate +{0}%, DMG RED +{1}%").
+-define(BD55011, "Anti-block Rate +{0}%, Sunder +{1}%").
+-define(BD55012, "Block Rate +{0}%, DEF +{1}%").
+-define(BN53001, "Athena's Blessing").
+-define(BN53002, "Morrigan's Blessing").
+-define(BN53003, "Thor's Blessing").
+-define(BN53004, "Horus's Blessing").
+-define(BN53005, "Hades' Blessing").
+-define(BN53006, "Ishtar's Blessing").
+-define(BN53007, "Freya's Blessing").
+-define(BD53001, "Athena's Blessing! DEF +{0}%").
+-define(BD53002, "Morrigan's Blessing! Restores {0}% max HP every 2s").
+-define(BD53003, "Thor's Blessing! Block Rate and Block RED +{0}%").
+-define(BD53004, "Horus' Blessing! Crit Rate +{0}%").
+-define(BD53005, "Hades' Blessing! DMG Bonus +{0}%").
+-define(BD53006, "Ishtar's Blessing! Dodge Rate +{0}%").
+-define(BD53007, "Freya's Blessing! Heal Effect +{0}%").
+-define(SN104301, "Ultima - Blade of Celestine").
+-define(SD104301, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD104302, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD104303, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD104304, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD104305, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD104306, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {2}% of the target's Max HP and stun them for {3}s.CD: {4}s").
+-define(SD104307, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {2}% of the target's Max HP and stun them for {3}s.CD: {4}s").
+-define(SD104308, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {2}% of the target's Max HP and stun them for {3}s.CD: {4}s").
+-define(SD104309, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {2}% of the target's Max HP and stun them for {3}s.CD: {4}s").
+-define(SD104310, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {2}% of the target's Max HP and stun them for {3}s.CD: {4}s").
+-define(SD104311, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.The entire team gains Ultima that grants a {2}% ATK, DEF, and HP buff for {3}s.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {4}% of the target's Max HP and stun them for {5}s.The caster gains Stun Immunity for {6}s.CD: {7}s").
+-define(SD104312, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.The entire team gains Ultima that grants a {2}% ATK, DEF, and HP buff for {3}s.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {4}% of the target's Max HP and stun them for {5}s.The caster gains Stun Immunity for {6}s.CD: {7}s").
+-define(SD104313, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.The entire team gains Ultima that grants a {2}% ATK, DEF, and HP buff for {3}s.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {4}% of the target's Max HP and stun them for {5}s.The caster gains Stun Immunity for {6}s.CD: {7}s").
+-define(SD104314, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.The entire team gains Ultima that grants a {2}% ATK, DEF, and HP buff for {3}s.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {4}% of the target's Max HP and stun them for {5}s.The caster gains Stun Immunity for {6}s.CD: {7}s").
+-define(SD104315, "PvE Effect: Trigger Deadly Blade at the start of a boss challenge to deal DMG equal to {0}% of the boss's Max HP and grant the caster a shield with {1}% of Max HP.The entire team gains Ultima that grants a {2}% ATK, DEF, and HP buff for {3}s.
+PvP Effect: Trigger Deadly Blade when attacking an enemy player to deal DMG equal to {4}% of the target's Max HP and stun them for {5}s.The caster gains Stun Immunity for {6}s.CD: {7}s").
+-define(SN104401, "Ultima - Legion of Blades").
+-define(SN105301, "Ultima - Razor Blizzard").
+-define(SD105301, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD105302, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD105303, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD105304, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD105305, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD105306, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and freeze them for {4}s.CD: {5}s").
+-define(SD105307, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and freeze them for {4}s.CD: {5}s").
+-define(SD105308, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and freeze them for {4}s.CD: {5}s").
+-define(SD105309, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and freeze them for {4}s.CD: {5}s").
+-define(SD105310, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and freeze them for {4}s.CD: {5}s").
+-define(SD105311, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and freeze them for {6}s.The caster gains Freeze Immunity for {7}s.CD: {8}s").
+-define(SD105312, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and freeze them for {6}s.The caster gains Freeze Immunity for {7}s.CD: {8}s").
+-define(SD105313, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and freeze them for {6}s.The caster gains Freeze Immunity for {7}s.CD: {8}s").
+-define(SD105314, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and freeze them for {6}s.The caster gains Freeze Immunity for {7}s.CD: {8}s").
+-define(SD105315, "PvE Effect: Trigger Razor Blizzard at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.{1}s after battle starts, heal the entire team for {2}% Max HP.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Razor Blizzard when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and freeze them for {6}s.The caster gains Freeze Immunity for {7}s.CD: {8}s").
+-define(SN105401, "Ultima - Fire Phoenix").
+-define(SN106301, "Ultima - Spiral Bolt").
+-define(SD106301, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD106302, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD106303, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD106304, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD106305, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {1}% of the target's Max HP.CD: {2}s").
+-define(SD106306, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and stun them for {4}s.CD: {5}s").
+-define(SD106307, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and stun them for {4}s.CD: {5}s").
+-define(SD106308, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and stun them for {4}s.CD: {5}s").
+-define(SD106309, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and stun them for {4}s.CD: {5}s").
+-define(SD106310, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {3}% of the target's Max HP and stun them for {4}s.CD: {5}s").
+-define(SD106311, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and stun them for {6}s.The caster gains Stun Immunity for {7}s.CD: {8}s").
+-define(SD106312, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and stun them for {6}s.The caster gains Stun Immunity for {7}s.CD: {8}s").
+-define(SD106313, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and stun them for {6}s.The caster gains Stun Immunity for {7}s.CD: {8}s").
+-define(SD106314, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and stun them for {6}s.The caster gains Stun Immunity for {7}s.CD: {8}s").
+-define(SD106315, "PvE Effect: Trigger Spiral Bolt at start of a boss challenge to deal DMG equal to {0}% Max HP of the boss.Also grants self a {1}% DMG bonus for {2}s.Team gains Ultima that grants a {3}% ATK, DEF, and HP buff for {4}s.
+PvP Effect: Trigger Spiral Bolt when attacking an enemy player to deal DMG equal to {5}% of the target's Max HP and stun them for {6}s.The caster gains Stun Immunity for {7}s.CD: {8}s").
+-define(SN106401, "Ultima - Gigavolt Thunder").
+-define(SD104401, "PvE Effect: Attacks have a {0}% chance to summon multiple blades that strike {1} target(s) to deal {2}% Skill DMG.
+PvP Effect: When taking fatal DMG from another player, stay alive and gain Ultima Guardian for the next {3}s (immune to DMG, cannot be dispelled).Can be activated once in {4}s.").
+-define(SD105401, "PvE Effect: Attacks have a {0}% chance to summon a fiery phoenix that strikes {1} target(s) to deal {2}% Skill DMG.
+PvP Effect: When taking fatal DMG from another player, stay alive and gain Ultima Guardian for the next {3}s (immune to DMG, cannot be dispelled).Can be activated once in {4}s.").
+-define(SD106401, "PvE Effect: Attacks have a {0}% chance to summon a lightning strike to attack {1} target(s) to deal {2}% Skill DMG.
+PvP Effect: When taking fatal DMG from another player, stay alive and gain Ultima Guardian for the next {3}s (immune to DMG, cannot be dispelled).Can be activated once in {4}s.").
+-define(SKILLPRACTICETEXT1, "Attacks have <color=#76E86A>10</color>% chance to strike <color=#76E86A>9</color> target(s) to deal <color=#76E86A>100</color>% Skill DMG (PVE skill, cannot be used on players).").
+-define(BN60001, "Rend").
+-define(BN60016, "Healing Shield").
+-define(BN60024, "Armor").
+-define(BN60025, "Armor Study").
+-define(BN60026, "Technique").
+-define(BN60033, "Shatter").
+-define(BN60044, "Madness").
+-define(BN60049, "Fatigue").
+-define(BD60001, "Every {0}s, lose {1}% of Max HP.").
+-define(BD60016, "Obtain a shield that blocks minor damage; When the shield expires, heals self for some HP.").
+-define(BD60017, "Skill DMG Reduction +15%").
+-define(BD60018, "Heal self for 2% HP").
+-define(BD60024, "Armor! Gain {0} stack(s) of Armor Study for {1}s.").
+-define(BD60025, "Armor Study! For every stack, gain {0}% DMG Reduction.").
+-define(BD60027, "Seed of Life: When it ends, provide healing equal to 50% + 2.5% of HP lost by the character.").
+-define(BD60028, "Gain DMG Reduction.Increase skill effect by 100% for every 2 enemy players present.Max effect bonus: 400%.").
+-define(BD60033, "DMG Bonus +{0}%.This bonus decreases over a {1}s period (cannot be dispelled).").
+-define(BD60044, "Fury gain rate: +{0}%, Skill DMG bonus +{1}%.").
+-define(BD60049, "Move Speed- {0}%, Crit Rate- {1}%, DMG Reduction- {2}%.").
+-define(BF280001, "[Trophy]").
+-define(SN280001, "Rend").
+-define(SD280001, "When HP is above 70%, attack has {0}% chance to apply Rend to {1} nearby targets (for every {2}s, inflicts {3}% HP) for {4}s.").
+-define(SN280006, "Vehemence").
+-define(SD280006, "Attacks have {0}% chance to grant Vehemence (Crit Rate +{1}%, Crit DMG +{2}%) for {3}s.").
+-define(SN280011, "Healing Shield").
+-define(SD280011, "When HP is below 70%, being attacked has a {0}% chance to gain a Healing Shield (shield has the characters {1}% Max HP and heals character for {2}% Max HP when it dissipates) for {3}s.").
+-define(SN280016, "Oblivion").
+-define(SD280016, "Attacks have {0}% chance to affect {1} target(s) and dispel {2} stack(s) of buffs, and inflict Wasted Skill (Skill DMG Bonus -{3}%) for {4}s.").
+-define(SN280021, "Hardened Armor").
+-define(SD280021, "Being attacked has a {0}% chance to grant Armor (trigger Armor Stack per second (each stack gives +2% DMG Reduction) for {1}s).Duration: {2}s.").
+-define(SN280026, "Break Free").
+-define(SD280026, "When attacked, has a {0}% chance to dispel {1} layer(s) of debuffs from the character and grant Refined Technique (Skill DMG Bonus +{2}%) for {3}s.").
+-define(SN280031, "New Life").
+-define(SD280031, "{0}% chance to obtain {4} stacks Seed of Life effect when attacked, (when buff ends, each stack heals {1}% plus {2}% of the target's lost HP, up to {3} stacks) for {5} sec").
+-define(SN280036, "Vanguard").
+-define(SD280036, "When entering battle, gain {0}% DMG Reduction for {1}s.For every {2} enemy player(s) nearby, +{3}% skill effect (maxes out at {4}%).").
+-define(SN280041, "Shatter").
+-define(SD280041, "When HP is below 30%, attacks gain Shatter (+{0}% DMG Bonus that wanes over a {1}s period) for {2}s.").
+-define(SN280046, "God's Rage").
+-define(SD280046, "Being attacked has a {0}% chance to grant Wrath (+{1}% Fury gaining speed and +{2}% Skill DMG Bonus) for {3}s.").
+-define(SN280051, "Fatigue").
+-define(SD280051, "Attacks have a {0}% chance to inflict {1} nearby target(s) with Fatigue (Move Speed -{2}%, Crit Rate -{3}%, DMG Reduction -{4}%) for {5}s.").
+-define(SN280056, "Locked Defense").
+-define(SD280056, "Being attacked has a {0}% chance to inflict {1} target(s) with Stun for {2}s and grants character Divine Walk (Control duration -{3}%) for {4}s.").
+-define(BN20411, "Guild Tech").
+-define(BD20411, "Chariot Move SPD +{0}").
+-define(BD20421, "Chariot Heal Effect +{0}%").
+-define(BD20431, "Chariot Max HP +{0}%").
+-define(SN750001, "Capricorn Force").
+-define(SN750011, "Aquarius Force").
+-define(SN750021, "Pisces Force").
+-define(SN750031, "Aries Force").
+-define(SN750041, "Taurus Force").
+-define(SN750051, "Gemini Force").
+-define(SN750061, "Cancer Force").
+-define(SN750071, "Leo Force").
+-define(SN750081, "Virgo Force").
+-define(SN750091, "Libra Force").
+-define(SN750101, "Scorpio Force").
+-define(SN750111, "Sagittarius Force").
+-define(SD750001, "Excellent Rate +{0}%").
+-define(SD750011, "Anti-Excellent Rate +{0}%").
+-define(SD750021, "Lethal Rate increases {0}%").
+-define(SD750031, "Anti-Lethal Rate +{0}%").
+-define(SD750041, "Smite Rate +{0}%").
+-define(SD750051, "Frailty Rate +{0}%").
+-define(SD750061, "Pursuit Strike +{0}%").
+-define(SD750071, "Absolute Dodge +{0}%").
+-define(SD750081, "DMG Bonus +{0}%").
+-define(SD750091, "DMG Reduction + {0}%").
+-define(SD750101, "Skill DMG Bonus +{0}%").
+-define(SD750111, "Skill DMG Reduction +{0}%").
+-define(BN61146, "Ultima").
+-define(BD61146, "Ultima Enhance, ATK, DEF, HP +{0}%.Can stack up.").
+-define(BN61147, "Razor Blizzard Restoration").
+-define(BD61147, "Restore HP after 5s").
+-define(BD63030, "Ultima Enhance, DMG Bonus +{0}%").
+-define(BN1000401, "1v1 Champion").
+-define(BN1000402, "1v1 Champion").
+-define(BN1000403, "1v1 Runner-up").
+-define(BN1000404, "1v1 Runner-up").
+-define(BN1000405, "1v1 3rd Place").
+-define(BN1000406, "1v1 3rd Place").
+-define(BD1000401, "AFK and Mob EXP +{0}% ").
+-define(BD1000402, "The Guild with the 1v1 Champion in will gain AFK and Mob EXP +15% for its members; the server with 1v1 Champion in will gain AFK and Mob EXP +7% for its Warriors").
+-define(BD1000403, "AFK and Mob EXP +{0}% ").
+-define(BD1000404, "The Guild with the 1v1 2nd Place will gain AFK and Mob EXP +10% for its members; the server with 1v1 Champion in will gain AFK and Mob EXP +7% for its Warriors").
+-define(BD1000405, "AFK and Mob EXP +{0}% ").
+-define(BD1000406, "The Guild with the 1v1 3rd Place will gain AFK and Mob EXP +7.5% for its members; the server with 1v1 Champion in will gain AFK and Mob EXP +3% for its Warriors").
+-define(BN30100, "Chimera").
+-define(BD30100, "Morphed into a Chimera").
+-define(BN56021, "Enhanced Healing").
+-define(BD56021, "Healing Bonus +{0}%").
+-define(BN56031, "Enhanced DMG").
+-define(BD56031, "DMG Bonus +{0}%").
+-define(BN56036, "Stigma - Enhanced Dodge").
+-define(BN56037, "Stigma - Adv.Aim").
+-define(BN56038, "Stigma - ATK Enhancement").
+-define(BD56036, "The power of the Stigma! Dodge Rate +{0}%").
+-define(BD56037, "The power of the Stigma! Hit Rate +{0}%").
+-define(BD56038, "The power of the Stigma! DMG Bonus +{0}%").
+-define(SD510011, "Gains a shield of {0}% HP that lasts up to {1}s.").
+-define(SD510021, "Becomes invincible for {0}s (immune to DMG)").
+-define(SD510031, "Recovers {0}% of the lost HP").
+-define(SD520011, "Increases Healing Bonus by {0}% for {1}s").
+-define(SD520021, "Heals {0} allies for {1}% of ATK").
+-define(SD520031, "Dispels {1} buffs on {0} enemies").
+-define(SD520032, "Dispels {1} buffs on {0} enemies, with a {2}% chance to dispel {3} additional buffs").
+-define(SD530011, "Increases DMG Bonus by {0}% for {1}s").
+-define(SD530021, "Deals {1}% DMG to {0} enemies").
+-define(SD530030, "Targets {0} friendly unit(s) to dispel {1} debuff(s).").
+-define(SD530031, "Dispels {1} debuffs on {0} allies, with a {2}% chance to dispel {3} additional debuffs").
+-define(SD540001, "When taking a single damage of more than {0}% Max HP, recovers {1}% of Max HP").
+-define(SD540002, "When attacking an enemy with over {0}% HP, deals {2}% of Max HP as DMG to {1} nearby enemies").
+-define(SD540003, "When attacked, there is a {0}% chance to become immune to control effects for {1}s").
+-define(SD550001, "Each casting of the Relic Skill has a {0}% chance to increase own Dodge Rate by {2}% for {1}s").
+-define(SD550011, "Each casting of the Relic Skill has a {0}% chance to increase own Hit Rate by {2}% for {1}s").
+-define(SD550021, "Each casting of the Relic Skill has a {0}% chance to increase own DMG Bonus by {2}% for {1}s").
+-define(SN510011, "Shield of Courage").
+-define(SN510021, "Dragon's Blessing").
+-define(SN510031, "Healing Crown").
+-define(SN520011, "Book of Healing").
+-define(SN520021, "Oceanhorn").
+-define(SN520032, "Kettle of Removal").
+-define(SN530011, "Uplifting Song").
+-define(SN530021, "Deadly Hourglass").
+-define(SN530031, "Purification Tempest").
+-define(SN540001, "Healing Song").
+-define(SN540002, "Blood Thorn").
+-define(SN540003, "Off the Hook").
+-define(SN550001, "Enhanced Dodge").
+-define(SN550011, "Adv.Aim").
+-define(SN550021, "DMG Upgrade").
+-define(BF1007, "[Relic]").
+-define(SYSN1001, "Resilient Defense").
+-define(SYSN1002, "Well-rounded").
+-define(SYSN1003, "Enhanced Dodge").
+-define(SYSN2001, "Resilient Defense").
+-define(SYSN2002, "Well-rounded").
+-define(SYSN2003, "Adv.Aim").
+-define(SYSN3001, "Resilient Defense").
+-define(SYSN3002, "Well-rounded").
+-define(SYSN3003, "ATK Enhance").
+-define(SYSN4001, "Resilient Defense").
+-define(SYSN4002, "Well-rounded").
+-define(SYSN4003, "DMG Reduction: Enhanced").
+-define(SS280001, "Attack has a chance to deal damage over time.").
+-define(SS280006, "Attack has a chance to get a Crit buff.").
+-define(SS280011, "When attacked, has a chance to get a shield and healing.").
+-define(SS280016, "Attack has a chance to temporarily reduce DMG dealt by target.").
+-define(SS280021, "When attacked, has a chance to grant an increasingly stronger DMG reduction.").
+-define(SS280026, "When attacked, has a chance to get a temporary DMG boost.").
+-define(SS280031, "When attacked, has a chance to get Seed of Life.").
+-define(SS280036, "Entering battle grants DMG Reduction.").
+-define(SS280041, "At lower HP, gain a DMG bonus that decreases over time.").
+-define(SS280046, "When attacked, has a chance to raise Fury gain.").
+-define(SS280051, "When attacked, has a chance to inflict debuff on multiple enemies.").
+-define(SS280056, "When attacked, has a chance to stun the enemy.").
+-define(SN120901, "Arbiter").
+-define(SN120941, "Judgement Thunder").
+-define(SN120961, "Divine Oppression").
+-define(SN120981, "Light Blessing").
+-define(SD120901, "Deals {0}% damage to {3} targets (Monsters + {4}), with a {1}% chance to inflict Blunted (Sunder --24%) for {2}s.").
+-define(SD120941, "Deals {0}% damage to {3} targets (Monsters + {4}), with a {1}% chance to inflict Blunted (Sunder --24%) for {2}s.").
+-define(SD120961, "When attacked, {0}% chance to dispel {1} debuff stacks and heal for HP equal to {2}% of ATK.").
+-define(SD120981, "{3} targets on the team heal for HP equal to {0}% of ATK and gain Ichor (Max HP +{1}%) for {2}s.").
+-define(SS120901, "Deals a small amount of damage and reduces Sunder.").
+-define(SS120941, "Deals a moderate amount of damage and reduces Sunder.").
+-define(SS120961, "Chance to clear debuffs and recover HP when attacked.").
+-define(SS120981, "Recovers HP and increases Max HP.").
+-define(BN70017, "Mighty").
+-define(BD70017, "[Mighty] shaken by the power of War God Ares.Get knocked back.").
+-define(BN70018, "Sword of War").
+-define(BD70018, "When [Sword of War] is wielded by Ares, none can stand in the path.").
+-define(SN220101, "Revival Power").
+-define(SN220201, "True Grit").
+-define(SN220301, "Divine Return").
+-define(SN220401, "Icy Punishment").
+-define(SN220501, "Silent Massacre").
+-define(SN220601, "Intimidate").
+-define(SN220701, "First Strike").
+-define(SN220801, "Piercing Thorns").
+-define(SN220901, "Divine Retaliation").
+-define(SN221001, "Life Drain").
+-define(SN221101, "Near-death Instincts").
+-define(SN221201, "Turning Tides").
+-define(SN221301, "Slow Resistance").
+-define(SN221401, "Rock Solid").
+-define(SN221501, "Unstoppable").
+-define(SN221601, "Soul Shelter").
+-define(SN221701, "Heavenly Blessing").
+-define(SN221801, "Precise Technique").
+-define(SN221901, "Rage Smite").
+-define(SN222001, "Endless Slaughter").
+-define(SD220101, "When in battle, restores HP equal to {1}% of ATK every {0}s.").
+-define(SD220201, "When taking a single damage of more than {0}% of Max HP, heal for {1}% of ATK.").
+-define(SD220301, "Healing received +{0}%").
+-define(SD220401, "Attacks have a {0}% chance to freeze {1} enemies for {2}s.").
+-define(SD220501, "Attacks have a {0}% chance to silence {1} enemies for {2}s.").
+-define(SD220601, "Attacks have a {0}% chance to terrorize {1} enemies for {2}s.").
+-define(SD220701, "Increases ATK by {1}% for {0}s after entering the battle.").
+-define(SD220801, "When attacked, there is a {0}% chance to reflect damage, hitting {1} nearby enemies for damage equal to {2}% of DEF.").
+-define(SD220901, "Attacks have a {0}% chance to dispel {2} buffs from {1} nearby enemies.Deals {3}% extra DMG after successfully dispelling.").
+-define(SD221001, "Base attacks heal the user for HP equal to {0}% of ATK.").
+-define(SD221101, "When taking fatal damage, HP becomes {0} and gain immunity to death for {1}s.").
+-define(SD221201, "When attacked, {0}% chance to dispel {1} debuff stacks.If the dispel is successful, heal for HP equal to {2}% of ATK.").
+-define(SD221301, "Reduces the duration of Slow effects taken by {0}%.").
+-define(SD221401, "Reduces the duration of DOT taken by {0}%.").
+-define(SD221501, "Reduces the duration of Control effects taken by {0}%.").
+-define(SD221601, "After morphing, increase the team's Move SPD by {0}% and DMG Reduction by {1}% for {2}s.").
+-define(SD221701, "After morphing, get one of the following bonuses at random: DMG Bonus +{0}%; DMG Reduction +{1}%; recover HP equal to {2}% of ATK per second for {3}s.").
+-define(SD221801, "After morphing, get one of the following bonuses at random: DMG Bonus +{0}%; DMG Reduction +{1}%; recover HP equal to {2}% of ATK per second for {3}s.").
+-define(SD221901, "After landing a crit, gain +{0}% Excellent Rate for {1}s and gain a shield for {2}% of ATK for {3}s.").
+-define(SD222001, "After killing the target, gain +{0}% DMG Bonus for {1}s and gain a shield for {2}% of ATK for {3}s.").
+-define(BN58041, "First Strike").
+-define(BN58051, "Death Immunity").
+-define(BN58061, "Soul Shelter").
+-define(BN58071, "Heavenly Blessing").
+-define(BN58081, "Heavenly Blessing").
+-define(BN58091, "Heavenly Blessing").
+-define(BN58101, "Precise Technique").
+-define(BN58111, "Precise Technique").
+-define(BN58121, "Precise Technique").
+-define(BN58131, "Rage Smite").
+-define(BN58141, "Endless Slaughter").
+-define(BD58041, "First Strike! ATK +{0}%").
+-define(BD58051, "Near-death Instincts! Immune to death for the duration").
+-define(BD58061, "Soul Shelter! Move SPD +{0}%, DMG Reduction +{1}%").
+-define(BD58071, "Heavenly Blessing! DMG Bonus +{0}%").
+-define(BD58081, "Heavenly Blessing! DMG Reduction +{0}%").
+-define(BD58091, "Heavenly Blessing! Recover HP equal to {1}% of ATK every {0} s").
+-define(BD58101, "Precise Technique! Skill DMG Bonus +{0}%").
+-define(BD58111, "Precise Technique! Skill DMG Reduction +{0}%").
+-define(BD58121, "Precise Technique! Recover HP equal to {1}% of ATK every {0} s").
+-define(BD58131, "Rage Smite! +{0}% Excellent Rate").
+-define(BD58141, "Endless Slaughter! +{0}% DMG Bonus").
+-define(SN104006_TITLE, "Crescent Slash").
+-define(SN104007_TITLE, "Moon Slash").
+-define(SN104008_TITLE, "Whirling Cleave").
+-define(SN104009_TITLE, "Blink Slash").
+-define(SN104011_TITLE, "Thunder Zone").
+-define(SN104012_TITLE, "War God's Descent").
+-define(SN104021_TITLE, "Breaking Cleave").
+-define(SN104022_TITLE, "Thor's Blessing").
+-define(SN104023_TITLE, "Fearless Cleave").
+-define(SN104031_TITLE, "Blast Sword").
+-define(SN104032_TITLE, "Giant Sword").
+-define(SN104101_TITLE, "Deadly Blade").
+-define(SN104111_TITLE, "Wrath Enhance").
+-define(SN104121_TITLE, "Battle Heal").
+-define(SN104131_TITLE, "Fighting Spirit").
+-define(SN104141_TITLE, "Thunder Blast").
+-define(SN104151_TITLE, "Sword Will").
+-define(SN104161_TITLE, "Blade Castigation").
+-define(SN104301_TITLE, "Ultima - 
+Blade of Celestine").
+-define(SN104401_TITLE, "Ultima - 
+Legion of Blades").
+-define(SN105006_TITLE, "Fire Blast").
+-define(SN105007_TITLE, "Frost Impact").
+-define(SN105008_TITLE, "Sundering Flame").
+-define(SN105009_TITLE, "Glacial Blast").
+-define(SN105011_TITLE, "Ice Dungeon").
+-define(SN105012_TITLE, "Vulcan's Descent").
+-define(SN105021_TITLE, "Fire Spiral").
+-define(SN105022_TITLE, "Khione's Descent").
+-define(SN105023_TITLE, "Falling Flame").
+-define(SN105024_TITLE, "Ice Shock").
+-define(SN105031_TITLE, "Fire Burst").
+-define(SN105032_TITLE, "Ice Strafe").
+-define(SN105101_TITLE, "Fire Jet").
+-define(SN105111_TITLE, "Magic Imbue").
+-define(SN105121_TITLE, "HP Regen").
+-define(SN105131_TITLE, "Uplift").
+-define(SN105141_TITLE, "Frost Heal").
+-define(SN105151_TITLE, "Magic Will").
+-define(SN105161_TITLE, "Flame Spray").
+-define(SN105301_TITLE, "Ultima - 
+Razor Blizzard").
+-define(SN105401_TITLE, "Ultima - 
+Fire Phoenix").
+-define(SN106006_TITLE, "Scatter Shot").
+-define(SN106007_TITLE, "Whirling Arrow").
+-define(SN106008_TITLE, "Suspended Arrow").
+-define(SN106009_TITLE, "Thunder Bird").
+-define(SN106011_TITLE, "Thunder Bolts").
+-define(SN106012_TITLE, "Realm of Nature").
+-define(SN106021_TITLE, "Hailing Arrows").
+-define(SN106022_TITLE, "Thunder Zone").
+-define(SN106023_TITLE, "Arrow Rain").
+-define(SN106031_TITLE, "Punishing Arrow").
+-define(SN106032_TITLE, "Crossing Arrow").
+-define(SN106101_TITLE, "Lightning Arrow").
+-define(SN106111_TITLE, "Battle Enhance").
+-define(SN106121_TITLE, "Nature's Healing").
+-define(SN106131_TITLE, "Excitation").
+-define(SN106141_TITLE, "Mine").
+-define(SN106151_TITLE, "Bow Will").
+-define(SN106161_TITLE, "Lighting Spray").
+-define(SN106301_TITLE, "Ultima - 
+Spiral Bolt").
+-define(SN106401_TITLE, "Ultima - 
+Gigavolt Thunder").
+-define(SN107006_TITLE, "").
+-define(SN107007_TITLE, "").
+-define(SN107008_TITLE, "").
+-define(SN107009_TITLE, "").
+-define(SN107011_TITLE, "").
+-define(SN107012_TITLE, "").
+-define(SN107021_TITLE, "").
+-define(SN107022_TITLE, "").
+-define(SN107031_TITLE, "").
+-define(SN107032_TITLE, "").
+-define(SN107111_TITLE, "").
+-define(SN107121_TITLE, "").
+-define(SN107131_TITLE, "").
+-define(SN107141_TITLE, "").
+-define(SN107151_TITLE, "").
+-define(SN107161_TITLE, "").
+-define(SN107301_TITLE, "").
+-define(SN107401_TITLE, "").
+-define(BF1009, "[Seal Proof]").
+-define(BF1008, "[Costume]").
+-define(SN120801, "Celestial Tunes").
+-define(SN120841, "Illuminated Strings").
+-define(SN120861, "Sanctuary of Light").
+-define(SN120881, "Bastion of Light").
+-define(SD120801, "To {3} targets (monsters +{4}), deal {0}% DMG and has a {1}% chance to dispel {2} buff(s).").
+-define(SD120841, "To {3}targets (monsters +{4}), deal {0}% DMG.Last damaging strike inflicts a {1}% slow for {2}s.").
+-define(SD120861, "When attacked, {0}% chance to dispel {1} debuff(s) and acquire Deity Wandering (immunity to slow) for {2}s.").
+-define(SD120881, "Team gains invincibility (immunity to DMG) for {0}s and dispel all debuffs of the team.").
+-define(SS120801, "Deals damage and chance to dispel buffs").
+-define(SS120841, "Deals minor damage and slows enemies").
+-define(SS120861, "When attacked, chance to dispel debuffs and get immunity to slow").
+-define(SS120881, "Gives damage immunity and dispels debuffs").
+-define(SN121001, "Blood Shadow").
+-define(SN121041, "Sanguine Burst").
+-define(SN121061, "Blood Curse").
+-define(SN121081, "Immortal Flesh").
+-define(SD121001, "To {3} targets (monsters +{4}), deal {0}% DMG and has a {1}% chance to inflict curse (-15% Hit) for {2}s.").
+-define(SD121041, "Deals {0}% DMG to {3} target(s) (monsters +{4}) and has a {1}% chance to heal 3 friendly characters for {2}% of Max HP.").
+-define(SD121061, "Attacks have a {0}% chance to inflict curse (-15% Hit) for {1}s and heal {2}% ATK of HP.").
+-define(SD121081, "Deals {0}% DMG to {3} target(s) (monsters +{4}), heals 3 friendly characters for HP equal to {1}% of ATK, and inflicts Curse on enemies (-15% Hit) for {2}s.").
+-define(SS121001, "Deals minor damage and reduces Hit.").
+-define(SS121041, "Deals moderate damage and heals HP.").
+-define(SS121061, "Attacks have chance to reduce Hit and heal HP.").
+-define(SS121081, "Deals damage, heals HP, and reduces Hit.").
+-define(SN121101, "Cleave").
+-define(SN121141, "Fiery Whirl").
+-define(SN121161, "Combo Mastery").
+-define(SN121181, "Five Stars").
+-define(SD121101, "To {4} targets (monsters +{5}), deal {0}% DMG, has a {1}% chance to strike {2} target(s) and deal {3}% bonus DMG.").
+-define(SD121141, "To {4} targets (monsters +{5}), deal {0}% DMG, with every damaging strike having a {1}% chance to strike {2} target(s) and deal {3}% bonus DMG.").
+-define(SD121161, "Attacks have a {0}% chance to strike {1} target(s) and deal {2}% DMG.").
+-define(SD121181, "To {4} targets (monsters +{5}), deal {0}% DMG, with every damaging strike having a {1}% chance to strike {2} target(s) and deal {3}% bonus DMG.").
+-define(SS121101, "Deals minor damage with a low chance of dealing bonus damage.").
+-define(SS121141, "Deals moderate damage with a chance to deal bonus damage.").
+-define(SS121161, "Attacks have a chance to deal bonus single target damage.").
+-define(SS121181, "Deals massive damage with a chance to deal bonus damage.").
+-define(SN121201, "Vehement Strike").
+-define(SN121241, "Seismic Slam").
+-define(SN121261, "Smite").
+-define(SN121281, "Cosmic Revolution").
+-define(SD121201, "To {5} targets (monsters +{6}), deal {0}% DMG and has a {1}% chance to trigger Smite (to {2} opponent(s), deal {3}% bonus DMG and inflict stun for {4}s).").
+-define(SD121241, "To {5} targets (monsters +{6}), deal {0}% DMG and has a {1}% chance to trigger Smite (to {2} opponent(s), deal {3}% bonus DMG and inflict stun for {4}s).").
+-define(SD121261, "Attacks have a {0}% chance to trigger Smite (to {1} opponent(s), deal {2}% bonus DMG and inflict stun for {3}s)").
+-define(SD121281, "To {4} targets (monsters +{5}), deal {0}% DMG, with the first and final strike triggering Smite (to {1} opponent(s), deal {2}% bonus DMG and inflict stun for {3}s)").
+-define(SS121201, "Deals minor damage with a low chance of dealing bonus damage and crowd control.").
+-define(SS121241, "Deals moderate damage with a chance to deal bonus damage and crowd control.").
+-define(SS121261, "Attacks have a chance to deal bonus single target damage and crowd control.").
+-define(SS121281, "Deals massive damage with the first and last strikes dealing bonus damage and crowd control.").
+-define(SN121301, "Shuriken").
+-define(SN121341, "Mirror Mirages").
+-define(SN121361, "Unrivaled Edge").
+-define(SN121381, "Lightning Slash").
+-define(SD121301, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD121341, "To {4} targets (monsters +{5}), deal {0}% DMG and has a {1}% chance to trigger Unrivaled Edge (Sunder +{2}%) for {3}s").
+-define(SD121361, "At below {0}% HP, attacks trigger Unrivaled Edge (Sunder +{1}%) for {2}s").
+-define(SD121381, "To {3} targets (monsters +{4}), deal {0}% DMG.After casting, all characters in the team gain {1}% Sunder for {2}s.").
+-define(SS121301, "Use ninjitsu to deal minor damage.").
+-define(SS121341, "Deals moderate damage with a chance to buff character's Sunder.").
+-define(SS121361, "At low HP, attacks give a Sunder buff.").
+-define(SS121381, "Deals massive damage and raises the team's Sunder.").
+-define(BN25157, "Unrivaled Edge").
+-define(BD25157, "Unrivaled Edge! Sunder +{0}%").
+-define(BF609, "[Archangel]").
+-define(BF610, "[Dracula]").
+-define(BF611, "[Magic Monkey Hanuman]").
+-define(BF612, "[Hattori Hanzo]").
+-define(BF613, "[Kumiho Daji]").
+-define(BF614, "[Elizabeth]").
+-define(BN25165, "Blood Shield").
+-define(BD25165, "A shield made of blood! Blocks a certain amount of damage.").
+-define(SD121401, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD121441, "Deals {0}% damage to {3} target(s) (Monsters + {4}).The second hit has a {1}% chance to inflict Entrance for {2}s.").
+-define(SD121461, "When attacking enemies with below {0}% HP, inflicting Entrance (lose Control) for {1}s.").
+-define(SD121481, "Deal {0}% DMG to {2} targets (monsters +{3}).The first hit Entrances targets for {1}s.").
+-define(SN121401, "Soul Blast").
+-define(SN121441, "Fly Forth").
+-define(SN121461, "Fox Charm").
+-define(SN121481, "Nine Tails Advent").
+-define(SD121501, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD121541, "Deal {0}% DMG to {2} targets (monsters +{3}), plus extra DMG equal to {1}% of the user's max HP.").
+-define(SD121561, "When attacked, has a {0}% chance to get Blood Shield (blocks {1}% of attack DMG) for {2}s.").
+-define(SD121581, "Deal {0}% DMG to {4} targets (monsters +{5}), with a {1}% Leech effect.Gain Blood Shield (blocks {2}% of attack DMG) for {3}s.").
+-define(SN121501, "Blood Bat").
+-define(SN121541, "Power of the Dead").
+-define(SN121561, "Blood Favor").
+-define(SN121581, "Hell of Bloodbath").
+-define(SS121401, "Mana Orb deals minor damage").
+-define(SS121441, "Deals moderate damage and entrances enemies").
+-define(SS121461, "Inflicts Entrance when attacking enemies with low HP").
+-define(SS121481, "Deals massive damage and Entrances enemies").
+-define(SS121501, "Casts Blood Force to deal minor damage").
+-define(SS121541, "Deals damage plus extra damage determined by player's HP").
+-define(SS121561, "When attacked, has a chance to gain a shield").
+-define(SS121581, "Deals massive damage with Leech and grants a shield").
+-define(SN291001, "Zeal Shield").
+-define(SN291011, "Precise Reflection").
+-define(SN291021, "Wisdom Impact").
+-define(SN291031, "Fire Scorch").
+-define(SN291041, "Fire Scorch").
+-define(SN291051, "Fire Scorch").
+-define(SN291061, "Fury Ward").
+-define(SN291071, "Fury Ward").
+-define(SN291081, "Fury Ward").
+-define(SN291091, "Heat Strike").
+-define(SN291101, "Heat Strike").
+-define(SN291111, "Heat Strike").
+-define(SN291121, "Mist Insight").
+-define(SN291131, "Mist Insight").
+-define(SN291141, "Mist Insight").
+-define(SD291001, "DMG Reduction +{0}% when casting the Statue Skill.").
+-define(SD291011, "Hit Rate and Dodge Rate +{0}% when casting the Statue Skill.").
+-define(SD291021, "Skill DMG Bonus +{0}% when casting the Statue Skill.").
+-define(SD291031, "Scorch effect DMG +{0}%").
+-define(SD291041, "Scorch effect DMG +{0}%").
+-define(SD291051, "Scorch effect DMG +{0}%").
+-define(SD291061, "").
+-define(SD291071, "").
+-define(SD291081, "").
+-define(SD291091, "When dealing an Excellent Attack, increases Excellent Rate and Anti-Excellent Rate by {0}% for {1}s.").
+-define(SD291101, "When dealing an Excellent Attack, increases Excellent Rate and Anti-Excellent Rate by {0}% for {1}s.").
+-define(SD291111, "When dealing an Excellent Attack, increases Excellent Rate and Anti-Excellent Rate by {0}% for {1}s.").
+-define(SD291121, "Reduces the duration of control effects by {0}% when casting the Statue Skill.").
+-define(SD291131, "Reduces the duration of control effects by {0}% when casting the Statue Skill.").
+-define(SD291141, "Reduces the duration of control effects by {0}% when casting the Statue Skill.").
+-define(BN57001, "Fury Ward").
+-define(BN57002, "Heat Strike").
+-define(BN57003, "Solar King's Power").
+-define(BD57001, "Fury Ward! Block Rate +{0}%, Block Pierce +{1}%").
+-define(BD57002, "Heat Strike! Excellent Rate +{0}%, Anti-Excellent Rate +{1}%").
+-define(BD57003, "Crit DMG +{0}%").
+-define(SN110500, "Tartarus King").
+-define(SN110501, "Spectre Scythe").
+-define(SN110505, "Tartarus Wolf").
+-define(SN110506, "Spooky Impact").
+-define(SN110507, "Ghost Entangle").
+-define(SN110508, "Banshee Space").
+-define(SN110600, "Lord of War").
+-define(SN110601, "Harvest Skill").
+-define(SN110605, "Cutlass Attack").
+-define(SN110606, "Edge Raid").
+-define(SN110607, "Cutlass Strangle").
+-define(SN110608, "Final Execution").
+-define(SD110500, "Summons Hades for possession that lasts for {0}s.Hades has Lv.{1} skills.").
+-define(SD110501, "To {2} targets (monsters + {3}), deals {0}% Character DMG + {1}% Hero DMG in total").
+-define(SD110505, "To {2} targets (monsters + {3}), deal {0}% DMG, heal the caster for HP equal to {1}% of ATK.").
+-define(SD110506, "To {2} targets (monsters + {3}), deal {0}% DMG, first DMG dealt inflicts Delink (ATK -13%) for {1}s.").
+-define(SD110507, "To {2} targets (monsters + {3}), deal {0}% DMG, first DMG dealt inflicts Root (unable to move) for {1}s.").
+-define(SD110508, "To {2} targets (monsters + {3}), deal {0}% DMG, first DMG dealt inflicts Fatal (Healing Effect -50%) for {1}s.").
+-define(SD110600, "Hero morphs into Ishtar for {0}s, gaining Lv.{1} skill.
+When Ishtar is linked with another hero, he grants extra ability to the hero so they can use Ishtar's cutlass to attack without morphing.
+If he is linked with a 10-star hero, he will grant an extra 10-star damage skill that can only be used without morphing to them.").
+-define(SD110601, "To {1} targets (monsters + {2}), deal a total of {0}% DMG.").
+-define(SD110605, "To {3} targets (monsters +{4}), deal {0}% DMG.For every {1}% HP lost by the target, gains {2}% Skill DMG multiplier.").
+-define(SD110606, "To {3} targets (monsters +{4}), deal {0}% DMG.For every {1}% HP lost by the target, gains {2}% Skill DMG multiplier.").
+-define(SD110607, "To {3} targets (monsters +{4}), deal {0}% DMG.For every {1}% HP lost by the target, gains {2}% Skill DMG multiplier.").
+-define(SD110608, "To {4} targets (monsters +{5}), deal {0}% DMG.If target has less than {1}% HP, caster gains {2}% Skill DMG multiplier, plus Infinite Wrath (DMG Bonus +40%) for {3}s.").
+-define(SS110500, "Shapeshift into Hades and reduce enemy's Hit Rate.").
+-define(SS110501, "Slash the enemy, dealing minor damage.").
+-define(SS110505, "Unleash soul to attack, dealing minor damage and healing HP.").
+-define(SS110506, "Unleash soul to attack, dealing moderate damage and reducing ATK.").
+-define(SS110507, "Unleash soul to bind the enemy, dealing moderate damage and inflicting Root.").
+-define(SS110508, "Summon Scythe to attack the enemy, dealing massive damage and reducing Healing.").
+-define(SS110600, "Transform into Ishtar and gain a DMG Bonus during the transformation period.").
+-define(SS110601, "Punish the enemy, dealing minor damage.").
+-define(SS110605, "Deal moderate damage based on target's lost HP.").
+-define(SS110606, "Deal massive damage based on target's lost HP.").
+-define(SS110607, "Deal massive damage based on target's lost HP.").
+-define(SS110608, "Gain DMG Bonus when attacking Character with low HP.").
+-define(BF405, "[Hades]").
+-define(BF406, "[Ishtar]").
+-define(SN282001, "Stun Raid").
+-define(SN282002, "Dodge Instinct").
+-define(SN282003, "Destructive Pierce").
+-define(SN282004, "Resist Instinct").
+-define(SN282005, "Brittle Attack").
+-define(SN282006, "Icy Refraction").
+-define(SN282007, "Binding Strike").
+-define(SN282008, "Defense Instinct").
+-define(SN282009, "Speedy Attack").
+-define(SN282010, "Resilient Defense").
+-define(SN282011, "Armor Pierce").
+-define(SN282012, "Impact Alert").
+-define(BF1006, "[Mark]").
+-define(BF407, "[Freya]").
+-define(BN20045, "Hades Descent").
+-define(BN20046, "Ishtar Descent").
+-define(BN20047, "Freya Descent").
+-define(BD20045, "Shapeshift into Hades").
+-define(BD20046, "Shapeshift into Ishtar").
+-define(BD20047, "Shapeshift into Freya").
+-define(BN23043, "Entangle").
+-define(BD23043, "Entangling thorns! Take {0}% DMG per second").
+-define(BN23044, "Blooming Flowers").
+-define(BD23044, "Blooming flowers! Restores HP equal to {1}% of ATK every {0}s.").
+-define(SS282001, "When attacking enemies under Stun status, increases Focus Rate and Focus DMG Bonus").
+-define(SS282002, "When attacked under Stun status, increases Dodge Rate and restores HP").
+-define(SS282003, "When attacking enemies under Petrify status, increases Focus Rate and Focus DMG Bonus").
+-define(SS282004, "When attacked under Petrify status, increases Dodge Rate and restores HP").
+-define(SS282005, "When attacking enemies under Freeze status, increases Focus Rate and Focus DMG Bonus").
+-define(SS282006, "When attacked under Freeze status, increases Dodge Rate and restores HP").
+-define(SS282007, "When attacking enemies under Paralyze status, increases Focus Rate and Focus DMG Bonus").
+-define(SS282008, "When attacked under Paralyze status, increases Dodge Rate and restores HP").
+-define(SS282009, "When attacking enemies under Slow status, increases Crit Rate and DMG Bonus").
+-define(SS282010, "When attacked under Slow status, increases Tough Rate and DMG RED").
+-define(SS282011, "When attacking enemies under control, increases Anti-block Rate and Sunder").
+-define(SS282012, "When attacked under Slow status, increases Block Rate and DEF").
+-define(BN62146, "Tepid Stone").
+-define(BD62146, "Tepid Stone! Immune to incoming freeze effects.").
+-define(BN61556, "Calming Voice").
+-define(BD61556, "Calming Voice! Immune to incoming stun effects.").
+-define(BN61161, "Ultima Guardian").
+-define(BD61161, "Ultima Guardian! Immune to all damage.").
+-define(BF506, "[Ultima Skill]").
+-define(SN275011, "Spear Thrust").
+-define(SN275021, "Revenge Swirl").
+-define(SN275031, "Solar Halo").
+-define(SN275041, "Smiting Thunder").
+-define(SN275051, "Spectre Scythe").
+-define(SN275061, "Cutlass Strangle").
+-define(SN275071, "Earth's Wrath").
+-define(SN275081, "Moonlit Judge").
+-define(SN275012, "Shield of Sighs").
+-define(SN275022, "Raven Call").
+-define(SN275032, "Solar Power").
+-define(SN275042, "Lightning Shield").
+-define(SN275052, "Tartarus Field").
+-define(SN275062, "Final Execution").
+-define(SN275072, "Blooming Flowers").
+-define(SN275082, "Moonlit Sanctuary").
+-define(SD275011, "Attacking has a {0}% chance to trigger Spear Thrust, dealing {1}% of target's HP in DMG to the target.").
+-define(SD275021, "Attacking has a {0}% chance to trigger Revenge Swirl, dealing {1}% DMG with a bonus {2}% Leech effect.").
+-define(SD275031, "Attacking has a {0}% chance to trigger Solar Halo, dealing {1}% DMG and {2} Scorch stacks (every {3}s, deal {4}% DMG) for {5}s").
+-define(SD275041, "Attacking has a {0}% chance to trigger Smiting Thunder, dealing {1}% DMG and inflicting Paralyze for {2}s").
+-define(SD275051, "Attacking has a {0}% chance to trigger Spectre Scythe, dealing {1}% DMG and inflicting Fatal (Healing Effect -{2}%) for {3}s").
+-define(SD275061, "Attacking has a {0}% chance to trigger Cutlass Strangle, dealing {1}% DMG, with doubled DMG to enemies below {2}% HP").
+-define(SD275071, "Attacking has a {0}% chance to trigger Earth's Wrath, dealing {1}% DMG while healing the team for {2}% ATK of HP.").
+-define(SD275081, "Attack has a {0}% chance to trigger Moonlit Judge, dealing {1}% DMG and granting Lunar Will (Final DMG +{2}%) for {3}s.").
+-define(SD275012, "Being attacked has a {0}% chance to trigger Shield of Sighs to give the caster Block Mastery (Block Rate +{1}%, Block Reduction +{2}%) for {3}s").
+-define(SD275022, "Being attacked has a {0}% chance to trigger Raven Call, dealing {1}% DMG with a bonus Sensation Loss (Hit Rate -{2}%) for {3}s").
+-define(SD275032, "Being attacked has a {0}% chance to buff self with Solar Power.When Solar Power is effective, attacks also deal {1} stack(s) of Scorch (CD: {2}s).Solar Power lasts {3}s.").
+-define(SD275042, "Being attacked has a {0}% chance to give self a Lightning Shield.When Lightning Shield is active, being attacked has a {1}% chance to inflict {2}% DMG with a bonus {3}s Paralyze (CD: {4}s) to nearby enemies.Lightning Shield lasts {5}s.").
+-define(SD275052, "Being attacked has a {0}% chance to give self Tartarus Field.When active, gain Stun Immunity.Heals self for {1}% Max HP (up to {2}) after Stun is immune.Tartarus Field lasts {3}s.").
+-define(SD275062, "Being attacked has a {0}% chance to trigger Final Execution, dealing {1}% DMG.To enemies below {2}% HP, deal {3}x DMG.").
+-define(SD275072, "Being attacked has a {0}% chance to trigger Blooming Flowers, every 2s, heal team for {1}% ATK of HP.Blooming Flowers last {2}s.").
+-define(SD275082, "When attacked, has a {0}% chance to trigger Moonlit Shelter to give the caster Lunar Protection (Final DMG Reduction +{1}%) for {2}s.").
+-define(BN54018, "Block Mastery").
+-define(BN54020, "Solar Power").
+-define(BN54021, "Lightning Shield").
+-define(BN54022, "Tartarus Field").
+-define(BD54018, "Block mastery! Block Rate +{0}%, Block Reduction +{1}%.").
+-define(BD54020, "Attacking enemies also inflicts Scorch.").
+-define(BD54021, "When attacked, retaliate and stun the enemy.").
+-define(BD54022, "Immune to Stun effect; Restores HP upon immunity").
+-define(BF1010, "[God Weapon]").
+-define(SS291001, "Casting the Statue Skill grants DMG Reduction").
+-define(SS291011, "Casting the Statue Skill grants Hit and Dodge Bonus").
+-define(SS291021, "Casting the Statue Skill grants DMG Bonus").
+-define(SS291031, "Scorch effect DMG increased").
+-define(SS291041, "Scorch effect DMG increased").
+-define(SS291051, "Scorch effect DMG increased").
+-define(SS291061, "").
+-define(SS291071, "").
+-define(SS291081, "").
+-define(SS291091, "Excellent attacks increase Excellent Rate and Anti-Excellent Rate").
+-define(SS291101, "Excellent attacks increase Excellent Rate and Anti-Excellent Rate").
+-define(SS291111, "Excellent attacks increase Excellent Rate and Anti-Excellent Rate").
+-define(SS291121, "Reduces the duration of control effects when casting the Statue Skill.").
+-define(SS291131, "Reduces the duration of control effects when casting the Statue Skill.").
+-define(SS291141, "Reduces the duration of control effects when casting the Statue Skill.").
+-define(SS291151, "Chance to reduce Hero Ultimate cooldown when attacking").
+-define(SS291161, "Chance to reduce Hero Ultimate cooldown when attacking").
+-define(SS291171, "Chance to reduce Hero Ultimate cooldown when attacking").
+-define(SS291211, "").
+-define(SS291221, "").
+-define(SS291231, "").
+-define(SS291241, "").
+-define(SS291251, "").
+-define(SS291261, "").
+-define(SS291271, "").
+-define(SCN100101, "").
+-define(SCN100201, "Moon Slash: Enhanced").
+-define(SCN100301, "Whirling Cleave: Enhanced").
+-define(SCN100401, "Blink Slash: Enhanced").
+-define(SCN100501, "Thunder Zone: Enhanced").
+-define(SCN100601, "War God's Descent: Enhanced").
+-define(SCN100701, "Breaking Cleave: Enhanced").
+-define(SCN100801, "Thor's Blessing: Enhanced").
+-define(SCN100901, "Blast Sword: Enhanced").
+-define(SCN101001, "Giant Sword: Enhanced").
+-define(SCN101101, "").
+-define(SCN101201, "").
+-define(SCD100101, "").
+-define(SCD100201, "Moon Slash base DMG multiplier +{0}%").
+-define(SCD100301, "Whirling Cleave base DMG multiplier +{0}%").
+-define(SCD100401, "Blink Slash base DMG multiplier +{0}%").
+-define(SCD100501, "Thunder Zone base DMG multiplier +{0}%").
+-define(SCD100601, "Crit Rate +{0}% during War God's Descent").
+-define(SCD100701, "Breaking Cleave base DMG multiplier +{0}%").
+-define(SCD100801, "Tough Rate +{0}% during Thor's Blessing").
+-define(SCD100901, "Blast Sword base DMG multiplier +{0}%").
+-define(SCD101001, "Giant Sword base DMG multiplier +{0}%").
+-define(SCD101101, "").
+-define(SCD101201, "").
+-define(SCN110101, "Fire Spiral: Enhanced").
+-define(SCN110201, "Frost Impact: Enhanced").
+-define(SCN110301, "Sundering Flame: Enhanced").
+-define(SCN110401, "Glacial Blast: Enhanced").
+-define(SCN110501, "Ice Dungeon: Enhanced").
+-define(SCN110601, "Vulcan's Descent: Enhanced").
+-define(SCN110701, "").
+-define(SCN110801, "Khione's Descent: Enhanced").
+-define(SCN110901, "Fire Burst: Enhanced").
+-define(SCN111001, "Ice Strafe: Enhanced").
+-define(SCN111101, "Fire Blast: Enhanced").
+-define(SCN111201, "").
+-define(SCD110101, "Fire Spiral base DMG multiplier +{0}%").
+-define(SCD110201, "Frost Impact base DMG multiplier +{0}%").
+-define(SCD110301, "Sundering Flame base DMG multiplier +{0}%").
+-define(SCD110401, "Glacial Blast base DMG multiplier +{0}%").
+-define(SCD110501, "Ice Dungeon base DMG multiplier +{0}%").
+-define(SCD110601, "Skill DMG Bonus+{0}% during Vulcan's Descent").
+-define(SCD110701, "").
+-define(SCD110801, "Skill DMG Reduction +{0}% during Khione's Descent").
+-define(SCD110901, "Fire Burst base DMG multiplier +{0}%").
+-define(SCD111001, "Ice Strafe base DMG multiplier +{0}%").
+-define(SCD111101, "Fire Blast base DMG multiplier +{0}%").
+-define(SCD111201, "").
+-define(SCN120101, "Scatter Shot: Enhanced").
+-define(SCN120201, "Whirling Arrow: Enhanced").
+-define(SCN120301, "").
+-define(SCN120401, "Thunder Bird: Enhanced").
+-define(SCN120501, "Thunder Bolts: Enhanced").
+-define(SCN120601, "Realm of Nature: Enhanced").
+-define(SCN120701, "Hailing Arrows: Enhanced").
+-define(SCN120801, "Lightning Zone: Enhanced").
+-define(SCN120901, "Punishing Arrow: Enhanced").
+-define(SCN121001, "Crossing Arrow: Enhanced").
+-define(SCN121101, "").
+-define(SCN121201, "").
+-define(SCD120101, "Scatter Shot base DMG multiplier +{0}%").
+-define(SCD120201, "Whirling Arrow base DMG multiplier +{0}%").
+-define(SCD120301, "").
+-define(SCD120401, "Thunder Bird base DMG multiplier +{0}%").
+-define(SCD120501, "Thunder Bolts base DMG multiplier +{0}%").
+-define(SCD120601, "Sunder +{0}% during Realm of Nature").
+-define(SCD120701, "Hailing Arrows base DMG multiplier +{0}%").
+-define(SCD120801, "Sunder +{0}% during Lightning Zone").
+-define(SCD120901, "Punishing Arrow base DMG multiplier +{0}%").
+-define(SCD121001, "Crossing Arrow base DMG multiplier +{0}%").
+-define(SCD121101, "").
+-define(SCD121201, "").
+-define(SCN200101, "").
+-define(SCN200201, "").
+-define(SCN200301, "").
+-define(SCN200401, "").
+-define(SCN200501, "").
+-define(SCN200601, "").
+-define(SCN200701, "").
+-define(SCN200801, "").
+-define(SCN200901, "").
+-define(SCN201001, "").
+-define(SCN201101, "").
+-define(SCN201201, "").
+-define(SCD200101, "").
+-define(SCD200201, "").
+-define(SCD200301, "").
+-define(SCD200401, "").
+-define(SCD200501, "").
+-define(SCD200601, "").
+-define(SCD200701, "").
+-define(SCD200801, "").
+-define(SCD200901, "").
+-define(SCD201001, "").
+-define(SCD201101, "").
+-define(SCD201201, "").
+-define(SN550031, "DMG Reduction: Enhanced").
+-define(SN550041, "Anti-Crit: Enhanced").
+-define(SN550051, "Concentration: Enhanced").
+-define(SD550031, "Each casting of the Relic Skill has a {0}% chance to increase caster's DMG Reduction by {2}% for {1}s").
+-define(SD550041, "Each casting of the Relic Skill has a {0}% chance to increase own Anti-Crit Rate by {2}% for {1}s").
+-define(SD550051, "Each casting of the Relic Skill has a {0}% chance to increase own Concentrate Rate by {2}% for {1}s").
+-define(SN540004, "Rotten Luck").
+-define(SN540005, "Fay Dance").
+-define(SN540006, "Wyrm Voice").
+-define(SD540004, "Attacks have a {0}% chance to inflict Rotten Luck (stunned for {2} every {1}s) for {3}s").
+-define(SD540005, "{0}% chance to gain Fay Dance for {3}s when attacked (clears {2} debuffs every {1}s)").
+-define(SD540006, "Attacks have a {0}% chance to inflict Wyrm Voice (Fury gain rate -{1}%) for {2}s").
+-define(SN540007, "").
+-define(SD540007, "").
+-define(SN540008, "").
+-define(SD540008, "").
+-define(SN540009, "").
+-define(SD540009, "").
+-define(BN56050, "").
+-define(BD56050, "").
+-define(BN56051, "").
+-define(BD56051, "").
+-define(BN56052, "").
+-define(BD56052, "").
+-define(SN510041, "Pharoah's Light").
+-define(SD510041, "Regenerate {0} Fury").
+-define(SN520041, "Ocean Energy").
+-define(SD520041, "Regenerate {0} Fury").
+-define(SN530041, "Eternal Stillness").
+-define(SD530041, "Regenerate {0} Fury").
+-define(BN56039, "DMG Reduction: Enhanced").
+-define(BN56040, "Anti-Crit: Enhanced").
+-define(BN56041, "Concentration: Enhanced").
+-define(BD56039, "Power of the Stigma! DMG Reduction +{0}%").
+-define(BD56040, "Power of the Stigma! Anti-Crit Rate +{0}%").
+-define(BD56041, "Power of the Stigma! Concentrate Rate +{0}%").
+-define(BN56042, "Rotten Luck").
+-define(BN56043, "Fay Dance").
+-define(BN56044, "Wyrm Voice").
+-define(BD56042, "Rotten Luck! Stunned for {1}s every {0}s").
+-define(BD56043, "Fay Dance! Clear {1} debuffs every {0}s").
+-define(BD56044, "Wyrm Voice! Fury gain rate -{0}%").
+-define(SN291151, "Christmas Kiss").
+-define(SN291161, "Christmas Kiss").
+-define(SN291171, "Christmas Kiss").
+-define(SD291151, "Attack has {0}% chance to reduce Hero Ultimate cooldown by {1}s").
+-define(SD291161, "Attack has {0}% chance to reduce Hero Ultimate cooldown by {1}s").
+-define(SD291171, "Attack has {0}% chance to reduce Hero Ultimate cooldown by {1}s").
+-define(SN291181, "Solar King's Power").
+-define(SN291191, "Solar King's Power").
+-define(SN291201, "Solar King's Power").
+-define(SD291181, "When delivering critical attacks, increases Crit DMG by {0}% for {1}s.").
+-define(SD291191, "When delivering critical attacks, increases Crit DMG by {0}% for {1}s.").
+-define(SD291201, "When delivering critical attacks, increases Crit DMG by {0}% for {1}s.").
+-define(SS291181, "").
+-define(SS291191, "").
+-define(SS291201, "").
+-define(SN121601, "Doom Impact").
+-define(SN121641, "Fell Fate").
+-define(SN121661, "Rotten Luck").
+-define(SN121681, "Primal Return").
+-define(SD121601, "Deals {0}% DMG to {8} targets (monsters +{9}) with a {1}% chance each to inflict targets with one of the following effects: freeze targets for {2}s, scorch for {3}s, blind for {4}s, curse for {5}s, root for {6}s or blunt for {7}s.").
+-define(SD121641, "Deals {0}% DMG to {8} targets (monsters +{9}) with a {1}% chance each to freeze targets for {2}s, scorch for {3}s, blind for {4}s, curse for {5}s, root for {6}s or blunt for {7}s.").
+-define(SD121661, "Attacks have a {0}% chance to deal {1}% DMG to the target with a {2}% chance each to freeze them for {3}s, scorch for {4}s, blind for {5}s, curse for {6}s, root for {7}s or blunt for {8}s.").
+-define(SD121681, "Deals {0}% DMG to {2} targets (monsters +{3}) and dispels {1} buff(s).").
+-define(SS121601, "Deals minor damage and inflicts several random debuffs.").
+-define(SS121641, "Deals moderate damage and inflicts several random debuffs.").
+-define(SS121661, "Attacks have a chance to deal extra DMG and inflict several debuffs.").
+-define(SS121681, "Deal massive damage and dispels enemies' buffs.").
+-define(BN23021, "Blind").
+-define(BD23021, "Hit Rate -{0}%").
+-define(BF615, "[Pandora]").
+-define(SN121701, "Demon Missile").
+-define(SN121741, "Starshine Barrier").
+-define(SN121761, "Spirit Blessings").
+-define(SN121781, "Aegis of Prayer").
+-define(SD121701, "To {1} nearby targets (monsters + {2}), deal {0}% DMG.").
+-define(SD121741, "Deals {0}% DMG to {2} targets (monsters +{3}) and grants Demon Soul (immune to crowd control) to allies for {1}s.").
+-define(SD121761, "When attacked, has a {0}% chance to trigger Demon Soul (immune to crowd control) for {1}s.").
+-define(SD121781, "Team receives Aegis of Prayer (provides a {0}% shield that heals for {1}% of ATK while active).").
+-define(SS121701, "Casts Demon Missile, deals minor damage.").
+-define(SS121741, "Deals moderate damage and grants control immunity to allies.").
+-define(SS121761, "Has a chance to gain control immunity when attacked.").
+-define(SS121781, "Forms a shield of magic that blocks damage and restores HP.").
+-define(BN25177, "Aegis of Prayer").
+-define(BD25177, "Aegis of Prayer! Blocks {0}% DMG").
+-define(BN25197, "Spirit of Prayer").
+-define(BD25197, "Spirit of Prayer! Heals for {0}% of ATK").
+-define(BF616, "[Magic Lamp]").
+-define(SN251003, "Monster Hunter").
+-define(SN251004, "Growth & Ascension").
+-define(SS110801, "Punish the enemy, dealing minor damage.").
+-define(SS110805, "Shoots magical arrows that deal moderate DMG.").
+-define(SS110806, "Shoots magical arrows that deal moderate DMG and control targets.").
+-define(SS110807, "Unleashes Moon Goddess energy to deal damage and provide a shield.").
+-define(SS110808, "Shoots magical arrows that deal massive DMG and control targets.").
+-define(BN20048, "Artemis's Descent").
+-define(BD20048, "Transforms into Artemis").
+-define(BF408, "[Artemis]").
+-define(BN23070, "Lunar Goddess").
+-define(BD23070, "Power of the Moon Goddess, ATK +{0}%").
+-define(BN25218, "Shatter").
+-define(BD25218, "DMG Reduction -{0}%, Block Rate -{1}%, stacks up to {2} times").
+-define(BF617, "[Saladin]").
+-define(SN121801, "Crescent Cut").
+-define(SN121841, "Eagle Strike").
+-define(SN121861, "Fire and Sword").
+-define(SN121881, "Death Game").
+-define(SD121801, "Deals {0}% damage to {6} targets (Monsters + {7}), with a {1}% chance to inflict Shatter effect (DMG Reduction -{2}%, Block Rate -{3}%), stacks up to {4} times and lasts for {5}s.").
+-define(SD121841, "Deals {0}% damage to {5} targets (Monsters + {6}), inflicting Shatter effect (DMG Reduction -{1}%, Block Rate -{2}%), stacks up to {3} times and lasts for {4}s.").
+-define(SD121861, "Attacks have a {0}% chance to trigger Fire and Sword, dealing {1}% damage to targets and inflicting Shatter effect (DMG Reduction -{2}%, Block Rate -{3}%), stacks up to {4} times and lasts for {5}s.").
+-define(SD121881, "Deals {0}% damage to {6} targets (Monsters + {7}), inflicting {1} layer(s) of Shatter effect (DMG Reduction -{2}%, Block Rate -{3}%), stacks up to {4} times and lasts for {5}s.").
+-define(SS121801, "Deals minor damage and inflicts stackable Sunder effect").
+-define(SS121841, "Deals moderate damage and inflicts stackable Sunder effect").
+-define(SS121861, "Attacks have a chance to deal bonus damage and inflict Sunder effect").
+-define(SS121881, "Deals massive damage and inflicts stackable Sunder effect").
+-define(BN20406, "Dwarven Workshop Blessing").
+-define(BN20407, "Alchemy Lab Blessing").
+-define(BN20408, "Mage Tower Blessing").
+-define(BD20406, "Dwarven Workshop occupied, stats boosted slightly.").
+-define(BD20407, "Alchemy Lab occupied, stats boosted moderately.").
+-define(BD20408, "Mage Tower occupied, stats boosted greatly.").
+-define(BOSSSD1, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and stun them for {1}s.").
+-define(BOSSSD2, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and knock them down.").
+-define(BOSSSD3, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and petrify them for {1}s.").
+-define(BOSSSD4, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and entrance them for {1}s.").
+-define(BOSSSD5, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and inflict terror for {1}s.").
+-define(BOSSSD6, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and freeze them for {1}s.").
+-define(BOSSSD7, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and paralyze them for {1}s.").
+-define(BOSSSD8, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and inflict Scorch for {3}s, dealing {2}% ATK DMG per {1}s.").
+-define(BOSSSD9, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and inflict Poison for {3}s, dealing {2}% ATK DMG per {1}s.").
+-define(BOSSSD10, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and inflict Bleed for {3}s, dealing {2}% ATK DMG per {1}s.").
+-define(BOSSSD11, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and inflict Vulnerable for {1}s, increasing their DMG taken.").
+-define(BOSSSD12, "Charge up for {0}s, then deal massive DMG to enemies in the marked area and inflict curse, reducing their Hit Rate by {1}% for {2}s.").
+-define(BOSSSD13, "Charge up for {0}s, then deal massive DMG to enemies in the marked area.Gain Enhanced: +{1}% DMG Bonus for {2}s on hit.").
+-define(BOSSSD14, "Charge up for {0}s, then deal massive DMG to enemies in the marked area.Heal for a certain amount of HP on hit.").
+-define(BOSSSD15, "Charge up for {0}s, then deal massive DMG to enemies in the marked area.").
+-define(BOSSSN16, "").
+-define(BOSSSD16, "").
+-define(BOSSSN17, "").
+-define(BOSSSD17, "").
+-define(BOSSSN18, "").
+-define(BOSSSD18, "").
+-define(BOSSSN19, "").
+-define(BOSSSD19, "").
+-define(BOSSSN20, "").
+-define(BOSSSD20, "").
+-define(BOSSSN21, "").
+-define(BOSSSD21, "").
+-define(BOSSSN22, "").
+-define(BOSSSD22, "").
+-define(BOSSSN23, "").
+-define(BOSSSD23, "").
+-define(BOSSSN24, "").
+-define(BOSSSD24, "").
+-define(SN121901, "Piercing Beauty").
+-define(SN121941, "Thorny Stab").
+-define(SN121961, "Majestic Assault").
+-define(SN121981, "Thorny Tempest").
+-define(SD121901, "Deal {0}% DMG to {2} nearby targets (monsters + {3}).Skill Crit Rate +{1}%.").
+-define(SD121941, "Deal {0}% DMG to {2} nearby targets (monsters + {3}).Skill Crit Rate +{1}%.").
+-define(SD121961, "Attacks have a {0}% chance to trigger Majestic Assault and deal {1}% DMG.Skill Crit Rate +{2}%.").
+-define(SD121981, "Deal {0}% DMG to {3} nearby targets (monsters + {4}).Skill Crit Rate +{1}% and removes {2} buffs from targets.").
+-define(SS121901, "Deals minor damage with increased crit rate.").
+-define(SS121941, "Deals moderate damage with increased crit rate.").
+-define(SS121961, "Attacks have a chance to deal bonus damage with increased crit rate.").
+-define(SS121981, "Deals massive damage with increased crit rate and removes buffs.").
+-define(SN510051, "Incineration Light").
+-define(SD510051, "Gains a shield of {0}% HP that lasts up to {1}s and increases DMG Reduction by {2}% for {3}s.").
+-define(SN520051, "Frost Miracle").
+-define(SD520051, "Increases Healing Bonus by {0}% for {1}s and reduces Healing Received by {2} nearby enemies by {3}% for {4}s.").
+-define(SN530051, "Condor Hunt").
+-define(SD530051, "Increases DMG Bonus by {0}% for {1}s and reduces DMG dealt by {2} nearby enemies by {3}% for {4}s.").
+-define(BN56015, "Incineration Light").
+-define(BD56015, "DMG Reduction +{0}%").
+-define(BN56025, "Frost Miracle").
+-define(BD56025, "Healing Bonus-{0}%").
+-define(BN56046, "Condor Hunt").
+-define(BD56046, "DMG Reduction -{0}%").
+-define(BF1020, "[Expedition Nobility]").
+-define(BF1021, "[Expedition Commander]").
+-define(BF1022, "[Expedition Defense]").
+-define(BF1023, "[Expedition Weak Faction]").
+-define(BD386, "During the Expedition and Demon Hunt, DMG Bonus +{0}%, DMG Reduction +{1}%").
+-define(BN386, "Expedition Power Lv.1").
+-define(BN387, "Expedition Power Lv.2").
+-define(BN388, "Expedition Power Lv.3").
+-define(BN389, "Expedition Power Lv.4").
+-define(BN390, "Expedition Power Lv.5").
+-define(BN391, "Expedition Power Lv.6").
+-define(BN392, "Expedition Power Lv.7").
+-define(BN393, "Expedition Power Lv.8").
+-define(BN394, "Expedition Power Lv.9").
+-define(BN395, "Expedition Power Lv.10").
+-define(BN396, "Expedition Power Lv.11").
+-define(BN397, "Expedition Power Lv.12").
+-define(BN39701, "Expedition Power Lv.13").
+-define(BN39702, "Expedition Power Lv.14").
+-define(BN39703, "Expedition Power Lv.15").
+-define(BN39704, "Expedition Power Lv.16").
+-define(BN39705, "Expedition Power Lv.17").
+-define(BN39706, "Expedition Power Lv.18").
+-define(BN39707, "Expedition Power Lv.19").
+-define(BN39708, "Expedition Power Lv.20").
+-define(BN39709, "Expedition Power Lv.21").
+-define(BN39710, "Expedition Power Lv.22").
+-define(BN39711, "Expedition Power Lv.23").
+-define(BD398, "Inspire allies in the same city.When they fight against players from other factions, Skill DMG +{0}%.").
+-define(BN398, "Expedition Marshal").
+-define(BN399, "Expedition Warlord").
+-define(BN409, "Expedition Grand Marshal").
+-define(BD410, "Expedition Energy Limit: {0}").
+-define(BN410, "Expedition Energy Lv.1").
+-define(BD411, "Expedition Energy Limit: {0}").
+-define(BN411, "Expedition Energy Lv.2").
+-define(BD412, "Expedition Energy Limit: {0}").
+-define(BN412, "Expedition Energy Lv.3").
+-define(BD413, "When there are players protecting the Guarding Boss, Final DMG Reduction +{0}%.").
+-define(BN413, "Enhance Defense").
+-define(BD416, "When there are players protecting the Guarding Boss and no other enemies, restores {1}% HP per {0}s.").
+-define(BN416, "Repair Defense").
+-define(BD417, "Strike back! In the Weak Side Map, Final DMG Bonus to the Guarding Boss +{0}%.").
+-define(BN417, "Strike Back").
+-define(BD418, "Fight to death! Upon entering the Weak Side Map, immunes to one-on-one fight in {0}s.CD: {1}s.").
+-define(BN418, "Defy Death").
+-define(BN419, "").
+-define(BD419, "").
+-define(BN420, "").
+-define(BD420, "").
+-define(BN421, "").
+-define(BD421, "").
+-define(BN422, "").
+-define(BD422, "").
+-define(SN806721, "Guardian of Time").
+-define(SN806731, "Guardian of Sea").
+-define(SN806741, "Guardian of Sun").
+-define(SN806751, "Guardian of Origin").
+-define(SN806761, "Guardian of Light").
+-define(SN806771, "Water Guard").
+-define(SN806781, "").
+-define(SN806791, "Guardian of Earth").
+-define(SN806801, "Guardian of Sky").
+-define(SN806811, "Prophetic Guardian").
+-define(SN806821, "Guardian of Will").
+-define(SN806831, "Guardian of Justice").
+-define(SN806841, "Cassiopeia Blessing").
+-define(SN806851, "Centaurus Protection").
+-define(SN806861, "Cepheus Star Shield").
+-define(SN806871, "Cetus Guardian").
+-define(SN806881, "Corona Australis Guardian").
+-define(SN806891, "Corvus Blessing").
+-define(SN806901, "Crater Protection").
+-define(SN806911, "Cygnus Star Shield").
+-define(SN806921, "Delphinus Guardian").
+-define(SN806931, "Heavenly Dragon Guardian").
+-define(SN806941, "Equuleus Blessing").
+-define(SN806951, "Eridanus Protection").
+-define(SN806961, "Gemini Star Shield").
+-define(SN806971, "Hercules Guardian").
+-define(SN806981, "Hydra Guardian").
+-define(SN806991, "Leo Blessing").
+-define(SN807001, "Lepus Protection").
+-define(SN807011, "Libra Star Shield").
+-define(SN807021, "Lupus Guardian").
+-define(SN807031, "Lyra Guardian").
+-define(SN807041, "Ophiuchus Blessing").
+-define(SN807051, "Orion Protection").
+-define(SN807061, "Pegasus Star Shield").
+-define(SN807071, "Perseus Guardian").
+-define(SD806721, "When taking a single damage of less than {0}% Max HP, triggers Anti-Excellent Guardian (Anti-Excellent Rate +{1}%) for {2}s.").
+-define(SD806731, "When taking a single damage of less than {0}% Max HP, triggers Anti-Lethal Guardian (Anti-Lethal Rate +{1}%) for {2}s.").
+-define(SD806741, "When taking a single damage of less than {0}% Max HP, triggers Focus ATK Guardian (Focus DMG Reduction +{1}%) for {2}s.").
+-define(SD806751, "When taking a single damage of less than {0}% Max HP, triggers Crit.DMG Guardian (Crit DMG Red +{1}%) for {2}s.").
+-define(SD806761, "When taking a single damage of less than {0}% Max HP, triggers Titan Guardian (DMG Reduction +{1}%) for {2}s.").
+-define(SD806771, "When taking a single damage of less than {0}% Max HP, triggers Critical Hit Resistance Guardian (Anti-Crit Rate +{1}%) for {2}s.").
+-define(SD806781, "When taking attack with less than {0}% HP, triggers Anti-Excellent Guardian (Anti-Excellent Rate +{1}%) for {2}s.").
+-define(SD806791, "When taking attack with less than {0}% HP, triggers Anti-Lethal Guardian (Anti-Lethal Rate +{1}%) for {2}s.").
+-define(SD806801, "When taking attack with less than {0}% HP, triggers Focus ATK Guardian (Focus DMG Reduction +{1}%) for {2}s.").
+-define(SD806811, "When taking attack with less than {0}% HP, triggers Crit.DMG Guardian (Crit DMG Red +{1}%) for {2}s.").
+-define(SD806821, "When taking attack with less than {0}% HP, triggers Titan Guardian (DMG Reduction +{1}%) for {2}s.").
+-define(SD806831, "When taking attack with less than {0}% HP, triggers Critical Hit Resistance Guardian (Anti-Crit Rate +{1}%) for {2}s.").
+-define(SD806841, "When taking attack with less than {0}% HP, triggers Anti-Excellent Guardian (Anti-Excellent Rate +{1}%) for {2}s.").
+-define(SD806851, "When taking attack with less than {0}% HP, triggers Anti-Lethal Guardian (Anti-Lethal Rate +{1}%) for {2}s.").
+-define(SD806861, "When taking attack with less than {0}% HP, triggers Focus ATK Guardian (Focus DMG Reduction +{1}%) for {2}s.").
+-define(SD806871, "When taking attack with less than {0}% HP, triggers Crit.DMG Guardian (Crit DMG Red +{1}%) for {2}s.").
+-define(SD806881, "When taking attack with less than {0}% HP, triggers Titan Guardian (DMG Reduction +{1}%) for {2}s.").
+-define(SD806891, "When taking attack with less than {0}% HP, triggers Critical Hit Resistance Guardian (Anti-Crit Rate +{1}%) for {2}s.").
+-define(SD806901, "When taking attack with less than {0}% HP, triggers Anti-Excellent Guardian (Anti-Excellent Rate +{1}%) for {2}s.").
+-define(SD806911, "When taking attack with less than {0}% HP, triggers Anti-Lethal Guardian (Anti-Lethal Rate +{1}%) for {2}s.").
+-define(SD806921, "When taking attack with less than {0}% HP, triggers Focus ATK Guardian (Focus DMG Reduction +{1}%) for {2}s.").
+-define(SD806931, "When taking attack with less than {0}% HP, triggers Crit.DMG Guardian (Crit DMG Red +{1}%) for {2}s.").
+-define(SD806941, "When taking attack with less than {0}% HP, triggers Titan Guardian (DMG Reduction +{1}%) for {2}s.").
+-define(SD806951, "When taking attack with less than {0}% HP, triggers Critical Hit Resistance Guardian (Anti-Crit Rate +{1}%) for {2}s.").
+-define(SD806961, "When taking attack with less than {0}% HP, triggers Anti-Excellent Guardian (Anti-Excellent Rate +{1}%) for {2}s.").
+-define(SD806971, "When taking attack with less than {0}% HP, triggers Anti-Lethal Guardian (Anti-Lethal Rate +{1}%) for {2}s.").
+-define(SD806981, "When taking attack with less than {0}% HP, triggers Focus ATK Guardian (Focus DMG Reduction +{1}%) for {2}s.").
+-define(SD806991, "When taking attack with less than {0}% HP, triggers Crit.DMG Guardian (Crit DMG Red +{1}%) for {2}s.").
+-define(SD807001, "When taking attack with less than {0}% HP, triggers Titan Guardian (DMG Reduction +{1}%) for {2}s.").
+-define(SD807011, "When taking attack with less than {0}% HP, triggers Critical Hit Resistance Guardian (Anti-Crit Rate +{1}%) for {2}s.").
+-define(SD807021, "When taking a single damage of more than {0}% Max HP, triggers Anti-Excellent Guardian (Anti-Excellent Rate +{1}%) for {2}s.").
+-define(SD807031, "When taking a single damage of more than {0}% Max HP, triggers Anti-Lethal Guardian (Anti-Lethal Rate +{1}%) for {2}s.").
+-define(SD807041, "When taking a single damage of more than {0}% Max HP, triggers Focus ATK Guardian (Focus DMG Reduction +{1}%) for {2}s.").
+-define(SD807051, "When taking a single damage of more than {0}% Max HP, triggers Crit.DMG Guardian (Crit DMG Red +{1}%) for {2}s.").
+-define(SD807061, "When taking a single damage of more than {0}% Max HP, triggers Titan Guardian (DMG Reduction +{1}%) for {3}s.").
+-define(SD807071, "When taking a single damage of more than {0}% Max HP, triggers Critical Hit Resistance Guardian (Anti-Crit Rate +{1}%) for {2}s.").
+-define(BN13001, "Anti-Excellent Guardian").
+-define(BN13011, "Anti-Lethal Guardian").
+-define(BN13021, "Focus ATK Guardian").
+-define(BN13031, "Crit.DMG Guardian").
+-define(BN13041, "Titan Protection").
+-define(BD13001, "Anti-Excellent Rate +{0}%").
+-define(BD13011, "Anti-Lethal Rate +{0}%").
+-define(BD13021, "Focus ATK Reduction +{0}%").
+-define(BD13031, "Crit DMG Reduction +{0}%").
+-define(BD13041, "Damage Reduction+{0}%").
+-define(BF13001, "[God Stone Skill]").
+-define(BF1011, "[Expedition]").
+-define(BN54026, "Lunar Will").
+-define(BN54027, "Lunar Protection").
+-define(BD54026, "Final DMG +{0}%").
+-define(BD54027, "Final DMG Reduction +{0}%").
+-define(BN14001, "Guild's Power").
+-define(BD14001, "DMG Bonus+{0}%").
+-define(BN14002, "Guild's Punishment").
+-define(BD14002, "DEF -{0}%").
+-define(BF14001, "[Guild Raid]").
+-define(BN14037, "Abuse Power").
+-define(BD14037, "DMG Bonus+{0}%").
+-define(BN14038, "Abuse Power").
+-define(BD14038, "DMG Bonus+{0}%").
+-define(BF14037, "[Current Stage Players]").
+-define(SN631101, "Pact Resonance Ⅱ").
+-define(SN632101, "Pact Resonance Ⅱ").
+-define(SN633101, "Pact Resonance Ⅱ").
+-define(SN634101, "Pact Resonance Ⅱ").
+-define(SN635101, "Pact Resonance Ⅲ").
+-define(SN636101, "Pact Resonance Ⅲ").
+-define(SN637101, "Pact Resonance Ⅲ").
+-define(SN638101, "Pact Resonance Ⅲ").
+-define(SN639101, "Pact Resonance Ⅲ").
+-define(SN615201, "Crit DMG Red").
+-define(SN616201, "Focus DMG Reduction").
+-define(SN618201, "Crit DMG
+Bonus").
+-define(SN619201, "Focus DMG Bonus").
+-define(SN631201, "Anti-Lethal
+Rate").
+-define(SN632201, "Focus Rate").
+-define(SN633201, "Excellent Rate").
+-define(SN634201, "Lethal Rate").
+-define(SN635201, "Frailty Rate").
+-define(SN636201, "Pursuit Res
+Rate").
+-define(SN637201, "Multi-strike
+Res Rate").
+-define(SN638201, "Smite Rate").
+-define(SN639201, "Pursuit Strike").
+-define(SD631101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD632101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD633101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD634101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD635101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD636101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD637101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD638101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD639101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(SD615201, "Crit DMG Reduction +{0}%").
+-define(SD616201, "Focus DMG Reduction + {0}%").
+-define(SD618201, "Crit DMG Bonus + {0}%").
+-define(SD619201, "Focus ATK Bonus increases by {0}%").
+-define(SD631201, "Anti-Lethal Rate +{0}%").
+-define(SD632201, "Focus Rate +{0}%").
+-define(SD633201, "Excellent Rate +{0}%").
+-define(SD634201, "Lethal Rate increases {0}%").
+-define(SD635201, "Frailty Rate +{0}%").
+-define(SD636201, "Pursuit Res Rate +{0}%").
+-define(SD637201, "Multi-strike Res Rate +{0}%").
+-define(SD638201, "Smite Rate +{0}%").
+-define(SD639201, "Pursuit Strike +{0}%").
+-define(EASYSD631101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD632101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD633101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD634101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD635101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD636101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD637101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD638101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD639101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD640101, "All Gold Pacts (Gear Included) Stats +{0}%").
+-define(EASYSD615201, "Crit DMG Reduction +{0}%").
+-define(EASYSD616201, "Focus DMG Reduction + {0}%").
+-define(EASYSD618201, "Crit DMG Bonus + {0}%").
+-define(EASYSD619201, "Focus ATK Bonus increases by {0}%").
+-define(EASYSD631201, "Anti-Lethal Rate +{0}%").
+-define(EASYSD632201, "Focus Rate +{0}%").
+-define(EASYSD633201, "Excellent Rate +{0}%").
+-define(EASYSD634201, "Lethal Rate increases {0}%").
+-define(EASYSD635201, "Frailty Rate +{0}%").
+-define(EASYSD636201, "Pursuit Res Rate +{0}%").
+-define(EASYSD637201, "Multi-strike Res Rate +{0}%").
+-define(EASYSD638201, "Smite Rate +{0}%").
+-define(EASYSD639201, "Pursuit Strike +{0}%").
+-define(EASYSD640201, "Multi-strike Cap Rate +{0}%").
+-define(SCN170001, "Frost Descends").
+-define(SCD170001, "Normal attack has a {0}% chance to deal {1}% extra DMG to {2} (monsters + {3}) nearby targets.CD: {4}S").
+-define(SS170001, "Normal attacks deal extra damage").
+-define(SCN170011, "Death Bones").
+-define(SCD170011, "Normal attack has a {0}% chance to deal {1}% extra DMG to {2} (monsters + {3}) nearby targets.CD: {4}S").
+-define(SS170011, "Normal attacks deal extra damage").
+-define(SCN170021, "Nature's Restoration").
+-define(SCD170021, "Normal attack has a {0}% chance to heal the user for HP equal to {1}% of ATK.CD: {2}s").
+-define(SS170021, "Normal attacks restore HP").
+-define(SCN170031, "Purgatory Flame").
+-define(SCD170031, "Crescent Slash DMG +{0}%").
+-define(SS170031, "Warrior Skill Enhance").
+-define(SCN170041, "Hell Flame").
+-define(SCD170041, "Fire Blast DMG +{0}%").
+-define(SS170041, "Mage Skill Enhance").
+-define(SCN170051, "Power of the Forest").
+-define(SCD170051, "Scatter Shot DMG +{0}%").
+-define(SS170051, "Archer Skill Enhance").
+-define(SCN170061, "Nightdemon Possession").
+-define(SCD170061, "Normal attacks have a {0}% chance to trigger Iron Bone (DMG Reduction +{1}%) for {2}s.CD: {3}s").
+-define(SS170061, "Normal attacks trigger Iron Bone").
+-define(SCN170071, "Sea and Sky").
+-define(SCD170071, "Normal attacks have a {0}% chance to trigger Windwalker (Dodge Rate +{1}%) for {2}s.CD: {3}s").
+-define(SS170071, "Normal attacks trigger Windwalker").
+-define(SCN170081, "Elemental Wings").
+-define(SCD170081, "Normal attacks have a {0}% chance to trigger Precision Master (Hit Rate +{1}%) for {2}s.CD: {3}s").
+-define(SS170081, "Normal attacks trigger Precision Master").
+-define(SCN170091, "Holy Dawn").
+-define(SCD170091, "Moon Slash DMG +{0}%").
+-define(SS170091, "Warrior Skill Enhance").
+-define(SCN170101, "Arctic Surge").
+-define(SCD170101, "Frost Impact DMG +{0}%").
+-define(SS170101, "Mage Skill Enhance").
+-define(SCN170111, "Dragon Voice").
+-define(SCD170111, "Whirling Arrow DMG +{0}%").
+-define(SS170111, "Archer Skill Enhance").
+-define(BF15001, "Nightdemon Sword").
+-define(BF15002, "Sea Drake Wand").
+-define(BF15003, "Fire Frost Wings").
+-define(SCN170121, "Holy Will").
+-define(SCD170121, "Normal attacks have a {0}% chance to trigger Iron Wall (DEF +{1}%) for {2}s.CD: {3}s").
+-define(SS170121, "Normal attacks trigger Iron Wall").
+-define(SCN170131, "Spark Blaze").
+-define(SCD170131, "Normal attacks have a {0}% chance to trigger Infinite Wrath (DMG Bonus +{1}%) for {2}s.CD: {3}s").
+-define(SS170131, "Normal attacks trigger Infinite Wrath").
+-define(SCN170141, "Divine Guard").
+-define(SCD170141, "Normal attacks have a {0}% chance to trigger Full Alert (Block Rate +{1}%) for {2}s.CD: {3}s").
+-define(SS170141, "Normal attacks trigger Full Alert").
+-define(SCN170151, "Crimson Eye").
+-define(SCD170151, "Whirling Cleave DMG +{0}%").
+-define(SS170151, "Warrior Skill Enhance").
+-define(SCN170161, "Flame Heart").
+-define(SCD170161, "Sundering Flame DMG +{0}%").
+-define(SS170161, "Mage Skill Enhance").
+-define(SCN170171, "Pure Thunder").
+-define(SCD170171, "Thunder Bird DMG +{0}%").
+-define(SS170171, "Archer Skill Enhance").
+-define(BF15004, "Sacred Dark Sword").
+-define(BF15005, "Fireborn Wand").
+-define(BF15006, "Divine Judgment Wings").
+-define(BF15007, "").
+-define(BF15008, "").
+-define(BN15008, "").
+-define(BD15008, "").
+-define(EASYSD910001, "D.Weapon Star Up Stat Skill").
+-define(SN910001, "Frost Moon").
+-define(SN910021, "Hilt - Defeat").
+-define(SN910041, "Sword Tip - Sharp").
+-define(SN910061, "Sword Sheath - Strong").
+-define(SN910081, "Sword Ridge - Persist").
+-define(SN910101, "Godly Prison").
+-define(SN910121, "Sword Stalk - Slash").
+-define(SN910141, "Sword Edge - Damage").
+-define(SN910161, "Sword Body - Break").
+-define(SN910181, "Sword Head - Block").
+-define(SN910201, "Umbral Shadows").
+-define(SN910221, "Hilt - Eliminate").
+-define(SN910241, "Sword Tip - Incite").
+-define(SN910261, "Sword Sheath - Pierce").
+-define(SN910281, "Sword Ridge - Twist").
+-define(SN910301, "Eternal Light").
+-define(SN910321, "Sword Stalk - Press").
+-define(SN910341, "Sword Edge - Bind").
+-define(SN910361, "Sword Body - Armor").
+-define(SN910381, "Sword Head - Weapon").
+-define(SN910401, "Blackgold Dynasty").
+-define(SN910421, "Hilt - Slash").
+-define(SN910441, "Sword Tip - Sink").
+-define(SN910461, "Sword Sheath - Lance").
+-define(SN910481, "Sword Ridge - Breath").
+-define(SN910501, "Thundering Blow").
+-define(SN910521, "Sword Stalk - Light").
+-define(SN910541, "Sword Edge - Destroy").
+-define(SN910561, "Sword Body - Void").
+-define(SN910581, "Sword Head - Solid").
+-define(SN910601, "Thundering Blow").
+-define(SN910621, "Hilt - Cast").
+-define(SN910641, "Sword Tip - War").
+-define(SN910661, "Sword Sheath - Nullify").
+-define(SN910681, "Sword Ridge - Armor").
+-define(SN910701, "Blazing Sky").
+-define(SN910721, "Sword Stalk - Jade").
+-define(SN910741, "Sword Edge - Flame").
+-define(SN910761, "Sword Body - Empty").
+-define(SN910781, "Sword Head - Scorch").
+-define(SN910801, "God Slaying Might").
+-define(SN910821, "Hilt - Halt").
+-define(SN910841, "Sword Tip - Grief").
+-define(SN910861, "Sword Sheath - Grief").
+-define(SN910881, "Sword Ridge - Defeated").
+-define(SN910901, "Thunder Fury").
+-define(SN910921, "Sword Stalk - Speed").
+-define(SN910941, "Sword Edge - Haste").
+-define(SN910961, "Sword Body - Wind").
+-define(SN910981, "Sword Head - Clouds").
+-define(SN911001, "").
+-define(SN911021, "").
+-define(SN911041, "").
+-define(SN911061, "").
+-define(SN911081, "").
+-define(SN911101, "").
+-define(SN911121, "").
+-define(SN911141, "").
+-define(SN911161, "").
+-define(SN911181, "").
+-define(SN911201, "").
+-define(SN911221, "").
+-define(SN911241, "").
+-define(SN911261, "").
+-define(SN911281, "").
+-define(SN911301, "").
+-define(SN911321, "").
+-define(SN911341, "").
+-define(SN911361, "").
+-define(SN911381, "").
+-define(SN911401, "").
+-define(SN911421, "").
+-define(SN911441, "").
+-define(SN911461, "").
+-define(SN911481, "").
+-define(SN911501, "").
+-define(SN911521, "").
+-define(SN911541, "").
+-define(SN911561, "").
+-define(SN911581, "").
+-define(SN911601, "").
+-define(SN911621, "").
+-define(SN911641, "").
+-define(SN911661, "").
+-define(SN911681, "").
+-define(SN911701, "").
+-define(SN911721, "").
+-define(SN911741, "").
+-define(SN911761, "").
+-define(SN911781, "").
+-define(SN911801, "").
+-define(SN911821, "").
+-define(SN911841, "").
+-define(SN911861, "").
+-define(SN911881, "").
+-define(SN911901, "").
+-define(SN911921, "").
+-define(SN911941, "").
+-define(SN911961, "").
+-define(SN911981, "").
+-define(SN920001, "").
+-define(SN920021, "").
+-define(SN920041, "").
+-define(SN920061, "").
+-define(SN920081, "").
+-define(SN920101, "").
+-define(SN920121, "").
+-define(SN920141, "").
+-define(SN920161, "").
+-define(SN920181, "").
+-define(SN920201, "").
+-define(SN920221, "").
+-define(SN920241, "").
+-define(SN920261, "").
+-define(SN920281, "").
+-define(SN920301, "").
+-define(SN920321, "").
+-define(SN920341, "").
+-define(SN920361, "").
+-define(SN920381, "").
+-define(SN920401, "").
+-define(SN920421, "").
+-define(SN920441, "").
+-define(SN920461, "").
+-define(SN920481, "").
+-define(SN920501, "").
+-define(SN920521, "").
+-define(SN920541, "").
+-define(SN920561, "").
+-define(SN920581, "").
+-define(SN920601, "").
+-define(SN920621, "").
+-define(SN920641, "").
+-define(SN920661, "").
+-define(SN920681, "").
+-define(SN920701, "").
+-define(SN920721, "").
+-define(SN920741, "").
+-define(SN920761, "").
+-define(SN920781, "").
+-define(SN920801, "").
+-define(SN920821, "").
+-define(SN920841, "").
+-define(SN920861, "").
+-define(SN920881, "").
+-define(SN920901, "").
+-define(SN920921, "").
+-define(SN920941, "").
+-define(SN920961, "").
+-define(SN920981, "").
+-define(SN921001, "").
+-define(SN921021, "").
+-define(SN921041, "").
+-define(SN921061, "").
+-define(SN921081, "").
+-define(SN921101, "").
+-define(SN921121, "").
+-define(SN921141, "").
+-define(SN921161, "").
+-define(SN921181, "").
+-define(SN921201, "").
+-define(SN921221, "").
+-define(SN921241, "").
+-define(SN921261, "").
+-define(SN921281, "").
+-define(SN921301, "").
+-define(SN921321, "").
+-define(SN921341, "").
+-define(SN921361, "").
+-define(SN921381, "").
+-define(SN921401, "").
+-define(SN921421, "").
+-define(SN921441, "").
+-define(SN921461, "").
+-define(SN921481, "").
+-define(SN921501, "").
+-define(SN921521, "").
+-define(SN921541, "").
+-define(SN921561, "").
+-define(SN921581, "").
+-define(SN921601, "").
+-define(SN921621, "").
+-define(SN921641, "").
+-define(SN921661, "").
+-define(SN921681, "").
+-define(SN921701, "").
+-define(SN921721, "").
+-define(SN921741, "").
+-define(SN921761, "").
+-define(SN921781, "").
+-define(SN921801, "").
+-define(SN921821, "").
+-define(SN921841, "").
+-define(SN921861, "").
+-define(SN921881, "").
+-define(SN921901, "").
+-define(SN921921, "").
+-define(SN921941, "").
+-define(SN921961, "").
+-define(SN921981, "").
+-define(SN930001, "Force of Nature").
+-define(SN930021, "Bow Arm - Spring").
+-define(SN930041, "Bow Tip - Summer").
+-define(SN930061, "Bow Rope - Autumn").
+-define(SN930081, "Bowstring - Winter").
+-define(SN930101, "Heart of the Forest").
+-define(SN930121, "Arrow Shaft - Flourish").
+-define(SN930141, "Arrowhead - Abundant").
+-define(SN930161, "Standing Feather - Wither").
+-define(SN930181, "Tail Feather - Blossom").
+-define(SN930201, "Frost Fire").
+-define(SN930221, "Bow Arm - Ice").
+-define(SN930241, "Bow Tip - Frost").
+-define(SN930261, "Bow Rope - Scorch").
+-define(SN930281, "Bowstring - Flame").
+-define(SN930301, "Dragon Song").
+-define(SN930321, "Arrow Shaft - Horns").
+-define(SN930341, "Arrowhead - Scales").
+-define(SN930361, "Standing Feather - Claws").
+-define(SN930381, "Tail Feather - Wings").
+-define(SN930401, "Divine Ruling").
+-define(SN930421, "Bow Arm - Examine").
+-define(SN930441, "Bow Tip - Judge").
+-define(SN930461, "Bow Rope - Arbitrate").
+-define(SN930481, "Bowstring - Verdict").
+-define(SN930501, "Purity Wings").
+-define(SN930521, "Arrow Shaft - Heaven").
+-define(SN930541, "Arrowhead - Shines").
+-define(SN930561, "Standing Feather - Bright").
+-define(SN930581, "Tail Feather - Sky").
+-define(SN930601, "Solar Song").
+-define(SN930621, "Bow Arm - Rising").
+-define(SN930641, "Bow Tip - Sun").
+-define(SN930661, "Bow Rope - Illuminate").
+-define(SN930681, "Bowstring - Crown").
+-define(SN930701, "Language of Heat").
+-define(SN930721, "Arrow Shaft - Flame").
+-define(SN930741, "Arrowhead - Scorching").
+-define(SN930761, "Standing Feather - Morning").
+-define(SN930781, "Tail Feather - Sunlight").
+-define(SN930801, "Sacred Grace").
+-define(SN930821, "Bow Arm - Command").
+-define(SN930841, "Bow Tip - Execute").
+-define(SN930861, "Bow Rope - Prohibit").
+-define(SN930881, "Bowstring - Halt").
+-define(SN930901, "Godly Prison").
+-define(SN930921, "Arrow Shaft - Award").
+-define(SN930941, "Arrowhead - Knack").
+-define(SN930961, "Standing Feather - Punish").
+-define(SN930981, "Tail Feather - Evil").
+-define(SN931001, "").
+-define(SN931021, "").
+-define(SN931041, "").
+-define(SN931061, "").
+-define(SN931081, "").
+-define(SN931101, "").
+-define(SN931121, "").
+-define(SN931141, "").
+-define(SN931161, "").
+-define(SN931181, "").
+-define(SN931201, "").
+-define(SN931221, "").
+-define(SN931241, "").
+-define(SN931261, "").
+-define(SN931281, "").
+-define(SN931301, "").
+-define(SN931321, "").
+-define(SN931341, "").
+-define(SN931361, "").
+-define(SN931381, "").
+-define(SN931401, "").
+-define(SN931421, "").
+-define(SN931441, "").
+-define(SN931461, "").
+-define(SN931481, "").
+-define(SN931501, "").
+-define(SN931521, "").
+-define(SN931541, "").
+-define(SN931561, "").
+-define(SN931581, "").
+-define(SN931601, "").
+-define(SN931621, "").
+-define(SN931641, "").
+-define(SN931661, "").
+-define(SN931681, "").
+-define(SN931701, "").
+-define(SN931721, "").
+-define(SN931741, "").
+-define(SN931761, "").
+-define(SN931781, "").
+-define(SN931801, "").
+-define(SN931821, "").
+-define(SN931841, "").
+-define(SN931861, "").
+-define(SN931881, "").
+-define(SN931901, "").
+-define(SN931921, "").
+-define(SN931941, "").
+-define(SN931961, "").
+-define(SN931981, "").
+-define(SN940001, "Unwavering Resolution").
+-define(SN940021, "Hammerhead - Firm").
+-define(SN940041, "Hammer Body - Tolerance").
+-define(SN940061, "Hammer Chain - Courageous").
+-define(SN940081, "Hammer Handle - Resolve").
+-define(SN940101, "Courage Guard").
+-define(SN940121, "Shield Face - Steel").
+-define(SN940141, "Shield Body - Will").
+-define(SN940161, "Shield Feet - Hardship").
+-define(SN940181, "Handle - Yield").
+-define(SN940201, "Always Forward").
+-define(SN940221, "Hammerhead - Full").
+-define(SN940241, "Hammer Body - Power").
+-define(SN940261, "Hammer Chain - Obstruct").
+-define(SN940281, "Hammer Handle - Block").
+-define(SN940301, "Thunder Barrier").
+-define(SN940321, "Shield Face - Bless").
+-define(SN940341, "Shield Body - Bless").
+-define(SN940361, "Shield Feet - Protect").
+-define(SN940381, "Handle - Guard").
+-define(SN940401, "Dragon Roar").
+-define(SN940421, "Hammerhead - Chant").
+-define(SN940441, "Hammer Body - Howl").
+-define(SN940461, "Hammer Chain - Call").
+-define(SN940481, "Hammer Handle - Wail").
+-define(SN940501, "Dragon Scales Protection").
+-define(SN940521, "Shield Face - Barrier").
+-define(SN940541, "Shield Body - Rampart").
+-define(SN940561, "Shield Feet - Moat").
+-define(SN940581, "Handle - Trench").
+-define(SN940601, "Crystal Cluster").
+-define(SN940621, "Hammerhead - Chime").
+-define(SN940641, "Hammer Body - Fall").
+-define(SN940661, "Hammer Chain - Plunder").
+-define(SN940681, "Hammer Handle - Assault").
+-define(SN940701, "Rune Language").
+-define(SN940721, "Shield Face - Carve").
+-define(SN940741, "Shield Body - Engrave").
+-define(SN940761, "Shield Feet - Bore").
+-define(SN940781, "Handle - Strike").
+-define(SN940801, "Manticore Charge").
+-define(SN940821, "Hammerhead - Expedition").
+-define(SN940841, "Hammer Body - Conquer").
+-define(SN940861, "Hammer Chain - Suppression").
+-define(SN940881, "Hammer Handle - Attack").
+-define(SN940901, "Griffin's Heart").
+-define(SN940921, "Shield Face - Cover").
+-define(SN940941, "Shield Body - Block").
+-define(SN940961, "Shield Feet - Conceal").
+-define(SN940981, "Handle - Enshroud").
+-define(SN941001, "").
+-define(SN941021, "").
+-define(SN941041, "").
+-define(SN941061, "").
+-define(SN941081, "").
+-define(SN941101, "").
+-define(SN941121, "").
+-define(SN941141, "").
+-define(SN941161, "").
+-define(SN941181, "").
+-define(SN941201, "").
+-define(SN941221, "").
+-define(SN941241, "").
+-define(SN941261, "").
+-define(SN941281, "").
+-define(SN941301, "").
+-define(SN941321, "").
+-define(SN941341, "").
+-define(SN941361, "").
+-define(SN941381, "").
+-define(SN941401, "").
+-define(SN941421, "").
+-define(SN941441, "").
+-define(SN941461, "").
+-define(SN941481, "").
+-define(SN941501, "").
+-define(SN941521, "").
+-define(SN941541, "").
+-define(SN941561, "").
+-define(SN941581, "").
+-define(SN941601, "").
+-define(SN941621, "").
+-define(SN941641, "").
+-define(SN941661, "").
+-define(SN941681, "").
+-define(SN941701, "").
+-define(SN941721, "").
+-define(SN941741, "").
+-define(SN941761, "").
+-define(SN941781, "").
+-define(SN941801, "").
+-define(SN941821, "").
+-define(SN941841, "").
+-define(SN941861, "").
+-define(SN941881, "").
+-define(SN941901, "").
+-define(SN941921, "").
+-define(SN941941, "").
+-define(SN941961, "").
+-define(SN941981, "").
+-define(SD910001, "Stats Bonus:
+ATK +{0}
+HP +{1}
+Sunder +{2}
+DEF +{3}
+ATK Bonus +{4}%
+HP Bonus +{5}%
+Sunder Bonus +{6}%
+DEF Bonus +{7}%").
+-define(SD910021, "Stats Bonus:
+ATK +{0}
+HP Bonus +{1}%").
+-define(SD910041, "Stats Bonus:
+HP +{0}
+Sunder Bonus +{1}%").
+-define(SD910061, "Stats Bonus:
+Sunder +{0}
+DEF Bonus +{1}%").
+-define(SD910081, "Stats Bonus:
+DEF +{0}
+ATK Bonus +{1}%").
+-define(BN1000208, "Donation Event Bonus").
+-define(BD1000208, "Mob EXP +<color=#dd2b2b>{0}%</color>").
+-define(BF1000208, "[Donation Event]").
+-define(SN200101, "Elemental Orb").
+-define(SD200101, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS200101, "DMG Dealt").
+-define(SN200141, "Element Restoration").
+-define(SD200141, "Merlin uses the power of elements to restore HP equal to {0}% of the master's Max HP +{1}% of his Max HP for master.").
+-define(SS200141, "Restores master's HP").
+-define(SN200161, "Icy Guard").
+-define(SD200161, "Merlin uses his icy power to restore HP equal to {0}% of the Character's Max HP +{1}% of caster's Max HP to the main character, and grant Control Immunity that lasts for {2} seconds.").
+-define(SS200161, "Restores the main character's HP and grants Control Immunity effect").
+-define(SN200201, "Arbiter").
+-define(SD200201, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS200201, "DMG Dealt").
+-define(SN200241, "Holy Verdict").
+-define(SD200241, "Joan of Arc waves her spear and releases Holy Verdict, dealing {0}% Character DMG + {1}% Hero DMG and reducing the enemy's ATK by {2}% for {3}s.").
+-define(SS200241, "Deals DMG and reduces the enemy's ATK").
+-define(SN200261, "Sanctuary of Light").
+-define(SD200261, "Joan of Arc teleports to her master and summons the Holy Light, restoring HP equal to {0}%+{1}% of her Max HP for her master and dispelling all debuffs.").
+-define(SS200261, "Restores the main character's HP, and dispels debuffs of the master").
+-define(SN200301, "Demon Missile").
+-define(SD200301, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS200301, "DMG Dealt").
+-define(SN200341, "Demon Soul").
+-define(SD200341, "Genie applies Demon Soul to its master, increase their DMG Reduction by {0}% for {1}s.").
+-define(SS200341, "Increases DMG Reduction for the master").
+-define(SN200361, "Aegis of Prayer").
+-define(SD200361, "Genie triggers Prayer, morphing into a shield that can take DMG equal to {0}% of the master's Max HP + {1}% of Genie's Max HP for {2}s.The shield can reflect {3}% DMG taken.").
+-define(SS200361, "Provides shield and counter for the master.").
+-define(SN200401, "Celestial Tunes").
+-define(SD200401, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS200401, "DMG Dealt").
+-define(SN200441, "Holy Presence").
+-define(SD200441, "Archangel dispels {0} stacks of debuff randomly for his master with the holy light.").
+-define(SS200441, "Dispel debuffs of the master").
+-define(SN200461, "Bastion of Light").
+-define(SD200461, "Archangel morphs into the Holy Barrier and grants his master immunity to all DMGs for {0}s.").
+-define(SD200462, "").
+-define(SD200463, "").
+-define(SS200461, "Grant the master immunity to DMG").
+-define(SN200501, "Water Vortex").
+-define(SD200501, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS200501, "DMG Dealt").
+-define(SN200541, "Vortex").
+-define(SD200541, "Siren releases vortex, reducing Move SPD of the nearby enemy by {0}% for {1}s.").
+-define(SS200541, "Reduces the enemy Move SPD").
+-define(SN200561, "Guardian of Sea").
+-define(SD200561, "Siren possesses his master, morphing into a shield that can take DMG equal to {0}% of the master's Max HP + {1}% of Siren's Max HP for {2}s.Increases DMG Reduction for the master by {3}% for {4}s.").
+-define(SS200561, "Provides shield and DMG Reduction for the master").
+-define(SN200601, "").
+-define(SD200601, "").
+-define(SS200601, "").
+-define(SN200641, "").
+-define(SD200641, "").
+-define(SS200641, "").
+-define(SN200661, "").
+-define(SD200661, "").
+-define(SS200661, "").
+-define(SN200701, "Mountain Cleave").
+-define(SD200701, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS200701, "DMG Dealt").
+-define(SN200740, "Flying Axe").
+-define(SD200740, "Gilgamesh deals {0}% Character DMG + {1}% Hero DMG to the enemy with flying axe.").
+-define(SS200741, "DMG Dealt").
+-define(SN200761, "Whirling Cleave").
+-define(SD200761, "Gilgamesh dashes to the enemy, attacking with two axes in {0}s and dealing {1}% Character DMG + DMG equal to {2}% Gilgamesh Attack to the nearby enemies and double DMG to minions.For every enemy hit, Skill DMG increases by {3}%, up to {4}%.").
+-define(SS200761, "DMG Dealt").
+-define(SN200801, "Arc Slash").
+-define(SD200801, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS200801, "DMG Dealt").
+-define(SN200841, "Heavy Sword").
+-define(SD200841, "Brunhild strikes the enemy, dealing {0}% Character DMG + {1}% Hero DMG and inflicting Stun for {2}s.").
+-define(SS200841, "Deals DMG and Stun").
+-define(SN200861, "Sword Dance").
+-define(SD200861, "Brunhild dashes to the enemy and attacks nearby enemies with the heavy sword in {0}s, dealing {1}% Character DMG + {2}% Hero DMG in total and double DMG to minions.Each attack has a {3}% chance to stun them for {4}s.For every enemy hit, skill DMG increases by {5}%, up to {6}%.").
+-define(SS200861, "Deals DMG and Stun").
+-define(SN200901, "Hammer Strike").
+-define(SD200901, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS200901, "DMG Dealt").
+-define(SN200941, "Heavy Hammer").
+-define(SD200941, "Herakliss deals {0}% Character DMG + {1}% Hero DMG to the enemy with hammer, reducing Move SPD of the target by {2}% for {3}s.").
+-define(SS200941, "Inflicts DMG and Slow").
+-define(SN200961, "Mighty Hammer").
+-define(SD200961, "Herakliss jumps to the enemy and smashes the ground with hammer, dealing {0}% Character DMG + {1}% Hero DMG and Stunning the attacked enemy for {2}s.If this skill hits more than {3} enemies, it also inflicts {4}% Slow for {5}s.").
+-define(SS200961, "Inflicts DMG, Stun and Slow").
+-define(SN201001, "Sky Fire").
+-define(SD201001, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS201001, "DMG Dealt").
+-define(SN201041, "Fire Bird").
+-define(SD201041, "Ifrit releases the Fire Bird to burn the enemy, the attacked enemy takes {0}% Character DMG + {1}% Hero DMG every sec for {2}s.").
+-define(SS201041, "Deals DOT").
+-define(SN201061, "Fel Star").
+-define(SD201061, "Ifrit summons Fel Stars to attack a single enemy.Damage increases gradually, dealing DMG equal to {0}% of the Character's ATK + {1}% of Ifrit's ATK in total.When it finishes, the enemy takes extra {2}% DMG based on the total damage from this skill.").
+-define(SS201061, "DMG Dealt").
+-define(SN201101, "Doom Impact").
+-define(SD201101, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS201101, "DMG Dealt").
+-define(SN201141, "Chilling Breath").
+-define(SD201141, "Pandora releases the Chilling Breath, reducing Move SPD of the enemy by {0}% for {1}s.").
+-define(SS201141, "Reduces Move SPD of the enemy").
+-define(SN201161, "Primal Return").
+-define(SD201161, "Pandora teleports to the enemy and summons a Galaxy Space for {0}s, dealing {1}% Character DMG + DMG equal to {2}% of Pandora's ATK to the enemies within range.Enemy takes {4}% Character DMG + DMG equal to {5}% of Pandora's ATK every {3}s and double DMG to minions.").
+-define(SS201161, "DMG Dealt").
+-define(SN201201, "").
+-define(SD201201, "").
+-define(SS201201, "").
+-define(SN201241, "").
+-define(SD201241, "").
+-define(SS201241, "").
+-define(SN201261, "").
+-define(SD201261, "").
+-define(SS201261, "").
+-define(SS201262, "Attacks the enemy, dealing DMG equal to {0}% of character DMG + {1}% of Hero DMG.Increases the enemy's DMG taken by {2}% and restores HP for the player in {5}s.").
+-define(SN201301, "Vehement Strike").
+-define(SD201301, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS201301, "DMG Dealt").
+-define(SN201341, "Charged Smite").
+-define(SD201341, "Magic Monkey Hanuman attacks the enemy with hammer bash, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS201341, "DMG Dealt").
+-define(SN201361, "Cosmic Revolution").
+-define(SD201361, "Magic Monkey Hanuman waves hammer to the enemy, dealing {0}% Character DMG + {1}% Hero DMG.For every {2}% HP the enemy loses, the skill DMG increases by {3}%.").
+-define(SS201361, "Deals DMG, increases DMG taken to the enemies who have lost HP").
+-define(SN201401, "Shuriken").
+-define(SD201401, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS201401, "DMG Dealt").
+-define(SN201441, "Shadow Servant").
+-define(SD201441, "Hattori Hanzo morphs into different figures to attack the enemy, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS201441, "DMG Dealt").
+-define(SN201461, "Lightning Slash").
+-define(SD201461, "Hattori Hanzo jumps up, dealing multiple cleaves to a single enemy with his Samurai blade.Deals DMG equal to {0}% of the player's ATK + {1}% of Hattori Hanzo's ATK.If the target is a player, deals {2}% of DMG instead.").
+-define(SS201461, "DMG Dealt").
+-define(SN201501, "Sword Shadow").
+-define(SD201501, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS201501, "DMG Dealt").
+-define(SN201541, "Hurricane Blade").
+-define(SD201541, "Siegfried strikes the enemy with the giant sword, dealing {0}% Character DMG + {1}% Hero DMG and increasing DMG taken of the enemy by {2}% for {3}s.").
+-define(SS201541, "Deals damage and increases enemies' damage taken").
+-define(SN201561, "Chaos Blade").
+-define(SD201561, "Siegfried jumps on the enemy, dealing {0}% Character DMG + {1}% Hero DMG with giant sword.If the enemy has a shield, breaks the shield and Stun the enemy for {2}s.").
+-define(SS201561, "Deals DMG and breaks the Shield").
+-define(SN201601, "Cleave").
+-define(SD201601, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS201601, "DMG Dealt").
+-define(SN201641, "Assassinate").
+-define(SD201641, "Queen Sheba stabs the enemy with dagger, dealing {0}% Character DMG + {1}% Hero DMG and increasing DMG taken of the enemy by {2}% for {3}s.").
+-define(SS201641, "Deals damage and increases enemies' damage taken").
+-define(SN201661, "Five Stars").
+-define(SD201661, "Queen Sheba teleports to the enemy and kills the enemy within range, dealing {0}% Character DMG + {1}% Hero DMG and reducing healing effect by {2}% and Move SPD by {3}% of the enemy for {4}s.").
+-define(SS201661, "Deals damage and increases the enemies' damage taken").
+-define(SD201681, "").
+-define(SN201701, "Light Orb").
+-define(SD201701, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS201701, "DMG Dealt").
+-define(SN201741, "Light of Stillness").
+-define(SD201741, "Queen of Egypt releases the Light of Stillness, reducing Move SPD of the enemy by {0}% for {1}s.").
+-define(SS201741, "Reduces Move SPD of the enemy").
+-define(SN201761, "Light of Petrify").
+-define(SD201761, "Queen of Egypt teleports to the enemy and releases the Light of Petrify, dealing {0}% Character DMG + {1}% Hero DMG and petrifying the enemy for {2}s.").
+-define(SS201761, "Inflicts DMG and Petrify").
+-define(SN201801, "Crescent Cut").
+-define(SD201801, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS201801, "DMG Dealt").
+-define(SN201841, "Sandstorm").
+-define(SD201841, "Saladin interferes enemy with sand, reducing Hit Rate of the enemy by {0}% for {1}s.").
+-define(SS201841, "Reduces Hit Rate of the enemy").
+-define(SN201861, "Death Game").
+-define(SD201861, "Saladin releases Tornado to the enemy, dealing {0}% Character DMG + {1}% Hero DMG and stunning the enemy for {2}s.").
+-define(SS201861, "Inflicts DMG and Stun the enemy").
+-define(SN201901, "Piercing Beauty").
+-define(SD201901, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS201901, "DMG Dealt").
+-define(SN201941, "Thorny Stab").
+-define(SD201941, "Scathach stabs the enemy with spear, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS201941, "DMG Dealt").
+-define(SN201961, "Thorny Tempest").
+-define(SD201961, "Scathach throws a lot of spears at enemies in the front.The longer he gathers strength to throw, the higher the DMG.The DMG can be up to {0}% Character DMG + {1}% Hero DMG.The minimum DMG is {2}% Character DMG + {3}% Hero DMG.If the enemy attacked has Invincible, the skill will break their invincibility and stun them for {4}s.").
+-define(SD201962, "").
+-define(SD201963, "").
+-define(SS201961, "Inflicts DMG and breaks the Invincible state").
+-define(BN16001, "Icy Guard").
+-define(BN16002, "Icy Guard").
+-define(BN16003, "Holy Verdict").
+-define(BN16004, "Sanctuary of Light").
+-define(BN16005, "Demon Soul").
+-define(BN16006, "Aegis of Prayer").
+-define(BN16007, "Bastion of Light").
+-define(BN16008, "Vortex").
+-define(BN16009, "Guardian of Sea").
+-define(BN16010, "Hell Sigil").
+-define(BN16011, "Hell of Bloodbath").
+-define(BN16012, "Heavy Sword").
+-define(BN16013, "Sword Dance").
+-define(BN16014, "Heavy Hammer").
+-define(BN16015, "Mighty Hammer").
+-define(BN16016, "Mighty Hammer").
+-define(BN16017, "Fire Bird").
+-define(BN16018, "Chilling Breath").
+-define(BN16019, "Ancestor Ichor").
+-define(BN16020, "Five Stars").
+-define(BN16021, "Demon Claw").
+-define(BN16022, "Hurricane Blade").
+-define(BN16023, "Assassinate").
+-define(BN16024, "Light of Petrify").
+-define(BN16025, "Light of Stillness").
+-define(BN16026, "Sandstorm").
+-define(BN16027, "Death Game").
+-define(BN16028, "Thorny Tempest").
+-define(BN16029, "Chaos Blade").
+-define(BD16001, "Control Immunity").
+-define(BD16002, "Healing over time").
+-define(BD16003, "ATK +{0}%").
+-define(BD16004, "Control Immunity").
+-define(BD16005, "Damage Reduction+{0}%").
+-define(BD16006, "Gain {0}% Counter when the shield is active").
+-define(BD16007, "Immune to all damage").
+-define(BD16008, "Move Speed -{0}%").
+-define(BD16009, "Gain {0}% DMG Reduction when the shield is active").
+-define(BD16010, "Takes {1}% Character DMG + {2}% Hero DMG every {0}s").
+-define(BD16011, "Crit Rate +{0}%, ATK +{1}%").
+-define(BD16012, "Stun: Out of Control").
+-define(BD16013, "Stun: Out of Control").
+-define(BD16014, "Move Speed -{0}%").
+-define(BD16015, "Stun: Out of Control").
+-define(BD16016, "Move Speed -{0}%").
+-define(BD16017, "Takes {0}% Character DMG + {1}% Hero DMG every second").
+-define(BD16018, "Move Speed -{0}%").
+-define(BD16019, "Takes {0}% Character DMG + {1}% Hero DMG every second").
+-define(BD16020, "Healing -{0}%, Move Speed -{1}%").
+-define(BD16021, "DMG Reduction -{0}%").
+-define(BD16022, "DMG Reduction -{0}%").
+-define(BD16023, "DMG Reduction -{0}%").
+-define(BD16024, "Petrify").
+-define(BD16025, "Move Speed -{0}%").
+-define(BD16026, "Hit Rate -{0}%").
+-define(BD16027, "Stun: Out of Control").
+-define(BD16028, "Stun: Out of Control").
+-define(BD16029, "Stun: Out of Control").
+-define(BF16001, "[Merlin]").
+-define(BF16002, "[Merlin]").
+-define(BF16003, "[Joan of Arc]").
+-define(BF16004, "[Joan of Arc]").
+-define(BF16005, "[Genie]").
+-define(BF16006, "[Genie]").
+-define(BF16007, "[Archangel]").
+-define(BF16008, "[Siren]").
+-define(BF16009, "[Siren]").
+-define(BF16010, "[Elizabeth]").
+-define(BF16011, "[Elizabeth]").
+-define(BF16012, "[Brunhild]").
+-define(BF16013, "[Brunhild]").
+-define(BF16014, "[Herakliss]").
+-define(BF16015, "[Herakliss]").
+-define(BF16016, "[Herakliss]").
+-define(BF16017, "[Ifrit]").
+-define(BF16018, "[Pandora]").
+-define(BF16019, "[Dracula]").
+-define(BF16020, "[Queen Sheba]").
+-define(BF16021, "[Dracula]").
+-define(BF16022, "[Siegfried]").
+-define(BF16023, "[Queen Sheba]").
+-define(BF16024, "[Queen of Egypt]").
+-define(BF16025, "[Queen of Egypt]").
+-define(BF16026, "[Saladin]").
+-define(BF16027, "[Saladin]").
+-define(BF16028, "[Scathach]").
+-define(BF16029, "[Siegfried]").
+-define(SN202101, "Devil Claw").
+-define(SD202101, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS202101, "DMG Dealt").
+-define(SN202141, "Phantom").
+-define(SD202141, "Succubus gathers shadows to attack the targets nearby, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS202141, "DMG Dealt").
+-define(SN202161, "Entrance").
+-define(SD202161, "Succubus attacks a single enemy with the power of shadow, dealing {0}% Character DMG + {1}% Hero DMG and inflicting Stun for {2}s on the attacked target.").
+-define(SS202161, "Deals DMG and Stun").
+-define(SN202201, "Nightmare").
+-define(SD202201, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS202201, "DMG Dealt").
+-define(SN202241, "Awakening").
+-define(SD202241, "Oneiric Witch transforms the target area into a broken dream, dealing {0}% Character DMG + {1}% Hero DMG and reducing Move SPD of the target by {2}% for {3}s.").
+-define(SS202241, "Deals DMG and reduces the enemy's Move SPD").
+-define(SN202261, "Dream Zone").
+-define(SD202261, "Oneiric Witch teleports to the enemy and creates a Dream Zone for {0}s around them, dealing {2}% Character DMG + {3}% Hero DMG every {1}s to the enemy within range.").
+-define(SS202261, "DMG Dealt").
+-define(SN202301, "Curse").
+-define(SD202301, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS202301, "DMG Dealt").
+-define(SN202341, "Grudge").
+-define(SD202341, "Lich summons the evil spirits to attack targets within range, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS202341, "DMG Dealt").
+-define(SN202361, "Ghost Flame").
+-define(SD202361, "Lich summons the Ghost Flame to attack targets within the range, dealing {0}% Character DMG + {1}% Hero DMG and reducing Move SPD of the target by {2}% for {3}s.").
+-define(SS202361, "Deals DMG and reduces the enemy's Move SPD").
+-define(SN202401, "Claws").
+-define(SD202401, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS202401, "DMG Dealt").
+-define(SN202441, "Brutality").
+-define(SD202441, "Loup Garou attacks the enemy in front with his claws, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS202441, "DMG Dealt").
+-define(SN202461, "Breach Claw").
+-define(SD202461, "Loup Garou scratches in a frenzy, dealing DMG equal to {0}% of the master's ATK +{1}% of his ATK to the front enemy and reduces their Dodge Rate by {2}% for {3}s.").
+-define(SS202461, "Deals damage and inflicts Blunt on the enemy.").
+-define(SN202501, "Waste Power").
+-define(SD202501, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS202501, "DMG Dealt").
+-define(SN202541, "Waste Wave").
+-define(SD202541, "Waste Witch releases a Waste Wave to the front, dealing {0}% Character DMG + {1}% Hero DMG to the enemy in the way.").
+-define(SS202541, "DMG Dealt").
+-define(SN202561, "Waste Comet").
+-define(SD202561, "Waste Witch releases the Waste Comet to deal {0}% Character DMG + {1}% Hero DMG to the enemy.").
+-define(SS202561, "DMG Dealt").
+-define(SN202601, "Great Force").
+-define(SD202601, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS202601, "DMG Dealt").
+-define(SN202641, "Bash").
+-define(SD202641, "Deep Giant attacks the enemy with the weapon on his back, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS202641, "DMG Dealt").
+-define(SN202661, "Power of Sea").
+-define(SD202661, "Deep Giant summons the Power of Sea, granting a Shield that can take DMG equal to {0}% of the master's Max HP + {1}% of his Max HP to his master for {2}s.").
+-define(SS202661, "Grants Shield to the master").
+-define(SN202701, "Eagle Claw").
+-define(SD202701, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS202701, "DMG Dealt").
+-define(SN202741, "Flapping").
+-define(SD202741, "Harpy Chieftain flaps her wings to attack the enemy, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS202741, "DMG Dealt").
+-define(SN202761, "Speedy Hurricane").
+-define(SD202761, "Harpy Chieftain releases hurricane to the front, dealing DMG equal to {0}% of the master's ATK +{1}% of her ATK to the enemy in the way and reducing their Hit Rate by {2}% for {3}s.").
+-define(SS202761, "Inflicts DMG and inflicts Blind on the enemy.").
+-define(BN16030, "Entrance").
+-define(BD16030, "Stun: Out of Control").
+-define(BF16030, "[Succubus]").
+-define(BN16031, "Oneiric Witch Skill").
+-define(BD16031, "Move Speed -{0}%").
+-define(BF16031, "[Oneiric Witch]").
+-define(BN16032, "Ghost Flame").
+-define(BD16032, "Move Speed -{0}%").
+-define(BF16032, "[Lich]").
+-define(BN16033, "Power of Sea").
+-define(BD16033, "Blocks DMG").
+-define(BF16033, "[Deep Giant]").
+-define(SN125101, "Victorious Judge").
+-define(SD125101, "Attacks the enemy within the range continuously with the Victor's Spear, dealing DMG equal to {0}% player's ATK.
+Wisdom: For every enemy hit, the player receives 1 stack of Wisdom (each stack boosts DMG Bonus by {1}%) for {5}s, up to {2} stacks.
+Courage: For every enemy hit, the player receives 1 stack of Courage (each stack boosts DMG Reduction by {3}%) for {6}s, up to {4} stacks.").
+-define(SS125101, "Deals DMG and increases DMG and DMG Reduction").
+-define(SN125201, "Raven Dance").
+-define(SD125201, "Summons the raven to attack all enemies around the target, dealing {0}% Character DMG.
+Hatred: Player's Crit Rate and Crit DMG increase by {1}% for {3}s.
+Leech: The skill comes with {2}% Leech effect").
+-define(SS125201, "Deals DMG and increases Crit Rate and Crit.DMG").
+-define(SN125301, "Lightning of Ruling").
+-define(SD125301, "Summons the thunder to attack the enemy within the range, dealing {0}% Character DMG.
+Shocking Thunder: Inflicts Stun on the attacked enemy for {1}s.
+Lightning of Sanction: Reduces Healing effect of the attacked enemy by {2} for {3}s.").
+-define(SS125301, "Deals DMG, Stuns the enemy and reduces Healing effect of them").
+-define(SN125401, "Golden Realm").
+-define(SD125401, "Releases the Golden Realm of Pharaoh, inflicts multiple Curses on the enemy within range, up to {1} stacks.
+Pharaoh Curse: Each stack deals {0}% Character DMG per second for {2}s (duration resets upon gaining new stacks)
+Curse Settlement: Settles the DMG when the Pharaoh Curse ends, dealing extra DMG equal to {3}% of the total DMG.").
+-define(SS125401, "DMG Dealt").
+-define(SN125501, "Hades' Arrival").
+-define(SD125501, "Summons the King of Netherworld to attack all enemies around the target, dealing {0}% Character DMG and removing the Shield of the enemy.
+Curse of the Dead: Inflicts Curse of the Dead to the enemy attacked, reducing their Shield effect by {1}% and Move SPD by {2}% for {3}s.
+Hades' Will: PvP DMG increases by {4}%").
+-define(SS125501, "Deals DMG and reduces Shield effect and Move SPD of the enemy").
+-define(BN17001, "Wisdom").
+-define(BD17001, "Each stack increases DMG Bonus by {0}%, up to {1} stacks.").
+-define(BF17001, "[Athena Statue Skill]").
+-define(BN17002, "Courage").
+-define(BD17002, "Each stack increases DMG Reduction by {0}%, up to {1} stacks.").
+-define(BF17002, "[Athena Statue Skill]").
+-define(BN17003, "Pharaoh Curse").
+-define(BD17003, "Takes Curse DMG over time").
+-define(BF17003, "[Horus Statue Skill]").
+-define(BN17004, "Curse of the Dead").
+-define(BD17004, "Shield effect -{0}%, Move SPD -{1}%").
+-define(BF17004, "[Hades Statue Skill]").
+-define(SN202801, "Cleave").
+-define(SD202801, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS202801, "DMG Dealt").
+-define(SN202901, "Cleave").
+-define(SD202901, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS202901, "DMG Dealt").
+-define(SN203001, "Knock").
+-define(SD203001, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS203001, "DMG Dealt").
+-define(SN203101, "Scratch").
+-define(SD203101, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS203101, "DMG Dealt").
+-define(SN203201, "Cleave").
+-define(SD203201, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS203201, "DMG Dealt").
+-define(SN203301, "Ghost Flame").
+-define(SD203301, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS203301, "DMG Dealt").
+-define(SN203401, "Flapping").
+-define(SD203401, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS203401, "DMG Dealt").
+-define(SN203501, "Flapping").
+-define(SD203501, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS203501, "DMG Dealt").
+-define(SN203601, "Flapping").
+-define(SD203601, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SS203601, "DMG Dealt").
+-define(SD1440714, "Heals continuously and deals massive DMG to enemies around the target, inflicting Poison for {2}s on hit, dealing {1}% ATK DMG per {0}s.").
+-define(SD1440694, "Heals continuously and deals massive DMG to enemies around the target, inflicting Curse for {1}s on hit, reducing Hit Rate of the enemy by {0}%.").
+-define(SD1440764, "Charges up for {0}s and restores massive HP, then deals massive DMG to enemies in the marked area.Gain Enhanced: +{1}% DMG Bonus for {2}s on hit.").
+-define(SD1440964, "Charges up for {0}s and restores massive HP, then deals massive DMG to enemies in the marked area.Heals for a certain amount of HP on hit.").
+-define(BN17009, "Hero Tower Damage Boost Buff").
+-define(BD17009, "DMG Bonus +{0}%").
+-define(BF17009, "[Hero Tower]").
+-define(BN17010, "Hero Tower DMG Reduction Buff").
+-define(BD17010, "DMG Reduction +{0}%").
+-define(BF17010, "[Hero Tower]").
+-define(BN17011, "Damage Boost").
+-define(BD17011, "DMG Bonus+{0}%").
+-define(BF17011, "[Monster Drops]").
+-define(BN17012, "Slow").
+-define(BD17012, "Move SPD -{0}%").
+-define(BF17012, "[Monster Drops]").
+-define(BN17013, "Stun").
+-define(BD17013, "Stun: Out of Control").
+-define(BF17013, "[Monster Drops]").
+-define(SN120001, "Basic Gallant").
+-define(SN120002, "Basic Skill").
+-define(SN120003, "Basic Mark").
+-define(SN120004, "Basic Excellent").
+-define(SN120005, "Basic Ruling").
+-define(SN120006, "Basic Crit.DMG").
+-define(SN120007, "Basic Soul Smash").
+-define(SN120008, "Basic Morale").
+-define(SN120021, "Medium Gallant").
+-define(SN120022, "Medium Skill").
+-define(SN120023, "Medium Mark").
+-define(SN120024, "Medium Excellent").
+-define(SN120025, "Medium Ruling").
+-define(SN120026, "Medium Crit.DMG").
+-define(SN120027, "Medium Soul Smash").
+-define(SN120028, "Medium Morale").
+-define(SN120041, "Elite Gallant").
+-define(SN120042, "Elite Skill").
+-define(SN120043, "Elite Mark").
+-define(SN120044, "Elite Excellent").
+-define(SN120045, "Elite Ruling").
+-define(SN120046, "Elite Crit.DMG").
+-define(SN120047, "Elite Soul Smash").
+-define(SN120048, "Elite Morale").
+-define(SD120001, "Hero DMG Bonus +{0}%").
+-define(SD120002, "Hero Skill DMG +{0}%").
+-define(SD120003, "Hero Focus DMG Bonus +{0}%").
+-define(SD120004, "Hero Excellent DMG Bonus +{0}%").
+-define(SD120005, "Hero Crit Rate +{0}%").
+-define(SD120006, "Hero Crit DMG Bonus +{0}%").
+-define(SD120007, "Hero PvE DMG +{0}%").
+-define(SD120008, "Hero PvP DMG +{0}%").
+-define(SUD201261, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201201, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201241, "Increase the Focus Rate by {0}% for {1}s.").
+-define(SUD200961, "{0}% Character DMG + {1}% Hero DMG, inflicts Stun for {2}s").
+-define(SUD200901, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200941, "{0}% Character DMG + {1}% Hero DMG, reduces Move SPD of the target by {2}%").
+-define(SUD200761, "Deals {1}% Character DMG + {2}% Hero DMG in {0}s.").
+-define(SUD200701, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200741, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201161, "{1}% Character DMG + {2}% Hero DMG").
+-define(SUD201101, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201141, "Reduces Move SPD by {0}% for {1}s").
+-define(SUD200161, "Restores HP equal to {0}% of the main character's HP + {1}% of the hero's HP to the main character every second.").
+-define(SUD200101, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200141, "Restores HP equal to {0}% of the main character's HP + {1}% of the hero's HP to the main character").
+-define(SUD201561, "{0}% Character DMG + {1}% Hero DMG, inflicts Stun for {2}s").
+-define(SUD201501, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201541, "{0}% Character DMG + {1}% Hero DMG, DMG increases by {2}%").
+-define(SUD200361, "Shield equal to {0}% of the player's HP + {1}% of the Hero's HP, reflects {3}% DMG").
+-define(SUD200301, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200341, "{0}% DMG Reduction for {1}s").
+-define(SUD201761, "{0}% Character DMG + {1}% Hero DMG, inflicts Petrify for {2}s").
+-define(SUD201701, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201741, "Reduces Move SPD by {0}% for {1}s").
+-define(SUD201661, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201601, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201641, "{0}% Character DMG + {1}% Hero DMG, DMG increases by {2}%").
+-define(SUD200861, "Deals {1}% Character DMG + {2}% Hero DMG in {0}s.").
+-define(SUD200801, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200841, "{0}% Character DMG + {1}% Hero DMG, Stun for {2}s").
+-define(SUD201061, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201001, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201041, "Deals {1}% Character DMG + {2}% Hero DMG every second for {0}s").
+-define(SUD200261, "Restores HP equal to {0}% of the player's HP + {1}% of the hero's HP").
+-define(SUD200201, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200241, "{0}% Character DMG + {1}% Hero DMG, reduces ATK of the enemy by {2}%").
+-define(SUD200461, "").
+-define(SUD200401, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200441, "Dispel {0} stacks of random debuffs").
+-define(SUD201361, "{0}% Character DMG + {1}% Hero DMG, DMG Taken increases by {2}%").
+-define(SUD201301, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201341, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201461, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201401, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201441, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200661, "Crit Rate increases by {0}%, ATK increases by {1}% for {2}s").
+-define(SUD200601, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200641, "{1}% Character DMG + {2}% Hero DMG").
+-define(SUD201861, "{0}% Character DMG + {1}% Hero DMG, inflicts Stun for {2}s").
+-define(SUD201801, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201841, "Hit Rate reduces by {0}% for {1}s").
+-define(SUD201961, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SUD201901, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD201941, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD110011, "Increase all Stats Aptitudes of the linked Hero by {0}%.").
+-define(SUD110100, "Morph lasts for {0}s, gains Lv.{1} skill").
+-define(SUD110101, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD110105, "DMG equal to {0}% of the player's ATK").
+-define(SUD110200, "Morph lasts for {0}s, gains Lv.{1} skill").
+-define(SUD110201, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD110205, "DMG equal to {0}% of the player's ATK, with {1}% Leech").
+-define(SUD200561, "Shield equal to {0}% of the player's HP + *{1}% of the hero's HP, {3}% DMG Reduction").
+-define(SUD200501, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD200541, "Reduces Move SPD by {0}% for {1}s").
+-define(SUD110300, "Morph lasts for {0}s, gains Lv.{1} skill").
+-define(SUD110301, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD110305, "{0}% Character DMG, with a {1}% chance to Paralyze for {2}s").
+-define(SUD202161, "{0}% Character DMG + {1}% Hero DMG, Stun for {2}s").
+-define(SUD202101, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202141, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202261, "{2}% Character DMG + {3}% Hero DMG").
+-define(SUD202201, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202241, "{0}% Hero DMG, reduces Move SPD by {1}%").
+-define(SUD202361, "{0}% Character DMG + {1}% Hero DMG, reduces Move SPD by {2}%").
+-define(SUD202301, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202341, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202461, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202401, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202441, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202561, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202501, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SUD202541, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202661, "Shield equal to {0}% of the player's HP + *{1}% of the hero's HP").
+-define(SUD202601, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202641, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202761, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202701, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202741, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202801, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD202901, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203001, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203101, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203201, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203301, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203401, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203501, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203601, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203761, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203701, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203741, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203861, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203801, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203841, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203961, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203901, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD203941, "{0}% Character DMG + {1}% Hero DMG").
+-define(SN203701, "Frost Breath").
+-define(SD203701, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SS203701, "DMG Dealt").
+-define(SN203741, "Frost Claw").
+-define(SD203741, "Frost Dragon attacks the enemy with its claws, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS203741, "DMG Dealt").
+-define(SN203761, "Frost Roar").
+-define(SD203761, "Frost Dragon releases the Frost Roar to the target area, dealing {0}% Character DMG + {1}% Hero DMG to enemies within range and freezing the target for {2}s.").
+-define(SS203761, "DMG Dealt").
+-define(SN203801, "Flame Breath").
+-define(SD203801, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SS203801, "DMG Dealt").
+-define(SN203841, "Flame Claw").
+-define(SD203841, "Flame Dragon attacks the enemy with its claws, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS203841, "DMG Dealt").
+-define(SN203861, "Flame Roar").
+-define(SD203861, "Flame Dragon releases the Flame Roar to the target area, dealing {0}% Character DMG + {1}% Hero DMG and inflicting {2}% Hero DMG to enemies within range for {3}s.").
+-define(SS203861, "DMG Dealt").
+-define(SN203901, "Venom Breath").
+-define(SD203901, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SS203901, "DMG Dealt").
+-define(SN203941, "Venom Claw").
+-define(SD203941, "Venom Dragon attacks the enemy with its claws, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS203941, "DMG Dealt").
+-define(SN203961, "Venom Roar").
+-define(SD203961, "Venom Dragon releases the Venom Roar to the target area, dealing {0}% Character DMG + {1}% Hero DMG to enemies within range, increasing DMG Taken of the target by {2}% and reducing their Healing effect by {3}% for {4}s.").
+-define(SS203961, "DMG Dealt").
+-define(SD120051, "Base Hero Stats Conversion Rate +{0}%").
+-define(SN120051, "Potential Ascension").
+-define(BF17017, "[Morrigan Statue]").
+-define(BN17017, "Hatred").
+-define(BD17017, "Player's Crit Rate and Crit DMG increases  {0}%").
+-define(BF17018, "[Thor Statue]").
+-define(BN17018, "").
+-define(BD17018, "Stun: Out of Control").
+-define(BF17019, "[Thor Statue]").
+-define(BN17019, "").
+-define(BD17019, "Healing Received -{0}%").
+-define(BF17020, "[Horus Statue]").
+-define(BF17021, "[Horus Statue]").
+-define(BF17022, "[Horus Statue]").
+-define(SUD110101001, "{0}% DMG").
+-define(SUD110105001, "{0}% DMG").
+-define(SUD110106001, "{0}% DMG").
+-define(SUD110107001, "{0}% DMG").
+-define(SUD110108001, "{0}% DMG").
+-define(SUD110201001, "{0}% DMG").
+-define(SUD110205001, "{0}% DMG").
+-define(SUD110206001, "{0}% DMG").
+-define(SUD110207001, "{0}% DMG").
+-define(SUD110208001, "{0}% DMG").
+-define(SUD110301001, "Deals {1}% Character DMG").
+-define(SUD110305001, "Deals {1}% Character DMG").
+-define(SUD110306001, "Deals {1}% Character DMG").
+-define(SUD110307001, "Deals {1}% Character DMG").
+-define(SUD110308001, "Deals {1}% Character DMG").
+-define(BD1602121, "Healing over time").
+-define(SN709101, "Fast Upgrade").
+-define(BN17027, "Blunt").
+-define(BD17027, "Reduces Dodge Rate by {0}%").
+-define(BF17027, "[Loup Garou]").
+-define(BN17028, "Blind").
+-define(BD17028, "Reduces Hit Rate by {0}%").
+-define(BF17028, "[Harpy Chieftain]").
+-define(BN17024, "Flame Roar").
+-define(BN17025, "Frost Roar").
+-define(BN17026, "Venom Roar").
+-define(BD17024, "Takes {0}% Character DMG + {1}% Hero DMG every second").
+-define(BD17025, "Frozen, cannot move for {0} sec").
+-define(BD17026, "DMG Taken +{0}%, Healing Received -{1}%").
+-define(BF17024, "[Flame Dragon]").
+-define(BF17025, "[Frost Dragon]").
+-define(BF17026, "[Venom Dragon]").
+-define(BN17029, "Frost Roar").
+-define(BN17030, "Flame Roar").
+-define(BN17031, "Venom Roar").
+-define(BD17029, "Frozen, cannot move for {0} sec").
+-define(BD17030, "Takes {0}% Character DMG + {1}% Hero DMG every second").
+-define(BD17031, "DMG Taken +{0}%, Healing Received -{1}%").
+-define(BF17029, "[Dragon of Frost]").
+-define(BF17030, "[Dragon of Fire]").
+-define(BF17031, "[Dragon of Venom]").
+-define(BN17032, "Extra Freeze DMG").
+-define(BN17033, "Takes extra DMG").
+-define(BN17034, "Takes extra effect").
+-define(BD17032, "Takes {0}% extra DMG from the Frost Roar").
+-define(BD17033, "Takes extra {0}% Character DMG + {1}% Hero DMG per second").
+-define(BD17034, "Increases DMG Taken by {0}%").
+-define(SN204001, "Frost Claw").
+-define(SD204001, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SS204001, "DMG Dealt").
+-define(SN204041, "Frost Breath").
+-define(SD204041, "Dragon of Frost attacks the enemy with its Dragon Breath, dealing {0}% Character DMG + {1}% Hero DMG.").
+-define(SS204041, "DMG Dealt").
+-define(SN204061, "Frost Roar").
+-define(SD204061, "The Dragon of Frost releases the frost roar towards the target area, dealing {0}% Character DMG + {1}% Hero DMG and freezing the target for {2}s.
+If the enemy is poisoned, it will take extra {3}% DMG.").
+-define(SS204061, "DMG Dealt").
+-define(SN204101, "Flame Claw").
+-define(SD204101, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SS204101, "DMG Dealt").
+-define(SN204141, "Flame Breath").
+-define(SD204141, "Dragon of Fire attacks the enemy with its Dragon Breath, dealing DMG equal to {0}% Character DMG + {1}% Hero DMG.").
+-define(SS204141, "DMG Dealt").
+-define(SN204161, "Flame Roar").
+-define(SD204161, "Dragon of Fire releases the Flame Roar to the target area, dealing {0}% Character DMG + {1}% Hero DMG and inflicting {2}% Character DMG + {3}% Hero DMG every second to enemies within range for {6}s.
+If the enemy is frozen, it'll take an extra {4}% Character DMG + {5}% Hero DMG per second.").
+-define(SS204161, "DMG Dealt").
+-define(SS204162, "Releases the Flame Roar to deal massive damage to enemies and inflicts the Scorch effect; Frozen enemies will take extra scorching damage").
+-define(SN204201, "Venom Claw").
+-define(SD204201, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SS204201, "DMG Dealt").
+-define(SN204241, "Venom Breath").
+-define(SD204241, "Dragon of Venom attacks the enemy with its Dragon Breath, dealing DMG equal to {0}% Character DMG + {1}% Hero DMG.").
+-define(SS204241, "DMG Dealt").
+-define(SN204261, "Venom Roar").
+-define(SD204261, "Dragon of Venom releases the Venom Roar to the target area, dealing {0}% Character DMG + {1}% Hero DMG to enemies within range, increasing DMG taken by the target by {2}% and reducing their Healing effect by {3}% for {4}s.
+If the enemy is scorched, increases their Vulnerable by {5}%.").
+-define(BN17023, "Roll Dodge").
+-define(BD17023, "Invincible for a Short Time").
+-define(BF17023, "[Roll Dodge]").
+-define(SN2000001, "Roll").
+-define(BN17036, "Havoc Thunder").
+-define(BD17036, "Each stack increases DMG taken by {0}% and reduces the Healing effect by {1}%.").
+-define(BF17036, "[Thor]").
+-define(BN17039, "Thunder Zone").
+-define(BD17039, "Slows the nearby enemies and deals DMG over time.").
+-define(BF17039, "[Thor]").
+-define(BN17040, "Slow").
+-define(BD17040, "Slow by {0}%").
+-define(BF17040, "[Thor]").
+-define(BN17041, "Thunder Power").
+-define(BD17041, "Paralyzed and cannot move.").
+-define(BF17041, "[Thor]").
+-define(BN17042, "Increases Concentration Attack Rate").
+-define(BD17042, "Increases Concentration Attack Rate by {0}%").
+-define(BF17042, "[Thor]").
+-define(SN111001, "Thunder God Normal Attacks").
+-define(SD111001, "Deals {1}% Character DMG to {0} enemies").
+-define(SN111005, "Thunder Strike").
+-define(SD111005, "Casts Lightning Power forward, dealing {1}% Character DMG to {0} enemies within range and inflicting {2} stack(s) of Havoc Thunder.
+Havoc Thunder:Each stack increases DMG taken by {3}% and reduces the Healing effect by {4}%, stacks up to {5} time(s)..").
+-define(SN111006, "Lightning Charge").
+-define(SD111006, "Charges forward, dealing {1}% Character DMG to enemies in the way and inflicting {0} stack(s) of Havoc Thunder to enemies hit.After casting, increases self Concentration Attack Rate by {3}% in {2}s.").
+-define(SN111007, "Thunder Summoner").
+-define(SD111007, "Draws all nearby enemies, dealing {1}% Character DMG and inflicting {0} stack(s) of Havoc Thunder.Generates Thunder Zone around self and slows enemies within it.Inflicts DMG and Thunder Power effect (paralyzed for {3}s) once every {2}s.Thunder Zone lasts {4}s.").
+-define(SN111008, "Thunder Smite").
+-define(SD111008, "Jumps forward to attack, dealing {1}% Character DMG.If the targets are inflicted with Havoc Thunder, detonates the debuff to deal {0}% Character DMG and removes it.
+When there are {2} stack(s) of Havoc Thunder on the enemy, refreshes the CD of this skill.").
+-define(SCN111005, "Thunder God Skill 1 Advance").
+-define(SCD111005, "Character DMG +{0}%").
+-define(SCN111006, "Thunder God Skill 2 Advance").
+-define(SCD111006, "Character DMG +{0}%").
+-define(SCN111007, "Thunder God Skill 3 Advance").
+-define(SCD111007, "Character DMG +{0}%").
+-define(SCN111008, "Thunder God Skill 4 Advance").
+-define(SCD111008, "Character DMG +{0}%").
+-define(SN111101, "Hades Normal Attack").
+-define(SD111101, "Deals {1}% Character DMG to {0} enemies").
+-define(SN111105, "Tartarus Wolf").
+-define(SD111105, "Deals {1}% Character DMG to enemies.
+If the enemy's HP is higher than {2}%, inflicts Soul Strike Mark that lasts for {4}s on them.
+If the enemy's HP is not higher than {3}%, no mark will be inflicted but the skill DMG increases by {0}%.
+Soul Strike Mark: When taking damage from normal attacks of Hades, the damage will be critical.").
+-define(SN111106, "Spooky Impact").
+-define(SD111106, "Deals {1}% Character DMG to enemies.
+If the enemy's HP is not higher than {2}%, inflicts Blood Mark that lasts for {4}s on them.
+If the enemy's HP is higher than {3}%, no mark will be inflicted but the Character restores HP equal to {0}% of the DMG.
+Blood Mark: When receiving DMG from Hades, restores HP equal to {5}% of DMG for his master.During the effective period of the mark, Hades' master is immune to death.").
+-define(SN111107, "Ghost Entangle").
+-define(SD111107, "Deals {1}% Character DMG to enemies and slows them by {0}%.
+If the enemy's HP is not higher than {2}%, inflicts Netherworld Mark that lasts for {5}s on them.
+If the enemy's HP is higher than {3}%, no mark will be inflicted but each hit inflicts a stack of Gloomy Curse on the enemy.Each stack deals {4}% Character DMG every second.
+Netherworld Mark: When Hades attacks the target with Netherworld Mark, deals extra DMG equal to {6}% of lost HP.").
+-define(SN111108, "Slash Scythe").
+-define(SD111108, "Cleaves forward with the scythe, dealing {1}% Character DMG to targets hit and inflicting Hades Mark on them.
+Then leaves a Tartarus Field on the ground, dealing {2}% DMG over time to enemies within it.Each hit of the Tartarus Field triggers a mark carried by the enemy.
+If the enemy's HP is higher than {4}%, each hit of this skill inflicts a stack of Gloomy Curse.
+If the enemy's HP is not higher than{3}%, the Deadly Attack rate of this skill increases by {0}%.
+Hades Mark: If the target with the mark dies, restores HP for the master of Hades (only valid when possessed by Hades).").
+-define(BN17061, "Soul Strike Mark").
+-define(BN17062, "Blood Mark").
+-define(BN17063, "Gloomy Curse").
+-define(BN17064, "Netherworld Mark").
+-define(BN17065, "Hades Mark").
+-define(BN17066, "Blood Mark - Undead").
+-define(BN17067, "Hades Mark - Recovery").
+-define(BD17061, "Hades' attacks are guaranteed to crit upon hit, lasting for {0}s.").
+-define(BD17062, "When attacking the enemy with Blood Mark,
+Hades restores HP equal to {0}% of DMG for the master.").
+-define(BD17063, "Losing HP over time, stackable.").
+-define(BD17064, "Attacks on the enemy with Netherworld Mark inflict extra damage.").
+-define(BD17065, "Restores HP for Hades' master upon death.").
+-define(BD17066, "Grants Undead status to Hades' master.").
+-define(BD17067, "Restores 30% of Max HP in 10s.").
+-define(BN17069, "").
+-define(BD17069, "").
+-define(SN111201, "Ishtar Normal Attacks").
+-define(SD111201, "Deals {1}% Character DMG to {0} enemies").
+-define(SN111205, "Cutlass Attack").
+-define(SD111205, "Deals {1}% Character DMG to nearby enemies, granting {0} stack(s) of Steel Body to the Character.
+Each stack of Steel Body provides {3}% ATK and special DMG bonuses (such as Crit, Concentration Attack, Excellent Attack, Deadly Attack and more) to allies, stacks up to {4} time(s).
+When hitting a player, receives {2} stack(s) of Steel Body.").
+-define(SN111206, "Edge Raid").
+-define(SD111206, "Deals {0}% Character DMG to enemies and inflicts {1} stack(s) of Edge Cut on the enemies hit.Each stack deals a total of {4}% Character DMG in {3}s.
+When hitting a player, inflicts {2} stack(s) of Edge Cut.It can be stacked unlimited times.").
+-define(SN111207, "Cutlass Strangle").
+-define(SD111207, "Deals {0}% Character DMG to enemies and slows them by {1}%.
+If the enemy has Edge Cut effect, doubles the effect stacks on them.").
+-define(SN111208, "Final Execution").
+-define(SD111208, "Deals {0}% Character DMG to nearby enemies.
+After using this skill, doubles stacks of Steel Body on self.").
+-define(SN111209, "Harvest Skill").
+-define(SD111209, "Morphs into Ishtar and charges forward, dealing {0}% Character DMG to enemies on the path and inflicting Gash effect on them.
+Gash: For every {1} critical blow(s) received during its effective period, obtains {2} stack(s) of Edge Cut.").
+-define(BN17070, "").
+-define(BD17070, "").
+-define(BN17071, "Steel Body").
+-define(BD17071, "Increases the bonus of character and allied heroes' ATK, Crit, Concentration Attack and Excellent DMG by {0}%.").
+-define(BN17072, "Edge Rend").
+-define(BD17072, "Taking DOT! Deals {0}% Character DMG with each stack.").
+-define(BN17073, "Cutlass Slow").
+-define(BD17073, "Slow by {0}%").
+-define(BN17074, "Gash").
+-define(BD17074, "Every time takes a critical blow, adds a stack of Edge Rend.").
+-define(SUD110500, "Summons Hades for possession that lasts for {0}s and gains Lv.{1} skills.").
+-define(SUD110600, "Morphs into Ishtar for {0}s and gains Lv.{1} skills.").
+-define(SUD110900, "").
+-define(SUD110501, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SUD110601, "Deals {1}% Character DMG.").
+-define(SUD111101, "Deals {1}% Character DMG.").
+-define(SUD111105, "Deals {1}% Character DMG.").
+-define(SUD111106, "Deals {1}% Character DMG.").
+-define(SUD111107, "Deals {1}% Character DMG.").
+-define(SUD111108, "Deals {1}% Character DMG.Tartarus Field deals {2}% Character DMG each time.").
+-define(SUD111201, "Deals {1}% Character DMG.").
+-define(SUD111205, "Deals {0}% Character DMG to nearby enemies.").
+-define(SUD111206, "Deals {0}% Character DMG.").
+-define(SUD111207, "Deals {0}% Character DMG.").
+-define(SUD111208, "Deals {0}% Character DMG to nearby enemies.").
+-define(SUD111209, "Deals {2}% Character DMG to enemies.").
+-define(SUD111301, "Deals {1}% Character DMG.").
+-define(SUD111305, "Deals {0}% Character DMG.").
+-define(SUD111306, "Deals {0}% Character DMG.").
+-define(SUD111307, "Deals {0}% Character DMG.").
+-define(SUD111308, "Deals {0}% Character DMG.").
+-define(SN650001, "Hero DEF").
+-define(SN650005, "Hero ATK").
+-define(SN650009, "Hero HP").
+-define(SN650013, "Hero Sunder").
+-define(SN650017, "Hero Crit Rate").
+-define(SN650021, "Hero Tough Rate").
+-define(SN650025, "Hero Crit DMG Bonus").
+-define(SN650029, "Hero Crit DMG Reduction").
+-define(SN650033, "Hero DEF Aptitude").
+-define(SN650037, "Hero ATK Aptitude").
+-define(SN650041, "Hero HP Aptitude").
+-define(SN650045, "Hero Sunder Aptitude").
+-define(SN650049, "Hero Concentrate Rate").
+-define(SN650053, "Hero Anti-Crit Rate").
+-define(SN650057, "Hero Focus DMG Bonus").
+-define(SN650061, "Hero Focus DMG Reduction").
+-define(SN650065, "Hero DEF Aptitude").
+-define(SN650069, "Hero ATK Aptitude").
+-define(SN650073, "Hero HP Aptitude").
+-define(SN650077, "Hero Sunder Aptitude").
+-define(SN650081, "Hero DMG Bonus").
+-define(SN650085, "Hero DMG Reduction").
+-define(SN650089, "Hero Lethal Rate").
+-define(SN650093, "Hero Anti-Lethal Rate").
+-define(SN650097, "Hero Lethal DMG Bonus").
+-define(SN650101, "Hero Lethal DMG Reduction").
+-define(SN650105, "Hero Final DMG Bonus").
+-define(SN650109, "Hero Final DMG Reduction").
+-define(SN650113, "Hero Multi-strike Rate").
+-define(SN650117, "Hero Multi-strike Res Rate").
+-define(SN650121, "Hero Multi DMG Bonus").
+-define(SN650125, "Hero Multi DMG Reduction").
+-define(SN650129, "Hero Pursuit Strike Rate").
+-define(SN650133, "Hero Pursuit Res Rate").
+-define(SN650137, "Hero Pursuit DMG Bonus").
+-define(SN650141, "Hero Pursuit DMG Reduction").
+-define(SD650001, "Deployed Hero DEF +{0}").
+-define(SD650005, "Deployed Hero ATK +{0}").
+-define(SD650009, "Deployed Hero HP +{0}").
+-define(SD650013, "Deployed Hero Sunder +{0}").
+-define(SD650017, "Deployed Hero Crit Rate +{0}%").
+-define(SD650021, "Character's Hero Tough Rate +{0}%").
+-define(SD650025, "Deployed Hero Crit DMG Bonus +{0}%").
+-define(SD650029, "Character's Hero Crit DMG Red +{0}%").
+-define(SD650033, "Deployed Hero DEF Aptitude +{0}").
+-define(SD650037, "Deployed Hero ATK Aptitude +{0}").
+-define(SD650041, "Deployed Hero HP Aptitude +{0}").
+-define(SD650045, "Deployed Hero Sunder Aptitude +{0}").
+-define(SD650049, "Deployed Hero Crit Rate +{0}%").
+-define(SD650053, "Character's Hero Anti-Crit Rate +{0}%").
+-define(SD650057, "Deployed Hero Focus DMG Bonus +{0}%").
+-define(SD650061, "Character's Hero Focus DMG Reduction +{0}%").
+-define(SD650065, "Deployed Hero DEF Aptitude +{0}").
+-define(SD650069, "Deployed Hero ATK Aptitude +{0}").
+-define(SD650073, "Deployed Hero HP Aptitude +{0}").
+-define(SD650077, "Deployed Hero Sunder Aptitude +{0}").
+-define(SD650081, "Deployed Hero DMG Bonus +{0}%").
+-define(SD650085, "Character's Hero DMG Reduction +{0}%").
+-define(SD650089, "Deployed Hero Lethal Rate +{0}%").
+-define(SD650093, "Character's Hero Anti-Lethal Rate +{0}%").
+-define(SD650097, "Deployed Hero Lethal DMG Bonus +{0}%").
+-define(SD650101, "Character's Hero Lethal DMG Reduction +{0}%").
+-define(SD650105, "Deployed Hero Final DMG Bonus +{0}%").
+-define(SD650109, "Character's Hero Final DMG Reduction +{0}%").
+-define(SD650113, "Deployed Hero Multi-strike Rate +{0}%").
+-define(SD650117, "Character's Hero Multi-strike Rate +{0}%").
+-define(SD650121, "Deployed Hero Multi DMG Bonus +{0}%").
+-define(SD650125, "Character's Hero Multi DMG Reduction +{0}%").
+-define(SD650129, "Deployed Hero Pursuit Strike Rate +{0}%").
+-define(SD650133, "Character's Hero Anti-Pursuit Rate +{0}%").
+-define(SD650137, "Deployed Hero Pursuit DMG Bonus +{0}%").
+-define(SD650141, "Character's Hero Pursuit DMG Reduction +{0}%").
+-define(EASYSD650001, "Deployed Hero DEF +{0}").
+-define(EASYSD650005, "Deployed Hero ATK +{0}").
+-define(EASYSD650009, "Deployed Hero HP +{0}").
+-define(EASYSD650013, "Deployed Hero Sunder +{0}").
+-define(EASYSD650017, "Deployed Hero Crit Rate +{0}%").
+-define(EASYSD650021, "Character's Hero Tough Rate +{0}%").
+-define(EASYSD650025, "Deployed Hero Crit DMG Bonus +{0}%").
+-define(EASYSD650029, "Character's Hero Crit DMG Red +{0}%").
+-define(EASYSD650033, "Deployed Hero DEF Aptitude +{0}").
+-define(EASYSD650037, "Deployed Hero ATK Aptitude +{0}").
+-define(EASYSD650041, "Deployed Hero HP Aptitude +{0}").
+-define(EASYSD650045, "Deployed Hero Sunder Aptitude +{0}").
+-define(EASYSD650049, "Deployed Hero Crit Rate +{0}%").
+-define(EASYSD650053, "Character's Hero Anti-Crit Rate +{0}%").
+-define(EASYSD650057, "Deployed Hero Focus DMG Bonus +{0}%").
+-define(EASYSD650061, "Character's Hero Focus DMG Reduction +{0}%").
+-define(EASYSD650065, "Deployed Hero DEF Aptitude +{0}").
+-define(EASYSD650069, "Deployed Hero ATK Aptitude +{0}").
+-define(EASYSD650073, "Deployed Hero HP Aptitude +{0}").
+-define(EASYSD650077, "Deployed Hero Sunder Aptitude +{0}").
+-define(EASYSD650081, "Deployed Hero DMG Bonus +{0}%").
+-define(EASYSD650085, "Character's Hero DMG Reduction +{0}%").
+-define(EASYSD650089, "Deployed Hero Lethal Rate +{0}%").
+-define(EASYSD650093, "Character's Hero Anti-Lethal Rate +{0}%").
+-define(EASYSD650097, "Deployed Hero Lethal DMG Bonus +{0}%").
+-define(EASYSD650101, "Character's Hero Lethal DMG Reduction +{0}%").
+-define(EASYSD650105, "Deployed Hero Final DMG Bonus +{0}%").
+-define(EASYSD650109, "Character's Hero Final DMG Reduction +{0}%").
+-define(EASYSD650113, "Deployed Hero Multi-strike Rate +{0}%").
+-define(EASYSD650117, "Character's Hero Multi-strike Rate +{0}%").
+-define(EASYSD650121, "Deployed Hero Multi DMG Bonus +{0}%").
+-define(EASYSD650125, "Character's Hero Multi DMG Reduction +{0}%").
+-define(EASYSD650129, "Deployed Hero Pursuit Strike Rate +{0}%").
+-define(EASYSD650133, "Character's Hero Anti-Pursuit Rate +{0}%").
+-define(EASYSD650137, "Deployed Hero Pursuit DMG Bonus +{0}%").
+-define(EASYSD650141, "Character's Hero Pursuit DMG Reduction +{0}%").
+-define(SN120071, "").
+-define(SN120072, "").
+-define(SN120073, "").
+-define(SN120074, "").
+-define(SN120075, "").
+-define(SN120076, "").
+-define(SN120077, "").
+-define(SN120078, "").
+-define(SN848, "").
+-define(SD848, "").
+-define(SN849, "").
+-define(SD849, "").
+-define(BN849, "").
+-define(BD849, "").
+-define(SN291211, "").
+-define(SD291211, "").
+-define(SI3, "DMG skill").
+-define(SN107001, "").
+-define(SD107001, "").
+-define(SN107006, "").
+-define(SD107006, "").
+-define(SN107007, "").
+-define(SD107007, "").
+-define(SN107008, "").
+-define(SD107008, "").
+-define(SN107009, "").
+-define(SD107009, "").
+-define(SN107011, "").
+-define(SD107011, "").
+-define(SN107012, "").
+-define(SD107012, "").
+-define(SN107021, "").
+-define(SD107021, "").
+-define(SN107022, "").
+-define(SD107022, "").
+-define(SN107031, "").
+-define(SD107031, "").
+-define(SN107032, "").
+-define(SD107032, "").
+-define(SN107111, "").
+-define(SD107111, "").
+-define(SN107121, "").
+-define(SD107121, "").
+-define(SN107131, "").
+-define(SD107131, "").
+-define(SN107141, "").
+-define(SD107141, "").
+-define(SN107151, "").
+-define(SD107151, "").
+-define(SN107161, "").
+-define(SD107161, "").
+-define(BN64001, "").
+-define(BD64001, "").
+-define(BN64002, "").
+-define(BD64002, "").
+-define(BN64003, "").
+-define(BD64003, "").
+-define(BN64006, "").
+-define(BD64006, "").
+-define(BN64007, "").
+-define(BD64007, "").
+-define(BN64008, "").
+-define(BD64008, "").
+-define(BN64009, "").
+-define(BD64009, "").
+-define(BN64010, "").
+-define(BD64010, "").
+-define(BN64011, "").
+-define(BD64011, "").
+-define(BN64012, "").
+-define(BD64012, "").
+-define(BN64013, "").
+-define(BD64013, "").
+-define(BN64014, "").
+-define(BD64014, "").
+-define(SN107301, "").
+-define(SD107301, "").
+-define(SD107302, "").
+-define(SD107303, "").
+-define(SD107304, "").
+-define(SN107401, "").
+-define(SD107401, "").
+-define(SN291241, "").
+-define(SN291251, "").
+-define(SN291261, "").
+-define(SN291271, "").
+-define(SD291241, "").
+-define(SD291251, "").
+-define(SD291261, "").
+-define(SD291271, "").
+-define(BN64101, "").
+-define(BN64121, "").
+-define(BN64151, "").
+-define(BN64161, "").
+-define(BN64171, "").
+-define(BN64181, "").
+-define(BN64191, "").
+-define(BD64101, "").
+-define(BD64121, "").
+-define(BD64151, "").
+-define(BD64161, "").
+-define(BD64171, "").
+-define(BD64181, "").
+-define(BD64191, "").
+-define(SD200581, "").
+-define(SD200781, "").
+-define(SD200881, "").
+-define(SD200981, "").
+-define(SD201081, "").
+-define(SD201181, "").
+-define(SD201481, "").
+-define(SD201881, "").
+-define(SD201981, "").
+-define(SD202181, "").
+-define(SD202281, "").
+-define(SD202381, "").
+-define(SD202481, "").
+-define(SD210581, "").
+-define(SD201281, "").
+-define(SD200681, "").
+-define(BN17091, "").
+-define(BD17091, "").
+-define(BN17096, "").
+-define(BD17096, "").
+-define(BF17091, "").
+-define(SS200781, "").
+-define(SCN170181, "").
+-define(SCD170181, "").
+-define(SCN170191, "").
+-define(SCD170191, "").
+-define(SS170191, "").
+-define(SCN170201, "").
+-define(SCD170201, "").
+-define(SS170201, "").
+-define(SCN170211, "").
+-define(SCD170211, "").
+-define(SS170211, "").
+-define(SCN170221, "").
+-define(SCD170221, "").
+-define(SS170221, "").
+-define(SCN170231, "").
+-define(SCD170231, "").
+-define(SS170231, "").
+-define(SN291351, "").
+-define(SD291351, "").
+-define(SS291351, "").
+-define(SN291361, "").
+-define(SD291361, "").
+-define(SS291361, "").
+-define(BF199, "").
+-define(SCN191001, "").
+-define(SCN191011, "").
+-define(SCN191021, "").
+-define(SCN191031, "").
+-define(SCD191001, "").
+-define(SCD191011, "").
+-define(SCD191021, "").
+-define(SCD191031, "").
+-define(BN96001, "").
+-define(BD96001, "").
+-define(BF96001, "").
+-define(SUD200462, "").
+-define(SUD201962, "").
+-define(BD1600721, "").
+-define(BN1600721, "").
+-define(SN210401, "").
+-define(SD210401, "").
+-define(BN116007, "").
+-define(BD116007, "").
+-define(BN11600721, "").
+-define(BD11600721, "").
+-define(SN210441, "").
+-define(SD210441, "").
+-define(SN210461, "").
+-define(SD210461, "").
+-define(SD210462, "").
+-define(SD210463, "").
+-define(BD11607211, "").
+-define(BD1600795, "").
+-define(SN211901, "").
+-define(SD211901, "").
+-define(SN211941, "").
+-define(SD211941, "").
+-define(SN211961, "").
+-define(SD211961, "").
+-define(SD211962, "").
+-define(SD211963, "").
+-define(BN116028, "").
+-define(BD116028, "").
+-define(BF116007, "").
+-define(BF116028, "").
+-define(SUD210461, "").
+-define(SUD210462, "").
+-define(SUD210401, "{0}% Character DMG + {1}% Hero DMG").
+-define(SUD210441, "Dispel {0} stacks of random debuffs").
+-define(SS210401, "DMG Dealt").
+-define(SS210441, "Dispel debuffs of the master").
+-define(SS210461, "Grant the master immunity to DMG").
+-define(SS211901, "DMG Dealt").
+-define(SS211941, "DMG Dealt").
+-define(SS211961, "Inflicts DMG and breaks the Invincible state").
+-define(SN110900, "").
+-define(SD110900, "").
+-define(SN111301, "").
+-define(SD111301, "").
+-define(SN111305, "").
+-define(SD111305, "").
+-define(SN111306, "").
+-define(SD111306, "").
+-define(SN111307, "").
+-define(SD111307, "").
+-define(SN111308, "").
+-define(SD111308, "").
+-define(BN17101, "").
+-define(BD17101, "").
+-define(BF17101, "").
+-define(BN17111, "").
+-define(BD17111, "").
+-define(BN17121, "").
+-define(BD17121, "").
+-define(BD1001547, "").
+-define(BD1001548, "").
+-define(SN291381, "").
+-define(SD291381, "").
+-define(SS291381, "").
+-define(SN291371, "").
+-define(SD291371, "").
+-define(SS291371, "").
+-define(BN57004, "").
+-define(BD57004, "").
+-define(BN57005, "").
+-define(BD57005, "").
+-define(SCN170241, "").
+-define(SCN170251, "").
+-define(SCN170261, "").
+-define(SCN170271, "").
+-define(SCN170281, "").
+-define(SCN170291, "").
+-define(SCN170301, "").
+-define(SCN170311, "").
+-define(SCN170321, "").
+-define(SCN170331, "").
+-define(SCN170341, "").
+-define(SCN170351, "").
+-define(SCN170361, "").
+-define(SCN170371, "").
+-define(SCN170381, "").
+-define(SCN170391, "").
+-define(SCN170401, "").
+-define(SCN170411, "").
+-define(SCN170421, "").
+-define(SCN170431, "").
+-define(SCD170241, "").
+-define(SCD170251, "").
+-define(SCD170261, "").
+-define(SCD170271, "").
+-define(SCD170281, "").
+-define(SCD170291, "").
+-define(SCD170301, "").
+-define(SCD170311, "").
+-define(SCD170321, "").
+-define(SCD170331, "").
+-define(SCD170341, "").
+-define(SCD170351, "").
+-define(SCD170361, "").
+-define(SCD170371, "").
+-define(SCD170381, "").
+-define(SCD170391, "").
+-define(SCD170401, "").
+-define(SCD170411, "").
+-define(SCD170421, "").
+-define(SCD170431, "").
+-define(SN211101, "").
+-define(SD211101, "").
+-define(SN211111, "").
+-define(SD211111, "").
+-define(SN211121, "").
+-define(SD211121, "").
+-define(SN211131, "").
+-define(SD211131, "").
+-define(SN211141, "").
+-define(SD211141, "").
+-define(SN211151, "").
+-define(SD211151, "").
+-define(SN211161, "").
+-define(SD211161, "").
+-define(SN211171, "").
+-define(SD211171, "").
+-define(SN211181, "").
+-define(SD211181, "").
+-define(SN211191, "").
+-define(SD211191, "").
+-define(SN211011, "").
+-define(SD211011, "").
+-define(SN211021, "").
+-define(SD211021, "").
+-define(SN211031, "").
+-define(SD211031, "").
+-define(SN211041, "").
+-define(SD211041, "").
+-define(BN17221, "").
+-define(BN17222, "").
+-define(BN17223, "").
+-define(BN17224, "").
+-define(BD17224, "").
+-define(BF17221, "").
+-define(EASYSD211011, "").
+-define(EASYSD211021, "").
+-define(EASYSD211031, "").
+-define(EASYSD211041, "").
+-define(EASYSD211101, "").
+-define(EASYSD211111, "").
+-define(EASYSD211121, "").
+-define(EASYSD211131, "").
+-define(EASYSD211141, "").
+-define(EASYSD211151, "").
+-define(EASYSD211161, "").
+-define(EASYSD211171, "").
+-define(EASYSD211181, "").
+-define(EASYSD211191, "").
+-define(SCN192001, "").
+-define(SCD192001, "").
+-define(BN17210, "").
+-define(BD17210, "").
+-define(BF17210, "").
+-define(SCN192011, "").
+-define(SCD192011, "").
+-define(BN17211, "").
+-define(BD17211, "").
+-define(SCN192021, "").
+-define(SCD192021, "").
+-define(BN17212, "").
+-define(BD17212, "").
+-define(SCN192031, "").
+-define(SCD192031, "").
+-define(BN17213, "").
+-define(BD17213, "").
+-define(SCN192041, "").
+-define(SCD192041, "").
+-define(BN17214, "").
+-define(BD17214, "").
+-define(SCN192051, "").
+-define(SCD192051, "").
+-define(BN17215, "").
+-define(BD17215, "").
+-define(SCN192061, "").
+-define(SCD192061, "").
+-define(BN17216, "").
+-define(BD17216, "").
+-define(SCN192071, "").
+-define(SCD192071, "").
+-define(BN17217, "").
+-define(BD17217, "").
+-define(SN1180010, "").
+-define(SN1180030, "").
+-define(SN1180050, "").
+-define(SN1180070, "").
+-define(SN1180080, "").
+-define(SN1180085, "").
+-define(SN1180105, "").
+-define(SN1180125, "").
+-define(SN1180135, "").
+-define(SN1180145, "").
+-define(SN1180150, "").
+-define(SN1180160, "").
+-define(SN1180170, "").
+-define(SN1180180, "").
+-define(SN1180190, "").
+-define(SN1180200, "").
+-define(SN1180210, "").
+-define(SN1180215, "").
+-define(SD1180010, "").
+-define(SD1180030, "").
+-define(SD1180050, "").
+-define(SD1170080, "").
+-define(SD1180085, "").
+-define(SD1180105, "").
+-define(SD1180125, "").
+-define(SD1180135, "").
+-define(SD1180145, "").
+-define(SD1180150, "").
+-define(SD1180160, "").
+-define(SS1180010, "").
+-define(SS1180030, "").
+-define(SS1180050, "").
+-define(SS1180070, "").
+-define(SS1180080, "").
+-define(SS1180085, "").
+-define(SS1180105, "").
+-define(SS1180125, "").
+-define(SS1180135, "").
+-define(SS1180145, "").
+-define(SS1180150, "").
+-define(SS1180160, "").
+-define(SS1180180, "").
+-define(SS1180190, "").
+-define(SS1180200, "").
+-define(SS1180210, "").
+-define(SS1180215, "").
+-define(BN28135, "").
+-define(BN28140, "").
+-define(BN28160, "").
+-define(BN28180, "").
+-define(BN28190, "").
+-define(BN28191, "").
+-define(BN28196, "").
+-define(BN28035, "").
+-define(BN28055, "").
+-define(BN28056, "").
+-define(BN28057, "").
+-define(BN28058, "").
+-define(BN28059, "").
+-define(BN28060, "").
+-define(BN28115, "").
+-define(BD28135, "").
+-define(BD28140, "").
+-define(BD28160, "").
+-define(BD28180, "").
+-define(BD28190, "").
+-define(BD28035, "").
+-define(BD28055, "").
+-define(BD28056, "").
+-define(BD28057, "").
+-define(BD28058, "").
+-define(BD28059, "").
+-define(BD28060, "").
+-define(BD28115, "").
+-define(BN342, "").
+-define(BD342, "").
+-define(BN343, "").
+-define(BD343, "").
+-define(BF93, "").
+-define(SD676, "").
+-define(SD680, "").
+-define(SN681, "").
+-define(SN684, "").
+-define(SD677, "").
+-define(SD678, "").
+-define(SD679, "").
+-define(SD682, "").
+-define(SD681, "").
+-define(SD1180170, "").
+-define(SS1180170, "").
+-define(BD28191, "").
+-define(BD28196, "").
+-define(SD1180070, "").
+-define(SD1180180, "").
+-define(SD1180190, "").
+-define(SD1180200, "").
+-define(SD1180210, "").
+-define(SD1180215, "").
+-define(SD683, "").
+-define(BN1001549, "").
+-define(BN1001550, "").
+-define(BD1001550, "").
+-define(BF507, "").
+-define(BD1001549, "").
+-define(BN16101, "").
+-define(BD16101, "").
+-define(BN16102, "").
+-define(BD16102, "").
+-define(BN16103, "").
+-define(BD16103, "").
+-define(SCN193011, "").
+-define(SCD193011, "").
+-define(SCN193021, "").
+-define(SCD193021, "").
+-define(SCN193031, "").
+-define(SCD193031, "").
+-define(SN110800, "").
+-define(SD110800, "").
+-define(SUD110800, "").
+-define(BN17141, "").
+-define(BD17141, "").
+-define(BF17141, "").
+-define(SN111401, "").
+-define(SD111401, "").
+-define(SUD111401, "").
+-define(SN111405, "").
+-define(SD111405, "").
+-define(SUD111405, "").
+-define(SN111406, "").
+-define(SD111406, "").
+-define(SUD111406, "").
+-define(SN111407, "").
+-define(SD111407, "").
+-define(SUD111407, "").
+-define(SN111408, "").
+-define(SD111408, "").
+-define(SUD111408, "").
+-define(BN17143, "").
+-define(BD17143, "").
+-define(BN17144, "").
+-define(BD17144, "").
+-define(BN17145, "").
+-define(BD17145, "").
+-define(BN17146, "").
+-define(BD17146, "").
+-define(SN1510264, "").
+-define(SD1510264, "").
+-define(BN74001, "").
+-define(BD74001, "").
+-define(SN1510704, "").
+-define(SD1510704, "").
+-define(BN74004, "").
+-define(BD74004, "").
+-define(BN74006, "").
+-define(BD74006, "").
+-define(SN1510744, "").
+-define(SD1510744, "").
+-define(BN74007, "").
+-define(BD74007, "").
+-define(SN1510604, "").
+-define(SD1510604, "").
+-define(BN74009, "").
+-define(BD74009, "").
+-define(BN74010, "").
+-define(BD74010, "").
+-define(SN1510124, "").
+-define(SD1510124, "").
+-define(BN74011, "").
+-define(BD74011, "").
+-define(BN74014, "").
+-define(BD74014, "").
+-define(SN1510684, "").
+-define(SD1510684, "").
+-define(BN74015, "").
+-define(BD74015, "").
+-define(SN1510224, "").
+-define(SD1510224, "").
+-define(BN74016, "").
+-define(BD74016, "").
+-define(SN1510014, "").
+-define(SD1510014, "").
+-define(BN74017, "").
+-define(SN1510784, "").
+-define(SD1510784, "").
+-define(BN74020, "").
+-define(BD74020, "").
+-define(SN1510504, "").
+-define(SD1510504, "").
+-define(SN1510794, "").
+-define(SD1510794, "").
+-define(BN74021, "").
+-define(BD74021, "").
+-define(BN74024, "").
+-define(BD74024, "").
+-define(BN74025, "").
+-define(BD74025, "").
+-define(SN1510474, "").
+-define(SD1510474, "").
+-define(BN74026, "").
+-define(BD74026, "").
+-define(SN1510564, "").
+-define(SD1510564, "").
+-define(BN74027, "Gloomy Curse").
+-define(BN74030, "").
+-define(BD74030, "").
+-define(BN74031, "").
+-define(BN74032, "").
+-define(BD74032, "").
+-define(SN1510904, "").
+-define(SD1510904, "").
+-define(BN74033, "").
+-define(BD74033, "").
+-define(SN1510154, "").
+-define(SD1510154, "").
+-define(BN74035, "").
+-define(BD74035, "").
+-define(SN1510724, "").
+-define(SD1510724, "").
+-define(BN74037, "").
+-define(BD74037, "").
+-define(SN1510074, "").
+-define(SD1510074, "").
+-define(BN74038, "").
+-define(BD74038, "").
+-define(SN1510764, "").
+-define(SD1510764, "").
+-define(BN74039, "").
+-define(BD74039, "").
+-define(BN74042, "").
+-define(BD74042, "").
+-define(SN1510184, "").
+-define(SD1510184, "").
+-define(BN74043, "").
+-define(BD74043, "").
+-define(SN1510754, "").
+-define(SD1510754, "").
+-define(BN74044, "").
+-define(BD74044, "").
+-define(SN1510524, "").
+-define(SD1510524, "").
+-define(BN74045, "").
+-define(BN74047, "").
+-define(SUD110700, "").
+-define(SN110700, "Spring Comes").
+-define(SD110700, "").
+-define(BN17150, "Spring Comes").
+-define(BD17150, "").
+-define(BF17151, "[Freya]").
+-define(SN111501, "Vine Offense").
+-define(SD111501, "").
+-define(SUD111501, "").
+-define(SN111505, "Rattan Saw").
+-define(SD111505, "").
+-define(SUD111505, "").
+-define(BN17151, "").
+-define(BD17151, "").
+-define(BN17152, "").
+-define(BD17152, "").
+-define(BN1715221, "").
+-define(BD1715221, "").
+-define(SN111506, "Blooming Flowers").
+-define(SD111506, "").
+-define(SUD111506, "").
+-define(BN17153, "").
+-define(BD17153, "").
+-define(SN111507, "Realm of Nature").
+-define(SD111507, "").
+-define(SUD111507, "").
+-define(BN17155, "").
+-define(BD17155, "").
+-define(BN17156, "").
+-define(BD17156, "").
+-define(BD17157, "").
+-define(BD17158, "").
+-define(SN111508, "Earth's Wrath").
+-define(SD111508, "").
+-define(SUD111508, "").
+-define(BN17154, "").
+-define(BD17154, "").
+-define(SN125601, "").
+-define(SD125601, "").
+-define(SS125601, "").
+-define(BN17163, "").
+-define(BD17163, "").
+-define(BD17164, "").
+-define(BD17169, "").
+-define(SN111600, "").
+-define(SD111600, "").
+-define(SN111601, "").
+-define(SD111601, "").
+-define(SD111602, "").
+-define(SN111605, "").
+-define(SD111605, "").
+-define(SN111606, "").
+-define(SD111606, "").
+-define(SN111607, "").
+-define(SD111607, "").
+-define(SN111608, "").
+-define(SD111608, "").
+-define(BN17160, "").
+-define(BD17160, "").
+-define(BN17167, "").
+-define(BD17167, "").
+-define(BN17172, "").
+-define(BD17172, "").
+-define(BN17173, "").
+-define(BD17173, "").
+-define(BN17175, "").
+-define(BD17175, "").
+-define(BN17176, "").
+-define(BD17176, "").
+-define(BD17177, "").
+-define(BF17160, "").
+-define(SUD111600, "").
+-define(SUD111601, "").
+-define(SUD111602, "").
+-define(SUD111605, "").
+-define(SUD111606, "").
+-define(SUD111607, "").
+-define(SUD111608, "").
+-define(SN111009, "").
+-define(SD111009, "").
+-define(SN111112, "").
+-define(SD111112, "").
+-define(BD1706201, "").
+-define(SN111210, "").
+-define(SD111210, "").
+-define(BN1707021, "").
+-define(SN111310, "").
+-define(SD111310, "").
+-define(SN111409, "").
+-define(SD111409, "").
+-define(SN111509, "").
+-define(SD111509, "").
+-define(SN111609, "").
+-define(SD111609, "").
+-define(BN1716701, "").
+-define(BD1716701, "").
+-define(SN111700, "").
+-define(SD111700, "").
+-define(SN111701, "").
+-define(SD111701, "").
+-define(SN111702, "").
+-define(SD111702, "").
+-define(SN111703, "").
+-define(SD111703, "").
+-define(SN111705, "").
+-define(SD111705, "").
+-define(SN111706, "").
+-define(SD111706, "").
+-define(SN111707, "").
+-define(SD111707, "").
+-define(SN111708, "").
+-define(SD111708, "").
+-define(SN111709, "").
+-define(SD111709, "").
+-define(BF17163, "").
+-define(BF17180, "").
+-define(BN17180, "").
+-define(BD17180, "").
+-define(BN17181, "").
+-define(BD17181, "").
+-define(BN17182, "").
+-define(BD17182, "").
+-define(BN17183, "").
+-define(BD17183, "").
+-define(BD17186, "").
+-define(BN17187, "").
+-define(SUD111700, "").
+-define(SUD111701, "").
+-define(SUD111702, "").
+-define(SUD111703, "").
+-define(SUD111705, "").
+-define(SUD111706, "").
+-define(SUD111707, "").
+-define(SUD111708, "").
+-define(SN11548201, "").
+-define(SD11548201, "").
+-define(SS11548201, "").
+-define(SN11548301, "").
+-define(SD11548301, "").
+-define(SS11548301, "").
+-define(BN2436231, "").
+-define(BD2436231, "").
+-define(BN2436251, "").
+-define(BD2436251, "").
+-define(BN1722100, "").
+-define(BD1722100, "").
+-define(BN1722401, "").
+-define(BD1722401, "").
+-define(SN291401, "").
+-define(SD291401, "").
+-define(SS291401, "").
+-define(SN99001, "").
+-define(SN99002, "").
+-define(SN99003, "").
+-define(SN99004, "").
+-define(SN99005, "").
+-define(SN99006, "").
+-define(SN99007, "").
+-define(SN99008, "").
+-define(SN99009, "").
+-define(SN99010, "").
+-define(SN99011, "").
+-define(BN999, "").
+-define(BN72013, "").
+-define(BD72013, "").
+-define(SN210501, "").
+-define(SD210501, "").
+-define(SN210541, "").
+-define(SD210541, "").
+-define(SN210561, "").
+-define(SD210561, "").
+-define(SD215861, "").
+-define(SD215862, "").
+-define(SD215863, "").
+-define(BN16051, "").
+-define(BD16051, "").
+-define(BF16051, "").
+-define(BN16052, "").
+-define(BD16052, "").
+-define(SUD210561, "").
+-define(SUD210501, "").
+-define(SUD210541, "").
+-define(BN30194, "").
+-define(BN30195, "").
+-define(BN30196, "").
+-define(BD30194, "").
+-define(BD30195, "").
+-define(BD30196, "").
+-define(SN11528401, "").
+-define(SD11528401, "").
+-define(SN11548411, "").
+-define(SD11548411, "").
+-define(SS11528401, "").
+-define(SS11548411, "").
+-define(BN1703001, "").
+-define(BD1703001, "").
+-define(BN1703002, "").
+-define(BD1703002, "").
+-define(BN1704002, "").
+-define(BD1704002, "").
+-define(SCN193041, "").
+-define(SCD193041, "").
+-define(BN16104, "").
+-define(BD16104, "").
+-define(SCN193051, "").
+-define(SCD193051, "").
+-define(BN16105, "").
+-define(BD16105, "").
+-define(SCN193061, "").
+-define(SCD193061, "").
+-define(BN16106, "").
+-define(BD16106, "").
+-define(SCN193071, "").
+-define(SCD193071, "").
+-define(BN16108, "").
+-define(BD16108, "").
+-define(SCN193081, "").
+-define(SCD193081, "").
+-define(BN16107, "").
+-define(BD16107, "").
+-define(SN540010, "").
+-define(SD540010, "").
+-define(SN540011, "").
+-define(SD540011, "").
+-define(SN540012, "").
+-define(SD540012, "").
+-define(BN56058, "").
+-define(BN56059, "").
+-define(BN56060, "").
+-define(BD56058, "").
+-define(BD56059, "").
+-define(BD56060, "").
+-define(SN1530164, "").
+-define(SD1530164, "").
+-define(SN1530074, "").
+-define(SD1530074, "").
+-define(BN73020, "").
+-define(BD73020, "").
+-define(BN73022, "").
+-define(BD73022, "").
+-define(SN1530644, "").
+-define(SD1530644, "").
+-define(SN1530645, "").
+-define(SN1530624, "").
+-define(SD1530624, "").
+-define(SN1530625, "").
+-define(SN280061, "").
+-define(SD280061, "").
+-define(SN280066, "").
+-define(SD280066, "").
+-define(SN280071, "").
+-define(SD280071, "").
+-define(SN280076, "").
+-define(SD280076, "").
+-define(BN60061, "").
+-define(BD60061, "").
+-define(BN60066, "").
+-define(BD60066, "").
+-define(BN60071, "").
+-define(BD60071, "").
+-define(BN60076, "").
+-define(BD60076, "").
+-define(SN282013, "").
+-define(SD282013, "").
+-define(SN282014, "").
+-define(SD282014, "").
+-define(SN282015, "").
+-define(SD282015, "").
+-define(SN282016, "").
+-define(SD282016, "").
+-define(BD55013, "").
+-define(BD55014, "").
+-define(SS282013, "").
+-define(SS282014, "").
+-define(SS282015, "").
+-define(SS282016, "").
+-define(SS280061, "").
+-define(SS280066, "").
+-define(SS280071, "").
+-define(SS280076, "").
+-define(BN73024, "").
+-define(BD73024, "").
+-define(SN204601, "").
+-define(SD204601, "").
+-define(SN204641, "").
+-define(SD204641, "").
+-define(SN204661, "").
+-define(SD204661, "").
+-define(BN16034, "").
+-define(BD16034, "").
+-define(BN16035, "").
+-define(BD16035, "").
+-define(BF16034, "").
+-define(SN204701, "").
+-define(SD204701, "").
+-define(SN204761, "").
+-define(SD204761, "").
+-define(BN16036, "").
+-define(BD16036, "").
+-define(BF16036, "").
+-define(SN204801, "").
+-define(SD204801, "").
+-define(SN204861, "").
+-define(SD204861, "").
+-define(BN16037, "").
+-define(BD16037, "").
+-define(BF16037, "").
+-define(SN204901, "").
+-define(SD204901, "").
+-define(SN204961, "").
+-define(SD204961, "").
+-define(BN16038, "").
+-define(BF16038, "").
+-define(SN205001, "").
+-define(SD205001, "").
+-define(SN205061, "").
+-define(SD205061, "").
+-define(BN16039, "").
+-define(BF16039, "").
+-define(SN205101, "").
+-define(SD205101, "").
+-define(SN205161, "").
+-define(SD205161, "").
+-define(SN205201, "").
+-define(SD205201, "").
+-define(SN205261, "").
+-define(SD205261, "").
+-define(SN205301, "").
+-define(SD205301, "").
+-define(SN205361, "").
+-define(SD205361, "").
+-define(SN205401, "").
+-define(SD205401, "").
+-define(SN205461, "").
+-define(SD205461, "").
+-define(SN205501, "").
+-define(SD205501, "").
+-define(SN205601, "").
+-define(SD205601, "").
+-define(SN205701, "").
+-define(SD205701, "").
+-define(SN203461, "").
+-define(SD203461, "").
+-define(SN203561, "").
+-define(SD203561, "").
+-define(SN203661, "").
+-define(SD203661, "").
+-define(SN203161, "").
+-define(SD203161, "").
+-define(SN203261, "").
+-define(SD203261, "").
+-define(SN203361, "").
+-define(SD203361, "").
+-define(SN210641, "").
+-define(SD210641, "").
+-define(SN210661, "").
+-define(SD210661, "").
+-define(SD210662, "").
+-define(SD210663, "").
+-define(BN1601101, "").
+-define(BD1601101, "").
+-define(SD211241, "").
+-define(SD211261, "").
+-define(SD211262, "").
+-define(SD211263, "").
+-define(BD1601921, "").
+-define(SD211441, "").
+-define(SD211461, "").
+-define(SD211462, "").
+-define(SD211463, "").
+-define(BN16053, "").
+-define(BD16053, "").
+-define(SKILLCIZHUI_117, "").
+-define(SKILLCIZHUI_118, "").
+-define(SN104041_TITLE, "").
+-define(SN104042_TITLE, "").
+-define(SN104171_TITLE, "").
+-define(SN104181_TITLE, "").
+-define(SN105041_TITLE, "").
+-define(SN105042_TITLE, "").
+-define(SN105171_TITLE, "").
+-define(SN105181_TITLE, "").
+-define(SN106041_TITLE, "").
+-define(SN106042_TITLE, "").
+-define(SN106171_TITLE, "").
+-define(SN106181_TITLE, "").
+-define(SN107041_TITLE, "").
+-define(SN107042_TITLE, "").
+-define(SN107171_TITLE, "").
+-define(SN107181_TITLE, "").
+-define(SN104041, "").
+-define(SD104041, "").
+-define(SN104042, "").
+-define(SD104042, "").
+-define(SN104171, "").
+-define(SD104171, "").
+-define(SN104181, "").
+-define(SD104181, "").
+-define(SN105171, "").
+-define(SD105171, "").
+-define(SN105181, "").
+-define(SD105181, "").
+-define(SN106171, "").
+-define(SD106171, "").
+-define(SN106181, "").
+-define(SD106181, "").
+-define(SN107171, "").
+-define(SD107171, "").
+-define(SN107181, "").
+-define(SD107181, "").
+-define(BN61191, "").
+-define(BD61191, "").
+-define(BN61221, "").
+-define(BD61221, "").
+-define(BN62191, "").
+-define(BD62191, "").
+-define(BN62221, "").
+-define(BD62221, "").
+-define(BN63191, "").
+-define(BD63191, "").
+-define(BN63221, "").
+-define(BD63221, "").
+-define(BN64201, "").
+-define(BD64201, "").
+-define(BN64231, "").
+-define(BD64231, "").
+-define(SN105041, "").
+-define(SD105041, "").
+-define(SN105042, "").
+-define(SD105042, "").
+-define(BN62040, "").
+-define(BD62040, "").
+-define(BN62041, "").
+-define(BD62041, "").
+-define(SN106041, "").
+-define(SD106041, "").
+-define(SN106042, "").
+-define(SD106042, "").
+-define(BN63041, "").
+-define(BD63041, "").
+-define(BN63051, "").
+-define(BD63051, "").
+-define(SN107041, "").
+-define(SD107041, "").
+-define(SN107042, "").
+-define(SD107042, "").
+-define(BN64016, "").
+-define(BD64016, "").
+-define(BN64017, "").
+-define(BD64017, "").
+-define(BN64018, "").
+-define(BD64018, "").
+-define(SN213001, "").
+-define(SD213001, "").
+-define(SN213011, "").
+-define(SD213011, "").
+-define(SN213021, "").
+-define(SD213021, "").
+-define(SN213031, "").
+-define(SD213031, "").
+-define(SN213101, "").
+-define(SD213101, "").
+-define(SN213111, "").
+-define(SD213111, "").
+-define(SN213121, "").
+-define(SD213121, "").
+-define(SN213131, "").
+-define(SD213131, "").
+-define(SN213201, "").
+-define(SD213201, "").
+-define(SN213211, "").
+-define(SD213211, "").
+-define(SN213221, "").
+-define(SD213221, "").
+-define(SN213231, "").
+-define(SD213231, "").
+-define(SN213301, "").
+-define(SD213301, "").
+-define(SN213311, "").
+-define(SD213311, "").
+-define(SN213321, "").
+-define(SD213321, "").
+-define(SN213331, "").
+-define(SD213331, "").
+-define(BF17230, "").
+-define(BN17231, "").
+-define(BD17231, "").
+-define(BN17232, "").
+-define(BD17232, "").
+-define(BN17233, "").
+-define(BD17233, "").
+-define(BN17234, "").
+-define(BD17234, "").
+-define(BN17236, "").
+-define(BD17236, "").
+-define(BN17237, "").
+-define(BD17237, "").
+-define(BN17238, "").
+-define(BD17238, "").
+-define(BN17239, "").
+-define(BD17239, "").
+-define(BN17240, "").
+-define(BD17240, "").
+-define(BN17242, "").
+-define(BD17242, "").
+-define(BN17244, "").
+-define(BD17244, "").
+-define(BN17246, "").
+-define(BD17246, "").
+-define(BN17247, "").
+-define(BD17247, "").
+-define(BN17248, "").
+-define(BD17248, "").
+-define(BN17249, "").
+-define(BD17249, "").
+-define(BN17250, "").
+-define(BD17250, "").
+-define(BN17252, "").
+-define(BD17252, "").
+-define(BN17253, "").
+-define(BD17253, "").
+-define(SN111800, "").
+-define(SD111800, "").
+-define(SN111801, "").
+-define(SD111801, "").
+-define(SN111805, "").
+-define(SD111805, "").
+-define(SN111806, "").
+-define(SD111806, "").
+-define(SN111807, "").
+-define(SD111807, "").
+-define(SN111808, "").
+-define(SD111808, "").
+-define(SN111810, "").
+-define(SD111810, "").
+-define(BN17188, "").
+-define(BD17188, "").
+-define(BF17188, "").
+-define(BN17189, "").
+-define(BD17189, "").
+-define(BN17190, "").
+-define(BD17190, "").
+-define(SUD111800, "").
+-define(SUD111801, "").
+-define(SUD111805, "").
+-define(SUD111806, "").
+-define(SUD111807, "").
+-define(SUD111808, "").
+-define(SN204301, "").
+-define(SN204361, "").
+-define(SD204301, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SD204361, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SUD204301, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SUD204361, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SN204401, "").
+-define(SN204461, "").
+-define(SD204401, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SD204461, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SUD204401, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SUD204461, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SN204501, "").
+-define(SN204561, "").
+-define(SD204501, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SD204561, "Deals {0}% Character DMG + {1}% Hero DMG to the target").
+-define(SUD204501, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SUD204561, "Deals {0}% Character DMG + {1}% Hero DMG").
+-define(SN530111, "").
+-define(SN530121, "").
+-define(SD530111, "").
+-define(SD530121, "").
+-define(BN30190, "").
+-define(BD30190, "").
+-define(SUD210661, "").
+-define(SUD210601, "").
+-define(SUD210641, "").
+-define(SUD211261, "").
+-define(SUD211201, "").
+-define(SUD211241, "").
+-define(SUD214661, "").
+-define(SUD214601, "").
+-define(SUD214641, "").
+-define(SD214661, "").
+-define(SD214662, "").
+-define(SD214663, "").
+-define(BN15009, "").
+-define(BN15012, "").
+-define(BN15010, "Brutality").
+-define(BN15011, "Divine Grace").
+-define(BD15009, "").
+-define(BD15012, "").
+-define(BD15010, "").
+-define(BD15011, "").
+-define(BN16109, "").
+-define(BD16109, "").
+-define(BN16110, "").
+-define(BD16110, "").
+-define(BN16111, "").
+-define(BD16111, "").
+-define(SN125701, "").
+-define(SD125701, "").
+-define(SS125701, "").
+-define(BF17192, "").
+-define(BN17192, "").
+-define(BD17192, "").
+-define(BN17193, "").
+-define(BD17193, "").
+-define(BD17194, "").
+-define(BD17195, "").
+-define(BD64116, "").
+-define(SN125801, "").
+-define(SD125801, "").
+-define(SS125801, "").
+-define(BF17262, "").
+-define(BN17162, "").
+-define(BD17162, "").
+-define(BF108, "").
+-define(BN990201, "").
+-define(BD990201, "").
+-define(SN11548421, "").
+-define(SD11548421, "").
+-define(SS11548421, "").
+-define(SN11548431, "").
+-define(SD11548431, "").
+-define(SS11548431, "").
+-define(SN11548441, "").
+-define(SD11548441, "").
+-define(SS11548441, "").
+-define(SN11548451, "").
+-define(SD11548451, "").
+-define(SS11548451, "").
+-define(SN11548461, "").
+-define(SD11548461, "").
+-define(SS11548461, "").
+-define(SN11548471, "").
+-define(SD11548471, "").
+-define(SS11548471, "").
+-define(SN11548481, "").
+-define(SD11548481, "").
+-define(SS11548481, "").
+-define(SN11548491, "").
+-define(SD11548491, "").
+-define(SS11548491, "").
+-define(SN11548501, "").
+-define(SD11548501, "").
+-define(SS11548501, "").
+-define(BN1704012, "").
+-define(BD1704012, "").
+-define(BN1704013, "").
+-define(BD1704013, "").
+-define(BN1704019, "").
+-define(BD1704019, "").
+-define(BN1704025, "").
+-define(BD1704025, "").
+-define(BN1704031, "").
+-define(BD1704031, "").
+-define(SD110013, "").
+-define(SN125901, "").
+-define(SD125901, "").
+-define(SS125901, "").
+-define(BN17263, "").
+-define(BD17263, "").
+-define(BF17263, "").
+-define(BN17264, "").
+-define(BD17264, "").
+-define(BN16112, "").
+-define(BD16112, "").
+-define(SCN193251, "").
+-define(SCD193251, "").
+-endif.
+

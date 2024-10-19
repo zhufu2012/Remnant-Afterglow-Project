@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Vector2Vector2Inamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 ScienceRange 用于 科技范围配置,拓展请在expand_class文件下使用partial拓展
@@ -7,34 +8,34 @@ Vector2Vector2Inamespace Remnant_Afterglow
     public partial class ScienceRange
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 科技范围id
         /// </summary>
         public int ScienceRangeId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 科技范围名称
         /// </summary>
         public string ScienceRangeName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 显示货币id列表
         ///按顺序显示
         ///cfg_MoneyBase_货币界面显示配置id
         /// </summary>
         public List<int> ShowMoneyList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 位置偏移量
         /// </summary>
         public Vector2I Offset { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 节点间横纵向间隙
         /// </summary>
         public Vector2I Interval { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 科技节点大小
         ///（横轴，纵轴）
         /// </summary>
         public Vector2I NodeSize { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 科技范围描述
         /// </summary>
         public string ScienceRangeDes { get; set; }

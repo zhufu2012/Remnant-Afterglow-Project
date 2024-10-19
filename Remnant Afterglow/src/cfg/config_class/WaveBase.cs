@@ -7,40 +7,40 @@ namespace Remnant_Afterglow
     public partial class WaveBase
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 刷怪点id
         /// </summary>
         public int BrushId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 波次Id
         ///（波数从1开始，一直
         ///到各刷新点中存在的
         ///最大波数为止）
         /// </summary>
         public int WaveId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 波次名称
         /// </summary>
         public string WaveName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 刷新类型
         ///0 不刷新怪
         ///1 固定方式 使用WaveData
         ///2 随机刷新 使用WaveRandData
         /// </summary>
         public int WaveType { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 刷新方式
         ///0 触发刷新，点击开始才刷新
         ///1.直接全部刷新
         ///2.定时刷新间隔
         /// </summary>
         public int WaveWay { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 刷新提示
         /// </summary>
         public string WaveDes { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 刷新数据列表
         ///(组序号,cfg_UnitBase的单位id，阵营id，数量)
         ///刷新方式为1，就是直接全部刷新
@@ -48,11 +48,11 @@ namespace Remnant_Afterglow
         ///每隔WaveTime帧刷新下一组
         /// </summary>
         public List<List<int>> WaveData { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 波数随机刷新数据列表
         /// </summary>
         public List<List<int>> WaveRandData { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 
         ///一个组一个组
         ///定时刷新间隔时间

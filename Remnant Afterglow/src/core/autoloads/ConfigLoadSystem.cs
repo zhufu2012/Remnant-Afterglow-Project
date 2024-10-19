@@ -128,7 +128,7 @@ namespace Remnant_Afterglow
                 string jsonText = File.ReadAllText(path);
                 ConfigFiles file_data = JsonConvert.DeserializeObject<ConfigFiles>(jsonText);
                 List<ConfigDict> filedata = file_data.cfg_files;
-                foreach (var cfgFile in filedata)//祝福注释，这里一个字段一个字段的覆盖
+                foreach (var cfgFile in filedata)
                 {
                     try
                     {
@@ -136,11 +136,16 @@ namespace Remnant_Afterglow
                         JArray jsonArray = JArray.Parse(jsonstr);
                         if (jsonArray.Count > 0)
                         {
-                            Dictionary<string, Dictionary<string, object>> innerDict = new Dictionary<string, Dictionary<string, object>>();
+                            //这是一个表，这里一个字段一个字段的覆盖
+                            Dictionary<string, Dictionary<string, object>> innerDict = config_dict[cfgFile.file_name];
                             foreach (JObject obj in jsonArray)
                             {
                                 string keyIndex = obj["KEY_INDEX"].Value<string>();
                                 Dictionary<string, object> dataDict = new Dictionary<string, object>();
+                                if(innerDict.ContainsKey(keyIndex))
+                                {
+                                    dataDict = innerDict[keyIndex];
+                                }
                                 foreach (var key in cfgFile.key_list.Keys)
                                 {
                                     if (obj.TryGetValue(key, out JToken value))
@@ -154,11 +159,6 @@ namespace Remnant_Afterglow
                             }
                             config_dict[cfgFile.file_name] = innerDict;
                         }
-                        else
-                        {
-                            config_dict[cfgFile.file_name] = new Dictionary<string, Dictionary<string, object>>();
-                        }
-
                     }
                     catch (Exception e)
                     {
@@ -315,8 +315,7 @@ namespace Remnant_Afterglow
                     List<Vector2> poslist = new List<Vector2>();
                     for (int i = 0; i < list4.Count; i++)
                     {
-                        List<float> list5 = list4[i];
-                        poslist.Add(new Vector2(list5[0], list5[1]));
+                        poslist.Add(new Vector2(list4[i][0], list4[i][1]));
                     }
                     return poslist;
                 case "List<Vector2I>"://坐标列表
@@ -324,8 +323,7 @@ namespace Remnant_Afterglow
                     List<Vector2I> veslist = new List<Vector2I>();
                     for (int i = 0; i < list8.Count; i++)
                     {
-                        List<int> list9 = list8[i];
-                        veslist.Add(new Vector2I(list9[0], list9[1]));
+                        veslist.Add(new Vector2I(list8[i][0], list8[i][1]));
                     }
                     return veslist;
                 case "Color"://RGB颜色

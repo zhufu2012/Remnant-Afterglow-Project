@@ -60,7 +60,7 @@ public static class SaveExtension
     }
 
     /// <summary>
-    /// Serializes an object to a JSON string
+    /// 将对象序列化为JSON字符串
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="value"></param>
@@ -71,7 +71,7 @@ public static class SaveExtension
     }
 
     /// <summary>
-    /// Deserializes an object from a JSON string
+    /// 从JSON字符串反序列化对象
     /// </summary>
     /// <param name="value"></param>
     /// <returns></returns>
@@ -81,7 +81,7 @@ public static class SaveExtension
     }
 
     /// <summary>
-    /// Deserializes an object from a JSON string
+    /// 从JSON字符串反序列化一个对象
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="json">A JSON string</param>

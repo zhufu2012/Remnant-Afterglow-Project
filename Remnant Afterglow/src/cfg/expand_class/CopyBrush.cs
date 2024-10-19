@@ -9,7 +9,7 @@ namespace Remnant_Afterglow
             ChapterId = (int)dict["ChapterId"];
             CopyId = (int)dict["CopyId"];
             CopyType = (int)dict["CopyType"];
-            WaveNum = (int)dict["WaveNum"];
+            AllWave = (int)dict["AllWave"];
             BrushSpace = (int)dict["BrushSpace"];
             BrushSpaceList = (List<List<int>>)dict["BrushSpaceList"];
             BrushIdList = (List<int>)dict["BrushIdList"];

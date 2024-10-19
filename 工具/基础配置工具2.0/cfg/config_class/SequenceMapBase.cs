@@ -7,20 +7,20 @@ namespace Remnant_Afterglow
     public partial class SequenceMapBase
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 序列图id
         /// </summary>
         public int SequenceId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 序列图
         ///这里填json名称就行
         /// </summary>
         public SequenceMapType Sequence { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否自动播放
         /// </summary>
         public bool IsAutoplay { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否循环播放
         /// </summary>
         public bool IsLoop { get; set; }

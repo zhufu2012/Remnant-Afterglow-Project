@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Test/player/mount_eq.erl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Test/player/mount_eq.erl" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Test/player/xun_bao/xun_bao_record.erl" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Test/player/xo_room/xo_room.erl" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Test/player/xun_bao/xun_bao_period.erl" root0="SKIP_INSPECTION" />

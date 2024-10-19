@@ -170,7 +170,7 @@ namespace Remnant_Afterglow
         /// <returns>反序列化的对象</returns>
         public static T ReadSaveData<T>(string directoryPath, string filename)
         {
-            return (T)ReadSaveData<T>(typeof(T), directoryPath + "//" + filename);
+            return (T)ReadSaveData<T>(typeof(T), directoryPath  + filename);
         }
 
         /// <summary>

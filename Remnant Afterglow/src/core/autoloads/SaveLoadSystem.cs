@@ -56,6 +56,7 @@ namespace Remnant_Afterglow
         {
             IsSave = true;
             NowSaveFile = saveFile;//设置当前选中存档
+
             NowSaveData = GetData<SaveData>(NowSaveFile.file_name);//读取存档数据
         }
         /// <summary>
@@ -199,7 +200,7 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public static T GetData<T>(string filename)
         {
-            T data = FileUtils.ReadSaveData<T>(FileUtils.SaveDataDirectory, filename);
+            T data = FileUtils.ReadSaveData<T>(FileUtils.SaveDataDirectory, filename + "/" + filename + PathConstant.GetPathUser(PathConstant.SAVE_LOAD_FILE_SUFFIX));
             return data;
         }
 

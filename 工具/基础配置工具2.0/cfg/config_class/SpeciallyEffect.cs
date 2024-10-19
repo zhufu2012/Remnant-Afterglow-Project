@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Texture2Dnamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 SpeciallyEffect 用于 特效配置,拓展请在expand_class文件下使用partial拓展
@@ -7,15 +8,15 @@ Texture2Dnamespace Remnant_Afterglow
     public partial class SpeciallyEffect
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 特效id
         /// </summary>
         public int KetId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 特效名称
         /// </summary>
         public int Key2Id { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 特效SpriteFrames
         ///资源路径
         /// </summary>

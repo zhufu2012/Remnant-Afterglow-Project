@@ -7,15 +7,15 @@ namespace Remnant_Afterglow
     public partial class GlobalConfigStr
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 全局配置id
         /// </summary>
         public string Configid { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 全局配置名称
         /// </summary>
         public string ConfigName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 全局配置值
         /// </summary>
         public string ConfigValue { get; set; }

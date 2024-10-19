@@ -55,12 +55,7 @@ def number_to_column_name(n):
 ##对一个xlsx文件的子表名称读取 之前的需要导出数据字典  xlsx路径   返回(子表显示名称列表，)
 def OneXlsxDataHandle(path):
     dicts, image_path = read_xlsx.read_text_all(path)
-    subtable_show_name_list = []  ##子表显示名称列表
-    for table_name, item_list in dicts.items():
-        if not table_name.startswith("cfg_"):  ## 子表的名称开头必须是cfg_
-            continue
-        else:  ##开头是cfg_
-            subtable_show_name_list.append(table_name)
+    subtable_show_name_list = [table_name for table_name in dicts if table_name.startswith("cfg_")]
     return subtable_show_name_list, image_path
 
 
@@ -72,7 +67,7 @@ def GetExportRow(file_path, table_name, list):
         return None
     if not check_list(list, 1):
         Config.add_log(
-            f"导出失败！   配置文件:[{file_path}]  子表：{table_name}  没有主键，，请增加一个导出类型1的主键字段，错误码:1")
+            f"导出失败！   配置文件:[{file_path}]  子表：{table_name}  没有主键，请增加一个导出类型1的主键字段，错误码:1")
         return None
     if not check_list(list, 3):
         Config.add_log(
@@ -223,7 +218,6 @@ def SubTableDataHandle(file_path, table_name, item_list, data_dict, data_key_dic
                                                        ensure_ascii=False)  # 紧凑版
             else:
                 data_dict[sub_table_name] = json.dumps(data_list, indent=4, ensure_ascii=False)
-            # data_dict[sub_table_name] = json.dumps(data_list, separators=(',', ':'), indent=None, ensure_ascii=False) #紧凑版
         else:
             return None
     else:
@@ -264,8 +258,7 @@ def data_conver(pathlist):
         if file_path.find("~$") != -1:
             continue
         if file_path.endswith(".xlsx"):
-            data = TableDataHandle(file_path, image_path_list, data_dict, data_key_dict, subtable_name_list,
-                                   subtable_name_list2)
+            data = TableDataHandle(file_path, image_path_list, data_dict, data_key_dict, subtable_name_list,subtable_name_list2)
             if data is not None:
                 pass
             else:
@@ -443,20 +436,13 @@ def AllXlsxDataHandleClass(path):
 def RefreshAllData(filepath):
     pathlist = get_files_from_directory(filepath)
     for path in pathlist:
-        if path.find("~$") != -1:
-            continue
-        if path.endswith(".xlsx"):
-            # 使用ExcelFile读取数据
-            excel_file = pd.ExcelFile(path)
-            sheets = excel_file.sheet_names
-            if "数据类型" in sheets:
-                RefreshOneData(path)
+        if ".xlsx" in path and "~$" not in path:
+            RefreshOneData(path)
     pass
 
 
 def RefreshOneData(path):
     xlapp = win32com.client.DispatchEx("Excel.Application")
-    ##print(os.path.abspath(path))
     wb = xlapp.Workbooks.Open(os.path.abspath(path))
     wb.RefreshAll()
     xlapp.CalculateUntilAsyncQueriesDone()
@@ -464,7 +450,3 @@ def RefreshOneData(path):
     wb.Save()
     wb.Close()
     xlapp.Quit()
-
-# ConfigData = Config.load_data()  ##工具配置数据
-# AllXlsxDataHandle(ConfigData["工具读取的xlsx文件夹路径"])
-# print(Config.read_log())

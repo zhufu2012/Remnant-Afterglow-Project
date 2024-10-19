@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Texture2Dnamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 Massif 用于 资源地块,拓展请在expand_class文件下使用partial拓展
@@ -7,43 +8,43 @@ Texture2Dnamespace Remnant_Afterglow
     public partial class Massif
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 地块id
         /// </summary>
         public int MassifId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 地块名称
         /// </summary>
         public string MassifName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 可通过类型id
         ///数据是cfg_MapPassType的id
         /// </summary>
         public int PassTypeId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 地块大小 
         ///图片大小(长，宽)
         /// </summary>
         public List<float> MassifSize { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 可产出资源列表
         ///资源表的cfg_ziyuan_资源的id列表
         ///
         /// </summary>
         public int ItemIdList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 蕴含实际资源数量
         /// </summary>
         public int NumberResources { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 地块图片
         /// </summary>
         public Texture2D PlotPictures { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 被开采效率
         /// </summary>
         public float TheEfficiencyMining { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 开采标签id
         /// </summary>
         public int TheExtractionLabelPprovided { get; set; }

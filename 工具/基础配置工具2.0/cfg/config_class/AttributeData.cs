@@ -7,47 +7,47 @@ namespace Remnant_Afterglow
     public partial class AttributeData
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 实体类型
         ///  1 单位 2 炮塔  3 建筑 
         /// </summary>
         public int ObjectType { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 实体id
         ///单位或者炮塔或者建筑等
         ///
         ///给属性模板使用的话就使用负的实体id
         /// </summary>
         public int ObjectId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 属性id
         /// </summary>
         public int AttributeId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 初始值
         /// </summary>
         public float StartValue { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 最大值
         /// </summary>
         public float Max { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 最小值
         /// </summary>
         public float Min { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 再生值
         /// </summary>
         public float Regen { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 再生帧数
         /// </summary>
         public float RegenFps { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 添加时触发事件id列表
         /// </summary>
         public List<int> StartEventIdList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 事件触发id列表
         ///（触发类型，触发参数1，触发参数2，触发参数3，事件id）
         ///0 添加属性后直接触发

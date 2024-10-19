@@ -7,19 +7,19 @@ namespace Remnant_Afterglow
     public partial class ChapterCopyUI
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 关卡UIid
         /// </summary>
         public int CopyId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 关卡名称
         /// </summary>
         public string CopyName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 关卡描述文字1
         /// </summary>
         public string Describe1 { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 关卡描述文字2
         /// </summary>
         public string Describe2 { get; set; }

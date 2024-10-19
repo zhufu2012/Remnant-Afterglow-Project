@@ -7,41 +7,41 @@ namespace Remnant_Afterglow
     public partial class BuildData
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 建筑ID（每个建筑特有的记号）
         /// </summary>
         public int BuildingID { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 建筑名称
         /// </summary>
         public string BuildingName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 属性模板列表
         ///属性是cfg_AttributeTemplate_属性模板表与cfg_AttributeData_实体属性表覆盖的结果
         /// </summary>
         public List<int> TempLateList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 实体id
         ///用于属性等配置
         ///(要求唯一)
         /// </summary>
         public int ObjectId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 建筑归属
         ///（该建筑默认属于那方阵营）
         ///导用cfg_Troops_阵营
         /// </summary>
         public int DefaultCamp { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 建筑占地边长，1是1格 2是4格
         ///
         /// </summary>
         public int BuildingSize { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 建造规则
         /// </summary>
         public List<int> BuildingRules { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 动画类型列表
         /// </summary>
         public List<int> AnimaTypeList { get; set; }

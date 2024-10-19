@@ -7,50 +7,50 @@ namespace Remnant_Afterglow
     public partial class GenerateBottomMap
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 底层生成方式id
         /// </summary>
         public int GenerateMapId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 生成方式名称
         /// </summary>
         public string GenerateMapName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 生成地图
         ///的横轴长度
         /// </summary>
         public int Width { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 生成地图
         ///的纵轴长度
         /// </summary>
         public int Height { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否需要有
         ///边界墙壁
         /// </summary>
         public bool IsNeedWall { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 墙壁厚度
         /// </summary>
         public int WallThickness { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 默认材料id
         ///默认用这个材料填满地图
         /// </summary>
         public int DefaultMaterialId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 墙壁材料id
         /// </summary>
         public int WallMaterialId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 墙壁连接贴图
         ///地图图像集的id
         ///9宫格法处理墙壁连接
         ///
         /// </summary>
         public int WallImageId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否使用
         ///噪声编辑器的数据
         ///True就是使用
@@ -58,25 +58,25 @@ namespace Remnant_Afterglow
         ///种子表数据
         /// </summary>
         public bool IsUseNoiseEdit { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 生成噪声种子类型id
         ///种子噪声相关表的
         ///cfg_SeedType_种子表
         /// </summary>
         public int SeedTypeId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 生成密度是否反向判断
         ///true 表示小于这个数字就生成墙壁
         ///false 表示大于这个数字就生成
         /// </summary>
         public bool IsDensityContrary { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 生成密度
         ///百万分比，生成地图时任何非墙壁和大型结构的材料都需要生成一个1-100万的随机数，和这个数字比较，小于这个数字就生成
         ///
         /// </summary>
         public int Density { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 平滑墙壁规则列表，
         ///按照这些参数来进行光滑处理
         ///
@@ -90,7 +90,7 @@ namespace Remnant_Afterglow
         ///本图块就是墙壁，没超过本图块就是空地，等于这个数量本图块就不处理
         /// </summary>
         public List<List<int>> WallParamList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 装饰层id列表
         ///cfg_GenerateAdornMap
         ///绘制完成该层后
@@ -98,7 +98,7 @@ namespace Remnant_Afterglow
         ///不写也没问题
         /// </summary>
         public List<int> AdornLayerIdList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 地图额外绘制id列表
         ///cfg_MapExtraDraw
         ///用于对地图进行
@@ -106,40 +106,40 @@ namespace Remnant_Afterglow
         ///绘制一条从左下到右上的通道
         /// </summary>
         public List<int> ExtraDrawIdList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 地图大型结构id列表
         ///cfg_GenerateBigStruct
         /// </summary>
         public List<int> BigStructIdList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否清除小尺寸墙壁
         /// </summary>
         public bool IsClearWall { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否清除小尺寸空地
         /// </summary>
         public bool IsClearDefine { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 墙壁区域最小尺寸
         ///小于这个尺寸的都清除
         ///
         /// </summary>
         public int MinWallMeasure { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 默认区域最小尺寸
         ///小于这个尺寸就清除
         ///
         /// </summary>
         public int MinDefineMeasure { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否绘制通道
         /// </summary>
         public bool IsDrawPass { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 连接通道材料id
         /// </summary>
         public int PassMaterialId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 连接通道的宽度
         ///连接各区域的通道的宽度
         /// </summary>

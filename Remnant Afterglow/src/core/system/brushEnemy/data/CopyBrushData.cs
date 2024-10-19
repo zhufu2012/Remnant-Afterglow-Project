@@ -57,17 +57,17 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 计算刷新波数组的怪物
+        /// 计算该刷新点，对应波次计算刷新波数组的怪物
         /// </summary>
         /// <returns><<怪物id,阵营id>,数量></returns>
-        public Dictionary<KeyValuePair<int, int>, int> CalcWaveUnit(int waveId)
+        public Dictionary<KeyValuePair<int, int>, int> CalcWaveUnit(int waveId, double nowTime,double frameNumber)
         {
             if (waveDataDict.ContainsKey(waveId))
             {
                 WaveData waveData = waveDataDict[waveId];
                 if (!waveData.is_flush_acc)//没刷新完
                 {
-                    return waveData.GetUnitDict();
+                    return waveData.GetUnitDict(nowTime,frameNumber);
                 }
                 else
                 {

@@ -37,48 +37,34 @@ namespace Remnant_Afterglow
             Crosswise = cfgData.Crosswise;
             Vertical = cfgData.Vertical;
         }
-/// <summary>
+        /// <summary>
         /// 添加物品到背包中
         /// </summary>
-        /// <param name="rowIndex"></param>
-        /// <param name="columnIndex"></param>
+        /// <param name="rowIndex">横排</param>
+        /// <param name="columnIndex">竖排</param>
         /// <param name="item"></param>
         public bool AddItem(int rowIndex, int columnIndex, ItemBase item)
         {
             if (item == null)
                 return false;
-
-            if (item.Stackable)
-            {
-                // 尝试叠加物品
-                for (int row = 0; row < GetMaxRow(); row++)
-                {
-                    for (int col = 0; col < GetMaxColumn(); col++)
-                    {
-                        var key = new KeyValuePair<int, int>(row, col);
-                        if (ItemDict.ContainsKey(key) && ItemDict[key].ItemId == item.ItemId && ItemDict[key].Stackable)
-                        {
-                            int quantityToAdd = Math.Min(ItemDict[key].MaxStackLimit - ItemDict[key].Quantity, item.Quantity);
-                            ItemDict[key].Quantity += quantityToAdd;
-                            item.Quantity -= quantityToAdd;
-                            if (item.Quantity <= 0)
-                                return true;
-                        }
-                    }
-                }
-            }
-
-            // 如果没有找到可叠加的位置，或者物品不可叠加，则添加新物品
             var key = new KeyValuePair<int, int>(rowIndex, columnIndex);
-            if (!ItemDict.ContainsKey(key))
+            if (ItemDict.ContainsKey(key))
             {
-                ItemDict[key] = item;
-                return true;
+                if (ItemDict[key].ItemId == item.ItemId)
+                {
+                    ItemDict[key].Quantity += item.Quantity;
+                    return true;
+                }
+                else
+                {
+                    // 如果槽位已有物品，且不允许叠加，则返回失败
+                    return false;
+                }
             }
             else
             {
-                // 如果槽位已有物品，且不允许叠加，则返回失败
-                return false;
+                ItemDict[key] = item;
+                return true;
             }
         }
 

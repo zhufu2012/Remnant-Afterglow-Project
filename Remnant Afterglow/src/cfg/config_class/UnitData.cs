@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Texture2DVector2namespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 UnitData 用于 单位基础表,拓展请在expand_class文件下使用partial拓展
@@ -7,45 +8,45 @@ Texture2DVector2namespace Remnant_Afterglow
     public partial class UnitData
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 单位ID
         ///（每个建筑特有的记号）
         /// </summary>
         public int UnitId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 单位名称
         /// </summary>
         public string UnitName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 属性模板列表
         ///属性是cfg_AttributeTemplate_属性模板表与cfg_AttributeData_实体属性表覆盖的结果
         /// </summary>
         public List<int> TempLateList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 实体id
         ///用于属性等配置(要求唯一)
         /// </summary>
         public int ObjectId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 单位体积
         ///（算直径吧，比较好算，按像素算，
         ///大多数单位都是敌人，也无所谓碰撞体精确了）
         /// </summary>
         public int UnitSize { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 单位归属
         ///（该建筑默认属于那方阵营）导用cfg_Troops_阵营
         /// </summary>
         public int CampId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 动画类型列表
         /// </summary>
         public List<int> AnimaTypeList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 阴影图像
         /// </summary>
         public Texture2D ShadowSprite { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 阴影偏移
         /// </summary>
         public Vector2 ShadowOffset { get; set; }

@@ -7,47 +7,47 @@ namespace Remnant_Afterglow
     public partial class ScienceData
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 战役id
         ///cfg_ChapterBase_战役基础数据表id
         /// </summary>
         public int ChapterId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 科技id
         /// </summary>
         public int ScienceId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 科技所属范围
         ///cfg_ScienceType_科技类型配置id
         ///如果不存在，会单看一个界面放置
         /// </summary>
         public int ScienceRangeId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 科技类型
         ///0 通用类型（仅解锁建造列表）
         ///1 建筑属性增强（科技参数列表与解锁建造列表） 
         ///2 炮塔属性增强（科技参数列表与解锁建造列表）
         /// </summary>
         public int ScienceType { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否默认已解锁
         ///创建存档就解锁
         /// </summary>
         public bool IsUnlock { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 科技解锁所需货币
         /// </summary>
         public List<List<int>> UnlockCurrList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 解锁建筑id列表
         ///cfg_MapBuildList_建造子列表id
         /// </summary>
         public List<int> MapBuildIDList { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 科技参数1
         /// </summary>
         public int ScienceParam1 { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 科技参数列表
         /// </summary>
         public List<List<int>> ScienceParamList { get; set; }

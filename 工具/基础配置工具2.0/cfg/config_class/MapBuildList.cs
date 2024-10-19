@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Texture2Dnamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 MapBuildList 用于 建造子列表,拓展请在expand_class文件下使用partial拓展
@@ -7,25 +8,25 @@ Texture2Dnamespace Remnant_Afterglow
     public partial class MapBuildList
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 建造列表标签id
         /// </summary>
         public int BuildLableId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 建造子列表id
         /// </summary>
         public string BuildListId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 建筑类型
         ///1 炮塔  建筑id是cfg_TowerData_炮塔基础
         ///2 建筑  建筑id是cfg_BuildData_建筑基础
         /// </summary>
         public int Type { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 建筑id
         /// </summary>
         public int Id { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 子列表图标
         /// </summary>
         public Texture2D LablePng { get; set; }

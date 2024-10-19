@@ -17,7 +17,7 @@ namespace Remnant_Afterglow
         /// </summary>
         VBoxContainer _vBoxContainer = new VBoxContainer();
         /// <summary>
-        /// 科技数显示界面
+        /// 科技树显示界面
         /// </summary>
         Panel treePanel = new Panel();
         /// <summary>
@@ -85,11 +85,23 @@ namespace Remnant_Afterglow
 
         public override void _Ready()
         {
-            foreach (ScienceRange range in scienceRanges)
+            foreach (ScienceRange range in scienceRanges)///初始化科技范围按钮
             {
                 Button button = new Button();
                 button.Name = range.ScienceRangeName;
                 button.Text = range.ScienceRangeName;
+                button.ButtonDown += () =>
+                {
+                    foreach(Node child in  treePanel.GetChildren())
+                    {
+                        treePanel.RemoveChild(child);
+                    }
+                    ScienceTreeControl container = new ScienceTreeControl(range, scienceBaseDict[range.ScienceRangeId]);
+                    container.Name = range.ScienceRangeName;
+                    container.SetAnchorsPreset(LayoutPreset.FullRect);
+                    treePanel.AddChild(container);
+
+                };
                 _vBoxContainer.AddChild(button);
             }
             _vBoxContainer.Position = new Vector2(0, 68);
@@ -97,15 +109,14 @@ namespace Remnant_Afterglow
 
 
             treePanel.Position = new Vector2(200, 0);
-            treePanel.Size = new Vector2(720, 648); 
+            treePanel.Size = new Vector2(720, 648);
             showPanel.Position = new Vector2(930, 0);
             showPanel.Size = new Vector2(222, 648);
 
 
             if (scienceRanges.Count >= 1)
             {
-                ShowPanelIndex = 0;//选择第1个
-                ShowscienceRange = scienceRanges[ShowPanelIndex];
+                ShowscienceRange = scienceRanges[0];//默认选择第1个
                 ScienceTreeControl container = new ScienceTreeControl(ShowscienceRange, scienceBaseDict[ShowscienceRange.ScienceRangeId]);
                 container.Name = ShowscienceRange.ScienceRangeName;
                 container.SetAnchorsPreset(LayoutPreset.FullRect);
@@ -116,5 +127,6 @@ namespace Remnant_Afterglow
             panel.AddChild(showPanel);
             AddChild(panel);
         }
+
     }
 }

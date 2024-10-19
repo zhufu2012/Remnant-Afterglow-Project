@@ -7,11 +7,11 @@ namespace Remnant_Afterglow
     public partial class MapWall
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 墙壁生成方式id
         /// </summary>
         public int WallId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 墙壁描述
         /// </summary>
         public string WallDescribe { get; set; }

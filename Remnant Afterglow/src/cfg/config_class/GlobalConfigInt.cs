@@ -7,16 +7,16 @@ namespace Remnant_Afterglow
     public partial class GlobalConfigInt
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 全局配置id
         ///(在这几个表中都必须唯一)
         /// </summary>
         public string Configid { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 全局配置名称
         /// </summary>
         public string ConfigName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 全局配置值
         /// </summary>
         public int ConfigValue { get; set; }

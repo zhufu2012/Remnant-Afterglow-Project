@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Colornamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 UpdateLog 用于 更新日志,拓展请在expand_class文件下使用partial拓展
@@ -7,35 +8,35 @@ Colornamespace Remnant_Afterglow
     public partial class UpdateLog
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 更新日志id
         /// </summary>
         public int UpdateLogId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 更新时间
         /// </summary>
         public string Time { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 名称文字字号
         /// </summary>
         public int NameSize { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 名称文字颜色
         /// </summary>
         public Color NameColor { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 名称
         /// </summary>
         public string Name { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 内容文字字号
         /// </summary>
         public int ContentSize { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 内容文字颜色
         /// </summary>
         public Color ContentColor { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 更新内容
         /// </summary>
         public string Content { get; set; }

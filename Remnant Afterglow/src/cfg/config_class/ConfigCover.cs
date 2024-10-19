@@ -7,19 +7,19 @@ namespace Remnant_Afterglow
     public partial class ConfigCover
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 覆盖关系id
         /// </summary>
         public string CoverId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 覆盖关系名称
         /// </summary>
         public string CoverName { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 覆盖关系描述
         /// </summary>
         public string CoverDescribe { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 可处理覆盖次数：
         ///表中没有的数据默认为-1
         ///
@@ -29,7 +29,7 @@ namespace Remnant_Afterglow
         ///
         /// </summary>
         public int HandleNum { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 覆盖方式：
         ///表中没有的数据默认为3
         ///0 不可覆盖原数据，不可添加新数据
@@ -43,7 +43,7 @@ namespace Remnant_Afterglow
         ///举例2：可处理覆盖次数:-1,覆盖方式:4 表示使用最后一个该配置表的数据(覆盖原数据)
         /// </summary>
         public int CoverType { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 对应子表名称
         ///
         /// </summary>

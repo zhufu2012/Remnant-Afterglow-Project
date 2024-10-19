@@ -7,6 +7,7 @@ import open_view  ##打开excel表
 import sys, os
 import platform
 
+
 class FileBrowserApp:
     def __init__(self, root):
         ##self.image_path_list = []  ##需要导出图片数据的列表
@@ -105,14 +106,7 @@ class FileBrowserApp:
         self.export_all_btn = tk.Button(button_frame1, text="导出配置", command=self.export_all)
         self.export_all_btn.pack(side=tk.LEFT, padx=5)
         
-        self.open_subtable_btn = tk.Button(button_frame1, text="打开表格", command=self.open_table)
-        self.open_subtable_btn.pack(side=tk.LEFT, padx=5)
-        
-        self.open_error_btn = tk.Button(button_frame1, text="打开报错", command=self.open_error_table)
-        self.open_error_btn.pack(side=tk.LEFT, padx=5)
-        
-        
-        self.combobox = ttk.Combobox(button_frame2)
+        self.combobox = ttk.Combobox(button_frame1)
         self.combobox.pack(side=tk.LEFT, padx=2)
         # 提取字典的所有键
         keys = ConfigData["复制配置数据列表"].keys()
@@ -125,6 +119,15 @@ class FileBrowserApp:
         
         self.copy_config_develop_btn = tk.Button(button_frame2, text="复制到对应路径", command=self.copy_config_develop)
         self.copy_config_develop_btn.pack(side=tk.LEFT, padx=5)
+
+        # self.copy_config_test_btn = tk.Button(button_frame, text="复制到测试路径", command=self.copy_config_test)
+        # self.copy_config_test_btn.pack(side=tk.LEFT, padx=5)
+
+        self.open_subtable_btn = tk.Button(button_frame2, text="打开表格", command=self.open_table)
+        self.open_subtable_btn.pack(side=tk.LEFT, padx=5)
+        
+        self.open_error_btn = tk.Button(button_frame2, text="打开报错", command=self.open_error_table)
+        self.open_error_btn.pack(side=tk.LEFT, padx=5)
         
         self.export_class = tk.Button(button_frame2, text="导出类", command=self.export_class)
         self.export_class.pack(side=tk.LEFT, padx=5)

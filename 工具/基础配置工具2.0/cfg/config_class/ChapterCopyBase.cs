@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Vector2Vector2Inamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 ChapterCopyBase 用于 战役关卡基础数据,拓展请在expand_class文件下使用partial拓展
@@ -7,43 +8,43 @@ Vector2Vector2Inamespace Remnant_Afterglow
     public partial class ChapterCopyBase
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 战役id
         ///cfg_ChapterBase_战役基础数据表id
         /// </summary>
         public int ChapterId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 关卡id
         /// </summary>
         public int CopyId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 关卡UIid
         /// </summary>
         public int CopyUiId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 地图相机id
         /// </summary>
         public int CameraId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 关卡所用地图id
         ///地图生成.xlsx表的
         ///cfg_GenerateBottomMap_
         ///随机生成地图方式表id
         /// </summary>
         public int GenerateMapId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 关卡节点
         ///位置坐标
         /// </summary>
         public Vector2I Pos { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 关卡在大地图上
         ///显示用节点id
         ///cfg_BigMapCell_大地图节点的id
         ///
         /// </summary>
         public int NodeId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 后继关卡id列表
         ///通关该关卡后会解锁的
         ///关卡id

@@ -7,12 +7,12 @@ namespace Remnant_Afterglow
     public partial class ItemDeployData
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 战役id
         ///cfg_ChapterBase_战役基础数据表id
         /// </summary>
         public int ChapterId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 可配置道具框数量
         /// </summary>
         public int DeployNum { get; set; }

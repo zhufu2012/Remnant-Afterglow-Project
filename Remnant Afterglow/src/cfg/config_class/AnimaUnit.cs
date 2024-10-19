@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-Texture2DVector2Vector2Inamespace Remnant_Afterglow
+using Godot;
+namespace Remnant_Afterglow
 {
     /// <summary>
     /// 自动生成的配置类 AnimaUnit 用于 单位帧动画配置,拓展请在expand_class文件下使用partial拓展
@@ -7,53 +8,53 @@ Texture2DVector2Vector2Inamespace Remnant_Afterglow
     public partial class AnimaUnit
     {
         #region 参数及初始化
-        /// <summary>
+        /// <summary>        
         /// 实体id
         ///单位
         /// </summary>
         public int ObjectId { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 帧动画类型
         ///1 默认状态
         /// </summary>
         public int AnimaType { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 帧图坐标
         /// </summary>
         public Vector2I Coords { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 单个帧图
         ///长宽（横纵）
         /// </summary>
         public Vector2I LengWidth { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 帧图最大序号
         ///第一张图是1
         /// </summary>
         public int MaxIndex { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 帧图大小
         ///（横,纵）
         /// </summary>
         public Vector2I Size { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 持续时间,
         ///单位毫秒
         /// </summary>
         public int DurationMs { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 帧数
         /// </summary>
         public int FrameCount { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否自动播放
         /// </summary>
         public bool IsAutoplay { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 是否循环播放
         /// </summary>
         public bool IsLoop { get; set; }
-        /// <summary>
+        /// <summary>        
         /// 帧图
         /// </summary>
         public Texture2D Picture { get; set; }
