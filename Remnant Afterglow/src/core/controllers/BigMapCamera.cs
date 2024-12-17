@@ -147,21 +147,21 @@ namespace Remnant_Afterglow
                 }
             }
 
-            if (@event.IsActionPressed("cam_a"))
+            if (@event.IsActionPressed(KeyConstant.Input_Key_A))
                 key[0] = true;
-            if (@event.IsActionPressed("cam_w"))
+            if (@event.IsActionPressed(KeyConstant.Input_Key_W))
                 key[1] = true;
-            if (@event.IsActionPressed("cam_d"))
+            if (@event.IsActionPressed(KeyConstant.Input_Key_D))
                 key[2] = true;
-            if (@event.IsActionPressed("cam_s"))
+            if (@event.IsActionPressed(KeyConstant.Input_Key_S))
                 key[3] = true;
-            if (@event.IsActionReleased("cam_a"))
+            if (@event.IsActionReleased(KeyConstant.Input_Key_A))
                 key[0] = false;
-            if (@event.IsActionReleased("cam_w"))
+            if (@event.IsActionReleased(KeyConstant.Input_Key_W))
                 key[1] = false;
-            if (@event.IsActionReleased("cam_d"))
+            if (@event.IsActionReleased(KeyConstant.Input_Key_D))
                 key[2] = false;
-            if (@event.IsActionReleased("cam_s"))
+            if (@event.IsActionReleased(KeyConstant.Input_Key_S))
                 key[3] = false;
         }
 
@@ -174,13 +174,12 @@ namespace Remnant_Afterglow
             Error err = data.Load(PathConstant.GetPathUser(PathConstant.NOISE_SETTING_PATH_USER));
             if (err != Error.Ok)
             {
-                Log.Print("出现错误,错误码：" + err);
+                Log.Error("出现错误,错误码：" ,err);
                 return;
             }
             noise = new FastNoiseLite();
             foreach (String key in data.GetSectionKeys("Setting"))
             {
-                // Fetch the data for each section.
                 var Value = data.GetValue("Setting", key);
                 noise.Set(key, Value);
             }

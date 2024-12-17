@@ -12,7 +12,7 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public FloatManagedAttribute GetAttribute()
         {
-            FloatManagedAttribute attribute = new FloatManagedAttribute(MoneyId, NowValue, Max, Min, Regen);
+            FloatManagedAttribute attribute = new FloatManagedAttribute(MoneyId, NowValue, Min, Max, Regen);
             return attribute;
         }
 

@@ -1,0 +1,17 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "BulletSceneTypeId": 1,
+        "ScenePath": "res://scenes/bulletScene/EnergyBullet.tscn"
+    },
+    {
+        "KEY_INDEX": "2",
+        "BulletSceneTypeId": 2,
+        "ScenePath": "res://scenes/bulletScene/EnergyBullet.tscn"
+    },
+    {
+        "KEY_INDEX": "3",
+        "BulletSceneTypeId": 3,
+        "ScenePath": "res://scenes/bulletScene/EnergyBullet.tscn"
+    }
+]

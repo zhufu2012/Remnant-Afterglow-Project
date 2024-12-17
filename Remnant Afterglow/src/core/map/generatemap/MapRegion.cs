@@ -13,14 +13,23 @@ namespace Remnant_Afterglow
         public List<Cell> tiles = new List<Cell>();
         public List<Cell> edgeTiles = new List<Cell>();
 
-        public MapRegion(List<Cell> roomTiles, Cell[,] map, int Width)
+        /// <summary>
+        /// 创建区域
+        /// </summary>
+        /// <param name="roomTiles">列表数据</param>
+        /// <param name="map">地图数据</param>
+        public MapRegion(List<Cell> roomTiles, Cell[,] map)
         {
             data_id = IdGenerator.Generate(IdConstant.ID_TYPE_REGION);
             tiles = roomTiles;
-            UpdateEdgeTiles(map, Width);
+            UpdateEdgeTiles(map);
         }
 
-        public void UpdateEdgeTiles(Cell[,] map, int Width)
+        /// <summary>
+        /// 更新区域边缘瓦片集
+        /// </summary>
+        /// <param name="map"></param>
+        public void UpdateEdgeTiles(Cell[,] map)
         {
             edgeTiles.Clear();
             foreach (Cell tile in tiles)

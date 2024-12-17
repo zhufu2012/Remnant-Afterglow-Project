@@ -33,7 +33,9 @@ namespace Remnant_Afterglow
         /// <summary>        
         /// 通过类型
         ///0无影响
-        ///1单位到上面就会停止主动移动2会直接阻止任何陆军和爬行单位通过该地块
+        ///1单位到上面就会停止主动移动
+        ///2会直接阻止任何陆军和
+        ///爬行单位通过该地块
         /// </summary>
         public int Type { get; set; }
         /// <summary>        

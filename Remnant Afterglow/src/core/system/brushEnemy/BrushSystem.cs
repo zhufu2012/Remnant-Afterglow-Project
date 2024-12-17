@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 namespace Remnant_Afterglow
 {
-    //地图刷怪功能
-    public class BrushSystem
+    //地图刷怪功能-祝福注释-似乎还有问题需要完善
+    public partial class BrushSystem : Node
     {
         //关卡刷怪配置
         public CopyBrush cfgData;
@@ -78,16 +78,33 @@ namespace Remnant_Afterglow
         /// 关卡id
         /// </summary>
         public int CopyId;
+        /// <summary>
+        /// 单位节点
+        /// </summary>
+        public Node2D UnitNode;
+        /// <summary>
+        /// 副本节点
+        /// </summary>
+        public MapCopy mainCopy;
 
-        public BrushSystem(int ChapterId, int CopyId)
+        public BrushSystem(int ChapterId, int CopyId, Node2D UnitNode)
         {
-            Log.PrintList(SaveLoadSystem.NowSaveData.ScienceIdList);
             this.ChapterId = ChapterId;
             this.CopyId = CopyId;
+            this.UnitNode = UnitNode;
             cfgData = new CopyBrush(ChapterId, CopyId);
             CreateInitData();//创建时初始化数据
         }
-        ///创建时初始化数据
+
+        public override void _Ready()
+        {
+            InitBrushPoint();
+        }
+
+
+        /// <summary>
+        /// 创建时初始化数据
+        /// </summary>
         public void CreateInitData()
         {
             List<int> BrushIdList = cfgData.BrushIdList;
@@ -110,24 +127,7 @@ namespace Remnant_Afterglow
             }
             if (BrushSpaceList.Count > 0)
                 FirstWaveTime = BrushSpaceList[1];
-            foreach (int brushId in cfgData.BrushIdList)//初始化刷新点形状数据
-            {
-                BrushPoint brushCfg = GetBrushPoint(brushId);//刷新点配置
-                List<Vector2I> vector_list = new List<Vector2I>();
-                List<Vector2I> vector_list2 = new List<Vector2I>();
-                Vector2I brush_pos = new Vector2I(brushCfg.BrushPos.X * MapConstant.TileCellSize, brushCfg.BrushPos.Y * MapConstant.TileCellSize);//刷新点实际位置;
-                foreach (Vector2I vec in brushCfg.Polygon)
-                {
-                    Vector2I temp_vec = new Vector2I(vec.X * MapConstant.TileCellSize, vec.Y * MapConstant.TileCellSize) + brush_pos;
-                    Vector2I temp_vec2 = new Vector2I(vec.X, vec.Y) + brushCfg.BrushPos;
-                    vector_list.Add(temp_vec);
-                    vector_list2.Add(temp_vec2);
-                }
-                BrushPosDict[brushId] = brush_pos;
-                PolygonDict[brushId] = vector_list;
-                vector_list2.Add(vector_list2[0]);
-                PolygonDict2[brushId] = vector_list2;
-            }
+
 
         }
 
@@ -135,66 +135,84 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 初始化绘制地图刷新点
         /// </summary>
-        public Node2D GetBrushPoint()
+        public void InitBrushPoint()
         {
             List<int> brushIdList = cfgData.BrushIdList;
-            Node2D node = new Node2D();
             foreach (int brushId in brushIdList)
             {
                 BrushPoint brushCfg = GetBrushPoint(brushId);//刷新点配置
-                Line2D line = new Line2D();
-                line.AddToGroup(MapGroup.GroupName_1);
-                line.ZIndex = MapLayer.FloorLayer3;
-                List<Vector2I> vector_list = PolygonDict[brushId];
-                Vector2I BrushPos = BrushPosDict[brushId];
-                switch (brushCfg.ShapeSelect)
+                switch (brushCfg.ShapeType)
                 {
-                    case 0://全图刷新
-                        break;
-                    case 1://表示在一个点刷新，读取Polygon第一个坐标
-                        line.AddPoint(vector_list[0]);//祝福注释
-                        break;
-                    case 2://表示多边形刷新
+                    case 1://矩形刷新 (Widht,Height)
+                        Line2D line = new Line2D();
+                        line.AddToGroup(MapCamp.LineGroupName_1);
+                        line.ZIndex = 3;//祝福注释-这里要看看
+                        List<Vector2I> vector_list = PolygonDict[brushId];
                         line.Closed = true;//如果为 true 并且折线有超过2个点，则最后一个点和第一个点将通过线段连接
                         foreach (Vector2 vec in vector_list)
                         {
                             line.AddPoint(vec);
                         }
+                        line.Visible = brushCfg.BrushShowType;//是否显示刷新点
+                        AddChild(line);
                         break;
-                    case 3://表示圆形刷新//其他地方绘制
+                    case 2://表示圆形刷新
                         break;
                     default:
                         break;
                 }
-                line.Visible = brushCfg.BrushShowType;//是否显示刷新点
-                node.AddChild(line);
             }
-            return node;
         }
         /// <summary>
         /// 每帧刷新
         /// </summary>
         /// <param name="delta"></param>
-        public void Update(double delta)
+        public void PostUpdate(double delta)
         {
-
-            //时间及帧数计数
-            nowTime += delta;
-            frameNumber += 1;
+            nowTime += delta;//时间计数
+            frameNumber += 1;//帧数计数
+            //刷怪列表，<刷新点id,<<怪物id,阵营>,数量>>
+            Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> dict = CheckRefreshEnemies(delta);//
+            foreach (var info in dict)
+            {
+                BrushPoint pointData = info.Key;
+                foreach (var unit_info in info.Value)
+                {
+                    for (int i = 0; i < unit_info.Value; i++)
+                    {
+                        //创建一个单位
+                        ObjectManager.Instance.CreateMapUnit(unit_info.Key.Key, new Vector2I(9, 9));
+                    }
+                }
+            }
         }
 
-        ///////////////////////////////////////////////////////////////函数////////////////////////////////////////////////////////////////////////
-        //返回对应的刷新点配置数据
+
+        /// <summary>
+        /// 刷怪系统刷新，逻辑帧检查 刷怪
+        /// </summary>
+        /// <param name="delta"></param>
+        public void BrushMonsterUpdate(double delta)
+        {
+
+        }
+
+        ///////////////////////////////////////////////////////////////函数/////////////////////////////////////////////////
+        /// <summary>
+        /// 返回对应的刷新点配置数据
+        /// </summary>
+        /// <param name="BrushId"></param>
+        /// <returns></returns>
         public BrushPoint GetBrushPoint(int BrushId)
         {
             return brushPointDict[BrushId];
         }
 
         //检查刷怪
-        public Dictionary<int, Dictionary<KeyValuePair<int, int>, int>> CheckRefreshEnemies(double delta)
+        public Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> CheckRefreshEnemies(double delta)
         {
             //刷怪列表，<刷新点id,<<怪物id,阵营>,数量>>
-            Dictionary<int, Dictionary<KeyValuePair<int, int>, int>> dict = new Dictionary<int, Dictionary<KeyValuePair<int, int>, int>>();
+            Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> dict = new Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>>();
             if (is_start_brush)//已经开始刷怪
             {
                 dict = RefreshEnemies(delta);
@@ -216,10 +234,10 @@ namespace Remnant_Afterglow
         /// </summary>
         /// <param name="delta"></param>
         /// <returns><刷新点id,<<怪物id,阵营id>,数量>></returns>
-        public Dictionary<int, Dictionary<KeyValuePair<int, int>, int>> RefreshEnemies(double delta)
+        public Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> RefreshEnemies(double delta)
         {
             //<刷新点id,<<怪物id,阵营id>,数量>>
-            Dictionary<int, Dictionary<KeyValuePair<int, int>, int>> dict = new Dictionary<int, Dictionary<KeyValuePair<int, int>, int>>();
+            Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> dict = new Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>>();
             if (NowWave > 0 && NowWave <= cfgData.AllWave && is_all_end == false)//波数大于0并且 当前波数小于等于配置总波数
             {
                 flush_time += delta;
@@ -234,9 +252,10 @@ namespace Remnant_Afterglow
                 {
                     foreach (int BrushId in cfgData.BrushIdList)//遍历刷新点
                     {
+                        BrushPoint pointData = ConfigCache.GetBrushPoint(BrushId);
                         if (!brushDataDict[BrushId].CheckAllWaveFlush())//该刷新点所有波数未刷新完
                         {
-                            dict[BrushId] = brushDataDict[BrushId].CalcWaveUnit(NowWave, nowTime, frameNumber);
+                            dict[pointData] = brushDataDict[BrushId].CalcWaveUnit(NowWave, nowTime, frameNumber);
                         }
                         else
                         {

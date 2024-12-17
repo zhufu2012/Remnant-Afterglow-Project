@@ -17,6 +17,8 @@ public static class SaveExtension
             Culture = System.Globalization.CultureInfo.InvariantCulture,
         };
 
+        settings.Converters.Add(new AttributeConverter());
+
         // Core converters
         settings.Converters.Add(new NodeSaveConverter());
         settings.Converters.Add(new TreeSaveConverter());

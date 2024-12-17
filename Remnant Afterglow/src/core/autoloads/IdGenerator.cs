@@ -1,3 +1,4 @@
+using GameLog;
 using Godot;
 using System;
 using System.Collections.Generic;
@@ -157,14 +158,23 @@ namespace Remnant_Afterglow
             }
         }
 
-        //获取id的类型
-        public static int GetType(long id)
+        /// <summary>
+        /// 获取id的类型
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static int GetType(string id)
         {
-            int typeID = (int)(id & 0x7E0000000000);
+            int typeID = (int)(Convert.ToInt64(id) & 0x7E0000000000);
             return typeID >> 41;
         }
 
-        //构造id
+        /// <summary>
+        /// 构造id
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="IdMax"></param>
+        /// <returns></returns>
         private static long makeObjectID(int type, long IdMax)
         {
             return ((type & 63) << 41) | (IdMax & 0x1FFFFFFFFFF);
@@ -186,7 +196,7 @@ namespace Remnant_Afterglow
             }
             catch (Exception e)
             {
-                //Log.Print(e.StackTrace);
+                Log.Error("保存id使用数据时出错！", e.StackTrace);
             }
         }
     }

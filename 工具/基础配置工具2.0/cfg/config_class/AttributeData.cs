@@ -8,15 +8,10 @@ namespace Remnant_Afterglow
     {
         #region 参数及初始化
         /// <summary>        
-        /// 实体类型
-        ///  1 单位 2 炮塔  3 建筑 
-        /// </summary>
-        public int ObjectType { get; set; }
-        /// <summary>        
         /// 实体id
         ///单位或者炮塔或者建筑等
         ///
-        ///给属性模板使用的话就使用负的实体id
+        ///给属性模板使用的是负数实体id
         /// </summary>
         public int ObjectId { get; set; }
         /// <summary>        
@@ -40,41 +35,40 @@ namespace Remnant_Afterglow
         /// </summary>
         public float Regen { get; set; }
         /// <summary>        
-        /// 再生帧数
-        /// </summary>
-        public float RegenFps { get; set; }
-        /// <summary>        
         /// 添加时触发事件id列表
         /// </summary>
-        public List<int> StartEventIdList { get; set; }
+        public List<int> AddEventIdList { get; set; }
+        /// <summary>        
+        /// 移除时触发事件id列表
+        /// </summary>
+        public List<int> RemoveEventIdList { get; set; }
         /// <summary>        
         /// 事件触发id列表
-        ///（触发类型，触发参数1，触发参数2，触发参数3，事件id）
-        ///0 添加属性后直接触发
-        ///1 移除属性后触发
-        ///2 等于某值触发（参数1是触发值）
-        ///3 大于某值触发 （参数1是触发值）
-        ///4 小于某值触发 （参数1是触发值）
-        ///5 大于等于某值触发 （参数1是触发值）
-        ///6 小于等于某值触发 （参数1是触发值）
-        ///7 周期性达到触发 （参数1是周期（帧））
-        ///8 随机触发（参数1是触发值，参数2是最大随机值，随机数在1到参数2之间，小于触发值就触发）
+        ///（触发类型，触发参数1，触发参数2，触发参数3，事件id1，事件id2,事件id3....可以不断加，按顺序触发）
+        ///1 等于某值触发（参数1是触发值）
+        ///2 大于某值触发 （参数1是触发值）
+        ///3 小于某值触发 （参数1是触发值）
+        ///4 大于等于某值触发 （参数1是触发值）
+        ///5 小于等于某值触发 （参数1是触发值）
+        ///6 不等于某值触发 （参数1是触发值）
         ///
+        ///100 随机触发（参数1是触发值，参数2是最大随机值，随机数在1到参数2之间，小于触发值就触发）
+        ///举例:(3,100,0,0,1,2,3,4,5)
+        ///意思是：当属性当前值等于100时，触发事件 1，2，3，4，5 按顺序运行
         /// </summary>
         public List<List<int>> AttrEventIdList { get; set; }
 
         public AttributeData(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_AttributeData, id);//public const string Config_AttributeData = "cfg_AttributeData"; 
-			ObjectType = (int)dict["ObjectType"];
 			ObjectId = (int)dict["ObjectId"];
 			AttributeId = (int)dict["AttributeId"];
 			StartValue = (float)dict["StartValue"];
 			Max = (float)dict["Max"];
 			Min = (float)dict["Min"];
 			Regen = (float)dict["Regen"];
-			RegenFps = (float)dict["RegenFps"];
-			StartEventIdList = (List<int>)dict["StartEventIdList"];
+			AddEventIdList = (List<int>)dict["AddEventIdList"];
+			RemoveEventIdList = (List<int>)dict["RemoveEventIdList"];
 			AttrEventIdList = (List<List<int>>)dict["AttrEventIdList"];
 			InitData();
         }
@@ -83,30 +77,28 @@ namespace Remnant_Afterglow
         public AttributeData(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_AttributeData, cfg_id);//public const string Config_AttributeData = "cfg_AttributeData"; 
-			ObjectType = (int)dict["ObjectType"];
 			ObjectId = (int)dict["ObjectId"];
 			AttributeId = (int)dict["AttributeId"];
 			StartValue = (float)dict["StartValue"];
 			Max = (float)dict["Max"];
 			Min = (float)dict["Min"];
 			Regen = (float)dict["Regen"];
-			RegenFps = (float)dict["RegenFps"];
-			StartEventIdList = (List<int>)dict["StartEventIdList"];
+			AddEventIdList = (List<int>)dict["AddEventIdList"];
+			RemoveEventIdList = (List<int>)dict["RemoveEventIdList"];
 			AttrEventIdList = (List<List<int>>)dict["AttrEventIdList"];
 			InitData();
         }
 
         public AttributeData(Dictionary<string, object> dict)
         {
-			ObjectType = (int)dict["ObjectType"];
 			ObjectId = (int)dict["ObjectId"];
 			AttributeId = (int)dict["AttributeId"];
 			StartValue = (float)dict["StartValue"];
 			Max = (float)dict["Max"];
 			Min = (float)dict["Min"];
 			Regen = (float)dict["Regen"];
-			RegenFps = (float)dict["RegenFps"];
-			StartEventIdList = (List<int>)dict["StartEventIdList"];
+			AddEventIdList = (List<int>)dict["AddEventIdList"];
+			RemoveEventIdList = (List<int>)dict["RemoveEventIdList"];
 			AttrEventIdList = (List<List<int>>)dict["AttrEventIdList"];
 			InitData();
         }

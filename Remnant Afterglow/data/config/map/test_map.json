@@ -1,0 +1,21 @@
+{
+	"LoadModList" : [
+		
+	],
+	"UserMapData" : 
+	{
+		"User_MapLayerIdList" : [],
+		"User_MapImageSetIdList" : [1,2],
+		"User_MapMassifIdList" : [],
+		"User_MapMaterialIdList" : [],
+		"User_GenerateBigStructIdList" : []
+	},
+	
+	"Layer_List" : [],
+	
+	"Width" : 0,
+	"Height" : 0,
+	"CellData" : {
+	
+	}
+}

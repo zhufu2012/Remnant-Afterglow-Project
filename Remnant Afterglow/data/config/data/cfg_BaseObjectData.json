@@ -1,0 +1,196 @@
+[
+    {
+        "KEY_INDEX": "1001",
+        "ObjectId": 1001,
+        "ObjectType": 1,
+        "CampId": 1,
+        "TempLateList": [
+            1
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "CollisionLayerList": [
+            1
+        ],
+        "MaskLayerList": [
+            1
+        ],
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            [
+                20.0,
+                10.0
+            ]
+        ],
+        "CollideRotate": 0.0,
+        "SafeMargin": 1.0
+    },
+    {
+        "KEY_INDEX": "1002",
+        "ObjectId": 1002,
+        "ObjectType": 1,
+        "CampId": 1,
+        "TempLateList": [
+            1
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "CollisionLayerList": [
+            1
+        ],
+        "MaskLayerList": [
+            1
+        ],
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            [
+                20.0,
+                10.0
+            ]
+        ],
+        "CollideRotate": 0.0,
+        "SafeMargin": 1.0
+    },
+    {
+        "KEY_INDEX": "2001",
+        "ObjectId": 2001,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "CollisionLayerList": [
+            1
+        ],
+        "MaskLayerList": [
+            1
+        ],
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            [
+                20.0,
+                20.0
+            ]
+        ],
+        "CollideRotate": 0.0,
+        "SafeMargin": 1.0
+    },
+    {
+        "KEY_INDEX": "3001",
+        "ObjectId": 3001,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "CollisionLayerList": [
+            1
+        ],
+        "MaskLayerList": [
+            1
+        ],
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [],
+        "CollideRotate": 0.0,
+        "SafeMargin": 1.0
+    },
+    {
+        "KEY_INDEX": "3002",
+        "ObjectId": 3002,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "CollisionLayerList": [
+            1
+        ],
+        "MaskLayerList": [
+            1
+        ],
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [],
+        "CollideRotate": 0.0,
+        "SafeMargin": 1.0
+    },
+    {
+        "KEY_INDEX": "3003",
+        "ObjectId": 3003,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "CollisionLayerList": [
+            1
+        ],
+        "MaskLayerList": [
+            1
+        ],
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [],
+        "CollideRotate": 0.0,
+        "SafeMargin": 1.0
+    },
+    {
+        "KEY_INDEX": "4001",
+        "ObjectId": 4001,
+        "ObjectType": 5,
+        "CampId": 1,
+        "TempLateList": [],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "CollisionLayerList": [
+            1
+        ],
+        "MaskLayerList": [
+            1
+        ],
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [],
+        "CollideRotate": 0.0,
+        "SafeMargin": 1.0
+    }
+]

@@ -23,6 +23,10 @@ namespace Remnant_Afterglow
         /// 地图各层数据
         /// </summary>
         public Dictionary<int, Cell[,]> layer_dict = new Dictionary<int, Cell[,]>();
+        /// <summary>
+        /// 导航区域
+        /// </summary>
+        public Dictionary<Vector2I, NavigationRegion2D> NavigationDict = new Dictionary<Vector2I, NavigationRegion2D>();
         /////////////////////地图内数据//////////////////////
 
 
@@ -33,14 +37,21 @@ namespace Remnant_Afterglow
         public int ChapterId;//副本id
         public int CopyId;//关卡id
         public FastNoiseLite noise;//随机种子
+        /// <summary>
+        /// 地图大小
+        /// </summary>
         public Vector2 Size;//
-        public MapDraw(int ChapterId, int CopyId, FastNoiseLite noise, Vector2 Size)
+        public MapDraw(int ChapterId, int CopyId, Vector2 Size, FastNoiseLite noise)
         {
             copyData = new ChapterCopyBase(ChapterId, CopyId);
             this.ChapterId = ChapterId;
             this.CopyId = CopyId;
             this.noise = noise;
             this.Size = Size;
+            if (MapConstant.IsShow_Navigate)
+                NavigationVisibilityMode = VisibilityMode.ForceShow;
+            if (MapConstant.IsShow_Collide)
+                CollisionVisibilityMode = VisibilityMode.ForceShow;
         }
 
         #region 初始化数据
@@ -67,20 +78,57 @@ namespace Remnant_Afterglow
             layer_dict = mapGenerate.GenerateMap(noise, Size);
             foreach (var Layer in layer_dict)
             {
-                Cell[,] map = Layer.Value;//每层
-                if (Layer.Key >= GetLayersCount())
+                int layer = Layer.Key;//当前层
+                Cell[,] map = Layer.Value;//本层的结构
+                if (layer >= GetLayersCount())
                 {
-                    for (int i = GetLayersCount(); i <= Layer.Key; i++)
+                    for (int i = GetLayersCount(); i <= layer; i++)
                     {
                         AddLayer(i);
                     }
                 }
+                int cellsize = MapConstant.TileCellSize;//格子长宽
                 for (int i = 0; i < map.GetLength(0); i++)
                 {
+                    int i_cellsize = i * cellsize;
+                    int i_cellsize2 = i_cellsize + cellsize;
                     for (int j = 0; j < map.GetLength(1); j++)
                     {
-                        SetCell(Layer.Key, new Vector2I(i, j), map[i, j].MapImageId,
-                             LoadTileSetConfig.GetImageIndex_TO_Vector2(map[i, j].MapImageId, map[i, j].MapImageIndex));
+
+                        SetCell(layer, new Vector2I(i, j), map[i, j].MapImageId, map[i, j].ImagePos);
+
+                        /**if (layer == 1)//祝福注释，这个数字，需要和生成地图类的mapLayer 用固定变量表示
+                        {
+                            Log.Print("新速度:", 1);
+                            int cell_index = map[i, j].index;
+
+                            int j_cellsize = j * cellsize;
+                            int j_cellsize2 = j_cellsize + cellsize;
+
+                            var navigation = new NavigationRegion2D();
+                            navigation.Name = "navigation";
+                            MainCopy.Instance.NavigationRoot.AddChild(navigation);
+                            var Polygon = new NavigationPolygon();
+                            Polygon.AddOutline(new[]
+                            {
+                                new Vector2(i_cellsize, j_cellsize),
+                                new Vector2(i_cellsize, j_cellsize2),
+                                new Vector2(i_cellsize2, j_cellsize2),
+                                new Vector2(i_cellsize2, j_cellsize)
+                            });
+
+                            Polygon.Vertices = LoadTileSetConfig.mapImageSet.NavigationDict[cell_index];
+                            Polygon.AddPolygon(LoadTileSetConfig.mapImageSet.NavigationIndexDict[cell_index]);
+                            Polygon.SetParsedCollisionMaskValue(1, true);
+                            Polygon.SourceGeometryMode = NavigationPolygon.SourceGeometryModeEnum.GroupsWithChildren;
+                            Polygon.SourceGeometryGroupName = "navigation";
+                            Polygon.CellSize = 1;
+                            NavigationServer2D.BakeFromSourceGeometryData(Polygon, new NavigationMeshSourceGeometryData2D());
+                            //Polygon.MakePolygonsFromOutlines();
+                            navigation.NavigationPolygon = Polygon;
+                            navigation.BakeNavigationPolygon(false);//-祝福注释-看是否需要放置单独线程来烘焙 导航网格
+                        }
+                        **/
                     }
                 }
             }
@@ -111,24 +159,23 @@ namespace Remnant_Afterglow
             base._UnhandledInput(@event);
         }
 
-        ///创建一座防御塔
-        public void AddTower()
-        {
-        }
-
-        ///创建一座建筑
-        public void AddBuild()
-        {
-        }
-
-        //获取鼠标位置在地图中的位置
+        /// <summary>
+        /// 获取鼠标位置在地图中的位置
+        /// </summary>
+        /// <param name="pos"></param>
+        /// <returns></returns>
         public Vector2I GetLocalMousePos(Vector2I pos)
         {
             return LocalToMap(ToLocal(pos));
         }
 
-        //获取地图中TileData
-        public TileData GetLocalMousePos(int layer,Vector2I pos)
+        /// <summary>
+        /// 获取地图中TileData
+        /// </summary>
+        /// <param name="layer">对应层</param>
+        /// <param name="pos">对应位置</param>
+        /// <returns></returns>
+        public TileData GetLocalMousePos(int layer, Vector2I pos)
         {
             return GetCellTileData(layer, pos);
         }

@@ -30,6 +30,10 @@ namespace Remnant_Afterglow
 
 
         #region 地图随机生成
+        //是否显示导航层
+        public static bool IsShow_Navigate = true;
+        //是否显示碰撞层
+        public static bool IsShow_Collide = true;
 
         public static Vector2I[] Vector2_Dir = new Vector2I[5] {
             new Vector2I(0, 1),

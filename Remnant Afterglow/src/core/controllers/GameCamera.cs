@@ -131,7 +131,7 @@ namespace Remnant_Afterglow
             AddChild(canvasLayer);
 
             panel.SetAnchorsPreset(Control.LayoutPreset.FullRect);
-            panel.Size = new Vector2(GameConstant.SizeX, GameConstant.SizeY);
+            panel.Size = new Vector2(GameConstant.WindowSizeX, GameConstant.WindowSizeY);
             ContinueBut.Text = "继续";
             ContinueBut.Size = ViewConstant.Camera_Button_Size;
             ContinueBut.Position = new Vector2(30, 20);
@@ -184,23 +184,23 @@ namespace Remnant_Afterglow
                 if (IsZoomOut || IsZoomIn)
                     Zoom = camera_zoom;
             }
-            if (@event.IsActionPressed("cam_a"))
+            if (@event.IsActionPressed(KeyConstant.Input_Key_A))
                 key[0] = true;
-            if (@event.IsActionPressed("cam_w"))
+            if (@event.IsActionPressed(KeyConstant.Input_Key_W))
                 key[1] = true;
-            if (@event.IsActionPressed("cam_d"))
+            if (@event.IsActionPressed(KeyConstant.Input_Key_D))
                 key[2] = true;
-            if (@event.IsActionPressed("cam_s"))
+            if (@event.IsActionPressed(KeyConstant.Input_Key_S))
                 key[3] = true;
-            if (@event.IsActionReleased("cam_a"))
+            if (@event.IsActionReleased(KeyConstant.Input_Key_A))
                 key[0] = false;
-            if (@event.IsActionReleased("cam_w"))
+            if (@event.IsActionReleased(KeyConstant.Input_Key_W))
                 key[1] = false;
-            if (@event.IsActionReleased("cam_d"))
+            if (@event.IsActionReleased(KeyConstant.Input_Key_D))
                 key[2] = false;
-            if (@event.IsActionReleased("cam_s"))
+            if (@event.IsActionReleased(KeyConstant.Input_Key_S))
                 key[3] = false;
-            if (@event.IsActionPressed("Esc"))
+            if (@event.IsActionPressed(KeyConstant.Input_Key_ESC))
             {
                 if (canvasLayer.Visible)
                 {

@@ -1,0 +1,16 @@
+{
+	"Name": "测试模组2",
+	"DisplayName": "测试模组2",
+	"Author":"这里是作者名称",
+	"Icon":"icon.png",
+	"Description": "对测试模组1的 科技拓展分支1进行 科技拓展",
+	"InfoUrl":"https://github.com/zhufu2012",
+	"Version": "模组版本",
+	"MinGameVersion" : "最低游戏版本",
+	"MaxGameVersion" : "最高游戏版本",
+	"HasExcel": true,
+	"HasPck": true,
+	"HasCsharp": true,
+	"AssemblyModClass":"dll路径",
+	"ImgList": []
+}

@@ -17,6 +17,8 @@ namespace Remnant_Afterglow
         /// </summary>
         public ManagedAttributeContainer Currency = new ManagedAttributeContainer();
 
+
+
         public BagSystem()
         {
         }
@@ -52,7 +54,7 @@ namespace Remnant_Afterglow
             }
             else
             {
-                Log.Print("未找到具有给定ID的箱包。");
+                Log.Print("未找到具有给定ID的背包！BagId:", bagId);
                 return null;
             }
         }

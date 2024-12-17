@@ -1,0 +1,8810 @@
+-ifndef(textDefine_SkillInfo_FR_hrl).
+-define(textDefine_SkillInfo_FR_hrl, 1).
+-define(SN300, "Frappe de l'Esprit du Feu").
+-define(SD300, "Libère un feu de pistage vers l'avant, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN301, "Frappe de l'Esprit de l'Eau").
+-define(SD301, "Libère une épée d'eau rectangulaire vers l'avant, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN302, "Frappe de l'Esprit du Tonnerre").
+-define(SD302, "Libère une chaîne lumineuse à proximité, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN303, "Frappe de l'Esprit de la Terre").
+-define(SD303, "Lance une Pierre sur la cible, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN304, "Frappe de l'Esprit du Feu II").
+-define(SD304, "Libère un feu de pistage vers l'avant, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN305, "Frappe de l'Esprit de l'Eau II").
+-define(SD305, "Libère une épée d'eau rectangulaire vers l'avant, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN306, "Frappe de l'Esprit du Tonnerre II").
+-define(SD306, "Libère une chaîne lumineuse à proximité, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN307 , "Frappe de l'Esprit de la Terre II").
+-define(SD307, "Lance une Pierre sur la cible, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN308, "Frappe de l'Esprit du Feu III").
+-define(SD308, "Libère un feu de pistage vers l'avant, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN309, "Frappe de l'Esprit de l'Eau III").
+-define(SD309, "Libère une épée d'eau rectangulaire vers l'avant, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN310, "Frappe de l'Esprit du Tonnerre III").
+-define(SD310, "Libère une chaîne lumineuse à proximité, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN311, "Frappe de l'Esprit de la Terre III").
+-define(SD311, "Lance une Pierre sur la cible, infligeant {0}% de DGT à {1} cible(s) (monstre +{2})").
+-define(SN312, "Esprit du Feu I").
+-define(SD312, "Augmente l'ATQ de Feu de {0}").
+-define(SN313, "Esprit de l'Eau Ⅰ").
+-define(SD313, "Augmente l'ATQ de l'Eau de {0}").
+-define(SN314, "Esprit du Tonnerre I").
+-define(SD314, "Augmente l'ATQ du Tonnerre de {0}").
+-define(SN315, "Esprit de la Terre Ⅰ").
+-define(SD315, "Augmente l'ATQ de la Terre de {0}").
+-define(SN316, "Précision I").
+-define(SD316, "Augmente le Toucher de {0}").
+-define(SN317, "Agilité I").
+-define(SD317, "Augmente l'Esquive de {0}").
+-define(SN318, "Explosif I").
+-define(SD318, "Augmente le Crit de {0}").
+-define(SN319, "Résilience I").
+-define(SD319, "Augmente la Ténacité de {0}").
+-define(SN320, "Esprit du Feu Ⅱ").
+-define(SD320, "Augmente l'ATQ de Feu de {0}").
+-define(SN321, "Esprit de l'Eau Ⅱ").
+-define(SD321, "Augmente l'ATQ de l'Eau de {0}").
+-define(SN322, "Esprit du Tonnerre II").
+-define(SD322, "Augmente l'ATQ du Tonnerre de {0}").
+-define(SN323, "Esprit de la Terre Ⅱ").
+-define(SD323, "Augmente l'ATQ de la Terre de {0}").
+-define(SN324, "Résistance au Feu II").
+-define(SD324, "Augmente l'ATQ de Déf de Feu de {0}").
+-define(SN325, "Résistance à l'Eau Ⅱ").
+-define(SD325, "Augmente la Déf de l'Eau de {0}").
+-define(SN326, "Résistance au Tonnerre II").
+-define(SD326, "Augmente la Déf du Tonnerre de {0}").
+-define(SN327, "Résistance de la Terre II").
+-define(SD327, "Augmente la Déf de la Terre de {0}").
+-define(SN328, "Précision II").
+-define(SD328, "Augmente le Toucher de {0}").
+-define(SN329, "Agilité II").
+-define(SD329, "Augmente l'Esquive de {0}").
+-define(SN330, "Explosif II").
+-define(SD330, "Augmente le Crit de {0}").
+-define(SN331, "Résilience II").
+-define(SD331, "Augmente la Ténacité de {0}").
+-define(SN332, "ATQ Ⅱ").
+-define(SD332, "Augmente l'ATQ de {0}").
+-define(SN333, "Déf II").
+-define(SD333, "Augmente la Déf de {0}").
+-define(SN334, "Fracassement Ⅱ").
+-define(SD334, "Augmente le Fracassement de {0}").
+-define(SN335, "Armure II").
+-define(SD335, "Augmente l'Armure de {0}").
+-define(SN336, "Esprit du Feu Ⅲ").
+-define(SD336, "Augmente l'ATQ de Feu de {0}").
+-define(SN337, "Esprit de l'Eau Ⅲ").
+-define(SD337, "Augmente l'ATQ de l'Eau de {0}").
+-define(SN338, "Esprit du Tonnerre III").
+-define(SD338, "Augmente l'ATQ du Tonnerre de {0}").
+-define(SN339, "Esprit de la Terre Ⅲ").
+-define(SD339, "Augmente l'ATQ de la Terre de {0}").
+-define(SN340, "Résistance au Feu III").
+-define(SD340, "Augmente l'ATQ de Déf de Feu de {0}").
+-define(SN341, "Résistance à l'Eau Ⅲ").
+-define(SD341, "Augmente la Déf de l'Eau de {0}").
+-define(SN342, "Résistance au Tonnerre III").
+-define(SD342, "Augmente la Déf du Tonnerre de {0}").
+-define(SN343, "Résistance de la Terre III").
+-define(SD343, "Augmente la Déf de la Terre de {0}").
+-define(SN344, "Précision II").
+-define(SD344, "Augmente le Taux du Toucher de {0}%").
+-define(SN345, "Agilité II").
+-define(SD345, "Augmente le Taux d'Esquive de {0}%").
+-define(SN346, "Explosif II").
+-define(SD346, "Augmente le Taux Crit de {0}%").
+-define(SN347, "Résilience II").
+-define(SD347, "Augmente le Taux de Rés de {0}%").
+-define(SN400, "Défense - Alerte").
+-define(SD400, "{0}% de chance d'obtenir un Effet d'Alerte (Taux de Blocage +20%) pendant {1} sec en cas d'attaque").
+-define(SN401, "Défense - Bouclier").
+-define(SD401, "{0}% de chance d'obtenir un Bouclier Magique (Déf +65%) pendant {1} sec en cas d'attaque").
+-define(SN402, "Défense - Agilité").
+-define(SD402, "{0}% de chance d'obtenir un effet d'Agilité (Taux d'Esquive +10%) pendant {1} sec en cas d'attaque").
+-define(SN403, "Premier - Os de Fer II").
+-define(SD403, "Obtention d'os de fer (Réduction des DGT de +40%) pendant {0} sec en entrant en combat.").
+-define(SN404, "Brisure - Os de Fer II").
+-define(SD404, "Obtention d'os de fer (Réduction des DGT de +40%) pendant {1} sec lorsque les PV sont inférieurs à {0}% et en cas d'attaque.").
+-define(SN405, "Flexible - Sérénité II").
+-define(SD405, "Obtention d'un effet de tranquillité (Taux de Ténacité +20%) pendant {0} sec en cas de coup de crit.").
+-define(SN406, "Défense - Alerte III").
+-define(SD406, "{0}% de chance d'obtenir un Effet d'Alerte (Taux de Blocage +20%) pendant {1} sec en cas d'attaque").
+-define(SN407, "Défense - Vitesse").
+-define(SD407, "{0}% de chance d'obtenir une vitesse incroyable (Vitesse de Déplacement +30%) pendant {1} sec en cas d'attaque").
+-define(SN408, "Défense - Durcissement").
+-define(SD408, "En cas d'attaque, a {0}% de chance d'obtenir un Durcissement (Réduction des DGT de +{2}%) pendant {1} sec").
+-define(SN409, "Défense - Bouclier III").
+-define(SD409, "{0}% de chance d'obtenir un Bouclier Magique (Déf +65%) pendant {1} sec en cas d'attaque").
+-define(SN410, "Brisure - Combat Honorable").
+-define(SD410, "En cas d'attaque avec moins de {0}% PV, gagne une invincibilité (immunité aux DGT) pendant {1} sec.").
+-define(SN411, "Défense - Durcissement").
+-define(SD411, "À {0}% de chance d'obtenir un Durcissement (Réduction des DGT de +10%) pendant {1} sec en cas d'attaque").
+-define(SN412, "Défense - Agilité III").
+-define(SD412, "{0}% de chance d'obtenir un effet d'Agilité (Taux d'Esquive +10%) pendant {1} sec en cas d'attaque").
+-define(SN413, "Défense - Os de Fer III").
+-define(SD413, "{0}% de chance d'obtenir Os de Fer (RÉD de DGT +40%) pendant {1} sec en cas d'attaque").
+-define(SN414, "Premier - Os de Fer").
+-define(SD414, "Obtention d'os de fer (Réduction des DGT de +40%) pendant {0} sec en entrant en combat.").
+-define(SN415, "Pleine - Alerte").
+-define(SD415, "Obtention d'un Effet d'Alerte (Taux de Blocage +20%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN416, "Défense - Bouclier II").
+-define(SD416, "{0}% de chance d'obtenir un Bouclier Magique (Déf +65%) pendant {1} sec en cas d'attaque").
+-define(SN417, "Défense - Agilité II").
+-define(SD417, "{0}% de chance d'obtenir un effet d'Agilité (Taux d'Esquive +10%) pendant {1} sec en cas d'attaque").
+-define(SN418, "Pleine - Bouclier").
+-define(SD418, "Obtention d'un Bouclier Magique (Déf +65%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN419, "Pleine - Agilité").
+-define(SD419, "Obtention d'un Effet d'Agilité (Taux d'Esquive +10%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN420, "Défense - Alerte II").
+-define(SD420, "{0}% de chance d'obtenir un Effet d'Alerte (Taux de Blocage +20%) pendant {1} sec en cas d'attaque").
+-define(SN421, "Pleine - Alerte II").
+-define(SD421, "Obtention d'un Effet d'Alerte (Taux de Blocage +20%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN422, "Défense - Durcissement III").
+-define(SD422, "À {0}% de chance d'obtenir un Durcissement (Réduction des DGT de +10%) pendant {1} sec en cas d'attaque").
+-define(SN423, "Pleine - Bouclier II").
+-define(SD423, "Obtention d'un Bouclier Magique (Déf +65%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN424, "Pleine - Agilité II").
+-define(SD424, "Obtention d'un Effet d'Agilité (Taux d'Esquive +10%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN425, "Premier - Os de Fer III").
+-define(SD425, "Obtention d'os de fer (Réduction des DGT de +40%) pendant {0} sec en entrant en combat.").
+-define(SN426, "Pleine - Os de Fer III").
+-define(SD426, "Obtention d'os de fer (RÉD des DGT de +40%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque.").
+-define(SN427, "Défense - Graine de Vie").
+-define(SD427, "{0}% de chance d'obtenir {1} empilements d'Effet de Graine de Vie en cas d'attaque, (lorsque le buff se termine, chaque pile guérit de 100% plus 5% des PV perdus de la cible) pendant {2} sec").
+-define(SN428, "Défense - Étude de Durcissement II").
+-define(SD428, "{0}% de chance d'obtenir {1} pile(s) d'Étude de Durcissement (RÉD de DGT +2% à chaque pile) pendant {2} sec en cas d'attaque").
+-define(SN429, "Pleine - Étude de Durcissement II").
+-define(SD429, "Obtention de {1} pile(s) d'Effet d'Étude de Durcissement (RÉD de DGT +2% à chaque pile) pendant {2} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN430, "Attaque - Interception").
+-define(SD430, "{0}% de chance de bénéficier d'un effet de blocage (Vitesse de Déplacement -150) pendant {1} sec en cas d'attaque").
+-define(SN431, "Attaque - Galant").
+-define(SD431, "{0}% de chance de bénéficier d'un effet de combat (Bonus de DGT +10%) pendant {1} sec en cas d'attaque").
+-define(SN432, "Attaque - Manie").
+-define(SD432, "{0}% de chance de bénéficier d'un effet de Manie (Taux Crit +20%) pendant {1} sec en cas d'attaque").
+-define(SN433, "Premier - Colère Infinie II").
+-define(SD433, "Obtention d'un Effet de Colère Infinie (Bonus de DGT +40%) pendant {0} sec en entrant en combat").
+-define(SN434, "Pleine - Galant II").
+-define(SD434, "Obtention d'un Effet de Galant (Bonus de DGT +10%) pendant {1} sec lorsque les PV sont supérieurs à {0}%").
+-define(SN435, "Perte - Précision II").
+-define(SD435, "Obtention d'un effet de Précision (Bonus de Toucher +10%) pendant {0} sec quand l'attaque est esquivée").
+-define(SN436, "Attaque - Interception III").
+-define(SD436, "{0}% de chance de bénéficier d'un effet de blocage (Vitesse de Déplacement -150) pendant {1} sec en cas d'attaque").
+-define(SN437, "Attaque - Galant III").
+-define(SD437, "Lors d'une attaque, il y a {0}% de chance d'obtenir Galant (Bonus de DGT +10%) pendant {1} sec").
+-define(SN438, "Attaque - Manie III").
+-define(SD438, "{0}% de chance de bénéficier d'un effet de Manie (Taux Crit +20%) pendant {1} sec en cas d'attaque").
+-define(SN439, "Attaque - Connaissance").
+-define(SD439, "{0}% de chance de bénéficier d'un effet de pénétration (Taux d'Anti-blocage +20%) pendant {1} sec en cas d'attaque").
+-define(SN440, "Attaque - Manie II").
+-define(SD440, "{0}% de chance de bénéficier d'un effet de Manie (Taux Crit +20%) pendant {1} sec en cas d'attaque").
+-define(SN441, "Attaque - Adoucir II").
+-define(SD441, "{0}% de chance de bénéficier d'un effet adoucissant (RÉD de DGT -10%) pendant {1} sec en cas d'attaque").
+-define(SN442, "Brisure - Terreur de l'Œil du Diable").
+-define(SD442, "Ajoute un effet de peur (impossible à contrôler) à la cible proche pendant {1} sec lorsque les PV sont inférieurs à {0}% et qu'elle est attaquée").
+-define(SN443, "Attaque - Précision").
+-define(SD443, "{0}% de chance d'obtenir un effet de Précision (Taux de Toucher +10%) pendant {1} sec lors d'une attaque").
+-define(SN444, "Premier - Colère Infinie").
+-define(SD444, "Obtention d'un Effet de Colère Infinie (Bonus de DGT +40%) pendant {0} sec en entrant en combat").
+-define(SN445, "Attaque - Galant II").
+-define(SD445, "Lors d'une attaque, il y a {0}% de chance d'obtenir Galant (Bonus de DGT +10%) pendant {1} sec").
+-define(SN446, "Attaque - Connaissance II").
+-define(SD446, "{0}% de chance de bénéficier d'un effet de pénétration (Taux d'Anti-blocage +20%) pendant {1} sec en cas d'attaque").
+-define(SN447, "Attaque - Colère Infinie III").
+-define(SD447, "{0}% de chance de bénéficier d'un effet de Colère Infinie (Bonus de DGT +40%) pendant {1} sec en cas d'attaque").
+-define(SN448, "Pleine - Galant II").
+-define(SD448, "Obtention d'un Effet de Galant (Bonus de DGT +10%) pendant {1} sec lorsque les PV sont supérieurs à {0}%").
+-define(SN449, "Pleine - Manie").
+-define(SD449, "Obtention de l'Effet Manie (Taux Crit +20%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN450, "Pleine - Manie II").
+-define(SD450, "Obtention de l'Effet Manie (Taux Crit +20%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN451, "Pleine - Connaissance II").
+-define(SD451, "Obtention d'un effet de Vision de Pénétration (Taux d'Anti-blocage +20%) pendant {1} sec quand les PV son supérieurs à {0}% et en cas d'attaque").
+-define(SN452, "Pleine - Connaissance").
+-define(SD452, "Obtention d'un effet de Vision de Pénétration (Taux d'Anti-blocage +20%) pendant {1} sec quand les PV son supérieurs à {0}% et en cas d'attaque").
+-define(SN453, "Pleine - Précision").
+-define(SD453, "Obtention d'un effet de Précision (Taux de Toucher +10%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN454, "Pleine - Colère II").
+-define(SD454, "Obtention d'un effet de Précision (Taux de Toucher +10%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN455, "Pleine - Précision II").
+-define(SD455, "Obtention d'un effet de Précision (Taux de Toucher +10%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN456, "Attaque - Connaissance III").
+-define(SD456, "{0}% de chance de bénéficier d'un effet de pénétration (Taux d'Anti-blocage +20%) pendant {1} sec en cas d'attaque").
+-define(SN457, "Attaque - Colère Infinie II").
+-define(SD457, "{0}% de chance de bénéficier d'un effet de Colère Infinie (Bonus de DGT +40%) pendant {1} sec en cas d'attaque").
+-define(SN458, "Pleine - Colère Infinie II").
+-define(SD458, "Obtention d'un effet de Colère Infinie (Bonus de DGT +40%) pendant {1} sec lorsque les PV sont supérieurs à {0}%").
+-define(SN459, "Premier - Colère Infinie III").
+-define(SD459, "Obtention d'un Effet de Colère Infinie (Bonus de DGT +40%) pendant {0} sec en entrant en combat").
+-define(SN460, "Pleine - Colère Infinie III").
+-define(SD460, "Obtention d'un effet de Colère Infinie (Bonus de DGT +40%) pendant {1} sec lorsque les PV sont supérieurs à {0}%").
+-define(SN461, "Attaque - Explosion").
+-define(SD461, "Les attaques ont {0}% de chance d'infliger Graine de destruction (lorsque l'effet prend fin, chaque pile inflige des DGT égaux à 100% de 2% des PV perdus par la cible).Peut s'empiler jusqu'à {1} fois.Durée : {2} sec").
+-define(SN462, "Attaque - Précision III").
+-define(SD462, "{0}% de chance d'obtenir un effet de Précision (Taux de Toucher +10%) pendant {1} sec lors d'une attaque").
+-define(SN463, "Attaque - Étude Galante II").
+-define(SD463, "Lors d'une attaque, il y a {0}% de chance d'obtenir Étude Galante (Bonus de DGT +2% à chaque couche) {1} couche(s) pendant {2} sec").
+-define(SN464, "Pleine - Étude Galante II").
+-define(SD464, "Si les PV sont supérieurs à {0}%, les attaques accordent {1} couches d'Étude Galante (+2% de DGT Bonus par couche) pendant {2} sec").
+-define(SN465, "Attaque - Étude Galante III").
+-define(SD465, "Lors d'une attaque, il y a {0}% de chance d'obtenir Étude Galante (Bonus de DGT +2% à chaque couche) {1} couche(s) pendant {2} sec").
+-define(SN466, "Pleine - Étude Galante IV").
+-define(SD466, "Si les PV sont supérieurs à {0}%, les attaques accordent {1} couches d'Étude Galante (+2% de DGT Bonus par couche) pendant {2} sec").
+-define(SN467, "Brisure - Force Galante").
+-define(SD467, "Lorsque les PV sont ＜ à {0}%, obtention d'une pile de Force de Bataille (déclenche {1} pile(s) d'Étude de Colère (Bonus de DGT +2% à chaque pile)/sec pendant {2} sec) Durée : {3} sec Ne peut pas être dissipé").
+-define(SN800, "Défense - Étude de Durcissement III").
+-define(SD800, "{0}% de chance d'obtenir {1} pile(s) d'Étude de Durcissement (RÉD de DGT +2% à chaque pile) pendant {2} sec en cas d'attaque").
+-define(SN801, "Pleine - Étude de Durcissement III").
+-define(SD801, "Obtention de {1} pile(s) d'Effet d'Étude de Durcissement (RÉD de DGT +2% à chaque pile) pendant {2} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN802, "Brisure - Force de Durcissement").
+-define(SD802, "Lorsque les PV sont ＜ à {0}% et en cas d'attaque, obtention d'une pile de Force de Durcissement (déclenche {1} pile(s) d'Étude de Durcissement (RÉD DGT +2% à chaque pile)/sec pendant {2} sec).Durée : {3} sec Ne peut pas être dissipé").
+-define(SN616, "Graine de Vie").
+-define(SD616, "{0}% de chance d'obtenir {1} empilements d'Effet de Graine de Vie en cas d'attaque, (lorsque le buff se termine, chaque pile guérit de 100% plus 5% des PV perdus de la cible) pendant {2} sec").
+-define(SN617, "Regard du Gardien").
+-define(SD617, "Obtention RÉD de DGT de +{0}% pendant {1} sec en entrant en combat, l'effet augmente de {2}% ({3}% au max) avec chaque joueur ennemi proche").
+-define(SN618, "Jugement de l'Âme").
+-define(SD618, "{0}% de chances d'infliger {1}% de DGT aux cibles situées à l'avant avec {2}% de Taux Crit").
+-define(SN619, "Prophétie du Tueur de Démons").
+-define(SD619, "Augmente de {0}% la RÉD DGT du Joueur").
+-define(SN620, "Prophétie de Puissance Spirituelle").
+-define(SD620, "Augmente le Bonus de DGT JcE de {0}%").
+-define(SN621, "Renforcement de Santé").
+-define(SD621, "Augmente {0}% des PV pour les Âmes Divins").
+-define(SN622, "Renforcement d'Attaque").
+-define(SD622, "Augmente {0}% de l'ATQ pour les Âmes Divins").
+-define(SN623, "Renforcement de Défense").
+-define(SD623, "Augmente {0}% de la Déf pour les Âmes Divins").
+-define(SN624, "Renforcement du Fracassement").
+-define(SD624, "Augmente {0}% du Fracassement pour les Âmes Divins").
+-define(SN625, "Renforcement Générale").
+-define(SD625, "Augmente {0}% des stats pour les Âmes Divins").
+-define(SN626, "Renforcement de Santé").
+-define(SD626, "Augmente {0}% des PV pour la Divinité").
+-define(SN627, "Renforcement de Santé de Groupe").
+-define(SD627, "Augmente {0}% des PV pour toutes les Divinités").
+-define(SN628, "Renforcement d'Attaque").
+-define(SD628, "Augmente {0}% de l'ATQ pour la Divinité").
+-define(SN629, "Renforcement d'ATQ de Groupe").
+-define(SD629, "Augmente {0}% de l'ATQ pour toutes les Divinités").
+-define(SN630, "Renforcement de Défense").
+-define(SD630, "Augmente {0}% de la Déf pour la Divinité").
+-define(SN631, "Renforcement de Défense de Groupe").
+-define(SD631, "Augmente {0}% de la Déf pour toutes les Divinités").
+-define(SN632, "Renforcement du Fracassement").
+-define(SD632, "Augmente {0}% du Fracassement pour la Divinité").
+-define(SN633, "Renforcement de Fracassement de Groupe").
+-define(SD633, "Augmente {0}% du Fracassement pour toutes les Divinités").
+-define(SN634, "Renforcement de Stats").
+-define(SD634, "Augmente {0}% des Stats pour la Divinité").
+-define(SN635, "Renforcement de Stats de Groupe").
+-define(SD635, "Augmente {0}% des Stats pour toutes les Divinités").
+-define(SN636, "Renforcement de Santé").
+-define(SD636, "Augmente {0}% des PV pour la Divinité").
+-define(SN637, "Renforcement de Santé de Groupe").
+-define(SD637, "Augmente {0}% des PV pour toutes les Divinités").
+-define(SN638, "Renforcement d'Attaque").
+-define(SD638, "Augmente {0}% de l'ATQ pour la Divinité").
+-define(SN639, "Renforcement d'ATQ de Groupe").
+-define(SD639, "Augmente {0}% de l'ATQ pour toutes les Divinités").
+-define(SN640, "Renforcement de Défense").
+-define(SD640, "Augmente {0}% de la Déf pour la Divinité").
+-define(SN641, "Renforcement de Défense de Groupe").
+-define(SD641, "Augmente {0}% de la Déf pour toutes les Divinités").
+-define(SN642, "Renforcement du Fracassement").
+-define(SD642, "Augmente {0}% du Fracassement pour la Divinité").
+-define(SN643, "Renforcement de Fracassement de Groupe").
+-define(SD643, "Augmente {0}% du Fracassement pour toutes les Divinités").
+-define(SN644, "Renforcement de Stats").
+-define(SD644, "Augmente {0}% des Stats pour la Divinité").
+-define(SN645, "Renforcement de Stats de Groupe").
+-define(SD645, "Augmente {0}% des Stats pour toutes les Divinités").
+-define(SN646, "Renforcement de Santé").
+-define(SD646, "Augmente {0}% des PV pour la Divinité").
+-define(SN647, "Renforcement de Santé de Groupe").
+-define(SD647, "Augmente {0}% des PV pour toutes les Divinités").
+-define(SN648, "Bonus DGT").
+-define(SD648, "Augmente de {0}% le Bonus de DGT du Joueur").
+-define(SN649, "Renforcement d'Attaque").
+-define(SD649, "Augmente {0}% de l'ATQ pour la Divinité").
+-define(SN650, "Renforcement d'ATQ de Groupe").
+-define(SD650, "Augmente {0}% de l'ATQ pour toutes les Divinités").
+-define(SN651, "RÉD DGT").
+-define(SD651, "Augmente de {0}% la RÉD DGT du Joueur").
+-define(SN652, "Renforcement de Défense").
+-define(SD652, "Augmente {0}% de la Déf pour la Divinité").
+-define(SN653, "Renforcement de Défense de Groupe").
+-define(SD653, "Augmente {0}% de la Déf pour toutes les Divinités").
+-define(SN654, "Taux Crit").
+-define(SD654, "Augmente de {0}% le Taux Crit du Joueur").
+-define(SN655, "Renforcement du Fracassement").
+-define(SD655, "Augmente {0}% du Fracassement pour la Divinité").
+-define(SN656, "Renforcement de Fracassement de Groupe").
+-define(SD656, "Augmente {0}% du Fracassement pour toutes les Divinités").
+-define(SN657, "Taux de Résistance").
+-define(SD657, "Augmente de {0}% le Taux de Résistance du Joueur").
+-define(SN658, "Renforcement de Stats").
+-define(SD658, "Augmente {0}% des Stats pour la Divinité").
+-define(SN659, "Renforcement de Stats de Groupe").
+-define(SD659, "Augmente {0}% des Stats pour toutes les Divinités").
+-define(SN660, "Taux de Blocage").
+-define(SD660, "Augmente de {0}% le Taux de Blocage du Joueur").
+-define(SN661, "Renforcement de Santé").
+-define(SD661, "Augmente {0}% des PV pour la Divinité").
+-define(SN662, "Renforcement de Santé de Groupe").
+-define(SD662, "Augmente {0}% des PV pour toutes les Divinités").
+-define(SN663, "Taux d'Anti-blocage").
+-define(SD663, "Augmente de {0}% le Taux d'Anti-blocage du Joueur").
+-define(SN664, "Renforcement d'Attaque").
+-define(SD664, "Augmente {0}% de l'ATQ pour la Divinité").
+-define(SN665, "Renforcement d'ATQ de Groupe").
+-define(SD665, "Augmente {0}% de l'ATQ pour toutes les Divinités").
+-define(SN666, "Taux de Toucher").
+-define(SD666, "Augmente de {0}% le Taux du Toucher du Joueur").
+-define(SN667, "Renforcement de Défense").
+-define(SD667, "Augmente {0}% de la Déf pour la Divinité").
+-define(SN668, "Renforcement de Défense de Groupe").
+-define(SD668, "Augmente {0}% de la Déf pour toutes les Divinités").
+-define(SN669, "Taux d'Esquive").
+-define(SD669, "Augmente de {0}% le Taux d'Esquive du Joueur").
+-define(SN670, "Renforcement du Fracassement").
+-define(SD670, "Augmente {0}% du Fracassement pour la Divinité").
+-define(SN671, "Renforcement de Fracassement de Groupe").
+-define(SD671, "Augmente {0}% du Fracassement pour toutes les Divinités").
+-define(SN672, "Bonus DGT de Compétence").
+-define(SD672, "Bonus DGT de Compétence +{0}%").
+-define(SN673, "Renforcement de Stats").
+-define(SD673, "Augmente {0}% des Stats pour la Divinité").
+-define(SN674, "Renforcement de Stats de Groupe").
+-define(SD674, "Augmente {0}% des Stats pour toutes les Divinités").
+-define(SN675, "RÉD DGT de Compétence").
+-define(SD675, "Réduction DGT de Compétence de Personnage +{0}%").
+-define(SN701, "[Paralysie] Niv.1").
+-define(SD701, "L'attaque a {0}% de chance de paralyser (ne peut être contrôlée) la cible pendant {1} sec.TdR : {2} sec").
+-define(SN702, "[Soin] Niv.1").
+-define(SD702, "L'attaque a {0}% de chance de guérir l'attaquant pour {1}% de dégâts infligés.TdR : {2} sec").
+-define(SN703, "[Résurrection] Niveau I").
+-define(SD703, "En cas de décès, soigne {0}% de PV.TdR : {1} sec.").
+-define(SN704, "[Protection] Niv.1").
+-define(SD704, "En cas d'attaque, il y a {0}% de chance de gagner une Réduction de DGT de +{1}% pour {2} sec.TdR : {3} sec").
+-define(SN705, "[Paralysie] Niv.2").
+-define(SN706, "[Soin] Niv.2").
+-define(SN707, "[Résurrection] Niv.2").
+-define(SN708, "[Protection] Niv.2").
+-define(SN709, "[Paralysie] Niv.3").
+-define(SN710, "[Soin] Niv.3").
+-define(SN711, "[Résurrection] Niv.3").
+-define(SN712, "[Protection] Niv.3").
+-define(SN713, "[Paralysie] Niv.4").
+-define(SN714, "[Soin] Niv.4").
+-define(SN715, "[Résurrection] Niv.4").
+-define(SN716, "[Protection] Niv.4").
+-define(SN717, "[Paralysie] Niv.5").
+-define(SN718, "[Soin] Niv.5").
+-define(SN719, "[Résurrection] Niv.5").
+-define(SN720, "[Protection] Niv.5").
+-define(SN721, "[Paralysie] Niv.6").
+-define(SN722, "[Soin] Niv.6").
+-define(SN723, "[Résurrection] Niv.6").
+-define(SN724, "[Protection] Niv.6").
+-define(SN725, "[Paralysie] Niv.7").
+-define(SN726, "[Soin] Niv.7").
+-define(SN727, "[Résurrection] Niv.7").
+-define(SN728, "[Protection] Niv.7").
+-define(SN729, "[Paralysie] Niv.8").
+-define(SN730, "[Soin] Niv.8").
+-define(SN731, "[Résurrection] Niv.8").
+-define(SN732, "[Protection] Niv.8").
+-define(SN733, "[Paralysie] Niv.9").
+-define(SN734, "[Soin] Niv.9").
+-define(SN735, "[Résurrection] Niv.9").
+-define(SN736, "[Protection] Niv.9").
+-define(SN737, "[Paralysie] Niv.10").
+-define(SN738, "[Soin] Niv.10").
+-define(SN739, "[Résurrection] Niv.10").
+-define(SN740, "[Protection] Niv.10").
+-define(SN103, "Entaille de Téléportation").
+-define(SN104, "Enchaînement Tourbillonnante").
+-define(SN110, "Mondhieb").
+-define(SN111, "Tranchant en Croissant").
+-define(SN123, "Flamme Solaire").
+-define(SN124, "Déflagration").
+-define(SN128, "").
+-define(SN131, "Punition de Glace").
+-define(SN142, "Flèche Tourbillonnante").
+-define(SN150, "Tir Dispersé").
+-define(SN151, "Flèche Suspendue").
+-define(SN153, "Oiseau Tonnerre").
+-define(ST1, "Inactif ").
+-define(ST2, "Passif").
+-define(BUFFFROM, "Source de Buff : ").
+-define(BF1, "[Pas terminer pour le moment]").
+-define(BF2, "[Changement de Forme du Dragon Divin]").
+-define(BF3, "[Compétence Active]").
+-define(BF4, "[Bague de Rage]").
+-define(BF5, "[Bague d'Énergie Magique]").
+-define(BF6, "[Bague d'Œil de Faucon]").
+-define(BF7, "[Transfert De Classe]").
+-define(BF8, "[Compétence Active]").
+-define(BF9, "[Compétence de Héros]").
+-define(BF10, "[Dragon Fay]").
+-define(BF11, "[Codex de Nidhogg]").
+-define(BF12, "[Bague d'Œil de Lynx]").
+-define(BF13, "[Bague du Faucon]").
+-define(BF14, "[Monture]").
+-define(BF15, "[Bague]").
+-define(BF16, "[Ailes]").
+-define(BF17, "[Compétence de Héros]").
+-define(BF18, "[Accessoire]").
+-define(BF19, "[Horcruxe]").
+-define(BF20, "[Horcruxe]").
+-define(BF21, "[Shenron]").
+-define(BF22, "[Balle de Buff]").
+-define(BF23, "[Massacre]").
+-define(BF24, "[Guerre d'Yggdrasil]").
+-define(BF25, "[Renaissance Instantanée de Guerre d'Yggdrasil]").
+-define(BF26, "[Véhicule Endommagé]").
+-define(BF27, "[Protection de Résurrection]").
+-define(BF28, "[Renforcement]").
+-define(BF29, "[Buff JcJ]").
+-define(BF30, "[Lâcheté]").
+-define(BF31, "[Rouleau]").
+-define(BF32, "[Rage]").
+-define(BF33, "Tour").
+-define(BF34, "[Pièce d'Enquête]").
+-define(BF35, "[Suicide]").
+-define(BF36, "[BOSS]").
+-define(BF37, "[Marteau de Thor]").
+-define(BF38, "[Choc de Guilde]").
+-define(BF39, "[Cadeau de Mariage]").
+-define(BF40, "[Fête des Amis]").
+-define(BF41, "[Guilde]").
+-define(BF42, "[Potion d'EXP Avancée]").
+-define(BF43, "Potion d'EXP").
+-define(BF44, "[Inspiration]").
+-define(BF45, "Bonus d'EXP de Niveau Mondial").
+-define(BF46, "[Privilège Bonus VIP]").
+-define(BF47, "[Potion d'EXP de Base]").
+-define(BF48, "[Potion d'EXP 2X]").
+-define(BF49, "[Bonus d'Équipe]").
+-define(BF50, "[Bannière de Guerre 1]").
+-define(BF51, "[Bannière de Guerre 2]").
+-define(BF52, "[Prière]").
+-define(BF53, "Bonus de Suzerain de Choc de Guildes").
+-define(BF54, "[Inspiration de Choc de Guilde]").
+-define(BF55, "Bonus de Chef de Guilde de Niveau 3 de Choc de Guildes").
+-define(BF56, "[Guilde N°1 Zone S du Choc de Guildes]").
+-define(BF57, "[Guilde N°1 Zone S du Choc de Guildes]").
+-define(BF58, "[Guilde N°1 Zone S du Choc de Guildes]").
+-define(BF59, "[Guilde N°1 Zone S du Choc de Guildes]").
+-define(BF60, "[Guilde N°2 Zone S du Choc de Guildes]").
+-define(BF61, "[Inspiration de Conquête de Dragon]").
+-define(BF62, "[Avantages de la Carte Mensuelle]").
+-define(BF63, "[Guilde N°2 Zone S du Choc de Guildes]").
+-define(BF64, "[Guilde N°2 Zone S du Choc de Guildes]").
+-define(BF65, "[Guilde N°2 Zone S du Choc de Guildes]").
+-define(BF66, "[Guilde N°3 Zone S du Choc de Guildes]").
+-define(BF67, "[Guilde N°3 Zone S du Choc de Guildes]").
+-define(BF68, "[Guilde N°3 Zone S du Choc de Guildes]").
+-define(BF69, "[Guilde N°3 Zone S du Choc de Guildes]").
+-define(BF70, "[Guilde N°4 Zone S du Choc de Guildes]").
+-define(BF71, "[Guilde N°4 Zone S du Choc de Guildes]").
+-define(BF72, "[Guilde N°4 Zone S du Choc de Guildes]").
+-define(BF73, "[Guilde N°4 Zone S du Choc de Guildes]").
+-define(BF74, "[Guilde N°1 Zone A de Choc de Guildes]").
+-define(BF75, "[Guilde N°1 Zone A de Choc de Guildes]").
+-define(BF76, "[Guilde N°1 Zone A de Choc de Guildes]").
+-define(BF77, "[Guilde N°1 Zone A de Choc de Guildes]").
+-define(BF78, "[Guilde N°2 Zone A de Choc de Guildes]").
+-define(BF79, "[Guilde N°2 Zone A de Choc de Guildes]").
+-define(BF80, "[Guilde N°2 Zone A de Choc de Guildes]").
+-define(BF81, "[Guilde N°2 Zone A de Choc de Guildes]").
+-define(BF82, "[Guilde N°3 Zone A de Choc de Guildes]").
+-define(BF83, "[Guilde N°3 Zone A de Choc de Guildes]").
+-define(BF84, "[Guilde N°3 Zone A de Choc de Guildes]").
+-define(BF85, "[Guilde N°3 Zone A de Choc de Guildes]").
+-define(BF86, "[Guilde N°4 Zone A de Choc de Guildes]").
+-define(BF87, "[Guilde N°4 Zone A de Choc de Guildes]").
+-define(BF88, "[Guilde N°4 Zone A de Choc de Guildes]").
+-define(BF89, "[Guilde N°4 Zone A de Choc de Guildes]").
+-define(BF90, "[Top 3c3]").
+-define(BF91, "[Arme Divine]").
+-define(BF92, "[BOSS]").
+-define(BF100, "").
+-define(BF101, "").
+-define(BF102, "").
+-define(BF103, "").
+-define(BF104, "").
+-define(BF105, "").
+-define(BF106, "").
+-define(BF201, "[Cheval d'Athènes]").
+-define(BF202, "[Loup Enflammé]").
+-define(BF203, "[Lion Rugissant]").
+-define(BF204, "[Vélociraptor]").
+-define(BF205, "[Scorpion de Lave]").
+-define(BF206, "[Cheval Mort-vivant]").
+-define(BF207, "[Béhémoth]").
+-define(BF208, "[Basilic]").
+-define(BF209, "[Manticore]").
+-define(BF210, "[Griffon Sacré]").
+-define(BF211, "[Tigre Tueur]").
+-define(BF212, "[Ours de Guerre Viking]").
+-define(BF213, "[Rugissement Flamboyant]").
+-define(BF214, "[Cheval de Guerre de Poséidon]").
+-define(BF215, "[Satyre de Pan]").
+-define(BF216, "[Hog de Furie]").
+-define(BF217, "[Manège]").
+-define(BF218, "[Bateau-dragon Doré]").
+-define(BF219, "[Toucan en Colère]").
+-define(BF220, "[Requin Préhistorique]").
+-define(BF221, "[Léopard Rapide]").
+-define(BF222, "[Crabe Géant]").
+-define(BF223, "[Licorne]").
+-define(BF224, "[Trône de la Ruse]").
+-define(BF225, "[Guirlande Romantique]").
+-define(BF226, "[Grand Rhinocéros]").
+-define(BF227, "[Armure Anormale]").
+-define(BF228, "[Gardien des Enfers]").
+-define(BF229, "[Dragon Ancien]").
+-define(BF230, "[Lapin Magique]").
+-define(BF231, "[Croissant Romantique]").
+-define(BF232, "[Chevalier de l'Enfer]").
+-define(BF233, "[Mante Mécanique]").
+-define(BF234, "[Liche Dragon]").
+-define(BF301, "[Dragon Ailé de Sang]").
+-define(BF302, "[Ailes d'Envoûteur]").
+-define(BF303, "[Ailes du Futur]").
+-define(BF304, "[Ailes de Démon]").
+-define(BF305, "[Ailes Célestes]").
+-define(BF306, "[Ailes de l'Étreinte d'Ange]").
+-define(BF307, "[Ailes de Dragon de Flamme]").
+-define(BF308, "[Fantaisie Elfique]").
+-define(BF309, "[Ailes de Familier Nocturne]").
+-define(BF310, "[Ailes d'Ange Déchu]").
+-define(BF311, "[Ailes de Lames de Fer]").
+-define(BF312, "[Ailes d'Aigue-marine]").
+-define(BF313, "[Ailes Feu et Glace]").
+-define(BF314, "[Ailes de Chevalier de la Mort]").
+-define(BF315, "[Ailes Nocturnes]").
+-define(BF316, "[Fay des Ténèbres]").
+-define(BF317, "[Ailes d'Avarice]").
+-define(BF318, "[Ailes de Succube]").
+-define(BF319, "[Ailes des Ténèbres]").
+-define(BF320, "[Fay Rêveur]").
+-define(BF321, "[Ailes Putrides]").
+-define(BF322, "[Ailes du Moulin à Vent]").
+-define(BF323, "[Ailes de Wyrm de Givre]").
+-define(BF324, "[Ailes de Dryade]").
+-define(BF325, "[Ailes Florissantes]").
+-define(BF326, "[Ailes Lumineuses]").
+-define(BF327, "[Ailes Fières de Lion]").
+-define(BF328, "[Ailes de Fer de Tempête]").
+-define(BF329, "[Étreinte du Démon]").
+-define(BF330, "[Prière de la Déesse]").
+-define(BF331, "[Cuirasse d'Éther]").
+-define(BF332, "[Phénix]").
+-define(BF333, "[Ailes de Cœur]").
+-define(BF334, "[Lame Ardente]").
+-define(BF335, "[Soupir de Lune]").
+-define(BF336, "[Ailes de Givre Divines]").
+-define(BF337, "[Dragon Doré]").
+-define(BF338, "[Dragon Cramoisi]").
+-define(BF421, "[Petit Fay]").
+-define(BF422, "[Maître de Guerre]").
+-define(BF423, "[Demoiselle de Feu]").
+-define(BF424, "[Paladin]").
+-define(BF425, "[Chaton]").
+-define(BF426, "[Ange Ardent]").
+-define(BF427, "[Chef Tauren]").
+-define(BF428, "[Reine de la Douleur]").
+-define(BF429, "[Kung Fu Panda]").
+-define(BF430, "[Sorcière du Givre]").
+-define(BF431, "[Boucher de la Haine]").
+-define(BF501, "[Compétence Basique]").
+-define(BF502, "[Compétence Éveillée]").
+-define(BF503, "[Compétence Talentueuse]").
+-define(BF504, "[Arme Divine]").
+-define(BN1, "Buff Temporaire").
+-define(BD1, "Description du Buff Temporaire 1 : {0} description 2 :{1} description 3 :{2}").
+-define(BN200, "Bonus d'EXP").
+-define(BD200, "EXP de Monstre et EXP d'AFK +{0}%").
+-define(BN201, "Ranimer").
+-define(BD201, "Augmentation des DGT finaux {0}%.Passage à des piles infinies.").
+-define(BN202, "Corps de Divinité").
+-define(BD202, "Immunisé contre le Contrôle Simple et l'augmentation de {0}% des PV Max").
+-define(BN203, "Poignarder").
+-define(BD203, "Prend {1}% de DGT à chaque {0} mouvement").
+-define(BN204, "Écailles de Dragon Noir").
+-define(BD204, "DGT Massif de Défense").
+-define(BN205, "Gardien de Fay").
+-define(BD205, "Augmente {0}% de RÉD des DGT avec chaque ennemi à proximité.{1}% au maximum").
+-define(BN206, "Volonté de Combat").
+-define(BD206, "Augmente {0}% de Bonus des DGT avec chaque ennemi à proximité.{1}% au maximum").
+-define(BN207, "Nom Rouge").
+-define(BD207, "Obtenez le Nom Rouge lorsque la valeur du massacre est supérieure à 50.Être tué par un joueur fera tomber des Rubis").
+-define(BN208, "Bonus de DGT multiples").
+-define(BD208, "Augmente le Bonus de DGT de {0}% Passage à {1} pile(s)").
+-define(BN209, "Minotaure").
+-define(BD209, "Je suis le seul à pouvoir abattre les gens, personne ne peut m'abattre !").
+-define(BN210, "Chien Abyssal").
+-define(BD210, "Oh ! Vous êtes devenu un Chien Abyssal ! Courrez !").
+-define(BN211, "Puissance de la Montagne").
+-define(BD211, "Augmente de {0}% la RÉD DGT et le Taux de Blocage Récupère {1}% de PV ensemble").
+-define(BN212, "Puissance de la Flamme").
+-define(BD212, "Augmente le Bonus de DGT et les Taux Crit de {0}% Récupère {1}% Rage").
+-define(BN213, "Puissance de Gale").
+-define(BD213, "Augmente le Bonus de DGT et la Vitesse de Déplacement de {0}% Récupère {1}% de PV ensemble").
+-define(BN214, "Puissance du Tonnerre").
+-define(BD214, "Augmente le Taux Crit la Vitesse de Déplacement de {0}% Récupère {1}% Rage").
+-define(BN215, "RÉD DGT multiples").
+-define(BD215, "Augmente la RÉD DGT à {0}% et le Passage {1} pile(s)").
+-define(BN216, "Protection Divine").
+-define(BD216, "Taux d'Esquive et Taux de Blocage +{0}%").
+-define(BN217, "Statue").
+-define(BD217, "Durée incontrôlable avec chaque pile -{0}%").
+-define(BN218, "Grande Surprise").
+-define(BD218, "Vous êtes devenu un indescriptible...").
+-define(BN219, "Statue").
+-define(BD219, "Amenez-le ! Ne courez pas !").
+-define(BN220, "Interception").
+-define(BD220, "En cours d'interception ! Vitesse de Déplacement -{0}").
+-define(BN221, "Alerte").
+-define(BD221, "État d'Alerte ! Taux de Blocage +{0}%").
+-define(BN222, "Bouclier Magique").
+-define(BD222, "Protection Magique ! Déf +{0}%").
+-define(BN223, "Agilité").
+-define(BD223, "Devenez adroit ! Esquive +{0}%").
+-define(BN224, "Délier").
+-define(BD224, "Mains Faibles ! ATQ -{0}%").
+-define(BN225, "Passivation").
+-define(BD225, "Corps Raide ! Fracassement -{0}%").
+-define(BN226, "Percer").
+-define(BD226, "L'armure s'est cassée ! Déf -{0}%").
+-define(BN227, "Durcissement").
+-define(BD227, "Peau durcie ! RÉD DGT +{0}%").
+-define(BN228, "Galant").
+-define(BD228, "La colère s'éveille ! Bonus DGT +{0}%").
+-define(BN229, "Manie").
+-define(BD229, "Fureur fuitée ! Taux Crit +{0}%").
+-define(BN230, "Brûlure").
+-define(BD230, "Ouvrez le feu ! Inflige {0}% DGT toutes les {1} sec à chaque pile.Passage à {2} piles").
+-define(BN231, "Prouesses Physiques").
+-define(BD231, "Corps en Acier ! RÉD DGT +{0}%").
+-define(BN232, "Tranquillité").
+-define(BD232, "Esprit Paisible Résistance Crit +{0}%").
+-define(BN233, "Colère Infinie").
+-define(BD233, "La colère a émergé ! Bonus DGT +{0}%").
+-define(BN234, "Précision").
+-define(BD234, "Esprit Concentré ! Taux de Toucher +{0}%").
+-define(BN235, "Racine").
+-define(BD235, "Jambes Raides ! Impossible de se déplacer").
+-define(BN236, "Blocage des Pieds").
+-define(BD236, "Un coup raté ! Impossible de rouler").
+-define(BN237, "Ichor").
+-define(BD237, "Physique renforcé ! PV Max +{0}%").
+-define(BN238, "Vitesse Merveilleuse").
+-define(BD238, "Compétence Agile ! Vitesse de Déplacement +{0}%").
+-define(BN239, "Étourdissement").
+-define(BD239, "Étourdi ! Impossible à contrôler").
+-define(BN240, "Gel").
+-define(BD240, "Refroidis ! Impossible à contrôler").
+-define(BN241, "Paralyser").
+-define(BD241, "Paralysé ! Impossible à contrôler").
+-define(BN242, "Terreur").
+-define(BD242, "Intimidé ! Impossible à contrôler").
+-define(BN243, "Ralentissement des Pieds").
+-define(BD243, "Pieds engourdis ! Vitesse de Déplacement -{0}%").
+-define(BN244, "Perte de Sensation").
+-define(BD244, "Confus ! Taux de Toucher -{0}%").
+-define(BN245, "Brise-genou").
+-define(BD245, "Jambes blessées ! Vitesse de Déplacement -{0}%").
+-define(BN246, "Invincible").
+-define(BD246, "Être béni ! Immunisé aux DGT").
+-define(BN247, "Maîtrise de Blocage").
+-define(BD247, "Compétence de Blocage Performante ! Taux de Blocage et Diminution du Blocage +{0}%").
+-define(BN248, "Marcheur du Vent").
+-define(BD248, "Esprit du vent protégé ! Taux d'Esquive +{0}%").
+-define(BN249, "Force de Rage").
+-define(BD249, "La fureur s'est déchaînée ! Taux Crit +{0}%").
+-define(BN250, "Consommation").
+-define(BD250, "Rage Extraite ! Récupération de la Rage +{0}%").
+-define(BN251, "Alerte Totale").
+-define(BD251, "Protection ciblée ! Taux de Blocage +{0}%").
+-define(BN252, "Mur de Fer").
+-define(BD252, "Armure promue ! Déf +{0}%").
+-define(BN253, "Errance de Divinité").
+-define(BD253, "Des pas imprévisibles ! Effet de restriction de mouvement annulé").
+-define(BN254, "Âme de Démon").
+-define(BD254, "Force d'Âme Puissante ! Impossible de contrôler l'effet annulé").
+-define(BN255, "Saignement").
+-define(BD255, "Rupture artérielle ! {1}% des dégâts de santé actuel toutes les {0} secondes").
+-define(BN256, "Venin de Sang").
+-define(BD256, "Sang contaminé ! PV Max -{0}% Passage à {1} pile(s)").
+-define(BN257, "Démoraliser").
+-define(BD257, "Démoralisé ! Bonus DGT -{0}%").
+-define(BN258, "Émoussé").
+-define(BD258, "Réponse lente ! Taux d'Esquive -{0}%").
+-define(BN259, "Graine de Destruction").
+-define(BD259, "La destruction s'enracine ! Chaque couche à la fin du buff inflige {0}% de DGT de base et des DGT supplémentaires de {1}% des PV perdus de la cible").
+-define(BN260, "Yeux Paresseux").
+-define(BD260, "Démence mentale ! Taux d'Esquive -{0}%").
+-define(BN261, "Silence").
+-define(BD261, "Impossible de crier le nom du mouvement ! Impossible d'utiliser la compétence active du joueur").
+-define(BN262, "FOR").
+-define(BD262, "Force retrouvée ! ATQ +{0}%").
+-define(BN263, "Aiguiser").
+-define(BD263, "Aiguisez le couteau ! Fracassement +{0}%").
+-define(BN264, "Étude Galante").
+-define(BD264, "Augmente la Colère progressivement ! Bonus DGT +{0}% avec chaque pile").
+-define(BN265, "Étude de Durcissement").
+-define(BD265, "Augmente le durcissement progressivement ! RÉD DGT +{0}% avec chaque pile").
+-define(BN266, "Étude de Précision").
+-define(BD266, "Augmente la Précision progressivement ! Taux de Toucher +{0}% avec chaque pile").
+-define(BN267, "Étude sur l'Agilité").
+-define(BD267, "Augmente l'Agilité progressivement ! Taux d'Esquive +{0}% avec chaque pile").
+-define(BN268, "Étude de Blocage").
+-define(BD268, "Augmente le Blocage progressivement ! Taux de Blocage +{0}% avec chaque pile").
+-define(BN269, "Graine de Vie").
+-define(BD269, "La vie s'enracine ! Soigne à chaque fin de buff de {0}% du soin de base et d'un soin supplémentaire de {1}% des PV perdus de la cible").
+-define(BN270, "Maître de Précision").
+-define(BD270, "Coup de Poing ! Taux de Toucher +{0}%").
+-define(BN271, "Marche Divine").
+-define(BD271, "Force de résistance du bloc ! Durée du contrôle -{0}%").
+-define(BN272, "Envol de Shenron").
+-define(BD272, "Physique de dragon ! Durée du contrôle -{0}%").
+-define(BN273, "Connaissance").
+-define(BD273, "Voyez à travers le mouvement ! Taux d'Anti-blocage +{0}%").
+-define(BN274, "Bouclier d'Énergie").
+-define(BD274, "Rassemblez l'énergie ! Points d'énergie qui peuvent résister à {0}% des DGT").
+-define(BN275, "Galant").
+-define(BD275, "Héroïque ! DGT de Compétence +{0}%").
+-define(BN276, "Justice").
+-define(BD276, "Justice réduite ! Dégâts finaux +{0}%").
+-define(BN277, "Technique").
+-define(BD277, "DGT de Compétence +{0}%").
+-define(BN278, "Rouillé").
+-define(BD278, "DGT de Compétence -{0}%").
+-define(BN279, "Contaminé").
+-define(BD279, "Soin -{0}%").
+-define(BN280, "Fatal").
+-define(BD280, "Soin -{0}%").
+-define(BN281, "Technique de Précision").
+-define(BD281, "Technique de Précision ! DGT de Compétence +{0}%").
+-define(BN282, "Hors de la Pratique").
+-define(BD282, "DGT de Compétence -{0}%").
+-define(BN283, "Recherche de Technique").
+-define(BD283, "Améliorez les techniques progressivement ! Chaque couche donne des DGT de Compétence de +{0}%.").
+-define(BN300, "Tyrannique").
+-define(BD300, "Taux Crit +{0}%").
+-define(BN301, "Brutalité").
+-define(BD301, "Bonus DGT +{0}%").
+-define(BN302, "Précision").
+-define(BD302, "Taux de Toucher +{0}%").
+-define(BN303, "Racine").
+-define(BD303, "Impossible de se déplacer").
+-define(BN304, "Lenteur").
+-define(BD304, "Vitesse de Déplacement -{0}%").
+-define(BN305, "Blocage des Pieds").
+-define(BD305, "Impossible d'utiliser la compétence Rouleau").
+-define(BN306, "Accélération").
+-define(BD306, "Vitesse de Déplacement +{0}%").
+-define(BN307, "Récupération").
+-define(BD307, "Récupération de {0}% de PV toutes les {1} sec").
+-define(BN308, "Invincible").
+-define(BD308, "Immunisé contre tous les DGT").
+-define(BN309, "Blocage").
+-define(BD309, "Taux de Blocage +{0}%").
+-define(BN310, "Défense de Fer").
+-define(BD310, "Réduction des Dégâts +{0}%").
+-define(BN311, "Fragilité").
+-define(BD311, "Bonus DGT -{0}%").
+-define(BN312, "Étourdissement").
+-define(BD312, "Impossible à contrôler").
+-define(BN313, "Massacre").
+-define(BD313, "DGT aux monstres +{0}%").
+-define(BN314, "Rage").
+-define(BD314, "Récupération de la Rage +{0}%").
+-define(BN315, "Renforcement").
+-define(BD315, "DGT reçus -{0}%").
+-define(BN316, "Terreur").
+-define(BD316, "Intimidé, fuite en panique.").
+-define(BN317, "Résolution").
+-define(BD317, "DGT reçus du joueur -{0}%").
+-define(BN318, "Esquive").
+-define(BD318, "Taux d'Esquive +{0}%").
+-define(BN319, "[Changement de Forme]").
+-define(BD319, "Une forme transformée par une force mystérieuse").
+-define(BN320, "Marteau de Thor").
+-define(BD320, "Testé par la foudre du Marteau de Thor, les DGT subis sont égaux à {0}%X des PV Max chaque {1} sec").
+-define(BN321, "Avant-garde").
+-define(BD321, "RÉD DGT +{0}%.L'effet augmente de {1}% avec chaque joueur ennemi à proximité.{2}% au maximum").
+-define(BN322, "Limite des Terres Gelées").
+-define(BD322, "Refroidissement, immunité aux DGT et impossibilité de contrôle.").
+-define(BN323, "Gardien du Pilier de Dragon").
+-define(BD323, "Bénédiction de Nidhogg, Bonus DGT Crit +{0}% et RÉD DGT +{1}%").
+-define(BN324, "Bénir").
+-define(BD324, "Chaque couche donne des Bonus de DGT de Compétence de +{0}%.Peut ajouter {1} couches").
+-define(BN325, "Gardien").
+-define(BD325, "Chaque couche apporte une RÉD DGT de +{0}%.Peut ajouter {1} couches").
+-define(BN326, "Puissance Maximale").
+-define(BD326, "PV +{0}0,000; ATQ +{1}0,000; DÉF +{2}0,000; Fracassement +{3}0,000").
+-define(BN327, "Bouclier de Neptune").
+-define(BD327, "Protection des Océans.Absorbe {1}0,000 dégâts ; Diminue les dégâts de l'ennemi à {0}0,000 ; Restaure {2}% des PV/s").
+-define(BN328, "Bouclier de Marée").
+-define(BD328, "Protection des Marées.Absorbe {0}% dégâts ; inflige {1}% dégâts aux ennemis à proximité avant de disparaître.").
+-define(BN329, "Bouclier d'Onde").
+-define(BD329, "Protection contre les Ondes.Absorbe {0}% de dégâts ; Pendant la période de compétence, restaure {1}% des PV/s").
+-define(BN330, "Force de Bataille").
+-define(BD330, "Obtenez {0} couches de Recherche de Bataille/s.Durée : {1}s (Bonus de DGT +2% à chaque pile)").
+-define(BN331, "Force de Durcissement").
+-define(BD331, "Gain de {0} couches d'Étude de Durcissement/s.Durée : {1} sec (RÉD DGT +2% avec chaque pile)").
+-define(BN332, "Bouclier d'Énergie Planétaire").
+-define(BD332, "Absorbe {1}0,000 de dégâts ; Diminue les dégâts de l'ennemi de {0}0,000").
+-define(BN333, "Dissuasion du Démon").
+-define(BD333, "Obtention d'une meilleure DÉF avec plus de joueurs présents").
+-define(BN334, "Cercle de Feu de Quiétude").
+-define(BD334, "Bonus DGT +{0}%, diminue de {1}% avec chaque ennemi à proximité jusqu'à {2}%").
+-define(BN30188, "").
+-define(BD30188, "").
+-define(BN10101, "Fête des Amis").
+-define(BD10101, "Niveau d'Intimité {0}
+ATQ +{1}.PV +{2}").
+-define(BN10201, "Bonus du Premier Chef de Guilde").
+-define(BN10202, "Bonus du Premier Chef de Guilde").
+-define(BN10203, "Bonus du Premier Chef de Guilde").
+-define(BN10204, "Bonus du Premier Chef de Guilde").
+-define(BN10205, "Bonus du Premier Chef de Guilde").
+-define(BN10206, "Bonus du Premier Chef de Guilde").
+-define(BN10207, "Bonus du Premier Chef de Guilde").
+-define(BN10208, "Bonus du Premier Chef de Guilde").
+-define(BN10209, "Bonus du Premier Chef de Guilde").
+-define(BN10210, "Bonus du Premier Chef de Guilde").
+-define(BN10211, "Bonus du Premier Enforcer de Guilde").
+-define(BN10212, "Bonus du Premier Enforcer de Guilde").
+-define(BN10213, "Bonus du Premier Enforcer de Guilde").
+-define(BN10214, "Bonus du Premier Enforcer de Guilde").
+-define(BN10215, "Bonus du Premier Enforcer de Guilde").
+-define(BN10216, "Bonus du Premier Enforcer de Guilde").
+-define(BN10217, "Bonus du Premier Enforcer de Guilde").
+-define(BN10218, "Bonus du Premier Enforcer de Guilde").
+-define(BN10219, "Bonus du Premier Enforcer de Guilde").
+-define(BN10220, "Bonus du Premier Enforcer de Guilde").
+-define(BN10221, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10222, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10223, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10224, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10225, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10226, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10227, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10228, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10229, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10230, "Bonus du Premier Chef Adjoint de Guilde").
+-define(BN10231, "Bonus du Premier Aîné de Guilde").
+-define(BN10232, "Bonus du Premier Aîné de Guilde").
+-define(BN10233, "Bonus du Premier Aîné de Guilde").
+-define(BN10234, "Bonus du Premier Aîné de Guilde").
+-define(BN10235, "Bonus du Premier Aîné de Guilde").
+-define(BN10236, "Bonus du Premier Aîné de Guilde").
+-define(BN10237, "Bonus du Premier Aîné de Guilde").
+-define(BN10238, "Bonus du Premier Aîné de Guilde").
+-define(BN10239, "Bonus du Premier Aîné de Guilde").
+-define(BN10240, "Bonus du Premier Aîné de Guilde").
+-define(BN10241, "Bonus du Premier Élite de Guilde").
+-define(BN10242, "Bonus du Premier Élite de Guilde").
+-define(BN10243, "Bonus du Premier Élite de Guilde").
+-define(BN10244, "Bonus du Premier Élite de Guilde").
+-define(BN10245, "Bonus du Premier Élite de Guilde").
+-define(BN10246, "Bonus du Premier Élite de Guilde").
+-define(BN10247, "Bonus du Premier Élite de Guilde").
+-define(BN10248, "Bonus du Premier Élite de Guilde").
+-define(BN10249, "Bonus du Premier Élite de Guilde").
+-define(BN10250, "Bonus du Premier Élite de Guilde").
+-define(BN10251, "Bonus du Premier Compagnon de Guilde").
+-define(BN10252, "Bonus du Premier Compagnon de Guilde").
+-define(BN10253, "Bonus du Premier Compagnon de Guilde").
+-define(BN10254, "Bonus du Premier Compagnon de Guilde").
+-define(BN10255, "Bonus du Premier Compagnon de Guilde").
+-define(BN10256, "Bonus du Premier Compagnon de Guilde").
+-define(BN10257, "Bonus du Premier Compagnon de Guilde").
+-define(BN10258, "Bonus du Premier Compagnon de Guilde").
+-define(BN10259, "Bonus du Premier Compagnon de Guilde").
+-define(BN10260, "Bonus du Premier Compagnon de Guilde").
+-define(BN10261, "Bonus du Second Chef de Guilde").
+-define(BN10262, "Bonus du Second Chef de Guilde").
+-define(BN10263, "Bonus du Second Chef de Guilde").
+-define(BN10264, "Bonus du Second Chef de Guilde").
+-define(BN10265, "Bonus du Second Chef de Guilde").
+-define(BN10266, "Bonus du Second Chef de Guilde").
+-define(BN10267, "Bonus du Second Chef de Guilde").
+-define(BN10268, "Bonus du Second Chef de Guilde").
+-define(BN10269, "Bonus du Second Chef de Guilde").
+-define(BN10270, "Bonus du Second Chef de Guilde").
+-define(BN10271, "Bonus du Second Enforcer de Guilde").
+-define(BN10272, "Bonus du Second Enforcer de Guilde").
+-define(BN10273, "Bonus du Second Enforcer de Guilde").
+-define(BN10274, "Bonus du Second Enforcer de Guilde").
+-define(BN10275, "Bonus du Second Enforcer de Guilde").
+-define(BN10276, "Bonus du Second Enforcer de Guilde").
+-define(BN10277, "Bonus du Second Enforcer de Guilde").
+-define(BN10278, "Bonus du Second Enforcer de Guilde").
+-define(BN10279, "Bonus du Second Enforcer de Guilde").
+-define(BN10280, "Bonus du Second Enforcer de Guilde").
+-define(BN10281, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10282, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10283, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10284, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10285, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10286, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10287, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10288, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10289, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10290, "Bonus du Second Chef Adjoint de Guilde").
+-define(BN10291, "Bonus du Second Aîné de Guilde").
+-define(BN10292, "Bonus du Second Aîné de Guilde").
+-define(BN10293, "Bonus du Second Aîné de Guilde").
+-define(BN10294, "Bonus du Second Aîné de Guilde").
+-define(BN10295, "Bonus du Second Aîné de Guilde").
+-define(BN10296, "Bonus du Second Aîné de Guilde").
+-define(BN10297, "Bonus du Second Aîné de Guilde").
+-define(BN10298, "Bonus du Second Aîné de Guilde").
+-define(BN10299, "Bonus du Second Aîné de Guilde").
+-define(BN10300, "Bonus du Second Aîné de Guilde").
+-define(BN10301, "Bonus du Second Élite de Guilde").
+-define(BN10302, "Bonus du Second Élite de Guilde").
+-define(BN10303, "Bonus du Second Élite de Guilde").
+-define(BN10304, "Bonus du Second Élite de Guilde").
+-define(BN10305, "Bonus du Second Élite de Guilde").
+-define(BN10306, "Bonus du Second Élite de Guilde").
+-define(BN10307, "Bonus du Second Élite de Guilde").
+-define(BN10308, "Bonus du Second Élite de Guilde").
+-define(BN10309, "Bonus du Second Élite de Guilde").
+-define(BN10310, "Bonus du Second Élite de Guilde").
+-define(BN10311, "Bonus du Second Compagnon de Guilde").
+-define(BN10312, "Bonus du Second Compagnon de Guilde").
+-define(BN10313, "Bonus du Second Compagnon de Guilde").
+-define(BN10314, "Bonus du Second Compagnon de Guilde").
+-define(BN10315, "Bonus du Second Compagnon de Guilde").
+-define(BN10316, "Bonus du Second Compagnon de Guilde").
+-define(BN10317, "Bonus du Second Compagnon de Guilde").
+-define(BN10318, "Bonus du Second Compagnon de Guilde").
+-define(BN10319, "Bonus du Second Compagnon de Guilde").
+-define(BN10320, "Bonus du Second Compagnon de Guilde").
+-define(BN10321, "Bonus du Troisième Chef de Guilde").
+-define(BN10322, "Bonus du Troisième Chef de Guilde").
+-define(BN10323, "Bonus du Troisième Chef de Guilde").
+-define(BN10324, "Bonus du Troisième Chef de Guilde").
+-define(BN10325, "Bonus du Troisième Chef de Guilde").
+-define(BN10326, "Bonus du Troisième Chef de Guilde").
+-define(BN10327, "Bonus du Troisième Chef de Guilde").
+-define(BN10328, "Bonus du Troisième Chef de Guilde").
+-define(BN10329, "Bonus du Troisième Chef de Guilde").
+-define(BN10330, "Bonus du Troisième Chef de Guilde").
+-define(BN10331, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10332, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10333, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10334, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10335, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10336, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10337, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10338, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10339, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10340, "Bonus du Troisième Enforcer de Guilde").
+-define(BN10341, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10342, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10343, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10344, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10345, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10346, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10347, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10348, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10349, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10350, "Bonus du Troisième Chef Adjoint de Guilde").
+-define(BN10351, "Bonus du Troisième Aîné de Guilde").
+-define(BN10352, "Bonus du Troisième Aîné de Guilde").
+-define(BN10353, "Bonus du Troisième Aîné de Guilde").
+-define(BN10354, "Bonus du Troisième Aîné de Guilde").
+-define(BN10355, "Bonus du Troisième Aîné de Guilde").
+-define(BN10356, "Bonus du Troisième Aîné de Guilde").
+-define(BN10357, "Bonus du Troisième Aîné de Guilde").
+-define(BN10358, "Bonus du Troisième Aîné de Guilde").
+-define(BN10359, "Bonus du Troisième Aîné de Guilde").
+-define(BN10360, "Bonus du Troisième Aîné de Guilde").
+-define(BN10361, "Bonus du Troisième Élite de Guilde").
+-define(BN10362, "Bonus du Troisième Élite de Guilde").
+-define(BN10363, "Bonus du Troisième Élite de Guilde").
+-define(BN10364, "Bonus du Troisième Élite de Guilde").
+-define(BN10365, "Bonus du Troisième Élite de Guilde").
+-define(BN10366, "Bonus du Troisième Élite de Guilde").
+-define(BN10367, "Bonus du Troisième Élite de Guilde").
+-define(BN10368, "Bonus du Troisième Élite de Guilde").
+-define(BN10369, "Bonus du Troisième Élite de Guilde").
+-define(BN10370, "Bonus du Troisième Élite de Guilde").
+-define(BN10371, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10372, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10373, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10374, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10375, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10376, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10377, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10378, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10379, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10380, "Bonus du Troisième Compagnon de Guilde").
+-define(BN10381, "Bonus de Chef de Guilde").
+-define(BN10382, "Bonus de Chef de Guilde").
+-define(BN10383, "Bonus de Chef de Guilde").
+-define(BN10384, "Bonus de Chef de Guilde").
+-define(BN10385, "Bonus de Chef de Guilde").
+-define(BN10386, "Bonus de Chef de Guilde").
+-define(BN10387, "Bonus de Chef de Guilde").
+-define(BN10388, "Bonus de Chef de Guilde").
+-define(BN10389, "Bonus de Chef de Guilde").
+-define(BN10390, "Bonus de Chef de Guilde").
+-define(BN10391, "Bonus d'Enforcer de Guilde").
+-define(BN10392, "Bonus d'Enforcer de Guilde").
+-define(BN10393, "Bonus d'Enforcer de Guilde").
+-define(BN10394, "Bonus d'Enforcer de Guilde").
+-define(BN10395, "Bonus d'Enforcer de Guilde").
+-define(BN10396, "Bonus d'Enforcer de Guilde").
+-define(BN10397, "Bonus d'Enforcer de Guilde").
+-define(BN10398, "Bonus d'Enforcer de Guilde").
+-define(BN10399, "Bonus d'Enforcer de Guilde").
+-define(BN10400, "Bonus d'Enforcer de Guilde").
+-define(BN10401, "Bonus de Chef Adjoint de Guilde").
+-define(BN10402, "Bonus de Chef Adjoint de Guilde").
+-define(BN10403, "Bonus de Chef Adjoint de Guilde").
+-define(BN10404, "Bonus de Chef Adjoint de Guilde").
+-define(BN10405, "Bonus de Chef Adjoint de Guilde").
+-define(BN10406, "Bonus de Chef Adjoint de Guilde").
+-define(BN10407, "Bonus de Chef Adjoint de Guilde").
+-define(BN10408, "Bonus de Chef Adjoint de Guilde").
+-define(BN10409, "Bonus de Chef Adjoint de Guilde").
+-define(BN10410, "Bonus de Chef Adjoint de Guilde").
+-define(BN10411, "Bonus d'Aîné de Guilde").
+-define(BN10412, "Bonus d'Aîné de Guilde").
+-define(BN10413, "Bonus d'Aîné de Guilde").
+-define(BN10414, "Bonus d'Aîné de Guilde").
+-define(BN10415, "Bonus d'Aîné de Guilde").
+-define(BN10416, "Bonus d'Aîné de Guilde").
+-define(BN10417, "Bonus d'Aîné de Guilde").
+-define(BN10418, "Bonus d'Aîné de Guilde").
+-define(BN10419, "Bonus d'Aîné de Guilde").
+-define(BN10420, "Bonus d'Aîné de Guilde").
+-define(BN10421, "Bonus d'Élite de Guilde").
+-define(BN10422, "Bonus d'Élite de Guilde").
+-define(BN10423, "Bonus d'Élite de Guilde").
+-define(BN10424, "Bonus d'Élite de Guilde").
+-define(BN10425, "Bonus d'Élite de Guilde").
+-define(BN10426, "Bonus d'Élite de Guilde").
+-define(BN10427, "Bonus d'Élite de Guilde").
+-define(BN10428, "Bonus d'Élite de Guilde").
+-define(BN10429, "Bonus d'Élite de Guilde").
+-define(BN10430, "Bonus d'Élite de Guilde").
+-define(BN10431, "Bonus de Compagnon de Guilde").
+-define(BN10432, "Bonus de Compagnon de Guilde").
+-define(BN10433, "Bonus de Compagnon de Guilde").
+-define(BN10434, "Bonus de Compagnon de Guilde").
+-define(BN10435, "Bonus de Compagnon de Guilde").
+-define(BN10436, "Bonus de Compagnon de Guilde").
+-define(BN10437, "Bonus de Compagnon de Guilde").
+-define(BN10438, "Bonus de Compagnon de Guilde").
+-define(BN10439, "Bonus de Compagnon de Guilde").
+-define(BN10440, "Bonus de Compagnon de Guilde").
+-define(BD10201, "Guilde Niveau : {0}, stat bonus : ATQ +{1}, PV +{2}, Fracassement +{3}, Déf +{4}").
+-define(BN30025, "Augmentation des PV Max").
+-define(BD30025, "PV MAX +{0}%").
+-define(BN100001, "Bonus d'EXP du Classement Mondial").
+-define(BD100001, "EXP gagnée en AFK, Feu de Joie et bonus pour tuer des monstres +<color=#dd2b2b>{0}%</color>").
+-define(BN100002, "Bonus Privilèges VIP").
+-define(BD100002, "EXP d'AFK +{0}%").
+-define(BN100003, "Bonus Privilèges VIP").
+-define(BD100003, "EXP d'AFK +{0}%").
+-define(BN100004, "Bonus Privilèges VIP").
+-define(BD100004, "EXP d'AFK +{0}%").
+-define(BN1001001, "Bonus d'EXP de Prière").
+-define(BD1001001, "Bonus d'EXP d'AFK et de Monstre {0}%").
+-define(BN1000201, "Potion d'EXP 1.5X").
+-define(BN1000202, "Potion d'EXP 2X").
+-define(BN1000203, "Potion d'EXP 3X").
+-define(BN1000204, "Potion d'EXP 2.5X").
+-define(BN1000301, "Bonus d'Équipe (2 joueurs)").
+-define(BN1000302, "Bonus d'Équipe (3 joueurs)").
+-define(BN1000303, "Bonus d'Équipe (4 joueurs)").
+-define(BN1000304, "Inspirer").
+-define(BN1000305, "Bonus d'EXP de Bannière de Guerre 1").
+-define(BN1000306, "Bonus d'EXP de Bannière de Guerre 2").
+-define(BD1000201, "EXP de Monstre +{0}% et EXP d'AFK +{1}%").
+-define(BD1000202, "EXP de Monstre +{0}%").
+-define(BD1000203, "EXP de Monstre +{0}% et EXP d'AFK +{1}%").
+-define(BD1000204, "EXP de Monstre +{0}% et EXP d'AFK +{1}%").
+-define(BD1000301, "EXP de Monstre +{0}%").
+-define(BD1000302, "EXP de Monstre +{0}%").
+-define(BD1000303, "EXP de Monstre +{0}%").
+-define(BD1000304, "Augmente de {0}% les DGT finaux.Rampe jusqu'à {1} pile(s)").
+-define(BD1000305, "EXP de Monstre +{0}%").
+-define(BD1000306, "EXP de Monstre +{0}%").
+-define(BN1001500, "Dominateur Arcus").
+-define(BD1001500, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001501, "Inspiration de Série de Victoire de Défi de Guilde").
+-define(BD1001501, "Augmente de {0}% les DGT finaux").
+-define(BN1001510, "Dragon Roi de la Tempête").
+-define(BD1001510, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001511, "Serveur Dominion_S1").
+-define(BD1001511, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001512, "Serveur Dominion_S1").
+-define(BD1001512, "PV +5990, ATQ +284, DÉF +105, Fracassement +113").
+-define(BN1001513, "Serveur Dominion_S1").
+-define(BD1001513, "PV +5391, ATQ +255, DÉF +95, Fracassement +101").
+-define(BN1001514, "Serveur Dominion_S1").
+-define(BD1001514, "PV +4792, ATQ +227, DÉF +84, Fracassement +90").
+-define(BN1001515, "Serveur Dominion_S2").
+-define(BD1001515, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001516, "Serveur Dominion_S2").
+-define(BD1001516, "PV +5691, ATQ +270, DÉF +100, Fracassement +107").
+-define(BN1001517, "Serveur Dominion_S2").
+-define(BD1001517, "PV +5121, ATQ +243, DÉF +90, Fracassement +96").
+-define(BN1001518, "Inspirer").
+-define(BD1001518, "Réduction DGT +{0}%, s'empile jusqu'à {1} fois").
+-define(BN1001519, "Inspirer").
+-define(BD1001519, "Bonus DGT +{0}%, s'empile jusqu'à {1} fois").
+-define(BN1001520, "Serveur Dominion_S2").
+-define(BD1001520, "PV +4552, ATQ +216, DÉF +80, Fracassement +86").
+-define(BN1001521, "Serveur Dominion_S3").
+-define(BD1001521, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001522, "Serveur Dominion_S3").
+-define(BD1001522, "PV +5391, ATQ +255, DÉF +95, Fracassement +101").
+-define(BN1001523, "Serveur Dominion_S3").
+-define(BD1001523, "PV +4852, ATQ +230, DÉF +85, Fracassement +91").
+-define(BN1001524, "Serveur Dominion_S3").
+-define(BD1001524, "PV +4313, ATQ +204, DÉF +76, Fracassement +81").
+-define(BN1001525, "Serveur Dominion_S4").
+-define(BD1001525, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001526, "Serveur Dominion_S4").
+-define(BD1001526, "PV +5092, ATQ +241, DÉF +89, Fracassement +96").
+-define(BN1001527, "Serveur Dominion_S4").
+-define(BD1001527, "PV +4582, ATQ +217, DÉF +80, Fracassement +86").
+-define(BN1001528, "Serveur Dominion_S4").
+-define(BD1001528, "PV +4073, ATQ +193, DÉF +71, Fracassement +77").
+-define(BN1001529, "Serveur Dominion_A1").
+-define(BD1001529, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001530, "Serveur Dominion_A1").
+-define(BD1001530, "PV +4493, ATQ +213, DÉF +79, Fracassement +84").
+-define(BN1001531, "Serveur Dominion_A1").
+-define(BD1001531, "PV +4043, ATQ +192, DÉF +71, Fracassement +76").
+-define(BN1001532, "Serveur Dominion_A1").
+-define(BD1001532, "PV +3594, ATQ +170, DÉF +63, Fracassement +68").
+-define(BN1001533, "Serveur Dominion_A2").
+-define(BD1001533, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001534, "Serveur Dominion_A2").
+-define(BD1001534, "PV +4193, ATQ +199, DÉF +74, Fracassement +79").
+-define(BN1001535, "Serveur Dominion_A2").
+-define(BD1001535, "PV +3774, ATQ +179, DÉF +66, Fracassement +71").
+-define(BN1001536, "Serveur Dominion_A2").
+-define(BD1001536, "PV +3354, ATQ +159, DÉF +59, Fracassement +63").
+-define(BN1001537, "Serveur Dominion_A3").
+-define(BD1001537, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001538, "Serveur Dominion_A3").
+-define(BD1001538, "PV +3894, ATQ +184, DÉF +68, Fracassement +73").
+-define(BN1001539, "Serveur Dominion_A3").
+-define(BD1001539, "PV +3504, ATQ +166, DÉF +61, Fracassement +66").
+-define(BN1001540, "Serveur Dominion_A3").
+-define(BD1001540, "PV +3115, ATQ +148, DÉF +55, Fracassement +59").
+-define(BN1001541, "Serveur Dominion_A4").
+-define(BD1001541, "ATQ, PV, Fracassement et Bonus DÉF +{0}%").
+-define(BN1001542, "Serveur Dominion_A4").
+-define(BD1001542, "PV +3594, ATQ +170, DÉF +63, Fracassement +68").
+-define(BN1001543, "Serveur Dominion_A4").
+-define(BD1001543, "PV +3235, ATQ +153, DÉF +57, Fracassement +61").
+-define(BN1001544, "Serveur Dominion_A4").
+-define(BD1001544, "PV +2875, ATQ +136, DÉF +50, Fracassement +54").
+-define(BN1001600, "Bonus d'EXP AFK").
+-define(BD1001600, "EXP d'AFK +{0}%").
+-define(BN1001601, "Avantages de Carte Mensuelle").
+-define(BD1001601, "Butin d'Équipement Ultime +{0}%").
+-define(BN1001602, "Motivation du Serveur").
+-define(BN1001603, "Motivation du Serveur").
+-define(BN1001604, "Motivation du Serveur").
+-define(BN1001605, "Motivation du Serveur").
+-define(BD1001602, "DGT de Raid d'Histoire +{0}%, EXP de Raid d'Histoire +{1}%").
+-define(BD1001603, "DGT de Raid d'Histoire +{0}%, EXP de Raid d'Histoire +{1}%").
+-define(BD1001604, "DGT de Raid d'Histoire +{0}%, EXP de Raid d'Histoire +{1}%").
+-define(BD1001605, "DGT de Raid d'Histoire +{0}%, EXP de Raid d'Histoire +{1}%").
+-define(BN1001606, "Ordre des Chevaliers de Dieu").
+-define(BD1001606, "Chance de Taux de Butin de l'Équipement de Qualité Supérieure du Bois de la Mort +{0}%").
+-define(BF1001606, "Ordre des Chevaliers de Dieu").
+-define(SN307101, "Explosion Renforcée I").
+-define(SN307201, "Explosion Renforcée Ⅱ").
+-define(SN307301, "Explosion Renforcée Ⅲ").
+-define(SN307401, "Explosion Renforcée Ⅳ").
+-define(SN308101, "Honneur Ⅰ").
+-define(SN308201, "Honneur Ⅱ").
+-define(SN308301, "Honneur Ⅲ").
+-define(SN308401, "Honneur Ⅳ").
+-define(SN309201, "Œil de Faucon II").
+-define(SN309301, "Œil de Faucon Ⅲ").
+-define(SN309401, "Œil de Faucon Ⅳ").
+-define(SN310201, "Dégâts Crit Ⅱ").
+-define(SN310301, "Dégâts Crit Ⅲ").
+-define(SN310401, "Dégâts Crit Ⅳ").
+-define(SN311201, "DGT de Toucher Crit Ⅱ").
+-define(SN311301, "DGT de Toucher Crit Ⅲ").
+-define(SN311401, "DGT de Toucher Crit Ⅳ").
+-define(SN312301, "DGT Ⅲ").
+-define(SN312401, "DGT Ⅳ").
+-define(SN313301, "Toucher Crit Ⅲ").
+-define(SN313401, "Toucher Crit Ⅳ").
+-define(SN407101, "Résistance de Frappe Crit I").
+-define(SN407201, "Résistance de Frappe Crit Ⅱ").
+-define(SN407301, "Résistance de Frappe Crit Ⅲ").
+-define(SN407401, "Résistance de Frappe Crit Ⅳ").
+-define(SN408201, "Dextérité II").
+-define(SN408301, "Dextérité Ⅲ").
+-define(SN408401, "Dextérité Ⅳ").
+-define(SN409301, "Réduction des DGT Ⅲ").
+-define(SN409401, "Réduction des DGT Ⅳ").
+-define(SN410301, "Résistance Toucher Crit Ⅲ").
+-define(SN410401, "Résistance Toucher Crit Ⅳ").
+-define(SN501101, "Esprit du Feu I").
+-define(SN501201, "Esprit du Feu Ⅱ").
+-define(SN501301, "Esprit du Feu Ⅲ").
+-define(SN501401, "Esprit du Feu Ⅳ").
+-define(SN502101, "Esprit de l'Eau I").
+-define(SN502201, "Esprit de l'Eau Ⅱ").
+-define(SN502301, "Esprit de l'Eau Ⅲ").
+-define(SN502401, "Esprit de l'Eau Ⅳ").
+-define(SN503101, "Esprit du Vent I").
+-define(SN503201, "Esprit du Vent Ⅱ").
+-define(SN503301, "Esprit du Vent Ⅲ").
+-define(SN503401, "Esprit du Vent Ⅳ").
+-define(SN504101, "Esprit de la Terre I").
+-define(SN504201, "Esprit de la Terre Ⅱ").
+-define(SN504301, "Esprit de la Terre Ⅲ").
+-define(SN504401, "Esprit de la Terre Ⅳ").
+-define(SN505101, "Résistance au Feu I").
+-define(SN505201, "Résistance au Feu Ⅱ").
+-define(SN505301, "Résistance au Feu Ⅲ").
+-define(SN505401, "Résistance au Feu Ⅳ").
+-define(SN506101, "Résistance à l'Eau I").
+-define(SN506201, "Résistance à l'Eau Ⅱ").
+-define(SN506301, "Résistance à l'Eau Ⅲ").
+-define(SN506401, "Résistance à l'Eau Ⅳ").
+-define(SN507101, "Résistance au Vent I").
+-define(SN507201, "Résistance au Vent Ⅱ").
+-define(SN507301, "Résistance au Vent Ⅲ").
+-define(SN507401, "Résistance au Vent Ⅳ").
+-define(SN508101, "Résistance de la Terre I").
+-define(SN508201, "Résistance de la Terre Ⅱ").
+-define(SN508301, "Résistance de la Terre Ⅲ").
+-define(SN508401, "Résistance de la Terre Ⅳ").
+-define(SN509101, "Spécialisation Ⅰ").
+-define(SN509201, "Spécialisation Ⅱ").
+-define(SN509301, "Spécialisation Ⅲ").
+-define(SN509401, "Spécialisation Ⅳ").
+-define(SN509501, "Résilience Ⅰ").
+-define(SN509601, "Résilience Ⅱ").
+-define(SN509701, "Résilience Ⅲ").
+-define(SN509801, "Résilience Ⅳ").
+-define(SN510201, "Honneur Ⅱ").
+-define(SN510301, "Honneur Ⅲ").
+-define(SN510401, "Honneur Ⅳ").
+-define(SN511201, "Protection II").
+-define(SN511301, "Protection Ⅲ").
+-define(SN511401, "Protection Ⅳ").
+-define(SN512301, "Frappe Ⅲ").
+-define(SN512401, "Frappe Ⅳ").
+-define(SN513301, "Fragilité III").
+-define(SN513401, "Fragilité Ⅳ").
+-define(SN514301, "Excellence Ⅲ").
+-define(SN514401, "Excellence Ⅳ").
+-define(SN515301, "Résistance d'Excellence Ⅲ").
+-define(SN515401, "Résistance d'Excellence Ⅳ").
+-define(SN601101, "Défense d'Armure de Fer I").
+-define(SN602101, "La Vie Après la Vie I").
+-define(SN603101, "Renforcement d'Attaque Ⅰ").
+-define(SN604101, "Résonance d'Âme I").
+-define(SN605101, "Défense d'Armure de Fer Ⅰ").
+-define(SN606101, "La Vie Après la Vie Ⅱ").
+-define(SN607101, "Renforcement d'Attaque Ⅱ").
+-define(SN608101, "Défense d'Armure de Fer Ⅲ").
+-define(SN609101, "Défense d'Armure de Fer Ⅲ").
+-define(SN610101, "La Vie Après la Vie Ⅲ").
+-define(SN611101, "Renforcement d'Attaque Ⅲ").
+-define(SN612101, "Rupture Féroce Ⅲ").
+-define(SN613101, "Résonance d'Âme I").
+-define(SN614101, "Résonance d'Âme I").
+-define(SN614201, "Résilience").
+-define(SN615101, "Résonance d'Âme I").
+-define(SN616101, "Résonance d'Âme I").
+-define(SN617101, "Résonance d'Âme Ⅱ").
+-define(SN617201, "Réduction du Blocage").
+-define(SN618101, "Résonance d'Âme Ⅱ").
+-define(SN619101, "Résonance d'Âme Ⅱ").
+-define(SN620101, "Résonance d'Âme Ⅱ").
+-define(SN620201, "Percée de Blocage").
+-define(SN621101, "Résonance d'Âme Ⅱ").
+-define(SN621201, "Réduction DGT Excellent").
+-define(SN622101, "Résonance d'Âme Ⅱ").
+-define(SN622201, "Bonus DGT Excellent").
+-define(SN623101, "Résonance d'Âme Ⅱ").
+-define(SN623201, "Réduction DGT de Compétence").
+-define(SN624101, "Résonance d'Âme Ⅱ").
+-define(SN624201, "Réduction de DGT").
+-define(SN701101, "Croissance Accélérée").
+-define(SN702101, "Mépris").
+-define(SN703101, "Intrépide").
+-define(SN704101, "Honneur").
+-define(SN705101, "Augmentation d'Attaque").
+-define(SN706101, "Augmentation de Croissance").
+-define(SN707101, "Croissance Rapide").
+-define(SN801101, "ATQ Ⅰ").
+-define(SN801102, "ATQ Ⅱ").
+-define(SN801103, "ATQ Ⅲ").
+-define(SN801104, "ATQ Ⅳ").
+-define(SN801105, "ATQ V").
+-define(SN801201, "PV Ⅰ").
+-define(SN801202, "PV Ⅱ").
+-define(SN801203, "PV Ⅲ").
+-define(SN801204, "PV Ⅳ").
+-define(SN801205, "PV V").
+-define(SN801301, "Toucher Ⅰ").
+-define(SN801302, "Toucher Ⅱ").
+-define(SN801303, "Toucher Ⅲ").
+-define(SN801304, "Toucher Ⅳ").
+-define(SN801305, "Toucher V").
+-define(SN801401, "Esquive Ⅰ").
+-define(SN801402, "Esquive Ⅱ").
+-define(SN801403, "Esquive Ⅲ").
+-define(SN801404, "Esquive Ⅳ").
+-define(SN801405, "Esquive V").
+-define(SN802101, "Fracassement Ⅰ").
+-define(SN802102, "Fracassement Ⅱ").
+-define(SN802103, "Fracassement Ⅲ").
+-define(SN802104, "Fracassement Ⅳ").
+-define(SN802105, "Fracassement V").
+-define(SN802201, "DÉF Ⅰ").
+-define(SN802202, "DÉF Ⅱ").
+-define(SN802203, "DÉF Ⅲ").
+-define(SN802204, "DÉF Ⅳ").
+-define(SN802205, "DÉF V").
+-define(SN802301, "Crit Ⅰ").
+-define(SN802302, "Crit Ⅱ").
+-define(SN802303, "Crit Ⅲ").
+-define(SN802304, "Crit Ⅳ").
+-define(SN802305, "Crit V").
+-define(SN802401, "Ténacité Ⅰ").
+-define(SN802402, "Ténacité Ⅱ").
+-define(SN802403, "Ténacité Ⅲ").
+-define(SN802404, "Ténacité Ⅳ").
+-define(SN802405, "Ténacité V").
+-define(SN803101, "Explosion I").
+-define(SN803102, "Explosion Ⅱ").
+-define(SN803103, "Explosion Ⅲ").
+-define(SN803104, "Explosion Ⅳ").
+-define(SN803105, "Explosion V").
+-define(SN803201, "Résilience Ⅰ").
+-define(SN803202, "Résilience Ⅱ").
+-define(SN803203, "Résilience Ⅲ").
+-define(SN803204, "Résilience Ⅳ").
+-define(SN803205, "Résilience V").
+-define(SN803301, "Résistance au Blocage I").
+-define(SN803302, "Résistance au Blocage Ⅱ").
+-define(SN803303, "Résistance au Blocage Ⅲ").
+-define(SN803304, "Résistance au Blocage Ⅳ").
+-define(SN803305, "Résistance au Blocage V").
+-define(SN803401, "Blocage Ⅰ").
+-define(SN803402, "Blocage Ⅱ").
+-define(SN803403, "Blocage Ⅲ").
+-define(SN803404, "Blocage Ⅳ").
+-define(SN803405, "Blocage V").
+-define(SD307101, "Taux Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD307201, "Taux Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD307301, "Taux Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD307401, "Taux Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD308101, "Bonus de DGT JcJ de Personnage augmente de {0}% après avoir équipé la compétence").
+-define(SD308201, "Bonus de DGT JcJ de Personnage augmente de {0}% après avoir équipé la compétence").
+-define(SD308301, "Bonus de DGT JcJ de Personnage augmente de {0}% après avoir équipé la compétence").
+-define(SD308401, "Bonus de DGT JcJ de Personnage augmente de {0}% après avoir équipé la compétence").
+-define(SD309201, "Taux de Toucher de Personnage +{0}% après avoir équipé la compétence").
+-define(SD309301, "Taux de Toucher de Personnage +{0}% après avoir équipé la compétence").
+-define(SD309401, "Taux de Toucher de Personnage +{0}% après avoir équipé la compétence").
+-define(SD310201, "Bonus de DGT Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD310301, "Bonus de DGT Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD310401, "Bonus de DGT Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD311201, "Bonus de d'ATQ de Focalisation de Personnage augmente de {0}% après avoir équipé la compétence").
+-define(SD311301, "Bonus de DGT de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD311401, "Bonus de DGT de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD312301, "Bonus de DGT de Personnage augmente de {0}% après avoir équipé la compétence").
+-define(SD312401, "Bonus de DGT de Personnage augmente de {0}% après avoir équipé la compétence").
+-define(SD313301, "Taux de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD313401, "Taux de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD407101, "Taux de Résistance de Personnage +{0}% après avoir équipé la compétence").
+-define(SD407201, "Taux de Résistance de Personnage +{0}% après avoir équipé la compétence").
+-define(SD407301, "Taux de Résistance de Personnage +{0}% après avoir équipé la compétence").
+-define(SD407401, "Taux de Résistance de Personnage +{0}% après avoir équipé la compétence").
+-define(SD408201, "Taux d'Esquive de Personnage +{0}% après avoir équipé la compétence").
+-define(SD408301, "Taux d'Esquive de Personnage +{0}% après avoir équipé la compétence").
+-define(SD408401, "Taux d'Esquive de Personnage +{0}% après avoir équipé la compétence").
+-define(SD409301, "Réduction de DGT de Personnage augmente de {0}% après avoir équipé la compétence").
+-define(SD409401, "Réduction de DGT de Personnage augmente de {0}% après avoir équipé la compétence").
+-define(SD410301, "Taux Anti-focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD410401, "Taux Anti-focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD501101, "ATQ de Feu de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD501201, "ATQ de Feu de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD501301, "ATQ de Feu de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD501401, "ATQ de Feu de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD502101, "ATQ d'Eau de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD502201, "ATQ d'Eau de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD502301, "ATQ d'Eau de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD502401, "ATQ d'Eau de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD503101, "ATQ de Vent de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD503201, "ATQ de Vent de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD503301, "ATQ de Vent de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD503401, "ATQ de Vent de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD504101, "ATQ de la Terre de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD504201, "ATQ de la Terre de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD504301, "ATQ de la Terre de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD504401, "ATQ de la Terre de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD505101, "DÉF de Feu de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD505201, "DÉF de Feu de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD505301, "DÉF de Feu de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD505401, "DÉF de Feu de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD506101, "DÉF d'Eau de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD506201, "DÉF d'Eau de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD506301, "DÉF d'Eau de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD506401, "DÉF d'Eau de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD507101, "DÉF du Vent de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD507201, "DÉF du Vent de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD507301, "DÉF du Vent de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD507401, "DÉF du Vent de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD508101, "DÉF de la Terre de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD508201, "DÉF de la Terre de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD508301, "DÉF de la Terre de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD508401, "DÉF de la Terre de Personnage augmente de {0} après avoir équipé la compétence").
+-define(SD509101, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(SD509201, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(SD509301, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(SD509401, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(SD509501, "Équipez cette compétence pour accorder au personnage une Réduction de DGT de Compétence +{0}%").
+-define(SD509601, "Équipez cette compétence pour accorder au personnage une Réduction de DGT de Compétence +{0}%").
+-define(SD509701, "Équipez cette compétence pour accorder au personnage une Réduction de DGT de Compétence +{0}%").
+-define(SD509801, "Équipez cette compétence pour accorder au personnage une Réduction de DGT de Compétence +{0}%").
+-define(SD510201, "Bonus de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD510301, "Bonus de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD510401, "Bonus de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD511201, "Réduction de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD511301, "Réduction de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD511401, "Réduction de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD512301, "Taux de Châtiment de Personnage +{0}% après avoir équipé la compétence").
+-define(SD512401, "Taux de Châtiment de Personnage +2.8% après avoir équipé la compétence").
+-define(SD513301, "Taux de Fragilité de Personnage {0}% après avoir équipé la compétence").
+-define(SD513401, "Taux de Fragilité de Personnage {0}% après avoir équipé la compétence").
+-define(SD514301, "Taux Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD514401, "Taux Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD515301, "Taux Anti-Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD515401, "Taux Anti-Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD601101, "Âmes Divines Actuelles (équipement inclus) Bonus de Déf {0}%").
+-define(SD602101, "Âmes Divines Actuelles (équipement inclus) Bonus de PV {0}%").
+-define(SD603101, "Âmes Divines Actuelles (équipement inclus) Bonus d'ATQ {0}%").
+-define(SD604101, "Âmes Divines Actuelles (équipement inclus) Bonus de Fracassement {0}%").
+-define(SD605101, "Âmes Divines Actuelles (équipement inclus) Bonus de Déf {0}%").
+-define(SD606101, "Âmes Divines Actuelles (équipement inclus) Bonus de PV {0}%").
+-define(SD607101, "Âmes Divines Actuelles (équipement inclus) Bonus d'ATQ {0}%").
+-define(SD608101, "Âmes Divines Actuelles (équipement inclus) Bonus de Fracassement {0}%").
+-define(SD609101, "Âmes Divines Actuelles (équipement inclus) Bonus de Déf {0}%").
+-define(SD610101, "Âmes Divines Actuelles (équipement inclus) Bonus de PV {0}%").
+-define(SD611101, "Âmes Divines Actuelles (équipement inclus) Bonus d'ATQ {0}%").
+-define(SD612101, "Âmes Divines Actuelles (équipement inclus) Bonus de Fracassement {0}%").
+-define(SD613101, "Âmes Divines Actuelles (équipement inclus) Bonus de Déf {0}%").
+-define(SD614101, "Âmes Divines Actuelles (équipement inclus) Bonus de Fracassement {0}%").
+-define(SD614201, "Le Taux de Résistance augmente de {0}%").
+-define(SD615101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD616101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD617101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD617201, "Taux d'Anti-Focalisation +{0}%").
+-define(SD618101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD619101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD620101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD620201, "Percée de Blocage augmente de {0}%").
+-define(SD621101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD621201, "Réduction DGT Excellent +{0}%").
+-define(SD622101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD622201, "Bonus DGT Excellent +{0}%").
+-define(SD623101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD623201, "Réduction DGT de Compétence +{0}%").
+-define(SD624101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD624201, "Réduction DGT +{0}%").
+-define(SD701101, "EXP d'AFK +{0}%").
+-define(SD702101, "DGT infligés aux Sbires +{0}%").
+-define(SD703101, "DGT infligés au Boss +{0}%").
+-define(SD704101, "Réduction de DGT JcJ +{0}%").
+-define(SD705101, "Bonus DGT JcE +{0}%, tous les 10 niveaux +{1} ATQ").
+-define(SD706101, "EXP de Monstre +{0}%").
+-define(SD707101, "EXP de Monstre +{0}%").
+-define(SD801101, "L'ATQ du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801102, "L'ATQ du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801103, "L'ATQ du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801104, "L'ATQ du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801105, "L'ATQ du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801201, "L'ATQ du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801202, "Les PV du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801203, "Les PV du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801204, "Les PV du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801205, "Les PV du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801301, "Le Toucher du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801302, "Le Toucher du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801303, "Le Toucher du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801304, "Le Toucher du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801305, "Le Toucher du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801401, "L'Esquive du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801402, "L'Esquive du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801403, "L'Esquive du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801404, "L'Esquive du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD801405, "L'Esquive du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802101, "Le Fracassement du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802102, "Le Fracassement du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802103, "Le Fracassement du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802104, "Le Fracassement du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802105, "Le Fracassement du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802201, "La DÉF du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802202, "La DÉF du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802203, "La DÉF du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802204, "La DÉF du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802205, "La DÉF du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802301, "Le Crit du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802302, "Le Crit du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802303, "Le Crit du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802304, "Le Crit du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802305, "Le Crit du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802401, "La Ténacité du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802402, "La Ténacité du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802403, "La Ténacité du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802404, "La Ténacité du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD802405, "La Ténacité du personnage augmente de {0} après avoir déverrouillé la compétence").
+-define(SD803101, "Le Taux Crit de Personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803102, "Le Taux Crit de Personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803103, "Le Taux Crit de Personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803104, "Le Taux Crit de Personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803105, "Le Taux Crit de Personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803201, "Le Taux de Résistance de personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803202, "Le Taux de Résistance de personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803203, "Le Taux de Résistance de personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803204, "Le Taux de Résistance de personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803205, "Le Taux de Résistance de personnage augmente de +{0}% après avoir équipé la compétence").
+-define(SD803301, "Le Taux d'Anti-blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SD803302, "Le Taux d'Anti-blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SD803303, "Le Taux d'Anti-blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SD803304, "Le Taux d'Anti-blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SD803305, "Le Taux d'Anti-blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SD803401, "Le Taux de Blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SD803402, "Le Taux de Blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SD803403, "Le Taux de Blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SD803404, "Le Taux de Blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SD803405, "Le Taux de Blocage du personnage augmente de {0}% après avoir déverrouillé la compétence").
+-define(SN1004001, "Tenir Tête avec une Épée").
+-define(SD1004001, "ATQ +{0}
+PV +{1}
+Fracassement +{2}
+DÉF +{3}
+Bonus ATQ +{4}%
+Bonus PV +{5}%
+Bonus de Fracassement +{6}%
+Bonus DÉF +{7}%").
+-define(SN1004002, "Culasse - Danse").
+-define(SN1004003, "Fourreau d'Épée - Ming").
+-define(SN1004004, "Crête d'Épée - Zheng").
+-define(SN1004005, "Bord - Zhan").
+-define(SN1004006, "Dragon Caché").
+-define(SN1004007, "Culasse - You").
+-define(SN1004008, "Fourreau d'Épée - Furtif").
+-define(SN1004009, "Crête d'Épée - Xi").
+-define(SN1004010, "Tranchant - Mi").
+-define(SN1004011, "Décision de Justice").
+-define(SN1004012, "Culasse - Jiao").
+-define(SN1004013, "Fourreau d'Épée - Jie").
+-define(SN1004014, "Crête d'Épée - Zha").
+-define(SN1004015, "Tranchant - Gui").
+-define(SN1004016, "Règne du Tonnerre").
+-define(SN1004017, "Culasse - Dou").
+-define(SN1004018, "Fourreau d'Épée - Wu").
+-define(SN1004019, "Crête d'Épée - Sheng").
+-define(SN1004020, "Tranchant - Feng").
+-define(SN1004026, "Chuchoteur de la Mort").
+-define(SN1004027, "Base de Hache - Arrêt").
+-define(SN1004028, "Manche de Hache - Blessure").
+-define(SN1004029, "Colonne de Hache - Chagrin").
+-define(SN1004030, "Lame de Hache - Mort").
+-define(SN1004031, "Dorure d'Épée Divine").
+-define(SN1004032, "Culasse - Wu").
+-define(SN1004033, "Fourreau d'Épée - Entaille").
+-define(SN1004034, "Crête d'Épée - Xi").
+-define(SN1004035, "Tranchant -Sheng").
+-define(SN1005001, "Bénédiction Divine").
+-define(SN1005002, "Corps de Baguette - Protection").
+-define(SN1005003, "Tête de Baguette - Gardien").
+-define(SN1005004, "Queue de Baguette - Bi").
+-define(SN1005005, "Pierre Magique - Illusion").
+-define(SN1005006, "Descente des Dragons").
+-define(SN1005007, "Corps de Baguette - Vent").
+-define(SN1005008, "Tête de Baguette - Vent").
+-define(SN1005009, "Queue de Baguette - Lei").
+-define(SN1005010, "Pierre Magique - Yin").
+-define(SN1005011, "Promesse Éternelle").
+-define(SN1005012, "Corps de Baguette - Lien").
+-define(SN1005013, "Tête de Baguette - Protection").
+-define(SN1005014, "Queue de Baguette - Xing").
+-define(SN1005015, "Pierre Magique - Jian").
+-define(SN1005016, "Protection Magique").
+-define(SN1005017, "Corps de Baguette - Chen").
+-define(SN1005018, "Tête de Baguette - Fusion").
+-define(SN1005019, "Queue de Baguette - Ming").
+-define(SN1005020, "Pierre Magique -Ordre").
+-define(SN1005026, "Feu de Phoenix").
+-define(SN1005027, "Corps de Baguette - Brûler").
+-define(SN1005028, "Tête de Baguette - Brûlure").
+-define(SN1005029, "Fin du Bâton - Immolation").
+-define(SN1005030, "Pierre Magique - Sacrée").
+-define(SN1005031, "Dorure de Bâton Divin").
+-define(SN1005032, "Corps de Baguette - Tonnerre").
+-define(SN1005033, "Tête de Baguette - Brûlure").
+-define(SN1005034, "Queue de Baguette - Bi").
+-define(SN1005035, "Pierre Magique -Ordre").
+-define(SN1006001, "Tirer le Soleil").
+-define(SN1006002, "Bras d'Arc - Ren").
+-define(SN1006003, "Fin d'Arc - Xiao").
+-define(SN1006004, "Corde d'Arc - Jing").
+-define(SN1006005, "Support de Flèches - Ji").
+-define(SN1006006, "Dévorer").
+-define(SN1006007, "Bras d'Arc - Fu").
+-define(SN1006008, "Fin d'Arc - Shan").
+-define(SN1006009, "Corde d'Arc - Xuan").
+-define(SN1006010, "Support de Flèches - Bian").
+-define(SN1006011, "Sceau de Gel").
+-define(SN1006012, "Bras d'Arc - Jie").
+-define(SN1006013, "Fin d'Arc - Chan").
+-define(SN1006014, "Corde d'Arc - Lie").
+-define(SN1006015, "Support de Flèches - Ling").
+-define(SN1006016, "Flamme Divine").
+-define(SN1006017, "Bras d'Arc - Chi").
+-define(SN1006018, "Fin d'Arc - Zhuo").
+-define(SN1006019, "Corde d'Arc - Ran").
+-define(SN1006020, "Support de Flèches - Rafale").
+-define(SN1006026, "Séparateur Céleste").
+-define(SN1006027, "Bras d'Arc - Écrasement").
+-define(SN1006028, "Fin d'Arc - Séparation").
+-define(SN1006029, "Corde d'Arc - Enterrer").
+-define(SN1006030, "Support de Flèches - Lumière").
+-define(SN1006031, "Sanctuaire de Dorure").
+-define(SN1006032, "Bras d'Arc - Ji").
+-define(SN1006033, "Fin d'Arc - Ling").
+-define(SN1006034, "Corde d'Arc - Lie").
+-define(SN1006035, "Support de Flèches - Ciel").
+-define(EASYSD150031, "EXP de Monstre +{0}% et EXP d'AFK +{1}%").
+-define(EASYSD150032, "Bonus DGT de Compétence +{0}%").
+-define(EASYSD150033, "EXP de Monstre +{0}% et EXP d'AFK +{1}%").
+-define(EASYSD150034, "Diminution des Dégâts Finaux +{0}%, Diminution des Dégâts Critiques +{1}%").
+-define(EASYSD1004001, "Compétence de Renforcement des Armes Divines").
+-define(SN239, "Royaume de l'Épée").
+-define(SN240, "Épée Céleste").
+-define(SN241, "Baptême de l'Épée").
+-define(SN242, "Unification").
+-define(SN243, "Tempête d'Épées").
+-define(SN244, "Âme de la Vengeance").
+-define(SN245, "Entaille Tirage").
+-define(SN246, "Entaille de Traversée d'âme").
+-define(SN247, "Frappe de Miroir").
+-define(SN248, "Ombre Obsédante").
+-define(SN468, "Premier - Étude Galante II").
+-define(SD468, "En entrant en combat, bénéficie d'une Étude Galante (Bonus de DGT +2% à chaque pile) {0} pile(s) pendant {1} sec").
+-define(SN469, "Pleine - Étude Galante III").
+-define(SD469, "Si les PV sont supérieurs à {0}%, lors d'une attaque, possède % de chances de bénéficier d'une Étude Galante (Bonus de DGT de +2% à chaque pile) {1} pile(s) pendant {2} sec.").
+-define(SN470, "Défense - Étude Galante III").
+-define(SD470, "En cas d'attaque, il y a {0}% de chance d'obtenir Étude Galante (Bonus de DGT +2% à chaque pile) {1} pile(s) pendant {2} sec").
+-define(SN471, "Premier - Force Galante").
+-define(SD471, "En entrant en combat, bénéficie d'une Force Galante (déclenche l'Étude de la Colère chaque seconde (Chaque pile de DGT Bonus +2%) {0} pile(s) pendant {1} sec) pendant {2} sec, ne peut pas être dissipé").
+-define(SN472, "Défense - Étude Galante II").
+-define(SD472, "En cas d'attaque, il y a {0}% de chance d'obtenir Étude Galante (Bonus de DGT +2% à chaque pile) {1} pile(s) pendant {2} sec").
+-define(SN473, "Attaque - Technique II").
+-define(SD473, "{0}% de chance d'obtenir un effet Technique (DGT de Compétence +15%) pendant {1} sec lors d'une attaque").
+-define(SN474, "Premier - Étude Galante III").
+-define(SD474, "En entrant en combat, bénéficie d'une Étude Galante (Bonus de DGT +2% à chaque pile) {0} pile(s) pendant {1} sec").
+-define(SN475, "Pleine - Technique III").
+-define(SD475, "Obtenez un effet Technique (DGT de Compétence +15%) pendant {1} sec lorsque les PV sont supérieurs à {0}%").
+-define(SN476, "Attaque - Regard de la Mort").
+-define(SD476, "{0}% de chance d'obtenir l'effet Regard de la Mort (DGT Finaux +{1}%.L'effet diminue de {2}% avec chaque joueur ennemi à proximité.{3}% au maximum) pendant {4} sec en attaquant").
+-define(SN477, "Pleine - Technique II").
+-define(SD477, "Obtenez un effet Technique (DGT de Compétence +15%) pendant {1} sec lorsque les PV sont supérieurs à {0}%").
+-define(SN478, "Défense - Technique II").
+-define(SD478, "{0}% de chance d'obtenir un effet Technique (DGT de Compétence +15%) pendant {1} sec cas d'attaque").
+-define(SN479, "Attaque - Technique III").
+-define(SD479, "{0}% de chance d'obtenir un effet Technique (DGT de Compétence +15%) pendant {1} sec lors d'une attaque").
+-define(SN480, "Défense - Technique III").
+-define(SD480, "{0}% de chance d'obtenir un effet Technique (DGT de Compétence +15%) pendant {1} sec cas d'attaque").
+-define(SN481, "Perte - Colère Infinie Ⅳ").
+-define(SD481, "Bénéficiez d'un effet de Colère Infinie (Bonus de DGT +40%) pendant {0} sec quand l'attaque est esquivée").
+-define(SN482, "Vitesse - Galant II").
+-define(SD482, "Lors d'une attaque, il y a {0}% de chance d'obtenir Galant (Bonus de DGT +10%) pendant {1} sec").
+-define(SN483, "Vitesse - Manie II").
+-define(SD483, "{0}% de chance de bénéficier d'un effet de Manie (Taux Crit +20%) pendant {1} sec en cas d'attaque").
+-define(SN484, "Vitesse - Galant III").
+-define(SD484, "Lors d'une attaque, il y a {0}% de chance d'obtenir Galant (Bonus de DGT +10%) pendant {1} sec").
+-define(SN485, "Vitesse - Manie III").
+-define(SD485, "{0}% de chance de bénéficier d'un effet de Manie (Taux Crit +20%) pendant {1} sec en cas d'attaque").
+-define(SN486, "Vitesse - Colère Infinie IV").
+-define(SD486, "{0}% de chance de bénéficier d'un effet de Colère Infinie (Bonus de DGT +40%) pendant {1} sec en cas d'attaque").
+-define(SN487, "Vitesse - Précision I").
+-define(SD487, "{0}% de chance d'obtenir un effet de Précision (Taux de Toucher +10%) pendant {1} sec lors d'une attaque").
+-define(SN488, "Vitesse - Précision II").
+-define(SD488, "{0}% de chance d'obtenir un effet de Précision (Taux de Toucher +10%) pendant {1} sec lors d'une attaque").
+-define(SN489, "Vitesse - Précision III").
+-define(SD489, "{0}% de chance d'obtenir un effet de Précision (Taux de Toucher +10%) pendant {1} sec lors d'une attaque").
+-define(SN490, "Vitesse - Précision IV").
+-define(SD490, "{0}% de chance d'obtenir un effet de Précision (Taux de Toucher +{2}%) pendant {1} sec lors d'une attaque").
+-define(SN803, "Défense - Os de Fer II").
+-define(SD803, "{0}% de chance d'obtenir Os de Fer (RÉD de DGT +40%) pendant {1} sec en cas d'attaque").
+-define(SN804, "Premier - Étude de Durcissement II").
+-define(SD804, "Obtenez {0} pile(s) d'effet d'Étude de Durcissement (RÉD de DGT +2% à chaque pile) pendant {1} sec en entrant en combat").
+-define(SN805, "Pleine - Alerte III").
+-define(SD805, "Obtention d'un Effet d'Alerte (Taux de Blocage +20%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SN806, "Attaque - Étude de Durcissement III").
+-define(SD806, "{0}% de chance d'obtenir {1} pile(s) d'effet d'Étude de Durcissement (RÉD de DGT +2% à chaque pile) pendant {2} sec en cas d'attaque").
+-define(SN807, "Premier - Force de Durcissement").
+-define(SD807, "Obtention de l'effet Force de Durcissement (Déclenche {0} pile(s) d'Étude de Durcissement par sec (RÉD DGT +2% à chaque pile) pendant {1} sec) pendant {2} sec en entrant en combat.Impossible de dissiper").
+-define(SN808, "Attaque - Étude de Durcissement II").
+-define(SD808, "{0}% de chance d'obtenir {1} pile(s) d'effet d'Étude de Durcissement (RÉD de DGT +2% à chaque pile) pendant {2} sec en cas d'attaque").
+-define(SN809, "Défense - Résolution II").
+-define(SD809, "{0}% de chance d'obtenir effet de Résolution (RÉD de DGT de Compétence +15%) pendant {1} sec en cas d'attaque").
+-define(SN810, "Premier - Étude de Durcissement III").
+-define(SD810, "Obtenez {0} pile(s) d'effet d'Étude de Durcissement (RÉD de DGT +2% à chaque pile) pendant {1} sec en entrant en combat").
+-define(SN811, "Pleine - Résolution III").
+-define(SD811, "Obtenez effet de Résolution (RÉD de DGT de Compétence +15%) pendant {1} sec quand les PV sont au-dessus de {0}% et en cas d'attaque").
+-define(SN812, "Défense - Volonté de Mort-vivant").
+-define(SD812, "{0}% de chance d'obtenir un effet de Volonté de Mort-vivant (RÉD de DGT Finaux +{1}% avec chaque ennemi à proximité, {2}% au maximum) pendant {3} sec en cas d'attaque").
+-define(SN813, "Pleine - Résolution II").
+-define(SD813, "Obtenez effet de Résolution (RÉD de DGT de Compétence +15%) pendant {1} sec quand les PV sont au-dessus de {0}% et en cas d'attaque").
+-define(SN814, "Attaque - Résolution II").
+-define(SD814, "{0}% de chance d'obtenir effet de Résolution (RÉD de DGT de Compétence +15%) pendant {1} sec en cas d'attaque").
+-define(SN815, "Défense - Résolution III").
+-define(SD815, "{0}% de chance d'obtenir effet de Résolution (RÉD de DGT de Compétence +15%) pendant {1} sec en cas d'attaque").
+-define(SN816, "Attaque - Résolution III").
+-define(SD816, "{0}% de chance d'obtenir effet de Résolution (RÉD de DGT de Compétence +15%) pendant {1} sec en cas d'attaque").
+-define(SN817, "Esquive - Os en Fer Ⅳ").
+-define(SD817, "Obtenez effet d'Os de Fer (RÉD de DGT +40%) pendant {0} en cas d'esquive d'une attaque").
+-define(SN818, "Contre - Durcissement II").
+-define(SD818, "À {0}% de chance d'obtenir un Durcissement (Réduction des DGT de +10%) pendant {1} sec en cas d'attaque").
+-define(SN819, "Contre - Bouclier II").
+-define(SD819, "{0}% de chance d'obtenir un Bouclier Magique (Déf +65%) pendant {1} sec en cas d'attaque").
+-define(SN820, "Contre - Durcissement III").
+-define(SD820, "À {0}% de chance d'obtenir un Durcissement (Réduction des DGT de +10%) pendant {1} sec en cas d'attaque").
+-define(SN821, "Contre - Bouclier III").
+-define(SD821, "{0}% de chance d'obtenir un Bouclier Magique (Déf +65%) pendant {1} sec en cas d'attaque").
+-define(SN822, "Contre - Os en Fer IV").
+-define(SD822, "{0}% de chance d'obtenir Os de Fer (RÉD de DGT +40%) pendant {1} sec en cas d'attaque").
+-define(SN823, "Contre - Agilité I").
+-define(SD823, "{0}% de chance d'obtenir un effet d'Agilité (Taux d'Esquive +10%) pendant {1} sec en cas d'attaque").
+-define(SN824, "Contre - Agilité II").
+-define(SD824, "{0}% de chance d'obtenir un effet d'Agilité (Taux d'Esquive +10%) pendant {1} sec en cas d'attaque").
+-define(SN825, "Contre - Agilité III").
+-define(SD825, "{0}% de chance d'obtenir un effet d'Agilité (Taux d'Esquive +10%) pendant {1} sec en cas d'attaque").
+-define(SN826, "Contre - Agilité IV").
+-define(SD826, "{0}% de chance d'obtenir un effet d'Agilité (Taux d'Esquive +10%) pendant {1} sec en cas d'attaque").
+-define(SN850, "Contre - Agilité V").
+-define(SD850, "{0}% de chance d'obtenir un effet d'Agilité (Taux d'EsquVe +25%) pendant {1} sec en cas d'attaque").
+-define(BF235, "[Loup Silverclad]").
+-define(BF236, "[Alptraum-Ross]").
+-define(BF237, "[Scarabée Abyssal]").
+-define(BF238, "[Bête Féroce]").
+-define(BF239, "[Chariot Démoniaque]").
+-define(BF240, "[Cavalerie Stygienne]").
+-define(BF241, "[Balai Magique]").
+-define(BF242, "[Citrouille Maléfique]").
+-define(BF243, "[Araignée à Épée]").
+-define(BF244, "[Phénix Mort-vivant]").
+-define(BF245, "[Chien Détective]").
+-define(BF246, "[Tortue de Mer de Trésor]").
+-define(BF247, "[Chef Perroquet]").
+-define(BF248, "[Drake Venimeux]").
+-define(BF249, "[Maître de Lame Panda]").
+-define(BF250, "[Renne de Noël]").
+-define(BF251, "[Élan d'Avant-garde]").
+-define(BF252, "[Bête de Givre à Dents de Sabre]").
+-define(BF253, "[Serpent à Plumes]").
+-define(BF254, "[Bête à Queue de Scorpion et Ailes de Dragon]").
+-define(BF339, "[Baiser de Fay]").
+-define(BF340, "[Oiseau de Soleil]").
+-define(BF341, "[Aile de Dragon Polychrome]").
+-define(BF342, "[Archange]").
+-define(BF343, "[Bannière de Guerre Scorpion]").
+-define(BF344, "[Ailes de Fay]").
+-define(BF345, "[Cape spatiale]").
+-define(BF346, "[Ange et Démon]").
+-define(BF347, "[Arrivée de la Mort]").
+-define(BF348, "[Totem de Guerre]").
+-define(BF349, "[Bannière de Guerre des Héros]").
+-define(BF350, "[Ailes du Vide Sacré]").
+-define(BF351, "[Champion Bleu Glacé]").
+-define(BF352, "[Dragon aux Ailes Violettes]").
+-define(BF353, "[Cape des Lames]").
+-define(BF354, "[Cristal Abyssal]").
+-define(BF355, "[Ailes de Noël]").
+-define(BF356, "[Collision d'Anges]").
+-define(BF357, "[Dragon de Vie]").
+-define(BF409, "[Dieu de la Guerre]").
+-define(BF410, "[Déesse de la Vengeance]").
+-define(BF432, "[Esprit de Feu Dévastateur]").
+-define(BF433, "[Esprit de l'Eau Mystérieux]").
+-define(BF434, "[Esprit de la Terre Calme]").
+-define(BF435, "[Âme du Vent Rapide]").
+-define(BF436, "[King Kong de Lave]").
+-define(BF437, "[Demoiselle Jalouse]").
+-define(BN284, "Adoucir").
+-define(BD284, "Corrosion de la peau ! RÉD DGT -{0}%").
+-define(BN285, "Résolution").
+-define(BD285, "RÉD DGT de Compétence +{0}%").
+-define(BN335, "Protection de l'Esprit de l'Eau").
+-define(BD335, "Absorbe {0}% DGT").
+-define(BN336, "Bénédiction de l'Esprit de l'Eau").
+-define(BD336, "Absorbe {0}0 K de DGT.L'ATQ de la source de DGT diminue de {1}0 K et récupère {2}% des PV par seconde.").
+-define(BN337, "Aura de l'Esprit de l'Eau").
+-define(BD337, "Récupère {0}% PV et {1}% Effet de Soin par sec").
+-define(BN338, "Hurlement de Tonnerre").
+-define(BD338, "Augmente Bonus DGT +{0}% avec chaque ennemi à proximité.{1}% au maximum").
+-define(BN339, "Renforcement de l'Esprit de l'Eau").
+-define(BD339, "Soigne de {0}% de DGT par sec").
+-define(BN340, "Souhait de Mort-vivant").
+-define(BD340, "RÉD DGT Finaux +{0}% avec chaque ennemi à proximité.{1}% au maximum").
+-define(BN341, "Regard de la Mort").
+-define(BD341, "RÉD DGT Finaux +{0}% Effet de diminution de {1}% avec chaque ennemi autour, {2}% au maximum").
+-define(BN344, "Maître de Lame").
+-define(BD344, "Incarnation en Maître de Lame").
+-define(BN345, "Guerrier Panda").
+-define(BD345, "Incarnation en Guerrier Panda").
+-define(BN346, "Linceul de Cantus").
+-define(BD346, "Taux de Toucher et Taux d'Esquive +{0}% avec chaque pile.Déclenchement de la Vague de Cantus quand la pile est à {1}.Durée : {2} sec").
+-define(BN347, "Vague de Cantus").
+-define(BD347, "Humeur excitante, Taux de Toucher et Taux d'Esquive +{0}%").
+-define(BN348, "Linceul Sonore Magique").
+-define(BD348, "Vitesse de Déplacement -{0}% avec chaque pile.Déclenchement d'une Vague de Sons Magiques (Étourdissement pendant {2} sec) à {1} pile").
+-define(BN349, "Vague de Son Magique").
+-define(BD349, "Étourdissement, impossible à contrôler").
+-define(BD11001, "Bonus de DGT Finaux +{0}% et RÉD DGT Finaux +{1}%").
+-define(BD11002, "EXP en tuant des monstres et d'AFK +{0}%").
+-define(BD113, "Incarnation de la Déesse du Croissant").
+-define(BD12001, "DGT reçus du joueur -{0}%").
+-define(BD12011, "DGT au joueur +{0}%").
+-define(BD175, "Augmente de {0}% le Bonus de DGT de Compétence pour soi et les coéquipiers").
+-define(BD350, "Fort et vigoureux ! Taux de RÉD d'ATQ de Focalisation +{0}%").
+-define(BD351, "Un éclair d'inspiration soudaine ! Taux d'ATQ de Focalisation +{0}%").
+-define(BD352, "Obtention d'un abri ! Effet de Soin +{0}%, RÉD DGT +{1}%").
+-define(BF12001, "[Ancien Équipement Divin]").
+-define(BF255, "[Grenouille Géante des Marais]").
+-define(BF256, "[Vélociraptor Fantôme]").
+-define(BF257, "[Nian le Monstre]").
+-define(BF258, "[Dragon Oriental]").
+-define(BF259, "[Tricératops]").
+-define(BF358, "[Ailes Glorieuses]").
+-define(BF359, "[Ailes du Bonheur]").
+-define(BF360, "[Papillon de Cristal Coloré]").
+-define(BF361, "[Dragon des Ténèbres]").
+-define(BF362, "[Drapeau Splendide]").
+-define(BF411, "Déesse du Croissant").
+-define(BF505, "[Aura de l'Esprit de Sang]").
+-define(BN11001, "Buff de Bataille des Frontières").
+-define(BN11002, "Buff d'EXP des Frontières").
+-define(BN113, "Arrivée de la Déesse du Croissant").
+-define(BN350, "Vigoureux").
+-define(BN351, "Aura").
+-define(BN352, "Abri").
+-define(SD160, "Inflige un total de {0}%+{1} DGT aux {2} cibles (monstre +{3}) [L'éveil renforce l'effet]").
+-define(SD161, "Roulement Rapidement vers l'Avant").
+-define(SD162, "Inflige {0}%+{1} de DGT aux {4} cibles (monstre +{5}), {2}% chance de venir avec un effet de blocage (Vitesse de Déplacement -150) pendant {3} sec [Les Talents Renforcent l'effet]").
+-define(SD163, "Inflige {0}%+{1} de DGT aux {3} cibles (monstre +{4}), s'accompagne des DGT de Compétence +{2}% [Les Talents Renforcent l'effet]").
+-define(SD164, "Inflige {0}%+{1} de DGT aux {4} cibles (monstre +{5}), {2}% chance de déclencher FOR (ATQ +13%) pendant {3} sec [Les talents renforcent l'effet]").
+-define(SD165, "Inflige {0}%+{1} de DGT aux {4} cibles (monstre +{5}), {2}% chance de venir avec Émoussement (Esquive -10%) pendant {3} sec [Les Talents Renforcent l'effet]").
+-define(SD166, "Inflige {0}%+{1} de DGT aux {3} cibles (monstre +{4}), chaque DGT s'accompagne d'un effet de Brise-genou (Vitesse de Déplacement -30%) pendant {2} sec [Les Talents renforcent l'effet]").
+-define(SD167, "Possédé par la volonté de l'épée, inflige {0}% + {1} DGT aux {2} cibles (monstre +{3}) alentour et récupère 25% des PV.La compétence peut être réutilisée dans les 3 sec suivant le déclenchement de la compétence pour se téléporter en face de la cible [Les talents renforcent l'effet]").
+-define(SD168, "Inflige {0}%+{1} de DGT aux {2} cibles (monstre +{3}), et se téléporte en face de la cible [Les Talents renforcent l'effet]").
+-define(SD169, "Inflige {0}%+{1} de DGT aux {2} cibles (monstre +{3}) [Les Talents Renforcent l'effet]").
+-define(SD170, "Inflige {0}%+{1} de DGT aux {2} cibles (monstre +{3}), et se téléporte derrière la cible [Les Talents renforcent l'effet]").
+-define(SD171, "Inflige {0}%+{1} de DGT aux {3} cibles (monstre +{4}), s'accompagne d'un effet de Sangsue de {2}% [Les Talents Renforcent l'effet]").
+-define(SD172, "Inflige {0}%+ {1} de DGT aux {2} cibles (monstre +{3}), s'accompagne d'une Force d'Aspiration [Les Talents Renforcent l'effet]").
+-define(SD173, "Inflige {0}%+{1} de DGT aux {2} cibles (monstre +{3}), invincible durant la période [Les Talents Renforcent l'effet]").
+-define(SD174, "Inflige {0}%+{1} de DGT aux {3} cibles (monstre +{4}), l'équipe gagne une Technique Précise (DGT de Compétence +60%) pendant {2} sec [Les Talents Renforcent l'effet]").
+-define(SD175, "Augmente de {0}% le Bonus de DGT de Compétence pour soi et les coéquipiers").
+-define(SD240001, "Lorsque les PV sont inférieurs à {0}%, obtenez une Réduction de DGT JcJ de {1}% pendant {2} sec, avec {3} sec de TdR").
+-define(SD240011, "Lorsque les PV sont inférieurs à {0}%, obtenez un Bonus de DGT JcJ de {1}% pendant {2} sec, avec {3} sec de TdR").
+-define(SD249, "Incarnez la Déesse du Croissant pendant {1} sec.Inflige {0}% dégâts à {6} cibles proches (monstre+{7}).{2}% de chance de fournir {3} piles de Vague de Cantus (Taux de Toucher et Taux d'Esquive +2% avec chaque pile.En atteignant 5 piles, cela déclenche la Vague de Cantus : Taux de Toucher et Taux d'Esquive+35% pendant 4 sec) aux coéquipiers à proximité pendant {4} sec.Disponible pour {5} fois au maximum").
+-define(SD250, "Inflige {0}% dégâts à {4} cibles (monstre+{5}).{1}% de chance d'ajouter {2} piles de Linceul Sonore Magique (Vitesse de Déplacement de -20% à chaque fois.En atteignant 3 piles, cela déclenche la Vague de Son Magique : Étourdit pendant 2 sec) pendant {3} sec").
+-define(SD251, "Inflige {0}% dégâts à {5} cibles (monstre +{6}).{1}% de chance de fournir {2} piles de Vague de Cantus aux coéquipiers proche pendant {3} sec.Disponible pour {4} fois au maximum").
+-define(SD252, "Inflige {0}% dégâts à {5} cibles (monstre +{6}).{1}% de chance d'ajouter {2} piles de Linceul Sonore Magique pendant {3} sec.Disponible pour {4} fois au maximum").
+-define(SD253, "Inflige {0}% dégâts à {8} cibles (monstre +{9}).{1}% de chance d'ajouter {2} piles de Linceul Sonore Magique pendant {3} sec.{4}% de chance de fournir {5} Piles de Vague de Cantus aux coéquipiers à proximité pendant {6} sec.Disponible pour {7} fois au maximum").
+-define(SD41520, "Obtention d'un Effet d'Alerte Renforcé (Taux de Blocage +{2}%) pendant {1} sec lorsque les PV sont supérieurs à {0}% et en cas d'attaque").
+-define(SD48620, "{0}% de chance de bénéficier de la Colère Infinie Renforcée (Bonus de DGT +{2}%) pendant {1} sec en cas d'attaque").
+-define(SN491, "Attaque - Technique I").
+-define(SD491, "{0}% de chance d'obtenir un effet Technique (DGT de Compétence +15%) pendant {1} sec lors d'une attaque").
+-define(SD50320, "Permet au joueur d'obtenir un effet de durcissement renforcé (RÉD DGT +{1}%) pendant {0} sec").
+-define(SD50820, "Permet au joueur d'obtenir un effet de Colère renforcée (Bonus de DGT +{1}%) pendant {0} sec").
+-define(SD51320, "Permet au joueur d'obtenir un effet de Grognon renforcé (Taux Crit +{1}%) pendant {0} sec").
+-define(SD51820, "Ajoute un effet de renforcement amélioré (Fracassement -{1}%) et un effet de blocage (Vitesse de Déplacement -150) à la cible proche pendant {0} sec").
+-define(SD55820, "Le joueur obtient un Bonus de DGT +{0}% pendant {3} sec.L'effet diminue de {1}% avec chaque ennemi à proximité jusqu'à {2}%").
+-define(SD56420, "{0}% de chance d'obtenir la Protection de l'Esprit de l'Eau (absorbe {1}% DGT pendant 4 sec) en étant attaqué").
+-define(SD57420, "{0}% de chance de déclencher la Chaîne de l'Éclair (infligeant {1}% de DGT à la cible à proximité, 50% chance de déclencher à nouveau la Chaîne de l'Éclair) lors d'une attaque").
+-define(SD57820, "Permet au joueur d'obtenir Colère Infinie (Bonus de DGT +{1}%) pendant {0} sec").
+-define(SD57920, "{0}% de chance de déclencher Souffle de la Terre (infligeant {1}% DGT à 3 cibles à proximité (monstre+2)) en cas d'attaque").
+-define(SD58420, "{0}% de chance de déclencher Serpent Secret (infligeant {1}% DGT à une cible unique, venant avec Adoucir pendant 4 sec) en attaquant").
+-define(SD684, "Lorsque les PV sont inférieurs à {0}%, récupère le Bouclier Divin de {1}% et le taux de résistance aux DGT du Bouclier Divin +{2}% pendant {3} sec").
+-define(SD685, "En cas d'Attaque Crit réussie, récupère 10% de la valeur du Bouclier Divin").
+-define(SD686, "Augmente la RÉD des DGT du Bouclier Divin de {0}").
+-define(SD827, "{0}% de chance d'obtenir effet de Résolution (RÉD de DGT de Compétence +15%) pendant {1} sec en cas d'attaque").
+-define(SN249, "Éclat de Lune Étoilée").
+-define(SN250, "Chapitre Lunaire").
+-define(SN251, "Vague Radieuse").
+-define(SN252, "Folie des Notes").
+-define(SN253, "Hyper Temps").
+-define(SN827, "Défense - Résolution I").
+-define(SS246, "Incarne la Déesse du Croissant afin de fournir des buffs à l'équipe").
+-define(SS247, "Jouez de la guitare électrique pour obtenir des débuffs").
+-define(SS248, "La musique influence les choses à proximité et fournit des buffs à l'équipe").
+-define(SS249, "Note : l'Onde de Choc frappe l'avant et donne des débuffs").
+-define(SS250, "Note : Frappe à proximité, donne des débuffs et fournit des buffs à l'équipe").
+-define(SS511, "Chance élevée d'augmenter le Taux d'Esquive en cas d'attaque").
+-define(SS512, "Chance élevée d'augmenter le Taux d'Esquive en cas d'attaque").
+-define(SS513, "Chance élevée d'augmenter le Taux d'Esquive en cas d'attaque").
+-define(SS514, "Chance élevée d'augmenter le Taux d'Esquive en cas d'attaque").
+-define(SS515, "Chance élevée d'augmenter le Taux de Toucher en cas d'attaque").
+-define(SS516, "Chance élevée d'augmenter le Taux de Toucher en cas d'attaque").
+-define(SS517, "Chance élevée d'augmenter le Taux de Toucher en cas d'attaque").
+-define(SS518, "Chance élevée d'augmenter le Taux de Toucher en cas d'attaque").
+-define(SS519, "Les attaques ont une chance d'augmenter les DGT de Compétence").
+-define(SS520, "Chance d'augmenter la Réduction des DGT de Compétence en cas d'attaque").
+-define(SN585, "Destinée Tissée").
+-define(SD585, "Inflige {0}% de DGT aux {2} cibles (monstre+{3}).{1}% de chance de déclencher Verdict Sacré (infligeant 100% de DGT avec Flamme Sacrée (RÉD DGT -10%, peut atteindre jusqu'à 5 piles) à une cible pendant 6 sec)").
+-define(SN586, "Plomb Céleste").
+-define(SD586, "Inflige {0}% de DGT à {2} cibles (monstre+{3}).{1}% de chance de déclencher Verdict Sacré").
+-define(SN587, "Lumière de l'Aube").
+-define(SD587, "Inflige {0}% de DGT à {3} cibles (monstre+{4}).{1}% de chance de déclencher Verdict Sacré, pouvant atteindre {2} piles au max.").
+-define(SN588, "Annonce Sacrée").
+-define(SD588, "Inflige {0}% de DGT à {3} cibles (monstre+{4}).{1}% de chance de déclencher Verdict Sacré, pouvant atteindre {2} piles au max.Chaque fois que la cible perd {5}% de PV, vos DGT de base +{6}% (Pouvant atteindre jusqu'à {7}% au maximum)").
+-define(SN589, "Verdict Sacré").
+-define(SD589, "En attaquant, il y a {0}% de chance de déclencher Verdict Sacré (infligeant {1}% de DGT avec Flamme Sacrée à une cible pendant 6 sec").
+-define(BN356, "Flamme Sacrée").
+-define(BD356, "Entouré de Flamme Sacrée ! RÉD DGT -{0}%, peut atteindre jusqu'à 5 piles").
+-define(BF438, "[Valkyrie]").
+-define(SS403, "Inflige des DGT massifs avec des chances de déclencher des DGT de groupe").
+-define(SS404, "Inflige des DGT doux avec des chances de déclencher des DGT de groupe").
+-define(SS405, "Inflige des DGT moyens avec des chances de déclencher des DGT de groupe").
+-define(SS406, "Inflige des DGT moyens avec des chances de déclencher des DGT de groupe").
+-define(SS407, "En cas d'attaque, il y a des chances de déclencher des DGT de groupe").
+-define(SS408, "Renforcement des DGT de Destinée Tissée").
+-define(BF363, "[Ailes Divines d'Or Noir]").
+-define(BF364, "[Ailes de Dragon de Flamme]").
+-define(BF365, "[Dragon de Feu]").
+-define(BF260, "[Guêpe Abyssale]").
+-define(BF261, "[Parasite de Dragon]").
+-define(BF262, "[Faucon Dragonnier des Sept Couleurs]").
+-define(BN353, "Véhémence").
+-define(BD353, "Brûlez de colère ! Taux Crit +{0}%, Bonus DGT Crit +{1}%").
+-define(BN354, "Revitaliser").
+-define(BD354, "Bénédiction Céleste ! Effets de Soin +{0}%").
+-define(BN355, "Calme").
+-define(BD355, "Imperturbable ! Taux de Résistance +{0}%, Réd DGT Crit +{1}%").
+-define(SN492, "Attaque - Fatal").
+-define(SD492, "En attaquant, {0}% chance de donner à une cible un effet Fatal (effet de guérison -50%) pendant {1} sec").
+-define(SN493, "Attaque - Véhémence").
+-define(SD493, "En attaquant, {0}% de chance d'obtenir Véhémence (Taux Crit & Bonus DGT Crit +20%) pendant {1} sec").
+-define(SN494, "Attaque - Maître de Précision").
+-define(SD494, "En cas d'attaque, {0}% de chance d'obtenir la Maîtrise de Précision (Taux de Toucher +30%) pendant {1} sec").
+-define(SN828, "Défense - Revitalisation").
+-define(SD828, "En cas d'attaque, {0}% de chance d'obtenir la Bénédiction de Dieu (effet de guérison +50%) pendant {1} sec").
+-define(SN829, "Défense - Calme").
+-define(SD829, "En cas d'attaque, {0}% de chance d'obtenir Calme (Taux de Résistance et RÉD DGT Crit +30%) pendant {1} sec").
+-define(SN830, "Défense - Marcheur du Vent").
+-define(SD830, "En cas d'attaque, {0}% chance de bénéficier de Marcheur du Vent (Taux d'Esquive +30%) pendant {1} sec").
+-define(SS521, "En attaquant, il y a une chance de diminuer l'effet de guérison de la cible").
+-define(SS522, "En attaquant, il y a une chance d'augmenter le Taux Crit et les DGT Crit").
+-define(SS523, "Les attaques ont une chance d'augmenter le Taux de Toucher").
+-define(SS524, "En attaquant, il y a une chance d'augmenter l'effet de guérison").
+-define(SS525, "En attaquant, il y a une chance d'augmenter le Taux de Résistance et la RÉD de DGT Crit").
+-define(SS526, "En attaquant, il y a une chance d'augmenter l'Esquive").
+-define(SN1006021, "Havoc Verdant").
+-define(SN1006022, "Bras d'Arc - Armure").
+-define(SN1006023, "Membre Supérieur - Solidifier").
+-define(SN1006024, "Corde à Arc - Céleste").
+-define(SN1006025, "Support de Flèche - Havoc").
+-define(SN1007021, "Puissance des Étoiles").
+-define(SN1007022, "Culasse - Papillon").
+-define(SN1007023, "Fourreau d'Épée - Ailes").
+-define(SN1007024, "Crête d'Épée - Étoilés").
+-define(SN1007025, "Tranchant - Étoiles").
+-define(SN1005021, "Malédiction du Crucio").
+-define(SN1005022, "Corps de Baguette - Toxique").
+-define(SN1005023, "Tête de Baguette - Démon").
+-define(SN1005024, "Fin du Bâton - Tabou").
+-define(SN1005025, "Pierre Magique - Malédiction").
+-define(SN1004021, "Haine Profonde des Os").
+-define(SN1004022, "Culasse - Os").
+-define(SN1004023, "Fourreau d'Épée - Haine").
+-define(SN1004024, "Crête d'Épée - Profond").
+-define(SN1004025, "Tranchant - Poignarder").
+-define(SN160, "Nouvelle Lune").
+-define(SN161, "Rouleau").
+-define(SD82220, "{0}% de chance d'obtenir une Prouesse Physique Renforcée (RÉD DGT +{2}%) pendant {1} sec en cas d'attaque").
+-define(SN625201, "Réd DGT Finaux").
+-define(SN626201, "DGT de Compétence").
+-define(SN627201, "Bonus DGT").
+-define(SN628201, "DGT Finaux").
+-define(SN629201, "Taux Anti-Crit").
+-define(SN630201, "Taux Anti-Excellent").
+-define(SN640101, "Résonance Spirituelle IV").
+-define(SN640201, "Taux de Frappe Multiple").
+-define(SN650201, "Bonus DGT").
+-define(SN660101, "Résonance Spirituelle IV").
+-define(SN660201, "Anti-Excellent").
+-define(SN670101, "Résonance Spirituelle IV").
+-define(SN670201, "Bonus DGT de Compétence").
+-define(SD625201, "Le Taux Crit augmente de {0}%").
+-define(SD626201, "Bonus DGT de Compétence +{0}%").
+-define(SD627201, "Bonus DGT augmente de {0}%").
+-define(SD628201, "Bonus de DGT Finaux +{0}%").
+-define(SD629201, "Taux d'Anti-Focalisation +{0}%").
+-define(SD630201, "Taux Anti-Excellent +{0}%").
+-define(SD640101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD640201, "Réduction DGT de Focalisation +{0}%").
+-define(SD650201, "Bonus DGT +{0}%").
+-define(SD660101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD660201, "Taux Anti-Excellent +{0}%").
+-define(SD670101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD670201, "DGT de Compétence +{0}%").
+-define(SD680101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD680201, "Taux d'Anti Coup Mortel +{0}%").
+-define(SD690101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD690201, "DGT Finaux +{0}%").
+-define(BF95, "[Autel de Ruine]").
+-define(BN1001611, "Bonus de chance de Butins d'Armure D.").
+-define(BD1001611, "Bonus de chance de Butins d'Armure D.+{0}%").
+-define(EASYSD240001, "Augmente la Réduction des DGT JcJ lorsque les PV sont inférieurs à {0}%").
+-define(EASYSD240011, "Augmente le Bonus des DGT JcJ lorsque les PV sont inférieurs à {0}%").
+-define(SN1007001, "Tempête de Danse de l'Épée").
+-define(SN1007002, "Culasse - Fureur").
+-define(SN1007003, "Fourreau d'Épée - Glyphe").
+-define(SN1007004, "Crête d'Épée - Punition").
+-define(SN1007005, "Tranchant - Tête de Flèche").
+-define(SN1007006, "Fantôme Dormant").
+-define(SN1007007, "Culasse - Ombre").
+-define(SN1007008, "Fourreau d'Épée - Magique").
+-define(SN1007009, "Crête d'Épée - Âme").
+-define(SN1007010, "Tranchant - Cauchemar").
+-define(SN1007011, "Épreuve Magique").
+-define(SN1007012, "Culasse - Loi").
+-define(SN1007013, "Fourreau d'Épée - Discipline").
+-define(SN1007014, "Crête d'Épée - Justice").
+-define(SN1007015, "Tranchant - Pénalité").
+-define(SN1007016, "Comme une Ombre").
+-define(SN1007017, "Culasse - Esprit").
+-define(SN1007018, "Fourreau d'Épée - Nuit").
+-define(SN1007019, "Crête d'Épée - Enfer").
+-define(SN1007020, "Tranchant - Mythe").
+-define(SN1007026, "Discipline du Néant").
+-define(SN1007027, "Culasse - Inférieur").
+-define(SN1007028, "Fourreau d'Épée - Âme").
+-define(SN1007029, "Crête d'Épée - Calme").
+-define(SN1007030, "Tranchant - Sombre").
+-define(SN1007031, "Lame de Sang Dorée").
+-define(SN1007032, "Culasse - Yin").
+-define(SN1007033, "Fourreau d'Épée - Âme").
+-define(SN1007034, "Crête d'Épée - Justice").
+-define(SN1007035, "Tranchant - Ji").
+-define(SN162, "Vague Rapide").
+-define(SN163, "Tour du Néant").
+-define(SN164, "Pique de l'Ombre").
+-define(SN165, "Entaille Magique").
+-define(SN166, "Comète Étincelante").
+-define(SN167, "Promenade de Tempête").
+-define(SN168, "Étapes Choquantes").
+-define(SN169, "Éveil de l'Épée").
+-define(SN170, "Danse de l'Épée Fantôme").
+-define(SN171, "Course de la Mort").
+-define(SN172, "Épée Arc-en-ciel").
+-define(SN173, "Punition Infinie").
+-define(SN174, "Poussière d'Étoiles").
+-define(SN175, "Aura d'Esprit du Sang").
+-define(SN625101, "Résonance d'Âme III").
+-define(SD625101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(BN12001, "Ensemble d'Ancien Dieu - RÉD DGT").
+-define(BN12011, "Ensemble d'Ancien Dieu - Bonus DGT").
+-define(SN676, "Résurrection de Lumière").
+-define(SN677, "Suppression de Paralysie").
+-define(SN678, "Lueur Brisée").
+-define(SN679, "Lumière Aspirée").
+-define(SN680, "Purification Brisée").
+-define(SN682, "Étreinte de Lumière").
+-define(SN683, "Volonté Brisée").
+-define(BF94, "[Frontière]").
+-define(SN806001, "Résurrection").
+-define(SN806011, "Lumière de l'Aube").
+-define(SN806021, "Éther").
+-define(SN806031, "Luminosité").
+-define(SN806041, "Sanction").
+-define(SN806051, "Sacrifice").
+-define(SN806061, "Génialité").
+-define(SN806071, "Frénésie").
+-define(SN806081, "État de la Situation").
+-define(SN806091, "Dominion").
+-define(SN806101, "Résurrection").
+-define(SN806111, "Lumière de l'Aube").
+-define(SN806121, "Décision").
+-define(SN806131, "Équité").
+-define(SN806141, "Excitation").
+-define(SN806151, "Arrogance").
+-define(SN806161, "Abstention").
+-define(SN806171, "Ecstasy").
+-define(SN806181, "Jumeau").
+-define(SN806191, "Télépathie").
+-define(SN806201, "Génialité").
+-define(SN806211, "Frénésie").
+-define(SN806221, "État de la Situation").
+-define(SN806231, "Dominion").
+-define(SN806241, "Résurrection").
+-define(SN806251, "Lumière de l'Aube").
+-define(SN806261, "Décision").
+-define(SN806271, "Équité").
+-define(SN806281, "Excitation").
+-define(SN806291, "Arrogance").
+-define(SN806301, "Abstention").
+-define(SN806311, "Ecstasy").
+-define(SN806321, "Jumeau").
+-define(SN806331, "Télépathie").
+-define(SN806341, "Génialité").
+-define(SN806351, "Frénésie").
+-define(SN806361, "État de la Situation").
+-define(SN806371, "Dominion").
+-define(SN806381, "Résurrection").
+-define(SN806391, "Lumière de l'Aube").
+-define(SN806401, "Décision").
+-define(SN806411, "Équité").
+-define(SN806421, "Excitation").
+-define(SN806431, "Arrogance").
+-define(SN806441, "Abstention").
+-define(SN806451, "Ecstasy").
+-define(SN806461, "Jumeau").
+-define(SN806471, "Télépathie").
+-define(SN806481, "Génialité").
+-define(SN806491, "Frénésie").
+-define(SN806501, "État de la Situation").
+-define(SN806511, "Dominion").
+-define(SN806521, "Résurrection").
+-define(SN806531, "Lumière de l'Aube").
+-define(SN806541, "Décision").
+-define(SN806551, "Équité").
+-define(SN806561, "Résurrection").
+-define(SN806571, "Lumière de l'Aube").
+-define(SN806581, "Décision").
+-define(SN806591, "Équité").
+-define(SN806601, "Excitation").
+-define(SN806611, "Arrogance").
+-define(SN806621, "Abstention").
+-define(SN806631, "Ecstasy").
+-define(SN806641, "Jumeau").
+-define(SN806651, "Télépathie").
+-define(SN806661, "Génialité").
+-define(SN806671, "Frénésie").
+-define(SN806681, "État de la Situation").
+-define(SN806691, "Dominion").
+-define(SN806701, "Résurrection").
+-define(SN806711, "Lumière de l'Aube").
+-define(SD806001, "").
+-define(SD806011, "").
+-define(SD806021, "").
+-define(SD806031, "").
+-define(SD806041, "").
+-define(SD806051, "").
+-define(SD806061, "").
+-define(SD806071, "").
+-define(SD806081, "").
+-define(SD806091, "").
+-define(SD806101, "").
+-define(SD806111, "").
+-define(SD806121, "").
+-define(SD806131, "").
+-define(SD806141, "").
+-define(SD806151, "").
+-define(SD806161, "").
+-define(SD806171, "").
+-define(SD806181, "").
+-define(SD806191, "").
+-define(SD806201, "").
+-define(SD806211, "").
+-define(SD806221, "").
+-define(SD806231, "").
+-define(SD806241, "").
+-define(SD806251, "").
+-define(SD806261, "").
+-define(SD806271, "").
+-define(SD806281, "").
+-define(SD806291, "").
+-define(SD806301, "").
+-define(SD806311, "").
+-define(SD806321, "").
+-define(SD806331, "").
+-define(SD806341, "").
+-define(SD806351, "").
+-define(SD806361, "").
+-define(SD806371, "").
+-define(SD806381, "").
+-define(SD806391, "").
+-define(SD806401, "").
+-define(SD806411, "").
+-define(SD806421, "").
+-define(SD806431, "").
+-define(SD806441, "").
+-define(SD806451, "").
+-define(SD806461, "").
+-define(SD806471, "").
+-define(SD806481, "").
+-define(SD806491, "").
+-define(SD806501, "").
+-define(SD806511, "").
+-define(SD806521, "").
+-define(SD806531, "").
+-define(SD806541, "").
+-define(SD806551, "").
+-define(SD806561, "").
+-define(SD806571, "").
+-define(SD806581, "").
+-define(SD806591, "").
+-define(SD806601, "").
+-define(SD806611, "").
+-define(SD806621, "").
+-define(SD806631, "").
+-define(SD806641, "").
+-define(SD806651, "").
+-define(SD806661, "").
+-define(SD806671, "").
+-define(SD806681, "").
+-define(SD806691, "").
+-define(SD806701, "").
+-define(SD806711, "").
+-define(SN904001, "Attaque - Manie").
+-define(SD904001, "Lorsque la compétence est équipée, a {0}% de chance d'obtenir l'effet Manie (Taux Crit +20%) pendant {1} sec en cas d'attaque").
+-define(SN904002, "Attaque - Connaissance").
+-define(SD904002, "Lorsque la compétence est équipée, a {0}% de chance d'obtenir l'effet de Vision de Pénétration (Taux d'Anti-blocage +20%) pendant {1} sec en cas d'attaque").
+-define(SN904003, "Attaque - Colère").
+-define(SD904003, "Lorsque la compétence est équipée, a {0}% de chance d'obtenir l'effet de Colère (Bonus DGT +20%) pendant {1} sec en cas d'attaque").
+-define(SN904004, "Crit - Galant").
+-define(SD904004, "Lorsque la compétence est équipée, a {0}% de chance d'obtenir l'effet de Brave (DGT de Compétence +20%) pendant {1} sec en lançant un coup critique").
+-define(SN904005, "Crit - Colère").
+-define(SD904005, "Lorsque la compétence est équipée, a {0}% de chance d'obtenir l'effet de Colère (Bonus DGT +20%) pendant {1} sec en lançant un coup crit").
+-define(SN904006, "Crit - Justice").
+-define(SD904006, "Lorsque la compétence est équipée, a {0}% de chance d'obtenir l'effet de Justice (DGT Finaux +20%) pendant {1} sec en lançant un coup critique").
+-define(EASYSD806001, "PV de Personnage +{0}%").
+-define(EASYSD806011, "Fracassement de Personnage +{0}%").
+-define(EASYSD806021, "DÉF de Personnage +{0}%").
+-define(EASYSD806031, "ATQ de Personnage +{0}%").
+-define(EASYSD806041, "Taux Crit de Personnage +{0}%").
+-define(EASYSD806051, "Taux de Résistance de Personnage +{0}%").
+-define(EASYSD806061, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD806071, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD806081, "Taux de Focalisation de Personnage +{0}%").
+-define(EASYSD806091, "Taux d'Anti-Focalisation de Personnage +{0}%").
+-define(EASYSD806101, "Bonus de DGT Finaux de Personnage +{0}%").
+-define(EASYSD806111, "Réduction DGT Finaux de Personnage +{0}%").
+-define(EASYSD806121, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD806131, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD806141, "PV de Personnage +{0}%").
+-define(EASYSD806151, "Fracassement de Personnage +{0}%").
+-define(EASYSD806161, "DÉF de Personnage +{0}%").
+-define(EASYSD806171, "ATQ de Personnage +{0}%").
+-define(EASYSD806181, "Taux Crit de Personnage +{0}%").
+-define(EASYSD806191, "Taux de Résistance de Personnage +{0}%").
+-define(EASYSD806201, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD806211, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD806221, "Taux de Focalisation de Personnage +{0}%").
+-define(EASYSD806231, "Taux d'Anti-Focalisation de Personnage +{0}%").
+-define(EASYSD806241, "Bonus de DGT Finaux de Personnage +{0}%").
+-define(EASYSD806251, "Réduction DGT Finaux de Personnage +{0}%").
+-define(EASYSD806261, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD806271, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD806281, "PV de Personnage +{0}%").
+-define(EASYSD806291, "Fracassement de Personnage +{0}%").
+-define(EASYSD806301, "DÉF de Personnage +{0}%").
+-define(EASYSD806311, "ATQ de Personnage +{0}%").
+-define(EASYSD806321, "Taux Crit de Personnage +{0}%").
+-define(EASYSD806331, "Taux de Résistance de Personnage +{0}%").
+-define(EASYSD806341, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD806351, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD806361, "Taux de Focalisation de Personnage +{0}%").
+-define(EASYSD806371, "Taux d'Anti-Focalisation de Personnage +{0}%").
+-define(EASYSD806381, "Bonus de DGT Finaux de Personnage +{0}%").
+-define(EASYSD806391, "Réduction DGT Finaux de Personnage +{0}%").
+-define(EASYSD806401, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD806411, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD806421, "PV de Personnage +{0}%").
+-define(EASYSD806431, "Fracassement de Personnage +{0}%").
+-define(EASYSD806441, "DÉF de Personnage +{0}%").
+-define(EASYSD806451, "ATQ de Personnage +{0}%").
+-define(EASYSD806461, "Taux Crit de Personnage +{0}%").
+-define(EASYSD806471, "Taux de Résistance de Personnage +{0}%").
+-define(EASYSD806481, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD806491, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD806501, "Taux de Focalisation de Personnage +{0}%").
+-define(EASYSD806511, "Taux d'Anti-Focalisation de Personnage +{0}%").
+-define(EASYSD806521, "Bonus de DGT Finaux de Personnage +{0}%").
+-define(EASYSD806531, "Réduction DGT Finaux de Personnage +{0}%").
+-define(EASYSD806541, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD806551, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD806561, "PV de Personnage +{0}%").
+-define(EASYSD806571, "Fracassement de Personnage +{0}%").
+-define(EASYSD806581, "DÉF de Personnage +{0}%").
+-define(EASYSD806591, "ATQ de Personnage +{0}%").
+-define(EASYSD806601, "Taux Crit de Personnage +{0}%").
+-define(EASYSD806611, "Taux de Résistance de Personnage +{0}%").
+-define(EASYSD806621, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD806631, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD806641, "Taux de Focalisation de Personnage +{0}%").
+-define(EASYSD806651, "Taux d'Anti-Focalisation de Personnage +{0}%").
+-define(EASYSD806661, "Bonus de DGT Finaux de Personnage +{0}%").
+-define(EASYSD806671, "Réduction DGT Finaux de Personnage +{0}%").
+-define(EASYSD806681, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD806691, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD806701, "PV de Personnage +{0}%").
+-define(EASYSD806711, "Fracassement de Personnage +{0}%").
+-define(GENIUSATTR_NAME5010, "Renforcement de FOR").
+-define(GENIUSATTR_NAME5011, "Renforcement de FOR").
+-define(GENIUSATTR_NAME5012, "Renforcement de FOR").
+-define(GENIUSATTR_NAME5013, "Renforcement de FOR").
+-define(GENIUSATTR_NAME5020, "Renforcement Physique").
+-define(GENIUSATTR_NAME5021, "Renforcement Physique").
+-define(GENIUSATTR_NAME5022, "Renforcement Physique").
+-define(GENIUSATTR_NAME5023, "Renforcement Physique").
+-define(GENIUSATTR_NAME5030, "Renforcement de Percée").
+-define(GENIUSATTR_NAME5031, "Renforcement de Percée").
+-define(GENIUSATTR_NAME5032, "Renforcement de Percée").
+-define(GENIUSATTR_NAME5033, "Renforcement de Percée").
+-define(GENIUSATTR_NAME5040, "Renforcement de Souhait").
+-define(GENIUSATTR_NAME5041, "Renforcement de Souhait").
+-define(GENIUSATTR_NAME5042, "Renforcement de Souhait").
+-define(GENIUSATTR_NAME5043, "Renforcement de Souhait").
+-define(GENIUSATTR_NAME5050, "Renforcement de Précision").
+-define(GENIUSATTR_NAME5051, "Renforcement de Précision").
+-define(GENIUSATTR_NAME5052, "Renforcement de Précision").
+-define(GENIUSATTR_NAME5053, "Renforcement de Précision").
+-define(GENIUSATTR_NAME5060, "Renforcement d'Agilité").
+-define(GENIUSATTR_NAME5061, "Renforcement d'Agilité").
+-define(GENIUSATTR_NAME5062, "Renforcement d'Agilité").
+-define(GENIUSATTR_NAME5063, "Renforcement d'Agilité").
+-define(GENIUSATTR_NAME5070, "Lance Élémentaire").
+-define(GENIUSATTR_NAME5071, "Lance Élémentaire").
+-define(GENIUSATTR_NAME5072, "Lance Élémentaire").
+-define(GENIUSATTR_NAME5073, "Lance Élémentaire").
+-define(GENIUSATTR_NAME5080, "Bouclier Élémentaire").
+-define(GENIUSATTR_NAME5081, "Bouclier Élémentaire").
+-define(GENIUSATTR_NAME5082, "Bouclier Élémentaire").
+-define(GENIUSATTR_NAME5083, "Bouclier Élémentaire").
+-define(GENIUSATTR_NAME5090, "Renforcement d'ATQ de Focalisation").
+-define(GENIUSATTR_NAME5091, "Renforcement d'ATQ de Focalisation").
+-define(GENIUSATTR_NAME5092, "Renforcement d'ATQ de Focalisation").
+-define(GENIUSATTR_NAME5093, "Renforcement d'ATQ de Focalisation").
+-define(GENIUSATTR_NAME5100, "Renforcement de Perception").
+-define(GENIUSATTR_NAME5101, "Renforcement de Perception").
+-define(GENIUSATTR_NAME5102, "Renforcement de Perception").
+-define(GENIUSATTR_NAME5103, "Renforcement de Perception").
+-define(GENIUSATTR_NAME5110, "Puissance du Dieu de la Guerre").
+-define(GENIUSATTR_NAME5111, "Puissance du Dieu de la Guerre").
+-define(GENIUSATTR_NAME5112, "Puissance du Dieu de la Guerre").
+-define(GENIUSATTR_NAME5113, "Puissance du Dieu de la Guerre").
+-define(GENIUSATTR_NAME5120, "Force de Gardien").
+-define(GENIUSATTR_NAME5121, "Force de Gardien").
+-define(GENIUSATTR_NAME5122, "Force de Gardien").
+-define(GENIUSATTR_NAME5123, "Force de Gardien").
+-define(GENIUSATTR_DES5010, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5011, "ATQ +<color=#00FF00>1958</color>").
+-define(GENIUSATTR_DES5012, "ATQ +<color=#00FF00>3916</color>").
+-define(GENIUSATTR_DES5013, "ATQ +<color=#00FF00>5874</color>").
+-define(GENIUSATTR_DES5020, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5021, "PV +<color=#00FF00>43520</color>").
+-define(GENIUSATTR_DES5022, "PV +<color=#00FF00>87040</color>").
+-define(GENIUSATTR_DES5023, "PV +<color=#00FF00>130560</color>").
+-define(GENIUSATTR_DES5030, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5031, "Fracassement +<color=#00FF00>2513</color>").
+-define(GENIUSATTR_DES5032, "Fracassement +<color=#00FF00>5026</color>").
+-define(GENIUSATTR_DES5033, "Fracassement +<color=#00FF00>7539</color>").
+-define(GENIUSATTR_DES5040, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5041, "DÉF +<color=#00FF00>2513</color>").
+-define(GENIUSATTR_DES5042, "DÉF +<color=#00FF00>5026</color>").
+-define(GENIUSATTR_DES5043, "DÉF +<color=#00FF00>7539</color>").
+-define(GENIUSATTR_DES5050, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5051, "Taux de Toucher +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5052, "Taux de Toucher +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5053, "Taux de Toucher +<color=#00FF00>3.15</color>%").
+-define(GENIUSATTR_DES5060, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5061, "Taux d'Esquive +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5062, "Taux d'Esquive +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5063, "Taux d'Esquive +<color=#00FF00>3.15</color>%").
+-define(GENIUSATTR_DES5070, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5071, "ATQ Élémentaire +<color=#00FF00>649</color>").
+-define(GENIUSATTR_DES5072, "ATQ Élémentaire +<color=#00FF00>1298</color>").
+-define(GENIUSATTR_DES5073, "ATQ Élémentaire +<color=#00FF00>1947</color>").
+-define(GENIUSATTR_DES5080, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5081, "Défense Élémentaire +<color=#00FF00>649</color>").
+-define(GENIUSATTR_DES5082, "Défense Élémentaire +<color=#00FF00>1298</color>").
+-define(GENIUSATTR_DES5083, "Défense Élémentaire +<color=#00FF00>1947</color>").
+-define(GENIUSATTR_DES5090, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5091, "Taux d'ATQ de Focalisation +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5092, "Taux d'ATQ de Focalisation +<color=#00FF00>2.1</color>").
+-define(GENIUSATTR_DES5093, "Taux d'ATQ de Focalisation +<color=#00FF00>3.15</color>").
+-define(GENIUSATTR_DES5100, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5101, "Taux d'Anti-Focalisation +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5102, "Taux d'Anti-Focalisation +<color=#00FF00>2.1</color>").
+-define(GENIUSATTR_DES5103, "Taux d'Anti-Focalisation +<color=#00FF00>3.15</color>").
+-define(GENIUSATTR_DES5110, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5111, "DGT Finaux +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5112, "DGT Finaux +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5113, "DGT Finaux +<color=#00FF00>3.15</color>%").
+-define(GENIUSATTR_DES5120, "Talents 0 Niveau").
+-define(GENIUSATTR_DES5121, "RÉD DGT Finaux +<color=#00FF00>1.05</color>%").
+-define(GENIUSATTR_DES5122, "RÉD DGT Finaux +<color=#00FF00>2.1</color>%").
+-define(GENIUSATTR_DES5123, "RÉD DGT Finaux +<color=#00FF00>3.15</color>%").
+-define(SN685, "Bouclier Militaire").
+-define(SN686, "Souhait de Fer").
+-define(SS297, "Utiliser des Reliques pour attaquer peut annuler une partie de la Défense de la cible").
+-define(BF413, "[Déesse de la Tempête]").
+-define(BF414, "[Déesse de la Justice]").
+-define(BF415, "BF415").
+-define(BF416, "BF416").
+-define(BF417, "BF417").
+-define(BF418, "BF418").
+-define(BF419, "BF419").
+-define(BF420, "BF420").
+-define(BF439, "[Lilith]").
+-define(SN240001, "Ensemble d'Ancien Dieu - RÉD DGT").
+-define(SN240011, "Ensemble d'Ancien Dieu - Bonus DGT").
+-define(SN626101, "Résonance d'Âme III").
+-define(SN627101, "Résonance d'Âme III").
+-define(SN628101, "Résonance d'Âme III").
+-define(SN629101, "Résonance d'Âme III").
+-define(SN630101, "Résonance d'Âme III").
+-define(SD626101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD627101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD628101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD629101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(SD630101, "Toutes les Divinités (Équipement inclus) Bonus de toutes les stats +{0}%").
+-define(EASYSD625101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD625201, "Le Taux Crit augmente de {0}%").
+-define(EASYSD626101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD626201, "Bonus DGT de Compétence +{0}%").
+-define(EASYSD627101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD627201, "Bonus DGT augmente de {0}%").
+-define(EASYSD628101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD628201, "Bonus de DGT Finaux +{0}%").
+-define(EASYSD629101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD629201, "Taux d'Anti-Focalisation +{0}%").
+-define(EASYSD630101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD630201, "Taux Anti-Excellent +{0}%").
+-define(LONG1230707, "Nidhogg Temporaire").
+-define(BN175, "Aura d'Esprit du Sang").
+-define(SN495, "Crit - Aura").
+-define(SD495, "Obtention d'une Aura (Taux d'ATQ de Focalisation +15%) pendant {0} sec lors du lancement d'un coup crit, avec {1} sec du TdR").
+-define(SN496, "Attaque - Saignement").
+-define(SD496, "33% de chance d'infliger du saignement (infligeant 2% de DGT des PV actuels toutes les 2 sec jusqu'à 2% des propres PV max) à une cible pendant 8 sec en cas d'attaque, TdR : {0} sec").
+-define(SN497, "Attaque - Suppression de l'Âme").
+-define(SD497, "{0}% de chance d'éliminer {1} couches de buff d'un ennemi en cas d'attaque, avec {2} sec de TdR").
+-define(SN831, "Flex - Armure Rigide").
+-define(SD831, "Obtention d'une Armure Rigide (Taux de RÉD d'ATQ de Focalisation +15%) pendant {0} sec lors de réalisation d'un coup crit, avec {1} sec du TdR").
+-define(SN832, "Défense - Régénération").
+-define(SD832, "En cas d'attaque, possède {0}% de chance d'obtenir Régénération (Guérison de 2% des PV perdus toutes les 2 sec) pendant {1} sec TdR : {2} sec").
+-define(SN833, "Défense - Rassemblement des Âmes").
+-define(SD833, "50% de chance d'éliminer {0} de couches de ses propres débuffs en cas d'attaque, avec {1} sec de TdR").
+-define(SS527, "Augmente le taux d'ATQ de Focalisation lors du lancement d'un coup critique").
+-define(SS528, "Il y a une chance d'ajouter des DGT sur la durée en attaquant").
+-define(SS529, "Il y a une chance d'éliminer les buff des ennemis en cas d'attaque").
+-define(SS530, "Augmente le taux de RÉD d'ATQ lors d'une réalisation d'un coup critique").
+-define(SS531, "Il y a une chance d'ajouter une récupération continue en cas d'attaque").
+-define(SS532, "Il y a une chance de dissiper les propres débuffs en cas d'attaque").
+-define(BF366, "[Ailes Perdues]").
+-define(BF367, "[Ailes d'Aureus]").
+-define(BF263, "[Corbeau de l'Ombre]").
+-define(BF264, "[Flamme d'Épine Rouge]").
+-define(BN357, "Aura").
+-define(BD357, "Aura apparaît ! Taux d'ATQ de Focalisation +{0}%").
+-define(BN358, "Armure Rigide").
+-define(BD358, "Les Gardes de l'Armure Rigide ! Taux de RÉD d'ATQ de Focalisation +{0}%").
+-define(BN359, "Renaissance").
+-define(BD359, "Cicatrisation ! Soigne {1}% des PV perdus toutes les {0} sec").
+-define(BN360, "Ténèbres").
+-define(BD360, "Taux de Toucher et Taux d'Esquive -{0}% en étant dans l'obscurité, peut être augmenté à {1} pile").
+-define(BN718, "Chariot").
+-define(BD718, "Transformé en chariot").
+-define(BN1000307, "Inspiration de Soi").
+-define(BN1000308, "Inspiration de Guilde").
+-define(GENIUSATTR_NAME6100, "Bénédiction du Vent").
+-define(GENIUSATTR_NAME6200, "Renforcement de Monture").
+-define(GENIUSATTR_NAME6300, "Gardien du Vent").
+-define(GENIUSATTR_NAME6400, "Renforcement de Héros").
+-define(GENIUSATTR_NAME6500, "Renforcement de Nidhogg").
+-define(GENIUSATTR_NAME6600, "Renforcement des Ailes").
+-define(GENIUSATTR_NAME7100, "Bénédiction de l'Eau").
+-define(GENIUSATTR_NAME7300, "Garde des Eaux").
+-define(GENIUSATTR_NAME8100, "Bénédiction du Feu").
+-define(GENIUSATTR_NAME8300, "Gardien du Feu").
+-define(GENIUSATTR_NAME9100, "Bénédiction de la Terre").
+-define(GENIUSATTR_NAME9300, "Gardien de la Terre").
+-define(GENIUSATTR_DES6100, "Talents 0 Niveau").
+-define(GENIUSATTR_DES6101, "Bonus d'ATQ de Vent +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES6102, "Bonus d'ATQ de Vent +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES6103, "Bonus d'ATQ de Vent +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES6104, "Bonus d'ATQ de Vent +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES6105, "Bonus d'ATQ de Vent +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES6106, "Bonus d'ATQ de Vent +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES6107, "Bonus d'ATQ de Vent +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES6108, "Bonus d'ATQ de Vent +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES6109, "Bonus d'ATQ de Vent +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES6110, "Bonus d'ATQ de Vent +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES6200, "Talents 0 Niveau").
+-define(GENIUSATTR_DES6201, "Stats de Base des Montures +<color=#00FF00>2.5</color>%").
+-define(GENIUSATTR_DES6202, "Stats de Base des Montures +<color=#00FF00>5</color>%").
+-define(GENIUSATTR_DES6203, "Stats de Base des Montures +<color=#00FF00>7.5</color>%").
+-define(GENIUSATTR_DES6204, "Stats de Base des Montures +<color=#00FF00>10</color>%").
+-define(GENIUSATTR_DES6205, "Stats de Base des Montures +<color=#00FF00>12.5</color>%").
+-define(GENIUSATTR_DES6206, "Stats de Base des Montures +<color=#00FF00>15</color>%").
+-define(GENIUSATTR_DES6207, "Stats de Base des Montures +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES6208, "Stats de Base des Montures +<color=#00FF00>20</color>%").
+-define(GENIUSATTR_DES6209, "Stats de Base des Montures +<color=#00FF00>22.5</color>%").
+-define(GENIUSATTR_DES6210, "Stats de Base des Montures +<color=#00FF00>25</color>%").
+-define(GENIUSATTR_DES6300, "Talents 0 Niveau").
+-define(GENIUSATTR_DES6301, "Bonus d'DÉF de Vent +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES6302, "Bonus d'DÉF de Vent +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES6303, "Bonus d'DÉF de Vent +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES6304, "Bonus d'DÉF de Vent +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES6305, "Bonus d'DÉF de Vent +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES6306, "Bonus d'DÉF de Vent +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES6307, "Bonus d'DÉF de Vent +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES6308, "Bonus d'DÉF de Vent +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES6309, "Bonus d'DÉF de Vent +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES6310, "Bonus d'DÉF de Vent +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES6400, "Talents 0 Niveau").
+-define(GENIUSATTR_DES6401, "Stats de Base de Héros +<color=#00FF00> 6</color> %").
+-define(GENIUSATTR_DES6402, "Stats de Base de Héros +<color=#00FF00> 12</color> %").
+-define(GENIUSATTR_DES6403, "Stats de Base de Héros +<color=#00FF00> 18</color> %").
+-define(GENIUSATTR_DES6404, "Stats de Base de Héros +<color=#00FF00> 24</color> %").
+-define(GENIUSATTR_DES6405, "Stats de Base de Héros +<color=#00FF00> 30</color> %").
+-define(GENIUSATTR_DES6406, "Stats de Base de Héros +<color=#00FF00> 36</color> %").
+-define(GENIUSATTR_DES6407, "Stats de Base de Héros +<color=#00FF00> 42</color> %").
+-define(GENIUSATTR_DES6408, "Stats de Base de Héros +<color=#00FF00> 48</color> %").
+-define(GENIUSATTR_DES6409, "Stats de Base de Héros +<color=#00FF00> 54</color> %").
+-define(GENIUSATTR_DES6410, "Stats de Base de Héros +<color=#00FF00> 60</color> %").
+-define(GENIUSATTR_DES6500, "Talents 0 Niveau").
+-define(GENIUSATTR_DES6501, "Stats de Base de Nidhogg +<color=#00FF00>5</color>%").
+-define(GENIUSATTR_DES6502, "Stats de Base des Dragons Divins +<color=#00FF00>10</color>%").
+-define(GENIUSATTR_DES6503, "Stats de Base des Dragons Divins +<color=#00FF00>15</color>%").
+-define(GENIUSATTR_DES6504, "Stats de Base des Dragons Divins +<color=#00FF00>20</color>%").
+-define(GENIUSATTR_DES6505, "Stats de Base des Dragons Divins +<color=#00FF00>25</color>%").
+-define(GENIUSATTR_DES6506, "Stats de Base des Dragons Divins +<color=#00FF00>30</color>%").
+-define(GENIUSATTR_DES6507, "Stats de Base des Dragons Divins +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES6508, "Stats de Base des Dragons Divins +<color=#00FF00>40</color>%").
+-define(GENIUSATTR_DES6509, "Stats de Base des Dragons Divins +<color=#00FF00>45</color>%").
+-define(GENIUSATTR_DES6510, "Stats de Base des Dragons Divins +<color=#00FF00>50</color>%").
+-define(GENIUSATTR_DES6600, "Talents 0 Niveau").
+-define(GENIUSATTR_DES6601, "Stats de Base des Ailes +<color=#00FF00>2.5</color>%").
+-define(GENIUSATTR_DES6602, "Stats de Base des Ailes +<color=#00FF00>5</color>%").
+-define(GENIUSATTR_DES6603, "Stats de Base des Ailes +<color=#00FF00>7.5</color>%").
+-define(GENIUSATTR_DES6604, "Stats de Base des Ailes +<color=#00FF00>10</color>%").
+-define(GENIUSATTR_DES6605, "Stats de Base des Ailes +<color=#00FF00>12.5</color>%").
+-define(GENIUSATTR_DES6606, "Stats de Base des Ailes +<color=#00FF00>15</color>%").
+-define(GENIUSATTR_DES6607, "Stats de Base des Ailes +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES6608, "Stats de Base des Ailes +<color=#00FF00>20</color>%").
+-define(GENIUSATTR_DES6609, "Stats de Base des Ailes +<color=#00FF00>22.5</color>%").
+-define(GENIUSATTR_DES6610, "Stats de Base des Ailes +<color=#00FF00>25</color>%").
+-define(GENIUSATTR_DES7100, "Talents 0 Niveau").
+-define(GENIUSATTR_DES7101, "Bonus d'ATQ de l'Eau +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES7102, "Bonus d'ATQ de l'Eau +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES7103, "Bonus d'ATQ de l'Eau +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES7104, "Bonus d'ATQ de l'Eau +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES7105, "Bonus d'ATQ de l'Eau +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES7106, "Bonus d'ATQ de l'Eau +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES7107, "Bonus d'ATQ de l'Eau +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES7108, "Bonus d'ATQ de l'Eau +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES7109, "Bonus d'ATQ de l'Eau +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES7110, "Bonus d'ATQ de l'Eau +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES7300, "Talents 0 Niveau").
+-define(GENIUSATTR_DES7301, "Bonus d'DÉF de l'Eau +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES7302, "Bonus d'DÉF de l'Eau +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES7303, "Bonus d'DÉF de l'Eau +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES7304, "Bonus d'DÉF de l'Eau +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES7305, "Bonus d'DÉF de l'Eau +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES7306, "Bonus d'DÉF de l'Eau +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES7307, "Bonus d'DÉF de l'Eau +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES7308, "Bonus d'DÉF de l'Eau +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES7309, "Bonus d'DÉF de l'Eau +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES7310, "Bonus d'DÉF de l'Eau +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES8100, "Talents 0 Niveau").
+-define(GENIUSATTR_DES8101, "Bonus d'ATQ du Feu +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES8102, "Bonus d'ATQ du Feu +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES8103, "Bonus d'ATQ du Feu +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES8104, "Bonus d'ATQ du Feu +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES8105, "Bonus d'ATQ du Feu +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES8106, "Bonus d'ATQ du Feu +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES8107, "Bonus d'ATQ du Feu +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES8108, "Bonus d'ATQ du Feu +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES8109, "Bonus d'ATQ du Feu +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES8110, "Bonus d'ATQ du Feu +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES8300, "Talents 0 Niveau").
+-define(GENIUSATTR_DES8301, "Bonus d'DÉF du Feu +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES8302, "Bonus d'DÉF du Feu +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES8303, "Bonus d'DÉF du Feu +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES8304, "Bonus d'DÉF du Feu +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES8305, "Bonus d'DÉF du Feu +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES8306, "Bonus d'DÉF du Feu +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES8307, "Bonus d'DÉF du Feu +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES8308, "Bonus d'DÉF du Feu +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES8309, "Bonus d'DÉF du Feu +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES8310, "Bonus d'DÉF du Feu +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES9100, "Talents 0 Niveau").
+-define(GENIUSATTR_DES9101, "Bonus d'ATQ de la Terre +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES9102, "Bonus d'ATQ de Terre +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES9103, "Bonus d'ATQ de la Terre +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES9104, "Bonus d'ATQ de Terre +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES9105, "Bonus d'ATQ de la Terre +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES9106, "Bonus d'ATQ de Terre +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES9107, "Bonus d'ATQ de la Terre +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES9108, "Bonus d'ATQ de Terre +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES9109, "Bonus d'ATQ de la Terre +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES9110, "Bonus d'ATQ de Terre +<color=#00FF00>35</color>%").
+-define(GENIUSATTR_DES9300, "Talents 0 Niveau").
+-define(GENIUSATTR_DES9301, "Bonus d'DÉF de la Terre +<color=#00FF00>3.5</color>%").
+-define(GENIUSATTR_DES9302, "Bonus d'DÉF de Terre +<color=#00FF00>7</color>%").
+-define(GENIUSATTR_DES9303, "Bonus d'DÉF de la Terre +<color=#00FF00>10.5</color>%").
+-define(GENIUSATTR_DES9304, "Bonus d'DÉF de Terre +<color=#00FF00>14</color>%").
+-define(GENIUSATTR_DES9305, "Bonus d'DÉF de la Terre +<color=#00FF00>17.5</color>%").
+-define(GENIUSATTR_DES9306, "Bonus d'DÉF de Terre +<color=#00FF00>21</color>%").
+-define(GENIUSATTR_DES9307, "Bonus d'DÉF de la Terre +<color=#00FF00>24.5</color>%").
+-define(GENIUSATTR_DES9308, "Bonus d'DÉF de Terre +<color=#00FF00>28</color>%").
+-define(GENIUSATTR_DES9309, "Bonus d'DÉF de la Terre +<color=#00FF00>31.5</color>%").
+-define(GENIUSATTR_DES9310, "Bonus d'DÉF de Terre +<color=#00FF00>35</color>%").
+-define(SHSN101, "Gardien d'EXP Supérieur").
+-define(SHSN102, "Gardien de Compétences Supérieures").
+-define(SHSN103, "Gardien Crit de Base").
+-define(SHSN104, "Gardien Crit Raffiné").
+-define(SHSN105, "Gardien Crit Supérieur").
+-define(SHSN106, "Gardien de Focalisation de Base").
+-define(SHSN107, "Gardien de Focalisation Raffiné").
+-define(SHSN108, "Gardien de Focalisation Supérieur").
+-define(SHSN109, "Gardien de Bonus de DGT de Base").
+-define(SHSN110, "Gardien de Bonus de DGT Raffiné").
+-define(SHSN111, "Gardien de Bonus de DGT Supérieur").
+-define(SHSN112, "Gardien de Blocage de Base").
+-define(SHSN113, "Gardien de Blocage Raffiné").
+-define(SHSN114, "Gardien de Blocage Supérieur").
+-define(SHSN115, "Gardien Excellence de Base").
+-define(SHSN116, "Gardien Excellence Raffiné").
+-define(SHSN117, "Gardien Excellence Supérieur").
+-define(SHSN118, "Gardien Mortel de Base").
+-define(SHSN119, "Gardien Mortel Raffiné").
+-define(SHSN120, "Gardien Mortel Supérieur").
+-define(SHSN121, "Gardien de Châtiment de Base").
+-define(SHSN122, "Gardien de Châtiment Raffiné").
+-define(SHSN123, "Gardien de Châtiment Supérieur").
+-define(SHSN124, "Gardien de Réd de DGT Finaux de Base").
+-define(SHSN125, "Gardien de Réd de DGT Finaux Raffiné").
+-define(SHSN126, "Gardien de Réd de DGT Finaux Supérieur").
+-define(SHSD101, "EXP de Monstre +{0}% et EXP d'AFK +{1}%, DGT Finaux +{2}%").
+-define(SHSD102, "Bonus DGT de Compétence +{0}%, RÉD d'ATQ de Focalisation +{1}%").
+-define(SHSD103, "DGT JcE +{0}%").
+-define(SHSD104, "DGT JcE +{0}%, Réduction de DGT Élites +{1}%").
+-define(SHSD105, "DGT JcE +{0}%, Réduction de DGT Élites +{1}%").
+-define(SHSD106, "Taux Crit +{0}%").
+-define(SHSD107, "Taux Crit +{0}%, Réduction de DGT de Focalisation +{1}%").
+-define(SHSD108, "Taux Crit +{0}%, Réduction de DGT de Focalisation +{1}%").
+-define(SHSD109, "Bonus DGT +{0}%").
+-define(SHSD110, "Bonus DGT +{0}%, Réduction de DGT +{1}%").
+-define(SHSD111, "Bonus DGT +{0}%, Réduction de DGT +{1}%").
+-define(SHSD112, "Taux de Blocage +{0}%").
+-define(SHSD113, "Taux de Blocage +{0}%, Taux Anti-blocage +{1}%").
+-define(SHSD114, "Taux de Blocage +{0}%, Taux Anti-blocage +{1}%").
+-define(SHSD115, "Bonus DGT Excellent +{0}%").
+-define(SHSD116, "Bonus DGT Excellent +{0}%, Réduction de DGT Excellent +{1}%").
+-define(SHSD117, "Bonus DGT Excellent +{0}%, Réduction de DGT Excellent +{1}%").
+-define(SHSD118, "Bonus DGT Mortel +{0}%").
+-define(SHSD119, "Bonus DGT Mortel +{0}%, Réduction de DGT Mortels +{1}%").
+-define(SHSD120, "Bonus DGT Mortel +{0}%, Réduction de DGT Mortels +{1}%").
+-define(SHSD121, "Taux de Châtiment +{0}%").
+-define(SHSD122, "Taux de Châtiment +{0}%, Taux de Fragilité +{1}%").
+-define(SHSD123, "Taux de Châtiment +{0}%, Taux de Fragilité +{1}%").
+-define(SHSD124, "Bonus de DGT Finaux +{0}%").
+-define(SHSD125, "Bonus de DGT Finaux +{0}% et RÉD DGT Finaux +{1}%").
+-define(SHSD126, "Bonus de DGT Finaux +{0}% et RÉD DGT Finaux +{1}%").
+-define(EASYSD150035, "EXP de Monstre +{0}% et EXP d'AFK +{1}%, DGT de Boss +{2}%").
+-define(EASYSD150036, "Bonus DGT de Compétence +{0}%, Réduction de DGT de Compétence +{1}%").
+-define(EASYSD150037, "Bonus DGT Crit +{0}%").
+-define(EASYSD150038, "Bonus DGT Crit +{0}%, Réduction de DGT Crit +{1}%").
+-define(EASYSD150039, "Bonus DGT Crit +{0}%, Réduction de DGT Crit +{1}%").
+-define(EASYSD150040, "Bonus DGT Focalisation +{0}%").
+-define(EASYSD150041, "Bonus DGT de Focalisation +{0}%, Réduction de DGT de Focalisation +{1}%").
+-define(EASYSD150042, "Bonus DGT de Focalisation +{0}%, Réduction de DGT de Focalisation +{1}%").
+-define(EASYSD150043, "Bonus DGT +{0}%").
+-define(EASYSD150044, "Bonus DGT +{0}%, Réduction de DGT +{1}%").
+-define(EASYSD150045, "Bonus DGT +{0}%, Réduction de DGT +{1}%").
+-define(EASYSD150046, "Taux de Blocage +{0}%").
+-define(EASYSD150047, "Taux de Blocage +{0}%, Taux Anti-blocage +{1}%").
+-define(EASYSD150048, "Taux de Blocage +{0}%, Taux Anti-blocage +{1}%").
+-define(EASYSD150049, "Bonus DGT Excellent +{0}%").
+-define(EASYSD150050, "Bonus DGT Excellent +{0}%, Réduction de DGT Excellent +{1}%").
+-define(EASYSD150051, "Bonus DGT Excellent +{0}%, Réduction de DGT Excellent +{1}%").
+-define(EASYSD150052, "Bonus DGT Mortel +{0}%").
+-define(EASYSD150053, "Bonus DGT Mortel +{0}%, Réduction de DGT Mortels +{1}%").
+-define(EASYSD150054, "Bonus DGT Mortel +{0}%, Réduction de DGT Mortels +{1}%").
+-define(EASYSD150055, "Taux de Châtiment +{0}%").
+-define(EASYSD150056, "Taux de Châtiment +{0}%, Taux de Fragilité +{1}%").
+-define(EASYSD150057, "Taux de Châtiment +{0}%, Taux de Fragilité +{1}%").
+-define(EASYSD150058, "Bonus de DGT Finaux +{0}%").
+-define(EASYSD150059, "Bonus de DGT Finaux +{0}% et RÉD DGT Finaux +{1}%").
+-define(EASYSD150060, "Bonus de DGT Finaux +{0}% et RÉD DGT Finaux +{1}%").
+-define(SN836, "Défense - Armure Robuste").
+-define(SD836, "En cas d'attaque, a {0}% de chance d'obtenir une armure forte (Taux d'Anti-focalisation +{1}%) pendant {2} sec.").
+-define(SN837, "Attaque - Lumière Spirituelle").
+-define(SD837, "Les attaques ont une chance {0}% de chance d'obtenir une Lumière Spirituelle (Coup de Focalisation +{1}%) pendant {2} sec.").
+-define(BF266, "[Serpent Cosmique]").
+-define(BF369, "[Ailes Divines de Tempête]").
+-define(SS535, "Il y a une chance d'augmenter le Taux de RÉD d'ATQ de Focalisation en cas d'attaque").
+-define(SS536, "Il y a une chance d'augmenter le Taux d'ATQ de Focalisation en cas d'attaque").
+-define(BN361, "Premiers Secours").
+-define(BD361, "Soigne pour {0}% des PV max, puis soigne pour le même montant à nouveau 6 sec plus tard.").
+-define(BN362, "Explosion").
+-define(BD362, "Endure des DGT équivalents à {0}% des PV max, puis subit à nouveau la même quantité de dégâts 6 sec plus tard.").
+-define(SN834, "Défense - Premiers Secours").
+-define(SD834, "Si touché par une attaque quand les PV sont inférieurs à {0}%, gagne les Premiers Soins (Soigne de {1}% des PV max, puis soigne de la même quantité à nouveau 6 sec plus tard).").
+-define(SN835, "Attaque - Explosion").
+-define(SD835, "Les attaques ont {0}% de chance d'infliger à une cible une explosion (Endure des DGT équivalents à {1}% des PV max, puis subit à nouveau la même quantité de dégâts 6 sec plus tard).").
+-define(SS533, "Il y a une chance de soigner pour des PV massifs en cas d'attaque.").
+-define(SS534, "En cas d'attaque, vous pouvez ajouter le double des DGT supplémentaires.").
+-define(BF265, "[Chimère]").
+-define(BF368, "[Dragon Abyssal]").
+-define(SS303, "Lorsque vous utilisez des reliques pour attaquer, vous pouvez déclencher des DGT supplémentaires avec la sangsue.").
+-define(XMSN1001, "Puissance du Pharaon").
+-define(XMSD1001, "Lorsque vous attaquez alors que les PV sont supérieurs à 70%, il y a {0}% de chance de déclencher la Puissance du Pharaon (ATQ +45%) pendant 8 sec.").
+-define(XMSN1002, "Frappe de Précision").
+-define(XMSD1002, "Si une attaque est esquivée, il y a {0}% de chance de gagner en Précision (Toucher +30%) pendant 8 sec.").
+-define(XMSN1003, "Ailes de Pharaon").
+-define(XMSD1003, "En attaquant alors que les PV sont supérieurs à 70%, gagne 1 pile de Sang du Pharaon.À 3 piles, supprime cet état et déclenche les Ailes du Pharaon pour infliger {0}% de DGT aux ennemis situés devant.").
+-define(XMSN2001, "Renaissance de la Vie").
+-define(XMSD2001, "En cas d'attaque avec moins de 30% de PV, restaure {0}% de vos PV Max.").
+-define(XMSN2002, "Inspiration de la Vie").
+-define(XMSD2002, "Lorsque les PV sont inférieurs à 50% et qu'il y a plus de 2 ennemis à proximité, restaure vos PV et ceux des alliés à proximité de {0}% des PV max.").
+-define(XMSN2003, "Sang de Vie").
+-define(XMSD2003, "Quand les PV sont inférieurs à 70%, obtenez 1 pile de Sang de Vie.Une fois que vous possédez 3 piles, ce buff sera retiré et les PV sont restaurés de {0}% des DGT.").
+-define(XMSN3001, "Vigile de la Vengeance").
+-define(XMSD3001, "En cas d'attaque avec moins de 50% des PV, gagne Alerte (Taux de Blocage +{0}%) pendant 10 secondes.").
+-define(XMSN3002, "Corps de la Vengeance").
+-define(XMSD3002, "En cas d'attaque alors que les PV sont inférieurs à 20%, déclenche Corps de Vengeance (Réduction des DGT +{0}%) pendant 10 sec.").
+-define(XMSN3003, "Sang de la Vengeance").
+-define(XMSD3003, "En cas d'attaque alors que les PV sont inférieurs à 70%, déclenche 1 pile de Sang de la Vengeance.À 3 piles, supprime le statut et gagne 1 couche de bouclier qui repousse {0}% des DGT.").
+-define(XMSN4001, "Frappe Enragée").
+-define(XMSD4001, "En attaquant avec moins de 2 ennemis à proximité, il y a {0}% de chances de bénéficier de Colère (Taux Crit et DGT Crit +20%) pendant 10 sec.").
+-define(XMSN4002, "Jugement de F").
+-define(XMSD4002, "Si vous obtenez un Crit, déclenche Jugement de Fracassement et inflige {0}% DGT à 1 ennemi.").
+-define(XMSN4003, "Fureur Sanguinaire").
+-define(XMSD4003, "{0}% de chance de restaurer 3.5% des PV max à chaque Attaque Critique.").
+-define(XMSN5001, "Puissance du Tartare").
+-define(XMSD5001, "Lorsque le buff de Destruction d'Âme est actif, attaquer soigne {0}% d'ATQ de PV.Les soins se déclenchent une fois tous les {1} sec.").
+-define(XMSN5002, "Faucheur d'Âme").
+-define(XMSD5002, "L'attaque a {0}% de chance d'infliger Fracassement (Fracassement +55%) pendant {1} sec.").
+-define(XMSN5003, "Écrasement d'Hadès").
+-define(XMSD5003, "L'attaque a {0}% de chance de déclencher Fracassement d'Hadès, touchant 3 ennemis pour leur infliger {1}% de DGT et un bonus de DGT égaux à {2}% du Fracassement du lanceur.").
+-define(XMSN6001, "Gel du Temps").
+-define(XMSD6001, "Lorsque les PV sont inférieurs à {0}%, être attaqué offre {1}% de chance de déclencher Gel Temporel, étourdissant {2} ennemis pendant {3} sec.").
+-define(XMSN6002, "Bénédiction de Vénus").
+-define(XMSD6002, "Le Blocage a {0}% de chance de déclencher Âme de Démon (immunisé contre le contrôle des foules) pendant {1} sec.").
+-define(XMSN6003, "Purification Brillante").
+-define(XMSD6003, "Le Blocage peut dissiper {0} pile(s) d'affaiblissement de soi.").
+-define(XMSN7001, "Absorption Naturelle").
+-define(XMSD7001, "L'attaque a {0}% de chance de déclencher l'absorption naturelle, en touchant {1} ennemis pour leur infliger {2}% de DGT avec {3}% de Sangsue.").
+-define(XMSN7002, "Cœur de la Terre").
+-define(XMSD7002, "Esquiver une attaque ennemie a {0}% de chance de guérir {1}% de PV Max.").
+-define(XMSN7003, "Marque de la Nature").
+-define(XMSD7003, "Esquiver une attaque ennemie a {0}% de chance de restaurer {1} Fureur.").
+-define(XMSN8001, "Éclipse Lunaire").
+-define(XMSD8001, "Lorsqu'il y a plus de {0} ennemis à proximité, l'attaque a {1}% de chance de déclencher Éclipse Lunaire (DGT de Compétence +{2}%, pour chaque ennemi supplémentaire à proximité, gain de {3}% jusqu'à un maximum de {4}%).").
+-define(XMSN8002, "Gardien de la Lune").
+-define(XMSD8002, "Quand il y a plus de {0} ennemis à proximité, l'attaque a {1}% de chances de déclencher le Gardien de la Lune (Réduction DGT de Compétence +{2}%, pour chaque ennemi supplémentaire à proximité, gain de {3}% jusqu'à un maximum de {4}%).").
+-define(XMSN8003, "Colère de la Lune").
+-define(XMSD8003, "Lorsqu'il y a plus de {0} ennemis proches, l'attaque a {1}% de chance de déclencher Colère de la Lune qui inflige {2}% de dégâts et ignore la DÉF et l'Esquive des cibles.").
+-define(XMBN001, "Sang du Pharaon").
+-define(XMBD001, "Obtenez 3 piles de cette compétence pour déclencher la compétence Ailes du Pharaon et attaquer les ennemis avant le lanceur.").
+-define(XMBN002, "Sang de Vie").
+-define(XMBD002, "Après avoir été empilé 3 fois, déclenche la récupération des PV.").
+-define(XMBN003, "Sang de la Vengeance").
+-define(XMBD003, "Après avoir été empilé 3 fois, déclenche le Bouclier").
+-define(XMBN004, "Bouclier de la Vengeance").
+-define(XMBD004, "Un bouclier créé par le Sang de la Vengeance.Peut bloquer une certaine quantité de DGT.").
+-define(XMBN005, "Éclipse Lunaire").
+-define(XMBD005, "RÉD DGT de Compétence augmentée de {0}% et de 20% supplémentaires pour chaque ennemi supplémentaire à proximité (Allant jusqu'à 100%).").
+-define(XMBN006, "Gardien de la Lune").
+-define(XMBD006, "RÉD DGT de Compétence augmentée de {0}% et de 20% supplémentaires pour chaque ennemi supplémentaire à proximité (Allant jusqu'à 100%).").
+-define(XMBN007, "Rayon d'Abondance").
+-define(XMBD007, "Rayon d'Abondance ! Réduction Blocage +{0}%").
+-define(XMBN008, "Aiguiser").
+-define(XMBD008, "Lame affûtée ! Fracassement +{0}%").
+-define(XMBN009, "Force de Santé").
+-define(XMBD009, "Force vitale ! PV Max +{0}%").
+-define(XMBN010, "Destruction d'Âme").
+-define(XMBD010, "Détruisez l'âme ! Taux de Concentration +{0}%").
+-define(XMSN1000, "Force").
+-define(XMSD1000, "Les attaques ont {0}% de chance d'ajouter la Force aux alliés (ATQ +13%) pendant {1} sec").
+-define(XMSN2000, "PV").
+-define(XMSD2000, "En cas de dégâts reçus supérieurs à {0}% des PV max, la restauration des PV est égale à {1}% de l'ATQ.").
+-define(XMSN3000, "Défense").
+-define(XMSD3000, "En cas d'attaque, a {0}% de chance d'appliquer un Bouclier Magique sur les alliés (DÉF +65%) pendant {1} sec.").
+-define(XMSN4000, "Manie").
+-define(XMSD4000, "Les attaques ont {0}% de chance d'ajouter manie des alliés (Taux Crit +20%) pendant {1} sec").
+-define(XMSN5000, "Destruction d'Âme").
+-define(XMSD5000, "Après le début de la Bataille, gagne une amélioration de Destruction de l'Âme qui accorde {0}% de Taux de Concentration pendant {1} sec.").
+-define(XMSN6000, "Rayon d'Abondance").
+-define(XMSD6000, "Le blocage a {0}% de chance de donner une amélioration de Rayon d'Abondance qui accorde {1}% de réduction de Blocage.").
+-define(XMSN7000, "Force de Santé").
+-define(XMSD7000, "L'Esquive a {0}% de chance de déclencher Force de Santé pour gagner {1}% de PV Max pendant {2} sec.").
+-define(XMSN8000, "Gardien de la Déesse de la Lune").
+-define(XMSD8000, "Lorsqu'il y a {0} ou plus d'ennemis proches, il y a {1}% de chance de déclencher Bouclier d'énergie (absorbe {2}% de DGT) jusqu'à {3} sec.").
+-define(BF1002, "[Lignée de Sang]").
+-define(BF1004, "[Tour de Babel]").
+-define(BF1005, "[Armure de Dieu D.]").
+-define(BN801, "Énergie du Dragon").
+-define(BD801, "L'Énergie du Dragon vous entoure ! L'Impulsion du Dragon se déclenche en fonction des piles").
+-define(BN802, "Vague").
+-define(BD802, "Vagues de Sous-courant ! Restaurer continuellement les PV perdus").
+-define(BN803, "Bouclier Infernal").
+-define(BD803, "Les ténèbres se condensent en un bouclier ! Bouclier augmenté.").
+-define(BN804, "Purification des Ténèbres").
+-define(BD804, "Supprime 2 débuffs toutes les 5 sec pendant 15 sec.").
+-define(BN805, "[Faucheur de l'Ombre]").
+-define(BD805, "Bonus de Toucher et de DGT +{0}%").
+-define(BN806, "Dragon Divin d'Ichor des Ténèbres").
+-define(BD806, "Bénédiction du Dragon Divin d'Ichor des Ténèbres ! Restaure continuellement les PV").
+-define(BN807, "Pendule des Ténèbres").
+-define(BD807, "Une grande quantité de Ralentissement sera déclenchée après l'expiration de ce Statut.").
+-define(BN808, "Pendule des Ténèbres").
+-define(BD808, "La Vitesse de Déplacement diminue de 99%").
+-define(BN809, "Extinction").
+-define(BD809, "Obtenez 5 piles pour déclencher l'Épopée de l'Extinction").
+-define(BN810, "Mortel").
+-define(BD810, "Frappe Fatale ! Taux de DGT Mortel +{0}%").
+-define(BN811, "Anti-guérison").
+-define(BD811, "Les effets de soin diminuent de 99%").
+-define(BN812, "Zone de Terrain Noir").
+-define(BD812, "Dans la Zone Noire des Alliés, Taux d'Esquive +{0}%, Vitesse de Déplacement +{1}%.").
+-define(BN813, "Zone de Terrain Noir").
+-define(BD813, "Dans la Zone Noire des Ennemis, Fracassement -{0}%, Vitesse de Déplacement -{1}%, Taux de Toucher -{2}%").
+-define(BN814, "Points de Terrain Noir").
+-define(BD814, "La RÉD de DGT de Compétence augmente de {0}% à chaque pile").
+-define(BN815, "Apothéose").
+-define(BD815, "Transformé en Dragon Divin des Ténèbres").
+-define(BN816, "Protection de l'Armure Sacrée").
+-define(BD816, "Activé quand l'Armure Sacrée atteint {0}, DÉF DGT JcJ +{1}%").
+-define(BN817, "Amplification d'Armure Sacrée").
+-define(BD817, "Activé lorsque les Points d'Armure Sacrée sont maximisés, Résistance aux Contrôles Faibles +{0}%").
+-define(BN818, "Amplification d'Armure Sacrée").
+-define(BD818, "Activé lorsque les Points d'Armure Sacrée sont maximisés, Résistance aux Contrôles Faibles + {0}%, PV Max +{1}%").
+-define(BN819, "Amplification d'Armure Sacrée").
+-define(BD819, "Activé lorsque les Points d'Armure Sacrée sont maximisés, Résistance aux Contrôles Faibles + {0}%, Résistance aux Contrôles Durs +{1}%, PV Max +{2}%").
+-define(BN820, "Bénédiction d'Armure Sacré").
+-define(BD820, "Activé lorsque les Points d'Armure Sacrée sont maximisés, les dégâts subis ne dépasseront pas {0}% des PV max.PV.").
+-define(SN838, "Brisure - Gardien des Enfers").
+-define(SD838, "En cas d'attaque avec moins de {0}% PV, gagne une invincibilité (immunité aux DGT) pendant {1} sec.").
+-define(SN839, "Brisure - Voix Charmante").
+-define(SD839, "En cas d'attaque avec moins de {0}% de PV, inflige un Charme (impossible à contrôler) aux cibles environnantes pendant {1} secondes.").
+-define(SN840, "Brisure - Gardien de la Flamme").
+-define(SD840, "En cas d'attaque avec moins de {0}% de PV, gagne Réignition (accorde un Bouclier équivalent à {1}% des PV Max, restaurant {2}% des PV Max toutes les sec pendant la durée) pendant {3} sec.").
+-define(SN841, "Pleine - Lumière de Bénédiction de Dieu").
+-define(SD841, "En attaquant avec plus de {0}% de PV, il y a {1}% de chances d'infliger le Silence (impossibilité d'utiliser les Compétences Actives) aux cibles environnantes pendant {2} sec.").
+-define(BF267, "[Dragons du Cristal Noir]").
+-define(BF370, "[Ailes de Succube]").
+-define(BF268, "[Gardiens de Flammes]").
+-define(BF371, "[Ailes de Bénédiction de Dieu]").
+-define(SS537, "Obtenez Invulnérabilité en étant attaqué avec des PV faibles.").
+-define(SS538, "Inflige un Charme aux ennemis en étant attaqué avec des PV faibles.").
+-define(SS539, "Obtenez Bouclier et Récupération en étant attaqué avec des PV faibles..").
+-define(SS540, "Inflige Silence aux ennemis en étant attaqué avec des PV faibles.").
+-define(BN365, "Réignition").
+-define(BD365, "Accorde un Bouclier équivalent à {0}% des PV max, restaurant {1}% des PV max toutes les sec pendant la durée.").
+-define(SYSD11004, "Lors d'une attaque, il y a {0}% de chance de déclencher un Coup Fatal et d'augmenter le Taux de DGT Mortels +{2}% dans les {1} secondes.TdR : {3} sec").
+-define(SYSD11005, "En cas d'attaque, il y a {0}% chance de déclencher la Garde Céleste et de bénéficier d'un Bouclier avec {1}0, 000 d'Énergie.Les dégâts subis à chaque fois sont fixés à {2}0, 000 pour la durée.TdR : {3} sec").
+-define(SYSD11006, "En attaquant, il y a {0}% de chance de déclencher l'Absorption d'Énergie.L'ennemi le plus proche perdra {1} Fureur et vous récupérerez {2} Fureur pour vous-même.TdR : {3} sec").
+-define(SYSN11004, "Coup Fatal").
+-define(SYSN11005, "Garde Céleste").
+-define(SYSN11006, "Absorption d'Énergie").
+-define(BN2018, "Bouclier d'Énergie").
+-define(BD2018, "Absorbe {0}0, 000 dégâts et diminue les dégâts de l'ennemi à {1}0, 000").
+-define(SN51500, "Flux de Lumière").
+-define(SD51500, "Restaure les PV du Personnage à hauteur de {0}% des DGT, et gagne du Sang de la Lumière Sacrée (PV Max.+{1}%) pendant {2} sec.").
+-define(SN51900, "Protection de la Lumière").
+-define(SD51900, "En cas d'attaque, il y a {1}% de chance d'accorder au personnage un soin égale à {0}% des DGT et de restaurer {2} Fureur.").
+-define(BN23700, "Ichor de la Lumière Sacrée").
+-define(BD23700, "Bénédiction de la Lumière Sacrée ! PV Max +{0}% (Ne peut être empilé avec Ichor)").
+-define(SN842, "Foule - Choc").
+-define(SD842, "En attaquant avec plus de {0} ennemis à proximité, inflige un choc (Bonus de DGT de -30%) aux {1} cibles à proximité pendant {2} sec.").
+-define(SN843, "Foule - Putréfaction").
+-define(SD843, "En attaquant avec plus de {0} ennemis à proximité, inflige Putréfaction (RÉD DGT de -{3}%) sur {1} cibles à proximité pendant {2} sec.").
+-define(SS541, "Le Bonus de DGT des ennemis diminue lorsqu'il y a beaucoup d'ennemis à proximité.").
+-define(SS542, "La RÉD des DGT des ennemis sera réduite lorsqu'il y a beaucoup d'ennemis à proximité.").
+-define(BF269, "Être Imaginaire de la Comète").
+-define(BF372, "Aile de Scorpion Écarlate").
+-define(BN30086, "Accélération").
+-define(BD30086, "Je vole !").
+-define(SN250001, "Voie de la Croissance").
+-define(SN250002, "Croissance Accélérée").
+-define(SN250003, "Chasseur de Démons").
+-define(SN250004, "Fureur").
+-define(SN250005, "Potentiel").
+-define(SN250006, "Croissance").
+-define(SD250001, "EXP de Raid d'Histoire +{0}%").
+-define(SD250002, "EXP d'AFK +{0}%").
+-define(SD250003, "EXP de Monstre +{0}%").
+-define(SD250004, "Gain de Fureur +{0}%").
+-define(SD250005, "Fureur Initiale +{0}%").
+-define(SD250006, "Durée de la Forme de Dieu +{0} sec").
+-define(SN251001, "Bénédiction de Croissance").
+-define(SD251001, "EXP d'AFK +{0}% et EXP de Monstre +{1}%").
+-define(SN251002, "Abri de Croissance").
+-define(SD251002, "EXP d'AFK +{0}%").
+-define(BN8001, "Bonus d'EXP d'Événement").
+-define(BD8001, "EXP de Monstre +{0}%").
+-define(BF8001, "[Événement]").
+-define(BN8006, "Bonus EXP d'Insigne du Dragon").
+-define(BD8006, "EXP de Monstre +{0}%").
+-define(BF8006, "[Insigne du Dragon]").
+-define(BN8016, "Bonus d'EXP de la Carte Éternelle Ult").
+-define(BD8016, "EXP de Monstre +{0}%").
+-define(BF8016, "[Carte Éternelle Ult]").
+-define(BN8017, "Bonus d'EXP de la Carte Éternelle").
+-define(BD8017, "EXP d'AFK +{0}%").
+-define(BF8017, "[Carte Éternelle]").
+-define(BN4012, "Bouclier d'Énergie").
+-define(BD4012, "Bouclier d'Énergie ! Bloque des DGT équivalents à {0}% des PV max.").
+-define(SN110100, "Avatar de la Sagesse").
+-define(SN110101, "Poussée de Lance").
+-define(SN110105, "Lance Tourbillonnante").
+-define(SN110106, "Bouclier des Soupirs").
+-define(SN110107, "Poussée de Lance").
+-define(SN110108, "Jugement Divin").
+-define(SN110200, "Sceau de Vengeance").
+-define(SN110201, "Appel du Corbeau").
+-define(SN110205, "Siphon d'Énergie").
+-define(SN110206, "Rites du Corbeau").
+-define(SN110207, "Danse du Corbeau").
+-define(SN110208, "Tourbillon de Vengeance").
+-define(SN110300, "Domination de Thor").
+-define(SN110301, "Foudre").
+-define(SN110305, "Craquement de Tonnerre").
+-define(SN110306, "Explosion de Foudre").
+-define(SN110307, "Tonnerre Assourdissant").
+-define(SN110308, "Marteau de Thor").
+-define(SN110400, "Gardien du Pharaon").
+-define(SN110401, "Corona").
+-define(SN110405, "Halo Solaire").
+-define(SN110406, "Disque Solaire").
+-define(SN110407, "Ancienne Malédiction").
+-define(SN110408, "Vent Solaire").
+-define(SN110011, "").
+-define(SD110011, "").
+-define(SN110012, "").
+-define(SD110012, "").
+-define(SD110100, "").
+-define(SD110101, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD110105, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD110106, "Aux {2} cibles proches (monstres + {3}), inflige {0}% de DGT.Après le lancement, l'équipe bénéficie de Vigilance (Taux de Blocage +20%) pendant {1} sec.").
+-define(SD110107, "Aux {2} cibles proches (monstres + {3}), inflige {0}% de DGT.Le dernier coup possède aussi Percée (DÉF -50%) pendant {1} sec.").
+-define(SD110108, "Aux {2} cibles proches (monstres + {3}), inflige {0}% de DGT.Après le lancement, l'équipe bénéficie de Maîtrise de Blocage (Taux de Blocage et Réduction Blocage +30%) pendant {1} sec.").
+-define(SD110200, "").
+-define(SD110201, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD110205, "Aux {3} cibles proches (monstres + {4}), inflige {0}% de DGT, {1}% de Sangsue, et inflige Flétrissure (Taux de Blocage et d'Esquive -20%) à la cible pendant {2} sec.").
+-define(SD110206, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.Le lancement de compétence fait également reculer les ennemis ciblés.").
+-define(SD110207, "Aux {2} cibles proches (monstres + {3}), inflige {0}% de DGT avec {1}% de Sangsue.").
+-define(SD110208, "Aux {2} cibles proches (monstres + {3}), inflige {0}% de DGT et gagne {1}% de Multiplicateur de DGT pour les ennemis flétris.").
+-define(SD110300, "").
+-define(SD110301, "").
+-define(SD110302, "").
+-define(SD110303, "").
+-define(SD110305, "").
+-define(SD110306, "Aux {3} cibles proches (monstres + {4}), inflige {0}% de DGT, renverse les ennemis, {1}% de chance d'infliger Paralysie pendant {2} sec.").
+-define(SD110307, "Aux {2} cibles proches (monstres + {3}), inflige {0}% de DGT et attire les ennemis.Après avoir été lancé, Tonnerre près du lanceur de sorts continuera d'infliger {1}% de DGT aux ennemis proches.").
+-define(SD110308, "Aux {3} cibles proches (monstres + {4}), inflige {0}% de DGT et inflige Étourdissement pendant {1} sec, et +{2}% de Multiplicateur de DGT contre les ennemis paralysés.").
+-define(SD110400, "Se transforme en Horus pendant {1} sec.Aux {5} cibles proches (monstres + {6}), inflige {0}% de DGT.Pendant la transformation, le lanceur de sorts reçoit {2}% de DGT de moins.Chaque DGT infligé donne {3}% de chances d'infliger Brûlure (inflige 10% de DGT par sec) pendant {4} sec.").
+-define(SD110401, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD110405, "Aux {2} cibles proches (monstres + {3}), inflige {0}% DGT et applique 1 pile de Brûlure (inflige 10% DGT par sec) pendant {1}sec.").
+-define(SD110406, "Aux {2} cibles proches (monstres + {3}), inflige {0}% DGT et applique 2 pile de Brûlure (inflige 10% DGT par sec) pendant {1}sec.").
+-define(SD110407, "Aux {3} cibles proches (monstres + {4}), inflige {0}% DGT, inflige 1 pile de Brûlures (inflige 10% de DGT par sec) pendant {1} sec, et inflige Patienter (impossible de bouger) à la cible pendant {2} sec.").
+-define(SD110408, "Aux {2} cibles proches (monstres + {3}), inflige {0}% DGT.Chaque DGT lancé inflige également 1 pile de Brûlure (inflige 10% de DGT par sec) pendant {1} sec.").
+-define(BN20041, "Descente d'Athéna").
+-define(BD20041, "Transformation en Athéna").
+-define(BN20042, "Descente de Morrigan").
+-define(BD20042, "Transformation en Morrigan").
+-define(BN20043, "Descente de Thor").
+-define(BD20043, "Transformation en Thor").
+-define(BN20044, "Descente d'Horus").
+-define(BD20044, "Transformation en Horus").
+-define(BN23004, "Flétrissement").
+-define(BD23004, "Chances de Blocage -{0}%, Esquive -{1}%").
+-define(BN23009, "Brûler").
+-define(BD23009, "Chaque pile inflige {0}% de DGT.S'empile jusqu'à {1} fois.").
+-define(BF401, "[Athéna]").
+-define(BF402, "[Morrigan]").
+-define(BF403, "[Thor]").
+-define(BF404, "[Horus]").
+-define(SN120201, "Marteau Lourd").
+-define(SN120241, "Fissure Sismique").
+-define(SN120261, "Frappe du Marteau").
+-define(SN120281, "Marteau Puissant").
+-define(SD120201, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD120241, "Aux {3} cibles proches (monstres + {4}), inflige {0}% DGT et a {1}% de chances d'infliger Brise-genou (Vitesse de Déplacement -30%) pendant {2} sec.").
+-define(SD120261, "Les attaques ont {0}% de chance d'étourdir {1} cible(s) pendant {2} sec.").
+-define(SD120281, "Aux {2} cibles proches (monstres + {3}), inflige {0}% de DGT et inflige Étourdissement pendant {1} sec.").
+-define(BF601, "Merlin").
+-define(BF602, "[Héraclès]").
+-define(BF603, "[Gilgamesh]").
+-define(BF604, "[Ifrit]").
+-define(BF605, "[Brunhild]").
+-define(BF606, "[Siegfried]").
+-define(BF607, "[Reine d'Égypte]").
+-define(BF608, "[Jeanne d'Arc]").
+-define(SN106001, "Boule de Lumière").
+-define(SN106002, "Boule de Lumière").
+-define(SN106003, "Boule de Lumière").
+-define(SN106006, "Tir Dispersé").
+-define(SN106007, "Flèche Tourbillonnante").
+-define(SN106008, "Flèche Suspendue").
+-define(SN106009, "Oiseau Tonnerre").
+-define(SN106011, "Boule de Tonnerre").
+-define(SN106012, "Royaume de la Nature").
+-define(SN106021, "Flèches d'Appel").
+-define(SN106022, "Zone de Foudre").
+-define(SN106023, "").
+-define(SD106001, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD106002, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD106003, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD106006, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne 1 pile de Focalisation (Bonus de DGT +3%) pendant {2} sec.").
+-define(SD106007, "Aux {12} cibles proches (monstres + {13}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne 1 pile de Tonnerre (Réduction des DGT de +2%) pendant {2} sec.À 3, 5, 7 et 9 piles, toute l'équipe gagne un buff.3 piles : DGT de Compétence +{3}% pendant {4} sec.5 piles : Réduction DGT de Compétence +{5}% pendant {6} sec.7 piles : Taux d'Esquive et de Toucher +{7}% pendant {8} sec et soigne de {9}% du multiplicateur de PV.9 piles : Bonus de DGT Finaux +{10}% pendant {11} sec.").
+-define(SD106008, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, consomme toutes les piles de Focalisation, chaque pile offre un multiplicateur de DGT de compétence de +{2}%.").
+-define(SD106009, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, consomme toutes les piles de Tonnerre, chaque pile offre un multiplicateur de DGT de compétence de +{2}%.").
+-define(SD106011, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne 3 piles de Tonnerre (Réduction des DGT +2%) pendant {2} sec.").
+-define(SD106012, "Force de la Nature Acquise.Une fois actif, gagne {0}% de Bonus de DGT pendant {1} sec.").
+-define(SD106021, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne 3 piles de Focalisation (Bonus de DGT +3%) pendant {2} sec.").
+-define(SD106022, "L'équipe reçoit la Puissance de la Foudre.Lorsque le buff est actif, obtenez un bonus de +{0}% de DGT pendant {1} sec.").
+-define(SD106023, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, consomme toutes les piles de Focalisation, chaque pile offre un multiplicateur de DGT de compétence de +{2}%.").
+-define(SN105001, "Souffle Élémentaire").
+-define(SN105002, "Souffle Élémentaire").
+-define(SN105003, "Souffle Élémentaire").
+-define(SN105006, "Déflagration").
+-define(SN105007, "Impact du Gel").
+-define(SN105008, "Flamme Solaire").
+-define(SN105009, "Explosion Glaciaire").
+-define(SN105011, "Donjon de Glace").
+-define(SN105012, "Descente de Vulcain").
+-define(SN105021, "Spirale de Feu").
+-define(SN105022, "Descente de Khione").
+-define(SN105023, "").
+-define(SN105024, "").
+-define(SD105001, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD105002, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD105003, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD105006, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne Habiliter : Feu du Cœur (Taux Crit +6%) pendant {2} sec.").
+-define(SD105007, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne Habiliter : Glace Eldritch (Chances de Blocage +6%) pendant {2} sec.").
+-define(SD105008, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Pour chaque Pouvoir de Glace actif sur le lanceur, le gain supplémentaire est de {2}% de multiplicateur de DGT de compétence.").
+-define(SD105009, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Pour chaque Pouvoir de Glace actif sur le lanceur, l'équipe soigne davantage {2}% de multiplicateur de PV.").
+-define(SD105011, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne Habiliter : Glace d'Azur (Réduction DGT de Compétence +4.5%) pour {2}sec.").
+-define(SD105012, "Esprit de Vulcain acquis.Tous les {0} sec, cible {1} ennemis proches et leur inflige {2}% de DGT.Dure {3} sec.").
+-define(SD105021, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne Habiliter : Feu d'Esprit (Réduction de DGT de Compétence +4.5%) pendant {2} sec.").
+-define(SD105022, "Esprit de Khione acquis.Tous les {0} sec, {1} alliés soignent les PV avec {2}% du multiplicateur.Dure {3} sec.").
+-define(SD105023, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne Habiliter : Feu d'Esprit (Réduction de DGT de Compétence +4.5%) pendant {2} sec.").
+-define(SD105024, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur gagne Habiliter : Glace Eldritch (Chances de Blocage +6%) pendant {2} sec.").
+-define(SN104001, "Enchaînement").
+-define(SN104002, "Enchaînement").
+-define(SN104003, "Enchaînement").
+-define(SN104006, "Tranchant en Croissant").
+-define(SN104007, "Tranchant Lunaire").
+-define(SN104008, "Enchaînement Tourbillonnante").
+-define(SN104009, "Entaille de Téléportation").
+-define(SN104011, "Zone de Tonnerre").
+-define(SN104012, "Descente du Dieu de la Guerre").
+-define(SN104021, "Enchaînement de Rupture").
+-define(SN104022, "Bénédiction de Thor").
+-define(SN104023, "").
+-define(SD104001, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD104002, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD104003, "Aux {1} cibles proches (monstres + {2}), inflige un total de {0}% de DGT.").
+-define(SD104006, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur bénéficie de Colère (ATQ +6%) pendant {2} sec.").
+-define(SD104007, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, l'équipe bénéficie d'un Buff de Rugissement (Taux Crit +5%) pendant {2} sec.").
+-define(SD104008, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Quand la Colère est active, +{2}% du multiplicateur de DGT de Compétence.").
+-define(SD104009, "Aux {4} cibles proches (monstres + {5}), inflige {0}%+{1} de DGT.Quand Rugissement est actif, il y a {2}% de chance d'infliger Étourdissement pendant {3} sec.").
+-define(SD104011, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Quand Rugissement est actif, l'équipe bénéficie de Gardien (DÉF +30%) pendant {2} sec.").
+-define(SD104012, "Donne la Puissance du Dieu de la Guerre à soi-même.Une fois actif, gagne {0}% chance de cibler {1} ennemis et de leur infliger {2}% de DGT.Se déclenche une fois toutes les {3} sec.Le Buff dure {4} sec.").
+-define(SD104021, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Lorsque Colère est active, l'incantation inflige un Saignement (infligeant 10% de DGT par sec) pendant {2} sec à la cible.").
+-define(SD104022, "Donne à l'équipe la Garde de Thor.En étant actif, Taux de Blocage +{0}%.Dure {1} sec.").
+-define(SD104023, "Aux {3} cibles proches (monstres + {4}), inflige {0}%+{1} de DGT.Après le lancement, le lanceur bénéficie de Colère (ATQ +6%) pendant {2} sec.").
+-define(BN100101, "ATQ Ⅰ").
+-define(BN100102, "Gardien Ⅰ").
+-define(BN100103, "Crit Ⅰ").
+-define(BN100104, "Blocage Ⅰ").
+-define(BN100201, "ATQ Ⅱ").
+-define(BN100202, "Gardien Ⅱ").
+-define(BN100203, "Crit Ⅱ").
+-define(BN100204, "Blocage Ⅱ").
+-define(BN100301, "ATQ Ⅲ").
+-define(BN100302, "Gardien Ⅲ").
+-define(BN100303, "Excellence Ⅲ").
+-define(BN100304, "Esquive Ⅲ").
+-define(BN100401, "ATQ Ⅳ").
+-define(BN100402, "Gardien Ⅳ").
+-define(BN100403, "Mortel Ⅳ").
+-define(BN100404, "Récupération Ⅳ").
+-define(BN100501, "ATQ Ⅴ").
+-define(BN100502, "Gardien Ⅴ").
+-define(BN100503, "Frappe Fatale Ⅴ").
+-define(BN100504, "L'élu").
+-define(BD100101, "ATQ +5%").
+-define(BD100102, "Réduction DGT +5%").
+-define(BD100103, "Crit +10%").
+-define(BD100104, "Blocage +10%").
+-define(BD100201, "ATQ +10%").
+-define(BD100202, "Réduction DGT +10%").
+-define(BD100203, "Crit +20%").
+-define(BD100204, "Blocage +20%").
+-define(BD100301, "ATQ +15%").
+-define(BD100302, "Réduction DGT +15%").
+-define(BD100303, "Excellence +15%").
+-define(BD100304, "Esquive +15%").
+-define(BD100401, "ATQ +20%").
+-define(BD100402, "Réduction DGT +20%").
+-define(BD100403, "Mortel +15%").
+-define(BD100404, "Toutes les 10 sec, soigne 5% des PV max.").
+-define(BD100501, "ATQ +50%").
+-define(BD100502, "Réduction DGT +50%").
+-define(BD100503, "Taux de Frappe de Poursuite +25%").
+-define(BD100504, "Puissante bénédiction cachée qui fournit des tonnes de bonus de stats.").
+-define(SN120101, "Orbe Élémentaire").
+-define(SN120141, "Cieux Embrasés").
+-define(SN120161, "Garde de Guérison").
+-define(SN120181, "Bouclier de Glace").
+-define(SD120101, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD120141, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD120161, "En cas d'attaque, bénéficie de {0}% de chance de se soigner pour {1}% d'ATQ.").
+-define(SD120181, "Donne à l'équipe le Gardien de Glace (Réduction des DGT +{0}% et les PV du maître de soins sont égaux à {1}% de l'ATQ pendant l'effet) pendant {2} sec.").
+-define(BN25001, "Garde de Glace").
+-define(BD25001, "Réduction DGT +{0}%").
+-define(BN25002, "Garde de Glace").
+-define(BD25002, "Soigne sur la Durée").
+-define(BF100101, "[Bénédiction]").
+-define(SN104101, "Lame Mortelle").
+-define(SN104111, "Amélioration de Colère").
+-define(SN104121, "Guérison de Combat").
+-define(SN104131, "Esprit de Combat").
+-define(SN104141, "Soufle de Tonnerre").
+-define(SN105101, "Jet de Feu").
+-define(SN105111, "Imbue de Magie").
+-define(SN105121, "Régénération de PV").
+-define(SN105131, "Levée").
+-define(SN105141, "Soins de Gel").
+-define(SN106101, "Flèche Éclair").
+-define(SN106111, "Amélioration de Bataille").
+-define(SN106121, "Guérison de la Nature").
+-define(SN106131, "Excitation").
+-define(SN106141, "Mine").
+-define(SD104101, "Les attaques ont {2}% de chance d'infliger ({0}%+{1}) de dégâts supplémentaires ; la compétence inflige {3}% de dégâts supplémentaires en JcE.").
+-define(SD104111, "Colère donne +{0}% de Bonus d'ATQ.Rugissement donne +{1}% de Bonus Taux Crit.").
+-define(SD104121, "Soigne {1}% des propres PV max toutes les {0} sec.").
+-define(SD104131, "En entrant en combat, le Taux Crit +{0}% pendant {1} sec.").
+-define(SD104141, "Lorsqu'il y a 2 ennemis proches ou plus, les attaques ont {0}% de chance d'infliger {1}% de DGT à 3 ennemis.Pour chaque {2}% de PV perdu par soi-même, gagne {3}% de multiplicateur de DGT de Compétence.").
+-define(SD105101, "Les attaques ont {2}% de chance d'infliger ({0}%+{1}) de dégâts supplémentaires ; la compétence inflige {3}% de dégâts supplémentaires en JcE.").
+-define(SD105111, "Toutes les durées de Pouvoir +{0} sec.").
+-define(SD105121, "Soigne {1}% des propres PV max toutes les {0} sec.").
+-define(SD105131, "En entrant en combat, le Bonus DGT de Compétence +{0}% pendant {1} sec.").
+-define(SD105141, "Lorsqu'il y a 2 ennemis proches ou plus, les attaques ont {0}% de chance d'infliger {1}% de DGT à 3 ennemis et soigne 3 alliés proches pour {2}% d'ATQ des PV.").
+-define(SD106101, "Les attaques ont {2}% de chance d'infliger ({0}%+{1}) de dégâts supplémentaires ; la compétence inflige {3}% de dégâts supplémentaires en JcE.").
+-define(SD106111, "Chaque pile de Focalisation donne +{0}% de DGT Bonus.Chaque pile de Tonnerre donne +{1}% de Réduction de DGT.").
+-define(SD106121, "Soigne {1}% des propres PV max toutes les {0} sec.").
+-define(SD106131, "En entrant en combat, Bonus DGT +{0}% pendant {1} sec.").
+-define(SD106141, "Lorsqu'il y a 2 ennemis proches ou plus, les attaques ont {0}% de chance d'infliger {1}% de DGT à 3 ennemis.Pour chaque {2}% de PV perdu par la cible, gagne {3}% de multiplicateur de DGT de Compétence.").
+-define(BN61001, "Colère").
+-define(BN61002, "Hurlement").
+-define(BN61005, "Puissance du Dieu de la Guerre").
+-define(BN61006, "Gardien").
+-define(BN61007, "Saignement").
+-define(BN61008, "Garde de Thor").
+-define(BN61101, "Guérison de Combat").
+-define(BN61111, "Esprit de Combat").
+-define(BN62001, "Feu du Cœur").
+-define(BN62002, "Glace Eldritch").
+-define(BN62003, "Esprit de Vulcain").
+-define(BN62004, "Glace d'Azur").
+-define(BN62005, "Feu d'Esprit").
+-define(BN62006, "Esprit de Khione").
+-define(BN62101, "Régénération de PV").
+-define(BN62111, "Levée").
+-define(BN63001, "Focalisation").
+-define(BN63002, "Tonnerre").
+-define(BN63003, "Force de la Nature").
+-define(BN63004, "Focalisation").
+-define(BN63005, "Tonnerre").
+-define(BN63006, "Puissance de Foudre").
+-define(BN63007, "Tonnerre").
+-define(BN63008, "Tonnerre").
+-define(BN63009, "Tonnerre").
+-define(BN63010, "Tonnerre").
+-define(BN63101, "Guérison de la Nature").
+-define(BN63111, "Excitation").
+-define(BD61001, "ATQ +{0}%").
+-define(BD61002, "Taux Crit +{0}%").
+-define(BD61005, "Lorsque le buff est actif, les attaques ont {0}% de chance d'infliger {1}% de DGT.").
+-define(BD61006, "DÉF +{0}%").
+-define(BD61007, "Inflige {0}% de DGT par sec.").
+-define(BD61008, "Taux de Blocage +{0}%").
+-define(BD61101, "Soigne {1}% des PV max toutes les {0} sec.").
+-define(BD61111, "Taux Crit +{0}%").
+-define(BD62001, "Taux Crit +{0}%").
+-define(BD62002, "Taux de Résistance +{0}%").
+-define(BD62003, "Chaque {0} sec, inflige {1}% de DGT aux ennemis proches.").
+-define(BD62004, "Réduction DGT de Compétence +{0}%").
+-define(BD62005, "Réduction DGT +{0}%").
+-define(BD62006, "Tous les {0} sec, soigne 3 alliés pour {1}% d'ATQ.").
+-define(BD62101, "Soigne {1}% des PV max toutes les {0} sec.").
+-define(BD62111, "Bonus DGT de Compétence +{0}%").
+-define(BD63001, "Bonus DGT +{0}%").
+-define(BD63002, "Réduction DGT +{0}%").
+-define(BD63003, "Bonus DGT +{0}%").
+-define(BD63004, "Bonus DGT +{0}%").
+-define(BD63005, "Réduction DGT +{0}%").
+-define(BD63006, "Bonus DGT +{0}%").
+-define(BD63007, "Bonus DGT de Compétence +{0}%").
+-define(BD63008, "Réduction DGT de Compétence +{0}%").
+-define(BD63009, "Taux de Toucher et d'Esquive +{0}%").
+-define(BD63010, "Bonus de DGT Finaux +{0}%").
+-define(BD63101, "Soigne {1}% des PV max toutes les {0} sec.").
+-define(BD63111, "Bonus DGT +{0}%").
+-define(BN62018, "Glace").
+-define(BN62019, "Tempête de Feu").
+-define(BD62018, "Bonus DGT de Compétence +{0}%").
+-define(BD62019, "Bonus DGT de Compétence +{0}%").
+-define(BN62020, "Bénédiction Vulcaine").
+-define(BN62022, "Bénédiction de Khione").
+-define(BD62020, "ATQ +{0}%").
+-define(BD62022, "Soigne +{0}%").
+-define(BN61019, "Puissance du Dieu de la Guerre").
+-define(BN61021, "Garde de Thor").
+-define(BD61019, "Taux Crit +{0}%").
+-define(BD61021, "Réduction Blocage +{0}%").
+-define(SN301101, "Fracassement I").
+-define(SN301201, "Fracassement Ⅱ").
+-define(SN301301, "Fracassement III").
+-define(SN301401, "Fracassement IV").
+-define(SN301501, "Frappe I").
+-define(SN301601, "Frappe II").
+-define(SN301701, "Frappe III ").
+-define(SN301801, "Frappe IV").
+-define(SN301901, "Crit I").
+-define(SN302001, "Crit II").
+-define(SN302101, "Crit III").
+-define(SN302201, "Crit IV").
+-define(SN302301, "Précision I").
+-define(SN302401, "Précision II").
+-define(SN302501, "Précision III").
+-define(SN302601, "Précision IV").
+-define(SN302701, "Jugement II").
+-define(SN302801, "Jugement III").
+-define(SN302901, "Jugement IV").
+-define(SN303001, "Dominant II").
+-define(SN303101, "Dominant III").
+-define(SN303201, "Dominant IV").
+-define(SN303301, "DGT Crit II").
+-define(SN303401, "DGT Crit III").
+-define(SN303501, "DGT Crit IV").
+-define(SN303601, "Connaissance II").
+-define(SN303701, "Connaissance III").
+-define(SN303801, "Connaissance IV").
+-define(SN303901, "Étalonnage II").
+-define(SN304001, "Étalonnage III").
+-define(SN304101, "Étalonnage IV").
+-define(SN304201, "Écrasement d'Âme II").
+-define(SN304301, "Écrasement d'Âme III").
+-define(SN304401, "Écrasement d'Âme IV").
+-define(SN304501, "Intimidation II").
+-define(SN304601, "Intimidation III").
+-define(SN304701, "Intimidation IV").
+-define(SN304801, "Surpassement II").
+-define(SN304901, "Surpassement III").
+-define(SN305001, "Surpassement IV").
+-define(SN305101, "Moral II").
+-define(SN305201, "Moral III").
+-define(SN305301, "Moral IV").
+-define(SN305401, "Explosif II").
+-define(SN305501, "Explosif III").
+-define(SN305601, "Souffle IV").
+-define(SN305701, "Berserk II").
+-define(SN305801, "Berserk III").
+-define(SN305901, "Berserk IV").
+-define(SN306001, "Coup Fatal III").
+-define(SN306101, "Coup Fatal IV").
+-define(SN306201, "Frappe Puissante III").
+-define(SN306301, "Frappe Puissante IV").
+-define(SN306401, "Frappe de Poursuite III").
+-define(SN306501, "Frappe de Poursuite IV").
+-define(SN306601, "Frappe Multiple III").
+-define(SN306701, "Frappe Multiple IV").
+-define(SN306801, "DGT Finaux III").
+-define(SN306901, "DGT Finaux IV").
+-define(SN401101, "Abondance I").
+-define(SN401201, "Abondance II").
+-define(SN401301, "Abondance III").
+-define(SN401401, "Abondance IV").
+-define(SN401501, "DÉF I").
+-define(SN401601, "Déf II").
+-define(SN401701, "DÉF III").
+-define(SN401801, "DÉF IV").
+-define(SN401901, "Ténacité I").
+-define(SN402001, "Ténacité II").
+-define(SN402101, "Ténacité III").
+-define(SN402201, "Ténacité IV").
+-define(SN402301, "Esquive I").
+-define(SN402401, "Esquive II").
+-define(SN402501, "Esquive III").
+-define(SN402601, "Esquive IV").
+-define(SN402701, "Robustesse II").
+-define(SN402801, "Robustesse III").
+-define(SN402901, "Robustesse IV").
+-define(SN403001, "Parade II").
+-define(SN403101, "Parade III").
+-define(SN403201, "Parade IV").
+-define(SN403301, "Endurance II").
+-define(SN403401, "Endurance III").
+-define(SN403501, "Endurance IV").
+-define(SN403601, "Frénésie II").
+-define(SN403701, "Frénésie III").
+-define(SN403801, "Frénésie IV").
+-define(SN403901, "Rapidité II").
+-define(SN404001, "Rapidité III").
+-define(SN404101, "Rapidité IV").
+-define(SN404201, "Armure Épaisse II").
+-define(SN404301, "Armure Épaisse III").
+-define(SN404401, "Armure Épaisse IV").
+-define(SN404501, "Surveillance II").
+-define(SN404601, "Surveillance III").
+-define(SN404701, "Surveillance IV").
+-define(SN404801, "Protection II").
+-define(SN404901, "Protection III").
+-define(SN405001, "Protection IV").
+-define(SN405101, "Tenace II").
+-define(SN405201, "Tenace III").
+-define(SN405301, "Tenace IV").
+-define(SN405401, "Résistance II").
+-define(SN405501, "Résistance III").
+-define(SN405601, "Résistance IV").
+-define(SN405701, "Protection II").
+-define(SN405801, "Protection III").
+-define(SN405901, "Protection IV").
+-define(SN406001, "Résistance Mortelle III").
+-define(SN406101, "Résistance Mortelle IV").
+-define(SN406201, "Résistance de Compétence III").
+-define(SN406301, "Résistance de Compétence IV").
+-define(SN406401, "Résistance de Poursuite III").
+-define(SN406501, "Résistance à la Mort IV").
+-define(SN406601, "Parade Mortelle III").
+-define(SN406701, "Parade Mortelle IV").
+-define(SN406801, "Réduction Finale III").
+-define(SN406901, "Réduction Finale IV").
+-define(SD301101, "Équipez cette compétence pour accorder au personnage Fracassement +{0}").
+-define(SD301201, "Équipez cette compétence pour accorder au personnage Fracassement +{0}").
+-define(SD301301, "Équipez cette compétence pour accorder au personnage Fracassement +{0}").
+-define(SD301401, "Équipez cette compétence pour accorder au personnage Fracassement +{0}").
+-define(SD301501, "Équipez cette compétence pour accorder au personnage ATQ +{0}").
+-define(SD301601, "Équipez cette compétence pour accorder au personnage ATQ +{0}").
+-define(SD301701, "Équipez cette compétence pour accorder au personnage ATQ +{0}").
+-define(SD301801, "Équipez cette compétence pour accorder au personnage ATQ +{0}").
+-define(SD301901, "Équipez cette compétence pour accorder au personnage Crit +{0}").
+-define(SD302001, "Équipez cette compétence pour accorder au personnage Crit +{0}").
+-define(SD302101, "Équipez cette compétence pour accorder au personnage Crit +{0}").
+-define(SD302201, "Équipez cette compétence pour accorder au personnage Crit +{0}").
+-define(SD302301, "Équipez cette compétence pour accorder au personnage Toucher +{0}").
+-define(SD302401, "Équipez cette compétence pour accorder au personnage Toucher +{0}").
+-define(SD302501, "Équipez cette compétence pour accorder au personnage Toucher +{0}").
+-define(SD302601, "Équipez cette compétence pour accorder au personnage Toucher +{0}").
+-define(SD302701, "Taux Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD302801, "Taux Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD302901, "Taux Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303001, "Taux de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303101, "Taux de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303201, "Taux de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303301, "Bonus de DGT Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303401, "Bonus de DGT Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303501, "Bonus de DGT Crit de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303601, "Bonus de DGT de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303701, "Bonus de DGT de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303801, "Bonus de DGT de Focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD303901, "Taux de Toucher de Personnage +{0}% après avoir équipé la compétence").
+-define(SD304001, "Taux de Toucher de Personnage +{0}% après avoir équipé la compétence").
+-define(SD304101, "Taux de Toucher de Personnage +{0}% après avoir équipé la compétence").
+-define(SD304201, "Équipez cette compétence pour accorder au personnage Bonus DGT JcE +{0}%").
+-define(SD304301, "Équipez cette compétence pour accorder au personnage Bonus DGT JcE +{0}%").
+-define(SD304401, "Équipez cette compétence pour accorder au personnage Bonus DGT JcE +{0}%").
+-define(SD304501, "Taux Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD304601, "Taux Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD304701, "Taux Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD304801, "Équipez cette compétence pour accorder au personnage Bonus DGT Excellent +{0}%").
+-define(SD304901, "Équipez cette compétence pour accorder au personnage Bonus DGT Excellent +{0}%").
+-define(SD305001, "Équipez cette compétence pour accorder au personnage Bonus DGT Excellent +{0}%").
+-define(SD305101, "Équipez cette compétence pour accorder au personnage Bonus DGT JcJ +{0}%").
+-define(SD305201, "Équipez cette compétence pour accorder au personnage Bonus DGT JcJ +{0}%").
+-define(SD305301, "Équipez cette compétence pour accorder au personnage Bonus DGT JcJ +{0}%").
+-define(SD305401, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(SD305501, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(SD305601, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(SD305701, "Bonus de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD305801, "Bonus de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD305901, "Bonus de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD306001, "Équipez cette compétence pour accorder au personnage Taux Mortel +{0}%").
+-define(SD306101, "Équipez cette compétence pour accorder au personnage Taux Mortel +{0}%").
+-define(SD306201, "Taux de Châtiment de Personnage +{0}% après avoir équipé la compétence").
+-define(SD306301, "Taux de Châtiment de Personnage +{0}% après avoir équipé la compétence").
+-define(SD306401, "Équipez cette compétence pour accorder au personnage Taux de Poursuite +{0}%").
+-define(SD306501, "Équipez cette compétence pour accorder au personnage Taux de Poursuite +{0}%").
+-define(SD306601, "Équipez cette compétence pour accorder au personnage Taux de Frappe Multiple +{0}%").
+-define(SD306701, "Équipez cette compétence pour accorder au personnage Taux de Frappe Multiple +{0}%").
+-define(SD306801, "Bonus de DGT Finaux de Personnage +{0}% après avoir équipé la compétence").
+-define(SD306901, "Bonus de DGT Finaux de Personnage +{0}% après avoir équipé la compétence").
+-define(SD401101, "Équipez cette compétence pour accorder au personnage PV +{0}").
+-define(SD401201, "Équipez cette compétence pour accorder au personnage PV +{0}").
+-define(SD401301, "Équipez cette compétence pour accorder au personnage PV +{0}").
+-define(SD401401, "Équipez cette compétence pour accorder au personnage PV +{0}").
+-define(SD401501, "Équipez cette compétence pour accorder au personnage DÉF +{0}").
+-define(SD401601, "Équipez cette compétence pour accorder au personnage DÉF +{0}").
+-define(SD401701, "Équipez cette compétence pour accorder au personnage DÉF +{0}").
+-define(SD401801, "Équipez cette compétence pour accorder au personnage DÉF +{0}").
+-define(SD401901, "Équipez cette compétence pour accorder au personnage Ténacité +{0}").
+-define(SD402001, "Équipez cette compétence pour accorder au personnage Ténacité +{0}").
+-define(SD402101, "Équipez cette compétence pour accorder au personnage Ténacité +{0}").
+-define(SD402201, "Équipez cette compétence pour accorder au personnage Ténacité +{0}").
+-define(SD402301, "Équipez cette compétence pour accorder au personnage une Esquive de +{0}").
+-define(SD402401, "Équipez cette compétence pour accorder au personnage une Esquive de +{0}").
+-define(SD402501, "Équipez cette compétence pour accorder au personnage une Esquive de +{0}").
+-define(SD402601, "Équipez cette compétence pour accorder au personnage une Esquive de +{0}").
+-define(SD402701, "Taux de Résistance de Personnage +{0}% après avoir équipé la compétence").
+-define(SD402801, "Taux de Résistance de Personnage +{0}% après avoir équipé la compétence").
+-define(SD402901, "Taux de Résistance de Personnage +{0}% après avoir équipé la compétence").
+-define(SD403001, "Taux Anti-focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD403101, "Taux Anti-focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD403201, "Taux Anti-focalisation de Personnage +{0}% après avoir équipé la compétence").
+-define(SD403301, "Équipez cette compétence pour accorder au personnage Réduction de DGT Crit +{0}%").
+-define(SD403401, "Équipez cette compétence pour accorder au personnage Réduction de DGT Crit +{0}%").
+-define(SD403501, "Équipez cette compétence pour accorder au personnage Réduction de DGT Crit +{0}%").
+-define(SD403601, "Équipez cette compétence pour accorder au personnage Réduction de DGT de Focalisation +{0}%").
+-define(SD403701, "Équipez cette compétence pour accorder au personnage Réduction de DGT de Focalisation +{0}%").
+-define(SD403801, "Équipez cette compétence pour accorder au personnage Réduction de DGT de Focalisation +{0}%").
+-define(SD403901, "Taux d'Esquive de Personnage +{0}% après avoir équipé la compétence").
+-define(SD404001, "Taux d'Esquive de Personnage +{0}% après avoir équipé la compétence").
+-define(SD404101, "Taux d'Esquive de Personnage +{0}% après avoir équipé la compétence").
+-define(SD404201, "Équipez cette compétence pour accorder au personnage Réduction de DGT JcE +{0}%").
+-define(SD404301, "Équipez cette compétence pour accorder au personnage Réduction de DGT JcE +{0}%").
+-define(SD404401, "Équipez cette compétence pour accorder au personnage Réduction de DGT JcE +{0}%").
+-define(SD404501, "Taux Anti-Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD404601, "Taux Anti-Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD404701, "Taux Anti-Excellent de Personnage +{0}% après avoir équipé la compétence").
+-define(SD404801, "Équipez cette compétence pour accorder au personnage Réduction de DGT Excellents +{0}%").
+-define(SD404901, "Équipez cette compétence pour accorder au personnage Réduction de DGT Excellents +{0}%").
+-define(SD405001, "Équipez cette compétence pour accorder au personnage Réduction de DGT Excellents +{0}%").
+-define(SD405101, "Équipez cette compétence pour accorder au personnage Réduction de DGT JcJ +{0}%").
+-define(SD405201, "Équipez cette compétence pour accorder au personnage Réduction de DGT JcJ +{0}%").
+-define(SD405301, "Équipez cette compétence pour accorder au personnage Réduction de DGT JcJ +{0}%").
+-define(SD405401, "Équipez cette compétence pour accorder au personnage une Réduction de DGT de Compétence +{0}%").
+-define(SD405501, "Équipez cette compétence pour accorder au personnage une Réduction de DGT de Compétence +{0}%").
+-define(SD405601, "Équipez cette compétence pour accorder au personnage une Réduction de DGT de Compétence +{0}%").
+-define(SD405701, "Réduction de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD405801, "Réduction de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD405901, "Réduction de DGT de Personnage +{0}% après avoir équipé la compétence").
+-define(SD406001, "Équipez cette compétence pour accorder au personnage Taux d'Anti Coup Mortel +{0}%").
+-define(SD406101, "Équipez cette compétence pour accorder au personnage Taux d'Anti Coup Mortel +{0}%").
+-define(SD406201, "Taux de Fragilité de Personnage {0}% après avoir équipé la compétence").
+-define(SD406301, "Taux de Fragilité de Personnage {0}% après avoir équipé la compétence").
+-define(SD406401, "Équipez cette compétence pour accorder au personnage Taux de Rés.de Poursuite +{0}%").
+-define(SD406501, "Équipez cette compétence pour accorder au personnage Taux de Rés.de Poursuite +{0}%").
+-define(SD406601, "Équipez cette compétence pour accorder au personnage un taux de résistance de Frappe Multiple de +{0}%").
+-define(SD406701, "Équipez cette compétence pour accorder au personnage un taux de résistance de Frappe Multiple de +{0}%").
+-define(SD406801, "Réduction de DGT Finaux de Personnage +{0}% après avoir équipé la compétence").
+-define(SD406901, "Réduction de DGT Finaux de Personnage +{0}% après avoir équipé la compétence").
+-define(BN286, "Pétrifier").
+-define(BN287, "Entrée").
+-define(BN288, "Poison").
+-define(BN289, "Saignement").
+-define(BN290, "Vulnérable").
+-define(BN291, "Malédiction").
+-define(BN292, "Renforcer").
+-define(BD286, "Vous avez été pétrifié !").
+-define(BD287, "Vous avez été envoûté !").
+-define(BD288, "Vous avez été empoisonné ! Tous les {0} sec, vous subissez {1}% de DGT pour chaque pile d'effet.").
+-define(BD289, "Vous saignez ! Tous les {0} sec, vous subissez {1}% de DGT pour chaque pile d'effet.").
+-define(BD290, "Chaque pile augmente les DGT subis de {0}%.").
+-define(BD291, "Taux de Toucher -{0}%").
+-define(BD292, "Bonus DGT +{0}%").
+-define(BD364, "Envoûté ! Aucun Contrôle !").
+-define(BN80001, "Voix Apaisante I").
+-define(BN80002, "Voix Apaisante II").
+-define(BN80003, "Voix Apaisante III").
+-define(BN80004, "Voix Apaisante IV").
+-define(BN80005, "Voix Apaisante V").
+-define(BN80011, "Miroir Chanceux I").
+-define(BN80012, "Miroir Chanceux II").
+-define(BN80013, "Miroir Chanceux III").
+-define(BN80014, "Miroir Chanceux IV").
+-define(BN80015, "Miroir Chanceux V").
+-define(BN80021, "Chanson Résolue I").
+-define(BN80022, "Chanson Résolue II").
+-define(BN80023, "Chanson Résolue III").
+-define(BN80024, "Chanson Résolue IV").
+-define(BN80025, "Chanson Résolue V").
+-define(BN80031, "Cœur de Courage I").
+-define(BN80032, "Cœur de Courage II").
+-define(BN80033, "Cœur de Courage III").
+-define(BN80034, "Cœur de Courage IV").
+-define(BN80035, "Cœur de Courage V").
+-define(BN80041, "Pierre Tiède I").
+-define(BN80042, "Pierre Tiède II").
+-define(BN80043, "Pierre Tiède III").
+-define(BN80044, "Pierre Tiède IV").
+-define(BN80045, "Pierre Tiède V").
+-define(BN80051, "Fruit Anti-paralysie I").
+-define(BN80052, "Fruit Anti-paralysie II").
+-define(BN80053, "Fruit Anti-paralysie III").
+-define(BN80054, "Fruit Anti-paralysie IV").
+-define(BN80055, "Fruit Anti-paralysie V").
+-define(BN80061, "Pierre Gelée I").
+-define(BN80062, "Pierre Gelée II").
+-define(BN80063, "Pierre Gelée III").
+-define(BN80064, "Pierre Gelée IV").
+-define(BN80065, "Pierre Gelée V").
+-define(BN80071, "Cœur de Purification I").
+-define(BN80072, "Cœur de Purification II").
+-define(BN80073, "Cœur de Purification III").
+-define(BN80074, "Cœur de Purification IV").
+-define(BN80075, "Cœur de Purification V").
+-define(BN80081, "Bague Anti-saignement I").
+-define(BN80082, "Bague Anti-saignement II").
+-define(BN80083, "Bague Anti-saignement III").
+-define(BN80084, "Bague Anti-saignement IV").
+-define(BN80085, "Bague Anti-saignement V").
+-define(BN80091, "Cœur de Force I").
+-define(BN80092, "Cœur de Force II").
+-define(BN80093, "Cœur de Force III").
+-define(BN80094, "Cœur de Force IV").
+-define(BN80095, "Cœur de Force V").
+-define(BN80101, "Pierre de Pureté I").
+-define(BN80102, "Pierre de Pureté II").
+-define(BN80103, "Pierre de Pureté III").
+-define(BN80104, "Pierre de Pureté IV").
+-define(BN80105, "Pierre de Pureté V").
+-define(BN80111, "Cruche Encombrante I").
+-define(BN80112, "Cruche Encombrante II").
+-define(BN80113, "Cruche Encombrante III").
+-define(BN80114, "Cruche Encombrante IV").
+-define(BN80115, "Cruche Encombrante V").
+-define(BN80121, "Lame Maudite I").
+-define(BN80122, "Lame Maudite II").
+-define(BN80123, "Lame Maudite III").
+-define(BN80124, "Lame Maudite IV").
+-define(BN80125, "Lame Maudite V").
+-define(BN80131, "Hache de Loki I").
+-define(BN80132, "Hache de Loki II").
+-define(BN80133, "Hache de Loki III").
+-define(BN80134, "Hache de Loki IV").
+-define(BN80135, "Hache de Loki V").
+-define(BN80141, "Massacre du Chaos I").
+-define(BN80142, "Massacre du Chaos II").
+-define(BN80143, "Massacre du Chaos III").
+-define(BN80144, "Massacre du Chaos IV").
+-define(BN80145, "Massacre du Chaos V").
+-define(BN80151, "Massacre Obscur I").
+-define(BN80152, "Massacre Obscur II").
+-define(BN80153, "Massacre Obscur III").
+-define(BN80154, "Massacre Obscur IV").
+-define(BN80155, "Massacre Obscur V").
+-define(BN80161, "Massacre Mortel I").
+-define(BN80162, "Massacre Mortel II").
+-define(BN80163, "Massacre Mortel III").
+-define(BN80164, "Massacre Mortel IV").
+-define(BN80165, "Massacre Mortel V").
+-define(BN80171, "Massacre de Guerre I").
+-define(BN80172, "Massacre de Guerre II").
+-define(BN80173, "Massacre de Guerre III").
+-define(BN80174, "Massacre de Guerre IV").
+-define(BN80175, "Massacre de Guerre V").
+-define(BN80181, "Talisman du Chaos I").
+-define(BN80182, "Talisman du Chaos II").
+-define(BN80183, "Talisman du Chaos III").
+-define(BN80184, "Talisman du Chaos IV").
+-define(BN80185, "Talisman du Chaos V").
+-define(BN80191, "Talisman Obscur I").
+-define(BN80192, "Talisman Obscur II").
+-define(BN80193, "Talisman Obscur III").
+-define(BN80194, "Talisman Obscur IV").
+-define(BN80195, "Talisman Obscur V").
+-define(BN80201, "Talisman Mortel I").
+-define(BN80202, "Talisman Mortel II").
+-define(BN80203, "Talisman Mortel III").
+-define(BN80204, "Talisman Mortel IV").
+-define(BN80205, "Talisman Mortel V").
+-define(BN80211, "Talisman de Guerre I").
+-define(BN80212, "Talisman de Guerre II").
+-define(BN80213, "Talisman de Guerre III").
+-define(BN80214, "Talisman de Guerre IV").
+-define(BN80215, "Talisman de Guerre V").
+-define(BN80221, "Bénédictions de Lumière du Jour I").
+-define(BN80222, "Bénédictions de Lumière du Jour II").
+-define(BN80223, "Bénédictions de Lumière du Jour III").
+-define(BN80224, "Bénédictions de Lumière du Jour IV").
+-define(BN80225, "Bénédictions de Lumière du Jour V").
+-define(BN80231, "Bénédictions du Crépuscule I").
+-define(BN80232, "Bénédictions du Crépuscule II").
+-define(BN80233, "Bénédictions du Crépuscule III").
+-define(BN80234, "Bénédictions du Crépuscule IV").
+-define(BN80235, "Bénédictions du Crépuscule V").
+-define(BN80241, "Bénédictions Nocturnes I").
+-define(BN80242, "Bénédictions Nocturnes II").
+-define(BN80243, "Bénédictions Nocturnes III").
+-define(BN80244, "Bénédictions Nocturnes IV").
+-define(BN80245, "Bénédictions Nocturnes V").
+-define(BN80251, "Invocation de Lumière du Jour I").
+-define(BN80252, "Invocation de Lumière du Jour II").
+-define(BN80253, "Invocation de Lumière du Jour III").
+-define(BN80254, "Invocation de Lumière du Jour IV").
+-define(BN80255, "Invocation de Lumière du Jour V").
+-define(BN80261, "Invocation du Crépuscule I").
+-define(BN80262, "Invocation du Crépuscule II").
+-define(BN80263, "Invocation du Crépuscule III").
+-define(BN80264, "Invocation du Crépuscule IV").
+-define(BN80265, "Invocation du Crépuscule V").
+-define(BN80271, "Invocation Nocturne I").
+-define(BN80272, "Invocation Nocturne II").
+-define(BN80273, "Invocation Nocturne III").
+-define(BN80274, "Invocation Nocturne IV").
+-define(BN80275, "Invocation Nocturne V").
+-define(BN80281, "Gobelet Ensoleillé I").
+-define(BN80282, "Gobelet Ensoleillé II").
+-define(BN80283, "Gobelet Ensoleillé III").
+-define(BN80284, "Gobelet Ensoleillé IV").
+-define(BN80285, "Gobelet Ensoleillé V").
+-define(BN80291, "Gobelet de Pluie I").
+-define(BN80292, "Gobelet de Pluie II").
+-define(BN80293, "Gobelet de Pluie III").
+-define(BN80294, "Gobelet de Pluie IV").
+-define(BN80295, "Gobelet de Pluie V").
+-define(BN80301, "Gobelet de Neige I").
+-define(BN80302, "Gobelet de Neige II").
+-define(BN80303, "Gobelet de Neige III").
+-define(BN80304, "Gobelet de Neige IV").
+-define(BN80305, "Gobelet de Neige V").
+-define(BN80311, "Pierre Runique Ensoleillée I").
+-define(BN80312, "Pierre Runique Ensoleillée II").
+-define(BN80313, "Pierre Runique Ensoleillée III").
+-define(BN80314, "Pierre Runique Ensoleillée IV").
+-define(BN80315, "Pierre Runique Ensoleillée V").
+-define(BN80321, "Pierre Runique de Pluie I").
+-define(BN80322, "Pierre Runique de Pluie II").
+-define(BN80323, "Pierre Runique de Pluie III").
+-define(BN80324, "Pierre Runique de Pluie IV").
+-define(BN80325, "Pierre Runique de Pluie V").
+-define(BN80331, "Pierre Runique de Neige I").
+-define(BN80332, "Pierre Runique de Neige II").
+-define(BN80333, "Pierre Runique de Neige III").
+-define(BN80334, "Pierre Runique de Neige IV").
+-define(BN80335, "Pierre Runique de Neige V").
+-define(BN80341, "Gobelet du Tonnerre I").
+-define(BN80342, "Gobelet du Tonnerre II").
+-define(BN80343, "Gobelet du Tonnerre III").
+-define(BN80344, "Gobelet du Tonnerre IV").
+-define(BN80345, "Gobelet du Tonnerre V").
+-define(BN80351, "Pierre Runique du Tonnerre I").
+-define(BN80352, "Pierre Runique du Tonnerre II").
+-define(BN80353, "Pierre Runique du Tonnerre III").
+-define(BN80354, "Pierre Runique du Tonnerre IV").
+-define(BN80355, "Pierre Runique du Tonnerre V").
+-define(BN80361, "Force de la Nature I").
+-define(BN80362, "Force de la Nature II").
+-define(BN80363, "Force de la Nature III").
+-define(BN80364, "Force de la Nature IV").
+-define(BN80365, "Force de la Nature V").
+-define(BN80371, "Bottes d'Attaquant I").
+-define(BN80372, "Bottes d'Attaquant II").
+-define(BN80373, "Bottes d'Attaquant III").
+-define(BN80374, "Bottes d'Attaquant IV").
+-define(BN80375, "Bottes d'Attaquant V").
+-define(BN80381, "Bottes de Défenseur I").
+-define(BN80382, "Bottes de Défenseur II").
+-define(BN80383, "Bottes de Défenseur III").
+-define(BN80384, "Bottes de Défenseur IV").
+-define(BN80385, "Bottes de Défenseur V").
+-define(BN80391, "Bottes de Blocage I").
+-define(BN80392, "Bottes de Blocage II").
+-define(BN80393, "Bottes de Blocage III").
+-define(BN80394, "Bottes de Blocage IV").
+-define(BN80395, "Bottes de Blocage V").
+-define(BN80401, "Bottes Crit I").
+-define(BN80402, "Bottes Crit II").
+-define(BN80403, "Bottes Crit III").
+-define(BN80404, "Bottes Crit IV").
+-define(BN80405, "Bottes Crit V").
+-define(BN80411, "Bottes de Fureur I").
+-define(BN80412, "Bottes de Fureur II").
+-define(BN80413, "Bottes de Fureur III").
+-define(BN80414, "Bottes de Fureur IV").
+-define(BN80415, "Bottes de Fureur V").
+-define(BD80001, "{0}% de chance de résister à l'effet d'Étourdissement des attaques de compétence").
+-define(BD80002, "{0}% de chance de résister à l'effet d'Étourdissement des attaques de compétence").
+-define(BD80003, "{0}% de chance de résister à l'effet d'Étourdissement des attaques de compétence").
+-define(BD80004, "{0}% de chance de résister à l'effet d'Étourdissement des attaques de compétence").
+-define(BD80005, "{0}% de chance de résister à l'effet d'Étourdissement des attaques de compétence").
+-define(BD80011, "{0}% de chance de résister à l'effet de Pétrification des attaques de compétence").
+-define(BD80012, "{0}% de chance de résister à l'effet de Pétrification des attaques de compétence").
+-define(BD80013, "{0}% de chance de résister à l'effet de Pétrification des attaques de compétence").
+-define(BD80014, "{0}% de chance de résister à l'effet de Pétrification des attaques de compétence").
+-define(BD80015, "{0}% de chance de résister à l'effet de Pétrification des attaques de compétence").
+-define(BD80021, "{0}% de chance de résister à l'effet d'Entrée des attaques de compétence").
+-define(BD80022, "{0}% de chance de résister à l'effet d'Entrée des attaques de compétence").
+-define(BD80023, "{0}% de chance de résister à l'effet d'Entrée des attaques de compétence").
+-define(BD80024, "{0}% de chance de résister à l'effet d'Entrée des attaques de compétence").
+-define(BD80025, "{0}% de chance de résister à l'effet d'Entrée des attaques de compétence").
+-define(BD80031, "{0}% de chance de résister à l'effet Effrayant des attaques de compétence").
+-define(BD80032, "{0}% de chance de résister à l'effet Effrayant des attaques de compétence").
+-define(BD80033, "{0}% de chance de résister à l'effet Effrayant des attaques de compétence").
+-define(BD80034, "{0}% de chance de résister à l'effet Effrayant des attaques de compétence").
+-define(BD80035, "{0}% de chance de résister à l'effet Effrayant des attaques de compétence").
+-define(BD80041, "{0}% de chance de résister à l'effet de Gel des attaques de compétence").
+-define(BD80042, "{0}% de chance de résister à l'effet de Gel des attaques de compétence").
+-define(BD80043, "{0}% de chance de résister à l'effet de Gel des attaques de compétence").
+-define(BD80044, "{0}% de chance de résister à l'effet de Gel des attaques de compétence").
+-define(BD80045, "{0}% de chance de résister à l'effet de Gel des attaques de compétence").
+-define(BD80051, "{0}% de chance de résister à l'effet de Paralysie des attaques de compétence").
+-define(BD80052, "{0}% de chance de résister à l'effet de Paralysie des attaques de compétence").
+-define(BD80053, "{0}% de chance de résister à l'effet de Paralysie des attaques de compétence").
+-define(BD80054, "{0}% de chance de résister à l'effet de Paralysie des attaques de compétence").
+-define(BD80055, "{0}% de chance de résister à l'effet de Paralysie des attaques de compétence").
+-define(BD80061, "{0}% de chance de résister à l'effet de Brûlure des attaques de compétence").
+-define(BD80062, "{0}% de chance de résister à l'effet de Brûlure des attaques de compétence").
+-define(BD80063, "{0}% de chance de résister à l'effet de Brûlure des attaques de compétence").
+-define(BD80064, "{0}% de chance de résister à l'effet de Brûlure des attaques de compétence").
+-define(BD80065, "{0}% de chance de résister à l'effet de Brûlure des attaques de compétence").
+-define(BD80071, "{0}% de chance de résister à l'effet de Poison des attaques de compétence").
+-define(BD80072, "{0}% de chance de résister à l'effet de Poison des attaques de compétence").
+-define(BD80073, "{0}% de chance de résister à l'effet de Poison des attaques de compétence").
+-define(BD80074, "{0}% de chance de résister à l'effet de Poison des attaques de compétence").
+-define(BD80075, "{0}% de chance de résister à l'effet de Poison des attaques de compétence").
+-define(BD80081, "{0}% de chance de résister à l'effet de Saignement des attaques de compétence").
+-define(BD80082, "{0}% de chance de résister à l'effet de Saignement des attaques de compétence").
+-define(BD80083, "{0}% de chance de résister à l'effet de Saignement des attaques de compétence").
+-define(BD80084, "{0}% de chance de résister à l'effet de Saignement des attaques de compétence").
+-define(BD80085, "{0}% de chance de résister à l'effet de Saignement des attaques de compétence").
+-define(BD80091, "{0}% de chance de résister à l'effet de Vulnérabilité des attaques de compétence").
+-define(BD80092, "{0}% de chance de résister à l'effet de Vulnérabilité des attaques de compétence").
+-define(BD80093, "{0}% de chance de résister à l'effet de Vulnérabilité des attaques de compétence").
+-define(BD80094, "{0}% de chance de résister à l'effet de Vulnérabilité des attaques de compétence").
+-define(BD80095, "{0}% de chance de résister à l'effet de Vulnérabilité des attaques de compétence").
+-define(BD80101, "{0}% de chance de résister à l'effet de Malédiction des attaques de compétence").
+-define(BD80102, "{0}% de chance de résister à l'effet de Malédiction des attaques de compétence").
+-define(BD80103, "{0}% de chance de résister à l'effet de Malédiction des attaques de compétence").
+-define(BD80104, "{0}% de chance de résister à l'effet de Malédiction des attaques de compétence").
+-define(BD80105, "{0}% de chance de résister à l'effet de Malédiction des attaques de compétence").
+-define(BD80111, "{0}% de chance de résister à l'effet de KO des attaques de compétence").
+-define(BD80112, "{0}% de chance de résister à l'effet de KO des attaques de compétence").
+-define(BD80113, "{0}% de chance de résister à l'effet de KO des attaques de compétence").
+-define(BD80114, "{0}% de chance de résister à l'effet de KO des attaques de compétence").
+-define(BD80115, "{0}% de chance de résister à l'effet de KO des attaques de compétence").
+-define(BD80121, "Les attaques ont {0}% de chance de supprimer tous les effets de Renforcement sur l'ennemi.TdR : {1} sec").
+-define(BD80122, "Les attaques ont {0}% de chance de supprimer tous les effets de Renforcement sur l'ennemi.TdR : {1} sec").
+-define(BD80123, "Les attaques ont {0}% de chance de supprimer tous les effets de Renforcement sur l'ennemi.TdR : {1} sec").
+-define(BD80124, "Les attaques ont {0}% de chance de supprimer tous les effets de Renforcement sur l'ennemi.TdR : {1} sec").
+-define(BD80125, "Les attaques ont {0}% de chance de supprimer tous les effets de Renforcement sur l'ennemi.TdR : {1} sec").
+-define(BD80131, "Les attaques ont {0}% de chances d'Infliger Hache de Loki (Soin -{1}%) sur l'ennemi.TdR : {2} sec").
+-define(BD80132, "Les attaques ont {0}% de chances d'Infliger Hache de Loki (Soin -{1}%) sur l'ennemi.TdR : {2} sec").
+-define(BD80133, "Les attaques ont {0}% de chances d'Infliger Hache de Loki (Soin -{1}%) sur l'ennemi.TdR : {2} sec").
+-define(BD80134, "Les attaques ont {0}% de chances d'Infliger Hache de Loki (Soin -{1}%) sur l'ennemi.TdR : {2} sec").
+-define(BD80135, "Les attaques ont {0}% de chances d'Infliger Hache de Loki (Soin -{1}%) sur l'ennemi.TdR : {2} sec").
+-define(BD80141, "Inflige +{0}% de DGT aux ennemis du Chaos").
+-define(BD80142, "Inflige +{0}% de DGT aux ennemis du Chaos").
+-define(BD80143, "Inflige +{0}% de DGT aux ennemis du Chaos").
+-define(BD80144, "Inflige +{0}% de DGT aux ennemis du Chaos").
+-define(BD80145, "Inflige +{0}% de DGT aux ennemis du Chaos").
+-define(BD80151, "Inflige +{0}% de DGT aux ennemis de Type Ténèbres").
+-define(BD80152, "Inflige +{0}% de DGT aux ennemis de Type Ténèbres").
+-define(BD80153, "Inflige +{0}% de DGT aux ennemis de Type Ténèbres").
+-define(BD80154, "Inflige +{0}% de DGT aux ennemis de Type Ténèbres").
+-define(BD80155, "Inflige +{0}% de DGT aux ennemis de Type Ténèbres").
+-define(BD80161, "Inflige +{0}% de DGT aux ennemis de la Mort").
+-define(BD80162, "Inflige +{0}% de DGT aux ennemis de la Mort").
+-define(BD80163, "Inflige +{0}% de DGT aux ennemis de la Mort").
+-define(BD80164, "Inflige +{0}% de DGT aux ennemis de la Mort").
+-define(BD80165, "Inflige +{0}% de DGT aux ennemis de la Mort").
+-define(BD80171, "Inflige +{0}% de DGT aux ennemis de la Guerre").
+-define(BD80172, "Inflige +{0}% de DGT aux ennemis de la Guerre").
+-define(BD80173, "Inflige +{0}% de DGT aux ennemis de la Guerre").
+-define(BD80174, "Inflige +{0}% de DGT aux ennemis de la Guerre").
+-define(BD80175, "Inflige +{0}% de DGT aux ennemis de la Guerre").
+-define(BD80181, "Prend -{0}% de DGT des ennemis du Chaos").
+-define(BD80182, "Prend -{0}% de DGT des ennemis du Chaos").
+-define(BD80183, "Prend -{0}% de DGT des ennemis du Chaos").
+-define(BD80184, "Prend -{0}% de DGT des ennemis du Chaos").
+-define(BD80185, "Prend -{0}% de DGT des ennemis du Chaos").
+-define(BD80191, "Prend -{0}% de DGT des ennemis de type Ténèbres").
+-define(BD80192, "Prend -{0}% de DGT des ennemis de type Ténèbres").
+-define(BD80193, "Prend -{0}% de DGT des ennemis de type Ténèbres").
+-define(BD80194, "Prend -{0}% de DGT des ennemis de type Ténèbres").
+-define(BD80195, "Prend -{0}% de DGT des ennemis de type Ténèbres").
+-define(BD80201, "Prend -{0}% de DGT des ennemis de la Mort").
+-define(BD80202, "Prend -{0}% de DGT des ennemis de la Mort").
+-define(BD80203, "Prend -{0}% de DGT des ennemis de la Mort").
+-define(BD80204, "Prend -{0}% de DGT des ennemis de la Mort").
+-define(BD80205, "Prend -{0}% de DGT des ennemis de la Mort").
+-define(BD80211, "Prend -{0}% de DGT des ennemis de la Guerre").
+-define(BD80212, "Prend -{0}% de DGT des ennemis de la Guerre").
+-define(BD80213, "Prend -{0}% de DGT des ennemis de la Guerre").
+-define(BD80214, "Prend -{0}% de DGT des ennemis de la Guerre").
+-define(BD80215, "Prend -{0}% de DGT des ennemis de la Guerre").
+-define(BD80221, "Inflige +{0}% de DGT pendant la journée").
+-define(BD80222, "Inflige +{0}% de DGT pendant la journée").
+-define(BD80223, "Inflige +{0}% de DGT pendant la journée").
+-define(BD80224, "Inflige +{0}% de DGT pendant la journée").
+-define(BD80225, "Inflige +{0}% de DGT pendant la journée").
+-define(BD80231, "Inflige +{0}% de DGT pendant le Crépuscule").
+-define(BD80232, "Inflige +{0}% de DGT pendant le Crépuscule").
+-define(BD80233, "Inflige +{0}% de DGT pendant le Crépuscule").
+-define(BD80234, "Inflige +{0}% de DGT pendant le Crépuscule").
+-define(BD80235, "Inflige +{0}% de DGT pendant le Crépuscule").
+-define(BD80241, "Inflige +{0}% de DGT pendant la nuit").
+-define(BD80242, "Inflige +{0}% de DGT pendant la nuit").
+-define(BD80243, "Inflige +{0}% de DGT pendant la nuit").
+-define(BD80244, "Inflige +{0}% de DGT pendant la nuit").
+-define(BD80245, "Inflige +{0}% de DGT pendant la nuit").
+-define(BD80251, "Prend +{0}% de DGT pendant la journée").
+-define(BD80252, "Prend +{0}% de DGT pendant la journée").
+-define(BD80253, "Prend +{0}% de DGT pendant la journée").
+-define(BD80254, "Prend +{0}% de DGT pendant la journée").
+-define(BD80255, "Prend +{0}% de DGT pendant la journée").
+-define(BD80261, "Prend +{0}% de DGT pendant le Crépuscule").
+-define(BD80262, "Prend +{0}% de DGT pendant le Crépuscule").
+-define(BD80263, "Prend +{0}% de DGT pendant le Crépuscule").
+-define(BD80264, "Prend +{0}% de DGT pendant le Crépuscule").
+-define(BD80265, "Prend +{0}% de DGT pendant le Crépuscule").
+-define(BD80271, "Prend +{0}% de DGT pendant la nuit").
+-define(BD80272, "Prend +{0}% de DGT pendant la nuit").
+-define(BD80273, "Prend +{0}% de DGT pendant la nuit").
+-define(BD80274, "Prend +{0}% de DGT pendant la nuit").
+-define(BD80275, "Prend +{0}% de DGT pendant la nuit").
+-define(BD80281, "Inflige +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80282, "Inflige +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80283, "Inflige +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80284, "Inflige +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80285, "Inflige +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80291, "Inflige +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80292, "Inflige +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80293, "Inflige +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80294, "Inflige +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80295, "Inflige +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80301, "Inflige +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80302, "Inflige +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80303, "Inflige +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80304, "Inflige +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80305, "Inflige +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80311, "Prend +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80312, "Prend +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80313, "Prend +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80314, "Prend +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80315, "Prend +{0}% de DGT lorsque le temps est ensoleillé").
+-define(BD80321, "Prend +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80322, "Prend +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80323, "Prend +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80324, "Prend +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80325, "Prend +{0}% de DGT lorsque le temps est pluvieux").
+-define(BD80331, "Prend +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80332, "Prend +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80333, "Prend +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80334, "Prend +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80335, "Prend +{0}% de DGT lorsque le temps est neigeux").
+-define(BD80341, "Inflige +{0}% de DGT lorsque le temps est orageux").
+-define(BD80342, "Inflige +{0}% de DGT lorsque le temps est orageux").
+-define(BD80343, "Inflige +{0}% de DGT lorsque le temps est orageux").
+-define(BD80344, "Inflige +{0}% de DGT lorsque le temps est orageux").
+-define(BD80345, "Inflige +{0}% de DGT lorsque le temps est orageux").
+-define(BD80351, "Prend +{0}% de DGT lorsque le temps est orageux").
+-define(BD80352, "Prend +{0}% de DGT lorsque le temps est orageux").
+-define(BD80353, "Prend +{0}% de DGT lorsque le temps est orageux").
+-define(BD80354, "Prend +{0}% de DGT lorsque le temps est orageux").
+-define(BD80355, "Prend +{0}% de DGT lorsque le temps est orageux").
+-define(BD80361, "Soigne pour {1}% d'ATQ toutes les {0} sec").
+-define(BD80362, "Soigne pour {1}% d'ATQ toutes les {0} sec").
+-define(BD80363, "Soigne pour {1}% d'ATQ toutes les {0} sec").
+-define(BD80364, "Soigne pour {1}% d'ATQ toutes les {0} sec").
+-define(BD80365, "Soigne pour {1}% d'ATQ toutes les {0} sec").
+-define(BD80371, "ATQ +{0}%").
+-define(BD80372, "ATQ +{0}%").
+-define(BD80373, "ATQ +{0}%").
+-define(BD80374, "ATQ +{0}%").
+-define(BD80375, "ATQ +{0}%").
+-define(BD80381, "ATQ +{0}%").
+-define(BD80382, "ATQ +{0}%").
+-define(BD80383, "ATQ +{0}%").
+-define(BD80384, "ATQ +{0}%").
+-define(BD80385, "DÉF +{0}%").
+-define(BD80391, "Taux de Blocage +{0}%").
+-define(BD80392, "Taux de Blocage +{0}%").
+-define(BD80393, "Taux de Blocage +{0}%").
+-define(BD80394, "Taux de Blocage +{0}%").
+-define(BD80395, "Taux de Blocage +{0}%").
+-define(BD80401, "Taux Crit +{0}%").
+-define(BD80402, "Taux Crit +{0}%").
+-define(BD80403, "Taux Crit +{0}%").
+-define(BD80404, "Taux Crit +{0}%").
+-define(BD80405, "Taux Crit +{0}%").
+-define(BD80411, "Vitesse de gain de Fureur +{0}%").
+-define(BD80412, "Vitesse de gain de Fureur +{0}%").
+-define(BD80413, "Vitesse de gain de Fureur +{0}%").
+-define(BD80414, "Vitesse de gain de Fureur +{0}%").
+-define(BD80415, "Vitesse de gain de Fureur +{0}%").
+-define(SD600, "EXP de Monstre +{0}% et EXP d'AFK +{1}%").
+-define(SN601, "Gardien de Compétence de Base").
+-define(SD601, "Bonus DGT de Compétence +{0}%").
+-define(SN602, "Gardien d'EXP de Rang Sup").
+-define(SD602, "EXP de Monstre +{0}% et EXP d'AFK +{1}%").
+-define(SN603, "Gardien de Défense de Rang Sup").
+-define(SD603, "Bonus DGT de Compétence +{0}%, Réduction de DGT de Compétence +{1}%").
+-define(EASYSD701101, "EXP d'AFK +{0}%").
+-define(EASYSD702101, "DGT infligés aux Sbires +{0}%").
+-define(EASYSD703101, "DGT infligés au Boss +{0}%").
+-define(EASYSD704101, "Réduction de DGT JcJ +{0}%").
+-define(EASYSD705101, "Bonus DGT JcE +{0}%, tous les 10 niveaux +{1} ATQ").
+-define(EASYSD706101, "EXP de Monstre +{0}%").
+-define(EASYSD707101, "EXP de Monstre +{0}%").
+-define(SKILLCIZHUI_1, "Colère").
+-define(SKILLCIZHUI_2, "Puissance du Dieu de la Guerre").
+-define(SKILLCIZHUI_3, "Focalisation").
+-define(SKILLCIZHUI_4, "Force de la Nature").
+-define(SKILLCIZHUI_5, "Hurlement").
+-define(SKILLCIZHUI_6, "Garde de Thor").
+-define(SKILLCIZHUI_7, "Pouvoir de Glace").
+-define(SKILLCIZHUI_8, "Esprit de Khione").
+-define(SKILLCIZHUI_9, "Tonnerre").
+-define(SKILLCIZHUI_10, "Puissance de Foudre").
+-define(SKILLCIZHUI_11, "Esprit de Vulcain").
+-define(SKILLCIZHUI_12, "Pouvoir de Feu").
+-define(SKILLCIZHUI_13, "Renforcement Unique").
+-define(SKILLCIZHUI_14, "Blocage de Groupe").
+-define(SKILLCIZHUI_15, "Énergique").
+-define(SKILLCIZHUI_16, "Bénédiction de Thor").
+-define(SKILLCIZHUI_17, "Dégâts de Groupe").
+-define(SKILLCIZHUI_18, "Pile").
+-define(SKILLCIZHUI_19, "Canal du Tonnerre").
+-define(SKILLCIZHUI_20, "Focalisation Spirituelle").
+-define(SKILLCIZHUI_21, "Tonnerre Effectif").
+-define(SKILLCIZHUI_22, "Souffle").
+-define(SKILLCIZHUI_23, "Bonus de Dégâts").
+-define(SKILLCIZHUI_24, "Entaille Tueuse").
+-define(SKILLCIZHUI_25, "Crit").
+-define(SKILLCIZHUI_26, "Ignorer Défense").
+-define(SKILLCIZHUI_27, "Saignement").
+-define(SKILLCIZHUI_28, "Étourdissement").
+-define(SKILLCIZHUI_29, "Affaiblir").
+-define(SKILLCIZHUI_30, "Dissiper").
+-define(SKILLCIZHUI_31, "Brûlure").
+-define(SKILLCIZHUI_32, "Poison").
+-define(SKILLCIZHUI_33, "Paralyser").
+-define(SKILLCIZHUI_34, "Gel").
+-define(SKILLCIZHUI_35, "Immunisé").
+-define(SKILLCIZHUI_36, "Gardien").
+-define(SKILLCIZHUI_37, "Blocage").
+-define(SKILLCIZHUI_38, "Bouclier").
+-define(SKILLCIZHUI_39, "Soin de Groupe").
+-define(SKILLCIZHUI_40, "Dissiper").
+-define(SKILLCIZHUI_41, "Purifier").
+-define(SKILLCIZHUI_42, "Blocage").
+-define(SKILLCIZHUI_43, "Réduction de DGT").
+-define(SKILLCIZHUI_44, "Buff de Groupe").
+-define(SKILLCIZHUI_45, "Terminer").
+-define(SKILLCIZHUI_46, "Colère ↑↑").
+-define(SKILLCIZHUI_47, "Rugissement ↑↑").
+-define(SKILLCIZHUI_48, "Souffle ↑↑").
+-define(SKILLCIZHUI_49, "Étourdissement ↑↑").
+-define(SKILLCIZHUI_50, "Gardien ↑↑").
+-define(SKILLCIZHUI_51, "Crit ↑↑").
+-define(SKILLCIZHUI_52, "Saignement ↑↑").
+-define(SKILLCIZHUI_53, "Réduction de Blocage ↑↑").
+-define(SKILLCIZHUI_54, "Ignorer Défense").
+-define(SKILLCIZHUI_55, "Résolution").
+-define(SKILLCIZHUI_56, "Énergique ↑↑").
+-define(SKILLCIZHUI_57, "Bénédiction de Thor ↑↑").
+-define(SKILLCIZHUI_58, "Défense Ignorée ↑↑").
+-define(SKILLCIZHUI_59, "Bouclier ↑↑").
+-define(SKILLCIZHUI_60, "Pouvoir ↑↑").
+-define(SKILLCIZHUI_61, "Pouvoir ↑↑").
+-define(SKILLCIZHUI_62, "Souffle ↑↑").
+-define(SKILLCIZHUI_63, "Soin ↑↑").
+-define(SKILLCIZHUI_64, "Bonus de Dégâts").
+-define(SKILLCIZHUI_65, "ATQ").
+-define(SKILLCIZHUI_66, "Pouvoir ↑↑").
+-define(SKILLCIZHUI_67, "Soin ↑↑").
+-define(SKILLCIZHUI_68, "Souffle").
+-define(SKILLCIZHUI_69, "Gel ↑↑").
+-define(SKILLCIZHUI_70, "Pouvoir ↑↑").
+-define(SKILLCIZHUI_71, "Pouvoir ↑↑").
+-define(SKILLCIZHUI_72, "Pouvoir ↑↑").
+-define(SKILLCIZHUI_73, "Pouvoir ↑↑").
+-define(SKILLCIZHUI_74, "Focalisation ↑↑").
+-define(SKILLCIZHUI_75, "Tonnerre ↑↑").
+-define(SKILLCIZHUI_76, "Souffle ↑↑").
+-define(SKILLCIZHUI_77, "Souffle ↑↑").
+-define(SKILLCIZHUI_78, "Purifier").
+-define(SKILLCIZHUI_79, "Focalisation").
+-define(SKILLCIZHUI_80, "Purifier").
+-define(SKILLCIZHUI_81, "Tonnerre").
+-define(SKILLCIZHUI_82, "Souffle ↑↑").
+-define(SKILLCIZHUI_83, "Souffle ↑↑").
+-define(SKILLCIZHUI_84, "Poison ↑↑").
+-define(SKILLCIZHUI_85, "Percer").
+-define(SKILLCIZHUI_86, "Focalisation Spirituelle ↑↑").
+-define(SKILLCIZHUI_87, "Tonnerre Effectif ↑↑").
+-define(SKILLCIZHUI_88, "Bouclier").
+-define(SKILLCIZHUI_89, "Invincible").
+-define(SKILLCIZHUI_90, "Soin").
+-define(SKILLCIZHUI_91, "Bonus de Soin").
+-define(SKILLCIZHUI_92, "Soin de Groupe").
+-define(SKILLCIZHUI_93, "Dissipation d'Amélioration").
+-define(SKILLCIZHUI_94, "Bonus de Dégâts").
+-define(SKILLCIZHUI_95, "Dégâts de Groupe").
+-define(SKILLCIZHUI_96, "Débuff de Dissipation").
+-define(SKILLCIZHUI_97, "Régénération de la Fureur").
+-define(SKILLCIZHUI_98, "<color=#FF6D6D>Basique</color>").
+-define(SKILLCIZHUI_99, "<color=#8EC2FF>Dégâts</color>").
+-define(SKILLCIZHUI_100, "<color=#FF6D6D>Basique</color>").
+-define(SKILLCIZHUI_101, "<color=#8EC2FF>Souffle</color>").
+-define(SKILLCIZHUI_102, "<color=#FF6D6D>Dégâts</color>").
+-define(SKILLCIZHUI_103, "<color=#8EC2FF>ZdE</color>").
+-define(SKILLCIZHUI_104, "<color=#FF6D6D>Dégâts</color>").
+-define(SKILLCIZHUI_105, "<color=#8EC2FF>Souffle</color>").
+-define(SKILLCIZHUI_106, "").
+-define(SKILLCIZHUI_107, "").
+-define(SKILLCIZHUI_108, "").
+-define(SKILLCIZHUI_109, "").
+-define(SKILLCIZHUI_110, "").
+-define(SKILLCIZHUI_111, "").
+-define(SKILLCIZHUI_112, "").
+-define(SKILLCIZHUI_113, "").
+-define(SKILLCIZHUI_114, "").
+-define(SKILLCIZHUI_115, "").
+-define(SKILLCIZHUI_116, "").
+-define(BN51010, "Puissance du Pharaon").
+-define(BD51010, "ATQ +45%").
+-define(BN51321, "Corps de la Vengeance").
+-define(BD51321, "Réduction DGT +{0}%").
+-define(BF96, "[Marque Basique]").
+-define(BF97, "[Marque Moyenne]").
+-define(BF98, "[Marque Ultra]").
+-define(BF99, "[Roi du 1c1]").
+-define(BN1000205, "Bonus de Marque").
+-define(BN1000206, "Bonus de Marque").
+-define(BN1000207, "Bonus de Marque").
+-define(BD1000205, "EXP de Monstre/AFK +{0}%, Bonus DGT de Compétence +{1}%").
+-define(BD1000206, "EXP de Monstre/AFK +{0}%, Bonus DGT de Compétence +{1}%").
+-define(BD1000207, "EXP de Monstre/AFK +{0}%, Bonus DGT de Compétence +{1}%").
+-define(SS120101, "Merlin inflige des DGT Élémentaires à l'ennemi").
+-define(SS120141, "Merlin inflige des DGT de Feu à l'ennemi").
+-define(SS120161, "Chance de récupérer des PV en étant attaqué").
+-define(SS120181, "Merlin soigne le maître et augmente la Réduction des DGT du maître").
+-define(SS120201, "Brandit un marteau lourd pour infliger des dégâts à l'ennemi").
+-define(SS120241, "Frappe le sol avec force, infligeant des dégâts aux ennemis à proximité, avec une chance de les ralentir").
+-define(SS120261, "Chance d'infliger un contrôle avec une attaque").
+-define(SS120281, "Frappe l'ennemi avec un marteau géant, infligeant des dégâts massifs et offrant une chance de le contrôler").
+-define(SS110100, "Se transforme en maître de Blocage Athéna afin de punir l'ennemi").
+-define(SS110101, "Frappe l'ennemi à plusieurs reprises, en lui infligeant une petite quantité de dégâts").
+-define(SS110105, "Entaille les cibles proches, infligeant une quantité modérée de dégâts").
+-define(SS110106, "Bénéficie d'un bouclier solide, infligeant des dégâts de zone et augmentant le blocage").
+-define(SS110107, "Punit l'ennemi en lui infligeant des dégâts.L'attaque transperce l'ennemi").
+-define(SS110108, "Renforce les alliés en augmentant leur blocage, et infligeant des dégâts aux ennemis").
+-define(SS110200, "Se transforme en Morrigan, un maître en soins et en débuffs").
+-define(SS110201, "Manie un bâton pour infliger des dégâts").
+-define(SS110205, "Absorbe l'énergie, inflige des dégâts et récupère les PV").
+-define(SS110206, "Se transforme en corbeau capable d'infliger des dégâts aux ennemis et de les repousser").
+-define(SS110207, "Libère de l'énergie pour infliger des dégâts et récupérer des PV.").
+-define(SS110208, "Génère un tourbillon infligeant d'importants dégâts").
+-define(SS110300, "Se transforme en Thor, avec une chance de paralyser l'ennemi").
+-define(SS110301, "Attaque l'ennemi avec le Marteau de Thor").
+-define(SS110305, "Attaque l'ennemi avec le Marteau de Thor, avec une chance de le paralyser").
+-define(SS110306, "Avance rapidement sur une certaine distance, avec une chance de paralyser l'ennemi").
+-define(SS110307, "Libère la puissance de Thor pour infliger des dégâts aux ennemis tout en générant un champ électrique à proximité").
+-define(SS110308, "Attaque l'ennemi avec le Marteau de Thor infligeant des dégâts considérables").
+-define(SS110400, "Se transforme en Horus capable de brûler les ennemis proches").
+-define(SS110401, "Brandit un sceptre pour infliger des dégâts aux ennemis").
+-define(SS110405, "Déclenche la lumière sacrée pour infliger des dégâts.L'ennemi sera brûlé").
+-define(SS110406, "Déclenche les énergies solaires pour infliger des dégâts.L'ennemi sera brûlé").
+-define(SS110407, "Maudit les ennemis, leur infligeant des dégâts et les immobilisant.").
+-define(SS110408, "Provoque un tourbillon causant beaucoup de dégâts et brûlant les ennemis").
+-define(EASYSD301101, "Fracassement de Personnage +{0}").
+-define(EASYSD301201, "Fracassement de Personnage +{0}").
+-define(EASYSD301301, "Fracassement de Personnage +{0}").
+-define(EASYSD301401, "Fracassement de Personnage +{0}").
+-define(EASYSD301501, "ATQ de Personnage +{0}").
+-define(EASYSD301601, "ATQ de Personnage +{0}").
+-define(EASYSD301701, "ATQ de Personnage +{0}").
+-define(EASYSD301801, "ATQ de Personnage +{0}").
+-define(EASYSD301901, "Crit de Personnage +{0}").
+-define(EASYSD302001, "Crit de Personnage +{0}").
+-define(EASYSD302101, "Crit de Personnage +{0}").
+-define(EASYSD302201, "Crit de Personnage +{0}").
+-define(EASYSD302301, "Toucher de Personnage +{0}").
+-define(EASYSD302401, "Toucher de Personnage +{0}").
+-define(EASYSD302501, "Toucher de Personnage +{0}").
+-define(EASYSD302601, "Toucher de Personnage +{0}").
+-define(EASYSD302701, "Taux Crit de Personnage +{0}%").
+-define(EASYSD302801, "Taux Crit de Personnage +{0}%").
+-define(EASYSD302901, "Taux Crit de Personnage +{0}%").
+-define(EASYSD303001, "Taux de Focalisation de Personnage +{0}%").
+-define(EASYSD303101, "Taux de Focalisation de Personnage +{0}%").
+-define(EASYSD303201, "Taux de Focalisation de Personnage +{0}%").
+-define(EASYSD303301, "Bonus de DGT de Crit de Personnage +{0}%").
+-define(EASYSD303401, "Bonus de DGT de Crit de Personnage +{0}%").
+-define(EASYSD303501, "Bonus de DGT de Crit de Personnage +{0}%").
+-define(EASYSD303601, "Bonus DGT de Focalisation de Personnage +{0}%").
+-define(EASYSD303701, "Bonus DGT de Focalisation de Personnage +{0}%").
+-define(EASYSD303801, "Bonus DGT de Focalisation de Personnage +{0}%").
+-define(EASYSD303901, "Taux de Toucher de Personnage +{0}%").
+-define(EASYSD304001, "Taux de Toucher de Personnage +{0}%").
+-define(EASYSD304101, "Taux de Toucher de Personnage +{0}%").
+-define(EASYSD304201, "Bonus de DGT JcE de Personnage +{0}%").
+-define(EASYSD304301, "Bonus de DGT JcE de Personnage +{0}%").
+-define(EASYSD304401, "Bonus de DGT JcE de Personnage +{0}%").
+-define(EASYSD304501, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD304601, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD304701, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD304801, "Bonus de DGT Excellent de Personnage +{0}%").
+-define(EASYSD304901, "Bonus de DGT Excellent de Personnage +{0}%").
+-define(EASYSD305001, "Bonus de DGT Excellent de Personnage +{0}%").
+-define(EASYSD305101, "Bonus de DGT JcJ de Personnage +{0}%").
+-define(EASYSD305201, "Bonus de DGT JcJ de Personnage +{0}%").
+-define(EASYSD305301, "Bonus de DGT JcJ de Personnage +{0}%").
+-define(EASYSD305401, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(EASYSD305501, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(EASYSD305601, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(EASYSD305701, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD305801, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD305901, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD306001, "Taux de Coup Mortel de Personnage +{0}%").
+-define(EASYSD306101, "Taux de Coup Mortel de Personnage +{0}%").
+-define(EASYSD306201, "Taux de Châtiment de Personnage +{0}%").
+-define(EASYSD306301, "Taux de Châtiment de Personnage +{0}%").
+-define(EASYSD306401, "Taux de Poursuite de Personnage +{0}%").
+-define(EASYSD306501, "Taux de Poursuite de Personnage +{0}%").
+-define(EASYSD306601, "Taux de Frappe Multiple de Personnage +{0}%").
+-define(EASYSD306701, "Taux de Frappe Multiple de Personnage +{0}%").
+-define(EASYSD306801, "Bonus de DGT Finaux de Personnage +{0}%").
+-define(EASYSD306901, "Bonus de DGT Finaux de Personnage +{0}%").
+-define(EASYSD401101, "PV de Personnage +{0}").
+-define(EASYSD401201, "PV de Personnage +{0}").
+-define(EASYSD401301, "PV de Personnage +{0}").
+-define(EASYSD401401, "PV de Personnage +{0}").
+-define(EASYSD401501, "DÉF de Personnage +{0}").
+-define(EASYSD401601, "DÉF de Personnage +{0}").
+-define(EASYSD401701, "DÉF de Personnage +{0}").
+-define(EASYSD401801, "DÉF de Personnage +{0}").
+-define(EASYSD401901, "Ténacité de Personnage +{0}").
+-define(EASYSD402001, "Ténacité de Personnage +{0}").
+-define(EASYSD402101, "Ténacité de Personnage +{0}").
+-define(EASYSD402201, "Ténacité de Personnage +{0}").
+-define(EASYSD402301, "Esquive de Personnage +{0}").
+-define(EASYSD402401, "Esquive de Personnage +{0}").
+-define(EASYSD402501, "Esquive de Personnage +{0}").
+-define(EASYSD402601, "Esquive de Personnage +{0}").
+-define(EASYSD402701, "Taux de Résistance de Personnage +{0}%").
+-define(EASYSD402801, "Taux de Résistance de Personnage +{0}%").
+-define(EASYSD402901, "Taux de Résistance de Personnage +{0}%").
+-define(EASYSD403001, "Taux d'Anti-Focalisation de Personnage +{0}%").
+-define(EASYSD403101, "Taux d'Anti-Focalisation de Personnage +{0}%").
+-define(EASYSD403201, "Taux d'Anti-Focalisation de Personnage +{0}%").
+-define(EASYSD403301, "Réduction DGT Crit de Personnage +{0}%").
+-define(EASYSD403401, "Réduction DGT Crit de Personnage +{0}%").
+-define(EASYSD403501, "Réduction DGT Crit de Personnage +{0}%").
+-define(EASYSD403601, "Réduction DGT de Focalisation de Personnage +{0}%").
+-define(EASYSD403701, "Réduction DGT de Focalisation de Personnage +{0}%").
+-define(EASYSD403801, "Réduction DGT de Focalisation de Personnage +{0}%").
+-define(EASYSD403901, "Taux d'Esquive de Personnage +{0}%").
+-define(EASYSD404001, "Taux d'Esquive de Personnage +{0}%").
+-define(EASYSD404101, "Taux d'Esquive de Personnage +{0}%").
+-define(EASYSD404201, "Réduction DGT JcE de Personnage +{0}%").
+-define(EASYSD404301, "Réduction DGT JcE de Personnage +{0}%").
+-define(EASYSD404401, "Réduction DGT JcE de Personnage +{0}%").
+-define(EASYSD404501, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD404601, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD404701, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD404801, "Réduction DGT Excellents de Personnage +{0}%").
+-define(EASYSD404901, "Réduction DGT Excellents de Personnage +{0}%").
+-define(EASYSD405001, "Réduction DGT Excellents de Personnage +{0}%").
+-define(EASYSD405101, "Réduction de DGT de Personnage en JCJ +{0}%").
+-define(EASYSD405201, "Réduction de DGT de Personnage en JCJ +{0}%").
+-define(EASYSD405301, "Réduction de DGT de Personnage en JCJ +{0}%").
+-define(EASYSD405401, "Réduction DGT de Compétence de Personnage +{0}%").
+-define(EASYSD405501, "Réduction DGT de Compétence de Personnage +{0}%").
+-define(EASYSD405601, "Réduction DGT de Compétence de Personnage +{0}%").
+-define(EASYSD405701, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD405801, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD405901, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD406001, "Taux d'Anti Coup Mortel de Personnage +{0}%").
+-define(EASYSD406101, "Taux d'Anti Coup Mortel de Personnage +{0}%").
+-define(EASYSD406201, "Taux de Fragilité de Personnage +{0}%").
+-define(EASYSD406301, "Taux de Fragilité de Personnage +{0}%").
+-define(EASYSD406401, "Taux de Rés.de Poursuite de Personnage +{0}%").
+-define(EASYSD406501, "Taux de Rés.de Poursuite de Personnage +{0}%").
+-define(EASYSD406601, "Taux de Rés.de Frappe Multiple de Personnage +{0}%").
+-define(EASYSD406701, "Taux de Rés.de Frappe Multiple de Personnage +{0}%").
+-define(EASYSD406801, "Réduction DGT Finaux de Personnage +{0}%").
+-define(EASYSD406901, "Réduction DGT Finaux de Personnage +{0}%").
+-define(EASYSD501101, "ATQ de Feu de Personnage +{0}").
+-define(EASYSD501201, "ATQ de Feu de Personnage +{0}").
+-define(EASYSD501301, "ATQ de Feu de Personnage +{0}").
+-define(EASYSD501401, "ATQ de Feu de Personnage +{0}").
+-define(EASYSD502101, "ATQ d'Eau de Personnage +{0}").
+-define(EASYSD502201, "ATQ d'Eau de Personnage +{0}").
+-define(EASYSD502301, "ATQ d'Eau de Personnage +{0}").
+-define(EASYSD502401, "ATQ d'Eau de Personnage +{0}").
+-define(EASYSD503101, "ATQ de Vent de Personnage +{0}").
+-define(EASYSD503201, "ATQ de Vent de Personnage +{0}").
+-define(EASYSD503301, "ATQ de Vent de Personnage +{0}").
+-define(EASYSD503401, "ATQ de Vent de Personnage +{0}").
+-define(EASYSD504101, "ATQ de Terre de Personnage +{0}").
+-define(EASYSD504201, "ATQ de Terre de Personnage +{0}").
+-define(EASYSD504301, "ATQ de Terre de Personnage +{0}").
+-define(EASYSD504401, "ATQ de Terre de Personnage +{0}").
+-define(EASYSD505101, "DÉF de Feu de Personnage +{0}").
+-define(EASYSD505201, "DÉF de Feu de Personnage +{0}").
+-define(EASYSD505301, "DÉF de Feu de Personnage +{0}").
+-define(EASYSD505401, "DÉF de Feu de Personnage +{0}").
+-define(EASYSD506101, "DÉF d'Eau de Personnage +{0}").
+-define(EASYSD506201, "DÉF d'Eau de Personnage +{0}").
+-define(EASYSD506301, "DÉF d'Eau de Personnage +{0}").
+-define(EASYSD506401, "DÉF d'Eau de Personnage +{0}").
+-define(EASYSD507101, "DÉF de Vent de Personnage +{0}").
+-define(EASYSD507201, "DÉF de Vent de Personnage +{0}").
+-define(EASYSD507301, "DÉF de Vent de Personnage +{0}").
+-define(EASYSD507401, "DÉF de Vent de Personnage +{0}").
+-define(EASYSD508101, "DÉF de Terre de Personnage +{0}").
+-define(EASYSD508201, "DÉF de Terre de Personnage +{0}").
+-define(EASYSD508301, "DÉF de Terre de Personnage +{0}").
+-define(EASYSD508401, "DÉF de Terre de Personnage +{0}").
+-define(EASYSD509101, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(EASYSD509201, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(EASYSD509301, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(EASYSD509401, "Bonus de DGT de Compétence de Personnage +{0}%").
+-define(EASYSD510201, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD510301, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD510401, "Bonus de DGT de Personnage +{0}%").
+-define(EASYSD511201, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD511301, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD511401, "Réduction DGT de Personnage +{0}%").
+-define(EASYSD512301, "Taux de Châtiment de Personnage +{0}%").
+-define(EASYSD512401, "Taux de Châtiment de Personnage +2.8%").
+-define(EASYSD513301, "Taux de Fragilité de Personnage +{0}%").
+-define(EASYSD513401, "Taux de Fragilité de Personnage +{0}%").
+-define(EASYSD514301, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD514401, "Taux Excellent de Personnage +{0}%").
+-define(EASYSD515301, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD515401, "Taux Anti-Excellent de Personnage +{0}%").
+-define(EASYSD601101, "Divinité actuelle (Équipement inclus) DÉF +{0}%").
+-define(EASYSD602101, "Divinité actuelle (Équipement inclus) PV +{0}%").
+-define(EASYSD603101, "Divinité actuelle (Équipement inclus) ATQ +{0}%").
+-define(EASYSD604101, "Divinité actuelle (Équipement inclus) Fracassement +{0}%").
+-define(EASYSD605101, "Divinité actuelle (Équipement inclus) DÉF +{0}%").
+-define(EASYSD606101, "Divinité actuelle (Équipement inclus) PV +{0}%").
+-define(EASYSD607101, "Divinité actuelle (Équipement inclus) ATQ +{0}%").
+-define(EASYSD608101, "Toutes les divinités (Équipement inclus) DÉF +{0}%").
+-define(EASYSD609101, "Toutes les divinités (Équipement inclus) PV +{0}%").
+-define(EASYSD610101, "Toutes les divinités (Équipement inclus) ATQ +{0}%").
+-define(EASYSD611101, "Toutes les divinités (Équipement inclus) Fracassement +{0}%").
+-define(EASYSD612101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD613101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD614101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD614201, "Taux de Résistance +{0}%").
+-define(EASYSD615101, "Taux de Résistance +{0}%").
+-define(EASYSD616101, "Taux de Résistance +{0}%").
+-define(EASYSD617101, "Taux de Résistance +{0}%").
+-define(EASYSD617201, "Taux d'Anti-Focalisation +{0}%").
+-define(EASYSD618101, "Taux d'Anti-Focalisation +{0}%").
+-define(EASYSD619101, "Taux d'Anti-Focalisation +{0}%").
+-define(EASYSD620101, "Taux d'Anti-Focalisation +{0}%").
+-define(EASYSD620201, "Réduction Blocage +{0}%").
+-define(EASYSD621101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD621201, "Réduction DGT Excellent +{0}%").
+-define(EASYSD622101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD622201, "Bonus DGT Excellent +{0}%").
+-define(EASYSD623101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD623201, "Réduction DGT de Compétence +{0}%").
+-define(EASYSD624101, "Toutes les Divinités (Équipement inclus) toutes les stats +{0}%").
+-define(EASYSD624201, "Réduction DGT +{0}%").
+-define(SS101, "Chance d'augmenter le Blocage en étant attaqué").
+-define(SS102, "Chance d'augmenter la DÉF en étant attaqué").
+-define(SS103, "Chance d'augmenter le Taux d'Esquive en étant attaqué").
+-define(SS104, "Réduit considérablement les DGT reçus en entrant dans la bataille").
+-define(SS105, "Réduit considérablement les DGT reçus en étant attaqué sans les PV complets").
+-define(SS106, "Augmente la Rés Crit en subissant des dégâts critiques").
+-define(SS107, "Chance d'augmenter le Taux de Blocage en étant attaqué").
+-define(SS108, "Chance d'augmenter la Vitesse de Déplacement lors d'une attaque").
+-define(SS109, "Chance d'ignorer les DGT en étant attaqué").
+-define(SS110, "Chance d'augmenter grandement la DÉF en étant attaqué").
+-define(SS111, "Devenez Invincible en cas d'attaque à mort").
+-define(SS112, "Chance d'ignorer les DGT en étant attaqué").
+-define(SS113, "Chance d'augmenter le Taux d'Esquive en étant attaqué").
+-define(SS114, "Chance de réduire considérablement les DGT subis en étant attaqué").
+-define(SS115, "Réduit considérablement les DGT reçus en entrant dans la bataille").
+-define(SS116, "Chance d'augmenter le Taux de Blocage en étant attaqué avec des PV élevés").
+-define(SS117, "Chance d'augmenter la DÉF en étant attaqué").
+-define(SS118, "Chance d'augmenter le Taux d'Esquive en étant attaqué").
+-define(SS119, "Chance d'augmenter la DÉF en étant attaqué avec des PV élevés").
+-define(SS120, "Chance d'augmenter la Taux d'Esquive en étant attaqué avec des PV élevés").
+-define(SS121, "Chance d'augmenter le Taux de Blocage en étant attaqué").
+-define(SS122, "Chance d'augmenter le Taux de Blocage en étant attaqué avec des PV élevés").
+-define(SS123, "Chance d'augmenter la Réduction des DGT en étant attaqué").
+-define(SS124, "Chance d'augmenter la DÉF en étant attaqué avec des PV élevés").
+-define(SS125, "Chance d'augmenter la Taux d'Esquive en étant attaqué avec des PV élevés").
+-define(SS126, "Réduit considérablement les DGT reçus en entrant dans la bataille").
+-define(SS127, "Chance de réduire considérablement les DGT subis en étant attaqué avec des PV élevés").
+-define(SS128, "Chance de récupérer des PV en étant attaqué").
+-define(SS129, "Chance d'augmenter la Réduction des DGT en étant attaqué").
+-define(SS130, "Chance d'augmenter la Réduction de DGT en étant attaqué avec des PV élevés").
+-define(SS131, "Chance d'augmenter la Réduction des DGT en étant attaqué").
+-define(SS132, "Chance d'augmenter la Réduction de DGT en étant attaqué avec des PV élevés").
+-define(SS133, "Chance d'augmenter la Réduction des DGT en étant attaqué si les PV ne sont pas plein").
+-define(SS134, "Chance d'augmenter grandement la Réduction des DGT en étant attaqué").
+-define(SS135, "Augmente considérablement la Réduction des DGT lors de l'entrée dans la bataille").
+-define(SS136, "Chance d'augmenter le Taux de Blocage en étant attaqué avec des PV élevés").
+-define(SS137, "Les attaques ont une chance d'augmenter la Réduction des DGT").
+-define(SS138, "Augmente progressivement la Réduction des DGT en entrant dans la bataille").
+-define(SS139, "Les attaques ont une chance d'augmenter la Réduction des DGT").
+-define(SS140, "Chance d'augmenter la Réduction des DGT de Compétence en cas d'attaque").
+-define(SS141, "Chance d'augmenter la Réduction des DGT au début du combat").
+-define(SS142, "Chance d'augmenter la Réduction de DGT de Compétence en étant attaqué avec des PV élevés").
+-define(SS143, "Chance d'augmenter la Réduction des DGT Finaux en étant attaqué").
+-define(SS144, "Chance d'augmenter la Réduction de DGT de Compétence en étant attaqué avec des PV élevés").
+-define(SS145, "Les attaques ont une chance d'augmenter la Réduction des DGT de Compétence").
+-define(SS146, "Chance d'augmenter la Réduction des DGT de Compétence en cas d'attaque").
+-define(SS147, "Les attaques ont une chance d'augmenter la Réduction des DGT de Compétence").
+-define(SS148, "Chance d'augmenter grandement la Réduction des DGT en esquivant").
+-define(SS149, "Grande chance d'augmenter la Réduction des DGT en étant attaqué").
+-define(SS150, "Grande chance d'augmenter la DÉF en étant attaqué").
+-define(SS151, "Les attaques ont une chance de réduire temporairement la vitesse de déplacement de l'ennemi").
+-define(SS152, "Les attaques ont une chance d'augmenter temporairement les DGT").
+-define(SS153, "Les attaques ont une chance d'augmenter temporairement le Taux Crit").
+-define(SS154, "Augmente considérablement les DGT en entrant dans la bataille").
+-define(SS155, "Augmente les DGT en cas d'attaque avant une blessure grave").
+-define(SS156, "Augmente le Taux de Toucher après que ses propres attaques aient été esquivées").
+-define(SS157, "Les attaques ont une chance de réduire la Vitesse de Déplacement de l'ennemi pendant un long moment").
+-define(SS158, "Les attaques ont une chance d'augmenter les DGT pendant une longue période").
+-define(SS159, "Les attaques ont une chance d'augmenter le Taux Crit pendant une longue période").
+-define(SS160, "Les attaques ont une chance d'augmenter le Taux de Percée de Blocage").
+-define(SS161, "Les attaques ont une chance d'augmenter temporairement le Taux Crit").
+-define(SS162, "Les attaques ont une chance de réduire la Réduction de DGT de l'ennemi").
+-define(SS163, "Effraie l'ennemi en cas d'attaque à mort").
+-define(SS164, "Les attaques ont une chance d'augmenter le Taux de Toucher").
+-define(SS165, "Augmente considérablement les DGT en entrant dans la bataille").
+-define(SS166, "Les attaques ont une chance d'augmenter les DGT").
+-define(SS167, "Les attaques ont une chance d'augmenter la Percée de Blocage").
+-define(SS168, "Les attaques ont une chance d'augmenter grandement les DGT").
+-define(SS169, "Augmente le Bonus de DGT en attaquant avec des PV élevés").
+-define(SS170, "Augmente le Taux Crit lors en attaquant avec des PV élevés").
+-define(SS171, "Augmente le Taux Crit lors en attaquant avec des PV élevés").
+-define(SS172, "Augmente le Taux d'Anti-blocage en attaquant avec des PV élevés").
+-define(SS173, "Augmente le Taux d'Anti-blocage en attaquant avec des PV élevés").
+-define(SS174, "Augmente le Taux de Toucher en attaquant avec des PV élevés").
+-define(SS175, "Augmente le Bonus de DGT en attaquant avec des PV élevés").
+-define(SS176, "Augmente le Taux de Toucher en attaquant avec des PV élevés").
+-define(SS177, "Les attaques ont une chance d'augmenter le Taux d'Anti-blocage").
+-define(SS178, "Les attaques ont une chance d'augmenter grandement les DGT").
+-define(SS179, "Augmente grandement les DGT en attaquant avec des PV élevés").
+-define(SS180, "Augmente considérablement les DGT en entrant dans la bataille").
+-define(SS181, "Augmente grandement les DGT en attaquant avec des PV élevés").
+-define(SS182, "Les attaques ont une chance d'infliger des DGT Supplémentaires").
+-define(SS183, "Les attaques ont une chance d'augmenter la Précision").
+-define(SS184, "Les attaques ont une chance d'augmenter les Bonus de DGT").
+-define(SS185, "Augmente le Bonus de DGT en attaquant avec des PV élevés").
+-define(SS186, "Les attaques ont une chance d'augmenter les Bonus de DGT").
+-define(SS187, "Augmente le Bonus de DGT en attaquant avec des PV élevés").
+-define(SS188, "Attaquer si les PV ne sont pas pleins augmente le Bonus de DGT").
+-define(SS189, "Augmente le Bonus de DGT en entrant dans la bataille").
+-define(SS190, "Augmente le Bonus de DGT en attaquant avec des PV élevés").
+-define(SS191, "Chance d'augmenter le Bonus de DGT en étant attaqué").
+-define(SS192, "Augmente progressivement le Bonus de DGT en entrant dans la bataille").
+-define(SS193, "Chance d'augmenter le Bonus de DGT en étant attaqué").
+-define(SS194, "Les attaques ont une chance d'augmenter les DGT de Compétence").
+-define(SS195, "Augmente le Bonus de DGT en entrant dans la bataille").
+-define(SS196, "Augmente les DGT de Compétence en attaquant avec des PV élevés").
+-define(SS197, "Les attaques ont une chance d'augmenter les DGT Finaux").
+-define(SS198, "Augmente les DGT de Compétence en étant attaqué avec des PV élevés").
+-define(SS199, "Les attaques ont une chance d'augmenter les DGT de Compétence").
+-define(SS200, "Chance d'augmenter les DGT de Compétence en étant attaqué").
+-define(SS501, "Les attaques ont une chance d'augmenter les DGT de Compétence").
+-define(SS502, "Augmente considérablement le Bonus de DGT lors de l'esquive").
+-define(SS503, "Les attaques ont une forte chance d'augmenter le Bonus de DGT").
+-define(SS504, "Les attaques ont une forte chance d'augmenter le Taux Crit").
+-define(SS505, "Les attaques ont une forte chance d'augmenter le Bonus de DGT").
+-define(SS506, "Les attaques ont une forte chance d'augmenter le Taux Crit").
+-define(SS507, "Les attaques ont une forte chance d'augmenter grandement le Bonus de DGT").
+-define(SS508, "Grande chance d'augmenter la Réduction des DGT en étant attaqué").
+-define(SS509, "Grande chance d'augmenter la DÉF en étant attaqué").
+-define(SS510, "Grande chance d'augmenter grandement la Réduction de DGT en étant attaqué").
+-define(SS543, "Réduit la Réduction des DGT de compétence de l'ennemi en attaquant").
+-define(SS544, "Augmente la DÉF en étant attaqué avec des PV élevés").
+-define(SS545, "Réduit le Taux Crit de l'ennemi en étant attaqué").
+-define(SS546, "Réduit le Taux d'Esquive de l'ennemi en attaquant").
+-define(SS547, "Chance d'augmenter les DGT reçus de l'ennemi en étant attaqué").
+-define(SS548, "Chance de réduire considérablement ses propres DGT reçus en étant attaqué").
+-define(SS549, "Obtenez un bouclier en étant attaqué").
+-define(SS550, "Augmente son propre Taux de Focalisation en combat").
+-define(SS551, "Réduit le Taux de Blocage de l'ennemi en attaquant avec des PV élevés").
+-define(SS552, "Augmente le Taux d'Anti-focalisation en combat").
+-define(SS553, "Réduit le Taux d'Anti-blocage de l'ennemi en attaquant avec des PV élevés").
+-define(SS554, "Chance de réduire le Taux de Résistance de l'ennemi en attaquant").
+-define(SS555, "Chance de réduire le Taux d'Esquive de l'ennemi en attaquant").
+-define(SS556, "Chance de réduire le Taux de Toucher de l'ennemi en étant attaqué").
+-define(SS557, "Les attaques ont une chance d'augmenter les DGT Finaux").
+-define(SS558, "Chance d'augmenter la Réduction des DGT Finaux en étant attaqué").
+-define(SS559, "Inflige des Lésions Mortelles en attaquant avec des PV élevés").
+-define(SS560, "Chance d'obtenir Bonheur en étant attaqué avec des PV faibles").
+-define(SS561, "Chance d'augmenter les DGT Finaux en cas d'attaque").
+-define(SS562, "Chance d'infliger un Saignement en cas d'attaque").
+-define(SS563, "Augmente les DGT Finaux lors d'une attaque avec des PV élevés").
+-define(SS564, "Inflige des Saignements lors d'une attaque avec des PV élevés").
+-define(SS565, "Attaquer si les PV se sont pas pleins augmente les DGT Finaux").
+-define(SS566, "Attaquer si les PV ne sont pas pleins inflige un Saignement").
+-define(SS567, "").
+-define(BN23016, "Bouclier").
+-define(BD23016, "Bloque une certaine quantité de DGT").
+-define(BN81331, "Croc de Colère V").
+-define(BN81341, "Voix de Focalisation V").
+-define(BN81351, "Voix Apaisante V").
+-define(BN81361, "Miroir Chanceux V").
+-define(BN81371, "Chanson Résolue V").
+-define(BN81381, "Cœur de Courage V").
+-define(BN81391, "Pierre Tiède V").
+-define(BN81401, "Fruit Anti-paralysie V").
+-define(BN81411, "Pierre Gelée V").
+-define(BN81421, "Cœur de Purification V").
+-define(BN81431, "Bague Anti-saignement V").
+-define(BN81441, "Cœur de Force V").
+-define(BN81451, "Pierre de Pureté V").
+-define(BN81461, "Cruche Encombrante V").
+-define(BN81471, "Lame Maudite V").
+-define(BN81481, "Hache de Loki V").
+-define(BN81491, "Massacre du Chaos V").
+-define(BN81501, "Massacre Obscur V").
+-define(BN81511, "Massacre Mortel V").
+-define(BN81521, "Massacre de Guerre V").
+-define(BN81531, "Bénédictions de Lumière du Jour V").
+-define(BN81541, "Bénédictions du Crépuscule V").
+-define(BN81551, "Bénédictions Nocturnes V").
+-define(BN81561, "Gobelet Ensoleillé V").
+-define(BN81571, "Gobelet de Pluie V").
+-define(BN81581, "Gobelet de Neige V").
+-define(BN81591, "Gobelet du Tonnerre V").
+-define(BD81001, "DGT d'ATQ de Base +{0}%").
+-define(BD81011, "Soigne pour {1}% d'ATQ toutes les {0} sec").
+-define(BD81021, "ATQ +{0}%").
+-define(BD81031, "Taux Crit +{0}%").
+-define(BD81041, "DGT Crit +{0}%").
+-define(BD81051, "Taux de Blocage +{0}%").
+-define(BD81061, "Réduction Blocage +{0}%").
+-define(BD81071, "DGT de Compétence de Guerrier +{0}%").
+-define(BD81081, "TdR de Compétence de Guerrier -{0} sec").
+-define(BD81091, "Taux Crit de Compétence de Guerrier +{0}%").
+-define(BD81101, "DGT Crit de Compétence de Guerrier +{0}%").
+-define(BD81111, "DGT de Compétence de Mage +{0}%").
+-define(BD81121, "TdR de Compétence de Mage -{0} sec").
+-define(BD81131, "Taux Crit de Compétence de Mage +{0}%").
+-define(BD81141, "DGT Crit de Compétence de Mage +{0}%").
+-define(BD81151, "DGT de Compétence d'Archer +{0}%").
+-define(BD81161, "TdR de Compétence d'Archer -{0} sec").
+-define(BD81171, "Taux Crit de Compétence d'Archer +{0}%").
+-define(BD81181, "DGT Crit de Compétence d'Archer +{0}%").
+-define(BD81191, "Vitesse de gain de Fureur +{0}%").
+-define(BD81201, "Durée de la transformation en Dieu +{0} sec").
+-define(BD81211, "DGT de Compétence d'Athéna +{0}%").
+-define(BD81221, "Taux Crit de Compétence d'Athéna +{0}%").
+-define(BD81231, "DGT Crit de Compétence d'Athéna +{0}%").
+-define(BD81241, "DGT de Compétence de Morrigan +{0}%").
+-define(BD81251, "Taux Crit de Compétence de Morrigan +{0}%").
+-define(BD81261, "DGT Crit de Compétence de Morrigan +{0}%").
+-define(BD81271, "DGT de Compétence d'Horus +{0}%").
+-define(BD81281, "Taux Crit de Compétence d'Horus +{0}%").
+-define(BD81291, "DGT Crit de Compétence d'Horus +{0}%").
+-define(BD81301, "DGT de Compétences de Tous les Dieux +{0}%").
+-define(BD81311, "Taux Crit de Compétence de Tous les Dieux +{0}%").
+-define(BD81321, "DGT Crit de Compétence de Tous les Dieux +{0}%").
+-define(BD81331, "Recharge automatique la fureur au début d'un combat de boss").
+-define(BD81341, "Ignore le premier avertissement des dégâts et des effets des compétences en statut de Dieu").
+-define(BD81351, "Immunisé contre l'Étourdissement ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81361, "Immunisé contre la Pétrification ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81371, "Immunisé contre l'Entrée ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81381, "Immunisé contre Effrayer ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81391, "Immunisé contre le Gel ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81401, "Immunisé contre la Paralysie ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81411, "Immunisé contre la Brûlure ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81421, "Immunisé contre le Poison ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81431, "Immunisé contre le Saignement ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81441, "Immunisé contre Vulnérabilité ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81451, "Immunisé contre Malédiction ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81461, "Immunisé contre le KO ; en étant attaqué par un tel débuff, cela augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(BD81471, "Les attaques annulent l'effet de Renforcement, puis augmentent le bonus de DGT de {0}% pendant {1} sec").
+-define(BD81481, "Après une attaque, inflige la Hache de Loki, réduisant l'effet de soin de l'ennemi de 100%").
+-define(BD81491, "Inflige plus de {0}% de dégâts aux ennemis de la Faction Chaos").
+-define(BD81501, "Inflige plus de {0}% de dégâts aux ennemis de la Faction des Ténèbres").
+-define(BD81511, "Inflige plus de {0}% de dégâts aux ennemis de la Faction Mort-vivante").
+-define(BD81521, "Inflige plus de {0}% de dégâts aux ennemis de la Faction de Guerre").
+-define(BD81531, "Les DGT infligés aux ennemis sont augmentés de {0}% pendant la journée").
+-define(BD81541, "Les DGT infligés aux ennemis sont augmentés de {0}% à la tombée de la nuit").
+-define(BD81551, "Les DGT infligés aux ennemis sont augmentés de {0}% pendant la nuit").
+-define(BD81561, "Les DGT infligés aux ennemis sont augmentés de {0}% pendant les jours ensoleillés").
+-define(BD81571, "Les DGT infligés aux ennemis sont augmentés de {0}% pendant les jours pluvieux").
+-define(BD81581, "Les DGT infligés aux ennemis sont augmentés de {0}% pendant les jours neigeux").
+-define(BD81591, "Les DGT infligés aux ennemis sont augmentés de {0}% pendant les jours de tonnerre").
+-define(BN81001, "Griffe Aiguisée I").
+-define(BN81002, "Griffe Aiguisée II").
+-define(BN81003, "Griffe Aiguisée III").
+-define(BN81011, "Force de la Nature I").
+-define(BN81012, "Force de la Nature II").
+-define(BN81013, "Force de la Nature III").
+-define(BN81021, "Lance Perçante I").
+-define(BN81022, "Lance Perçante II").
+-define(BN81023, "Lance Perçante III").
+-define(BN81031, "Hache de Crit I").
+-define(BN81032, "Hache de Crit II").
+-define(BN81033, "Hache de Crit III").
+-define(BN81041, "Marteau de DGT Crit I").
+-define(BN81042, "Marteau de DGT Crit II").
+-define(BN81043, "Marteau de DGT Crit III").
+-define(BN81051, "Bague Enchantée I").
+-define(BN81052, "Bague Enchantée II").
+-define(BN81053, "Bague Enchantée III").
+-define(BN81061, "Collier de Gardien I").
+-define(BN81062, "Collier de Gardien II").
+-define(BN81063, "Collier de Gardien III").
+-define(BN81073, "Lame d'Avant-garde III").
+-define(BN81074, "Lame d'Avant-garde IV").
+-define(BN81083, "Lame Refroidissante III").
+-define(BN81084, "Lame Refroidissante IV").
+-define(BN81093, "Lame de Crit III").
+-define(BN81094, "Lame de Crit IV").
+-define(BN81103, "Lame de DGT Crit III").
+-define(BN81104, "Lame de DGT Crit IV").
+-define(BN81113, "Orbe d'Avant-garde III").
+-define(BN81114, "Orbe d'Avant-garde IV").
+-define(BN81123, "Orbe Refroidissant III").
+-define(BN81124, "Orbe Refroidissant IV").
+-define(BN81133, "Orbe de Crit III").
+-define(BN81134, "Orbe de Crit IV").
+-define(BN81143, "Orbe de DGT Crit III").
+-define(BN81144, "Orbe de DGT Crit IV").
+-define(BN81153, "Cruche d'Avant-garde III").
+-define(BN81154, "Cruche d'Avant-garde IV").
+-define(BN81163, "Cruche Refroidissante III").
+-define(BN81164, "Cruche Refroidissante IV").
+-define(BN81173, "Cruche de Crit III").
+-define(BN81174, "Cruche de Crit IV").
+-define(BN81183, "Cruche de DGT Crit III").
+-define(BN81184, "Cruche de DGT Crit IV").
+-define(BN81191, "Bouteille de Fureur I").
+-define(BN81192, "Bouteille de Fureur II").
+-define(BN81193, "Bouteille de Fureur III").
+-define(BN81194, "Bouteille de Fureur IV").
+-define(BN81195, "Bouteille de Fureur V").
+-define(BN81201, "Miroir Temporel I").
+-define(BN81202, "Miroir Temporel II").
+-define(BN81203, "Miroir Temporel III").
+-define(BN81204, "Miroir Temporel IV").
+-define(BN81205, "Miroir Temporel V").
+-define(BN81214, "Lance de la Sagesse IV").
+-define(BN81215, "Lance de la Sagesse V").
+-define(BN81224, "Hache de la Sagesse IV").
+-define(BN81225, "Hache de la Sagesse V").
+-define(BN81234, "Marteau de la Sagesse IV").
+-define(BN81235, "Marteau de la Sagesse V").
+-define(BN81244, "Lance de la Vengeance IV").
+-define(BN81245, "Lance de la Vengeance V").
+-define(BN81254, "Hache de la Vengeance IV").
+-define(BN81255, "Hache de la Vengeance V").
+-define(BN81264, "Marteau de la Vengeance IV").
+-define(BN81265, "Marteau de la Vengeance V").
+-define(BN81274, "Lance du Pharaon IV").
+-define(BN81275, "Lance du Pharaon V").
+-define(BN81284, "Hache du Pharaon IV").
+-define(BN81285, "Hache du Pharaon V").
+-define(BN81294, "Marteau du Pharaon IV").
+-define(BN81295, "Marteau du Pharaon V").
+-define(BN81304, "Lance du Tout-Puissant IV").
+-define(BN81305, "Lance du Tout-Puissant V").
+-define(BN81314, "Hache du Tout-Puissant IV").
+-define(BN81315, "Hache du Tout-Puissant V").
+-define(BN81324, "Marteau du Tout-Puissant IV").
+-define(BN81325, "Marteau du Tout-Puissant V").
+-define(BN293, "Hache de Loki").
+-define(BD293, "Soin -{0}%").
+-define(BN294, "").
+-define(BN295, "").
+-define(BN296, "").
+-define(BN297, "").
+-define(BN298, "").
+-define(BN299, "").
+-define(BD294, "").
+-define(BD295, "").
+-define(BD296, "").
+-define(BD297, "").
+-define(BD298, "").
+-define(BD299, "").
+-define(BOSSSN1, "Étourdissement").
+-define(BOSSSN2, "KO").
+-define(BOSSSN3, "Pétrifier").
+-define(BOSSSN4, "Entrée").
+-define(BOSSSN5, "Peur").
+-define(BOSSSN6, "Gel").
+-define(BOSSSN7, "Paralyser").
+-define(BOSSSN8, "Brûlure").
+-define(BOSSSN9, "Poison").
+-define(BOSSSN10, "Saignement").
+-define(BOSSSN11, "Vulnérable").
+-define(BOSSSN12, "Malédiction").
+-define(BOSSSN13, "Renforcement").
+-define(BOSSSN14, "Soin").
+-define(BOSSSN15, "Destruction").
+-define(SN271001, "Bénédiction d'Athéna").
+-define(SN271002, "Bénédiction de Morrigan").
+-define(SN271003, "Bénédiction de Thor").
+-define(SN271004, "Bénédiction d'Horus").
+-define(SN271005, "Bénédiction d'Hadès").
+-define(SN271006, "Bénédiction d'Ishtar").
+-define(SN271007, "Bénédiction de Freya").
+-define(SN271008, "SN271008").
+-define(SN271009, "SN271009").
+-define(SN271010, "SN271010").
+-define(SN271011, "SN271011").
+-define(SN271012, "SN271012").
+-define(SN271013, "SN271013").
+-define(SN271014, "SN271014").
+-define(SN272001, "Purification d'Athéna").
+-define(SN272002, "Purification de Morrigan").
+-define(SN272003, "Purification de Thor").
+-define(SN272004, "Purification d'Horus").
+-define(SN272005, "Purification d'Hadès").
+-define(SN272006, "Purification d'Ishtar").
+-define(SN272007, "Purification de Freya").
+-define(SN272008, "SN272008").
+-define(SN272009, "SN272009").
+-define(SN272010, "SN272010").
+-define(SN272011, "SN272011").
+-define(SN272012, "SN272012").
+-define(SN272013, "SN272013").
+-define(SN272014, "SN272014").
+-define(SN273001, "Remède d'Athena").
+-define(SN273002, "Remède de Morrigan").
+-define(SN273003, "Remède de Thor").
+-define(SN273004, "Remède d'Horus").
+-define(SN273005, "Guérison d'Hadès").
+-define(SN273006, "Guérison d'Ishtar").
+-define(SN273007, "Guérison de Freya").
+-define(SN273008, "Remède de Sept Mers").
+-define(SN273009, "Remède de Guerre").
+-define(SN273010, "Remède de Vengeance").
+-define(SN273011, "Remède du Croissant").
+-define(SN273012, "Remède de Nuit").
+-define(SN273013, "Remède de Justice").
+-define(SN273014, "Remède de Tempête").
+-define(SN274001, "Frappe d'Athena").
+-define(SN274002, "Frappe de Morrigan").
+-define(SN274003, "Frappe de Thor").
+-define(SN274004, "Frappe d'Horus").
+-define(SN274005, "Coup d'Hadès").
+-define(SN274006, "Frappe d'Ishtar").
+-define(SN274007, "Heurter Freya").
+-define(SN274008, "Frappe des Sept Mers").
+-define(SN274009, "Frappe de Guerre").
+-define(SN274010, "Frappe de Vengeance").
+-define(SN274011, "Frappe du Croissant").
+-define(SN274012, "Frappe de Nuit").
+-define(SN274013, "Frappe de Justice").
+-define(SN274014, "Frappe de Tempête").
+-define(SD271001, "En cas d'attaque crit, il y a {0}% de chance d'obtenir une Bénédiction d'Athéna (DÉF +100%) pendant {1} sec.").
+-define(SD271002, "En cas d'attaque crit reçue, il y a {0}% de chance d'obtenir une Bénédiction de Morrigan (restaure 1.5% des PV max toutes les 2 sec) pendant {1} sec.").
+-define(SD271003, "En cas de blocage, a {0}% de chances de déclencher la Bénédiction de Thor (Taux de blocage et RÉD de Blocage +20%) pendant {1} sec.").
+-define(SD271004, "En infligeant une Attaque Focalisée, a {0}% de chance de déclencher la Bénédiction d'Horus (Taux Crit +30%) pendant {1} sec.").
+-define(SD271005, "Esquiver une attaque offre {0}% de chance de déclencher la Bénédiction d'Hadès (Bonus DGT +15%) pendant {1} sec").
+-define(SD271006, "Infliger une excellente attaque offre {0}% de chance de déclencher la Bénédiction d'Ishtar (Taux d'Esquive +15%) pendant {1} sec.").
+-define(SD271007, "Se faire toucher par une attaque critique offre {0}% de chance de déclencher la Bénédiction de Freya (Effet de Guérison +30%) pendant {1} sec.").
+-define(SD271008, "En cas d'esquive, a {0}% de chance de déclencher la Bénédiction de Dieu (Effet de Soin +30%) pendant {1} sec.").
+-define(SD271009, "En cas d'Attaque Mortelle, a {0}% de chance de déclencher la Bénédiction de Dieu (ATQ +20%) pendant {1} sec.").
+-define(SD271010, "Lorsqu'elle est bloquée, a {0}% de chances de déclencher Bénédiction d'Erinyes (inflige 2.5% PV maximum de DGT aux ennemis proches toutes les 2 sec) pendant {1} sec.").
+-define(SD271011, "Lorsque les PV de la cible sont inférieurs à 50%, a {0}% de chances de déclencher la Bénédiction de la Déesse du Croissant (RÉD DGT +15%) pendant {1} sec.").
+-define(SD271012, "Lorsque les PV de la cible sont supérieurs à 50%, a {0}% de chances de déclencher la Bénédiction de la Déesse de la Nuit (Toucher et Esquive +7.5%) pendant {1} sec.").
+-define(SD271013, "En subissant un dégât unique de plus de 10% des PV max, a {0}% de chance de déclencher Bénédiction de la Déesse de la Justice (Résistance +5%) pendant {1} sec.").
+-define(SD271014, "En subissant un dégât unique de moins de 10% des PV max, a {0}% de chance de déclencher Bénédiction de la Déesse de la Tempête (Temps de Contrôle -30%) pendant 4.5 sec.").
+-define(SD272001, "En infligeant un coup critique, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272002, "En recevant un coup critique, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272003, "En cas de Blocage, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272004, "En infligeant une Attaque de Focalisation, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272005, "Après avoir esquivé, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272006, "En infligeant une Attaque Excellente, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272007, "En recevant une Attaque de Focalisation, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272008, "En esquivant, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272009, "En infligeant une Attaque Mortelle, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272010, "Après avoir bloqué, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272011, "Quand les PV de la cible sont inférieurs à 50%, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272012, "Quand les PV de la cible sont supérieurs à 50%, supprime les buffs {1} des {0} ennemis à proximité.").
+-define(SD272013, "En subissant un dégât unique de plus de 10% des PV max, supprime les buffs {1} de {0} ennemis à proximité.").
+-define(SD272014, "En subissant un dégât unique de moins de 10% des PV max, supprime les buffs {1} de {0} ennemis à proximité.").
+-define(SD273001, "En infligeant un coup critique, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273002, "En recevant un coup critique, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273003, "En bloquant, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273004, "En infligeant une Attaque de Focalisation, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273005, "Après avoir esquivé, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273006, "En infligeant une Attaque de Excellente, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273007, "En recevant une Attaque de Focalisation, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273008, "En esquivant, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273009, "En infligeant une Attaque Mortelle, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273010, "Après avoir bloqué, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273011, "Lorsque les PV de la cible sont inférieurs à 50%, a {0}% DE chance de se restaurer de {1}% des PV max.").
+-define(SD273012, "Lorsque les PV de la cible sont supérieurs à 50%, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273013, "En subissant un dégât unique de plus de 10% des PV max, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD273014, "En subissant un dégât unique de moins de 10% des PV max, a {0}% de chance de se soigner de {1}% des PV max.").
+-define(SD274001, "En infligeant un coup critique, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274002, "En subissant un coup critique, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274003, "En bloquant, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274004, "En infligeant une Attaque de Focalisation, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274005, "Après avoir esquivé, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274006, "En infligeant une Attaque Excellente, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274007, "En subissant une Attaque de Focalisation, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274008, "En esquivant, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274009, "En infligeant une Attaque Mortelle, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274010, "Après avoir bloqué, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274011, "Lorsque les PV de la cible sont inférieurs à 50%, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274012, "Lorsque les PV de la cible sont supérieurs à 50%, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274013, "En subissant un dégât unique de plus de 10% des PV max, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SD274014, "En subissant un dégât unique de moins de 10% des PV max, a {0}% de chance d'infliger {1}% de dégâts supplémentaires aux ennemis proches.").
+-define(SN104031, "Épée de Choc").
+-define(SN104032, "Épée Géante").
+-define(SN105031, "Explosion de Feu").
+-define(SN105032, "Punition de Glace").
+-define(SN106031, "Flèche de Punition").
+-define(SN106032, "Flèche de Croisement").
+-define(SN104151, "Volonté d'Épée").
+-define(SN104161, "Châtiment de Lame").
+-define(SN105151, "Volonté Magique").
+-define(SN105161, "Pulvérisation de Flamme").
+-define(SN106151, "Volonté d'Arc").
+-define(SN106161, "Pulvérisation Lumineuse").
+-define(SD104031, "Inflige {0}%+ {1} de dégâts à {3} cibles (Monstres + {4}).Le multiplicateur de DGT de la compétence augmente de {2}% aux ennemis qui Saignent.").
+-define(SD104032, "Inflige {0}%+ {1} de dégâts à {4} cibles (Monstres + {5}).En lançant la compétence sous le statut de Gardien, confère un bouclier énergétique (Bloque les dégâts de {2}% de l'ATQ) pendant {3} sec.").
+-define(SD105031, "Inflige {0}%+ {1} de dégâts à {4} cibles (Monstres + {5}).Après avoir libéré la compétence, confère à soi-même Feu d'Enfer - Pouvoir (Bonus DGT Crit +3%) pendant {2} sec et inflige un effet de Fragilité à la cible (RÉD DGT de Compétence -15%) pendant {3} sec.").
+-define(SD105032, "Inflige {0}%+ {1} de dégâts à {5} cibles (Monstres + {6}).Après avoir libéré la compétence, confère à soi-même Glace - Pouvoir (Bonus DGT +3%) pendant {2} sec et a {3}% de chance de geler l'ennemi pendant {4} sec.").
+-define(SD106031, "Inflige {0}%+ {1} de dégâts à {3} cibles (Monstres + {4}) et gagne 2 niveaux de statut de Focalisation.Après avoir libéré la compétence, chaque couche inflige des dégâts supplémentaires de {2}% des PV max de la cible.").
+-define(SD106032, "Inflige {0}%+ {1} de dégâts à {3} cibles (Monstres + {4}) et gagne 2 couches de statut du Tonnerre.Après avoir libéré la compétence, chaque couche inflige un bonus supplémentaire de {2}% de DGT de Compétence.").
+-define(SD104151, "En subissant une attaque avec moins de {0}% de PV, augmente {1}% de la Réd DGT JcJ pendant {2} sec.").
+-define(SD104161, "Lorsqu'il y a 0 ou 1 ennemi à proximité, les attaques ont {0}% de chance d'infliger {1}% de dégâts à 1 ennemi.Pour chaque {2}% de PV perdu, le lanceur gagne {3}% de multiplicateur de DGT de Compétence.").
+-define(SD105151, "En subissant une attaque avec moins de {0}% de PV, augmente {1}% de la Réd DGT JcJ pendant {2} sec.").
+-define(SD105161, "Lorsqu'il y a 0 ou 1 ennemi à proximité, les attaques ont {0}% de chance d'infliger {1}% de dégâts à 3 ennemis.").
+-define(SD106151, "En subissant une attaque avec moins de {0}% de PV, augmente {1}% de la Réd DGT JcJ pendant {2} sec.").
+-define(SD106161, "Lorsqu'il y a 0 ou 1 ennemi à proximité, les attaques ont {0}% de chance d'infliger {1}% de DGT à 1 ennemi.Pour chaque {2}% de PV perdu par la cible, gagne {3}% de multiplicateur de DGT de Compétence.").
+-define(BN61131, "Volonté").
+-define(BD61131, "Réd DGT JcJ +{0}%").
+-define(BN62026, "Feu d'Enfer").
+-define(BD62026, "Bonus DGT +{0}%").
+-define(BN62027, "Glace").
+-define(BD62027, "Bonus DGT +{0}%").
+-define(SKILLPRACTICETEXT2, "Renforcement en JcE : Taux Crit de Compétence +<color=#76E86A>20%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>3.1</color> sec.").
+-define(SKILLPRACTICETEXT3, "Renforcement en JcE : Bonus DGT de Compétence +<color=#76E86A>10%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>3.2</color> sec.").
+-define(SKILLPRACTICETEXT4, "Renforcement en JcE : Taux Crit de Compétence +<color=#76E86A>20%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>3.3</color> sec.").
+-define(SKILLPRACTICETEXT5, "Renforcement en JcE : Bonus DGT de Compétence +<color=#76E86A>10%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>3.4</color> sec.").
+-define(SKILLPRACTICETEXT6, "Renforcement en JcE : Taux Crit de Compétence +<color=#76E86A>20%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>3.5</color> sec.").
+-define(SKILLPRACTICETEXT7, "Renforcement en JcE : Bonus DGT de Compétence +<color=#76E86A>10%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>3.6</color> sec.").
+-define(SKILLPRACTICETEXT8, "Renforcement en JcE : Taux de Concentration des Compétences +<color=#76E86A>10%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>3.7</color> sec.").
+-define(SKILLPRACTICETEXT9, "Renforcement en JcE : Bonus DGT de Compétence +<color=#76E86A>10%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>3.8</color> sec.").
+-define(SKILLPRACTICETEXT10, "Renforcement en JcE : Taux de Concentration des Compétences +<color=#76E86A>10%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4</color> sec").
+-define(SKILLPRACTICETEXT11, "Renforcement en JcE : Bonus DGT de Compétence +<color=#76E86A>10%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4.1</color> sec.").
+-define(SKILLPRACTICETEXT12, "Renforcement en JcE : Taux Excellent de Compétence +<color=#76E86A>5%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4.2</color> sec.").
+-define(SKILLPRACTICETEXT13, "Renforcement en JcE : Taux Excellent de Compétence +<color=#76E86A>5%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4.3</color> sec.").
+-define(SKILLPRACTICETEXT14, "Renforcement en JcE : Taux Excellent de Compétence +<color=#76E86A>5%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4.4</color> sec.").
+-define(SKILLPRACTICETEXT15, "Renforcement en JcE : Taux de Coup Mortel de Compétence +<color=#76E86A>4%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4.5</color> sec.").
+-define(SKILLPRACTICETEXT16, "Renforcement en JcE : Taux de Coup Mortel de Compétence +<color=#76E86A>4%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4.6</color> sec.").
+-define(SKILLPRACTICETEXT17, "Renforcement en JcE : Taux de Coup Mortel de Compétence +<color=#76E86A>4%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4.7</color> sec.").
+-define(SKILLPRACTICETEXT18, "Renforcement en JcE : Taux de Frappe de Poursuite de Compétence +<color=#76E86A>3%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4.8</color> sec.").
+-define(SKILLPRACTICETEXT19, "Renforcement en JcE : Taux de Frappe de Poursuite de Compétence +<color=#76E86A>3%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>4.9</color> sec.").
+-define(SKILLPRACTICETEXT20, "Renforcement en JcE : Taux de Frappe de Poursuite de Compétence +<color=#76E86A>3%</color>
+Renforcement en JcJ : Durée du Gardien Ultime augmentée à <color=#76E86A>5</color> sec").
+-define(SN120301, "Enchaînement des Montagnes").
+-define(SN120341, "Hache Tourbillonnante").
+-define(SN120361, "Vaillance").
+-define(SN120381, "Enchaînement Tourbillonnante").
+-define(SN120401, "Feu Céleste").
+-define(SN120441, "Oiseau Phénix").
+-define(SN120461, "Incendie").
+-define(SN120481, "Étoile Fel").
+-define(SN120501, "Tranchant en Arc").
+-define(SN120541, "Tranchant en Croissant").
+-define(SN120561, "Contre").
+-define(SN120581, "Danse de Lames").
+-define(SN120601, "Ombre de l'Épée").
+-define(SN120641, "Lame Ouragan").
+-define(SN120661, "Rupture d'Armure").
+-define(SN120681, "Lame Chaos").
+-define(SN120701, "Orbe de Lumière").
+-define(SN120741, "Éclat Naturel").
+-define(SN120761, "Argilite").
+-define(SN120781, "Choc de Lumière").
+-define(SD120301, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD120341, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD120361, "Lors d'une attaque, il y a {0}% de chance d'obtenir Colère sur soi (Bonus de DGT +{1}%) pendant {2} sec").
+-define(SD120381, "Frappe l'ennemi avec des Haches Jumelles, infligeant {0}% de dégâts à {1} cibles (Monstres + {2}).").
+-define(SD120401, "Inflige {0}% de dégâts à {5} cibles (Monstres + {6}), avec {1} de chances d'infliger l'effet Brûlure (Prend {3}% de DGT toutes les {2} sec) pendant {4} sec.").
+-define(SD120441, "Inflige {0}% de dégâts à {4} cibles (Monstres + {5}), avec l'effet Brûlure (Prend {2}% de DGT toutes les {1} sec) pendant {3} sec.").
+-define(SD120461, "L'attaque inflige l'effet Brûlure (subissant des dégâts de {2}% de la propre ATQ toutes les {1} sec) sur {0} cibles pendant {3} sec.").
+-define(SD120481, "Inflige {0}% de dégâts à {4} cibles (Monstres + {5}).Chaque étape de l'attaque inflige l'effet Brûlure (subissant {2}% de dégâts toutes les {1} sec) pendant {3} sec.").
+-define(SD120501, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD120541, "Inflige {0}% de dégâts à {3} cibles (Monstres + {4}), avec {1}% de chances d'infliger l'effet d'Adoucissement (RÉD DGT -10%) pendant {2} sec.").
+-define(SD120561, "En cas d'attaque, a {0}% de chance d'infliger {2}% de dégâts aux {1} cibles proches.").
+-define(SD120581, "Frappe les ennemis autour en continu, infligeant {0}% dégâts aux {1} cibles (Monstres + {2}).").
+-define(SD120601, "Inflige {0}% de dégâts à {5} cibles (Monstres + {6}), avec {1}% de chances d'infliger l'effet Ombre de l'Épée (chaque palier réduit {2}% de la DÉF, jusqu'à {3} paliers max) pendant {4} sec.").
+-define(SD120641, "Inflige {0}% de dégâts à {4} cibles (Monstres + {5}), avec l'effet Ombre de l'Épée (chaque palier réduit {1}% de la DÉF, jusqu'à {2} paliers max) pendant {3} sec.").
+-define(SD120661, "L'attaque a {0}% de chance d'infliger {2}% de DGT aux {1} cibles, avec l'effet Ombre de l'Épée (chaque palier réduit {3}% de la DÉF, jusqu'à {4} paliers max) pendant {5} sec.").
+-define(SD120681, "Inflige {0}% de dégâts à {4} cibles (Monstres + {5}).Le premier et le dernier palier de dégâts infligent l'effet Ombre de l'Épée (chaque palier réduit {1}% de la DÉF, jusqu'à {2} paliers max) pendant {3} sec.").
+-define(SD120701, "Inflige {0}% de dégâts à {3} cibles (Monstres + {4}), avec {1}% de chances d'infliger l'effet Brise-genou (Vitesse de Déplacement -30%) pendant {2} sec.").
+-define(SD120741, "Inflige {0}% de dégâts à {2} cibles (Monstres + {3}) et inflige un effet de Pétrification (impossibilité de bouger) pendant {1} sec.").
+-define(SD120761, "En cas d'attaque, a {0}% de chance d'infliger un effet de Pétrification (impossibilité de se déplacer) à {1} cibles pendant {2} sec.").
+-define(SD120781, "Inflige {0}% de dégâts à {2} cibles (Monstres + {3}) et inflige un effet de Pétrification (impossibilité de bouger) pendant {1} sec.").
+-define(SS120301, "Manie une hache lourde pour infliger des dégâts à l'ennemi.").
+-define(SS120341, "Lance une hache volante pour infliger des dégâts à l'ennemi.").
+-define(SS120361, "Les attaques ont une chance d'augmenter les DGT").
+-define(SS120381, "Déclenche un tourbillon autour de vous pour infliger des dégâts continus à l'ennemi.").
+-define(SS120401, "Libère des flammes pour avoir une chance de brûler l'ennemi.").
+-define(SS120441, "Libère des flammes pour brûler l'ennemi.").
+-define(SS120461, "L'attaque a une chance de brûler l'ennemi.").
+-define(SS120481, "Libère des flammes pour infliger des dégâts de brûlure plusieurs fois.").
+-define(SS120501, "Coupe l'ennemi pour lui infliger des dégâts.").
+-define(SS120541, "Inflige des dégâts et a une chance d'augmenter les dégâts subis par les ennemis.").
+-define(SS120561, "En cas d'attaque, inflige des dégâts aux ennemis proches.").
+-define(SS120581, "Déclenche un tourbillon autour de vous pour infliger des dégâts continus à l'ennemi.").
+-define(SS120601, "Inflige des dégâts et réduit la DÉF.").
+-define(SS120641, "Inflige des dégâts et réduit la DÉF.").
+-define(SS120661, "L'attaque a une chance d'infliger des dégâts supplémentaires et de réduit la DÉF.").
+-define(SS120681, "L'aura de l'épée inflige plusieurs niveaux de dégâts et réduit la DÉF.").
+-define(SS120701, "Inflige des dégâts et a une chance de réduire la vitesse de l'ennemi.").
+-define(SS120741, "Inflige une petite quantité de dégâts et pétrifie l'ennemi.").
+-define(SS120761, "En cas d'attaque, a une chance de pétrifier l'ennemi.").
+-define(SS120781, "Inflige une grande quantité de dégâts et pétrifie l'ennemi.").
+-define(BN25110, "Ombre de l'Épée").
+-define(BD25110, "DÉF -{0}%, possibilité d'empiler jusqu'à 5 couches.").
+-define(SN261101, "Gardien d'Athéna").
+-define(SN261102, "Gardien d'Athéna").
+-define(SN261103, "Poussée de Lance").
+-define(SN261104, "Poussée de Lance").
+-define(SN261201, "Gardien de Morrigan").
+-define(SN261202, "Gardien de Morrigan").
+-define(SN261203, "Tourbillon de Vengeance").
+-define(SN261204, "Tourbillon de Vengeance").
+-define(SN261301, "Gardien de Thor").
+-define(SN261302, "Gardien de Thor").
+-define(SN261303, "Tonnerre Assourdissant").
+-define(SN261304, "Tonnerre Assourdissant").
+-define(SN261401, "Gardien d'Horus").
+-define(SN261402, "Gardien d'Horus").
+-define(SN261403, "Halo Solaire").
+-define(SN261404, "Halo Solaire").
+-define(SN261501, "Gardien d'Hadès").
+-define(SN261502, "Gardien d'Hadès").
+-define(SN261503, "Flèche Spectre").
+-define(SN261504, "Flèche Spectre").
+-define(SN261601, "Gardien d'Ishtar").
+-define(SN261602, "Gardien d'Ishtar").
+-define(SN261603, "Étranglement du Sabre").
+-define(SN261604, "Étranglement du Sabre").
+-define(SN261701, "Gardien de Freya").
+-define(SN261702, "Gardien de Freya").
+-define(SN261703, "Colère de la Terre").
+-define(SN261704, "Colère de la Terre").
+-define(SD261501, "L'attaque a {0}% de chance de déclencher la Bénédiction d'Hadès (Bonus DGT +15%) pendant {1} sec.").
+-define(SD261502, "L'attaque a {0}% de chance de déclencher la Bénédiction d'Hadès (Bonus DGT +15%) pendant {1} sec.").
+-define(SD261503, "L'attaque a {0}% de chance de déclencher la Fléchette du Spectre qui touche {1} cible(s) pour lui infliger {2}% de DGT.").
+-define(SD261504, "L'attaque a {0}% de chance de déclencher la Fléchette du Spectre qui touche {1} cible(s) pour lui infliger {2}% de DGT.").
+-define(SD261601, "Se faire attaquer offre {0}% de chance de déclencher la Bénédiction d'Ishtar (Taux d'Esquive +15%) pendant {1} sec.").
+-define(SD261602, "Se faire attaquer offre {0}% de chance de déclencher la Bénédiction d'Ishtar (Taux d'Esquive +15%) pendant {1} sec.").
+-define(SD261603, "Se faire attaquer offre {0}% de chance de déclencher Étranglement du Sabre qui touche {1} cible(s) pour infliger {2}% de DGT.").
+-define(SD261604, "Se faire attaquer offre {0}% de chance de déclencher Étranglement du Sabre qui touche {1} cible(s) pour infliger {2}% de DGT.").
+-define(SD261701, "Se faire attaquer offre {0}% de chance de déclencher la Bénédiction de Freya (Effet de Guérison +30%) pendant {1} sec.").
+-define(SD261702, "Se faire attaquer offre {0}% de chance de déclencher la Bénédiction de Freya (Effet de Guérison +30%) pendant {1} sec.").
+-define(SD261703, "Se faire attaquer offre {0}% chance de déclencher la Colère de la Terre qui touche {1} cible(s) pour infliger {2}% de DGT.").
+-define(SD261704, "Se faire attaquer offre {0}% chance de déclencher la Colère de la Terre qui touche {1} cible(s) pour infliger {2}% de DGT.").
+-define(SD261101, "En cas d'attaque, a {0}% de chance de déclencher la Bénédiction d'Athéna (DÉF +100%) pendant {1} sec.").
+-define(SD261102, "En cas d'attaque, a {0}% de chance de déclencher la Bénédiction d'Athéna (DÉF +100%) pendant {1} sec.").
+-define(SD261103, "En cas d'attaque, a {0}% de chance de déclencher Poussée de Lance et inflige {2}% de dégâts aux {1} cibles.").
+-define(SD261104, "En cas d'attaque, a {0}% de chance de déclencher Poussée de Lance et inflige {2}% de dégâts aux {1} cibles.").
+-define(SD261201, "En cas d'attaque, a {0}% de chance de déclencher Bénédiction de Morrigan (Restaure 2.5% des PV max toutes les 2 sec) pendant {1} sec.").
+-define(SD261202, "En cas d'attaque, a {0}% de chance de déclencher Bénédiction de Morrigan (Restaure 2.5% des PV max toutes les 2 sec) pendant {1} sec.").
+-define(SD261203, "En cas d'attaque, a {0}% de chance de déclencher Tourbillon de Vengeance et inflige {2}% de dégâts aux {1} cibles.").
+-define(SD261204, "En cas d'attaque, a {0}% de chance de déclencher Tourbillon de Vengeance et inflige {2}% de dégâts aux {1} cibles.").
+-define(SD261301, "En cas d'attaque, a {0}% de chance de déclencher Bénédiction de Thor (RÉD de Blocage et Taux de Blocage +20%) pendant {1} sec.").
+-define(SD261302, "En cas d'attaque, a {0}% de chance de déclencher Bénédiction de Thor (RÉD de Blocage et Taux de Blocage +20%) pendant {1} sec.").
+-define(SD261303, "En cas d'attaque, a {0}% de chance de déclencher Tonnerre Assourdissant et inflige {2}% de dégâts aux {1} cibles.").
+-define(SD261304, "En cas d'attaque, a {0}% de chance de déclencher Tonnerre Assourdissant et inflige {2}% de dégâts aux {1} cibles.").
+-define(SD261401, "En attaquant, a {0}% de chance de déclencher Bénédiction d'Horus (Taux Crit +30%) pendant {1} sec.").
+-define(SD261402, "En attaquant, a {0}% de chance de déclencher Bénédiction d'Horus (Taux Crit +30%) pendant {1} sec.").
+-define(SD261403, "En attaquant, a {0}% de chance de déclencher Halo Solaire et inflige {2}% de dégâts aux {1} cibles.").
+-define(SD261404, "En attaquant, a {0}% de chance de déclencher Halo Solaire et inflige {2}% de dégâts aux {1} cibles.").
+-define(BN366, "Effrayer").
+-define(BD366, "Effrayé ! Bonus DGT -{0}%").
+-define(BN367, "Corruption").
+-define(BD367, "Corrompu ! RÉD DGT -{0}%").
+-define(BN368, "Fragile").
+-define(BD368, "Fragile ! RÉD DGT de Compétence -{0}%").
+-define(BN369, "Placidité").
+-define(BD369, "Colère placide ! Taux Crit -{0}%").
+-define(BN370, "Compétence peu Familière").
+-define(BD370, "Compétence peu Familière ! RÉD DGT de Compétence -{0}%").
+-define(BN371, "Compétence Experte").
+-define(BD371, "Compétence Experte ! RÉD DGT de Compétence +{0}%").
+-define(BN372, "Lourdeur").
+-define(BD372, "Corps Lourd ! Taux de Blocage -{0}%").
+-define(BN373, "Perturbation").
+-define(BD373, "Perturbé ! Taux d'Anti-blocage -{0}%").
+-define(BN374, "Fragilité").
+-define(BD374, "Fragilité ! Taux de Résistance -{0}%").
+-define(BN375, "Condensation").
+-define(BD375, "Vitesse de Déplacement -{0}%, ATQ -{1}%").
+-define(BN376, "Volonté Divine").
+-define(BD376, "Volonté de Dieu ! DGT Finaux +{0}%").
+-define(BN377, "Grâce Divine").
+-define(BD377, "Grâce de Dieu ! RÉD DGT Finaux +{0}%").
+-define(SD282001, "En attaquant les ennemis sous le statut d'Étourdissement, augmente le Taux de Focalisation de {0}% et le Bonus de DGT de Focalisation de {1}% pendant {2} sec.TdR : {3} sec").
+-define(SD282002, "En cas d'attaque sous l'état d'Étourdissement, augmente le Taux d'Esquive de {0}% pendant {1} sec et restaure les PV de {2}% de l'ATQ.TdR : {3} sec.").
+-define(SD282003, "En attaquant les ennemis sous le statut de Pétrification, augmente le Taux de Focalisation de {0}% et le Bonus de DGT de Focalisation de {1}% pendant {2} sec.TdR : {3} sec").
+-define(SD282004, "En cas d'attaque sous l'état de Pétrification, augmente le Taux d'Esquive de {0}% pendant {1} sec et restaure les PV de {2}% de l'ATQ.TdR : {3} sec.").
+-define(SD282005, "En attaquant les ennemis sous le statut de Gel, augmente le Taux de Focalisation de {0}% et le Bonus de DGT de Focalisation de {1}% pendant {2} sec.TdR : {3} sec").
+-define(SD282006, "En cas d'attaque sous l'état de Gel, augmente le Taux d'Esquive de {0}% pendant {1} sec et restaure les PV de {2}% de l'ATQ.TdR : {3} sec.").
+-define(SD282007, "En attaquant les ennemis sous le statut de Paralysie, augmente le Taux de Focalisation de {0}% et le Bonus de DGT de Focalisation de {1}% pendant {2} sec.TdR : {3} sec").
+-define(SD282008, "En cas d'attaque sous l'état de Paralysie, augmente le Taux d'Esquive de {0}% pendant {1} sec et restaure les PV de {2}% de l'ATQ.TdR : {3} sec.").
+-define(SD282009, "En attaquant des ennemis dont la Vitesse est réduite, augmente le Taux Crit de {0}% et le bonus des DGT de {1}% pendant {2} sec.TdR : {3} sec").
+-define(SD282010, "En cas d'attaque sous le statut de Vitesse réduite, augmente le taux de résistance de {0}% et la RÉD DGT de {1}% pendant {2} sec.TdR : {3} sec").
+-define(SD282011, "En attaquant des ennemis sous contrôle, augmente le Taux d'Anti-blocage de {0}% et le Fracassement de {1}% pendant {2} sec.TdR : {3} sec").
+-define(SD282012, "En cas d'attaque sous le statut de Vitesse réduite, augmente le taux de blocage de {0}% et la DÉF de {1}% pendant {2} sec.TdR : {3} sec").
+-define(BN55001, "Marque").
+-define(BD55001, "Taux de Focalisation +{0}%, Bonus DGT Focalisation +{1}%").
+-define(BD55002, "Taux d'Esquive +{0}%").
+-define(BD55009, "Taux Crit +{0}%, Bonus DGT +{1}%").
+-define(BD55010, "Taux de Résistance +{0}%, RÉD DGT +{1}%").
+-define(BD55011, "Taux d'Anti-blocage +{0}%, Fracassement +{1}%").
+-define(BD55012, "Taux de Blocage +{0}%, DÉF +{1}%").
+-define(BN53001, "Bénédiction d'Athéna").
+-define(BN53002, "Bénédiction de Morrigan").
+-define(BN53003, "Bénédiction de Thor").
+-define(BN53004, "Bénédiction d'Horus").
+-define(BN53005, "Bénédiction d'Hadès").
+-define(BN53006, "Bénédiction d'Ishtar").
+-define(BN53007, "Bénédiction de Freya").
+-define(BD53001, "Bénédiction d'Athéna ! DÉF +{0}%").
+-define(BD53002, "Bénédiction de Morrigan ! Restaure {0}% des PV max toutes les 2 sec").
+-define(BD53003, "Bénédiction de Thor ! Taux de Blocage et RÉD de Blocage +{0}%").
+-define(BD53004, "Bénédiction d'Horus ! Taux Crit +{0}%").
+-define(BD53005, "Bénédiction d'Hadès ! Bonus DGT +{0}%").
+-define(BD53006, "Bénédiction d'Ishtar ! Taux d'Esquive +{0}%").
+-define(BD53007, "Bénédiction de Freya ! Effet de Soin +{0}%").
+-define(SN104301, "Ultime - Lame de Célestin").
+-define(SD104301, "Effet JcE : Déclenche Lame Mortelle au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Lame Mortelle lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD104302, "Effet JcE : Déclenche Lame Mortelle au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Lame Mortelle lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD104303, "Effet JcE : Déclenche Lame Mortelle au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Lame Mortelle lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD104304, "Effet JcE : Déclenche Lame Mortelle au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Lame Mortelle lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD104305, "Effet JcE : Déclenche Lame Mortelle au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Lame Mortelle lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD104306, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV max.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {2}% des PV Max de la cible et l'étourdit pendant {3} sec.TdR : {4} sec").
+-define(SD104307, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV max.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {2}% des PV Max de la cible et l'étourdit pendant {3} sec.TdR : {4} sec").
+-define(SD104308, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV max.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {2}% des PV Max de la cible et l'étourdit pendant {3} sec.TdR : {4} sec").
+-define(SD104309, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV max.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {2}% des PV Max de la cible et l'étourdit pendant {3} sec.TdR : {4} sec").
+-define(SD104310, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV max.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {2}% des PV Max de la cible et l'étourdit pendant {3} sec.TdR : {4} sec").
+-define(SD104311, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV Max.Toute l'équipe gagne l'Ultime qui accorde {2}% d'amélioration d'ATQ, de DÉF et de PV pendant {3} sec.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {4}% des PV Max de la cible et l'étourdit pendant {5} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {6} sec.TdR : {7} sec").
+-define(SD104312, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV Max.Toute l'équipe gagne l'Ultime qui accorde {2}% d'amélioration d'ATQ, de DÉF et de PV pendant {3} sec.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {4}% des PV Max de la cible et l'étourdit pendant {5} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {6} sec.TdR : {7} sec").
+-define(SD104313, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV Max.Toute l'équipe gagne l'Ultime qui accorde {2}% d'amélioration d'ATQ, de DÉF et de PV pendant {3} sec.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {4}% des PV Max de la cible et l'étourdit pendant {5} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {6} sec.TdR : {7} sec").
+-define(SD104314, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV Max.Toute l'équipe gagne l'Ultime qui accorde {2}% d'amélioration d'ATQ, de DÉF et de PV pendant {3} sec.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {4}% des PV Max de la cible et l'étourdit pendant {5} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {6} sec.TdR : {7} sec").
+-define(SD104315, "Effet JcE : Déclenche Lame Mortelle au début d'un défi au boss pour infliger des DGT égaux à {0}% des PV Max du boss et accorde au lanceur un bouclier avec {1}% des PV Max.Toute l'équipe gagne l'Ultime qui accorde {2}% d'amélioration d'ATQ, de DÉF et de PV pendant {3} sec.
+Effet JcJ : Déclenche Lame Mortelle lorsque vous attaquez un joueur ennemi pour lui infliger des DGT égaux à {4}% des PV Max de la cible et l'étourdit pendant {5} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {6} sec.TdR : {7} sec").
+-define(SN104401, "Ultime - Légion des Lames").
+-define(SN105301, "Ultime - Blizzard Rasoir").
+-define(SD105301, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD105302, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD105303, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD105304, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD105305, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD105306, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi au boss pour infliger des DGT équivalents à {0}% des PV Max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {3}% des PV Max de la cible et le gèle pendant {4} sec.TdR : {5} sec").
+-define(SD105307, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi au boss pour infliger des DGT équivalents à {0}% des PV Max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {3}% des PV Max de la cible et le gèle pendant {4} sec.TdR : {5} sec").
+-define(SD105308, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi au boss pour infliger des DGT équivalents à {0}% des PV Max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {3}% des PV Max de la cible et le gèle pendant {4} sec.TdR : {5} sec").
+-define(SD105309, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi au boss pour infliger des DGT équivalents à {0}% des PV Max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {3}% des PV Max de la cible et le gèle pendant {4} sec.TdR : {5} sec").
+-define(SD105310, "Effet JcE : Déclenche Blizzard Rasoir au début d'un défi au boss pour infliger des DGT équivalents à {0}% des PV Max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {3}% des PV Max de la cible et le gèle pendant {4} sec.TdR : {5} sec").
+-define(SD105311, "Effet JcE : Déclenche le Blizzard Rasoir au début d'un défi de boss afin d'infliger des DGT équivalents à {0}% des PV max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.L'équipe remporte l'Ultime qui accorde une amélioration de {3}% d'ATQ, de DÉF, et de PV pendant {4} sec.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {5}% des PV Max de la cible et le gèle pendant {6} sec.Le lanceur gagne une immunité au gel pendant {7} sec.TdR : {8} sec").
+-define(SD105312, "Effet JcE : Déclenche le Blizzard Rasoir au début d'un défi de boss afin d'infliger des DGT équivalents à {0}% des PV max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.L'équipe remporte l'Ultime qui accorde une amélioration de {3}% d'ATQ, de DÉF, et de PV pendant {4} sec.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {5}% des PV Max de la cible et le gèle pendant {6} sec.Le lanceur gagne une immunité au gel pendant {7} sec.TdR : {8} sec").
+-define(SD105313, "Effet JcE : Déclenche le Blizzard Rasoir au début d'un défi de boss afin d'infliger des DGT équivalents à {0}% des PV max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.L'équipe remporte l'Ultime qui accorde une amélioration de {3}% d'ATQ, de DÉF, et de PV pendant {4} sec.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {5}% des PV Max de la cible et le gèle pendant {6} sec.Le lanceur gagne une immunité au gel pendant {7} sec.TdR : {8} sec").
+-define(SD105314, "Effet JcE : Déclenche le Blizzard Rasoir au début d'un défi de boss afin d'infliger des DGT équivalents à {0}% des PV max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.L'équipe remporte l'Ultime qui accorde une amélioration de {3}% d'ATQ, de DÉF, et de PV pendant {4} sec.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {5}% des PV Max de la cible et le gèle pendant {6} sec.Le lanceur gagne une immunité au gel pendant {7} sec.TdR : {8} sec").
+-define(SD105315, "Effet JcE : Déclenche le Blizzard Rasoir au début d'un défi de boss afin d'infliger des DGT équivalents à {0}% des PV max du boss.{1} sec après le début de la bataille, soigne toute l'équipe pour {2}% des PV max.L'équipe remporte l'Ultime qui accorde une amélioration de {3}% d'ATQ, de DÉF, et de PV pendant {4} sec.
+Effet JcJ : Déclenche Blizzard Rasoir lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {5}% des PV Max de la cible et le gèle pendant {6} sec.Le lanceur gagne une immunité au gel pendant {7} sec.TdR : {8} sec").
+-define(SN105401, "Ultime - Phénix du Feu").
+-define(SN106301, "Ultime - Boule en Spirale").
+-define(SD106301, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Boule en Spirale lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD106302, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Boule en Spirale lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD106303, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Boule en Spirale lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD106304, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Boule en Spirale lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD106305, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.
+Effet JcJ : Déclenche Boule en Spirale lors de l'attaque d'un joueur ennemi pour infliger des DGT égaux à {1}% des PV Max de la cible.TdR : {2} sec").
+-define(SD106306, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {3}% des PV Max de la cible et l'étourdit pendant {4} sec.TdR : {5} sec").
+-define(SD106307, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {3}% des PV Max de la cible et l'étourdit pendant {4} sec.TdR : {5} sec").
+-define(SD106308, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {3}% des PV Max de la cible et l'étourdit pendant {4} sec.TdR : {5} sec").
+-define(SD106309, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {3}% des PV Max de la cible et l'étourdit pendant {4} sec.TdR : {5} sec").
+-define(SD106310, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {3}% des PV Max de la cible et l'étourdit pendant {4} sec.TdR : {5} sec").
+-define(SD106311, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.L'équipe obtient Ultime qui accorde un buff de {3}% d'ATQ, DÉF, et PV pendant {4} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {5}% des PV Max de la cible et l'étourdit pendant {6} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {7} sec.TdR : {8} sec").
+-define(SD106312, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.L'équipe obtient Ultime qui accorde un buff de {3}% d'ATQ, DÉF, et PV pendant {4} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {5}% des PV Max de la cible et l'étourdit pendant {6} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {7} sec.TdR : {8} sec").
+-define(SD106313, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.L'équipe obtient Ultime qui accorde un buff de {3}% d'ATQ, DÉF, et PV pendant {4} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {5}% des PV Max de la cible et l'étourdit pendant {6} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {7} sec.TdR : {8} sec").
+-define(SD106314, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.L'équipe obtient Ultime qui accorde un buff de {3}% d'ATQ, DÉF, et PV pendant {4} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {5}% des PV Max de la cible et l'étourdit pendant {6} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {7} sec.TdR : {8} sec").
+-define(SD106315, "Effet JcE : Déclenche Boule en Spirale au début d'un défi de boss pour infliger des DGT égaux à {0}% des PV Max du boss.Accorde également à soi-même {1}% de Bonus de DGT pendant {2} sec.L'équipe obtient Ultime qui accorde un buff de {3}% d'ATQ, DÉF, et PV pendant {4} sec.
+Effet JcJ : Déclenche Boule en Spirale en attaquant un joueur ennemi pour lui infliger des DGT égaux à {5}% des PV Max de la cible et l'étourdit pendant {6} sec.Le lanceur gagne une immunité à l'Étourdissement pendant {7} sec.TdR : {8} sec").
+-define(SN106401, "Ultime - Tonnerre Gigavolt").
+-define(SD104401, "").
+-define(SD105401, "").
+-define(SD106401, "").
+-define(SKILLPRACTICETEXT1, "Les attaques ont <color=#76E86A>10</color>% de chances de toucher <color=#76E86A>9</color> cible(s) en infligeant <color=#76E86A>100</color>% de DGT de Compétence (Compétence JcE, ne peut être utilisée sur les joueurs).").
+-define(BN60001, "Pourfendre").
+-define(BN60016, "Bouclier de Guérison").
+-define(BN60024, "Armure").
+-define(BN60025, "Étude d'Armure").
+-define(BN60026, "Technique").
+-define(BN60033, "Briser").
+-define(BN60044, "Démence").
+-define(BN60049, "Fatigue").
+-define(BD60001, "Toutes les {0} sec, perdez {1}% de PV Maximum.").
+-define(BD60016, "Obtient un bouclier qui bloque les dégâts mineurs ; Lorsque le bouclier expire, se soigne pour quelques PV.").
+-define(BD60017, "Réduction DGT de Compétence +15%").
+-define(BD60018, "Se soigne de 2% des PV").
+-define(BD60024, "Armure ! Gagnez {0} pile(s) d'Étude d'Armure pendant {1} sec.").
+-define(BD60025, "Étude d'Armure ! Pour chaque montant, gagne {0}% de Réduction de DGT.").
+-define(BD60027, "Graine de Vie : Une fois terminé, procure une guérison équivalente à 50% + 2.5% des PV perdus par le personnage.").
+-define(BD60028, "Gagnez une Réduction de DGT.Augmente l'effet de la compétence de 100% pour chaque 2 joueurs ennemis présents.Bonus d'effet max : 400%.").
+-define(BD60033, "Bonus DGT +{0}%.Ce bonus diminue sur une période de {1} sec (Ne peut être dissipé).").
+-define(BD60044, "Taux de Gain de Fureur : +{0}%, Bonus DGT de Compétence +{1}%").
+-define(BD60049, "Vitesse de Déplacement- {0}%, Taux Crit- {1}%, Réduction de DGT- {2}%.").
+-define(BF280001, "[Trophée]").
+-define(SN280001, "Pourfendre").
+-define(SD280001, "Lorsque les PV sont supérieurs à 70%, l'attaque a {0}% chances d'appliquer Pourfendre à {1} cibles proches (pour chaque {2} sec, inflige {3}% PV) pendant {4} sec.").
+-define(SN280006, "Véhémence").
+-define(SD280006, "Les attaques ont {0}% de chance de conférer Véhémence (Taux Crit +{1}%, DGT Crit +{2}%) pendant {3} sec.").
+-define(SN280011, "Bouclier de Guérison").
+-define(SD280011, "Lorsque les PV sont inférieurs à 70%, être attaqué donne {0}% de chance de gagner un Bouclier de Guérison (le bouclier possède {1}% des PV max du Personnage et soigne le personnage de {2}% PV max lorsqu'il se dissipe) pendant {3} sec.").
+-define(SN280016, "Oubli").
+-define(SD280016, "Les attaques ont {0}% chances d'affecter {1} cible(s) et de dissiper {2} montant(s) de buffs, et d'infliger une Compétence Gaspillée (Bonus DGT de compétence -{3}%) pendant {4} sec.").
+-define(SN280021, "Armure Durcie").
+-define(SD280021, "Le fait d'être attaqué confère {0}% de chance d'accorder une Armure (déclenchement d'un empilement d'armure par seconde (chaque empilement donne +2% de Réduction de DGT) pendant {1} sec).Durée : {2} sec").
+-define(SN280026, "Se Libérer").
+-define(SD280026, "Lorsqu'il est attaqué, a {0}% chance de dissiper {1} montant(s) d'affaiblissement du personnage et d'accorder une Technique raffinée (Bonus DGT de Compétence +{2}%) pendant {3} sec.").
+-define(SN280031, "Nouvelle Vie").
+-define(SD280031, "{0}% de chance d'obtenir {4} empilements d'Effet de Graine de Vie en cas d'attaque, (lorsque le buff se termine, chaque pile guérit de {1}% plus {2}% des PV perdus de la cible, jusqu'à {3} piles max) pendant {5} sec").
+-define(SN280036, "Avant-garde").
+-define(SD280036, "En entrant dans le statut de combat, gagne {0}% de Réduction de DGT pendant {1} sec.Pour tous les {2} joueur(s) ennemi(s) à proximité, +{3}% d'effet de compétence (max à {4}%).").
+-define(SN280041, "Briser").
+-define(SD280041, "Lorsque les PV sont inférieurs à 30%, les attaques bénéficient d'Éclatement (+{0}% de Bonus de DGT qui s'estompe sur une période de {1} sec) pendant {2} sec.").
+-define(SN280046, "Rage de Dieu").
+-define(SD280046, "Encaisser une attaque donne {0}% de chances d'accorder Colère (+{1}% vitesse de gain de Fureur et +{2}% Bonus DGT de Compétence) pendant {3} sec.").
+-define(SN280051, "Fatigue").
+-define(SD280051, "Les attaques ont {0}% chance d'infliger à {1} cible(s) proche(s) avec de la Fatigue (Vitesse de Déplacement -{2}%, Taux Crit -{3}%, Réduction des DGT -{4}%) pendant {5} sec.").
+-define(SN280056, "Défense Verrouillée").
+-define(SD280056, "Le fait d'être attaqué confère {0}% de chance d'infliger à {1} cible(s) un Étourdissement pendant {2} sec et accorde au personnage Marche Divine (Durée du Contrôle -{3}%) pendant {4} sec.").
+-define(BN20411, "Technologie de Guilde").
+-define(BD20411, "VIT de Déplacement de Chariot +{0}").
+-define(BD20421, "Effet de Soin de Chariot +{0}%").
+-define(BD20431, "PV Max de Chariot +{0}%").
+-define(SN750001, "Force de Capricorne").
+-define(SN750011, "Force de Verseau").
+-define(SN750021, "Force de Poisson").
+-define(SN750031, "Force de Bélier").
+-define(SN750041, "Force de Taureau").
+-define(SN750051, "Force de Gémeaux").
+-define(SN750061, "Force de Cancer").
+-define(SN750071, "Force de Lion").
+-define(SN750081, "Force de Vierge").
+-define(SN750091, "Force de Balance").
+-define(SN750101, "Force de Scorpion").
+-define(SN750111, "Force de Sagittaire").
+-define(SD750001, "Taux Excellent +{0}%").
+-define(SD750011, "Taux Anti-Excellent +{0}%").
+-define(SD750021, "Le Taux Mortel augmente de {0}%").
+-define(SD750031, "Taux d'Anti Coup Mortel +{0}%").
+-define(SD750041, "Taux de Châtiment +{0}%").
+-define(SD750051, "Taux de Fragilité +{0}%").
+-define(SD750061, "Frappe de Poursuite +{0}%").
+-define(SD750071, "Esquive Parfaite +{0}%").
+-define(SD750081, "Bonus DGT +{0}%").
+-define(SD750091, "Réduction DGT +{0}%").
+-define(SD750101, "Bonus DGT de Compétence +{0}%").
+-define(SD750111, "Réduction DGT de Compétence +{0}%").
+-define(BN61146, "Ultima").
+-define(BD61146, "Renforcement Ultime, ATQ, DÉF, PV +{0}%.Possibilité d'empiler.").
+-define(BN61147, "").
+-define(BD61147, "").
+-define(BD63030, "Renforcement Ultime, Bonus DGT +{0}%").
+-define(BN1000401, "Champion 1c1").
+-define(BN1000402, "Champion 1c1").
+-define(BN1000403, "1c1 Deuxième Place").
+-define(BN1000404, "1c1 Deuxième Place").
+-define(BN1000405, "1c1 3ème Place").
+-define(BN1000406, "1c1 3ème Place").
+-define(BD1000401, "AFK et EXP de Monstre +{0}% ").
+-define(BD1000402, "La Guilde avec le Champion 1c1 gagnera de l'AFK et de l'EXP de Monstre de +15% pour ses membres ; le serveur avec le Champion 1c1 gagnera de l'AFK et de l'EXP de Monstre de +7% pour ses Guerriers").
+-define(BD1000403, "AFK et EXP de Monstre +{0}% ").
+-define(BD1000404, "La Guilde avec le 1c1 2ème place gagnera AFK et EXP de Monstre de +10% pour ses membres ; le serveur avec le 1c1 Champion en gagnera AFK et EXP de Monstre de +7% pour ses Guerriers").
+-define(BD1000405, "AFK et EXP de Monstre +{0}% ").
+-define(BD1000406, "La Guilde avec le 1c1 3ème place gagnera AFK et EXP de Monstre de +7.5% pour ses membres ; le serveur avec le 1c1 Champion en gagnera AFK et EXP de Monstre de +3% pour ses Guerriers").
+-define(BN30100, "Chimère").
+-define(BD30100, "Transformé en Chimère").
+-define(BN56021, "Soin Renforcé").
+-define(BD56021, "Bonus de Soin +{0}%").
+-define(BN56031, "DGT Renforcés").
+-define(BD56031, "Bonus DGT +{0}%").
+-define(BN56036, "Stigma - Esquive Renforcée").
+-define(BN56037, "Stigma - Av.Viser").
+-define(BN56038, "Stigma - Renforcement d'ATQ").
+-define(BD56036, "La puissance des Stigmates ! Taux d'Esquive +{0}%").
+-define(BD56037, "La puissance des Stigmates ! Taux de Toucher +{0}%").
+-define(BD56038, "La puissance des Stigmates ! Bonus DGT +{0}%").
+-define(SD510011, "Gagnez un bouclier de {0}% PV qui dure jusqu'à {1} sec.").
+-define(SD510021, "Devient invincible pendant {0} sec (immunisé aux DGT).").
+-define(SD510031, "Récupère {0}% des PV perdus").
+-define(SD520011, "Augmente le Bonus de Soin de {0}% pendant {1} sec.").
+-define(SD520021, "Soigne {0} alliés pour {1}% de l'ATQ").
+-define(SD520031, "Dissipe {1} buffs sur {0} ennemis").
+-define(SD520032, "Dissipe {1} buffs sur {0} ennemis, avec {2}% de chance de dissiper {3} buffs supplémentaires").
+-define(SD530011, "Augmente le Bonus de DGT de {0}% pendant {1} sec").
+-define(SD530021, "Inflige {1}% de DGT à {0} ennemis").
+-define(SD530030, "Cible {0} unité(s) alliée(s) pour dissiper {1} affaiblissement(s).").
+-define(SD530031, "Dissipe {1} débuff(s) sur {0} alliés, avec {2}% de chance de dissiper {3} débuff(s) supplémentaires.").
+-define(SD540001, "En subissant un dégât unique de plus de {0}% des PV max, récupère {1}% des PV max").
+-define(SD540002, "En attaquant un ennemi ayant plus de {0}% de PV, inflige {2}% de ses PV max en DGT à {1} des ennemis proches").
+-define(SD540003, "En cas d'attaque, il y {0}% de chance d'être immunisé contre les effets de contrôle pendant {1} sec.").
+-define(SD550001, "Chaque lancement de la Compétence Relique a une chance de {0}% d'augmenter son propre Taux d'Esquive de {2}% pendant {1} sec.").
+-define(SD550011, "Chaque lancement de la Compétence Relique a une chance de {0}% d'augmenter son propre Taux de Toucher de {2}% pendant {1} sec.").
+-define(SD550021, "Chaque lancement de la Compétence Relique a une chance de {0}% d'augmenter son propre Bonus de DGT de {2}% pendant {1} sec.").
+-define(SN510011, "Bouclier de Courage").
+-define(SN510021, "Bénédiction du Dragon").
+-define(SN510031, "Couronne de Soin").
+-define(SN520011, "Livre de Soin").
+-define(SN520021, "Corne de l'Océan").
+-define(SN520032, "Bouilloire d'Éloignement").
+-define(SN530011, "Chanson Levée").
+-define(SN530021, "Sablier Mortel").
+-define(SN530031, "Tempête de Purification").
+-define(SN540001, "Chant de Soin").
+-define(SN540002, "Épine de Sang").
+-define(SN540003, "Crochetage").
+-define(SN550001, "Esquive Renforcée").
+-define(SN550011, "Visée Avancée").
+-define(SN550021, "Amélioration DGT").
+-define(BF1007, "[Relique]").
+-define(SYSN1001, "Défense Résiliente").
+-define(SYSN1002, "Bien équilibré").
+-define(SYSN1003, "Esquive Renforcée").
+-define(SYSN2001, "Défense Résiliente").
+-define(SYSN2002, "Bien équilibré").
+-define(SYSN2003, "Visée Avancée").
+-define(SYSN3001, "Défense Résiliente").
+-define(SYSN3002, "Bien équilibré").
+-define(SYSN3003, "Renforcement d'ATQ").
+-define(SYSN4001, "Défense Résiliente").
+-define(SYSN4002, "Bien équilibré").
+-define(SYSN4003, "Réduction de DGT : Renforcé(e)").
+-define(SS280001, "L'attaque a une chance d'infliger des dégâts sur la durée.").
+-define(SS280006, "L'attaque a une chance d'obtenir une amélioration Crit.").
+-define(SS280011, "En cas d'attaque, a une chance d'obtenir un bouclier et de se restaurer.").
+-define(SS280016, "L'attaque a une chance de réduire temporairement les DGT infligés par la cible.").
+-define(SS280021, "Quand il est attaqué, a une chance d'accorder une Réduction de DGT de plus en plus forte.").
+-define(SS280026, "Lorsqu'il est attaqué, a une chance d'obtenir un bonus temporaire de DGT.").
+-define(SS280031, "Lorsqu'il est attaqué, a une chance d'obtenir Graine de Vie.").
+-define(SS280036, "Le fait d'entrer en combat confère une Réduction de DGT.").
+-define(SS280041, "Aux PV inférieurs, gagne un bonus de DGT qui diminue avec le temps.").
+-define(SS280046, "Lorsqu'il est attaqué, a une chance d'augmenter le gain de Fureur.").
+-define(SS280051, "Lorsqu'il est attaqué, a une chance d'infliger un affaiblissement à plusieurs ennemis.").
+-define(SS280056, "Lorsqu'il est attaqué, a une chance d'étourdir l'ennemi.").
+-define(SN120901, "Juge").
+-define(SN120941, "Tonnerre du Jugement").
+-define(SN120961, "Oppression Divin").
+-define(SN120981, "Protection de la Lumière").
+-define(SD120901, "Diffuse {0}% dégâts à {3} cibles (Monstres + {4}), avec une {1}% chance d'infliger Passivation (Fracassement --24%) pendant {2} sec.").
+-define(SD120941, "Diffuse {0}% dégâts à {3} cibles (Monstres + {4}), avec une {1}% chance d'infliger Passivation (Fracassement --24%) pendant {2} sec.").
+-define(SD120961, "Lorsqu'il est attaqué, {0}% de chance de dissiper {1} montants d'affaiblissement et de se soigner pour des PV égaux à {2}% de l'ATQ.").
+-define(SD120981, "{3} cibles de l'équipe reçoivent des PV égaux à {0}% d'ATQ et gagnent Ichor (PV max +{1}%) pendant {2} sec.").
+-define(SS120901, "Inflige une petite quantité de dégâts et réduit Fracasser.").
+-define(SS120941, "Inflige une quantité modérée de dégâts et réduit Fracasser.").
+-define(SS120961, "Chance de supprimer les débuffs et de restaurer les PV lors d'une attaque.").
+-define(SS120981, "Restaure les PV et augmente les PV maximum.").
+-define(BN70017, "Puissant").
+-define(BD70017, "[Puissant] secoué par la puissance du Dieu de la Guerre Arès.Se fait renverser en arrière.").
+-define(BN70018, "Épée de Guerre").
+-define(BD70018, "Lorsque l'[Épée de Guerre] est brandie par Arès, personne ne peut se mettre en travers de son chemin.").
+-define(SN220101, "Pouvoir de Ranimation").
+-define(SN220201, "Vrai Grain").
+-define(SN220301, "Retour Divin").
+-define(SN220401, "Châtiment Glacial").
+-define(SN220501, "Massacre Silencieux").
+-define(SN220601, "Intimidation").
+-define(SN220701, "Première Frappe").
+-define(SN220801, "Épines Percées").
+-define(SN220901, "Représailles Divines").
+-define(SN221001, "Drain de Vie").
+-define(SN221101, "Instincts de Mort Imminente").
+-define(SN221201, "Marées Tournantes").
+-define(SN221301, "Résistance aux Ralentissements").
+-define(SN221401, "Solide comme un Rocher").
+-define(SN221501, "Invincible").
+-define(SN221601, "Abri pour les Âmes").
+-define(SN221701, "Bénédiction Céleste").
+-define(SN221801, "Technique de Précision").
+-define(SN221901, "Châtiment de la Rage").
+-define(SN222001, "Abattage sans Fin").
+-define(SD220101, "Lors d'un combat, restaure des PV égaux à {1}% d'ATQ toutes les {0} sec.").
+-define(SD220201, "En subissant un seul dégâts de plus de {0}% de PV maximum, se soigne pour {1}% d'ATQ.").
+-define(SD220301, "Soins reçus +{0}%").
+-define(SD220401, "Les attaques ont {0}% de chance de geler {1} ennemis pendant {2} sec.").
+-define(SD220501, "Les attaques ont {0}% de chance de réduire au silence {1} ennemis pendant {2} sec.").
+-define(SD220601, "Les attaques ont {0}% de chance de terroriser {1} ennemis pendant {2} sec.").
+-define(SD220701, "Augmente l'ATQ de {1}% pendant {0} sec après être entré dans la bataille.").
+-define(SD220801, "En cas d'attaque, il y a {0}% de chance de Renvoyer les dégâts, frappant {1} ennemis proches pour des dégâts égaux à {2}% de la DÉF.").
+-define(SD220901, "Les attaques ont {0}% de chance de dissiper {2} améliorations de {1} ennemis proches.Dissipe {3}% de DGT supplémentaires après avoir réussi à les dissiper.").
+-define(SD221001, "Les attaques de base soignent l'utilisateur pour des PV égaux à {0}% d'ATQ.").
+-define(SD221101, "En subissant des dégâts mortels, ses PV deviennent {0} et il gagne une immunité à la mort pendant {1} sec.").
+-define(SD221201, "En cas d'attaque, {0}% chance de dissiper {1} les piles de Débuff.Si la dissipation est réussie, soigne pour des PV égaux à {2}% de l'ATQ.").
+-define(SD221301, "Réduit la durée des effets de ralentissement pris par {0}%.").
+-define(SD221401, "Réduit la durée des effets de DOT pris par {0}%.").
+-define(SD221501, "Réduit la durée des effets de contrôle pris par {0}%.").
+-define(SD221601, "Après la métamorphose, augmente la VIT de Déplacement de l'équipe de {0}% et la Réduction de DGT de {1}% pendant {2} sec.").
+-define(SD221701, "Après la métamorphose, obtenez l'un des bonus suivants au hasard : Bonus de DGT +{0}% ; Réduction de DGT +{1}% ; restauration de PV égale à {2}% d'ATQ par seconde pendant {3} sec.").
+-define(SD221801, "Après la métamorphose, obtenez l'un des bonus suivants au hasard : Bonus de DGT +{0}% ; Réduction de DGT +{1}% ; restauration de PV égale à {2}% d'ATQ par seconde pendant {3} sec.").
+-define(SD221901, "Après avoir obtenu un Crit, gagne +{0}% de Taux Excellent pendant {1} sec et gagne un bouclier pour {2}% d'ATQ pendant {3} sec.").
+-define(SD222001, "Après avoir tué la cible, gagne +{0}% de bonus de DGT pendant {1} sec et gagne un bouclier pour {2}% d'ATQ pendant {3} sec.").
+-define(BN58041, "Première Frappe").
+-define(BN58051, "Immunité à la Mort").
+-define(BN58061, "Abri pour les Âmes").
+-define(BN58071, "Bénédiction Céleste").
+-define(BN58081, "Bénédiction Céleste").
+-define(BN58091, "Bénédiction Céleste").
+-define(BN58101, "Technique de Précision").
+-define(BN58111, "Technique de Précision").
+-define(BN58121, "Technique de Précision").
+-define(BN58131, "Châtiment de la Rage").
+-define(BN58141, "Abattage sans Fin").
+-define(BD58041, "Première Frappe ! ATQ +{0}%").
+-define(BD58051, "Instincts de Mort Imminente ! Immunité à la Mort pour la Durée").
+-define(BD58061, "Abri de l'Âme ! VIT de Déplacement +{0}%, Réduction de DGT +{1}%").
+-define(BD58071, "Bénédiction Céleste ! Bonus DGT +{0}%").
+-define(BD58081, "Bénédiction Céleste ! Réduction DGT +{0}%").
+-define(BD58091, "Bénédiction Céleste ! Restauration de PV égale à {1}% d'ATQ toutes les {0} sec.").
+-define(BD58101, "Technique de Précision ! Bonus DGT de Compétence +{0}%").
+-define(BD58111, "Technique de Précision ! Réduction DGT de Compétence +{0}%").
+-define(BD58121, "Technique de Précision ! Restauration de PV égale à {1}% d'ATQ toutes les {0} sec.").
+-define(BD58131, "Rage Châtiment ! +{0}% Excellent Taux").
+-define(BD58141, "Battage sans Fin ! +{0}% de Bonus de DGT").
+-define(SN104006_TITLE, "Tranchant en Croissant").
+-define(SN104007_TITLE, "Tranchant Lunaire").
+-define(SN104008_TITLE, "Enchaînement Tourbillonnante").
+-define(SN104009_TITLE, "Entaille de Téléportation").
+-define(SN104011_TITLE, "Zone de Tonnerre").
+-define(SN104012_TITLE, "Descente du Dieu de la Guerre").
+-define(SN104021_TITLE, "Enchaînement de Rupture").
+-define(SN104022_TITLE, "Bénédiction de Thor").
+-define(SN104023_TITLE, "").
+-define(SN104031_TITLE, "Épée de Choc").
+-define(SN104032_TITLE, "Épée Géante").
+-define(SN104101_TITLE, "Lame Mortelle").
+-define(SN104111_TITLE, "Amélioration de Colère").
+-define(SN104121_TITLE, "Guérison de Combat").
+-define(SN104131_TITLE, "Esprit de Combat").
+-define(SN104141_TITLE, "Soufle de Tonnerre").
+-define(SN104151_TITLE, "Volonté d'Épée").
+-define(SN104161_TITLE, "Châtiment de Lame").
+-define(SN104301_TITLE, "Ultime - Lame de Célestin").
+-define(SN104401_TITLE, "Légion 
+des Lames").
+-define(SN105006_TITLE, "Déflagration").
+-define(SN105007_TITLE, "Impact du Gel").
+-define(SN105008_TITLE, "Flamme Solaire").
+-define(SN105009_TITLE, "Explosion Glaciaire").
+-define(SN105011_TITLE, "Donjon de Glace").
+-define(SN105012_TITLE, "Descente de Vulcain").
+-define(SN105021_TITLE, "Spirale de Feu").
+-define(SN105022_TITLE, "Descente de Khione").
+-define(SN105023_TITLE, "").
+-define(SN105024_TITLE, "").
+-define(SN105031_TITLE, "Explosion de Feu").
+-define(SN105032_TITLE, "Punition de Glace").
+-define(SN105101_TITLE, "Jet de Feu").
+-define(SN105111_TITLE, "Imbue de Magie").
+-define(SN105121_TITLE, "Régénération de PV").
+-define(SN105131_TITLE, "Levée").
+-define(SN105141_TITLE, "Soins de Gel").
+-define(SN105151_TITLE, "Volonté Magique").
+-define(SN105161_TITLE, "Pulvérisation de Flamme").
+-define(SN105301_TITLE, "Ultime - Blizzard Rasoir").
+-define(SN105401_TITLE, "Phénix 
+Feu Céleste").
+-define(SN106006_TITLE, "Tir Dispersé").
+-define(SN106007_TITLE, "Flèche Tourbillonnante").
+-define(SN106008_TITLE, "Flèche Suspendue").
+-define(SN106009_TITLE, "Oiseau Tonnerre").
+-define(SN106011_TITLE, "Boule de Tonnerre").
+-define(SN106012_TITLE, "Royaume de la Nature").
+-define(SN106021_TITLE, "Flèches d'Appel").
+-define(SN106022_TITLE, "Zone de Foudre").
+-define(SN106023_TITLE, "").
+-define(SN106031_TITLE, "Flèche de Punition").
+-define(SN106032_TITLE, "Flèche de Croisement").
+-define(SN106101_TITLE, "Flèche Éclair").
+-define(SN106111_TITLE, "Amélioration de Bataille").
+-define(SN106121_TITLE, "Guérison de la Nature").
+-define(SN106131_TITLE, "Excitation").
+-define(SN106141_TITLE, "Mine").
+-define(SN106151_TITLE, "Volonté d'Arc").
+-define(SN106161_TITLE, "Pulvérisation Lumineuse").
+-define(SN106301_TITLE, "Ultime - Boule en Spirale").
+-define(SN106401_TITLE, "Tonnerre 
+Gigavolt").
+-define(SN107006_TITLE, "").
+-define(SN107007_TITLE, "").
+-define(SN107008_TITLE, "").
+-define(SN107009_TITLE, "").
+-define(SN107011_TITLE, "").
+-define(SN107012_TITLE, "").
+-define(SN107021_TITLE, "").
+-define(SN107022_TITLE, "").
+-define(SN107031_TITLE, "").
+-define(SN107032_TITLE, "").
+-define(SN107111_TITLE, "").
+-define(SN107121_TITLE, "").
+-define(SN107131_TITLE, "").
+-define(SN107141_TITLE, "").
+-define(SN107151_TITLE, "").
+-define(SN107161_TITLE, "").
+-define(SN107301_TITLE, "").
+-define(SN107401_TITLE, "").
+-define(BF1009, "[Preuve de Sceau]").
+-define(BF1008, "[Costume]").
+-define(SN120801, "Mélodies célestes").
+-define(SN120841, "Cordes Illuminées").
+-define(SN120861, "Sanctuaire de Lumière").
+-define(SN120881, "Bastion de Lumière").
+-define(SD120801, "À {3} cibles (monstres +{4}), inflige {0}% DGT et a {1}% de chance de dissiper {2} amélioration(s).").
+-define(SD120841, "À {3}cibles (monstres +{4}), inflige {0}% DGT.Le dernier coup inflige un {1}% ralentissement pendant {2}s.").
+-define(SD120861, "En cas d'attaque, {0}% de chance de dissiper {1} debuff(s) et d'acquérir Déité errante (immunité au ralentissement) pendant {2}s.").
+-define(SD120881, "L'équipe gagne l'invincibilité (immunité au DGT) pendant {0}s et dissipe tous les affaiblissements de l'équipe.").
+-define(SS120801, "Inflige des dégâts et a une chance de dissiper les améliorations").
+-define(SS120841, "Inflige des dégâts mineurs et ralentit les ennemis").
+-define(SS120861, "En cas d'attaque, chance de dissiper les affaiblissements et d'obtenir l'immunité au ralentissement").
+-define(SS120881, "Accorde l'immunité aux dégâts et dissipe les affaiblissements").
+-define(SN121001, "Ombre du Sang").
+-define(SN121041, "Éclat Sanguin").
+-define(SN121061, "Malédiction Sanglante").
+-define(SN121081, "Chair Immortelle").
+-define(SD121001, "À {3} cibles (monstres +{4}), inflige {0}% DGT et a {1}% de chance d'infliger une malédiction (-15% Toucher) pendant {2}s.").
+-define(SD121041, "Inflige {0}% de DGT à {3} cible(s) (monstres +{4}) et a une {1}% chance de soigner 3 personnages amis pour {2}% des PV max.").
+-define(SD121061, "Les attaques ont {0}% de chance d'infliger une malédiction (-15% Touché) pendant {1}s et de soigner {2}% ATQ de PV.").
+-define(SD121081, "Inflige {0}% de DGT à {3} cible(s) (monstres +{4}), soigne 3 personnages amis pour des PV équivalents à {1}% de l'ATQ, et inflige une Malédiction aux ennemis (-15% Touché) pendant {2} sec.").
+-define(SS121001, "Inflige des dégâts mineurs et réduit le Toucher.").
+-define(SS121041, "Inflige des dégâts modérés et soigne les PV.").
+-define(SS121061, "Les attaques ont une chance de réduire Toucher et de soigner les PV.").
+-define(SS121081, "Inflige des dégâts, guérit les PV et réduit Toucher.").
+-define(SN121101, "Enchaînement").
+-define(SN121141, "Tourbillon Ardent").
+-define(SN121161, "Maîtrise du Combo").
+-define(SN121181, "Cinq Étoiles").
+-define(SD121101, "À {4} cibles (monstres +{5}), inflige {0}% DGT, a {1}% de chance de toucher {2} cible(s) et d'infliger {3}% DGT bonus.").
+-define(SD121141, "À {4} cibles (monstres +{5}), inflige {0}% DGT, chaque attaque ayant {1}% de chance de toucher {2} cible(s) et d'infliger {3}% DGT bonus.").
+-define(SD121161, "Les attaques ont {0}% de chance de frapper {1} cible(s) et d'infliger {2}% DGT.").
+-define(SD121181, "À {4} cibles (monstres +{5}), inflige {0}% DGT, chaque attaque ayant {1}% de chance de toucher {2} cible(s) et d'infliger {3}% DGT bonus.").
+-define(SS121101, "Inflige des dégâts mineurs avec une faible chance d'infliger des dégâts bonus.").
+-define(SS121141, "Inflige des dégâts modérés avec une chance d'infliger des dégâts bonus.").
+-define(SS121161, "Les attaques ont une chance d'infliger des dégâts bonus à une seule cible.").
+-define(SS121181, "Inflige des dégâts massifs avec une chance d'infliger des dégâts bonus.").
+-define(SN121201, "Frappe Véhémente").
+-define(SN121241, "Claquement Sismique").
+-define(SN121261, "Châtiment").
+-define(SN121281, "Révolution Cosmique").
+-define(SD121201, "À {5} cibles (monstres +{6}), inflige {0}% DGT et a {1}% de chance de déclencher Châtiment (à {2} adversaire(s), inflige {3}% DGT bonus et inflige un Étourdissement pendant {4}s).").
+-define(SD121241, "À {5} cibles (monstres +{6}), inflige {0}% DGT et a {1}% de chance de déclencher Châtiment (à {2} adversaire(s), inflige {3}% DGT bonus et inflige un Étourdissement pendant {4}s).").
+-define(SD121261, "Les attaques ont {0}% de chance de déclencher Châtiment (à {1} adversaire(s), infligeant {2}% DGT bonus et infligeant un étourdissement pendant {3}s)").
+-define(SD121281, "À {4} cibles (monstres +{5}), inflige {0}% DGT, avec le premier et dernier coup déclenchant Châtiment (à {1} adversaire(s), infligeant {2}% DGT bonus et infligeant un Étourdissement pendant {3}s)").
+-define(SS121201, "Inflige des dégâts mineurs avec une faible chance d'infliger des dégâts bonus et un contrôle des foules.").
+-define(SS121241, "Inflige des dégâts modérés avec une chance d'infliger des dégâts bonus et un contrôle des foules.").
+-define(SS121261, "Les attaques ont une chance d'infliger des dégâts bonus à une seule cible et un contrôle des foules.").
+-define(SS121281, "Inflige des dégâts massifs, le premier et le dernier coup infligeant des dégâts bonus et un contrôle des foules.").
+-define(SN121301, "Shuriken").
+-define(SN121341, "Mirages en Miroir").
+-define(SN121361, "Tranchant Inégalé").
+-define(SN121381, "Coup de Fouet Éclair").
+-define(SD121301, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD121341, "À {4} cibles (monstres +{5}), inflige {0}% DGT et a {1}% de chance de déclencher Tranchant inégalé (Fracasser +{2}%) pendant {3}s").
+-define(SD121361, "Au-dessous de {0}% PV, les attaques déclenchent Tranchant Inégalé (Fracasser +{1}%) pour {2}s").
+-define(SD121381, "À {3} cibles (monstres +{4}), inflige {0}% DGT.Après l'incantation, tous les personnages de l'équipe gagnent {1}% de Fracasser pendant {2}s.").
+-define(SS121301, "Utilisez le ninjitsu pour infliger des dégâts mineurs.").
+-define(SS121341, "Inflige des dégâts modérés avec une chance d'améliorer le Fracasser du personnage.").
+-define(SS121361, "Lorsque les PV sont bas, les attaques donnent une amélioration de Fracasser.").
+-define(SS121381, "Inflige des dégâts massifs et augmente le Fracasser de l'équipe.").
+-define(BN25157, "Tranchant Inégalé").
+-define(BD25157, "Tranchant Inégalé ! Fracassement +{0}%").
+-define(BF609, "[Archange]").
+-define(BF610, "[Dracula]").
+-define(BF611, "[Singe Magique Hanuman]").
+-define(BF612, "[Hattori Hanzo]").
+-define(BF613, "[Kumiho Daji]").
+-define(BF614, "[Elizabeth]").
+-define(BN25165, "Bouclier de Sang").
+-define(BD25165, "Un bouclier fait de sang ! Bloque une certaine quantité de dégâts.").
+-define(SD121401, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD121441, "Inflige {0}% de dégâts à {3} cible(s) (Monstres + {4}).Le second Toucher a {1}% de chance d'infliger une Entrée pendant {2} sec.").
+-define(SD121461, "Lorsque vous attaquez des ennemis ayant moins de {0}% PV, inflige Entrée (Perte de contrôle) pendant {1} sec.").
+-define(SD121481, "Inflige {0}% DGT à {2} cibles (monstres +{3}).Le premier Toucher fait entrer les cibles pendant {1} sec.").
+-define(SN121401, "Explosion d'Âme").
+-define(SN121441, "Envolée").
+-define(SN121461, "Charme du Renard").
+-define(SN121481, "Avent de Neuf Queues").
+-define(SD121501, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD121541, "Donne {0}% de DGT à {2} cibles (monstres +{3}), plus un DGT supplémentaire égal à {1}% des PV max de l'utilisateur.").
+-define(SD121561, "Lorsqu'il est attaqué, a une {0}% chance d'obtenir Bouclier de Sang (Bloque {1}% des DGT d'ATQ) pendant {2} sec.").
+-define(SD121581, "Inflige {0}% de DGT à {4} cibles (Monstres +{5}), avec un {1}% effet de Sangsue.Gagne un Bouclier de Sang (bloque {2}% de DGT d'attaque) pendant {3} sec.").
+-define(SN121501, "Chauve-souris de Sang").
+-define(SN121541, "Pouvoir des Morts").
+-define(SN121561, "Faveur du Sang").
+-define(SN121581, "Enfer du Bain de Sang").
+-define(SS121401, "Orbe de Mana infligeant des dégâts mineurs").
+-define(SS121441, "Inflige des dégâts modérés avec l'effet Sangsue").
+-define(SS121461, "Inflige une Entrée lors de l'attaque d'ennemis avec faible PV").
+-define(SS121481, "Inflige des dégâts importants et lance Entrée sur les ennemis").
+-define(SS121501, "Lance Force Sanglant pour infliger des dégâts mineurs").
+-define(SS121541, "Inflige des dégâts plus des dégâts supplémentaires déterminés par les PV du joueur.").
+-define(SS121561, "En cas d'attaque, a une chance de gagner un bouclier.").
+-define(SS121581, "Inflige des dégâts importants avec la Sangsue et accorde un bouclier.").
+-define(SN291001, "Bouclier de Zèle").
+-define(SN291011, "Renvoi Précis").
+-define(SN291021, "Impact de Sagesse").
+-define(SN291031, "Brûlure de Feu").
+-define(SN291041, "Brûlure de Feu").
+-define(SN291051, "Brûlure de Feu").
+-define(SN291061, "Jalon de Fureur").
+-define(SN291071, "Jalon de Fureur").
+-define(SN291081, "Jalon de Fureur").
+-define(SN291091, "Frappe de Chaleur").
+-define(SN291101, "Frappe de Chaleur").
+-define(SN291111, "Frappe de Chaleur").
+-define(SN291121, "Perspicacité de Brume").
+-define(SN291131, "Perspicacité de Brume").
+-define(SN291141, "Perspicacité de Brume").
+-define(SD291001, "Réduction de DGT +{0}% pendant la transformation en un Dieu").
+-define(SD291011, "Taux de Toucher et Taux d'Esquive +{0}% en se transformant en Dieu.").
+-define(SD291021, "Bonus de DGT +{0}% pendant la transformation en un Dieu").
+-define(SD291031, "Effet Brûlure DGT +{0}%").
+-define(SD291041, "Effet Brûlure DGT +{0}%").
+-define(SD291051, "Effet Brûlure DGT +{0}%").
+-define(SD291061, "").
+-define(SD291071, "").
+-define(SD291081, "").
+-define(SD291091, "En infligeant une attaque Excellente, augmente la fréquence Excellente et la fréquence Anti-Excellente de {0}% pendant {1} sec.").
+-define(SD291101, "En infligeant une attaque Excellente, augmente la fréquence Excellente et la fréquence Anti-Excellente de {0}% pendant {1} sec.").
+-define(SD291111, "En infligeant une attaque Excellente, augmente la fréquence Excellente et la fréquence Anti-Excellente de {0}% pendant {1} sec.").
+-define(SD291121, "Réduit la durée des effets de contrôle reçus par {0}% en se transforme en un Dieu.").
+-define(SD291131, "Réduit la durée des effets de contrôle reçus par {0}% en se transforme en un Dieu.").
+-define(SD291141, "Réduit la durée des effets de contrôle reçus par {0}% en se transforme en un Dieu.").
+-define(BN57001, "Jalon de Fureur").
+-define(BN57002, "Frappe de Chaleur").
+-define(BN57003, "").
+-define(BD57001, "Jalon de Fureur ! Chances de Blocage +{0}%, Blocage Percer +{1}%").
+-define(BD57002, "Heurter ! Taux Excellent +{0}%, Taux Anti-Excellent +{1}%").
+-define(BD57003, "").
+-define(SN110500, "Roi Tartare").
+-define(SN110501, "Flèche Spectre").
+-define(SN110505, "Loup Tartare").
+-define(SN110506, "Impact Effrayant").
+-define(SN110507, "Enchevêtrement Fantôme").
+-define(SN110508, "Espace Banshee").
+-define(SN110600, "Seigneur de la Guerre").
+-define(SN110601, "Compétence de Récolte").
+-define(SN110605, "Attaque au Sabre").
+-define(SN110606, "Raid Tranchant").
+-define(SN110607, "Étranglement du Sabre").
+-define(SN110608, "Exécution Finale").
+-define(SD110500, "").
+-define(SD110501, "").
+-define(SD110505, "À {2} cibles (monstres + {3}), inflige {0}% de DGT, soigne le lanceur de sorts pour des PV égaux à {1}% d'ATQ.").
+-define(SD110506, "À {2} cibles (monstres + {3}), inflige {0}% de DGT, le premier DGT infligé inflige Délier (ATQ -13%) pendant {1} sec.").
+-define(SD110507, "À {2} cibles (monstres + {3}), inflige {0}% DGT, le premier DGT infligé inflige Racine (impossibilité de se déplacer) pendant {1} sec.").
+-define(SD110508, "À {2} cibles (monstres + {3}), inflige {0}% DGT, le premier DGT infligé inflige Fatal (effet de Soin -50%) pendant {1} sec.").
+-define(SD110600, "Se transforme en un Ishtar pendant {1} sec.À {3} cibles proches (monstres + {4}), inflige {0}% DGT.Pendant la transformation, le lanceur de sorts reçoit un bonus de {2}% DGT.").
+-define(SD110601, "À {1} cibles (monstres + {2}), inflige un total de {0}% DGT.").
+-define(SD110605, "À {3} cibles (monstres +{4}), inflige {0}% de DGT.Pour chaque {1}% de PV perdus par la cible, gagne {2}% DGT de Compétence multiplicateur.").
+-define(SD110606, "À {3} cibles (monstres +{4}), inflige {0}% de DGT.Pour chaque {1}% de PV perdus par la cible, gagne {2}% DGT de Compétence multiplicateur.").
+-define(SD110607, "À {3} cibles (monstres +{4}), inflige {0}% de DGT.Pour chaque {1}% de PV perdus par la cible, gagne {2}% DGT de Compétence multiplicateur.").
+-define(SD110608, "À {4} cibles (monstres +{5}), inflige {0}% DGT.Si la cible a moins de {1}% PV, le lanceur de sorts gagne un multiplicateur de DGT de Compétence de {2}%, plus une Colère infinie (Bonus de DGT +40%) pendant {3} sec.").
+-define(SS110500, "Se transforme en Hadès et réduit le taux de toucher de l'ennemi.").
+-define(SS110501, "Taillade l'ennemi, infligeant des dégâts mineurs.").
+-define(SS110505, "Lâche une âme pour attaquer, infligeant des dégâts mineurs et soignant les PV.").
+-define(SS110506, "Lâche une âme pour attaquer, infligeant des dégâts modérés et réduisant l'ATQ.").
+-define(SS110507, "Lâche une âme pour lier l'ennemi, infligeant des dégâts modérés et infligeant Racine.").
+-define(SS110508, "Invoque la faux pour attaquer l'ennemi, infligeant des dégâts importants et réduisant les soins.").
+-define(SS110600, "Se transforme en Ishtar et gagne un bonus de DGT pendant la période de transformation.").
+-define(SS110601, "Punit l'ennemi, infligeant des dégâts mineurs.").
+-define(SS110605, "Inflige des dégâts modérés basés sur les PV perdus de la cible.").
+-define(SS110606, "Inflige des dégâts importants basés sur les PV perdus de la cible.").
+-define(SS110607, "Inflige des dégâts importants basés sur les PV perdus de la cible.").
+-define(SS110608, "Gagne un bonus de DGT en attaquant un personnage ayant peu de PV.").
+-define(BF405, "[Hadès]").
+-define(BF406, "[Ishtar]").
+-define(SN282001, "Raid d'Étourdissement").
+-define(SN282002, "Instinct d'Esquive").
+-define(SN282003, "Percée Destructive").
+-define(SN282004, "Instinct de Résistance").
+-define(SN282005, "Attaque Cassante").
+-define(SN282006, "Réfraction Glacée").
+-define(SN282007, "Frappe Contraignante").
+-define(SN282008, "Instinct de Défense").
+-define(SN282009, "Attaque Rapide").
+-define(SN282010, "Défense Résiliente").
+-define(SN282011, "Percée d'Armure").
+-define(SN282012, "Alerte d'Impact").
+-define(BF1006, "[Marque]").
+-define(BF407, "[Freya]").
+-define(BN20045, "Descente d'Hadès").
+-define(BN20046, "Descente d'Ishtar").
+-define(BN20047, "Descente de Freya").
+-define(BD20045, "Transformation en Hadès").
+-define(BD20046, "Transformation en Ishtar").
+-define(BD20047, "Transformation en Freya").
+-define(BN23043, "Enchevêtrer").
+-define(BD23043, "Enchevêtrement d'épines ! Subit {0}% DGT par seconde").
+-define(BN23044, "Fleurs Épanouies").
+-define(BD23044, "Fleurs Épanouies ! Restaure des PV égaux à {1}% d'ATQ toutes les {0} sec.").
+-define(SS282001, "Lorsque vous attaquez des ennemis sous le statut Étourdissement, augmente la vitesse de Focalisation et le bonus de DGT de Focalisation").
+-define(SS282002, "Lors d'une attaque sous l'effet de l'étourdissement, augmente le Taux d'Esquive et restaure des PV").
+-define(SS282003, "Lorsque vous attaquez des ennemis sous le statut Pétrification, vous augmentez la vitesse de Focalisation et le bonus de Focalisation des DGT").
+-define(SS282004, "Lors d'une attaque sous l'état Pétrification, augmente le Taux d'Esquive et restaure des PV").
+-define(SS282005, "Lorsque vous attaquez des ennemis sous le statut Gel, augmente la vitesse de Focalisation et le bonus de DGT de Focalisation").
+-define(SS282006, "Lors d'une attaque sous le statut Gel, augmente le Taux d'Esquive et restaure des PV").
+-define(SS282007, "Lorsque vous attaquez des ennemis sous le statut Paralysie, augmente la vitesse de Focalisation et le bonus de DGT de Focalisation").
+-define(SS282008, "Lors d'une attaque sous le statut Paralysie, augmente le Taux d'Esquive et restaure des PV").
+-define(SS282009, "Lors d'une attaque des ennemis sous le statut Ralentissement, augmente le taux Crit et le Bonus DGT").
+-define(SS282010, "Lors d'une attaque sous le statut Ralentissement, augmente la vitesse de résistance et les RÉD DGT").
+-define(SS282011, "Lorsque vous attaquez des ennemis sous contrôle, augmente le taux d'Anti-blocage et le Fracasser").
+-define(SS282012, "Lors d'une attaque par un ennemi au statut lent, augmente les Chances de Blocage et de DÉF").
+-define(BN62146, "Pierre Tiède").
+-define(BD62146, "Pierre Tiède ! Immunisé aux effets de gel entrants.").
+-define(BN61556, "Voix Apaisante").
+-define(BD61556, "Voix Apaisante ! Insensible aux effets d'étourdissement.").
+-define(BN61161, "Gardien Ultime").
+-define(BD61161, "Gardien Ultime ! Insensible à tous les dégâts.").
+-define(BF506, "[Compétence Ultime]").
+-define(SN275011, "Poussée de Lance").
+-define(SN275021, "Tourbillon de Vengeance").
+-define(SN275031, "Halo Solaire").
+-define(SN275041, "Tonnerre Assourdissant").
+-define(SN275051, "Flèche Spectre").
+-define(SN275061, "Étranglement du Sabre").
+-define(SN275071, "Colère de la Terre").
+-define(SN275081, "").
+-define(SN275012, "Bouclier des Soupirs").
+-define(SN275022, "Appel du Corbeau").
+-define(SN275032, "Puissance du Soleil").
+-define(SN275042, "Bouclier de Foudre").
+-define(SN275052, "Champ Tartare").
+-define(SN275062, "Exécution Finale").
+-define(SN275072, "Fleurs Épanouies").
+-define(SN275082, "").
+-define(SD275011, "L'attaque a {0}% de chance de déclencher la Poussée de Lance, infligeant {1}% des PV de la cible en DGT à la cible.").
+-define(SD275021, "L'attaque a {0}% de chance de déclencher le Tourbillon de Vengeance, infligeant {1}% de DGT avec un bonus de {2}% d'effet Sangsue.").
+-define(SD275031, "L'attaque a {0}% de chance de déclencher Halo Solaire, infligeant {1}% de DGT et {2} Brûlure empilés (toutes les {3} sec, infligeant {4}% de DGT) pendant {5} sec.").
+-define(SD275041, "L'attaque a {0}% de chance de déclencher Tonnerre Assourdissant, infligeant {1}% de DGT et infligeant Paralysie pendant {2} sec").
+-define(SD275051, "L'attaque a {0}% de chance de déclencher Spectre Scythe, infligeant {1}% de DGT et infligeant Fatal (Effet de Soin -{2}%) pendant {3} sec.").
+-define(SD275061, "L'attaque a {0}% de chance de déclencher Étranglement du Sabre, infligeant {1}% de DGT, avec des DGT doublés aux ennemis ayant moins de {2}% de PV.").
+-define(SD275071, "L'attaque a {0}% de chance de déclencher Colère de la Terre, infligeant {1}% de DGT tout en soignant l'équipe pour {2}% d'ATQ de PV.").
+-define(SD275081, "").
+-define(SD275012, "Se faire attaquer offre {0}% de chance de déclencher Bouclier des Soupirs pour donner au lanceur de sorts la Maîtrise du Blocage (Chances de Blocage +{1}%, Réduction de Blocage +{2}%) pendant {3} sec").
+-define(SD275022, "Se faire attaquer offre {0}% de chance de déclencher Appel du Corbeau, infligeant {1}% de DGT avec un bonus de Perte de Sensation (Taux de Toucher -{2}%) pendant {3} sec.").
+-define(SD275032, "Se faire attaquer offre {0}% de chance de s'améliorer avec le Pouvoir Solaire.Lorsque la Puissance Solaire est active, les attaques infligent également {1} pile(s) de Brûlure (TdR : {2} sec).Puissance Solaire dure {3} sec.").
+-define(SD275042, "Se faire attaquer offre {0}% de chance d'obtenir un Bouclier de Foudre.Lorsque Bouclier de foudre est activé, être attaqué offre {1}% de chance d'infliger {2}% de DGT avec un bonus de {3} sec de Paralysie (TdR : {4} sec) aux ennemis proches.Bouclier de Foudre dure {5} sec.").
+-define(SD275052, "Se faire attaquer offre {0}% de chance de donner à soi-même Champ Tartare.Une fois activé, gagne l'immunité à l'Étourdissement.Soin de soi pour {1}% des PV Max (jusqu'à {2}) après que l'Étourdissement soit immunisé.Le Champ Tartare dure {3} sec.").
+-define(SD275062, "Se faire attaquer offre {0}% de chance de déclencher l'Exécution finale, infligeant {1}% de DGT.Les ennemis ayant moins de {2}% de PV, inflige {3}x de DGT.").
+-define(SD275072, "Se faire attaquer offre {0}% de chance de déclencher Floraison de Fleurs, toutes les 2 sec, soigne l'équipe pour {1}% d'ATQ de PV.La Floraison de Fleurs durent {2} sec.").
+-define(SD275082, "").
+-define(BN54018, "Maîtrise de Blocage").
+-define(BN54020, "Puissance du Soleil").
+-define(BN54021, "Bouclier de Foudre").
+-define(BN54022, "Champ Tartare").
+-define(BD54018, "Maîtrise du Blocage ! Chances de Blocage +{0}%, Réduction de Blocage +{1}%.").
+-define(BD54020, "Attaquer les ennemis inflige également Brûlure.").
+-define(BD54021, "En cas d'attaque, riposte et étourdit l'ennemi.").
+-define(BD54022, "Immunisée à l'effet d'Étourdissement ; Restaure les PV en cas d'immunité").
+-define(BF1010, "[Arme de Dieu]").
+-define(SS291001, "Dieu Morph accorde Réduction de DGT").
+-define(SS291011, "Dieu Morph accorde Toucher et Esquive").
+-define(SS291021, "Dieu Morph accorde un Bonus de DGT").
+-define(SS291031, "DGT d'effet de Brûlure augmenté").
+-define(SS291041, "DGT d'effet de Brûlure augmenté").
+-define(SS291051, "DGT d'effet de Brûlure augmenté").
+-define(SS291061, "").
+-define(SS291071, "").
+-define(SS291081, "").
+-define(SS291091, "Les attaques excellentes augmentent le taux d'Excellent et le taux d'Anti-Excellent").
+-define(SS291101, "Les attaques excellentes augmentent le taux d'Excellent et le taux d'Anti-Excellent").
+-define(SS291111, "Les attaques excellentes augmentent le taux d'Excellent et le taux d'Anti-Excellent").
+-define(SS291121, "Dieu Morph réduit la durée des effets de contrôle reçus").
+-define(SS291131, "Dieu Morph réduit la durée des effets de contrôle reçus").
+-define(SS291141, "Dieu Morph réduit la durée des effets de contrôle reçus").
+-define(SS291151, "Possibilité de réduire le temps de recharge de Héros Ultime lors d'une attaque").
+-define(SS291161, "Possibilité de réduire le temps de recharge de Héros Ultime lors d'une attaque").
+-define(SS291171, "Possibilité de réduire le temps de recharge de Héros Ultime lors d'une attaque").
+-define(SS291211, "").
+-define(SS291221, "").
+-define(SS291231, "").
+-define(SS291241, "").
+-define(SS291251, "").
+-define(SS291261, "").
+-define(SS291271, "").
+-define(SCN100101, "").
+-define(SCN100201, "Tranchant Lunaire : Renforcé(e)").
+-define(SCN100301, "Enchaînement Tourbillonnant : Renforcé(e)").
+-define(SCN100401, "Tranchant Clignotant : Renforcé(e)").
+-define(SCN100501, "Zone de Tonnerre : Renforcé(e)").
+-define(SCN100601, "Descente du Dieu de la Guerre : Renforcé(e)").
+-define(SCN100701, "Enchaînement de Rupture : Renforcé(e)").
+-define(SCN100801, "Bénédiction de Thor : Renforcé(e)").
+-define(SCN100901, "Épée de Choc : Renforcé(e)").
+-define(SCN101001, "Épée Géante : Renforcé(e)").
+-define(SCN101101, "").
+-define(SCN101201, "").
+-define(SCD100101, "").
+-define(SCD100201, "Multiplicateur de DGT de Base de Tranchant Lunaire +{0}%").
+-define(SCD100301, "Multiplicateur de DGT de base d'Enchaînement Tourbillonnante +{0}%").
+-define(SCD100401, "Multiplicateur de DGT de base de Tranchant Clignotant +{0}%").
+-define(SCD100501, "Multiplicateur de DGT de base de la Zone de Tonnerre +{0}%").
+-define(SCD100601, "Taux Crit +{0}% pendant la Descente du Dieu de la Guerre").
+-define(SCD100701, "Multiplicateur de DGT de base d'Enchaînement de Rupture +{0}%").
+-define(SCD100801, "Taux de résistance +{0}% pendant la Bénédiction de Thor").
+-define(SCD100901, "Multiplicateur de DGT de base de l'Épée de Choc +{0}%").
+-define(SCD101001, "Multiplicateur de DGT de base de l'Épée Géante +{0}%").
+-define(SCD101101, "").
+-define(SCD101201, "").
+-define(SCN110101, "Spirale de Feu : Renforcé(e)").
+-define(SCN110201, "Impact de Gel : Renforcé(e)").
+-define(SCN110301, "Flamme Solaire : Renforcé(e)").
+-define(SCN110401, "Explosion Glaciaire : Renforcé(e)").
+-define(SCN110501, "Donjon de Glace : Renforcé(e)").
+-define(SCN110601, "Descente de Vulcain : Renforcé(e)").
+-define(SCN110701, "").
+-define(SCN110801, "Descente de Khione : Renforcé(e)").
+-define(SCN110901, "Rafale de Feu : Renforcé(e)").
+-define(SCN111001, "Punition de Glace : Renforcé(e)").
+-define(SCN111101, "Explosion de Feu : Renforcé(e)").
+-define(SCN111201, "").
+-define(SCD110101, "Multiplicateur de DGT de base de la Spirale de Feu +{0}%").
+-define(SCD110201, "Multiplicateur de DGT de base d'Impact du Gel +{0}%").
+-define(SCD110301, "Multiplicateur de DGT de base de Flamme Solaire +{0}%").
+-define(SCD110401, "Multiplicateur de DGT de base d'Explosion Glaciaire +{0}%").
+-define(SCD110501, "Multiplicateur de DGT de base du Donjon de Glace +{0}%").
+-define(SCD110601, "Bonus de DGT de Compétence +{0}% pendant la Descente de Vulcain").
+-define(SCD110701, "").
+-define(SCD110801, "Réduction de DGT de compétence +{0}% pendant la Descente de Khione").
+-define(SCD110901, "Multiplicateur de DGT de base de Éclatement du Feu +{0}%.").
+-define(SCD111001, "Multiplicateur de DGT de base de Punition de Glace +{0}%").
+-define(SCD111101, "Multiplicateur de DGT de base de Déflagration de Feu +{0}%").
+-define(SCD111201, "").
+-define(SCN120101, "Tir Dispersé : Renforcé(e)").
+-define(SCN120201, "Flèche Tourbillonnante : Renforcé(e)").
+-define(SCN120301, "").
+-define(SCN120401, "Oiseau Tonnerre : Renforcé(e)").
+-define(SCN120501, "Boule de Tonnerre : Renforcé(e)").
+-define(SCN120601, "Royaume de la Nature : Renforcé(e)").
+-define(SCN120701, "Flèches d'Appel : Renforcé(e)").
+-define(SCN120801, "Zone de Foudre : Renforcé(e)").
+-define(SCN120901, "Flèche de Punition : Renforcé(e)").
+-define(SCN121001, "Flèche de Croisement : Renforcé(e)").
+-define(SCN121101, "").
+-define(SCN121201, "").
+-define(SCD120101, "Multiplicateur de DGT de base de Tir Dispersé +{0}%").
+-define(SCD120201, "Multiplicateur de DGT de base de Flèche Tourbillonnante +{0}%").
+-define(SCD120301, "").
+-define(SCD120401, "Multiplicateur de DGT de base de l'Oiseau Tonnerre +{0}%").
+-define(SCD120501, "Multiplicateur de DGT de base de la Boule de Tonnerre +{0}%").
+-define(SCD120601, "Fracassement +{0}% pendant le Royaume de la Nature").
+-define(SCD120701, "Multiplicateur de DGT de base des Flèches d'Appel +{0}%").
+-define(SCD120801, "Fracassement +{0}% pendant la Zone de Foudre").
+-define(SCD120901, "Multiplicateur de DGT de base de Flèche de Punition +{0}%.").
+-define(SCD121001, "Multiplicateur de DGT de base de Flèche de Croisement +{0}%.").
+-define(SCD121101, "").
+-define(SCD121201, "").
+-define(SCN200101, "").
+-define(SCN200201, "").
+-define(SCN200301, "").
+-define(SCN200401, "").
+-define(SCN200501, "").
+-define(SCN200601, "").
+-define(SCN200701, "").
+-define(SCN200801, "").
+-define(SCN200901, "").
+-define(SCN201001, "").
+-define(SCN201101, "").
+-define(SCN201201, "").
+-define(SCD200101, "").
+-define(SCD200201, "").
+-define(SCD200301, "").
+-define(SCD200401, "").
+-define(SCD200501, "").
+-define(SCD200601, "").
+-define(SCD200701, "").
+-define(SCD200801, "").
+-define(SCD200901, "").
+-define(SCD201001, "").
+-define(SCD201101, "").
+-define(SCD201201, "").
+-define(SN550031, "Réduction de DGT : Renforcé(e)").
+-define(SN550041, "Anti-Crit : Renforcé(e)").
+-define(SN550051, "Concentration : Renforcé(e)").
+-define(SD550031, "Chaque lancement de la Compétence Relique possède {0}% de chance d'augmenter la Réduction de DGT du lanceur de {2}% pendant {1} sec.").
+-define(SD550041, "Chaque lancement de la Compétence Relique possède {0}% de chance d'augmenter son propre Taux Crit de {2}% pendant {1} sec.").
+-define(SD550051, "Chaque lancement de la Compétence Relique possède {0}% de chance d'augmenter son propre Taux de Concentration de {2}% pendant {1} sec").
+-define(SN540004, "Chance Pourrie").
+-define(SN540005, "Danse de Fay").
+-define(SN540006, "Voix de Wyrm").
+-define(SD540004, "Les attaques ont {0}% de chance d'infliger de la Chance Pourrie (étourdissement pendant {2} toutes les {1} sec) pendant {3} sec.").
+-define(SD540005, "{0}% de chance d'obtenir la Danse des Fay pendant {3} sec en étant attaqué (supprime {2} affaiblissements tous les {1} sec).").
+-define(SD540006, "Les attaques ont {0}% de chance d'infliger Voix de Wyrm (taux de gain de Fureur -{1}%) pendant {2} sec.").
+-define(SN540007, "").
+-define(SD540007, "").
+-define(SN540008, "").
+-define(SD540008, "").
+-define(SN540009, "").
+-define(SD540009, "").
+-define(BN56050, "").
+-define(BD56050, "").
+-define(BN56051, "").
+-define(BD56051, "").
+-define(BN56052, "").
+-define(BD56052, "").
+-define(SN510041, "Lumière du Pharaon").
+-define(SD510041, "Régénère {0} Fureur").
+-define(SN520041, "Energie de l'Océan").
+-define(SD520041, "Régénère {0} Fureur").
+-define(SN530041, "Silence Éternel").
+-define(SD530041, "Régénère {0} Fureur").
+-define(BN56039, "Réduction de DGT : Renforcé(e)").
+-define(BN56040, "Anti-Crit : Renforcé(e)").
+-define(BN56041, "Concentration : Renforcé(e)").
+-define(BD56039, "Puissance du Stigma ! Réduction DGT +{0}%").
+-define(BD56040, "Puissance du Stigma ! Taux Crit +{0}%").
+-define(BD56041, "Puissance du Stigma ! Taux de Concentration +{0}%").
+-define(BN56042, "Chance Pourrie").
+-define(BN56043, "Danse de Fay").
+-define(BN56044, "Voix de Wyrm").
+-define(BD56042, "Chance Pourrie ! Étourdissement pendant {1} sec toutes les {0} sec").
+-define(BD56043, "Danse de Fay ! Supprime {1} effets négatifs tous les {0} sec.").
+-define(BD56044, "Voix de Wyrm ! Taux de Gain de Fureur -{0}%").
+-define(SN291151, "Baiser de Noël").
+-define(SN291161, "Baiser de Noël").
+-define(SN291171, "Baiser de Noël").
+-define(SD291151, "L'attaque a {0}% de chances de réduire le temps de recharge de l'Ultime du Héros de {1} sec.").
+-define(SD291161, "L'attaque a {0}% de chances de réduire le temps de recharge de l'Ultime du Héros de {1} sec.").
+-define(SD291171, "L'attaque a {0}% de chances de réduire le temps de recharge de l'Ultime du Héros de {1} sec.").
+-define(SN291181, "").
+-define(SN291191, "").
+-define(SN291201, "").
+-define(SD291181, "").
+-define(SD291191, "").
+-define(SD291201, "").
+-define(SS291181, "").
+-define(SS291191, "").
+-define(SS291201, "").
+-define(SN121601, "Impact du Destin").
+-define(SN121641, "Destin de Chute").
+-define(SN121661, "Chance Pourrie").
+-define(SN121681, "Retour Primal").
+-define(SD121601, "Inflige {0}% DGT à {8} cibles (monstres +{9}) avec une {1}% chance chacune d'infliger aux cibles l'un des effets suivants : geler les cibles pendant {2}s, brûlure pendant {3}s, aveuglement pendant {4}s, malédiction pendant {5}s, enracine pendant {6}s ou émoussé pendant {7}s.").
+-define(SD121641, "Inflige {0}% DGT à {8} cibles (monstres +{9}) avec une {1}% chance chacune de geler les cibles pendant {2}s, brûlure pour {3}s, aveuglement pour {4}s, malédiction pour {5}s, racine pour {6}s ou émousser pour {7}s.").
+-define(SD121661, "Les attaques ont une {0}% chance d'infliger {1}% DGT à la cible avec {2}% de chance chacune de la geler pendant {3}s, brûlure pour {4}s, aveuglement pour {5}s, malédiction pour {6}s, racine pour {7}s ou émousser pour {8}s.").
+-define(SD121681, "Inflige {0}% DGT à {2} cibles (monstres +{3}) et dissipe {1} amélioration(s).").
+-define(SS121601, "Inflige des dégâts mineurs et inflige plusieurs affaiblissements aléatoires.").
+-define(SS121641, "Inflige des dégâts modérés et inflige plusieurs affaiblissements aléatoires.").
+-define(SS121661, "Les attaques ont une chance d'infliger des DGT supplémentaires et d'infliger plusieurs affaiblissements.").
+-define(SS121681, "Inflige des dégâts massifs et dissipe les améliorations des ennemis.").
+-define(BN23021, "Aveugle").
+-define(BD23021, "Taux de Toucher -{0}%").
+-define(BF615, "[Pandore]").
+-define(SN121701, "Missile Démoniaque").
+-define(SN121741, "Barrière d'Étoiles").
+-define(SN121761, "Bénédictions de l'Esprit").
+-define(SN121781, "Égide de Prière").
+-define(SD121701, "Aux {1} cibles proches (monstres + {2}), inflige {0}% de DGT.").
+-define(SD121741, "Inflige {0}% DGT à {2} cibles (monstres +{3}) et octroie Âme de démon (immunisée au contrôle des foules) aux alliés pendant {1}s.").
+-define(SD121761, "Lorsqu'elle est attaquée, a {0}% de chance de déclencher Âme de démon (immunisée contre le contrôle des foules) pendant {1}s.").
+-define(SD121781, "L'équipe reçoit Aegis de Prière (fournit un {0}% bouclier qui soigne pour {1}% d'ATQ lorsqu'il est actif).").
+-define(SS121701, "Lance Missile démoniaque, inflige des dégâts mineurs.").
+-define(SS121741, "Inflige des dégâts modérés et accorde l'immunité de contrôle aux alliés.").
+-define(SS121761, "A une chance de gagner l'immunité de contrôle lorsqu'il est attaqué.").
+-define(SS121781, "Forme un bouclier de magie qui bloque les dégâts et restaure les PV.").
+-define(BN25177, "Égide de Prière").
+-define(BD25177, "Égide de Prière ! Bloque {0}% DGT").
+-define(BN25197, "Esprit de Prière").
+-define(BD25197, "Esprit de Prière ! Soin pour {0}% d'ATQ").
+-define(BF616, "[Lampe Magique]").
+-define(SN251003, "Chasseur de Monstres").
+-define(SN251004, "Croissance et Ascension").
+-define(SS110801, "Punit l'ennemi, infligeant des dégâts mineurs.").
+-define(SS110805, "Tire des flèches magiques qui infligent des DGT modérés.").
+-define(SS110806, "Tire des flèches magiques qui infligent des DGT modérés et contrôlent les cibles.").
+-define(SS110807, "Libère l'énergie de la Déesse de la Lune pour infliger des dégâts et fournir un bouclier.").
+-define(SS110808, "Tire des flèches magiques qui infligent des DGT importants et contrôlent les cibles.").
+-define(BN20048, "Descente d'Artemis").
+-define(BD20048, "Se transforme en Artemis").
+-define(BF408, "[Artemis]").
+-define(BN23070, "Déesse Lunaire").
+-define(BD23070, "Pouvoir de la Déesse de la Lune, ATQ +{0}%").
+-define(BN25218, "Briser").
+-define(BD25218, "Réduction de DGT -{0}%, Chances de Blocage -{1}%, s'empile jusqu'à {2} fois").
+-define(BF617, "[Saladin]").
+-define(SN121801, "Coupe en croissant").
+-define(SN121841, "Frappe de l'Aigle").
+-define(SN121861, "Feu et Épée").
+-define(SN121881, "Jeu de la mort").
+-define(SD121801, "Inflige {0}% dégâts à {6} cibles (Monstres + {7}), avec {1}% de chance d'infliger l'effet Briser (Réduction de DGT -{2}%, Chances de Blocage -{3}%), s'empile jusqu'à {4} fois et dure pendant {5}s.").
+-define(SD121841, "Inflige {0}% dégâts à {5} cibles (Monstres + {6}), en infligeant l'effet Briser (Réduction de DGT -{1}%, Chances de Blocage -{2}%), s'empile jusqu'à {3} fois et dure pendant {4}s.").
+-define(SD121861, "Les attaques ont {0}% de chance de déclencher Feu et Epée, infligeant {1}% de dégâts aux cibles et infligeant l'effet Briser (Réduction de DGT -{2}%, Chances de Blocage -{3}%), s'empile jusqu'à {4} fois et dure pendant {5}s.").
+-define(SD121881, "Inflige {0}% dégâts à {6} cibles (Monstres + {7}), en infligeant {1} couche(s) d'effet Briser (Réduction de DGT -{2}%, Chances de Blocage -{3}%), s'empile jusqu'à {4} fois et dure pendant {5}s.").
+-define(SS121801, "Inflige des dégâts mineurs et inflige un effet Fracasser empilable").
+-define(SS121841, "Inflige des dégâts modérés et inflige un effet Fracasser empilable").
+-define(SS121861, "Les attaques ont une chance d'infliger des dégâts bonus et d'infliger l'effet Fracasser").
+-define(SS121881, "Inflige des dégâts massifs et inflige un effet Fracasser empilable").
+-define(BN20406, "Bénédiction de l'Atelier Nain").
+-define(BN20407, "Bénédiction du Laboratoire d'Alchimie").
+-define(BN20408, "Bénédiction du Tour de Mage").
+-define(BD20406, "Atelier Nain occupé, stats légèrement augmentées.").
+-define(BD20407, "Laboratoire d'Alchimie occupé, stats augmentées modérément.").
+-define(BD20408, "Tour de Mage occupée, stats fortement augmentées.").
+-define(BOSSSD1, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et étourdissez-les pendant {1} sec.").
+-define(BOSSSD2, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et les étourdis.").
+-define(BOSSSD3, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et les pétrifie pendant {1} sec.").
+-define(BOSSSD4, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et perce leurs armures pendant {1} sec.").
+-define(BOSSSD5, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et inflige la terreur pendant {1} sec.").
+-define(BOSSSD6, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et les gèle pendant {1} sec.").
+-define(BOSSSD7, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et les paralyse pendant {1} sec.").
+-define(BOSSSD8, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et inflige Brûlure pendant {3} sec, infligeant {2}% de DGT d'ATQ chaque {1} sec.").
+-define(BOSSSD9, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et inflige du poison pendant {3} sec, infligeant {2}% de DGT d'ATQ chaque {1} sec.").
+-define(BOSSSD10, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et inflige un Saignement pendant {3} sec, infligeant {2}% de DGT d'ATQ chaque {1} sec.").
+-define(BOSSSD11, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et inflige vulnérable pendant {1} sec, augmentant leurs DGT subis.").
+-define(BOSSSD12, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée et inflige malédiction, réduisant leur taux de Toucher de {1}% pendant {2} sec.").
+-define(BOSSSD13, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée.Gagnez Renforcé : +{1}% de Bonus de DGT pendant {2} sec au toucher.").
+-define(BOSSSD14, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée.Soin pour un certain nombre de PV au toucher.").
+-define(BOSSSD15, "Charge pendant {0} sec, puis inflige des DGT massifs aux ennemis dans la zone marquée.").
+-define(BOSSSN16, "").
+-define(BOSSSD16, "").
+-define(BOSSSN17, "").
+-define(BOSSSD17, "").
+-define(BOSSSN18, "").
+-define(BOSSSD18, "").
+-define(BOSSSN19, "").
+-define(BOSSSD19, "").
+-define(BOSSSN20, "").
+-define(BOSSSD20, "").
+-define(BOSSSN21, "").
+-define(BOSSSD21, "").
+-define(BOSSSN22, "").
+-define(BOSSSD22, "").
+-define(BOSSSN23, "").
+-define(BOSSSD23, "").
+-define(BOSSSN24, "").
+-define(BOSSSD24, "").
+-define(SN121901, "Beauté Perçante").
+-define(SN121941, "Poignard Épineux").
+-define(SN121961, "Assaut Majestueux").
+-define(SN121981, "Tempête Épineuse").
+-define(SD121901, "Inflige {0}% de DGT à {2} cibles proches (monstres + {3}).Taux Crit de Compétence +{1}%.").
+-define(SD121941, "Inflige {0}% de DGT à {2} cibles proches (monstres + {3}).Taux Crit de Compétence +{1}%.").
+-define(SD121961, "Les attaques ont une {0}% de chances de déclencher l'Assaut Majestueux et d'infliger {1}% DGT.Taux Crit de Compétence +{2}%.").
+-define(SD121981, "Inflige {0}% de DGT à {3} cibles proches (monstres + {4}).Taux Crit de Compétence +{1}% et dissipe {2} améliorations aux cibles.").
+-define(SS121901, "Inflige des dégâts mineurs avec un taux crit accru.").
+-define(SS121941, "Inflige des dégâts modérés avec un taux crit accru.").
+-define(SS121961, "Les attaques ont une chance d'infliger des dégâts bonus avec un taux crit augmenté.").
+-define(SS121981, "Inflige des dégâts massifs avec un taux de crit accru et dissipe les améliorations.").
+-define(SN510051, "Lumière d'Incinération").
+-define(SD510051, "Gagne un bouclier de {0}% PV qui dure jusqu'à {1} sec et augmente la Réduction des DGT de {2}% pendant {3} sec.").
+-define(SN520051, "Miracle de Givre").
+-define(SD520051, "Augmente le Bonus de Soin de {0}% pendant {1} sec et réduit les Soins reçus par {2} ennemis proches de {3}% pendant {4} sec.").
+-define(SN530051, "Chasse au Condor").
+-define(SD530051, "Augmente le Bonus des DGT de {0}% pendant {1} sec et réduit les DGT infligés par {2} ennemis proches de {3}% pendant {4} sec.").
+-define(BN56015, "Lumière d'Incinération").
+-define(BD56015, "Réduction DGT +{0}%").
+-define(BN56025, "Miracle de Givre").
+-define(BD56025, "Bonus de Guérison-{0}%").
+-define(BN56046, "Chasse au Condor").
+-define(BD56046, "Réduction des DGT -{0}%").
+-define(BF1020, "").
+-define(BF1021, "").
+-define(BF1022, "").
+-define(BF1023, "").
+-define(BD386, "").
+-define(BN386, "").
+-define(BN387, "").
+-define(BN388, "").
+-define(BN389, "").
+-define(BN390, "").
+-define(BN391, "").
+-define(BN392, "").
+-define(BN393, "").
+-define(BN394, "").
+-define(BN395, "").
+-define(BN396, "").
+-define(BN397, "").
+-define(BN39701, "").
+-define(BN39702, "").
+-define(BN39703, "").
+-define(BN39704, "").
+-define(BN39705, "").
+-define(BN39706, "").
+-define(BN39707, "").
+-define(BN39708, "").
+-define(BN39709, "").
+-define(BN39710, "").
+-define(BN39711, "").
+-define(BD398, "").
+-define(BN398, "").
+-define(BN399, "").
+-define(BN409, "").
+-define(BD410, "").
+-define(BN410, "").
+-define(BD411, "").
+-define(BN411, "").
+-define(BD412, "").
+-define(BN412, "").
+-define(BD413, "").
+-define(BN413, "").
+-define(BD416, "").
+-define(BN416, "").
+-define(BD417, "").
+-define(BN417, "").
+-define(BD418, "").
+-define(BN418, "Défier la Mort").
+-define(BN419, "").
+-define(BD419, "").
+-define(BN420, "").
+-define(BD420, "").
+-define(BN421, "").
+-define(BD421, "").
+-define(BN422, "").
+-define(BD422, "").
+-define(SN806721, "").
+-define(SN806731, "").
+-define(SN806741, "").
+-define(SN806751, "").
+-define(SN806761, "").
+-define(SN806771, "Garde des Eaux").
+-define(SN806781, "").
+-define(SN806791, "").
+-define(SN806801, "").
+-define(SN806811, "").
+-define(SN806821, "").
+-define(SN806831, "").
+-define(SN806841, "").
+-define(SN806851, "").
+-define(SN806861, "").
+-define(SN806871, "").
+-define(SN806881, "").
+-define(SN806891, "").
+-define(SN806901, "").
+-define(SN806911, "").
+-define(SN806921, "").
+-define(SN806931, "").
+-define(SN806941, "").
+-define(SN806951, "").
+-define(SN806961, "").
+-define(SN806971, "").
+-define(SN806981, "").
+-define(SN806991, "").
+-define(SN807001, "").
+-define(SN807011, "").
+-define(SN807021, "").
+-define(SN807031, "").
+-define(SN807041, "").
+-define(SN807051, "").
+-define(SN807061, "").
+-define(SN807071, "").
+-define(SD806721, "").
+-define(SD806731, "").
+-define(SD806741, "").
+-define(SD806751, "").
+-define(SD806761, "").
+-define(SD806771, "").
+-define(SD806781, "").
+-define(SD806791, "").
+-define(SD806801, "").
+-define(SD806811, "").
+-define(SD806821, "").
+-define(SD806831, "").
+-define(SD806841, "").
+-define(SD806851, "").
+-define(SD806861, "").
+-define(SD806871, "").
+-define(SD806881, "").
+-define(SD806891, "").
+-define(SD806901, "").
+-define(SD806911, "").
+-define(SD806921, "").
+-define(SD806931, "").
+-define(SD806941, "").
+-define(SD806951, "").
+-define(SD806961, "").
+-define(SD806971, "").
+-define(SD806981, "").
+-define(SD806991, "").
+-define(SD807001, "").
+-define(SD807011, "").
+-define(SD807021, "").
+-define(SD807031, "").
+-define(SD807041, "").
+-define(SD807051, "").
+-define(SD807061, "").
+-define(SD807071, "").
+-define(BN13001, "").
+-define(BN13011, "").
+-define(BN13021, "").
+-define(BN13031, "").
+-define(BN13041, "").
+-define(BD13001, "Taux Anti-Excellent +{0}%").
+-define(BD13011, "Taux d'Anti Coup Mortel +{0}%").
+-define(BD13021, "").
+-define(BD13031, "Réduction DGT Crit +{0}%").
+-define(BD13041, "Réduction des Dégâts +{0}%").
+-define(BF13001, "").
+-define(BF1011, "").
+-define(BN54026, "").
+-define(BN54027, "").
+-define(BD54026, "DGT Finaux +{0}%").
+-define(BD54027, "").
+-define(BN14001, "").
+-define(BD14001, "Bonus DGT +{0}%").
+-define(BN14002, "").
+-define(BD14002, "").
+-define(BF14001, "").
+-define(BN14037, "").
+-define(BD14037, "Bonus DGT +{0}%").
+-define(BN14038, "").
+-define(BD14038, "Bonus DGT +{0}%").
+-define(BF14037, "").
+-define(SN631101, "").
+-define(SN632101, "").
+-define(SN633101, "").
+-define(SN634101, "").
+-define(SN635101, "").
+-define(SN636101, "").
+-define(SN637101, "").
+-define(SN638101, "").
+-define(SN639101, "").
+-define(SN615201, "Réd DGT Crit").
+-define(SN616201, "Réduction DGT de Frappe").
+-define(SN618201, "Bonus DGT Crit").
+-define(SN619201, "Bonus DGT Focalisation").
+-define(SN631201, "Taux d'Anti Coup Mortel").
+-define(SN632201, "Taux de Focalisation").
+-define(SN633201, "Taux Excellent").
+-define(SN634201, "Taux de Coup Mortel").
+-define(SN635201, "Taux de Fragilité").
+-define(SN636201, "Taux de Rés.de Poursuite").
+-define(SN637201, "Taux de Rés.de Frappe Multiple").
+-define(SN638201, "Taux de Châtiment").
+-define(SN639201, "Frappe de Poursuite").
+-define(SD631101, "").
+-define(SD632101, "").
+-define(SD633101, "").
+-define(SD634101, "").
+-define(SD635101, "").
+-define(SD636101, "").
+-define(SD637101, "").
+-define(SD638101, "").
+-define(SD639101, "").
+-define(SD615201, "Réduction DGT Crit +{0}%").
+-define(SD616201, "Réduction DGT de Focalisation +{0}%").
+-define(SD618201, "Bonus DGT Crit +{0}%").
+-define(SD619201, "Bonus d'ATQ de Focalisation augmente de {0}%").
+-define(SD631201, "Taux d'Anti Coup Mortel +{0}%").
+-define(SD632201, "Taux de Focalisation +{0}%").
+-define(SD633201, "Taux Excellent +{0}%").
+-define(SD634201, "Le Taux Mortel augmente de {0}%").
+-define(SD635201, "Taux de Fragilité +{0}%").
+-define(SD636201, "").
+-define(SD637201, "").
+-define(SD638201, "Taux de Châtiment +{0}%").
+-define(SD639201, "Frappe de Poursuite +{0}%").
+-define(EASYSD631101, "").
+-define(EASYSD632101, "").
+-define(EASYSD633101, "").
+-define(EASYSD634101, "").
+-define(EASYSD635101, "").
+-define(EASYSD636101, "").
+-define(EASYSD637101, "").
+-define(EASYSD638101, "").
+-define(EASYSD639101, "").
+-define(EASYSD640101, "").
+-define(EASYSD615201, "Réduction DGT Crit +{0}%").
+-define(EASYSD616201, "Réduction DGT de Focalisation +{0}%").
+-define(EASYSD618201, "Bonus DGT Crit +{0}%").
+-define(EASYSD619201, "Bonus d'ATQ de Focalisation augmente de {0}%").
+-define(EASYSD631201, "Taux d'Anti Coup Mortel +{0}%").
+-define(EASYSD632201, "Taux de Focalisation +{0}%").
+-define(EASYSD633201, "Taux Excellent +{0}%").
+-define(EASYSD634201, "Le Taux Mortel augmente de {0}%").
+-define(EASYSD635201, "Taux de Fragilité +{0}%").
+-define(EASYSD636201, "").
+-define(EASYSD637201, "").
+-define(EASYSD638201, "Taux de Châtiment +{0}%").
+-define(EASYSD639201, "Frappe de Poursuite +{0}%").
+-define(EASYSD640201, "").
+-define(SCN170001, "").
+-define(SCD170001, "").
+-define(SS170001, "").
+-define(SCN170011, "").
+-define(SCD170011, "").
+-define(SS170011, "").
+-define(SCN170021, "").
+-define(SCD170021, "").
+-define(SS170021, "").
+-define(SCN170031, "").
+-define(SCD170031, "").
+-define(SS170031, "").
+-define(SCN170041, "").
+-define(SCD170041, "").
+-define(SS170041, "").
+-define(SCN170051, "").
+-define(SCD170051, "").
+-define(SS170051, "").
+-define(SCN170061, "").
+-define(SCD170061, "").
+-define(SS170061, "").
+-define(SCN170071, "").
+-define(SCD170071, "").
+-define(SS170071, "").
+-define(SCN170081, "").
+-define(SCD170081, "").
+-define(SS170081, "").
+-define(SCN170091, "").
+-define(SCD170091, "").
+-define(SS170091, "").
+-define(SCN170101, "").
+-define(SCD170101, "").
+-define(SS170101, "").
+-define(SCN170111, "").
+-define(SCD170111, "").
+-define(SS170111, "").
+-define(BF15001, "").
+-define(BF15002, "").
+-define(BF15003, "").
+-define(SCN170121, "").
+-define(SCD170121, "").
+-define(SS170121, "").
+-define(SCN170131, "").
+-define(SCD170131, "").
+-define(SS170131, "").
+-define(SCN170141, "").
+-define(SCD170141, "").
+-define(SS170141, "").
+-define(SCN170151, "").
+-define(SCD170151, "").
+-define(SS170151, "").
+-define(SCN170161, "").
+-define(SCD170161, "").
+-define(SS170161, "").
+-define(SCN170171, "").
+-define(SCD170171, "").
+-define(SS170171, "").
+-define(BF15004, "").
+-define(BF15005, "").
+-define(BF15006, "").
+-define(BF15007, "").
+-define(BF15008, "").
+-define(BN15008, "").
+-define(BD15008, "").
+-define(EASYSD910001, "").
+-define(SN910001, "").
+-define(SN910021, "").
+-define(SN910041, "").
+-define(SN910061, "").
+-define(SN910081, "").
+-define(SN910101, "").
+-define(SN910121, "").
+-define(SN910141, "").
+-define(SN910161, "").
+-define(SN910181, "").
+-define(SN910201, "").
+-define(SN910221, "").
+-define(SN910241, "").
+-define(SN910261, "").
+-define(SN910281, "").
+-define(SN910301, "").
+-define(SN910321, "").
+-define(SN910341, "").
+-define(SN910361, "").
+-define(SN910381, "").
+-define(SN910401, "").
+-define(SN910421, "").
+-define(SN910441, "").
+-define(SN910461, "").
+-define(SN910481, "").
+-define(SN910501, "").
+-define(SN910521, "").
+-define(SN910541, "").
+-define(SN910561, "").
+-define(SN910581, "").
+-define(SN910601, "").
+-define(SN910621, "").
+-define(SN910641, "").
+-define(SN910661, "").
+-define(SN910681, "").
+-define(SN910701, "").
+-define(SN910721, "").
+-define(SN910741, "").
+-define(SN910761, "").
+-define(SN910781, "").
+-define(SN910801, "").
+-define(SN910821, "").
+-define(SN910841, "").
+-define(SN910861, "").
+-define(SN910881, "").
+-define(SN910901, "").
+-define(SN910921, "").
+-define(SN910941, "").
+-define(SN910961, "").
+-define(SN910981, "").
+-define(SN911001, "").
+-define(SN911021, "").
+-define(SN911041, "").
+-define(SN911061, "").
+-define(SN911081, "").
+-define(SN911101, "").
+-define(SN911121, "").
+-define(SN911141, "").
+-define(SN911161, "").
+-define(SN911181, "").
+-define(SN911201, "").
+-define(SN911221, "").
+-define(SN911241, "").
+-define(SN911261, "").
+-define(SN911281, "").
+-define(SN911301, "").
+-define(SN911321, "").
+-define(SN911341, "").
+-define(SN911361, "").
+-define(SN911381, "").
+-define(SN911401, "").
+-define(SN911421, "").
+-define(SN911441, "").
+-define(SN911461, "").
+-define(SN911481, "").
+-define(SN911501, "").
+-define(SN911521, "").
+-define(SN911541, "").
+-define(SN911561, "").
+-define(SN911581, "").
+-define(SN911601, "").
+-define(SN911621, "").
+-define(SN911641, "").
+-define(SN911661, "").
+-define(SN911681, "").
+-define(SN911701, "").
+-define(SN911721, "").
+-define(SN911741, "").
+-define(SN911761, "").
+-define(SN911781, "").
+-define(SN911801, "").
+-define(SN911821, "").
+-define(SN911841, "").
+-define(SN911861, "").
+-define(SN911881, "").
+-define(SN911901, "").
+-define(SN911921, "").
+-define(SN911941, "").
+-define(SN911961, "").
+-define(SN911981, "").
+-define(SN920001, "").
+-define(SN920021, "").
+-define(SN920041, "").
+-define(SN920061, "").
+-define(SN920081, "").
+-define(SN920101, "").
+-define(SN920121, "").
+-define(SN920141, "").
+-define(SN920161, "").
+-define(SN920181, "").
+-define(SN920201, "").
+-define(SN920221, "").
+-define(SN920241, "").
+-define(SN920261, "").
+-define(SN920281, "").
+-define(SN920301, "").
+-define(SN920321, "").
+-define(SN920341, "").
+-define(SN920361, "").
+-define(SN920381, "").
+-define(SN920401, "").
+-define(SN920421, "").
+-define(SN920441, "").
+-define(SN920461, "").
+-define(SN920481, "").
+-define(SN920501, "").
+-define(SN920521, "").
+-define(SN920541, "").
+-define(SN920561, "").
+-define(SN920581, "").
+-define(SN920601, "").
+-define(SN920621, "").
+-define(SN920641, "").
+-define(SN920661, "").
+-define(SN920681, "").
+-define(SN920701, "").
+-define(SN920721, "").
+-define(SN920741, "").
+-define(SN920761, "").
+-define(SN920781, "").
+-define(SN920801, "").
+-define(SN920821, "").
+-define(SN920841, "").
+-define(SN920861, "").
+-define(SN920881, "").
+-define(SN920901, "").
+-define(SN920921, "").
+-define(SN920941, "").
+-define(SN920961, "").
+-define(SN920981, "").
+-define(SN921001, "").
+-define(SN921021, "").
+-define(SN921041, "").
+-define(SN921061, "").
+-define(SN921081, "").
+-define(SN921101, "").
+-define(SN921121, "").
+-define(SN921141, "").
+-define(SN921161, "").
+-define(SN921181, "").
+-define(SN921201, "").
+-define(SN921221, "").
+-define(SN921241, "").
+-define(SN921261, "").
+-define(SN921281, "").
+-define(SN921301, "").
+-define(SN921321, "").
+-define(SN921341, "").
+-define(SN921361, "").
+-define(SN921381, "").
+-define(SN921401, "").
+-define(SN921421, "").
+-define(SN921441, "").
+-define(SN921461, "").
+-define(SN921481, "").
+-define(SN921501, "").
+-define(SN921521, "").
+-define(SN921541, "").
+-define(SN921561, "").
+-define(SN921581, "").
+-define(SN921601, "").
+-define(SN921621, "").
+-define(SN921641, "").
+-define(SN921661, "").
+-define(SN921681, "").
+-define(SN921701, "").
+-define(SN921721, "").
+-define(SN921741, "").
+-define(SN921761, "").
+-define(SN921781, "").
+-define(SN921801, "").
+-define(SN921821, "").
+-define(SN921841, "").
+-define(SN921861, "").
+-define(SN921881, "").
+-define(SN921901, "").
+-define(SN921921, "").
+-define(SN921941, "").
+-define(SN921961, "").
+-define(SN921981, "").
+-define(SN930001, "Force de la Nature").
+-define(SN930021, "").
+-define(SN930041, "").
+-define(SN930061, "").
+-define(SN930081, "").
+-define(SN930101, "").
+-define(SN930121, "").
+-define(SN930141, "").
+-define(SN930161, "").
+-define(SN930181, "").
+-define(SN930201, "").
+-define(SN930221, "").
+-define(SN930241, "").
+-define(SN930261, "").
+-define(SN930281, "").
+-define(SN930301, "").
+-define(SN930321, "").
+-define(SN930341, "").
+-define(SN930361, "").
+-define(SN930381, "").
+-define(SN930401, "").
+-define(SN930421, "").
+-define(SN930441, "").
+-define(SN930461, "").
+-define(SN930481, "").
+-define(SN930501, "").
+-define(SN930521, "").
+-define(SN930541, "").
+-define(SN930561, "").
+-define(SN930581, "").
+-define(SN930601, "").
+-define(SN930621, "").
+-define(SN930641, "").
+-define(SN930661, "").
+-define(SN930681, "").
+-define(SN930701, "").
+-define(SN930721, "").
+-define(SN930741, "").
+-define(SN930761, "").
+-define(SN930781, "").
+-define(SN930801, "").
+-define(SN930821, "").
+-define(SN930841, "").
+-define(SN930861, "").
+-define(SN930881, "").
+-define(SN930901, "").
+-define(SN930921, "").
+-define(SN930941, "").
+-define(SN930961, "").
+-define(SN930981, "").
+-define(SN931001, "").
+-define(SN931021, "").
+-define(SN931041, "").
+-define(SN931061, "").
+-define(SN931081, "").
+-define(SN931101, "").
+-define(SN931121, "").
+-define(SN931141, "").
+-define(SN931161, "").
+-define(SN931181, "").
+-define(SN931201, "").
+-define(SN931221, "").
+-define(SN931241, "").
+-define(SN931261, "").
+-define(SN931281, "").
+-define(SN931301, "").
+-define(SN931321, "").
+-define(SN931341, "").
+-define(SN931361, "").
+-define(SN931381, "").
+-define(SN931401, "").
+-define(SN931421, "").
+-define(SN931441, "").
+-define(SN931461, "").
+-define(SN931481, "").
+-define(SN931501, "").
+-define(SN931521, "").
+-define(SN931541, "").
+-define(SN931561, "").
+-define(SN931581, "").
+-define(SN931601, "").
+-define(SN931621, "").
+-define(SN931641, "").
+-define(SN931661, "").
+-define(SN931681, "").
+-define(SN931701, "").
+-define(SN931721, "").
+-define(SN931741, "").
+-define(SN931761, "").
+-define(SN931781, "").
+-define(SN931801, "").
+-define(SN931821, "").
+-define(SN931841, "").
+-define(SN931861, "").
+-define(SN931881, "").
+-define(SN931901, "").
+-define(SN931921, "").
+-define(SN931941, "").
+-define(SN931961, "").
+-define(SN931981, "").
+-define(SN940001, "").
+-define(SN940021, "").
+-define(SN940041, "").
+-define(SN940061, "").
+-define(SN940081, "").
+-define(SN940101, "").
+-define(SN940121, "").
+-define(SN940141, "").
+-define(SN940161, "").
+-define(SN940181, "").
+-define(SN940201, "").
+-define(SN940221, "").
+-define(SN940241, "").
+-define(SN940261, "").
+-define(SN940281, "").
+-define(SN940301, "").
+-define(SN940321, "").
+-define(SN940341, "").
+-define(SN940361, "").
+-define(SN940381, "").
+-define(SN940401, "").
+-define(SN940421, "").
+-define(SN940441, "").
+-define(SN940461, "").
+-define(SN940481, "").
+-define(SN940501, "").
+-define(SN940521, "").
+-define(SN940541, "").
+-define(SN940561, "").
+-define(SN940581, "").
+-define(SN940601, "").
+-define(SN940621, "").
+-define(SN940641, "").
+-define(SN940661, "").
+-define(SN940681, "").
+-define(SN940701, "").
+-define(SN940721, "").
+-define(SN940741, "").
+-define(SN940761, "").
+-define(SN940781, "").
+-define(SN940801, "").
+-define(SN940821, "").
+-define(SN940841, "").
+-define(SN940861, "").
+-define(SN940881, "").
+-define(SN940901, "").
+-define(SN940921, "").
+-define(SN940941, "").
+-define(SN940961, "").
+-define(SN940981, "").
+-define(SN941001, "").
+-define(SN941021, "").
+-define(SN941041, "").
+-define(SN941061, "").
+-define(SN941081, "").
+-define(SN941101, "").
+-define(SN941121, "").
+-define(SN941141, "").
+-define(SN941161, "").
+-define(SN941181, "").
+-define(SN941201, "").
+-define(SN941221, "").
+-define(SN941241, "").
+-define(SN941261, "").
+-define(SN941281, "").
+-define(SN941301, "").
+-define(SN941321, "").
+-define(SN941341, "").
+-define(SN941361, "").
+-define(SN941381, "").
+-define(SN941401, "").
+-define(SN941421, "").
+-define(SN941441, "").
+-define(SN941461, "").
+-define(SN941481, "").
+-define(SN941501, "").
+-define(SN941521, "").
+-define(SN941541, "").
+-define(SN941561, "").
+-define(SN941581, "").
+-define(SN941601, "").
+-define(SN941621, "").
+-define(SN941641, "").
+-define(SN941661, "").
+-define(SN941681, "").
+-define(SN941701, "").
+-define(SN941721, "").
+-define(SN941741, "").
+-define(SN941761, "").
+-define(SN941781, "").
+-define(SN941801, "").
+-define(SN941821, "").
+-define(SN941841, "").
+-define(SN941861, "").
+-define(SN941881, "").
+-define(SN941901, "").
+-define(SN941921, "").
+-define(SN941941, "").
+-define(SN941961, "").
+-define(SN941981, "").
+-define(SD910001, "").
+-define(SD910021, "").
+-define(SD910041, "").
+-define(SD910061, "").
+-define(SD910081, "").
+-define(BN1000208, "").
+-define(BD1000208, "").
+-define(BF1000208, "").
+-define(SN200101, "Orbe Élémentaire").
+-define(SD200101, "").
+-define(SS200101, "DGT Infligés").
+-define(SN200141, "").
+-define(SD200141, "").
+-define(SS200141, "").
+-define(SN200161, "Garde de Glace").
+-define(SD200161, "").
+-define(SS200161, "").
+-define(SN200201, "Arbitre").
+-define(SD200201, "").
+-define(SS200201, "DGT Infligés").
+-define(SN200241, "Verdict Sacré").
+-define(SD200241, "").
+-define(SS200241, "").
+-define(SN200261, "Sanctuaire de Lumière").
+-define(SD200261, "").
+-define(SS200261, "").
+-define(SN200301, "Missile Démoniaque").
+-define(SD200301, "").
+-define(SS200301, "DGT Infligés").
+-define(SN200341, "Âme de Démon").
+-define(SD200341, "").
+-define(SS200341, "").
+-define(SN200361, "Égide de Prière").
+-define(SD200361, "").
+-define(SS200361, "").
+-define(SN200401, "Mélodies célestes").
+-define(SD200401, "").
+-define(SS200401, "DGT Infligés").
+-define(SN200441, "").
+-define(SD200441, "").
+-define(SS200441, "").
+-define(SN200461, "Bastion de Lumière").
+-define(SD200461, "").
+-define(SD200462, "").
+-define(SD200463, "").
+-define(SS200461, "").
+-define(SN200501, "").
+-define(SD200501, "").
+-define(SS200501, "DGT Infligés").
+-define(SN200541, "").
+-define(SD200541, "").
+-define(SS200541, "").
+-define(SN200561, "0").
+-define(SD200561, "").
+-define(SS200561, "").
+-define(SN200601, "").
+-define(SD200601, "").
+-define(SS200601, "").
+-define(SN200641, "").
+-define(SD200641, "").
+-define(SS200641, "").
+-define(SN200661, "").
+-define(SD200661, "").
+-define(SS200661, "").
+-define(SN200701, "Enchaînement des Montagnes").
+-define(SD200701, "").
+-define(SS200701, "DGT Infligés").
+-define(SN200740, "").
+-define(SD200740, "").
+-define(SS200741, "DGT Infligés").
+-define(SN200761, "Enchaînement Tourbillonnante").
+-define(SD200761, "").
+-define(SS200761, "DGT Infligés").
+-define(SN200801, "Tranchant en Arc").
+-define(SD200801, "").
+-define(SS200801, "DGT Infligés").
+-define(SN200841, "").
+-define(SD200841, "").
+-define(SS200841, "").
+-define(SN200861, "Danse de Lames").
+-define(SD200861, "").
+-define(SS200861, "").
+-define(SN200901, "Frappe du Marteau").
+-define(SD200901, "").
+-define(SS200901, "DGT Infligés").
+-define(SN200941, "Marteau Lourd").
+-define(SD200941, "").
+-define(SS200941, "").
+-define(SN200961, "Marteau Puissant").
+-define(SD200961, "").
+-define(SS200961, "").
+-define(SN201001, "Feu Céleste").
+-define(SD201001, "").
+-define(SS201001, "DGT Infligés").
+-define(SN201041, "Oiseau Phénix").
+-define(SD201041, "").
+-define(SS201041, "").
+-define(SN201061, "Étoile Fel").
+-define(SD201061, "").
+-define(SS201061, "DGT Infligés").
+-define(SN201101, "Impact du Destin").
+-define(SD201101, "").
+-define(SS201101, "DGT Infligés").
+-define(SN201141, "").
+-define(SD201141, "").
+-define(SS201141, "").
+-define(SN201161, "Retour Primal").
+-define(SD201161, "").
+-define(SS201161, "DGT Infligés").
+-define(SN201201, "").
+-define(SD201201, "").
+-define(SS201201, "").
+-define(SN201241, "").
+-define(SD201241, "").
+-define(SS201241, "").
+-define(SN201261, "").
+-define(SD201261, "").
+-define(SS201261, "").
+-define(SS201262, "").
+-define(SN201301, "Frappe Véhémente").
+-define(SD201301, "").
+-define(SS201301, "DGT Infligés").
+-define(SN201341, "").
+-define(SD201341, "").
+-define(SS201341, "DGT Infligés").
+-define(SN201361, "Révolution Cosmique").
+-define(SD201361, "").
+-define(SS201361, "").
+-define(SN201401, "Shuriken").
+-define(SD201401, "").
+-define(SS201401, "DGT Infligés").
+-define(SN201441, "").
+-define(SD201441, "").
+-define(SS201441, "DGT Infligés").
+-define(SN201461, "Coup de Fouet Éclair").
+-define(SD201461, "").
+-define(SS201461, "DGT Infligés").
+-define(SN201501, "Ombre de l'Épée").
+-define(SD201501, "").
+-define(SS201501, "DGT Infligés").
+-define(SN201541, "Lame Ouragan").
+-define(SD201541, "").
+-define(SS201541, "").
+-define(SN201561, "Lame Chaos").
+-define(SD201561, "").
+-define(SS201561, "").
+-define(SN201601, "Enchaînement").
+-define(SD201601, "").
+-define(SS201601, "DGT Infligés").
+-define(SN201641, "").
+-define(SD201641, "").
+-define(SS201641, "").
+-define(SN201661, "Cinq Étoiles").
+-define(SD201661, "").
+-define(SS201661, "").
+-define(SD201681, "").
+-define(SN201701, "Orbe de Lumière").
+-define(SD201701, "").
+-define(SS201701, "DGT Infligés").
+-define(SN201741, "").
+-define(SD201741, "").
+-define(SS201741, "").
+-define(SN201761, "").
+-define(SD201761, "").
+-define(SS201761, "").
+-define(SN201801, "Coupe en croissant").
+-define(SD201801, "").
+-define(SS201801, "DGT Infligés").
+-define(SN201841, "").
+-define(SD201841, "").
+-define(SS201841, "").
+-define(SN201861, "Jeu de la mort").
+-define(SD201861, "").
+-define(SS201861, "").
+-define(SN201901, "Beauté Perçante").
+-define(SD201901, "").
+-define(SS201901, "DGT Infligés").
+-define(SN201941, "Poignard Épineux").
+-define(SD201941, "").
+-define(SS201941, "DGT Infligés").
+-define(SN201961, "Tempête Épineuse").
+-define(SD201961, "").
+-define(SD201962, "").
+-define(SD201963, "").
+-define(SS201961, "").
+-define(BN16001, "Garde de Glace").
+-define(BN16002, "Garde de Glace").
+-define(BN16003, "Verdict Sacré").
+-define(BN16004, "Sanctuaire de Lumière").
+-define(BN16005, "Âme de Démon").
+-define(BN16006, "Égide de Prière").
+-define(BN16007, "Bastion de Lumière").
+-define(BN16008, "").
+-define(BN16009, "").
+-define(BN16010, "").
+-define(BN16011, "Enfer du Bain de Sang").
+-define(BN16012, "").
+-define(BN16013, "Danse de Lames").
+-define(BN16014, "Marteau Lourd").
+-define(BN16015, "Marteau Puissant").
+-define(BN16016, "Marteau Puissant").
+-define(BN16017, "Oiseau Phénix").
+-define(BN16018, "").
+-define(BN16019, "").
+-define(BN16020, "Cinq Étoiles").
+-define(BN16021, "").
+-define(BN16022, "Lame Ouragan").
+-define(BN16023, "").
+-define(BN16024, "").
+-define(BN16025, "").
+-define(BN16026, "").
+-define(BN16027, "Jeu de la mort").
+-define(BN16028, "Tempête Épineuse").
+-define(BN16029, "Lame Chaos").
+-define(BD16001, "0").
+-define(BD16002, "Soigne sur la Durée").
+-define(BD16003, "ATQ +{0}%").
+-define(BD16004, "").
+-define(BD16005, "Réduction des Dégâts +{0}%").
+-define(BD16006, "").
+-define(BD16007, "").
+-define(BD16008, "Vitesse de Déplacement -{0}%").
+-define(BD16009, "").
+-define(BD16010, "").
+-define(BD16011, "").
+-define(BD16012, "").
+-define(BD16013, "").
+-define(BD16014, "Vitesse de Déplacement -{0}%").
+-define(BD16015, "").
+-define(BD16016, "Vitesse de Déplacement -{0}%").
+-define(BD16017, "").
+-define(BD16018, "Vitesse de Déplacement -{0}%").
+-define(BD16019, "").
+-define(BD16020, "").
+-define(BD16021, "Réduction des DGT -{0}%").
+-define(BD16022, "Réduction des DGT -{0}%").
+-define(BD16023, "Réduction des DGT -{0}%").
+-define(BD16024, "Pétrifier").
+-define(BD16025, "Vitesse de Déplacement -{0}%").
+-define(BD16026, "Taux de Toucher -{0}%").
+-define(BD16027, "").
+-define(BD16028, "").
+-define(BD16029, "").
+-define(BF16001, "").
+-define(BF16002, "").
+-define(BF16003, "[Jeanne d'Arc]").
+-define(BF16004, "[Jeanne d'Arc]").
+-define(BF16005, "").
+-define(BF16006, "").
+-define(BF16007, "[Archange]").
+-define(BF16008, "").
+-define(BF16009, "").
+-define(BF16010, "[Elizabeth]").
+-define(BF16011, "[Elizabeth]").
+-define(BF16012, "[Brunhild]").
+-define(BF16013, "[Brunhild]").
+-define(BF16014, "[Héraclès]").
+-define(BF16015, "[Héraclès]").
+-define(BF16016, "[Héraclès]").
+-define(BF16017, "[Ifrit]").
+-define(BF16018, "[Pandore]").
+-define(BF16019, "[Dracula]").
+-define(BF16020, "").
+-define(BF16021, "[Dracula]").
+-define(BF16022, "[Siegfried]").
+-define(BF16023, "").
+-define(BF16024, "[Reine d'Égypte]").
+-define(BF16025, "[Reine d'Égypte]").
+-define(BF16026, "[Saladin]").
+-define(BF16027, "[Saladin]").
+-define(BF16028, "").
+-define(BF16029, "[Siegfried]").
+-define(SN202101, "").
+-define(SD202101, "").
+-define(SS202101, "DGT Infligés").
+-define(SN202141, "").
+-define(SD202141, "").
+-define(SS202141, "DGT Infligés").
+-define(SN202161, "Entrée").
+-define(SD202161, "").
+-define(SS202161, "").
+-define(SN202201, "Cauchemar").
+-define(SD202201, "").
+-define(SS202201, "DGT Infligés").
+-define(SN202241, "Éveil").
+-define(SD202241, "").
+-define(SS202241, "").
+-define(SN202261, "").
+-define(SD202261, "").
+-define(SS202261, "DGT Infligés").
+-define(SN202301, "Malédiction").
+-define(SD202301, "").
+-define(SS202301, "DGT Infligés").
+-define(SN202341, "").
+-define(SD202341, "").
+-define(SS202341, "DGT Infligés").
+-define(SN202361, "").
+-define(SD202361, "").
+-define(SS202361, "").
+-define(SN202401, "").
+-define(SD202401, "").
+-define(SS202401, "DGT Infligés").
+-define(SN202441, "Brutalité").
+-define(SD202441, "").
+-define(SS202441, "DGT Infligés").
+-define(SN202461, "").
+-define(SD202461, "").
+-define(SS202461, "").
+-define(SN202501, "").
+-define(SD202501, "").
+-define(SS202501, "DGT Infligés").
+-define(SN202541, "").
+-define(SD202541, "").
+-define(SS202541, "DGT Infligés").
+-define(SN202561, "").
+-define(SD202561, "").
+-define(SS202561, "DGT Infligés").
+-define(SN202601, "").
+-define(SD202601, "").
+-define(SS202601, "DGT Infligés").
+-define(SN202641, "").
+-define(SD202641, "").
+-define(SS202641, "DGT Infligés").
+-define(SN202661, "").
+-define(SD202661, "").
+-define(SS202661, "").
+-define(SN202701, "").
+-define(SD202701, "").
+-define(SS202701, "DGT Infligés").
+-define(SN202741, "").
+-define(SD202741, "").
+-define(SS202741, "DGT Infligés").
+-define(SN202761, "").
+-define(SD202761, "").
+-define(SS202761, "").
+-define(BN16030, "Entrée").
+-define(BD16030, "").
+-define(BF16030, "").
+-define(BN16031, "").
+-define(BD16031, "Vitesse de Déplacement -{0}%").
+-define(BF16031, "").
+-define(BN16032, "").
+-define(BD16032, "Vitesse de Déplacement -{0}%").
+-define(BF16032, "").
+-define(BN16033, "").
+-define(BD16033, "").
+-define(BF16033, "").
+-define(SN125101, "Juge Victorieux").
+-define(SD125101, "").
+-define(SS125101, "").
+-define(SN125201, "Danse du Corbeau").
+-define(SD125201, "").
+-define(SS125201, "").
+-define(SN125301, "").
+-define(SD125301, "").
+-define(SS125301, "").
+-define(SN125401, "").
+-define(SD125401, "").
+-define(SS125401, "DGT Infligés").
+-define(SN125501, "").
+-define(SD125501, "").
+-define(SS125501, "").
+-define(BN17001, "Sagesse").
+-define(BD17001, "").
+-define(BF17001, "").
+-define(BN17002, "").
+-define(BD17002, "").
+-define(BF17002, "").
+-define(BN17003, "").
+-define(BD17003, "").
+-define(BF17003, "").
+-define(BN17004, "").
+-define(BD17004, "").
+-define(BF17004, "").
+-define(SN202801, "Enchaînement").
+-define(SD202801, "").
+-define(SS202801, "DGT Infligés").
+-define(SN202901, "Enchaînement").
+-define(SD202901, "").
+-define(SS202901, "DGT Infligés").
+-define(SN203001, "").
+-define(SD203001, "").
+-define(SS203001, "DGT Infligés").
+-define(SN203101, "").
+-define(SD203101, "").
+-define(SS203101, "DGT Infligés").
+-define(SN203201, "Enchaînement").
+-define(SD203201, "").
+-define(SS203201, "DGT Infligés").
+-define(SN203301, "").
+-define(SD203301, "").
+-define(SS203301, "DGT Infligés").
+-define(SN203401, "").
+-define(SD203401, "").
+-define(SS203401, "DGT Infligés").
+-define(SN203501, "").
+-define(SD203501, "").
+-define(SS203501, "DGT Infligés").
+-define(SN203601, "").
+-define(SD203601, "").
+-define(SS203601, "DGT Infligés").
+-define(SD1440714, "").
+-define(SD1440694, "").
+-define(SD1440764, "").
+-define(SD1440964, "").
+-define(BN17009, "").
+-define(BD17009, "Bonus DGT +{0}%").
+-define(BF17009, "").
+-define(BN17010, "").
+-define(BD17010, "Réduction des Dégâts +{0}%").
+-define(BF17010, "").
+-define(BN17011, "Bonus de Dégâts").
+-define(BD17011, "Bonus DGT +{0}%").
+-define(BF17011, "").
+-define(BN17012, "Lenteur").
+-define(BD17012, "").
+-define(BF17012, "").
+-define(BN17013, "Étourdissement").
+-define(BD17013, "").
+-define(BF17013, "").
+-define(SN120001, "").
+-define(SN120002, "").
+-define(SN120003, "").
+-define(SN120004, "").
+-define(SN120005, "").
+-define(SN120006, "").
+-define(SN120007, "").
+-define(SN120008, "").
+-define(SN120021, "").
+-define(SN120022, "").
+-define(SN120023, "").
+-define(SN120024, "").
+-define(SN120025, "").
+-define(SN120026, "").
+-define(SN120027, "").
+-define(SN120028, "").
+-define(SN120041, "").
+-define(SN120042, "").
+-define(SN120043, "").
+-define(SN120044, "").
+-define(SN120045, "").
+-define(SN120046, "").
+-define(SN120047, "").
+-define(SN120048, "").
+-define(SD120001, "").
+-define(SD120002, "").
+-define(SD120003, "").
+-define(SD120004, "").
+-define(SD120005, "").
+-define(SD120006, "").
+-define(SD120007, "").
+-define(SD120008, "").
+-define(SUD201261, "").
+-define(SUD201201, "").
+-define(SUD201241, "").
+-define(SUD200961, "").
+-define(SUD200901, "").
+-define(SUD200941, "").
+-define(SUD200761, "").
+-define(SUD200701, "").
+-define(SUD200741, "").
+-define(SUD201161, "").
+-define(SUD201101, "").
+-define(SUD201141, "").
+-define(SUD200161, "").
+-define(SUD200101, "").
+-define(SUD200141, "").
+-define(SUD201561, "").
+-define(SUD201501, "").
+-define(SUD201541, "").
+-define(SUD200361, "").
+-define(SUD200301, "").
+-define(SUD200341, "").
+-define(SUD201761, "").
+-define(SUD201701, "").
+-define(SUD201741, "").
+-define(SUD201661, "").
+-define(SUD201601, "").
+-define(SUD201641, "").
+-define(SUD200861, "").
+-define(SUD200801, "").
+-define(SUD200841, "").
+-define(SUD201061, "").
+-define(SUD201001, "").
+-define(SUD201041, "").
+-define(SUD200261, "").
+-define(SUD200201, "").
+-define(SUD200241, "").
+-define(SUD200461, "").
+-define(SUD200401, "").
+-define(SUD200441, "").
+-define(SUD201361, "").
+-define(SUD201301, "").
+-define(SUD201341, "").
+-define(SUD201461, "").
+-define(SUD201401, "").
+-define(SUD201441, "").
+-define(SUD200661, "").
+-define(SUD200601, "").
+-define(SUD200641, "").
+-define(SUD201861, "").
+-define(SUD201801, "").
+-define(SUD201841, "").
+-define(SUD201961, "").
+-define(SUD201901, "").
+-define(SUD201941, "").
+-define(SUD110011, "").
+-define(SUD110100, "").
+-define(SUD110101, "").
+-define(SUD110105, "").
+-define(SUD110200, "").
+-define(SUD110201, "").
+-define(SUD110205, "").
+-define(SUD200561, "").
+-define(SUD200501, "").
+-define(SUD200541, "").
+-define(SUD110300, "").
+-define(SUD110301, "").
+-define(SUD110305, "").
+-define(SUD202161, "").
+-define(SUD202101, "").
+-define(SUD202141, "").
+-define(SUD202261, "").
+-define(SUD202201, "").
+-define(SUD202241, "").
+-define(SUD202361, "").
+-define(SUD202301, "").
+-define(SUD202341, "").
+-define(SUD202461, "").
+-define(SUD202401, "").
+-define(SUD202441, "").
+-define(SUD202561, "").
+-define(SUD202501, "").
+-define(SUD202541, "").
+-define(SUD202661, "").
+-define(SUD202601, "").
+-define(SUD202641, "").
+-define(SUD202761, "").
+-define(SUD202701, "").
+-define(SUD202741, "").
+-define(SUD202801, "").
+-define(SUD202901, "").
+-define(SUD203001, "").
+-define(SUD203101, "").
+-define(SUD203201, "").
+-define(SUD203301, "").
+-define(SUD203401, "").
+-define(SUD203501, "").
+-define(SUD203601, "").
+-define(SUD203761, "").
+-define(SUD203701, "").
+-define(SUD203741, "").
+-define(SUD203861, "").
+-define(SUD203801, "").
+-define(SUD203841, "").
+-define(SUD203961, "").
+-define(SUD203901, "").
+-define(SUD203941, "").
+-define(SN203701, "").
+-define(SD203701, "").
+-define(SS203701, "DGT Infligés").
+-define(SN203741, "").
+-define(SD203741, "").
+-define(SS203741, "DGT Infligés").
+-define(SN203761, "").
+-define(SD203761, "").
+-define(SS203761, "DGT Infligés").
+-define(SN203801, "").
+-define(SD203801, "").
+-define(SS203801, "DGT Infligés").
+-define(SN203841, "").
+-define(SD203841, "").
+-define(SS203841, "DGT Infligés").
+-define(SN203861, "").
+-define(SD203861, "").
+-define(SS203861, "DGT Infligés").
+-define(SN203901, "").
+-define(SD203901, "").
+-define(SS203901, "DGT Infligés").
+-define(SN203941, "").
+-define(SD203941, "").
+-define(SS203941, "DGT Infligés").
+-define(SN203961, "").
+-define(SD203961, "").
+-define(SS203961, "DGT Infligés").
+-define(SD120051, "").
+-define(SN120051, "").
+-define(BF17017, "").
+-define(BN17017, "").
+-define(BD17017, "").
+-define(BF17018, "").
+-define(BN17018, "").
+-define(BD17018, "").
+-define(BF17019, "").
+-define(BN17019, "").
+-define(BD17019, "").
+-define(BF17020, "").
+-define(BF17021, "").
+-define(BF17022, "").
+-define(SUD110101001, "").
+-define(SUD110105001, "").
+-define(SUD110106001, "").
+-define(SUD110107001, "").
+-define(SUD110108001, "").
+-define(SUD110201001, "").
+-define(SUD110205001, "").
+-define(SUD110206001, "").
+-define(SUD110207001, "").
+-define(SUD110208001, "").
+-define(SUD110301001, "").
+-define(SUD110305001, "").
+-define(SUD110306001, "").
+-define(SUD110307001, "").
+-define(SUD110308001, "").
+-define(BD1602121, "Soigne sur la Durée").
+-define(SN709101, "Amélioration Rapide").
+-define(BN17027, "Émoussé").
+-define(BD17027, "").
+-define(BF17027, "").
+-define(BN17028, "Aveugle").
+-define(BD17028, "").
+-define(BF17028, "").
+-define(BN17024, "").
+-define(BN17025, "").
+-define(BN17026, "").
+-define(BD17024, "").
+-define(BD17025, "").
+-define(BD17026, "").
+-define(BF17024, "").
+-define(BF17025, "").
+-define(BF17026, "").
+-define(BN17029, "").
+-define(BN17030, "").
+-define(BN17031, "").
+-define(BD17029, "").
+-define(BD17030, "").
+-define(BD17031, "").
+-define(BF17029, "").
+-define(BF17030, "[Dragon de Feu]").
+-define(BF17031, "").
+-define(BN17032, "").
+-define(BN17033, "").
+-define(BN17034, "").
+-define(BD17032, "").
+-define(BD17033, "").
+-define(BD17034, "").
+-define(SN204001, "").
+-define(SD204001, "").
+-define(SS204001, "DGT Infligés").
+-define(SN204041, "").
+-define(SD204041, "").
+-define(SS204041, "DGT Infligés").
+-define(SN204061, "").
+-define(SD204061, "").
+-define(SS204061, "DGT Infligés").
+-define(SN204101, "").
+-define(SD204101, "").
+-define(SS204101, "DGT Infligés").
+-define(SN204141, "").
+-define(SD204141, "").
+-define(SS204141, "DGT Infligés").
+-define(SN204161, "").
+-define(SD204161, "").
+-define(SS204161, "DGT Infligés").
+-define(SS204162, "").
+-define(SN204201, "").
+-define(SD204201, "").
+-define(SS204201, "DGT Infligés").
+-define(SN204241, "").
+-define(SD204241, "").
+-define(SS204241, "DGT Infligés").
+-define(SN204261, "").
+-define(SD204261, "").
+-define(BN17023, "").
+-define(BD17023, "").
+-define(BF17023, "").
+-define(SN2000001, "").
+-define(BN17036, "").
+-define(BD17036, "").
+-define(BF17036, "").
+-define(BN17039, "").
+-define(BD17039, "").
+-define(BF17039, "").
+-define(BN17040, "").
+-define(BD17040, "").
+-define(BF17040, "").
+-define(BN17041, "").
+-define(BD17041, "").
+-define(BF17041, "").
+-define(BN17042, "").
+-define(BD17042, "").
+-define(BF17042, "").
+-define(SN111001, "").
+-define(SD111001, "").
+-define(SN111005, "").
+-define(SD111005, "").
+-define(SN111006, "").
+-define(SD111006, "").
+-define(SN111007, "").
+-define(SD111007, "").
+-define(SN111008, "").
+-define(SD111008, "").
+-define(SCN111005, "").
+-define(SCD111005, "").
+-define(SCN111006, "").
+-define(SCD111006, "").
+-define(SCN111007, "").
+-define(SCD111007, "").
+-define(SCN111008, "").
+-define(SCD111008, "").
+-define(SN111101, "").
+-define(SD111101, "").
+-define(SN111105, "").
+-define(SD111105, "").
+-define(SN111106, "").
+-define(SD111106, "").
+-define(SN111107, "").
+-define(SD111107, "").
+-define(SN111108, "").
+-define(SD111108, "").
+-define(BN17061, "").
+-define(BN17062, "").
+-define(BN17063, "").
+-define(BN17064, "").
+-define(BN17065, "").
+-define(BN17066, "").
+-define(BN17067, "").
+-define(BD17061, "").
+-define(BD17062, "").
+-define(BD17063, "").
+-define(BD17064, "").
+-define(BD17065, "").
+-define(BD17066, "").
+-define(BD17067, "").
+-define(BN17069, "").
+-define(BD17069, "").
+-define(SN111201, "").
+-define(SD111201, "").
+-define(SN111205, "").
+-define(SD111205, "").
+-define(SN111206, "").
+-define(SD111206, "").
+-define(SN111207, "").
+-define(SD111207, "").
+-define(SN111208, "").
+-define(SD111208, "").
+-define(SN111209, "").
+-define(SD111209, "").
+-define(BN17070, "").
+-define(BD17070, "").
+-define(BN17071, "").
+-define(BD17071, "").
+-define(BN17072, "").
+-define(BD17072, "").
+-define(BN17073, "").
+-define(BD17073, "").
+-define(BN17074, "").
+-define(BD17074, "").
+-define(SUD110500, "").
+-define(SUD110600, "").
+-define(SUD110900, "").
+-define(SUD110501, "").
+-define(SUD110601, "").
+-define(SUD111101, "").
+-define(SUD111105, "").
+-define(SUD111106, "").
+-define(SUD111107, "").
+-define(SUD111108, "").
+-define(SUD111201, "").
+-define(SUD111205, "").
+-define(SUD111206, "").
+-define(SUD111207, "").
+-define(SUD111208, "").
+-define(SUD111209, "").
+-define(SUD111301, "").
+-define(SUD111305, "").
+-define(SUD111306, "").
+-define(SUD111307, "").
+-define(SUD111308, "").
+-define(SN650001, "").
+-define(SN650005, "").
+-define(SN650009, "").
+-define(SN650013, "").
+-define(SN650017, "").
+-define(SN650021, "").
+-define(SN650025, "").
+-define(SN650029, "").
+-define(SN650033, "").
+-define(SN650037, "").
+-define(SN650041, "").
+-define(SN650045, "").
+-define(SN650049, "").
+-define(SN650053, "").
+-define(SN650057, "").
+-define(SN650061, "").
+-define(SN650065, "").
+-define(SN650069, "").
+-define(SN650073, "").
+-define(SN650077, "").
+-define(SN650081, "").
+-define(SN650085, "").
+-define(SN650089, "").
+-define(SN650093, "").
+-define(SN650097, "").
+-define(SN650101, "").
+-define(SN650105, "").
+-define(SN650109, "").
+-define(SN650113, "").
+-define(SN650117, "").
+-define(SN650121, "").
+-define(SN650125, "").
+-define(SN650129, "").
+-define(SN650133, "").
+-define(SN650137, "").
+-define(SN650141, "").
+-define(SD650001, "").
+-define(SD650005, "").
+-define(SD650009, "").
+-define(SD650013, "").
+-define(SD650017, "").
+-define(SD650021, "").
+-define(SD650025, "").
+-define(SD650029, "").
+-define(SD650033, "").
+-define(SD650037, "").
+-define(SD650041, "").
+-define(SD650045, "").
+-define(SD650049, "").
+-define(SD650053, "").
+-define(SD650057, "").
+-define(SD650061, "").
+-define(SD650065, "").
+-define(SD650069, "").
+-define(SD650073, "").
+-define(SD650077, "").
+-define(SD650081, "").
+-define(SD650085, "").
+-define(SD650089, "").
+-define(SD650093, "").
+-define(SD650097, "").
+-define(SD650101, "").
+-define(SD650105, "").
+-define(SD650109, "").
+-define(SD650113, "").
+-define(SD650117, "").
+-define(SD650121, "").
+-define(SD650125, "").
+-define(SD650129, "").
+-define(SD650133, "").
+-define(SD650137, "").
+-define(SD650141, "").
+-define(EASYSD650001, "").
+-define(EASYSD650005, "").
+-define(EASYSD650009, "").
+-define(EASYSD650013, "").
+-define(EASYSD650017, "").
+-define(EASYSD650021, "").
+-define(EASYSD650025, "").
+-define(EASYSD650029, "").
+-define(EASYSD650033, "").
+-define(EASYSD650037, "").
+-define(EASYSD650041, "").
+-define(EASYSD650045, "").
+-define(EASYSD650049, "").
+-define(EASYSD650053, "").
+-define(EASYSD650057, "").
+-define(EASYSD650061, "").
+-define(EASYSD650065, "").
+-define(EASYSD650069, "").
+-define(EASYSD650073, "").
+-define(EASYSD650077, "").
+-define(EASYSD650081, "").
+-define(EASYSD650085, "").
+-define(EASYSD650089, "").
+-define(EASYSD650093, "").
+-define(EASYSD650097, "").
+-define(EASYSD650101, "").
+-define(EASYSD650105, "").
+-define(EASYSD650109, "").
+-define(EASYSD650113, "").
+-define(EASYSD650117, "").
+-define(EASYSD650121, "").
+-define(EASYSD650125, "").
+-define(EASYSD650129, "").
+-define(EASYSD650133, "").
+-define(EASYSD650137, "").
+-define(EASYSD650141, "").
+-define(SN120071, "").
+-define(SN120072, "").
+-define(SN120073, "").
+-define(SN120074, "").
+-define(SN120075, "").
+-define(SN120076, "").
+-define(SN120077, "").
+-define(SN120078, "").
+-define(SN848, "").
+-define(SD848, "").
+-define(SN849, "").
+-define(SD849, "").
+-define(BN849, "").
+-define(BD849, "").
+-define(SN291211, "").
+-define(SD291211, "").
+-define(SI3, "").
+-define(SN107001, "").
+-define(SD107001, "").
+-define(SN107006, "").
+-define(SD107006, "").
+-define(SN107007, "").
+-define(SD107007, "").
+-define(SN107008, "").
+-define(SD107008, "").
+-define(SN107009, "").
+-define(SD107009, "").
+-define(SN107011, "").
+-define(SD107011, "").
+-define(SN107012, "").
+-define(SD107012, "").
+-define(SN107021, "").
+-define(SD107021, "").
+-define(SN107022, "").
+-define(SD107022, "").
+-define(SN107031, "").
+-define(SD107031, "").
+-define(SN107032, "").
+-define(SD107032, "").
+-define(SN107111, "").
+-define(SD107111, "").
+-define(SN107121, "").
+-define(SD107121, "").
+-define(SN107131, "").
+-define(SD107131, "").
+-define(SN107141, "").
+-define(SD107141, "").
+-define(SN107151, "").
+-define(SD107151, "").
+-define(SN107161, "").
+-define(SD107161, "").
+-define(BN64001, "").
+-define(BD64001, "").
+-define(BN64002, "").
+-define(BD64002, "").
+-define(BN64003, "").
+-define(BD64003, "").
+-define(BN64006, "").
+-define(BD64006, "").
+-define(BN64007, "").
+-define(BD64007, "").
+-define(BN64008, "").
+-define(BD64008, "").
+-define(BN64009, "").
+-define(BD64009, "").
+-define(BN64010, "").
+-define(BD64010, "").
+-define(BN64011, "").
+-define(BD64011, "").
+-define(BN64012, "").
+-define(BD64012, "").
+-define(BN64013, "").
+-define(BD64013, "").
+-define(BN64014, "").
+-define(BD64014, "").
+-define(SN107301, "").
+-define(SD107301, "").
+-define(SD107302, "").
+-define(SD107303, "").
+-define(SD107304, "").
+-define(SN107401, "").
+-define(SD107401, "").
+-define(SN291241, "").
+-define(SN291251, "").
+-define(SN291261, "").
+-define(SN291271, "").
+-define(SD291241, "").
+-define(SD291251, "").
+-define(SD291261, "").
+-define(SD291271, "").
+-define(BN64101, "").
+-define(BN64121, "").
+-define(BN64151, "").
+-define(BN64161, "").
+-define(BN64171, "").
+-define(BN64181, "").
+-define(BN64191, "").
+-define(BD64101, "").
+-define(BD64121, "").
+-define(BD64151, "").
+-define(BD64161, "").
+-define(BD64171, "").
+-define(BD64181, "").
+-define(BD64191, "").
+-define(SD200581, "").
+-define(SD200781, "").
+-define(SD200881, "").
+-define(SD200981, "").
+-define(SD201081, "").
+-define(SD201181, "").
+-define(SD201481, "").
+-define(SD201881, "").
+-define(SD201981, "").
+-define(SD202181, "").
+-define(SD202281, "").
+-define(SD202381, "").
+-define(SD202481, "").
+-define(SD210581, "").
+-define(SD201281, "").
+-define(SD200681, "").
+-define(BN17091, "").
+-define(BD17091, "").
+-define(BN17096, "").
+-define(BD17096, "").
+-define(BF17091, "").
+-define(SS200781, "").
+-define(SCN170181, "").
+-define(SCD170181, "").
+-define(SCN170191, "").
+-define(SCD170191, "").
+-define(SS170191, "").
+-define(SCN170201, "").
+-define(SCD170201, "").
+-define(SS170201, "").
+-define(SCN170211, "").
+-define(SCD170211, "").
+-define(SS170211, "").
+-define(SCN170221, "").
+-define(SCD170221, "").
+-define(SS170221, "").
+-define(SCN170231, "").
+-define(SCD170231, "").
+-define(SS170231, "").
+-define(SN291351, "").
+-define(SD291351, "").
+-define(SS291351, "").
+-define(SN291361, "").
+-define(SD291361, "").
+-define(SS291361, "").
+-define(BF199, "").
+-define(SCN191001, "").
+-define(SCN191011, "").
+-define(SCN191021, "").
+-define(SCN191031, "").
+-define(SCD191001, "").
+-define(SCD191011, "").
+-define(SCD191021, "").
+-define(SCD191031, "").
+-define(BN96001, "").
+-define(BD96001, "").
+-define(BF96001, "").
+-define(SUD200462, "").
+-define(SUD201962, "").
+-define(BD1600721, "").
+-define(BN1600721, "").
+-define(SN210401, "").
+-define(SD210401, "").
+-define(BN116007, "").
+-define(BD116007, "").
+-define(BN11600721, "").
+-define(BD11600721, "").
+-define(SN210441, "").
+-define(SD210441, "").
+-define(SN210461, "").
+-define(SD210461, "").
+-define(SD210462, "").
+-define(SD210463, "").
+-define(BD11607211, "").
+-define(BD1600795, "").
+-define(SN211901, "").
+-define(SD211901, "").
+-define(SN211941, "").
+-define(SD211941, "").
+-define(SN211961, "").
+-define(SD211961, "").
+-define(SD211962, "").
+-define(SD211963, "").
+-define(BN116028, "").
+-define(BD116028, "").
+-define(BF116007, "").
+-define(BF116028, "").
+-define(SUD210461, "").
+-define(SUD210462, "").
+-define(SUD210401, "").
+-define(SUD210441, "").
+-define(SS210401, "DGT Infligés").
+-define(SS210441, "").
+-define(SS210461, "").
+-define(SS211901, "DGT Infligés").
+-define(SS211941, "DGT Infligés").
+-define(SS211961, "").
+-define(SN110900, "").
+-define(SD110900, "").
+-define(SN111301, "").
+-define(SD111301, "").
+-define(SN111305, "").
+-define(SD111305, "").
+-define(SN111306, "").
+-define(SD111306, "").
+-define(SN111307, "").
+-define(SD111307, "").
+-define(SN111308, "").
+-define(SD111308, "").
+-define(BN17101, "").
+-define(BD17101, "").
+-define(BF17101, "").
+-define(BN17111, "").
+-define(BD17111, "").
+-define(BN17121, "").
+-define(BD17121, "").
+-define(BD1001547, "").
+-define(BD1001548, "").
+-define(SN291381, "").
+-define(SD291381, "").
+-define(SS291381, "").
+-define(SN291371, "").
+-define(SD291371, "").
+-define(SS291371, "").
+-define(BN57004, "").
+-define(BD57004, "").
+-define(BN57005, "").
+-define(BD57005, "").
+-define(SCN170241, "").
+-define(SCN170251, "").
+-define(SCN170261, "").
+-define(SCN170271, "").
+-define(SCN170281, "").
+-define(SCN170291, "").
+-define(SCN170301, "").
+-define(SCN170311, "").
+-define(SCN170321, "").
+-define(SCN170331, "").
+-define(SCN170341, "").
+-define(SCN170351, "").
+-define(SCN170361, "").
+-define(SCN170371, "").
+-define(SCN170381, "").
+-define(SCN170391, "").
+-define(SCN170401, "").
+-define(SCN170411, "").
+-define(SCN170421, "").
+-define(SCN170431, "").
+-define(SCD170241, "").
+-define(SCD170251, "").
+-define(SCD170261, "").
+-define(SCD170271, "").
+-define(SCD170281, "").
+-define(SCD170291, "").
+-define(SCD170301, "").
+-define(SCD170311, "").
+-define(SCD170321, "").
+-define(SCD170331, "").
+-define(SCD170341, "").
+-define(SCD170351, "").
+-define(SCD170361, "").
+-define(SCD170371, "").
+-define(SCD170381, "").
+-define(SCD170391, "").
+-define(SCD170401, "").
+-define(SCD170411, "").
+-define(SCD170421, "").
+-define(SCD170431, "").
+-define(SN211101, "").
+-define(SD211101, "").
+-define(SN211111, "").
+-define(SD211111, "").
+-define(SN211121, "").
+-define(SD211121, "").
+-define(SN211131, "").
+-define(SD211131, "").
+-define(SN211141, "").
+-define(SD211141, "").
+-define(SN211151, "").
+-define(SD211151, "").
+-define(SN211161, "").
+-define(SD211161, "").
+-define(SN211171, "").
+-define(SD211171, "").
+-define(SN211181, "").
+-define(SD211181, "").
+-define(SN211191, "").
+-define(SD211191, "").
+-define(SN211011, "").
+-define(SD211011, "").
+-define(SN211021, "").
+-define(SD211021, "").
+-define(SN211031, "").
+-define(SD211031, "").
+-define(SN211041, "").
+-define(SD211041, "").
+-define(BN17221, "").
+-define(BN17222, "").
+-define(BN17223, "").
+-define(BN17224, "").
+-define(BD17224, "").
+-define(BF17221, "").
+-define(EASYSD211011, "").
+-define(EASYSD211021, "").
+-define(EASYSD211031, "").
+-define(EASYSD211041, "").
+-define(EASYSD211101, "").
+-define(EASYSD211111, "").
+-define(EASYSD211121, "").
+-define(EASYSD211131, "").
+-define(EASYSD211141, "").
+-define(EASYSD211151, "").
+-define(EASYSD211161, "").
+-define(EASYSD211171, "").
+-define(EASYSD211181, "").
+-define(EASYSD211191, "").
+-define(SCN192001, "").
+-define(SCD192001, "").
+-define(BN17210, "").
+-define(BD17210, "").
+-define(BF17210, "").
+-define(SCN192011, "").
+-define(SCD192011, "").
+-define(BN17211, "").
+-define(BD17211, "").
+-define(SCN192021, "").
+-define(SCD192021, "").
+-define(BN17212, "").
+-define(BD17212, "").
+-define(SCN192031, "").
+-define(SCD192031, "").
+-define(BN17213, "").
+-define(BD17213, "").
+-define(SCN192041, "").
+-define(SCD192041, "").
+-define(BN17214, "").
+-define(BD17214, "").
+-define(SCN192051, "").
+-define(SCD192051, "").
+-define(BN17215, "").
+-define(BD17215, "").
+-define(SCN192061, "").
+-define(SCD192061, "").
+-define(BN17216, "").
+-define(BD17216, "").
+-define(SCN192071, "").
+-define(SCD192071, "").
+-define(BN17217, "").
+-define(BD17217, "").
+-define(SN1180010, "").
+-define(SN1180030, "").
+-define(SN1180050, "").
+-define(SN1180070, "").
+-define(SN1180080, "").
+-define(SN1180085, "").
+-define(SN1180105, "").
+-define(SN1180125, "").
+-define(SN1180135, "").
+-define(SN1180145, "").
+-define(SN1180150, "").
+-define(SN1180160, "").
+-define(SN1180170, "").
+-define(SN1180180, "").
+-define(SN1180190, "").
+-define(SN1180200, "").
+-define(SN1180210, "").
+-define(SN1180215, "").
+-define(SD1180010, "").
+-define(SD1180030, "").
+-define(SD1180050, "").
+-define(SD1170080, "").
+-define(SD1180085, "").
+-define(SD1180105, "").
+-define(SD1180125, "").
+-define(SD1180135, "").
+-define(SD1180145, "").
+-define(SD1180150, "").
+-define(SD1180160, "").
+-define(SS1180010, "").
+-define(SS1180030, "").
+-define(SS1180050, "").
+-define(SS1180070, "").
+-define(SS1180080, "").
+-define(SS1180085, "").
+-define(SS1180105, "").
+-define(SS1180125, "").
+-define(SS1180135, "").
+-define(SS1180145, "").
+-define(SS1180150, "").
+-define(SS1180160, "").
+-define(SS1180180, "").
+-define(SS1180190, "").
+-define(SS1180200, "").
+-define(SS1180210, "").
+-define(SS1180215, "").
+-define(BN28135, "").
+-define(BN28140, "").
+-define(BN28160, "").
+-define(BN28180, "").
+-define(BN28190, "").
+-define(BN28191, "").
+-define(BN28196, "").
+-define(BN28035, "").
+-define(BN28055, "").
+-define(BN28056, "").
+-define(BN28057, "").
+-define(BN28058, "").
+-define(BN28059, "").
+-define(BN28060, "").
+-define(BN28115, "").
+-define(BD28135, "").
+-define(BD28140, "").
+-define(BD28160, "").
+-define(BD28180, "").
+-define(BD28190, "").
+-define(BD28035, "").
+-define(BD28055, "").
+-define(BD28056, "").
+-define(BD28057, "").
+-define(BD28058, "").
+-define(BD28059, "").
+-define(BD28060, "").
+-define(BD28115, "").
+-define(BN342, "").
+-define(BD342, "").
+-define(BN343, "").
+-define(BD343, "").
+-define(BF93, "").
+-define(SD676, "").
+-define(SD680, "").
+-define(SN681, "").
+-define(SN684, "").
+-define(SD677, "").
+-define(SD678, "").
+-define(SD679, "").
+-define(SD682, "").
+-define(SD681, "").
+-define(SD1180170, "").
+-define(SS1180170, "").
+-define(BD28191, "").
+-define(BD28196, "").
+-define(SD1180070, "").
+-define(SD1180180, "").
+-define(SD1180190, "").
+-define(SD1180200, "").
+-define(SD1180210, "").
+-define(SD1180215, "").
+-define(SD683, "").
+-define(BN1001549, "").
+-define(BN1001550, "").
+-define(BD1001550, "").
+-define(BF507, "").
+-define(BD1001549, "").
+-define(BN16101, "").
+-define(BD16101, "").
+-define(BN16102, "").
+-define(BD16102, "").
+-define(BN16103, "").
+-define(BD16103, "").
+-define(SCN193011, "").
+-define(SCD193011, "").
+-define(SCN193021, "").
+-define(SCD193021, "").
+-define(SCN193031, "").
+-define(SCD193031, "").
+-define(SN110800, "").
+-define(SD110800, "").
+-define(SUD110800, "").
+-define(BN17141, "").
+-define(BD17141, "").
+-define(BF17141, "").
+-define(SN111401, "").
+-define(SD111401, "").
+-define(SUD111401, "").
+-define(SN111405, "").
+-define(SD111405, "").
+-define(SUD111405, "").
+-define(SN111406, "").
+-define(SD111406, "").
+-define(SUD111406, "").
+-define(SN111407, "").
+-define(SD111407, "").
+-define(SUD111407, "").
+-define(SN111408, "").
+-define(SD111408, "").
+-define(SUD111408, "").
+-define(BN17143, "").
+-define(BD17143, "").
+-define(BN17144, "").
+-define(BD17144, "").
+-define(BN17145, "").
+-define(BD17145, "").
+-define(BN17146, "").
+-define(BD17146, "").
+-define(SN1510264, "").
+-define(SD1510264, "").
+-define(BN74001, "").
+-define(BD74001, "").
+-define(SN1510704, "").
+-define(SD1510704, "").
+-define(BN74004, "").
+-define(BD74004, "").
+-define(BN74006, "").
+-define(BD74006, "").
+-define(SN1510744, "").
+-define(SD1510744, "").
+-define(BN74007, "").
+-define(BD74007, "").
+-define(SN1510604, "").
+-define(SD1510604, "").
+-define(BN74009, "").
+-define(BD74009, "").
+-define(BN74010, "").
+-define(BD74010, "").
+-define(SN1510124, "").
+-define(SD1510124, "").
+-define(BN74011, "").
+-define(BD74011, "").
+-define(BN74014, "").
+-define(BD74014, "").
+-define(SN1510684, "").
+-define(SD1510684, "").
+-define(BN74015, "").
+-define(BD74015, "").
+-define(SN1510224, "").
+-define(SD1510224, "").
+-define(BN74016, "").
+-define(BD74016, "").
+-define(SN1510014, "").
+-define(SD1510014, "").
+-define(BN74017, "").
+-define(SN1510784, "").
+-define(SD1510784, "").
+-define(BN74020, "").
+-define(BD74020, "").
+-define(SN1510504, "").
+-define(SD1510504, "").
+-define(SN1510794, "").
+-define(SD1510794, "").
+-define(BN74021, "").
+-define(BD74021, "").
+-define(BN74024, "").
+-define(BD74024, "").
+-define(BN74025, "").
+-define(BD74025, "").
+-define(SN1510474, "").
+-define(SD1510474, "").
+-define(BN74026, "").
+-define(BD74026, "").
+-define(SN1510564, "").
+-define(SD1510564, "").
+-define(BN74027, "").
+-define(BN74030, "").
+-define(BD74030, "").
+-define(BN74031, "").
+-define(BN74032, "").
+-define(BD74032, "").
+-define(SN1510904, "").
+-define(SD1510904, "").
+-define(BN74033, "").
+-define(BD74033, "").
+-define(SN1510154, "").
+-define(SD1510154, "").
+-define(BN74035, "").
+-define(BD74035, "").
+-define(SN1510724, "").
+-define(SD1510724, "").
+-define(BN74037, "").
+-define(BD74037, "").
+-define(SN1510074, "").
+-define(SD1510074, "").
+-define(BN74038, "").
+-define(BD74038, "").
+-define(SN1510764, "").
+-define(SD1510764, "").
+-define(BN74039, "").
+-define(BD74039, "").
+-define(BN74042, "").
+-define(BD74042, "").
+-define(SN1510184, "").
+-define(SD1510184, "").
+-define(BN74043, "").
+-define(BD74043, "").
+-define(SN1510754, "").
+-define(SD1510754, "").
+-define(BN74044, "").
+-define(BD74044, "").
+-define(SN1510524, "").
+-define(SD1510524, "").
+-define(BN74045, "").
+-define(BN74047, "").
+-define(SUD110700, "").
+-define(SN110700, "Le Printemps Arrive").
+-define(SD110700, "").
+-define(BN17150, "Le Printemps Arrive").
+-define(BD17150, "").
+-define(BF17151, "[Freya]").
+-define(SN111501, "Offensive de Vigne").
+-define(SD111501, "").
+-define(SUD111501, "").
+-define(SN111505, "Scie de Rotin").
+-define(SD111505, "").
+-define(SUD111505, "").
+-define(BN17151, "").
+-define(BD17151, "").
+-define(BN17152, "").
+-define(BD17152, "").
+-define(BN1715221, "").
+-define(BD1715221, "").
+-define(SN111506, "Fleurs Épanouies").
+-define(SD111506, "").
+-define(SUD111506, "").
+-define(BN17153, "").
+-define(BD17153, "").
+-define(SN111507, "Royaume de la Nature").
+-define(SD111507, "").
+-define(SUD111507, "").
+-define(BN17155, "").
+-define(BD17155, "").
+-define(BN17156, "").
+-define(BD17156, "").
+-define(BD17157, "").
+-define(BD17158, "").
+-define(SN111508, "Colère de la Terre").
+-define(SD111508, "").
+-define(SUD111508, "").
+-define(BN17154, "").
+-define(BD17154, "").
+-define(SN125601, "").
+-define(SD125601, "").
+-define(SS125601, "").
+-define(BN17163, "").
+-define(BD17163, "").
+-define(BD17164, "").
+-define(BD17169, "").
+-define(SN111600, "").
+-define(SD111600, "").
+-define(SN111601, "").
+-define(SD111601, "").
+-define(SD111602, "").
+-define(SN111605, "").
+-define(SD111605, "").
+-define(SN111606, "").
+-define(SD111606, "").
+-define(SN111607, "").
+-define(SD111607, "").
+-define(SN111608, "").
+-define(SD111608, "").
+-define(BN17160, "").
+-define(BD17160, "").
+-define(BN17167, "").
+-define(BD17167, "").
+-define(BN17172, "").
+-define(BD17172, "").
+-define(BN17173, "").
+-define(BD17173, "").
+-define(BN17175, "").
+-define(BD17175, "").
+-define(BN17176, "").
+-define(BD17176, "").
+-define(BD17177, "").
+-define(BF17160, "").
+-define(SUD111600, "").
+-define(SUD111601, "").
+-define(SUD111602, "").
+-define(SUD111605, "").
+-define(SUD111606, "").
+-define(SUD111607, "").
+-define(SUD111608, "").
+-define(SN111009, "").
+-define(SD111009, "").
+-define(SN111112, "").
+-define(SD111112, "").
+-define(BD1706201, "").
+-define(SN111210, "").
+-define(SD111210, "").
+-define(BN1707021, "").
+-define(SN111310, "").
+-define(SD111310, "").
+-define(SN111409, "").
+-define(SD111409, "").
+-define(SN111509, "").
+-define(SD111509, "").
+-define(SN111609, "").
+-define(SD111609, "").
+-define(BN1716701, "").
+-define(BD1716701, "").
+-define(SN111700, "").
+-define(SD111700, "").
+-define(SN111701, "").
+-define(SD111701, "").
+-define(SN111702, "").
+-define(SD111702, "").
+-define(SN111703, "").
+-define(SD111703, "").
+-define(SN111705, "").
+-define(SD111705, "").
+-define(SN111706, "").
+-define(SD111706, "").
+-define(SN111707, "").
+-define(SD111707, "").
+-define(SN111708, "").
+-define(SD111708, "").
+-define(SN111709, "").
+-define(SD111709, "").
+-define(BF17163, "").
+-define(BF17180, "").
+-define(BN17180, "").
+-define(BD17180, "").
+-define(BN17181, "").
+-define(BD17181, "").
+-define(BN17182, "").
+-define(BD17182, "").
+-define(BN17183, "").
+-define(BD17183, "").
+-define(BD17186, "").
+-define(BN17187, "").
+-define(SUD111700, "").
+-define(SUD111701, "").
+-define(SUD111702, "").
+-define(SUD111703, "").
+-define(SUD111705, "").
+-define(SUD111706, "").
+-define(SUD111707, "").
+-define(SUD111708, "").
+-define(SN11548201, "").
+-define(SD11548201, "").
+-define(SS11548201, "").
+-define(SN11548301, "").
+-define(SD11548301, "").
+-define(SS11548301, "").
+-define(BN2436231, "").
+-define(BD2436231, "").
+-define(BN2436251, "").
+-define(BD2436251, "").
+-define(BN1722100, "").
+-define(BD1722100, "").
+-define(BN1722401, "").
+-define(BD1722401, "").
+-define(SN291401, "").
+-define(SD291401, "").
+-define(SS291401, "").
+-define(SN99001, "").
+-define(SN99002, "").
+-define(SN99003, "").
+-define(SN99004, "").
+-define(SN99005, "").
+-define(SN99006, "").
+-define(SN99007, "").
+-define(SN99008, "").
+-define(SN99009, "").
+-define(SN99010, "").
+-define(SN99011, "").
+-define(BN999, "").
+-define(BN72013, "").
+-define(BD72013, "").
+-define(SN210501, "").
+-define(SD210501, "").
+-define(SN210541, "").
+-define(SD210541, "").
+-define(SN210561, "").
+-define(SD210561, "").
+-define(SD215861, "").
+-define(SD215862, "").
+-define(SD215863, "").
+-define(BN16051, "").
+-define(BD16051, "").
+-define(BF16051, "").
+-define(BN16052, "").
+-define(BD16052, "").
+-define(SUD210561, "").
+-define(SUD210501, "").
+-define(SUD210541, "").
+-define(BN30194, "").
+-define(BN30195, "").
+-define(BN30196, "").
+-define(BD30194, "").
+-define(BD30195, "").
+-define(BD30196, "").
+-define(SN11528401, "").
+-define(SD11528401, "").
+-define(SN11548411, "").
+-define(SD11548411, "").
+-define(SS11528401, "").
+-define(SS11548411, "").
+-define(BN1703001, "").
+-define(BD1703001, "").
+-define(BN1703002, "").
+-define(BD1703002, "").
+-define(BN1704002, "").
+-define(BD1704002, "").
+-define(SCN193041, "").
+-define(SCD193041, "").
+-define(BN16104, "").
+-define(BD16104, "").
+-define(SCN193051, "").
+-define(SCD193051, "").
+-define(BN16105, "").
+-define(BD16105, "").
+-define(SCN193061, "").
+-define(SCD193061, "").
+-define(BN16106, "").
+-define(BD16106, "").
+-define(SCN193071, "").
+-define(SCD193071, "").
+-define(BN16108, "").
+-define(BD16108, "").
+-define(SCN193081, "").
+-define(SCD193081, "").
+-define(BN16107, "").
+-define(BD16107, "").
+-define(SN540010, "").
+-define(SD540010, "").
+-define(SN540011, "").
+-define(SD540011, "").
+-define(SN540012, "").
+-define(SD540012, "").
+-define(BN56058, "").
+-define(BN56059, "").
+-define(BN56060, "").
+-define(BD56058, "").
+-define(BD56059, "").
+-define(BD56060, "").
+-define(SN1530164, "").
+-define(SD1530164, "").
+-define(SN1530074, "").
+-define(SD1530074, "").
+-define(BN73020, "").
+-define(BD73020, "").
+-define(BN73022, "").
+-define(BD73022, "").
+-define(SN1530644, "").
+-define(SD1530644, "").
+-define(SN1530645, "").
+-define(SN1530624, "").
+-define(SD1530624, "").
+-define(SN1530625, "").
+-define(SN280061, "").
+-define(SD280061, "").
+-define(SN280066, "").
+-define(SD280066, "").
+-define(SN280071, "").
+-define(SD280071, "").
+-define(SN280076, "").
+-define(SD280076, "").
+-define(BN60061, "").
+-define(BD60061, "").
+-define(BN60066, "").
+-define(BD60066, "").
+-define(BN60071, "").
+-define(BD60071, "").
+-define(BN60076, "").
+-define(BD60076, "").
+-define(SN282013, "").
+-define(SD282013, "").
+-define(SN282014, "").
+-define(SD282014, "").
+-define(SN282015, "").
+-define(SD282015, "").
+-define(SN282016, "").
+-define(SD282016, "").
+-define(BD55013, "").
+-define(BD55014, "").
+-define(SS282013, "").
+-define(SS282014, "").
+-define(SS282015, "").
+-define(SS282016, "").
+-define(SS280061, "").
+-define(SS280066, "").
+-define(SS280071, "").
+-define(SS280076, "").
+-define(BN73024, "").
+-define(BD73024, "").
+-define(SN204601, "").
+-define(SD204601, "").
+-define(SN204641, "").
+-define(SD204641, "").
+-define(SN204661, "").
+-define(SD204661, "").
+-define(BN16034, "").
+-define(BD16034, "").
+-define(BN16035, "").
+-define(BD16035, "").
+-define(BF16034, "").
+-define(SN204701, "").
+-define(SD204701, "").
+-define(SN204761, "").
+-define(SD204761, "").
+-define(BN16036, "").
+-define(BD16036, "").
+-define(BF16036, "").
+-define(SN204801, "").
+-define(SD204801, "").
+-define(SN204861, "").
+-define(SD204861, "").
+-define(BN16037, "").
+-define(BD16037, "").
+-define(BF16037, "").
+-define(SN204901, "").
+-define(SD204901, "").
+-define(SN204961, "").
+-define(SD204961, "").
+-define(BN16038, "").
+-define(BF16038, "").
+-define(SN205001, "").
+-define(SD205001, "").
+-define(SN205061, "").
+-define(SD205061, "").
+-define(BN16039, "").
+-define(BF16039, "").
+-define(SN205101, "").
+-define(SD205101, "").
+-define(SN205161, "").
+-define(SD205161, "").
+-define(SN205201, "").
+-define(SD205201, "").
+-define(SN205261, "").
+-define(SD205261, "").
+-define(SN205301, "").
+-define(SD205301, "").
+-define(SN205361, "").
+-define(SD205361, "").
+-define(SN205401, "").
+-define(SD205401, "").
+-define(SN205461, "").
+-define(SD205461, "").
+-define(SN205501, "").
+-define(SD205501, "").
+-define(SN205601, "").
+-define(SD205601, "").
+-define(SN205701, "").
+-define(SD205701, "").
+-define(SN203461, "").
+-define(SD203461, "").
+-define(SN203561, "").
+-define(SD203561, "").
+-define(SN203661, "").
+-define(SD203661, "").
+-define(SN203161, "").
+-define(SD203161, "").
+-define(SN203261, "").
+-define(SD203261, "").
+-define(SN203361, "").
+-define(SD203361, "").
+-define(SN210641, "").
+-define(SD210641, "").
+-define(SN210661, "").
+-define(SD210661, "").
+-define(SD210662, "").
+-define(SD210663, "").
+-define(BN1601101, "").
+-define(BD1601101, "").
+-define(SD211241, "").
+-define(SD211261, "").
+-define(SD211262, "").
+-define(SD211263, "").
+-define(BD1601921, "").
+-define(SD211441, "").
+-define(SD211461, "").
+-define(SD211462, "").
+-define(SD211463, "").
+-define(BN16053, "").
+-define(BD16053, "").
+-define(SKILLCIZHUI_117, "").
+-define(SKILLCIZHUI_118, "").
+-define(SN104041_TITLE, "").
+-define(SN104042_TITLE, "").
+-define(SN104171_TITLE, "").
+-define(SN104181_TITLE, "").
+-define(SN105041_TITLE, "").
+-define(SN105042_TITLE, "").
+-define(SN105171_TITLE, "").
+-define(SN105181_TITLE, "").
+-define(SN106041_TITLE, "").
+-define(SN106042_TITLE, "").
+-define(SN106171_TITLE, "").
+-define(SN106181_TITLE, "").
+-define(SN107041_TITLE, "").
+-define(SN107042_TITLE, "").
+-define(SN107171_TITLE, "").
+-define(SN107181_TITLE, "").
+-define(SN104041, "").
+-define(SD104041, "").
+-define(SN104042, "").
+-define(SD104042, "").
+-define(SN104171, "").
+-define(SD104171, "").
+-define(SN104181, "").
+-define(SD104181, "").
+-define(SN105171, "").
+-define(SD105171, "").
+-define(SN105181, "").
+-define(SD105181, "").
+-define(SN106171, "").
+-define(SD106171, "").
+-define(SN106181, "").
+-define(SD106181, "").
+-define(SN107171, "").
+-define(SD107171, "").
+-define(SN107181, "").
+-define(SD107181, "").
+-define(BN61191, "").
+-define(BD61191, "").
+-define(BN61221, "").
+-define(BD61221, "").
+-define(BN62191, "").
+-define(BD62191, "").
+-define(BN62221, "").
+-define(BD62221, "").
+-define(BN63191, "").
+-define(BD63191, "").
+-define(BN63221, "").
+-define(BD63221, "").
+-define(BN64201, "").
+-define(BD64201, "").
+-define(BN64231, "").
+-define(BD64231, "").
+-define(SN105041, "").
+-define(SD105041, "").
+-define(SN105042, "").
+-define(SD105042, "").
+-define(BN62040, "").
+-define(BD62040, "").
+-define(BN62041, "").
+-define(BD62041, "").
+-define(SN106041, "").
+-define(SD106041, "").
+-define(SN106042, "").
+-define(SD106042, "").
+-define(BN63041, "").
+-define(BD63041, "").
+-define(BN63051, "").
+-define(BD63051, "").
+-define(SN107041, "").
+-define(SD107041, "").
+-define(SN107042, "").
+-define(SD107042, "").
+-define(BN64016, "").
+-define(BD64016, "").
+-define(BN64017, "").
+-define(BD64017, "").
+-define(BN64018, "").
+-define(BD64018, "").
+-define(SN213001, "").
+-define(SD213001, "").
+-define(SN213011, "").
+-define(SD213011, "").
+-define(SN213021, "").
+-define(SD213021, "").
+-define(SN213031, "").
+-define(SD213031, "").
+-define(SN213101, "").
+-define(SD213101, "").
+-define(SN213111, "").
+-define(SD213111, "").
+-define(SN213121, "").
+-define(SD213121, "").
+-define(SN213131, "").
+-define(SD213131, "").
+-define(SN213201, "").
+-define(SD213201, "").
+-define(SN213211, "").
+-define(SD213211, "").
+-define(SN213221, "").
+-define(SD213221, "").
+-define(SN213231, "").
+-define(SD213231, "").
+-define(SN213301, "").
+-define(SD213301, "").
+-define(SN213311, "").
+-define(SD213311, "").
+-define(SN213321, "").
+-define(SD213321, "").
+-define(SN213331, "").
+-define(SD213331, "").
+-define(BF17230, "").
+-define(BN17231, "").
+-define(BD17231, "").
+-define(BN17232, "").
+-define(BD17232, "").
+-define(BN17233, "").
+-define(BD17233, "").
+-define(BN17234, "").
+-define(BD17234, "").
+-define(BN17236, "").
+-define(BD17236, "").
+-define(BN17237, "").
+-define(BD17237, "").
+-define(BN17238, "").
+-define(BD17238, "").
+-define(BN17239, "").
+-define(BD17239, "").
+-define(BN17240, "").
+-define(BD17240, "").
+-define(BN17242, "").
+-define(BD17242, "").
+-define(BN17244, "").
+-define(BD17244, "").
+-define(BN17246, "").
+-define(BD17246, "").
+-define(BN17247, "").
+-define(BD17247, "").
+-define(BN17248, "").
+-define(BD17248, "").
+-define(BN17249, "").
+-define(BD17249, "").
+-define(BN17250, "").
+-define(BD17250, "").
+-define(BN17252, "").
+-define(BD17252, "").
+-define(BN17253, "").
+-define(BD17253, "").
+-define(SN111800, "").
+-define(SD111800, "").
+-define(SN111801, "").
+-define(SD111801, "").
+-define(SN111805, "").
+-define(SD111805, "").
+-define(SN111806, "").
+-define(SD111806, "").
+-define(SN111807, "").
+-define(SD111807, "").
+-define(SN111808, "").
+-define(SD111808, "").
+-define(SN111810, "").
+-define(SD111810, "").
+-define(BN17188, "").
+-define(BD17188, "").
+-define(BF17188, "").
+-define(BN17189, "").
+-define(BD17189, "").
+-define(BN17190, "").
+-define(BD17190, "").
+-define(SUD111800, "").
+-define(SUD111801, "").
+-define(SUD111805, "").
+-define(SUD111806, "").
+-define(SUD111807, "").
+-define(SUD111808, "").
+-define(SN204301, "").
+-define(SN204361, "").
+-define(SD204301, "").
+-define(SD204361, "").
+-define(SUD204301, "").
+-define(SUD204361, "").
+-define(SN204401, "").
+-define(SN204461, "").
+-define(SD204401, "").
+-define(SD204461, "").
+-define(SUD204401, "").
+-define(SUD204461, "").
+-define(SN204501, "").
+-define(SN204561, "").
+-define(SD204501, "").
+-define(SD204561, "").
+-define(SUD204501, "").
+-define(SUD204561, "").
+-define(SN530111, "").
+-define(SN530121, "").
+-define(SD530111, "").
+-define(SD530121, "").
+-define(BN30190, "").
+-define(BD30190, "").
+-define(SUD210661, "").
+-define(SUD210601, "").
+-define(SUD210641, "").
+-define(SUD211261, "").
+-define(SUD211201, "").
+-define(SUD211241, "").
+-define(SUD214661, "").
+-define(SUD214601, "").
+-define(SUD214641, "").
+-define(SD214661, "").
+-define(SD214662, "").
+-define(SD214663, "").
+-define(BN15009, "").
+-define(BN15012, "").
+-define(BN15010, "Brutalité").
+-define(BN15011, "Grâce Divine").
+-define(BD15009, "").
+-define(BD15012, "").
+-define(BD15010, "").
+-define(BD15011, "").
+-define(BN16109, "").
+-define(BD16109, "").
+-define(BN16110, "").
+-define(BD16110, "").
+-define(BN16111, "").
+-define(BD16111, "").
+-define(SN125701, "").
+-define(SD125701, "").
+-define(SS125701, "").
+-define(BF17192, "").
+-define(BN17192, "").
+-define(BD17192, "").
+-define(BN17193, "").
+-define(BD17193, "").
+-define(BD17194, "").
+-define(BD17195, "").
+-define(BD64116, "").
+-define(SN125801, "").
+-define(SD125801, "").
+-define(SS125801, "").
+-define(BF17262, "").
+-define(BN17162, "").
+-define(BD17162, "").
+-define(BF108, "").
+-define(BN990201, "").
+-define(BD990201, "").
+-define(SN11548421, "").
+-define(SD11548421, "").
+-define(SS11548421, "").
+-define(SN11548431, "").
+-define(SD11548431, "").
+-define(SS11548431, "").
+-define(SN11548441, "").
+-define(SD11548441, "").
+-define(SS11548441, "").
+-define(SN11548451, "").
+-define(SD11548451, "").
+-define(SS11548451, "").
+-define(SN11548461, "").
+-define(SD11548461, "").
+-define(SS11548461, "").
+-define(SN11548471, "").
+-define(SD11548471, "").
+-define(SS11548471, "").
+-define(SN11548481, "").
+-define(SD11548481, "").
+-define(SS11548481, "").
+-define(SN11548491, "").
+-define(SD11548491, "").
+-define(SS11548491, "").
+-define(SN11548501, "").
+-define(SD11548501, "").
+-define(SS11548501, "").
+-define(BN1704012, "").
+-define(BD1704012, "").
+-define(BN1704013, "").
+-define(BD1704013, "").
+-define(BN1704019, "").
+-define(BD1704019, "").
+-define(BN1704025, "").
+-define(BD1704025, "").
+-define(BN1704031, "").
+-define(BD1704031, "").
+-define(SD110013, "").
+-define(SN125901, "").
+-define(SD125901, "").
+-define(SS125901, "").
+-define(BN17263, "").
+-define(BD17263, "").
+-define(BF17263, "").
+-define(BN17264, "").
+-define(BD17264, "").
+-define(BN16112, "").
+-define(BD16112, "").
+-define(SCN193251, "").
+-define(SCD193251, "").
+-endif.
+

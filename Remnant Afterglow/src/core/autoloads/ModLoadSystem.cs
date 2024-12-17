@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Remnant_Afterglow
 {
-    //模组列表信息-用于读取模组数据时或者显示用
+    //模组加载列表信息-用于读取模组数据时或者显示用
     public class ModList
     {
         //文件名称-模组名称
@@ -45,26 +45,33 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 当前加载的mod列表,<文件夹名称，模组名称>
         /// </summary>
-        public static Dictionary<string, string> LoadModList = new Dictionary<string, string>();
+        public static ModList modList;
         /// 加载错误字典，<模组错误数据>
         public static List<ModError> modErrorDict = new List<ModError>();
 
         /// <summary>
-        /// 每个模组的模组信息mod.info
+        /// 需要加载的模组的模组信息mod.info-mod_list.json这个文件
         /// </summary>
-        public static List<ModInfo> load_mod_list = new List<ModInfo>();
+        public static Dictionary<string, ModAllInfo> load_mod_list = new Dictionary<string, ModAllInfo>();
 
         /// <summary>
-        /// 每个模组的模组信息mod.info
+        /// 所有模组的模组信息mod.info
         /// </summary>
-        public static List<ModInfo> all_mod_list = new List<ModInfo>();
+        public static Dictionary<string, ModAllInfo> all_mod_list = new Dictionary<string, ModAllInfo>();
+
+
+
+
 
         public ModLoadSystem()
         {
+            string modsPath = PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER);
+            Directory.CreateDirectory(modsPath);//确保mod文件始终存在
             if (is_use_mod)//启用模组
             {
+                ReadAllModList();//读取mod文件夹下所有文件夹中的数据
                 ReadNowModList();//读取游戏当前mod_list.txt中包含的所有需要加载的mod
-                ReadAllModList();//读取mod文件夹下所有文件夹的数据
+                ReadModDll();
             }
         }
 
@@ -73,13 +80,14 @@ namespace Remnant_Afterglow
         /// </summary>
         public void ReadAllModList()
         {
-            List<string> filepathList = FolderUtils.GetDirectoriesInFolder(PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER));
+            List<string> filepathList = FolderUtils.GetDirectoriesInFolder(PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER));//所有mod路径
             foreach (string filepath in filepathList)
             {
                 string path = filepath + "/" + "mod.info";
                 ModInfo modinfo = ReadModInfo(path);
+                ModAllInfo modAllInfo = new ModAllInfo(modinfo, FileUtils.ExtractModName(filepath));
                 if (modinfo != null)
-                    all_mod_list.Add(modinfo);
+                    all_mod_list[filepath] = modAllInfo;//祝福注释-确定路径
             }
         }
 
@@ -91,17 +99,14 @@ namespace Remnant_Afterglow
             if (File.Exists(PathConstant.GetPathUser(PathConstant.MOD_LIST_PATH_USER)))//检查是否存在mod_list
             {
                 string jsonText = File.ReadAllText(PathConstant.GetPathUser(PathConstant.MOD_LIST_PATH_USER));
-                ModList file_data = JsonConvert.DeserializeObject<ModList>(jsonText);
-                if (file_data.LoadModList.Count > 0)
-                {
-                    LoadModList = file_data.LoadModList;
-                }
-                foreach (var k in LoadModList)
+                modList = JsonConvert.DeserializeObject<ModList>(jsonText);//读取mod加载列表
+                foreach (var k in modList.LoadModList)
                 {
                     string infopath = PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER) + k.Key + "/" + "mod.info";
                     ModInfo modinfo = ReadModInfo(infopath);
+                    ModAllInfo modAllInfo = new ModAllInfo(modinfo, k.Key);
                     if (modinfo != null)
-                        load_mod_list.Add(modinfo);
+                        load_mod_list[k.Key] = modAllInfo;
                 }
             }
             else//不存在modlist文件，就创建一个,并写入基础数据
@@ -111,6 +116,33 @@ namespace Remnant_Afterglow
             }
         }
 
+        /// <summary>
+        /// 读取需要加载的dll文件和pck文件
+        /// </summary>
+        public void ReadModDll()
+        {
+
+            foreach (var info in load_mod_list)
+            {
+                ModAllInfo modInfo = info.Value;
+                if (modInfo.modInfo.HasPck)//有无pck文件
+                {
+                    foreach (string pck_str in modInfo.modInfo.PckList)
+                    {
+                        string infopath = PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER) + info.Key + PathConstant.GetPathUser(PathConstant.MOD_LIST_Dll_USER) + pck_str;
+
+                    }
+                }
+                if (modInfo.modInfo.HasCsharp)
+                {
+                    foreach (string dll_str in modInfo.modInfo.DllList)
+                    {
+                        string infopath = PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER) + info.Key + PathConstant.GetPathUser(PathConstant.MOD_LIST_Dll_USER) + dll_str;
+
+                    }
+                }
+            }
+        }
 
         /// <summary>
         /// 读取单个modinfo文件
@@ -121,15 +153,13 @@ namespace Remnant_Afterglow
         {
             if (File.Exists(infopath))//存在对于mod.info
             {
-                string jsonText = File.ReadAllText(PathConstant.GetPathUser(PathConstant.MOD_LIST_PATH_USER));
+                string jsonText = File.ReadAllText(infopath);
                 ModInfo modinfo = JsonConvert.DeserializeObject<ModInfo>(jsonText);
                 return modinfo;
             }
             else
             {
-                Log.Print("文件夹{" + infopath + "} 加载失败！ 没有文件mod.info");
-                Log.Print("请在" + infopath + "文件夹下，创建文件mod.info,内容如下" +
-"{\r\n\t\"Name\": \"模组名称\",\r\n\t\"DisplayName\": \"显示名称\",\r\n\t\"Author\":\"这里是作者名称\",\r\n\t\"Description\": \"模组描述，这里应当能设置字体大小，颜色等\",\r\n\t\"Version\": \"模组版本\",\r\n\t\"HasExcel\": true,\r\n\t\"HasCsharp\": true\r\n}");
+                Log.Error("文件夹{" + infopath + "} 加载失败！ 没有文件mod.info");
                 return null;
             }
         }

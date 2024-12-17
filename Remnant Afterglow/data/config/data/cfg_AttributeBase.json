@@ -104,10 +104,62 @@
         "DependencyIdList": []
     },
     {
+        "KEY_INDEX": "40",
+        "AttributeId": 40,
+        "ShowName": "移动速度",
+        "AttributeDescribe": "实体自身的移动速度",
+        "ShowType": 0,
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "41",
+        "AttributeId": 41,
+        "ShowName": "旋转速度",
+        "AttributeDescribe": "实体自身的旋转速度",
+        "ShowType": 0,
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "51",
+        "AttributeId": 51,
+        "ShowName": "炮塔旋转速度上限",
+        "AttributeDescribe": "每秒最多转弯多少度，填度数，360度是一圈，填个360就是每秒转一圈",
+        "ShowType": 0,
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "52",
+        "AttributeId": 52,
+        "ShowName": "炮塔旋转加速度",
+        "AttributeDescribe": "每秒加速度，比如填个60，就是6秒钟后到达每秒一圈的速度",
+        "ShowType": 0,
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
         "KEY_INDEX": "101",
         "AttributeId": 101,
         "ShowName": "建造时间",
-        "AttributeDescribe": "建筑从蓝图变成实体的时间，建造时间随时间减少，减少到0后建筑就可以开始工作了，蓝图逐渐从通明变成不透明",
+        "AttributeDescribe": "帧数，建筑从蓝图变成实体的时间，建造时间随时间减少，减少到0后建筑就可以开始工作了，蓝图逐渐从通明变成不透明",
         "ShowType": 0,
         "ShowColor": [
             0,
@@ -120,7 +172,7 @@
         "KEY_INDEX": "102",
         "AttributeId": 102,
         "ShowName": "重建时间",
-        "AttributeDescribe": "可以重建的建筑血量低于10时埋入地下，重建时间随时间减少，减少到0后建筑检测范围300距离内是否存在敌人，如果不存在敌人，就重建完成，血量回满，开始工作",
+        "AttributeDescribe": "帧数，可以重建的建筑血量低于10时埋入地下，重建时间随时间减少，减少到0后建筑检测范围300距离内是否存在敌人，如果不存在敌人，就重建完成，血量回满，开始工作",
         "ShowType": 0,
         "ShowColor": [
             0,
@@ -353,32 +405,6 @@
     {
         "KEY_INDEX": "312",
         "AttributeId": 312,
-        "ShowName": "炮塔旋转速度上限",
-        "AttributeDescribe": "每秒最多转弯多少度，填度数，360度是一圈，填个360就是每秒转一圈",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "313",
-        "AttributeId": 313,
-        "ShowName": "炮塔旋转加速度",
-        "AttributeDescribe": "每秒加速度，比如填个60，就是6秒钟后到达每秒一圈的速度",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "314",
-        "AttributeId": 314,
         "ShowName": "可攻击角度",
         "AttributeDescribe": "炮塔的最大可攻击角度，前方做切线，左右个180度，在可攻击角度外则不会开火需要去转动炮台。默认值为5度（算角度的话前方10度）",
         "ShowType": 0,
@@ -390,8 +416,8 @@
         "DependencyIdList": []
     },
     {
-        "KEY_INDEX": "315",
-        "AttributeId": 315,
+        "KEY_INDEX": "313",
+        "AttributeId": 313,
         "ShowName": "开火间隔乘数",
         "AttributeDescribe": "默认1，是个成倍，用于加成计算，提高炮塔的攻击速度",
         "ShowType": 0,
@@ -403,8 +429,8 @@
         "DependencyIdList": []
     },
     {
-        "KEY_INDEX": "316",
-        "AttributeId": 316,
+        "KEY_INDEX": "314",
+        "AttributeId": 314,
         "ShowName": "开火伤害乘数",
         "AttributeDescribe": "默认1，是个成倍，用于加成计算，提高炮塔的伤害",
         "ShowType": 0,
@@ -562,7 +588,7 @@
         "KEY_INDEX": "602",
         "AttributeId": 602,
         "ShowName": "燃烧值",
-        "AttributeDescribe": "nan",
+        "AttributeDescribe": "",
         "ShowType": 0,
         "ShowColor": [
             0,
@@ -588,7 +614,7 @@
         "KEY_INDEX": "604",
         "AttributeId": 604,
         "ShowName": "冰冻值",
-        "AttributeDescribe": "nan",
+        "AttributeDescribe": "",
         "ShowType": 0,
         "ShowColor": [
             0,

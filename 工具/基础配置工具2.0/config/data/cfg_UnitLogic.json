@@ -1,0 +1,16 @@
+[
+    {
+        "KEY_INDEX": "1001",
+        "ObjectId": 1001,
+        "Type": 1,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "2001",
+        "ObjectId": 2001,
+        "Type": 1,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    }
+]

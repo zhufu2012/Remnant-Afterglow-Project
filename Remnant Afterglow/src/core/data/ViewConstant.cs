@@ -15,5 +15,10 @@ namespace Remnant_Afterglow
         #endregion
 
 
+        #region mod管理界面参数
+
+        #endregion
+
+
     }
 }

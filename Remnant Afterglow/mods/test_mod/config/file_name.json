@@ -22,9 +22,9 @@
             "key_list": {
                 "KEY_INDEX": "string",
                 "ScienceId": "int",
+                "ScienceRangeId": "int",
                 "ScienceName": "string",
                 "ScienceDes": "string",
-                "ScienceRangeId": "int",
                 "Pos": "Vector2I",
                 "ConnectList": "List<int>",
                 "SciencePng": "Texture2D"

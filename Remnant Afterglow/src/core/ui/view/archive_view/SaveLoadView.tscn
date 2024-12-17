@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://i7t71c4a0cen"]
+
+[ext_resource type="Script" path="res://src/core/ui/view/archive_view/SaveLoadView.cs" id="1_um0k3"]
+
+[node name="SaveLoadView" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(1.667, 1.667)
+focus_mode = 2
+script = ExtResource("1_um0k3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1146.0
+offset_bottom = 648.0
+focus_mode = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 19.0
+offset_right = 246.0
+offset_bottom = 95.0
+text = "返回上一个界面"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 542.0
+offset_right = 1101.0
+offset_bottom = 618.0
+focus_mode = 0
+text = "确定进入"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 427.0
+offset_right = 1087.0
+offset_bottom = 486.0
+text = "模式(单人 模式)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 820.0
+offset_bottom = 648.0
+focus_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 527.0
+offset_bottom = 485.0
+focus_mode = 1
+follow_focus = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/ScrollContainer"]
+layout_mode = 2
+focus_mode = 1
+
+[node name="Button" type="Button" parent="Panel/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_top = 488.0
+offset_right = 520.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 32
+text = "新建存档"

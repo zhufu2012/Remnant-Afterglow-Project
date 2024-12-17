@@ -13,6 +13,13 @@ def read_file(file_path):
         content = file.read()
     return content
 
+##检查某个数据是否是某数据，或者其.0 版
+def check_value(value, key):
+    if value == key or value == (str(key) + ".0") or value == str(key):
+        return True
+    else:
+        return False
+
 
 ##读取xlsx文件的所有数据,包括图片数据
 def read_text_all(path):
@@ -21,23 +28,22 @@ def read_text_all(path):
     result_dict = {}
     exportimage = False  ##该表是否需要导出
     for table_name in table_names:
-        ds = pd.read_excel(xls, sheet_name=table_name)  # 逐个读取表格
-        result_list = []
-        isimage = False  ##子表是否需要导出图片
         if not table_name.startswith("cfg_"):  ##开头不是cfg_的表都不算
             continue
-        for index, row_list in ds.iterrows():  # 遍历每一行数据
+        ds = pd.read_excel(xls, sheet_name=table_name)  # 逐个读取表格
+        result_list = []
+        isimage = False  ##该子表是否需要导出图片
+        for index, row_list in ds.iterrows():  # 遍历每一行数据，从0开始
             result = []
             result.append(index)
             for i, row in enumerate(row_list):
                 if index == 2 and row == "PNG":  ##导出项是特殊的，单元格中图片
                     export_type = result_list[0][i + 1]
-                    if str(export_type) == "1" or str(export_type) == "1.0" or str(export_type) == "2" or str(
-                            export_type) == "2.0" or str(export_type) == "3" or str(export_type) == "3.0":  ##确保是可导出的行
+                    if check_value(export_type, 1) or check_value(export_type, 2) or check_value(export_type, 3):  ##确保是可导出的行
                         isimage = True
                 result.append(row)
             result_list.append(result)
-        if len(result_list) < 3:  ##子表数据不足，说明不是完整表
+        if len(result_list) < 3:  ##子表数据为空
             continue
         if isimage == True and len(result_list) >= 4:
             exportimage = True
@@ -136,7 +142,7 @@ def get_xml_id_image_map(xlsx_file_path):
 
 
 ##
-def output_id_image(xlsx_file_path):
+def output_id_image(NowProjectConfig, xlsx_file_path):
     data, image_list = read_excel_data(xlsx_file_path)
     name_to_target_map = get_xml_id_image_map(xlsx_file_path)
     if name_to_target_map == None:
@@ -155,7 +161,7 @@ def output_id_image(xlsx_file_path):
                     image_content = image_file.read()
                     # 保存图片到新的文件夹下面，使用key作为文件名
 
-                    new_file_path = os.path.join(Config.load_data_key("工具导出图片的存放路径"), f"{key}.png")
+                    new_file_path = os.path.join(NowProjectConfig["导出配置图片的存放路径"], f"{key}.png")
                     with open(new_file_path, 'wb') as new_file:
                         new_file.write(image_content)
             else:
@@ -181,8 +187,8 @@ def get_files_from_directory(directory):
 
 
 ##读取路径下所有xlsx表中，可用导出的xlsx表以及子表名称
-def get_xlsx_key_name():
-    pathlist = get_files_from_directory(Config.load_data_key("工具读取的xlsx文件夹路径"))  ##路径下所有文件数据
+def get_xlsx_key_name(NowProjectConfig):
+    pathlist = get_files_from_directory(NowProjectConfig["读取的xlsx文件夹路径"])  ##路径下所有文件数据
     dicts = {}  ##列表中保存 字典  字典中保存{xlsx表路径：[子表名称]}
     for file_path in pathlist:  ##对每一个配置文件进行处理
         if file_path.find("~$") != -1:
@@ -201,8 +207,8 @@ def get_xlsx_key_name():
 
 
 ##读取所有xlsx表的每个子表的列名 和 导出选项 和键名称
-def read_sheet_name():
-    dicts = get_xlsx_key_name()
+def read_sheet_name(NowProjectConfig):
+    dicts = get_xlsx_key_name(NowProjectConfig)
     result_dict = {}
     for path in dicts.keys():
         sheet_name_dict = {}

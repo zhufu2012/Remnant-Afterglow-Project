@@ -6,8 +6,10 @@ namespace Remnant_Afterglow
     /// <summary>
     /// 单位动画
     /// </summary>
-    public partial class UnitBase
+    public partial class UnitBase : BaseObject, IUnit
     {
+        //各动画的图片中心
+        public Dictionary<string, Vector2> AnimationCenterPos = new Dictionary<string, Vector2>();
         /// <summary>
         /// 单位动画
         /// </summary>
@@ -44,9 +46,9 @@ namespace Remnant_Afterglow
                         Index++;
                     }
                 }
-                if (animaUnit.IsLoop)
+                if (animaUnit.IsLoop)//循环
                     LoopName = AnimaName;
-                if (animaUnit.IsAutoplay)
+                if (animaUnit.IsAutoplay)//自动播放
                     AutoName = AnimaName;
             }
             if (AnimaTypeList.Count > 0)
@@ -57,7 +59,23 @@ namespace Remnant_Afterglow
                 AnimatedSprite.Animation = LoopName;
                 AnimatedSprite.Autoplay = AutoName;
             }
+
             return AnimatedSprite;
         }
+
+
+        /// <summary>
+        /// 播放动画,并且设置动画的位置，确保动画的中心在实体上
+        /// </summary>
+        /// <param name="AnimaName">1 默认动画...</param>
+        public void PlayAnima(string AnimaName)
+        {
+            if(AnimatedSprite.SpriteFrames.HasAnimation(AnimaName))
+                AnimatedSprite.Play(AnimaName);
+            else
+                AnimatedSprite.Play(AnimatorNames.Default);
+        }
+
+
     }
 }

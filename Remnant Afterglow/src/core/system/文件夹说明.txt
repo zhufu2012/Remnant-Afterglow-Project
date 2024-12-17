@@ -1,4 +1,5 @@
 navigate:地图导航系统相关代码
 saveable:存档加载系统相关代码
-attribute:属性管理系统相关代码
 brushEnemy:刷怪系统相关代码
+buildList:建造系统相关代码
+bag:背包系统相关代码

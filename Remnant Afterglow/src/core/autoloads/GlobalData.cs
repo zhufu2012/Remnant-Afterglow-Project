@@ -3,11 +3,19 @@ using System.Collections.Generic;
 
 namespace Remnant_Afterglow
 {
-    //界面切换等操作时，用于保存数据的类
+    /// <summary>
+    /// 界面切换等操作时，用于保存数据的类
+    /// </summary>
     public partial class GlobalData : Node
     {
+        /// <summary>
+        /// 保存跨场景数据
+        /// </summary>
         public static Dictionary<string, Variant> dict = new Dictionary<string, Variant>();
         public static string path = "";
+
+
+
         public static void SetParams(Dictionary<string, Variant> parameters)
         {
             dict = parameters;

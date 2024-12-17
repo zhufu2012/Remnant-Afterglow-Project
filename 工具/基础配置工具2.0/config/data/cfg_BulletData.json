@@ -1,1 +1,13 @@
-[]
+[
+    {
+        "KEY_INDEX": "add2way",
+        "BulletLabel": "add2way",
+        "AnimaTypeList": [
+            1
+        ],
+        "SceneType": 1,
+        "Logic": "ce1.xml",
+        "CollideId": 1,
+        "SoundId": ""
+    }
+]

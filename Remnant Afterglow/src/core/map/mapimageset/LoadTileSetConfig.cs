@@ -1,4 +1,5 @@
-﻿using Godot;
+﻿using GameLog;
+using Godot;
 using System.Collections.Generic;
 
 namespace Remnant_Afterglow
@@ -8,25 +9,25 @@ namespace Remnant_Afterglow
     /// </summary>
     public class LoadTileSetConfig
     {
-        //常规地图的
+        /// <summary>
+        /// 地图图像集 -每次创建都记得覆盖
+        /// </summary>
         public static MapImageSet mapImageSet;
-        private static TileSet tileSet;//地图静态
+        private static TileSet tileSet = new TileSet();//地图静态
         public int Type = 1;
 
         public LoadTileSetConfig(int Type)
         {
             this.Type = Type;
-            switch(Type)
+            switch (Type)
             {
                 case 1://作战地图
-                    mapImageSet = new MapImageSet(1, MapConstant.TileCellSize, MapConstant.TileCellSize);
-                    tileSet = GetTileSetData(1, MapConstant.TileCellSize, MapConstant.TileCellSize);
+                    CreateTileSetData(Type, MapConstant.TileCellSize, MapConstant.TileCellSize);
                     break;
                 case 2://大地图
-                    mapImageSet = new MapImageSet(2, MapConstant.BigCellSizeX, MapConstant.BigCellSizeY);
-                    tileSet = GetTileSetData(2, MapConstant.BigCellSizeX, MapConstant.BigCellSizeY);
+                    CreateTileSetData(Type, MapConstant.BigCellSizeX, MapConstant.BigCellSizeY);
                     break;
-                default:break;
+                default: break;
             }
         }
 
@@ -39,19 +40,31 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 获取由该对象生成的Godot.TileSet对象
         /// </summary>
-        public static TileSet GetTileSetData(int Type, int Width, int Height)
+        public static void CreateTileSetData(int Type, int Width, int Height)
         {
-            tileSet = new TileSet();
+            tileSet = new TileSet();//每次创建都需要覆盖
             tileSet.TileSize = new Vector2I(Width, Height);
+            if (Type == 1)//副本地图
+            {
+                tileSet.TileShape = TileSet.TileShapeEnum.Square;
+                List<MapPhysicsLayer> PhysicsLayerList = ConfigCache.GetAllMapPhysicsLayer();
+                foreach (MapPhysicsLayer PhysicsLayer in PhysicsLayerList)//设置物理层
+                {
+                    tileSet.AddPhysicsLayer(PhysicsLayer.PhysicsLayerId);
+                }
+                List<MapNavigate> NavigateLayerList = ConfigCache.GetAllMapNavigate();
+                foreach (MapNavigate NavigateLayer in NavigateLayerList)//设置导航层
+                {
+                    tileSet.AddNavigationLayer(NavigateLayer.NavigateLayerId);
+                }
+                mapImageSet = new MapImageSet(tileSet, Type, MapConstant.TileCellSize, MapConstant.TileCellSize);//给格子加备选格子，以及加上碰撞层
+            }
             if (Type == 2)//六边形大地图
             {
                 tileSet.TileShape = TileSet.TileShapeEnum.Hexagon;
+                mapImageSet = new MapImageSet(tileSet, Type, MapConstant.BigCellSizeX, MapConstant.BigCellSizeY);//给格子加备选格子，以及加上碰撞层
             }
-            foreach (var data in mapImageSet.MapSetDict)
-            {//初始化数据
-                tileSet.AddSource(data.Value, data.Key);
-            }
-            return tileSet;
+
         }
 
         /// <summary>

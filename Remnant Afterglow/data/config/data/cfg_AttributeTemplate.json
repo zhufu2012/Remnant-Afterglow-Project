@@ -2,9 +2,29 @@
     {
         "KEY_INDEX": "1",
         "TempLateId": 1,
-        "TempLateName": "小型单位基础属性",
+        "TempLateName": "实体基础属性模板-带速度",
         "IsCover": true,
-        "ObjectType": 1,
         "ObjectId": -1
+    },
+    {
+        "KEY_INDEX": "2",
+        "TempLateId": 2,
+        "TempLateName": "炮塔基础属性模板",
+        "IsCover": true,
+        "ObjectId": -2
+    },
+    {
+        "KEY_INDEX": "3",
+        "TempLateId": 3,
+        "TempLateName": "建筑基础属性模板",
+        "IsCover": true,
+        "ObjectId": -3
+    },
+    {
+        "KEY_INDEX": "4",
+        "TempLateId": 4,
+        "TempLateName": "武器基础属性模板",
+        "IsCover": true,
+        "ObjectId": -4
     }
 ]

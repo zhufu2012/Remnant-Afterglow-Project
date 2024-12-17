@@ -1,8 +1,7 @@
 [
     {
-        "KEY_INDEX": "1",
-        "WeaponId": 1,
-        "ObjectId": 1,
+        "KEY_INDEX": "4001",
+        "ObjectId": 4001,
         "Name": "测试武器1",
         "Describe": "测试武器1-测试",
         "Type": 1,

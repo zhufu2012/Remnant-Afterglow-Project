@@ -1,0 +1,28 @@
+[
+    {
+        "KEY_INDEX": "1001",
+        "ObjectId": 1001,
+        "WorkerName": "自律体-1",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ]
+    },
+    {
+        "KEY_INDEX": "1002",
+        "ObjectId": 1002,
+        "WorkerName": "自律体-2",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ]
+    }
+]

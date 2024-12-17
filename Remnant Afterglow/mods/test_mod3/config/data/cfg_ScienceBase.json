@@ -1,0 +1,41 @@
+[
+    {
+        "KEY_INDEX": "100103",
+        "ScienceId": 100103,
+        "ScienceRangeId": 1001,
+        "ScienceName": "对模组1分支1的科技拓展1",
+        "ScienceDes": "对模组1分支1的科技拓展1",
+        "Pos": [
+            3,
+            4
+        ],
+        "ConnectList": [],
+        "SciencePng": "./mods/test_mod3/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
+    },
+    {
+        "KEY_INDEX": "100104",
+        "ScienceId": 100104,
+        "ScienceRangeId": 1001,
+        "ScienceName": "对模组1分支1的科技拓展2",
+        "ScienceDes": "对模组1分支1的科技拓展2",
+        "Pos": [
+            4,
+            6
+        ],
+        "ConnectList": [],
+        "SciencePng": "./mods/test_mod3/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
+    },
+    {
+        "KEY_INDEX": "100202",
+        "ScienceId": 100202,
+        "ScienceRangeId": 1002,
+        "ScienceName": "对模组1分支2的科技拓展1",
+        "ScienceDes": "对模组1分支2的科技拓展1",
+        "Pos": [
+            1,
+            2
+        ],
+        "ConnectList": [],
+        "SciencePng": "./mods/test_mod3/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
+    }
+]

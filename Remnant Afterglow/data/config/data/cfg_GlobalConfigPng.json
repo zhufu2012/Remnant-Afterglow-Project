@@ -1,1 +1,128 @@
-[]
+[
+    {
+        "KEY_INDEX": "Map_BuildView_Operate_1",
+        "Configid": "Map_BuildView_Operate_1",
+        "ConfigName": "拆除回收1",
+        "ConfigValue": "./data/config/images/ID_4DF58546C9684EF885F57E66A8C81844.png"
+    },
+    {
+        "KEY_INDEX": "Map_BuildView_Operate_2",
+        "Configid": "Map_BuildView_Operate_2",
+        "ConfigName": "快速重建1",
+        "ConfigValue": "./data/config/images/ID_13D1421CF49949B28A045D0662F30214.png"
+    },
+    {
+        "KEY_INDEX": "Map_BuildView_Operate_3",
+        "Configid": "Map_BuildView_Operate_3",
+        "ConfigName": "传送1",
+        "ConfigValue": "./data/config/images/ID_45CA2F1B5A01451F870ED313C24CB678.png"
+    },
+    {
+        "KEY_INDEX": "Map_ItemView_Img_1",
+        "Configid": "Map_ItemView_Img_1",
+        "ConfigName": "窗口衔接上下",
+        "ConfigValue": "./data/config/images/ID_E11681D488D244958BDF55FBD406C499.png"
+    },
+    {
+        "KEY_INDEX": "Map_ItemView_Img_2",
+        "Configid": "Map_ItemView_Img_2",
+        "ConfigName": "窗口衔接左右",
+        "ConfigValue": "./data/config/images/ID_38BFD745ADBA4760963B0D72345EF281.png"
+    },
+    {
+        "KEY_INDEX": "Map_ItemView_Img_3",
+        "Configid": "Map_ItemView_Img_3",
+        "ConfigName": "一次性道具列表左上",
+        "ConfigValue": "./data/config/images/ID_E615A39914A84A57BF8EA8E908077EAC.png"
+    },
+    {
+        "KEY_INDEX": "Map_ItemView_Img_4",
+        "Configid": "Map_ItemView_Img_4",
+        "ConfigName": "一次性道具列表右下",
+        "ConfigValue": "./data/config/images/ID_CC6A49322DD643D8B44B5B54C6F783E8.png"
+    },
+    {
+        "KEY_INDEX": "Map_ItemView_Img_5",
+        "Configid": "Map_ItemView_Img_5",
+        "ConfigName": "一次性道具列表",
+        "ConfigValue": "./data/config/images/ID_86BFAD56A97F43D68FD1A4B3C3F9447C.png"
+    },
+    {
+        "KEY_INDEX": "Map_BuildListView_1",
+        "Configid": "Map_BuildListView_1",
+        "ConfigName": "建造列表窗口",
+        "ConfigValue": "./data/config/images/ID_D7C2BA42ED4C4E3ABEF287762A8CD0E4.png"
+    },
+    {
+        "KEY_INDEX": "Map_BuildListSubView_1",
+        "Configid": "Map_BuildListSubView_1",
+        "ConfigName": "建造子列表窗口",
+        "ConfigValue": "./data/config/images/ID_AD6C04213C134FC1A38B1951EC5C0EF1.png"
+    },
+    {
+        "KEY_INDEX": "Map_BuildListSubView_2",
+        "Configid": "Map_BuildListSubView_2",
+        "ConfigName": "建造子列表无内容窗口",
+        "ConfigValue": "./data/config/images/ID_592F75BF494C463291CC98E844FD0829.png"
+    },
+    {
+        "KEY_INDEX": "Map_BuildList_1",
+        "Configid": "Map_BuildList_1",
+        "ConfigName": "建造列表支架右",
+        "ConfigValue": "./data/config/images/ID_D86BD9E5CFEF411CB0703A9D3BAA4C9E.png"
+    },
+    {
+        "KEY_INDEX": "Map_BuildList_2",
+        "Configid": "Map_BuildList_2",
+        "ConfigName": "建造列表支架左",
+        "ConfigValue": "./data/config/images/ID_7A16C4365B5D4F22B4CF6879B4E8370F.png"
+    },
+    {
+        "KEY_INDEX": "Map_BuildList_3",
+        "Configid": "Map_BuildList_3",
+        "ConfigName": "建造子列表支架左",
+        "ConfigValue": "./data/config/images/ID_FFF7BDEC38BC43F8A720989321AEA61F.png"
+    },
+    {
+        "KEY_INDEX": "Map_BuildList_4",
+        "Configid": "Map_BuildList_4",
+        "ConfigName": "建造子列表支架右",
+        "ConfigValue": "./data/config/images/ID_F561EB521CE94EB893B6D11162CE6E76.png"
+    },
+    {
+        "KEY_INDEX": "Map_PlayerName_1",
+        "Configid": "Map_PlayerName_1",
+        "ConfigName": "玩家名称窗口",
+        "ConfigValue": "./data/config/images/ID_848BDB4E545D4A0988CB0F859E80787A.png"
+    },
+    {
+        "KEY_INDEX": "Map_PlayerDelay_1",
+        "Configid": "Map_PlayerDelay_1",
+        "ConfigName": "玩家延迟信号1",
+        "ConfigValue": "./data/config/images/ID_C46F015444CF47A086C961DB06B2A54A.png"
+    },
+    {
+        "KEY_INDEX": "Map_PlayerDelay_2",
+        "Configid": "Map_PlayerDelay_2",
+        "ConfigName": "玩家延迟信号2",
+        "ConfigValue": "./data/config/images/ID_F4E2DF4D32804525807430394889206F.png"
+    },
+    {
+        "KEY_INDEX": "Map_PlayerDelay_3",
+        "Configid": "Map_PlayerDelay_3",
+        "ConfigName": "玩家延迟信号3",
+        "ConfigValue": "./data/config/images/ID_6170CF5854B9476EACBFBA162F9D861F.png"
+    },
+    {
+        "KEY_INDEX": "Map_Setting_1",
+        "Configid": "Map_Setting_1",
+        "ConfigName": "设置按钮",
+        "ConfigValue": "./data/config/images/ID_BBEC5DE245F34A54AF2AFE35366EDABA.png"
+    },
+    {
+        "KEY_INDEX": "Map_Resources_1",
+        "Configid": "Map_Resources_1",
+        "ConfigName": "资源列表-主要显示窗口",
+        "ConfigValue": "./data/config/images/ID_3129688A6F744B2ABC15FA1FCF740C56.png"
+    }
+]

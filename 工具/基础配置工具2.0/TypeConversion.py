@@ -12,7 +12,7 @@ def number_to_column_name(n):
 
 
 ##转换为INT
-def TO_INT(file_path, table_name, Col_x, Col_y, variable):
+def TO_INT(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     if isinstance(variable, int):
         return variable
     else:
@@ -26,7 +26,7 @@ def TO_INT(file_path, table_name, Col_x, Col_y, variable):
 
 
 ##转换为BOOL
-def TO_BOOL(file_path, table_name, Col_x, Col_y, variable):
+def TO_BOOL(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     strs = str(variable)
     if strs == 'true' or strs == 'TRUE' or strs == "True":
         return True
@@ -37,7 +37,7 @@ def TO_BOOL(file_path, table_name, Col_x, Col_y, variable):
 
 
 ##转换为BYTE
-def TO_BYTE(file_path, table_name, Col_x, Col_y, variable):
+def TO_BYTE(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     if isinstance(variable, bytes):
         return variable
     else:
@@ -50,7 +50,7 @@ def TO_BYTE(file_path, table_name, Col_x, Col_y, variable):
             return None
 
 
-def TO_UINT64(file_path, table_name, Col_x, Col_y, variable):
+def TO_UINT64(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     if isinstance(variable, int):
         return variable
     else:
@@ -63,7 +63,7 @@ def TO_UINT64(file_path, table_name, Col_x, Col_y, variable):
             return None
 
 
-def TO_FLOAT(file_path, table_name, Col_x, Col_y, variable):
+def TO_FLOAT(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         if str(variable) == "nan":
             raise Exception("")
@@ -75,13 +75,17 @@ def TO_FLOAT(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_STR(file_path, table_name, Col_x, Col_y, variable):
-    return str(variable)
+def TO_STR(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
+    if (str(variable) == "nan"):
+        return ""
+    else:
+        return str(variable)
 
 
-def TO_BOOL_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_BOOL_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a string with boolean values separated by '|'
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         return [True if (val.strip().lower() == 'true' or val.strip().lower() == 'TRUE') else False for val in
                 str(variable).split('|')]
     except Exception as e:
@@ -90,9 +94,10 @@ def TO_BOOL_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_BYTE_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_BYTE_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a string with byte values separated by '|'
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         return [int(val.strip()).to_bytes(1, byteorder='big') for val in str(variable).split('|')]
     except Exception as e:
         Config.add_log(
@@ -100,9 +105,10 @@ def TO_BYTE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_INT_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_INT_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a list of integers represented as strings
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         return [int(val.strip()) for val in str(variable).split('|')]
     except Exception as e:
         Config.add_log(
@@ -110,9 +116,10 @@ def TO_INT_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_SHORT_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_SHORT_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a list of integers represented as strings
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         return [int(val.strip()) for val in variable.split('|')]
     except Exception as e:
         Config.add_log(
@@ -120,9 +127,10 @@ def TO_SHORT_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_UINT64_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_UINT64_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a list of unsigned integers represented as strings
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         return [int(val.strip()) for val in variable.split('|')]
     except Exception as e:
         Config.add_log(
@@ -130,9 +138,10 @@ def TO_UINT64_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_FLOAT_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_FLOAT_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a list of floats represented as strings
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         return [float(val.strip()) for val in variable.split('|')]
     except Exception as e:
         Config.add_log(
@@ -140,9 +149,10 @@ def TO_FLOAT_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_STR_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_STR_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
-        # Assuming variable is a list of strings
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         return [str(val) for val in variable.split('|')]
     except Exception as e:
         Config.add_log(
@@ -150,8 +160,9 @@ def TO_STR_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_BOOL_TUPLE(file_path, table_name, Col_x, Col_y, variable):
+def TO_BOOL_TUPLE(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
+
         if variable.find("(") != -1 or variable.find(")") != -1:
             values = variable.strip('()').split(',')
             return tuple(
@@ -166,7 +177,7 @@ def TO_BOOL_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_BYTE_TUPLE(file_path, table_name, Col_x, Col_y, variable):
+def TO_BYTE_TUPLE(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         if variable.find("(") != -1 or variable.find(")") != -1:
             values = variable.strip('()').split(',')
@@ -180,7 +191,7 @@ def TO_BYTE_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_INT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
+def TO_INT_TUPLE(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         if variable.find("(") != -1 or variable.find(")") != -1:
             values = variable.strip('()').split(',')
@@ -194,7 +205,7 @@ def TO_INT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_UINT64_TUPLE(file_path, table_name, Col_x, Col_y, variable):
+def TO_UINT64_TUPLE(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         if variable.find("(") != -1 or variable.find(")") != -1:
             values = variable.strip('()').split(',')
@@ -208,7 +219,7 @@ def TO_UINT64_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_FLOAT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
+def TO_FLOAT_TUPLE(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         if variable.find("(") != -1 or variable.find(")") != -1:
             values = variable.strip('()').split(',')
@@ -222,7 +233,7 @@ def TO_FLOAT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_STR_TUPLE(file_path, table_name, Col_x, Col_y, variable):
+def TO_STR_TUPLE(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         if variable.find("(") != -1 or variable.find(")") != -1:
             values = variable.strip('()').split(',')
@@ -236,8 +247,10 @@ def TO_STR_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_BOOL_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_BOOL_TUPLE_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         tuples = variable.replace("\n", "").split('|')
         result = []
         for tup in tuples:
@@ -260,8 +273,10 @@ def TO_BOOL_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_BYTE_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_BYTE_TUPLE_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         tuples = variable.replace("\n", "").split('|')
         result = []
         for tup in tuples:
@@ -280,8 +295,10 @@ def TO_BYTE_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_INT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_INT_TUPLE_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         tuples = variable.replace("\n", "").split('|')
         result = []
         for tup in tuples:
@@ -300,8 +317,10 @@ def TO_INT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_UINT64_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_UINT64_TUPLE_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         tuples = variable.replace("\n", "").split('|')
         result = []
         for tup in tuples:
@@ -320,8 +339,10 @@ def TO_UINT64_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_FLOAT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_FLOAT_TUPLE_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         tuples = variable.replace("\n", "").split('|')
         result = []
         for tup in tuples:
@@ -340,8 +361,10 @@ def TO_FLOAT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_STR_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_STR_TUPLE_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
         tuples = variable.split('|')
         result = []
         for tup in tuples:
@@ -360,7 +383,7 @@ def TO_STR_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_SHORT(file_path, table_name, Col_x, Col_y, variable):
+def TO_SHORT(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     if isinstance(variable, int):
         return variable
     else:
@@ -373,7 +396,7 @@ def TO_SHORT(file_path, table_name, Col_x, Col_y, variable):
             return None
 
 
-def TO_SHORT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
+def TO_SHORT_TUPLE(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         values = variable.strip('()').split(',')
         return tuple(int(val.strip()) for val in values)
@@ -383,7 +406,7 @@ def TO_SHORT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_SHORT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
+def TO_SHORT_TUPLE_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         tuples = variable.split('|')
         result = []
@@ -398,21 +421,21 @@ def TO_SHORT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_PNG(file_path, table_name, Col_x, Col_y, variable):
+def TO_PNG(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         if str(variable) == "nan":
             raise Exception("")
         else:
             path1 = variable[variable.find("\"") + 1:]
             path2 = path1[:path1.find("\"")]
-            return Config.load_data_key("在项目中读取PNG资源所用的路径") + path2 + ".png"
+            return NowProjectConfig["项目中读取PNG资源的路径"] + path2 + ".png"
     except Exception as e:
         Config.add_log(
             f"导出失败！  配置文件:[{file_path}]  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据:[{variable}]转换为图片时出现错误，看起来没有图片数据！：{e}")
         return None
 
 
-def TO_RGB(file_path, table_name, Col_x, Col_y, variable):
+def TO_RGB(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         if variable.find("(") != -1 or variable.find(")") != -1:
             values = variable.strip('()').split(',')
@@ -432,7 +455,7 @@ def TO_RGB(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_RGBA(file_path, table_name, Col_x, Col_y, variable):
+def TO_RGBA(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         if variable.find("(") != -1 or variable.find(")") != -1:
             values = variable.strip('()').split(',')
@@ -451,7 +474,8 @@ def TO_RGBA(file_path, table_name, Col_x, Col_y, variable):
             f"导出失败！  配置文件:[{file_path}]  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据:[{variable}]转换为RGBA颜色时出现错误！：{e}")
         return None
 
-def TO_INT_VECTOR_LIST(file_path, table_name, Col_x, Col_y, variable):
+
+def TO_INT_VECTOR_LIST(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         tuples = variable.replace("\n", "").split('|')
         result = []
@@ -471,12 +495,22 @@ def TO_INT_VECTOR_LIST(file_path, table_name, Col_x, Col_y, variable):
         return None
 
 
-def TO_SEQUENCE_MAP(file_path, table_name, Col_x, Col_y, variable):
+def TO_SEQUENCE_MAP(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
     try:
         return str(variable)
     except Exception as e:
         Config.add_log(
             f"导出失败！  配置文件:[{file_path}]  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据:[{variable}]转换为SequenceMap序列图时出现错误：{e}")
+        return None
+
+def TO_INT_HashSet(NowProjectConfig, file_path, table_name, Col_x, Col_y, variable):
+    try:
+        if str(variable) == 'nan' or str(variable) == '':
+            return []
+        return [int(val.strip()) for val in str(variable).split('|')]
+    except Exception as e:
+        Config.add_log(
+            f"导出失败！  配置文件:[{file_path}]  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据:[{variable}]转换为HashSet<INT>列表时出现错误：{e}")
         return None
 
 BaseType = {
@@ -520,17 +554,18 @@ BaseType = {
     '<Vector2I>': (TO_INT_VECTOR_LIST, [], 'List<Vector2I>'),  ##坐标列表类型
     'SequenceMap': (TO_SEQUENCE_MAP, "", 'SequenceMapType'),  ##坐标列表类型
     'BBCode': (TO_STR, "", 'BBCode'),
+    'HashSet<INT>': (TO_INT_HashSet, [], 'HashSet<int>'),
 }
 
 
-def TO_DATA(file_path, table_name, Col_x, Col_y, Type, Data):
+def TO_DATA(NowProjectConfig, file_path, table_name, Col_x, Col_y, Type, Data, IsDefault):
     try:
         function, default_value, NewType = BaseType.get(Type, (
-            lambda file_path, table_name, Col_x, Col_y, variable: "Invalid", None))
-        if Data == "#BASEVALUE":
+            lambda NowProjectConfig, file_path, table_name, Col_x, Col_y, variable: "Invalid", None))
+        if Data == "#BASEVALUE" or (IsDefault and (Data == '' or str(Data) == 'nan')):  ## 值为#BASEVALUE 或者 值为空的同时，数据为可默认
             return default_value
         else:
-            NewData = function(file_path, table_name, Col_x, Col_y, Data)
+            NewData = function(NowProjectConfig, file_path, table_name, Col_x, Col_y, Data)
             return NewData
     except Exception as e:
         Config.add_log(

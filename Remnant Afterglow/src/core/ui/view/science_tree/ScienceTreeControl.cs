@@ -88,7 +88,6 @@ namespace Remnant_Afterglow
                     max_y = item.Pos.Y + 1;
 
             }
-            Log.Print("长:" + max_x + ",宽" + max_y);
             for (int i = 0; i < max_x; i++)
             {
                 List<TreeNode> temp = new List<TreeNode>();
@@ -185,7 +184,6 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public Vector2I GetPos(Vector2I pos)
         {
-            Log.Print(pos);
             Vector2I vec = new Vector2I(pos.X * (range.NodeSize.X + range.Interval.X) - range.NodeSize.X, pos.Y * (range.NodeSize.Y + range.Interval.Y) - range.NodeSize.Y);
             return range.Offset + vec;
         }

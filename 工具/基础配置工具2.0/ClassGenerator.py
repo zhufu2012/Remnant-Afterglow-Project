@@ -3,11 +3,11 @@ import Config
 
 ##根据数据合成一个配置类
 class CSharpClassGenerator:
-    def __init__(self, data, ConfigData):
+    def __init__(self, data, NowProjectConfig):
         self.data = data
-        self.Config = ConfigData
-        self.define_str = self.Config["默认开头添加的库名"]
-        self.define_str2 = self.Config["类2默认开头添加的库名"]
+        self.Config = NowProjectConfig
+        self.define_str = self.Config["配置类默认添加的库名"]
+        self.define_str2 = self.Config["配置类拓展2默认添加的库名"]
         self.class_str_dict = self.Config["导出类型对应库名称"]
 
     def combine_strings(self, input_string):
@@ -119,10 +119,10 @@ class CSharpClassGenerator:
                 break
         all_str = f'namespace {self.Config["导出类的命名空间"]}\n{{\n    /// <summary>\n    /// 自动生成的配置类2 {class_name} 用于 {xlsx_dec},拓展请在expand_class文件下使用partial拓展\n    /// </summary>\n' \
                   f'    public partial class {class_name}\n    ' + ('{\n        /// <summary>\n        /// '
-                                                                    '初始化数据-构造函数后运行\n        /// </summary>\n        '
+                                                                    '创建配置时，初始化数据-构造函数中运行\n        /// </summary>\n        '
                                                                     'public void InitData()\n        {\n        }\n'
                                                                     '\n        /// <summary>\n        /// '
-                                                                    '初始化数据-构造函数后运行\n        /// </summary>        '
+                                                                    '创建缓存时，初始化数据-构造函数后运行\n        /// </summary>        '
                                                                     '\n        public void InitData2()\n        {\n        }\n    }'
                                                                     '\n}\n')
         class_str = self.combine_strings(all_str)

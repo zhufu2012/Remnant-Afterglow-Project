@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0t7tvopyv65j"]
+
+[ext_resource type="Script" path="res://src/core/game/mapLogic/MapCopy.cs" id="1_qpqno"]
+
+[node name="MapCopy" type="Node2D"]
+script = ExtResource("1_qpqno")
+
+[node name="BulletList" type="Node2D" parent="."]
+
+[node name="DrawList" type="Node2D" parent="."]
+
+[node name="UnitList" type="Node2D" parent="."]
+
+[node name="TowerList" type="Node2D" parent="."]
+
+[node name="BuildList" type="Node2D" parent="."]
+
+[node name="WorkerList" type="Node2D" parent="."]
+
+[node name="NavigationRoot" type="Node2D" parent="."]
+
+[node name="Pos" type="Label" parent="."]
+offset_left = 377.0
+offset_top = 2.0
+offset_right = 498.0
+offset_bottom = 37.0

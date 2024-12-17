@@ -1,3 +1,6 @@
 cfg: 游戏生成的配置类，和配置的拓展类
 core: 游戏核心代码 空间:Project_Core
 log：用于保存日志和游戏调试等  空间:Log
+librarys: 导入的其他库文件
+
+edit:地图编辑器代码

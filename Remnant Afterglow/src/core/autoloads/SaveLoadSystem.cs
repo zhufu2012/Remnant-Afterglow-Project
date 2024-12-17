@@ -170,7 +170,7 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 获取游戏配置数据
+        /// 获取游戏配置数据config.json
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="filename"></param>

@@ -132,7 +132,7 @@ namespace Project_Core_Test
                 Dictionary<int, int> flush_dict = brushPoint.Check_RefreshEnemies(all_time, delta);
                 if (flush_dict.Count > 0)
                 {
-                    Log.Print(Engine.GetFramesPerSecond());
+                    Log.Print("时间：",Engine.GetFramesPerSecond());
                 }
                 foreach (var key in flush_dict)//刷新怪物
                 {

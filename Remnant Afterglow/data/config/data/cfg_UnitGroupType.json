@@ -1,0 +1,51 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "GroupTypeId": 1,
+        "ShowName": "小规模",
+        "Name": "小规模",
+        "PromptPng": "./data/config/images/ID_23117829C72A4D1EB611C6413ABDE057.png"
+    },
+    {
+        "KEY_INDEX": "2",
+        "GroupTypeId": 2,
+        "ShowName": "中等规模",
+        "Name": "中等规模",
+        "PromptPng": "./data/config/images/ID_9AEBCD3B6BDD45A680E647244E376B90.png"
+    },
+    {
+        "KEY_INDEX": "3",
+        "GroupTypeId": 3,
+        "ShowName": "大批敌军",
+        "Name": "大批敌军",
+        "PromptPng": "./data/config/images/ID_E7E867ACD9744375AB976A4A614FB71B.png"
+    },
+    {
+        "KEY_INDEX": "4",
+        "GroupTypeId": 4,
+        "ShowName": "主力部队",
+        "Name": "主力部队",
+        "PromptPng": "./data/config/images/ID_46417E94611C48BD8423CA81D050314A.png"
+    },
+    {
+        "KEY_INDEX": "5",
+        "GroupTypeId": 5,
+        "ShowName": "精锐",
+        "Name": "精锐",
+        "PromptPng": "./data/config/images/ID_6DA239E6E1AA43FC9791BAB0D140E412.png"
+    },
+    {
+        "KEY_INDEX": "6",
+        "GroupTypeId": 6,
+        "ShowName": "决战兵器",
+        "Name": "决战兵器",
+        "PromptPng": "./data/config/images/ID_37153458CCA041888A6B8231417BA062.png"
+    },
+    {
+        "KEY_INDEX": "7",
+        "GroupTypeId": 7,
+        "ShowName": "特殊编制",
+        "Name": "特殊编制",
+        "PromptPng": "./data/config/images/ID_37153458CCA041888A6B8231417BA062.png"
+    }
+]

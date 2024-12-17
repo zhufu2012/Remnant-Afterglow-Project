@@ -9,13 +9,12 @@ namespace Remnant_Afterglow
     /// </summary>
     public partial class AttributeData
     {
-        public FloatManagedAttribute attribute;
+
         /// <summary>
         /// 初始化数据-构造函数后运行
         /// </summary>
         public void InitData()
         {
-            attribute = new FloatManagedAttribute(AttributeId, StartValue, Min, Max, Regen);
           
         }
 
@@ -25,6 +24,15 @@ namespace Remnant_Afterglow
         public void InitData2()
         {
 
+        }
+
+        /// <summary>
+        /// 根据配置获取属性
+        /// </summary>
+        /// <returns></returns>
+        public FloatManagedAttribute GetAttr()
+        {
+            return new FloatManagedAttribute(AttributeId, StartValue, Min, Max, Regen);
         }
 
     }

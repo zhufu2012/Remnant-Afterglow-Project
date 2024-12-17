@@ -1,0 +1,35 @@
+[
+    {
+        "KEY_INDEX": "100103",
+        "ScienceId": 100103,
+        "ScienceRangeId": 1001,
+        "ScienceType": 1,
+        "IsUnlock": true,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    },
+    {
+        "KEY_INDEX": "100104",
+        "ScienceId": 100104,
+        "ScienceRangeId": 1001,
+        "ScienceType": 2,
+        "IsUnlock": true,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    },
+    {
+        "KEY_INDEX": "100202",
+        "ScienceId": 100202,
+        "ScienceRangeId": 1002,
+        "ScienceType": 2,
+        "IsUnlock": true,
+        "UnlockCurrList": [],
+        "MapBuildIDList": [],
+        "ScienceParam1": 0,
+        "ScienceParamList": []
+    }
+]

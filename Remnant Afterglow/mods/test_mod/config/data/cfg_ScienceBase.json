@@ -1,13 +1,13 @@
 [
     {
-        "KEY_INDEX": "10001",
-        "ScienceId": 10001,
-        "ScienceName": "模组拓展1",
-        "ScienceDes": "模组拓展1",
-        "ScienceRangeId": 1000,
+        "KEY_INDEX": "100101",
+        "ScienceId": 100101,
+        "ScienceRangeId": 1001,
+        "ScienceName": "模组1分支1 新科技1",
+        "ScienceDes": "模组1分支1 新科技1",
         "Pos": [
             1,
-            3
+            2
         ],
         "ConnectList": [
             10002
@@ -15,14 +15,27 @@
         "SciencePng": "./mods/test_mod/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
     },
     {
-        "KEY_INDEX": "10002",
-        "ScienceId": 10002,
-        "ScienceName": "模组拓展2",
-        "ScienceDes": "模组拓展2",
-        "ScienceRangeId": 1000,
+        "KEY_INDEX": "100102",
+        "ScienceId": 100102,
+        "ScienceRangeId": 1001,
+        "ScienceName": "模组1分支1 新科技2",
+        "ScienceDes": "模组1分支1 新科技2",
         "Pos": [
             1,
-            7
+            6
+        ],
+        "ConnectList": [],
+        "SciencePng": "./mods/test_mod/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
+    },
+    {
+        "KEY_INDEX": "100201",
+        "ScienceId": 100201,
+        "ScienceRangeId": 1002,
+        "ScienceName": "模组1分支2 新科技1",
+        "ScienceDes": "模组1分支2 新科技1",
+        "Pos": [
+            1,
+            2
         ],
         "ConnectList": [],
         "SciencePng": "./mods/test_mod/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"

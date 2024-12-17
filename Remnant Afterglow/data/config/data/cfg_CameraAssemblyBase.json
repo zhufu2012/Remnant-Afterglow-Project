@@ -25,29 +25,6 @@
     {
         "KEY_INDEX": "2",
         "AssemblyId": 2,
-        "Type1": 1,
-        "Type2": 0,
-        "Param1": 0,
-        "Param2": 0,
-        "ParamStr1": "",
-        "ParamPosLIst": 0,
-        "ParamPng1": "null",
-        "ParamPng2": "null",
-        "ParamPng3": "null",
-        "ParamPng4": "null",
-        "IsDefineShow": false,
-        "Size": [
-            1152.0,
-            648.0
-        ],
-        "Pos": [
-            0.0,
-            0.0
-        ]
-    },
-    {
-        "KEY_INDEX": "3",
-        "AssemblyId": 3,
         "Type1": 0,
         "Type2": 0,
         "Param1": 0,
@@ -69,31 +46,8 @@
         ]
     },
     {
-        "KEY_INDEX": "4",
-        "AssemblyId": 4,
-        "Type1": 1,
-        "Type2": 0,
-        "Param1": 0,
-        "Param2": 0,
-        "ParamStr1": "",
-        "ParamPosLIst": 0,
-        "ParamPng1": "null",
-        "ParamPng2": "null",
-        "ParamPng3": "null",
-        "ParamPng4": "null",
-        "IsDefineShow": false,
-        "Size": [
-            120.0,
-            100.0
-        ],
-        "Pos": [
-            0.0,
-            0.0
-        ]
-    },
-    {
-        "KEY_INDEX": "5",
-        "AssemblyId": 5,
+        "KEY_INDEX": "3",
+        "AssemblyId": 3,
         "Type1": 51,
         "Type2": 0,
         "Param1": 0,
@@ -115,8 +69,8 @@
         ]
     },
     {
-        "KEY_INDEX": "6",
-        "AssemblyId": 6,
+        "KEY_INDEX": "4",
+        "AssemblyId": 4,
         "Type1": 3,
         "Type2": 1,
         "Param1": 1,
@@ -138,8 +92,8 @@
         ]
     },
     {
-        "KEY_INDEX": "7",
-        "AssemblyId": 7,
+        "KEY_INDEX": "5",
+        "AssemblyId": 5,
         "Type1": 3,
         "Type2": 2,
         "Param1": 2,
@@ -161,8 +115,8 @@
         ]
     },
     {
-        "KEY_INDEX": "8",
-        "AssemblyId": 8,
+        "KEY_INDEX": "6",
+        "AssemblyId": 6,
         "Type1": 3,
         "Type2": 3,
         "Param1": 3,

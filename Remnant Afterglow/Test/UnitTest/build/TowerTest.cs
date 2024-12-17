@@ -69,7 +69,6 @@ namespace Project_Core_Test
             if (!targets.Contains(enter_area))
             {
                 targets.Add(enter_area);
-                Log.Print(222222);
             }
         }
 
@@ -82,7 +81,6 @@ namespace Project_Core_Test
             if (targets.Contains(enter_area))
             {
                 targets.Remove(enter_area);
-                Log.Print(111111);
             }
         }
 

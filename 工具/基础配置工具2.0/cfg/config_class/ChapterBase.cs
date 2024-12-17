@@ -31,7 +31,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public int ChapterType { get; set; }
         /// <summary>        
-        /// 章节所用大地图id
+        /// 战役所用大地图id
         /// </summary>
         public int BigMapBaseId { get; set; }
         /// <summary>        
@@ -39,15 +39,19 @@ namespace Remnant_Afterglow
         /// </summary>
         public int CameraId { get; set; }
         /// <summary>        
-        /// 章节图片
+        /// 战役图片
         /// </summary>
         public Texture2D ChapterImage { get; set; }
         /// <summary>        
-        /// 章节初始关卡列表
+        /// 战役初始关卡列表
         ///一开始就解锁的关卡
         ///
         /// </summary>
         public List<int> ChapterStartCopy { get; set; }
+        /// <summary>        
+        /// 战役初始就占领的位置列表
+        /// </summary>
+        public List<Vector2I> UnLockList { get; set; }
 
         public ChapterBase(int id)
         {
@@ -61,6 +65,7 @@ namespace Remnant_Afterglow
 			CameraId = (int)dict["CameraId"];
 			ChapterImage = (Texture2D)dict["ChapterImage"];
 			ChapterStartCopy = (List<int>)dict["ChapterStartCopy"];
+			UnLockList = (List<Vector2I>)dict["UnLockList"];
 			InitData();
         }
 
@@ -77,6 +82,7 @@ namespace Remnant_Afterglow
 			CameraId = (int)dict["CameraId"];
 			ChapterImage = (Texture2D)dict["ChapterImage"];
 			ChapterStartCopy = (List<int>)dict["ChapterStartCopy"];
+			UnLockList = (List<Vector2I>)dict["UnLockList"];
 			InitData();
         }
 
@@ -91,6 +97,7 @@ namespace Remnant_Afterglow
 			CameraId = (int)dict["CameraId"];
 			ChapterImage = (Texture2D)dict["ChapterImage"];
 			ChapterStartCopy = (List<int>)dict["ChapterStartCopy"];
+			UnLockList = (List<Vector2I>)dict["UnLockList"];
 			InitData();
         }
         #endregion

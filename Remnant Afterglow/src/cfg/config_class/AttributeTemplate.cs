@@ -8,7 +8,7 @@ namespace Remnant_Afterglow
     {
         #region 参数及初始化
         /// <summary>        
-        /// 标签id
+        /// 模板id
         /// </summary>
         public int TempLateId { get; set; }
         /// <summary>        
@@ -23,12 +23,8 @@ namespace Remnant_Afterglow
         /// </summary>
         public bool IsCover { get; set; }
         /// <summary>        
-        /// 实体类型
-        ///  1 单位 2 炮塔  3 建筑 
-        /// </summary>
-        public int ObjectType { get; set; }
-        /// <summary>        
         /// 负数实体id
+        ///只能为负数
         /// </summary>
         public int ObjectId { get; set; }
 
@@ -38,7 +34,6 @@ namespace Remnant_Afterglow
 			TempLateId = (int)dict["TempLateId"];
 			TempLateName = (string)dict["TempLateName"];
 			IsCover = (bool)dict["IsCover"];
-			ObjectType = (int)dict["ObjectType"];
 			ObjectId = (int)dict["ObjectId"];
 			InitData();
         }
@@ -50,7 +45,6 @@ namespace Remnant_Afterglow
 			TempLateId = (int)dict["TempLateId"];
 			TempLateName = (string)dict["TempLateName"];
 			IsCover = (bool)dict["IsCover"];
-			ObjectType = (int)dict["ObjectType"];
 			ObjectId = (int)dict["ObjectId"];
 			InitData();
         }
@@ -60,7 +54,6 @@ namespace Remnant_Afterglow
 			TempLateId = (int)dict["TempLateId"];
 			TempLateName = (string)dict["TempLateName"];
 			IsCover = (bool)dict["IsCover"];
-			ObjectType = (int)dict["ObjectType"];
 			ObjectId = (int)dict["ObjectId"];
 			InitData();
         }

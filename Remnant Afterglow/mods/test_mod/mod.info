@@ -1,11 +1,19 @@
 {
-	"Name": "模组名称",
-	"DisplayName": "显示名称",
+	"Name": "测试模组1",
+	"DisplayName": "测试模组1",
 	"Author":"这里是作者名称",
-	"Description": "模组描述，这里应当能设置字体大小，颜色等",
+	"Icon":"icon.png",
+	"Description": "这是对科技树的分支拓展，拓展了两个分支,
+	模组1-拓展科技页-建筑
+	模组1-拓展科技页-炮塔
+",
+	"InfoUrl":"https://github.com/zhufu2012",
 	"Version": "模组版本",
 	"MinGameVersion" : "最低游戏版本",
+	"MaxGameVersion" : "最高游戏版本",
 	"HasExcel": true,
+	"HasPck": true,
 	"HasCsharp": true,
+	"AssemblyModClass":"dll路径",
 	"ImgList": []
 }

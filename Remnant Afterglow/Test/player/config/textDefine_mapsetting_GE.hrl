@@ -1,0 +1,9095 @@
+-ifndef(textDefine_mapsetting_GE_hrl).
+-define(textDefine_mapsetting_GE_hrl, 1).
+-define(MAPNAME2000003, "Sonnenstreitwagen").
+-define(MAPNAME2000004, "Drachenstadt").
+-define(MAPNAME2000005, "Wiederholende Stufe").
+-define(MAPNAME2000006, "Insel der Weisheit").
+-define(MAPNAME2108000, "Gildenbasis").
+-define(MAPNAME2000999, "Stadtrand von Athen").
+-define(MAPNAME120001, "Arena").
+-define(MAPNAME2310001, "Privilegien-Boss F1").
+-define(MAPNAME2310002, "Privilegien-Boss F2").
+-define(MAPNAME2310003, "Privilegien-Boss F3").
+-define(MAPNAME2310004, "Privilegien-Boss F4").
+-define(MAPNAME2310005, "Privilegien-Boss F5").
+-define(MAPNAME2310006, "Privilegien-Boss F6").
+-define(MAPNAME2310007, "Privilegien-Boss F7").
+-define(MAPNAME2310008, "Privilegien-Boss F8").
+-define(MAPNAME2310009, "Privilegien-Boss F9").
+-define(MAPNAME2310010, "Privilegien-Boss F10").
+-define(MAPNAME2310011, "Privilegien-Boss F11").
+-define(MAPNAME2310012, "Privilegien-Boss F12").
+-define(MAPNAME2310013, "Privilegien-Boss F13").
+-define(MAPNAME2310014, "Privilegien-Boss F14").
+-define(MAPNAME2310015, "Privilegien-Boss F15").
+-define(MAPNAME2310016, "Privilegien-Boss F16").
+-define(MAPNAME2310017, "Privilegien-Boss F17").
+-define(MAPNAME2310018, "Privilegien-Boss F18").
+-define(MAPNAME2310019, "Privilegien-Boss F19").
+-define(MAPNAME2310020, "Privilegien-Boss F20").
+-define(MAPNAME2310021, "Privilegien-Boss F21").
+-define(MAPNAME2310022, "Privilegien-Boss F22").
+-define(MAPNAME2310023, "Privilegien-Boss F23").
+-define(MAPNAME2310024, "Privilegien-Boss F24").
+-define(MAPNAME2310025, "Privilegien-Boss F25").
+-define(MAPNAME2310026, "Privilegien-Boss F26").
+-define(MAPNAME2310027, "Privilegien-Boss F27").
+-define(MAPNAME2310028, "Privilegien-Boss F28").
+-define(MAPNAME2310029, "Privilegien-Boss F29").
+-define(MAPNAME2310030, "Privilegien-Boss F30").
+-define(MAPNAME2310031, "Privilegien-Boss F31").
+-define(MAPNAME2310032, "Privilegien-Boss F32").
+-define(MAPNAME2310033, "Privilegien-Boss F33").
+-define(MAPNAME2310034, "Privilegien-Boss F34").
+-define(MAPNAME2310035, "Privilegien-Boss F35").
+-define(MAPNAME2310055, "Privilegien-Boss F19").
+-define(MAPNAME2310056, "Privilegien-Boss F20").
+-define(MAPNAME2310057, "Privilegien-Boss F21").
+-define(MAPNAME2310058, "Privilegien-Boss F22").
+-define(MAPNAME2310059, "Privilegien-Boss F23").
+-define(MAPNAME2370001, "Prüfung der Tapferkeit").
+-define(MAPNAME840001, "Turm von Babel F1-1").
+-define(MAPNAME840002, "Turm von Babel F1-2").
+-define(MAPNAME840003, "Turm von Babel F1-3").
+-define(MAPNAME840004, "Turm von Babel F1-4").
+-define(MAPNAME840005, "Turm von Babel F1-5").
+-define(MAPNAME840006, "Turm von Babel F1-6").
+-define(MAPNAME840007, "Turm von Babel F1-7").
+-define(MAPNAME840008, "Turm von Babel F1-8").
+-define(MAPNAME840009, "Turm von Babel F1-9").
+-define(MAPNAME840010, "Turm von Babel F1-10").
+-define(MAPNAME840011, "Turm von Babel F1-11").
+-define(MAPNAME840012, "Turm von Babel F1-12").
+-define(MAPNAME840013, "Turm von Babel F1-13").
+-define(MAPNAME840014, "Turm von Babel F1-14").
+-define(MAPNAME840015, "Turm von Babel F1-15").
+-define(MAPNAME840016, "Turm von Babel F1-16").
+-define(MAPNAME840017, "Turm von Babel F1-17").
+-define(MAPNAME840018, "Turm von Babel F1-18").
+-define(MAPNAME840019, "Turm von Babel F1-19").
+-define(MAPNAME840020, "Turm von Babel F1-20").
+-define(MAPNAME840021, "Turm von Babel F2-1").
+-define(MAPNAME840022, "Turm von Babel F2-2").
+-define(MAPNAME840023, "Turm von Babel F2-3").
+-define(MAPNAME840024, "Turm von Babel F2-4").
+-define(MAPNAME840025, "Turm von Babel F2-5").
+-define(MAPNAME840026, "Turm von Babel F2-6").
+-define(MAPNAME840027, "Turm von Babel F2-7").
+-define(MAPNAME840028, "Turm von Babel F2-8").
+-define(MAPNAME840029, "Turm von Babel F2-9").
+-define(MAPNAME840030, "Turm von Babel F2-10").
+-define(MAPNAME840031, "Turm von Babel F2-11").
+-define(MAPNAME840032, "Turm von Babel F2-12").
+-define(MAPNAME840033, "Turm von Babel F2-13").
+-define(MAPNAME840034, "Turm von Babel F2-14").
+-define(MAPNAME840035, "Turm von Babel F2-15").
+-define(MAPNAME840036, "Turm von Babel F2-16").
+-define(MAPNAME840037, "Turm von Babel F2-17").
+-define(MAPNAME840038, "Turm von Babel F2-18").
+-define(MAPNAME840039, "Turm von Babel F2-19").
+-define(MAPNAME840040, "Turm von Babel F2-20").
+-define(MAPNAME840041, "Turm von Babel F3-1").
+-define(MAPNAME840042, "Turm von Babel F3-2").
+-define(MAPNAME840043, "Turm von Babel F3-3").
+-define(MAPNAME840044, "Turm von Babel F3-4").
+-define(MAPNAME840045, "Turm von Babel F3-5").
+-define(MAPNAME840046, "Turm von Babel F3-6").
+-define(MAPNAME840047, "Turm von Babel F3-7").
+-define(MAPNAME840048, "Turm von Babel F3-8").
+-define(MAPNAME840049, "Turm von Babel F3-9").
+-define(MAPNAME840050, "Turm von Babel F3-10").
+-define(MAPNAME840051, "Turm von Babel F3-11").
+-define(MAPNAME840052, "Turm von Babel F3-12").
+-define(MAPNAME840053, "Turm von Babel F3-13").
+-define(MAPNAME840054, "Turm von Babel F3-14").
+-define(MAPNAME840055, "Turm von Babel F3-15").
+-define(MAPNAME840056, "Turm von Babel F3-16").
+-define(MAPNAME840057, "Turm von Babel F3-17").
+-define(MAPNAME840058, "Turm von Babel F3-18").
+-define(MAPNAME840059, "Turm von Babel F3-19").
+-define(MAPNAME840060, "Turm von Babel F3-20").
+-define(MAPNAME840061, "Turm von Babel F4-1").
+-define(MAPNAME840062, "Turm von Babel F4-2").
+-define(MAPNAME840063, "Turm von Babel F4-3").
+-define(MAPNAME840064, "Turm von Babel F4-4").
+-define(MAPNAME840065, "Turm von Babel F4-5").
+-define(MAPNAME840066, "Turm von Babel F4-6").
+-define(MAPNAME840067, "Turm von Babel F4-7").
+-define(MAPNAME840068, "Turm von Babel F4-8").
+-define(MAPNAME840069, "Turm von Babel F4-9").
+-define(MAPNAME840070, "Turm von Babel F4-10").
+-define(MAPNAME840071, "Turm von Babel F4-11").
+-define(MAPNAME840072, "Turm von Babel F4-12").
+-define(MAPNAME840073, "Turm von Babel F4-13").
+-define(MAPNAME840074, "Turm von Babel F4-14").
+-define(MAPNAME840075, "Turm von Babel F4-15").
+-define(MAPNAME840076, "Turm von Babel F4-16").
+-define(MAPNAME840077, "Turm von Babel F4-17").
+-define(MAPNAME840078, "Turm von Babel F4-18").
+-define(MAPNAME840079, "Turm von Babel F4-19").
+-define(MAPNAME840080, "Turm von Babel F4-20").
+-define(MAPNAME840081, "Turm von Babel F5-1").
+-define(MAPNAME840082, "Turm von Babel F5-2").
+-define(MAPNAME840083, "Turm von Babel F5-3").
+-define(MAPNAME840084, "Turm von Babel F5-4").
+-define(MAPNAME840085, "Turm von Babel F5-5").
+-define(MAPNAME840086, "Turm von Babel F5-6").
+-define(MAPNAME840087, "Turm von Babel F5-7").
+-define(MAPNAME840088, "Turm von Babel F5-8").
+-define(MAPNAME840089, "Turm von Babel F5-9").
+-define(MAPNAME840090, "Turm von Babel F5-10").
+-define(MAPNAME840091, "Turm von Babel F5-11").
+-define(MAPNAME840092, "Turm von Babel F5-12").
+-define(MAPNAME840093, "Turm von Babel F5-13").
+-define(MAPNAME840094, "Turm von Babel F5-14").
+-define(MAPNAME840095, "Turm von Babel F5-15").
+-define(MAPNAME840096, "Turm von Babel F5-16").
+-define(MAPNAME840097, "Turm von Babel F5-17").
+-define(MAPNAME840098, "Turm von Babel F5-18").
+-define(MAPNAME840099, "Turm von Babel F5-19").
+-define(MAPNAME840100, "Turm von Babel F5-20").
+-define(MAPNAME840101, "Turm von Babel F6-1").
+-define(MAPNAME840102, "Turm von Babel F6-2").
+-define(MAPNAME840103, "Turm von Babel F6-3").
+-define(MAPNAME840104, "Turm von Babel F6-4").
+-define(MAPNAME840105, "Turm von Babel F6-5").
+-define(MAPNAME840106, "Turm von Babel F6-6").
+-define(MAPNAME840107, "Turm von Babel F6-7").
+-define(MAPNAME840108, "Turm von Babel F6-8").
+-define(MAPNAME840109, "Turm von Babel F6-9").
+-define(MAPNAME840110, "Turm von Babel F6-10").
+-define(MAPNAME840111, "Turm von Babel F6-11").
+-define(MAPNAME840112, "Turm von Babel F6-12").
+-define(MAPNAME840113, "Turm von Babel F6-13").
+-define(MAPNAME840114, "Turm von Babel F6-14").
+-define(MAPNAME840115, "Turm von Babel F6-15").
+-define(MAPNAME840116, "Turm von Babel F6-16").
+-define(MAPNAME840117, "Turm von Babel F6-17").
+-define(MAPNAME840118, "Turm von Babel F6-18").
+-define(MAPNAME840119, "Turm von Babel F6-19").
+-define(MAPNAME840120, "Turm von Babel F6-20").
+-define(MAPNAME840121, "Turm von Babel F7-1").
+-define(MAPNAME840122, "Turm von Babel F7-2").
+-define(MAPNAME840123, "Turm von Babel F7-3").
+-define(MAPNAME840124, "Turm von Babel F7-4").
+-define(MAPNAME840125, "Turm von Babel F7-5").
+-define(MAPNAME840126, "Turm von Babel F7-6").
+-define(MAPNAME840127, "Turm von Babel F7-7").
+-define(MAPNAME840128, "Turm von Babel F7-8").
+-define(MAPNAME840129, "Turm von Babel F7-9").
+-define(MAPNAME840130, "Turm von Babel F7-10").
+-define(MAPNAME840131, "Turm von Babel F7-11").
+-define(MAPNAME840132, "Turm von Babel F7-12").
+-define(MAPNAME840133, "Turm von Babel F7-13").
+-define(MAPNAME840134, "Turm von Babel F7-14").
+-define(MAPNAME840135, "Turm von Babel F7-15").
+-define(MAPNAME840136, "Turm von Babel F7-16").
+-define(MAPNAME840137, "Turm von Babel F7-17").
+-define(MAPNAME840138, "Turm von Babel F7-18").
+-define(MAPNAME840139, "Turm von Babel F7-19").
+-define(MAPNAME840140, "Turm von Babel F7-20").
+-define(MAPNAME840141, "Turm von Babel F8-1").
+-define(MAPNAME840142, "Turm von Babel F8-2").
+-define(MAPNAME840143, "Turm von Babel F8-3").
+-define(MAPNAME840144, "Turm von Babel F8-4").
+-define(MAPNAME840145, "Turm von Babel F8-5").
+-define(MAPNAME840146, "Turm von Babel F8-6").
+-define(MAPNAME840147, "Turm von Babel F8-7").
+-define(MAPNAME840148, "Turm von Babel F8-8").
+-define(MAPNAME840149, "Turm von Babel F8-9").
+-define(MAPNAME840150, "Turm von Babel F8-10").
+-define(MAPNAME840151, "Turm von Babel F8-11").
+-define(MAPNAME840152, "Turm von Babel F8-12").
+-define(MAPNAME840153, "Turm von Babel F8-13").
+-define(MAPNAME840154, "Turm von Babel F8-14").
+-define(MAPNAME840155, "Turm von Babel F8-15").
+-define(MAPNAME840156, "Turm von Babel F8-16").
+-define(MAPNAME840157, "Turm von Babel F8-17").
+-define(MAPNAME840158, "Turm von Babel F8-18").
+-define(MAPNAME840159, "Turm von Babel F8-19").
+-define(MAPNAME840160, "Turm von Babel F8-20").
+-define(MAPNAME840161, "Turm von Babel F9-1").
+-define(MAPNAME840162, "Turm von Babel F9-2").
+-define(MAPNAME840163, "Turm von Babel F9-3").
+-define(MAPNAME840164, "Turm von Babel F9-4").
+-define(MAPNAME840165, "Turm von Babel F9-5").
+-define(MAPNAME840166, "Turm von Babel F9-6").
+-define(MAPNAME840167, "Turm von Babel F9-7").
+-define(MAPNAME840168, "Turm von Babel F9-8").
+-define(MAPNAME840169, "Turm von Babel F9-9").
+-define(MAPNAME840170, "Turm von Babel F9-10").
+-define(MAPNAME840171, "Turm von Babel F9-11").
+-define(MAPNAME840172, "Turm von Babel F9-12").
+-define(MAPNAME840173, "Turm von Babel F9-13").
+-define(MAPNAME840174, "Turm von Babel F9-14").
+-define(MAPNAME840175, "Turm von Babel F9-15").
+-define(MAPNAME840176, "Turm von Babel F9-16").
+-define(MAPNAME840177, "Turm von Babel F9-17").
+-define(MAPNAME840178, "Turm von Babel F9-18").
+-define(MAPNAME840179, "Turm von Babel F9-19").
+-define(MAPNAME840180, "Turm von Babel F9-20").
+-define(MAPNAME840181, "Turm von Babel F10-1").
+-define(MAPNAME840182, "Turm von Babel F10-2").
+-define(MAPNAME840183, "Turm von Babel F10-3").
+-define(MAPNAME840184, "Turm von Babel F10-4").
+-define(MAPNAME840185, "Turm von Babel F10-5").
+-define(MAPNAME840186, "Turm von Babel F10-6").
+-define(MAPNAME840187, "Turm von Babel F10-7").
+-define(MAPNAME840188, "Turm von Babel F10-8").
+-define(MAPNAME840189, "Turm von Babel F10-9").
+-define(MAPNAME840190, "Turm von Babel F10-10").
+-define(MAPNAME840191, "Turm von Babel F10-11").
+-define(MAPNAME840192, "Turm von Babel F10-12").
+-define(MAPNAME840193, "Turm von Babel F10-13").
+-define(MAPNAME840194, "Turm von Babel F10-14").
+-define(MAPNAME840195, "Turm von Babel F10-15").
+-define(MAPNAME840196, "Turm von Babel F10-16").
+-define(MAPNAME840197, "Turm von Babel F10-17").
+-define(MAPNAME840198, "Turm von Babel F10-18").
+-define(MAPNAME840199, "Turm von Babel F10-19").
+-define(MAPNAME840200, "Turm von Babel F10-20").
+-define(MAPNAME840201, "Turm von Babel F11-1").
+-define(MAPNAME840202, "Turm von Babel F11-2").
+-define(MAPNAME840203, "Turm von Babel F11-3").
+-define(MAPNAME840204, "Turm von Babel F11-4").
+-define(MAPNAME840205, "Turm von Babel F11-5").
+-define(MAPNAME840206, "Turm von Babel F11-6").
+-define(MAPNAME840207, "Turm von Babel F11-7").
+-define(MAPNAME840208, "Turm von Babel F11-8").
+-define(MAPNAME840209, "Turm von Babel F11-9").
+-define(MAPNAME840210, "Turm von Babel F11-10").
+-define(MAPNAME840211, "Turm von Babel F11-11").
+-define(MAPNAME840212, "Turm von Babel F11-12").
+-define(MAPNAME840213, "Turm von Babel F11-13").
+-define(MAPNAME840214, "Turm von Babel F11-14").
+-define(MAPNAME840215, "Turm von Babel F11-15").
+-define(MAPNAME840216, "Turm von Babel F11-16").
+-define(MAPNAME840217, "Turm von Babel F11-17").
+-define(MAPNAME840218, "Turm von Babel F11-18").
+-define(MAPNAME840219, "Turm von Babel F11-19").
+-define(MAPNAME840220, "Turm von Babel F11-20").
+-define(MAPNAME840221, "Turm von Babel F12-1").
+-define(MAPNAME840222, "Turm von Babel F12-2").
+-define(MAPNAME840223, "Turm von Babel F12-3").
+-define(MAPNAME840224, "Turm von Babel F12-4").
+-define(MAPNAME840225, "Turm von Babel F12-5").
+-define(MAPNAME840226, "Turm von Babel F12-6").
+-define(MAPNAME840227, "Turm von Babel F12-7").
+-define(MAPNAME840228, "Turm von Babel F12-8").
+-define(MAPNAME840229, "Turm von Babel F12-9").
+-define(MAPNAME840230, "Turm von Babel F12-10").
+-define(MAPNAME840231, "Turm von Babel F12-11").
+-define(MAPNAME840232, "Turm von Babel F12-12").
+-define(MAPNAME840233, "Turm von Babel F12-13").
+-define(MAPNAME840234, "Turm von Babel F12-14").
+-define(MAPNAME840235, "Turm von Babel F12-15").
+-define(MAPNAME840236, "Turm von Babel F12-16").
+-define(MAPNAME840237, "Turm von Babel F12-17").
+-define(MAPNAME840238, "Turm von Babel F12-18").
+-define(MAPNAME840239, "Turm von Babel F12-19").
+-define(MAPNAME840240, "Turm von Babel F12-20").
+-define(MAPNAME840241, "Turm von Babel F13-1").
+-define(MAPNAME840242, "Turm von Babel F13-2").
+-define(MAPNAME840243, "Turm von Babel F13-3").
+-define(MAPNAME840244, "Turm von Babel F13-4").
+-define(MAPNAME840245, "Turm von Babel F13-5").
+-define(MAPNAME840246, "Turm von Babel F13-6").
+-define(MAPNAME840247, "Turm von Babel F13-7").
+-define(MAPNAME840248, "Turm von Babel F13-8").
+-define(MAPNAME840249, "Turm von Babel F13-9").
+-define(MAPNAME840250, "Turm von Babel F13-10").
+-define(MAPNAME840251, "Turm von Babel F13-11").
+-define(MAPNAME840252, "Turm von Babel F13-12").
+-define(MAPNAME840253, "Turm von Babel F13-13").
+-define(MAPNAME840254, "Turm von Babel F13-14").
+-define(MAPNAME840255, "Turm von Babel F13-15").
+-define(MAPNAME840256, "Turm von Babel F13-16").
+-define(MAPNAME840257, "Turm von Babel F13-17").
+-define(MAPNAME840258, "Turm von Babel F13-18").
+-define(MAPNAME840259, "Turm von Babel F13-19").
+-define(MAPNAME840260, "Turm von Babel F13-20").
+-define(MAPNAME840261, "Turm von Babel F14-1").
+-define(MAPNAME840262, "Turm von Babel F14-2").
+-define(MAPNAME840263, "Turm von Babel F14-3").
+-define(MAPNAME840264, "Turm von Babel F14-4").
+-define(MAPNAME840265, "Turm von Babel F14-5").
+-define(MAPNAME840266, "Turm von Babel F14-6").
+-define(MAPNAME840267, "Turm von Babel F14-7").
+-define(MAPNAME840268, "Turm von Babel F14-8").
+-define(MAPNAME840269, "Turm von Babel F14-9").
+-define(MAPNAME840270, "Turm von Babel F14-10").
+-define(MAPNAME840271, "Turm von Babel F14-11").
+-define(MAPNAME840272, "Turm von Babel F14-12").
+-define(MAPNAME840273, "Turm von Babel F14-13").
+-define(MAPNAME840274, "Turm von Babel F14-14").
+-define(MAPNAME840275, "Turm von Babel F14-15").
+-define(MAPNAME840276, "Turm von Babel F14-16").
+-define(MAPNAME840277, "Turm von Babel F14-17").
+-define(MAPNAME840278, "Turm von Babel F14-18").
+-define(MAPNAME840279, "Turm von Babel F14-19").
+-define(MAPNAME840280, "Turm von Babel F14-20").
+-define(MAPNAME840281, "Turm von Babel F15-1").
+-define(MAPNAME840282, "Turm von Babel F15-2").
+-define(MAPNAME840283, "Turm von Babel F15-3").
+-define(MAPNAME840284, "Turm von Babel F15-4").
+-define(MAPNAME840285, "Turm von Babel F15-5").
+-define(MAPNAME840286, "Turm von Babel F15-6").
+-define(MAPNAME840287, "Turm von Babel F15-7").
+-define(MAPNAME840288, "Turm von Babel F15-8").
+-define(MAPNAME840289, "Turm von Babel F15-9").
+-define(MAPNAME840290, "Turm von Babel F15-10").
+-define(MAPNAME840291, "Turm von Babel F15-11").
+-define(MAPNAME840292, "Turm von Babel F15-12").
+-define(MAPNAME840293, "Turm von Babel F15-13").
+-define(MAPNAME840294, "Turm von Babel F15-14").
+-define(MAPNAME840295, "Turm von Babel F15-15").
+-define(MAPNAME840296, "Turm von Babel F15-16").
+-define(MAPNAME840297, "Turm von Babel F15-17").
+-define(MAPNAME840298, "Turm von Babel F15-18").
+-define(MAPNAME840299, "Turm von Babel F15-19").
+-define(MAPNAME840300, "Turm von Babel F15-20").
+-define(MAPNAME840301, "Turm von Babel F16-1").
+-define(MAPNAME840302, "Turm von Babel F16-2").
+-define(MAPNAME840303, "Turm von Babel F16-3").
+-define(MAPNAME840304, "Turm von Babel F16-4").
+-define(MAPNAME840305, "Turm von Babel F16-5").
+-define(MAPNAME840306, "Turm von Babel F16-6").
+-define(MAPNAME840307, "Turm von Babel F16-7").
+-define(MAPNAME840308, "Turm von Babel F16-8").
+-define(MAPNAME840309, "Turm von Babel F16-9").
+-define(MAPNAME840310, "Turm von Babel F16-10").
+-define(MAPNAME840311, "Turm von Babel F16-11").
+-define(MAPNAME840312, "Turm von Babel F16-12").
+-define(MAPNAME840313, "Turm von Babel F16-13").
+-define(MAPNAME840314, "Turm von Babel F16-14").
+-define(MAPNAME840315, "Turm von Babel F16-15").
+-define(MAPNAME840316, "Turm von Babel F16-16").
+-define(MAPNAME840317, "Turm von Babel F16-17").
+-define(MAPNAME840318, "Turm von Babel F16-18").
+-define(MAPNAME840319, "Turm von Babel F16-19").
+-define(MAPNAME840320, "Turm von Babel F16-20").
+-define(MAPNAME840321, "Turm von Babel F17-1").
+-define(MAPNAME840322, "Turm von Babel F17-2").
+-define(MAPNAME840323, "Turm von Babel F17-3").
+-define(MAPNAME840324, "Turm von Babel F17-4").
+-define(MAPNAME840325, "Turm von Babel F17-5").
+-define(MAPNAME840326, "Turm von Babel F17-6").
+-define(MAPNAME840327, "Turm von Babel F17-7").
+-define(MAPNAME840328, "Turm von Babel F17-8").
+-define(MAPNAME840329, "Turm von Babel F17-9").
+-define(MAPNAME840330, "Turm von Babel F17-10").
+-define(MAPNAME840331, "Turm von Babel F17-11").
+-define(MAPNAME840332, "Turm von Babel F17-12").
+-define(MAPNAME840333, "Turm von Babel F17-13").
+-define(MAPNAME840334, "Turm von Babel F17-14").
+-define(MAPNAME840335, "Turm von Babel F17-15").
+-define(MAPNAME840336, "Turm von Babel F17-16").
+-define(MAPNAME840337, "Turm von Babel F17-17").
+-define(MAPNAME840338, "Turm von Babel F17-18").
+-define(MAPNAME840339, "Turm von Babel F17-19").
+-define(MAPNAME840340, "Turm von Babel F17-20").
+-define(MAPNAME840341, "Turm von Babel F18-1").
+-define(MAPNAME840342, "Turm von Babel F18-2").
+-define(MAPNAME840343, "Turm von Babel F18-3").
+-define(MAPNAME840344, "Turm von Babel F18-4").
+-define(MAPNAME840345, "Turm von Babel F18-5").
+-define(MAPNAME840346, "Turm von Babel F18-6").
+-define(MAPNAME840347, "Turm von Babel F18-7").
+-define(MAPNAME840348, "Turm von Babel F18-8").
+-define(MAPNAME840349, "Turm von Babel F18-9").
+-define(MAPNAME840350, "Turm von Babel F18-10").
+-define(MAPNAME840351, "Turm von Babel F18-11").
+-define(MAPNAME840352, "Turm von Babel F18-12").
+-define(MAPNAME840353, "Turm von Babel F18-13").
+-define(MAPNAME840354, "Turm von Babel F18-14").
+-define(MAPNAME840355, "Turm von Babel F18-15").
+-define(MAPNAME840356, "Turm von Babel F18-16").
+-define(MAPNAME840357, "Turm von Babel F18-17").
+-define(MAPNAME840358, "Turm von Babel F18-18").
+-define(MAPNAME840359, "Turm von Babel F18-19").
+-define(MAPNAME840360, "Turm von Babel F18-20").
+-define(MAPNAME840361, "Turm von Babel F19-1").
+-define(MAPNAME840362, "Turm von Babel F19-2").
+-define(MAPNAME840363, "Turm von Babel F19-3").
+-define(MAPNAME840364, "Turm von Babel F19-4").
+-define(MAPNAME840365, "Turm von Babel F19-5").
+-define(MAPNAME840366, "Turm von Babel F19-6").
+-define(MAPNAME840367, "Turm von Babel F19-7").
+-define(MAPNAME840368, "Turm von Babel F19-8").
+-define(MAPNAME840369, "Turm von Babel F19-9").
+-define(MAPNAME840370, "Turm von Babel F19-10").
+-define(MAPNAME840371, "Turm von Babel F19-11").
+-define(MAPNAME840372, "Turm von Babel F19-12").
+-define(MAPNAME840373, "Turm von Babel F19-13").
+-define(MAPNAME840374, "Turm von Babel F19-14").
+-define(MAPNAME840375, "Turm von Babel F19-15").
+-define(MAPNAME840376, "Turm von Babel F19-16").
+-define(MAPNAME840377, "Turm von Babel F19-17").
+-define(MAPNAME840378, "Turm von Babel F19-18").
+-define(MAPNAME840379, "Turm von Babel F19-19").
+-define(MAPNAME840380, "Turm von Babel F19-20").
+-define(MAPNAME840381, "Turm von Babel F20-1").
+-define(MAPNAME840382, "Turm von Babel F20-2").
+-define(MAPNAME840383, "Turm von Babel F20-3").
+-define(MAPNAME840384, "Turm von Babel F20-4").
+-define(MAPNAME840385, "Turm von Babel F20-5").
+-define(MAPNAME840386, "Turm von Babel F20-6").
+-define(MAPNAME840387, "Turm von Babel F20-7").
+-define(MAPNAME840388, "Turm von Babel F20-8").
+-define(MAPNAME840389, "Turm von Babel F20-9").
+-define(MAPNAME840390, "Turm von Babel F20-10").
+-define(MAPNAME840391, "Turm von Babel F20-11").
+-define(MAPNAME840392, "Turm von Babel F20-12").
+-define(MAPNAME840393, "Turm von Babel F20-13").
+-define(MAPNAME840394, "Turm von Babel F20-14").
+-define(MAPNAME840395, "Turm von Babel F20-15").
+-define(MAPNAME840396, "Turm von Babel F20-16").
+-define(MAPNAME840397, "Turm von Babel F20-17").
+-define(MAPNAME840398, "Turm von Babel F20-18").
+-define(MAPNAME840399, "Turm von Babel F20-19").
+-define(MAPNAME840400, "Turm von Babel F20-20").
+-define(MAPNAME840401, "Turm von Babel F21-1").
+-define(MAPNAME840402, "Turm von Babel F21-2").
+-define(MAPNAME840403, "Turm von Babel F21-3").
+-define(MAPNAME840404, "Turm von Babel F21-4").
+-define(MAPNAME840405, "Turm von Babel F21-5").
+-define(MAPNAME840406, "Turm von Babel F21-6").
+-define(MAPNAME840407, "Turm von Babel F21-7").
+-define(MAPNAME840408, "Turm von Babel F21-8").
+-define(MAPNAME840409, "Turm von Babel F21-9").
+-define(MAPNAME840410, "Turm von Babel F21-10").
+-define(MAPNAME840411, "Turm von Babel F21-11").
+-define(MAPNAME840412, "Turm von Babel F21-12").
+-define(MAPNAME840413, "Turm von Babel F21-13").
+-define(MAPNAME840414, "Turm von Babel F21-14").
+-define(MAPNAME840415, "Turm von Babel F21-15").
+-define(MAPNAME840416, "Turm von Babel F21-16").
+-define(MAPNAME840417, "Turm von Babel F21-17").
+-define(MAPNAME840418, "Turm von Babel F21-18").
+-define(MAPNAME840419, "Turm von Babel F21-19").
+-define(MAPNAME840420, "Turm von Babel F21-20").
+-define(MAPNAME840421, "Turm von Babel F22-1").
+-define(MAPNAME840422, "Turm von Babel F22-2").
+-define(MAPNAME840423, "Turm von Babel F22-3").
+-define(MAPNAME840424, "Turm von Babel F22-4").
+-define(MAPNAME840425, "Turm von Babel F22-5").
+-define(MAPNAME840426, "Turm von Babel F22-6").
+-define(MAPNAME840427, "Turm von Babel F22-7").
+-define(MAPNAME840428, "Turm von Babel F22-8").
+-define(MAPNAME840429, "Turm von Babel F22-9").
+-define(MAPNAME840430, "Turm von Babel F22-10").
+-define(MAPNAME840431, "Turm von Babel F22-11").
+-define(MAPNAME840432, "Turm von Babel F22-12").
+-define(MAPNAME840433, "Turm von Babel F22-13").
+-define(MAPNAME840434, "Turm von Babel F22-14").
+-define(MAPNAME840435, "Turm von Babel F22-15").
+-define(MAPNAME840436, "Turm von Babel F22-16").
+-define(MAPNAME840437, "Turm von Babel F22-17").
+-define(MAPNAME840438, "Turm von Babel F22-18").
+-define(MAPNAME840439, "Turm von Babel F22-19").
+-define(MAPNAME840440, "Turm von Babel F22-20").
+-define(MAPNAME840441, "Turm von Babel F23-1").
+-define(MAPNAME840442, "Turm von Babel F23-2").
+-define(MAPNAME840443, "Turm von Babel F23-3").
+-define(MAPNAME840444, "Turm von Babel F23-4").
+-define(MAPNAME840445, "Turm von Babel F23-5").
+-define(MAPNAME840446, "Turm von Babel F23-6").
+-define(MAPNAME840447, "Turm von Babel F23-7").
+-define(MAPNAME840448, "Turm von Babel F23-8").
+-define(MAPNAME840449, "Turm von Babel F23-9").
+-define(MAPNAME840450, "Turm von Babel F23-10").
+-define(MAPNAME840451, "Turm von Babel F23-11").
+-define(MAPNAME840452, "Turm von Babel F23-12").
+-define(MAPNAME840453, "Turm von Babel F23-13").
+-define(MAPNAME840454, "Turm von Babel F23-14").
+-define(MAPNAME840455, "Turm von Babel F23-15").
+-define(MAPNAME840456, "Turm von Babel F23-16").
+-define(MAPNAME840457, "Turm von Babel F23-17").
+-define(MAPNAME840458, "Turm von Babel F23-18").
+-define(MAPNAME840459, "Turm von Babel F23-19").
+-define(MAPNAME840460, "Turm von Babel F23-20").
+-define(MAPNAME840461, "Turm von Babel F24-1").
+-define(MAPNAME840462, "Turm von Babel F24-2").
+-define(MAPNAME840463, "Turm von Babel F24-3").
+-define(MAPNAME840464, "Turm von Babel F24-4").
+-define(MAPNAME840465, "Turm von Babel F24-5").
+-define(MAPNAME840466, "Turm von Babel F24-6").
+-define(MAPNAME840467, "Turm von Babel F24-7").
+-define(MAPNAME840468, "Turm von Babel F24-8").
+-define(MAPNAME840469, "Turm von Babel F24-9").
+-define(MAPNAME840470, "Turm von Babel F24-10").
+-define(MAPNAME840471, "Turm von Babel F24-11").
+-define(MAPNAME840472, "Turm von Babel F24-12").
+-define(MAPNAME840473, "Turm von Babel F24-13").
+-define(MAPNAME840474, "Turm von Babel F24-14").
+-define(MAPNAME840475, "Turm von Babel F24-15").
+-define(MAPNAME840476, "Turm von Babel F24-16").
+-define(MAPNAME840477, "Turm von Babel F24-17").
+-define(MAPNAME840478, "Turm von Babel F24-18").
+-define(MAPNAME840479, "Turm von Babel F24-19").
+-define(MAPNAME840480, "Turm von Babel F24-20").
+-define(MAPNAME840481, "Turm von Babel F25-1").
+-define(MAPNAME840482, "Turm von Babel F25-2").
+-define(MAPNAME840483, "Turm von Babel F25-3").
+-define(MAPNAME840484, "Turm von Babel F25-4").
+-define(MAPNAME840485, "Turm von Babel F25-5").
+-define(MAPNAME840486, "Turm von Babel F25-6").
+-define(MAPNAME840487, "Turm von Babel F25-7").
+-define(MAPNAME840488, "Turm von Babel F25-8").
+-define(MAPNAME840489, "Turm von Babel F25-9").
+-define(MAPNAME840490, "Turm von Babel F25-10").
+-define(MAPNAME840491, "Turm von Babel F25-11").
+-define(MAPNAME840492, "Turm von Babel F25-12").
+-define(MAPNAME840493, "Turm von Babel F25-13").
+-define(MAPNAME840494, "Turm von Babel F25-14").
+-define(MAPNAME840495, "Turm von Babel F25-15").
+-define(MAPNAME840496, "Turm von Babel F25-16").
+-define(MAPNAME840497, "Turm von Babel F25-17").
+-define(MAPNAME840498, "Turm von Babel F25-18").
+-define(MAPNAME840499, "Turm von Babel F25-19").
+-define(MAPNAME840500, "Turm von Babel F25-20").
+-define(MAPNAME840501, "Turm von Babel F26-1").
+-define(MAPNAME840502, "Turm von Babel F26-2").
+-define(MAPNAME840503, "Turm von Babel F26-3").
+-define(MAPNAME840504, "Turm von Babel F26-4").
+-define(MAPNAME840505, "Turm von Babel F26-5").
+-define(MAPNAME840506, "Turm von Babel F26-6").
+-define(MAPNAME840507, "Turm von Babel F26-7").
+-define(MAPNAME840508, "Turm von Babel F26-8").
+-define(MAPNAME840509, "Turm von Babel F26-9").
+-define(MAPNAME840510, "Turm von Babel F26-10").
+-define(MAPNAME840511, "Turm von Babel F26-11").
+-define(MAPNAME840512, "Turm von Babel F26-12").
+-define(MAPNAME840513, "Turm von Babel F26-13").
+-define(MAPNAME840514, "Turm von Babel F26-14").
+-define(MAPNAME840515, "Turm von Babel F26-15").
+-define(MAPNAME840516, "Turm von Babel F26-16").
+-define(MAPNAME840517, "Turm von Babel F26-17").
+-define(MAPNAME840518, "Turm von Babel F26-18").
+-define(MAPNAME840519, "Turm von Babel F26-19").
+-define(MAPNAME840520, "Turm von Babel F26-20").
+-define(MAPNAME840521, "Turm von Babel F27-1").
+-define(MAPNAME840522, "Turm von Babel F27-2").
+-define(MAPNAME840523, "Turm von Babel F27-3").
+-define(MAPNAME840524, "Turm von Babel F27-4").
+-define(MAPNAME840525, "Turm von Babel F27-5").
+-define(MAPNAME840526, "Turm von Babel F27-6").
+-define(MAPNAME840527, "Turm von Babel F27-7").
+-define(MAPNAME840528, "Turm von Babel F27-8").
+-define(MAPNAME840529, "Turm von Babel F27-9").
+-define(MAPNAME840530, "Turm von Babel F27-10").
+-define(MAPNAME840531, "Turm von Babel F27-11").
+-define(MAPNAME840532, "Turm von Babel F27-12").
+-define(MAPNAME840533, "Turm von Babel F27-13").
+-define(MAPNAME840534, "Turm von Babel F27-14").
+-define(MAPNAME840535, "Turm von Babel F27-15").
+-define(MAPNAME840536, "Turm von Babel F27-16").
+-define(MAPNAME840537, "Turm von Babel F27-17").
+-define(MAPNAME840538, "Turm von Babel F27-18").
+-define(MAPNAME840539, "Turm von Babel F27-19").
+-define(MAPNAME840540, "Turm von Babel F27-20").
+-define(MAPNAME840541, "Turm von Babel F28-1").
+-define(MAPNAME840542, "Turm von Babel F28-2").
+-define(MAPNAME840543, "Turm von Babel F28-3").
+-define(MAPNAME840544, "Turm von Babel F28-4").
+-define(MAPNAME840545, "Turm von Babel F28-5").
+-define(MAPNAME840546, "Turm von Babel F28-6").
+-define(MAPNAME840547, "Turm von Babel F28-7").
+-define(MAPNAME840548, "Turm von Babel F28-8").
+-define(MAPNAME840549, "Turm von Babel F28-9").
+-define(MAPNAME840550, "Turm von Babel F28-10").
+-define(MAPNAME840551, "Turm von Babel F28-11").
+-define(MAPNAME840552, "Turm von Babel F28-12").
+-define(MAPNAME840553, "Turm von Babel F28-13").
+-define(MAPNAME840554, "Turm von Babel F28-14").
+-define(MAPNAME840555, "Turm von Babel F28-15").
+-define(MAPNAME840556, "Turm von Babel F28-16").
+-define(MAPNAME840557, "Turm von Babel F28-17").
+-define(MAPNAME840558, "Turm von Babel F28-18").
+-define(MAPNAME840559, "Turm von Babel F28-19").
+-define(MAPNAME840560, "Turm von Babel F28-20").
+-define(MAPNAME840561, "Turm von Babel F29-1").
+-define(MAPNAME840562, "Turm von Babel F29-2").
+-define(MAPNAME840563, "Turm von Babel F29-3").
+-define(MAPNAME840564, "Turm von Babel F29-4").
+-define(MAPNAME840565, "Turm von Babel F29-5").
+-define(MAPNAME840566, "Turm von Babel F29-6").
+-define(MAPNAME840567, "Turm von Babel F29-7").
+-define(MAPNAME840568, "Turm von Babel F29-8").
+-define(MAPNAME840569, "Turm von Babel F29-9").
+-define(MAPNAME840570, "Turm von Babel F29-10").
+-define(MAPNAME840571, "Turm von Babel F29-11").
+-define(MAPNAME840572, "Turm von Babel F29-12").
+-define(MAPNAME840573, "Turm von Babel F29-13").
+-define(MAPNAME840574, "Turm von Babel F29-14").
+-define(MAPNAME840575, "Turm von Babel F29-15").
+-define(MAPNAME840576, "Turm von Babel F29-16").
+-define(MAPNAME840577, "Turm von Babel F29-17").
+-define(MAPNAME840578, "Turm von Babel F29-18").
+-define(MAPNAME840579, "Turm von Babel F29-19").
+-define(MAPNAME840580, "Turm von Babel F29-20").
+-define(MAPNAME840581, "Turm von Babel F30-1").
+-define(MAPNAME840582, "Turm von Babel F30-2").
+-define(MAPNAME840583, "Turm von Babel F30-3").
+-define(MAPNAME840584, "Turm von Babel F30-4").
+-define(MAPNAME840585, "Turm von Babel F30-5").
+-define(MAPNAME840586, "Turm von Babel F30-6").
+-define(MAPNAME840587, "Turm von Babel F30-7").
+-define(MAPNAME840588, "Turm von Babel F30-8").
+-define(MAPNAME840589, "Turm von Babel F30-9").
+-define(MAPNAME840590, "Turm von Babel F30-10").
+-define(MAPNAME840591, "Turm von Babel F30-11").
+-define(MAPNAME840592, "Turm von Babel F30-12").
+-define(MAPNAME840593, "Turm von Babel F30-13").
+-define(MAPNAME840594, "Turm von Babel F30-14").
+-define(MAPNAME840595, "Turm von Babel F30-15").
+-define(MAPNAME840596, "Turm von Babel F30-16").
+-define(MAPNAME840597, "Turm von Babel F30-17").
+-define(MAPNAME840598, "Turm von Babel F30-18").
+-define(MAPNAME840599, "Turm von Babel F30-19").
+-define(MAPNAME840600, "Turm von Babel F30-20").
+-define(MAPNAME840601, "Turm von Babel F31-1").
+-define(MAPNAME840602, "Turm von Babel F31-2").
+-define(MAPNAME840603, "Turm von Babel F31-3").
+-define(MAPNAME840604, "Turm von Babel F31-4").
+-define(MAPNAME840605, "Turm von Babel F31-5").
+-define(MAPNAME840606, "Turm von Babel F31-6").
+-define(MAPNAME840607, "Turm von Babel F31-7").
+-define(MAPNAME840608, "Turm von Babel F31-8").
+-define(MAPNAME840609, "Turm von Babel F31-9").
+-define(MAPNAME840610, "Turm von Babel F31-10").
+-define(MAPNAME840611, "Turm von Babel F31-11").
+-define(MAPNAME840612, "Turm von Babel F31-12").
+-define(MAPNAME840613, "Turm von Babel F31-13").
+-define(MAPNAME840614, "Turm von Babel F31-14").
+-define(MAPNAME840615, "Turm von Babel F31-15").
+-define(MAPNAME840616, "Turm von Babel F31-16").
+-define(MAPNAME840617, "Turm von Babel F31-17").
+-define(MAPNAME840618, "Turm von Babel F31-18").
+-define(MAPNAME840619, "Turm von Babel F31-19").
+-define(MAPNAME840620, "Turm von Babel F31-20").
+-define(MAPNAME840621, "Turm von Babel F32-1").
+-define(MAPNAME840622, "Turm von Babel F32-2").
+-define(MAPNAME840623, "Turm von Babel F32-3").
+-define(MAPNAME840624, "Turm von Babel F32-4").
+-define(MAPNAME840625, "Turm von Babel F32-5").
+-define(MAPNAME840626, "Turm von Babel F32-6").
+-define(MAPNAME840627, "Turm von Babel F32-7").
+-define(MAPNAME840628, "Turm von Babel F32-8").
+-define(MAPNAME840629, "Turm von Babel F32-9").
+-define(MAPNAME840630, "Turm von Babel F32-10").
+-define(MAPNAME840631, "Turm von Babel F32-11").
+-define(MAPNAME840632, "Turm von Babel F32-12").
+-define(MAPNAME840633, "Turm von Babel F32-13").
+-define(MAPNAME840634, "Turm von Babel F32-14").
+-define(MAPNAME840635, "Turm von Babel F32-15").
+-define(MAPNAME840636, "Turm von Babel F32-16").
+-define(MAPNAME840637, "Turm von Babel F32-17").
+-define(MAPNAME840638, "Turm von Babel F32-18").
+-define(MAPNAME840639, "Turm von Babel F32-19").
+-define(MAPNAME840640, "Turm von Babel F32-20").
+-define(MAPNAME840641, "Turm von Babel F33-1").
+-define(MAPNAME840642, "Turm von Babel F33-2").
+-define(MAPNAME840643, "Turm von Babel F33-3").
+-define(MAPNAME840644, "Turm von Babel F33-4").
+-define(MAPNAME840645, "Turm von Babel F33-5").
+-define(MAPNAME840646, "Turm von Babel F33-6").
+-define(MAPNAME840647, "Turm von Babel F33-7").
+-define(MAPNAME840648, "Turm von Babel F33-8").
+-define(MAPNAME840649, "Turm von Babel F33-9").
+-define(MAPNAME840650, "Turm von Babel F33-10").
+-define(MAPNAME840651, "Turm von Babel F33-11").
+-define(MAPNAME840652, "Turm von Babel F33-12").
+-define(MAPNAME840653, "Turm von Babel F33-13").
+-define(MAPNAME840654, "Turm von Babel F33-14").
+-define(MAPNAME840655, "Turm von Babel F33-15").
+-define(MAPNAME840656, "Turm von Babel F33-16").
+-define(MAPNAME840657, "Turm von Babel F33-17").
+-define(MAPNAME840658, "Turm von Babel F33-18").
+-define(MAPNAME840659, "Turm von Babel F33-19").
+-define(MAPNAME840660, "Turm von Babel F33-20").
+-define(MAPNAME840661, "Turm von Babel F34-1").
+-define(MAPNAME840662, "Turm von Babel F34-2").
+-define(MAPNAME840663, "Turm von Babel F34-3").
+-define(MAPNAME840664, "Turm von Babel F34-4").
+-define(MAPNAME840665, "Turm von Babel F34-5").
+-define(MAPNAME840666, "Turm von Babel F34-6").
+-define(MAPNAME840667, "Turm von Babel F34-7").
+-define(MAPNAME840668, "Turm von Babel F34-8").
+-define(MAPNAME840669, "Turm von Babel F34-9").
+-define(MAPNAME840670, "Turm von Babel F34-10").
+-define(MAPNAME840671, "Turm von Babel F34-11").
+-define(MAPNAME840672, "Turm von Babel F34-12").
+-define(MAPNAME840673, "Turm von Babel F34-13").
+-define(MAPNAME840674, "Turm von Babel F34-14").
+-define(MAPNAME840675, "Turm von Babel F34-15").
+-define(MAPNAME840676, "Turm von Babel F34-16").
+-define(MAPNAME840677, "Turm von Babel F34-17").
+-define(MAPNAME840678, "Turm von Babel F34-18").
+-define(MAPNAME840679, "Turm von Babel F34-19").
+-define(MAPNAME840680, "Turm von Babel F34-20").
+-define(MAPNAME840681, "Turm von Babel F35-1").
+-define(MAPNAME840682, "Turm von Babel F35-2").
+-define(MAPNAME840683, "Turm von Babel F35-3").
+-define(MAPNAME840684, "Turm von Babel F35-4").
+-define(MAPNAME840685, "Turm von Babel F35-5").
+-define(MAPNAME840686, "Turm von Babel F35-6").
+-define(MAPNAME840687, "Turm von Babel F35-7").
+-define(MAPNAME840688, "Turm von Babel F35-8").
+-define(MAPNAME840689, "Turm von Babel F35-9").
+-define(MAPNAME840690, "Turm von Babel F35-10").
+-define(MAPNAME840691, "Turm von Babel F35-11").
+-define(MAPNAME840692, "Turm von Babel F35-12").
+-define(MAPNAME840693, "Turm von Babel F35-13").
+-define(MAPNAME840694, "Turm von Babel F35-14").
+-define(MAPNAME840695, "Turm von Babel F35-15").
+-define(MAPNAME840696, "Turm von Babel F35-16").
+-define(MAPNAME840697, "Turm von Babel F35-17").
+-define(MAPNAME840698, "Turm von Babel F35-18").
+-define(MAPNAME840699, "Turm von Babel F35-19").
+-define(MAPNAME840700, "Turm von Babel F35-20").
+-define(MAPNAME840701, "Turm von Babel F36-1").
+-define(MAPNAME840702, "Turm von Babel F36-2").
+-define(MAPNAME840703, "Turm von Babel F36-3").
+-define(MAPNAME840704, "Turm von Babel F36-4").
+-define(MAPNAME840705, "Turm von Babel F36-5").
+-define(MAPNAME840706, "Turm von Babel F36-6").
+-define(MAPNAME840707, "Turm von Babel F36-7").
+-define(MAPNAME840708, "Turm von Babel F36-8").
+-define(MAPNAME840709, "Turm von Babel F36-9").
+-define(MAPNAME840710, "Turm von Babel F36-10").
+-define(MAPNAME840711, "Turm von Babel F36-11").
+-define(MAPNAME840712, "Turm von Babel F36-12").
+-define(MAPNAME840713, "Turm von Babel F36-13").
+-define(MAPNAME840714, "Turm von Babel F36-14").
+-define(MAPNAME840715, "Turm von Babel F36-15").
+-define(MAPNAME840716, "Turm von Babel F36-16").
+-define(MAPNAME840717, "Turm von Babel F36-17").
+-define(MAPNAME840718, "Turm von Babel F36-18").
+-define(MAPNAME840719, "Turm von Babel F36-19").
+-define(MAPNAME840720, "Turm von Babel F36-20").
+-define(MAPNAME840721, "Turm von Babel F37-1").
+-define(MAPNAME840722, "Turm von Babel F37-2").
+-define(MAPNAME840723, "Turm von Babel F37-3").
+-define(MAPNAME840724, "Turm von Babel F37-4").
+-define(MAPNAME840725, "Turm von Babel F37-5").
+-define(MAPNAME840726, "Turm von Babel F37-6").
+-define(MAPNAME840727, "Turm von Babel F37-7").
+-define(MAPNAME840728, "Turm von Babel F37-8").
+-define(MAPNAME840729, "Turm von Babel F37-9").
+-define(MAPNAME840730, "Turm von Babel F37-10").
+-define(MAPNAME840731, "Turm von Babel F37-11").
+-define(MAPNAME840732, "Turm von Babel F37-12").
+-define(MAPNAME840733, "Turm von Babel F37-13").
+-define(MAPNAME840734, "Turm von Babel F37-14").
+-define(MAPNAME840735, "Turm von Babel F37-15").
+-define(MAPNAME840736, "Turm von Babel F37-16").
+-define(MAPNAME840737, "Turm von Babel F37-17").
+-define(MAPNAME840738, "Turm von Babel F37-18").
+-define(MAPNAME840739, "Turm von Babel F37-19").
+-define(MAPNAME840740, "Turm von Babel F37-20").
+-define(MAPNAME840741, "Turm von Babel F38-1").
+-define(MAPNAME840742, "Turm von Babel F38-2").
+-define(MAPNAME840743, "Turm von Babel F38-3").
+-define(MAPNAME840744, "Turm von Babel F38-4").
+-define(MAPNAME840745, "Turm von Babel F38-5").
+-define(MAPNAME840746, "Turm von Babel F38-6").
+-define(MAPNAME840747, "Turm von Babel F38-7").
+-define(MAPNAME840748, "Turm von Babel F38-8").
+-define(MAPNAME840749, "Turm von Babel F38-9").
+-define(MAPNAME840750, "Turm von Babel F38-10").
+-define(MAPNAME840751, "Turm von Babel F38-11").
+-define(MAPNAME840752, "Turm von Babel F38-12").
+-define(MAPNAME840753, "Turm von Babel F38-13").
+-define(MAPNAME840754, "Turm von Babel F38-14").
+-define(MAPNAME840755, "Turm von Babel F38-15").
+-define(MAPNAME840756, "Turm von Babel F38-16").
+-define(MAPNAME840757, "Turm von Babel F38-17").
+-define(MAPNAME840758, "Turm von Babel F38-18").
+-define(MAPNAME840759, "Turm von Babel F38-19").
+-define(MAPNAME840760, "Turm von Babel F38-20").
+-define(MAPNAME840761, "Turm von Babel F39-1").
+-define(MAPNAME840762, "Turm von Babel F39-2").
+-define(MAPNAME840763, "Turm von Babel F39-3").
+-define(MAPNAME840764, "Turm von Babel F39-4").
+-define(MAPNAME840765, "Turm von Babel F39-5").
+-define(MAPNAME840766, "Turm von Babel F39-6").
+-define(MAPNAME840767, "Turm von Babel F39-7").
+-define(MAPNAME840768, "Turm von Babel F39-8").
+-define(MAPNAME840769, "Turm von Babel F39-9").
+-define(MAPNAME840770, "Turm von Babel F39-10").
+-define(MAPNAME840771, "Turm von Babel F39-11").
+-define(MAPNAME840772, "Turm von Babel F39-12").
+-define(MAPNAME840773, "Turm von Babel F39-13").
+-define(MAPNAME840774, "Turm von Babel F39-14").
+-define(MAPNAME840775, "Turm von Babel F39-15").
+-define(MAPNAME840776, "Turm von Babel F39-16").
+-define(MAPNAME840777, "Turm von Babel F39-17").
+-define(MAPNAME840778, "Turm von Babel F39-18").
+-define(MAPNAME840779, "Turm von Babel F39-19").
+-define(MAPNAME840780, "Turm von Babel F39-20").
+-define(MAPNAME840781, "Turm von Babel F40-1").
+-define(MAPNAME840782, "Turm von Babel F40-2").
+-define(MAPNAME840783, "Turm von Babel F40-3").
+-define(MAPNAME840784, "Turm von Babel F40-4").
+-define(MAPNAME840785, "Turm von Babel F40-5").
+-define(MAPNAME840786, "Turm von Babel F40-6").
+-define(MAPNAME840787, "Turm von Babel F40-7").
+-define(MAPNAME840788, "Turm von Babel F40-8").
+-define(MAPNAME840789, "Turm von Babel F40-9").
+-define(MAPNAME840790, "Turm von Babel F40-10").
+-define(MAPNAME840791, "Turm von Babel F40-11").
+-define(MAPNAME840792, "Turm von Babel F40-12").
+-define(MAPNAME840793, "Turm von Babel F40-13").
+-define(MAPNAME840794, "Turm von Babel F40-14").
+-define(MAPNAME840795, "Turm von Babel F40-15").
+-define(MAPNAME840796, "Turm von Babel F40-16").
+-define(MAPNAME840797, "Turm von Babel F40-17").
+-define(MAPNAME840798, "Turm von Babel F40-18").
+-define(MAPNAME840799, "Turm von Babel F40-19").
+-define(MAPNAME840800, "Turm von Babel F40-20").
+-define(MAPNAME840801, "Turm von Babel F41-1").
+-define(MAPNAME840802, "Turm von Babel F41-2").
+-define(MAPNAME840803, "Turm von Babel F41-3").
+-define(MAPNAME840804, "Turm von Babel F41-4").
+-define(MAPNAME840805, "Turm von Babel F41-5").
+-define(MAPNAME840806, "Turm von Babel F41-6").
+-define(MAPNAME840807, "Turm von Babel F41-7").
+-define(MAPNAME840808, "Turm von Babel F41-8").
+-define(MAPNAME840809, "Turm von Babel F41-9").
+-define(MAPNAME840810, "Turm von Babel F41-10").
+-define(MAPNAME840811, "Turm von Babel F41-11").
+-define(MAPNAME840812, "Turm von Babel F41-12").
+-define(MAPNAME840813, "Turm von Babel F41-13").
+-define(MAPNAME840814, "Turm von Babel F41-14").
+-define(MAPNAME840815, "Turm von Babel F41-15").
+-define(MAPNAME840816, "Turm von Babel F41-16").
+-define(MAPNAME840817, "Turm von Babel F41-17").
+-define(MAPNAME840818, "Turm von Babel F41-18").
+-define(MAPNAME840819, "Turm von Babel F41-19").
+-define(MAPNAME840820, "Turm von Babel F41-20").
+-define(MAPNAME840821, "Turm von Babel F42-1").
+-define(MAPNAME840822, "Turm von Babel F42-2").
+-define(MAPNAME840823, "Turm von Babel F42-3").
+-define(MAPNAME840824, "Turm von Babel F42-4").
+-define(MAPNAME840825, "Turm von Babel F42-5").
+-define(MAPNAME840826, "Turm von Babel F42-6").
+-define(MAPNAME840827, "Turm von Babel F42-7").
+-define(MAPNAME840828, "Turm von Babel F42-8").
+-define(MAPNAME840829, "Turm von Babel F42-9").
+-define(MAPNAME840830, "Turm von Babel F42-10").
+-define(MAPNAME840831, "Turm von Babel F42-11").
+-define(MAPNAME840832, "Turm von Babel F42-12").
+-define(MAPNAME840833, "Turm von Babel F42-13").
+-define(MAPNAME840834, "Turm von Babel F42-14").
+-define(MAPNAME840835, "Turm von Babel F42-15").
+-define(MAPNAME840836, "Turm von Babel F42-16").
+-define(MAPNAME840837, "Turm von Babel F42-17").
+-define(MAPNAME840838, "Turm von Babel F42-18").
+-define(MAPNAME840839, "Turm von Babel F42-19").
+-define(MAPNAME840840, "Turm von Babel F42-20").
+-define(MAPNAME840841, "Turm von Babel F43-1").
+-define(MAPNAME840842, "Turm von Babel F43-2").
+-define(MAPNAME840843, "Turm von Babel F43-3").
+-define(MAPNAME840844, "Turm von Babel F43-4").
+-define(MAPNAME840845, "Turm von Babel F43-5").
+-define(MAPNAME840846, "Turm von Babel F43-6").
+-define(MAPNAME840847, "Turm von Babel F43-7").
+-define(MAPNAME840848, "Turm von Babel F43-8").
+-define(MAPNAME840849, "Turm von Babel F43-9").
+-define(MAPNAME840850, "Turm von Babel F43-10").
+-define(MAPNAME840851, "Turm von Babel F43-11").
+-define(MAPNAME840852, "Turm von Babel F43-12").
+-define(MAPNAME840853, "Turm von Babel F43-13").
+-define(MAPNAME840854, "Turm von Babel F43-14").
+-define(MAPNAME840855, "Turm von Babel F43-15").
+-define(MAPNAME840856, "Turm von Babel F43-16").
+-define(MAPNAME840857, "Turm von Babel F43-17").
+-define(MAPNAME840858, "Turm von Babel F43-18").
+-define(MAPNAME840859, "Turm von Babel F43-19").
+-define(MAPNAME840860, "Turm von Babel F43-20").
+-define(MAPNAME840861, "Turm von Babel F44-1").
+-define(MAPNAME840862, "Turm von Babel F44-2").
+-define(MAPNAME840863, "Turm von Babel F44-3").
+-define(MAPNAME840864, "Turm von Babel F44-4").
+-define(MAPNAME840865, "Turm von Babel F44-5").
+-define(MAPNAME840866, "Turm von Babel F44-6").
+-define(MAPNAME840867, "Turm von Babel F44-7").
+-define(MAPNAME840868, "Turm von Babel F44-8").
+-define(MAPNAME840869, "Turm von Babel F44-9").
+-define(MAPNAME840870, "Turm von Babel F44-10").
+-define(MAPNAME840871, "Turm von Babel F44-11").
+-define(MAPNAME840872, "Turm von Babel F44-12").
+-define(MAPNAME840873, "Turm von Babel F44-13").
+-define(MAPNAME840874, "Turm von Babel F44-14").
+-define(MAPNAME840875, "Turm von Babel F44-15").
+-define(MAPNAME840876, "Turm von Babel F44-16").
+-define(MAPNAME840877, "Turm von Babel F44-17").
+-define(MAPNAME840878, "Turm von Babel F44-18").
+-define(MAPNAME840879, "Turm von Babel F44-19").
+-define(MAPNAME840880, "Turm von Babel F44-20").
+-define(MAPNAME840881, "Turm von Babel F45-1").
+-define(MAPNAME840882, "Turm von Babel F45-2").
+-define(MAPNAME840883, "Turm von Babel F45-3").
+-define(MAPNAME840884, "Turm von Babel F45-4").
+-define(MAPNAME840885, "Turm von Babel F45-5").
+-define(MAPNAME840886, "Turm von Babel F45-6").
+-define(MAPNAME840887, "Turm von Babel F45-7").
+-define(MAPNAME840888, "Turm von Babel F45-8").
+-define(MAPNAME840889, "Turm von Babel F45-9").
+-define(MAPNAME840890, "Turm von Babel F45-10").
+-define(MAPNAME840891, "Turm von Babel F45-11").
+-define(MAPNAME840892, "Turm von Babel F45-12").
+-define(MAPNAME840893, "Turm von Babel F45-13").
+-define(MAPNAME840894, "Turm von Babel F45-14").
+-define(MAPNAME840895, "Turm von Babel F45-15").
+-define(MAPNAME840896, "Turm von Babel F45-16").
+-define(MAPNAME840897, "Turm von Babel F45-17").
+-define(MAPNAME840898, "Turm von Babel F45-18").
+-define(MAPNAME840899, "Turm von Babel F45-19").
+-define(MAPNAME840900, "Turm von Babel F45-20").
+-define(MAPNAME840901, "Turm von Babel F46-1").
+-define(MAPNAME840902, "Turm von Babel F46-2").
+-define(MAPNAME840903, "Turm von Babel F46-3").
+-define(MAPNAME840904, "Turm von Babel F46-4").
+-define(MAPNAME840905, "Turm von Babel F46-5").
+-define(MAPNAME840906, "Turm von Babel F46-6").
+-define(MAPNAME840907, "Turm von Babel F46-7").
+-define(MAPNAME840908, "Turm von Babel F46-8").
+-define(MAPNAME840909, "Turm von Babel F46-9").
+-define(MAPNAME840910, "Turm von Babel F46-10").
+-define(MAPNAME840911, "Turm von Babel F46-11").
+-define(MAPNAME840912, "Turm von Babel F46-12").
+-define(MAPNAME840913, "Turm von Babel F46-13").
+-define(MAPNAME840914, "Turm von Babel F46-14").
+-define(MAPNAME840915, "Turm von Babel F46-15").
+-define(MAPNAME840916, "Turm von Babel F46-16").
+-define(MAPNAME840917, "Turm von Babel F46-17").
+-define(MAPNAME840918, "Turm von Babel F46-18").
+-define(MAPNAME840919, "Turm von Babel F46-19").
+-define(MAPNAME840920, "Turm von Babel F46-20").
+-define(MAPNAME840921, "Turm von Babel F47-1").
+-define(MAPNAME840922, "Turm von Babel F47-2").
+-define(MAPNAME840923, "Turm von Babel F47-3").
+-define(MAPNAME840924, "Turm von Babel F47-4").
+-define(MAPNAME840925, "Turm von Babel F47-5").
+-define(MAPNAME840926, "Turm von Babel F47-6").
+-define(MAPNAME840927, "Turm von Babel F47-7").
+-define(MAPNAME840928, "Turm von Babel F47-8").
+-define(MAPNAME840929, "Turm von Babel F47-9").
+-define(MAPNAME840930, "Turm von Babel F47-10").
+-define(MAPNAME840931, "Turm von Babel F47-11").
+-define(MAPNAME840932, "Turm von Babel F47-12").
+-define(MAPNAME840933, "Turm von Babel F47-13").
+-define(MAPNAME840934, "Turm von Babel F47-14").
+-define(MAPNAME840935, "Turm von Babel F47-15").
+-define(MAPNAME840936, "Turm von Babel F47-16").
+-define(MAPNAME840937, "Turm von Babel F47-17").
+-define(MAPNAME840938, "Turm von Babel F47-18").
+-define(MAPNAME840939, "Turm von Babel F47-19").
+-define(MAPNAME840940, "Turm von Babel F47-20").
+-define(MAPNAME840941, "Turm von Babel F48-1").
+-define(MAPNAME840942, "Turm von Babel F48-2").
+-define(MAPNAME840943, "Turm von Babel F48-3").
+-define(MAPNAME840944, "Turm von Babel F48-4").
+-define(MAPNAME840945, "Turm von Babel F48-5").
+-define(MAPNAME840946, "Turm von Babel F48-6").
+-define(MAPNAME840947, "Turm von Babel F48-7").
+-define(MAPNAME840948, "Turm von Babel F48-8").
+-define(MAPNAME840949, "Turm von Babel F48-9").
+-define(MAPNAME840950, "Turm von Babel F48-10").
+-define(MAPNAME840951, "Turm von Babel F48-11").
+-define(MAPNAME840952, "Turm von Babel F48-12").
+-define(MAPNAME840953, "Turm von Babel F48-13").
+-define(MAPNAME840954, "Turm von Babel F48-14").
+-define(MAPNAME840955, "Turm von Babel F48-15").
+-define(MAPNAME840956, "Turm von Babel F48-16").
+-define(MAPNAME840957, "Turm von Babel F48-17").
+-define(MAPNAME840958, "Turm von Babel F48-18").
+-define(MAPNAME840959, "Turm von Babel F48-19").
+-define(MAPNAME840960, "Turm von Babel F48-20").
+-define(MAPNAME840961, "Turm von Babel F49-1").
+-define(MAPNAME840962, "Turm von Babel F49-2").
+-define(MAPNAME840963, "Turm von Babel F49-3").
+-define(MAPNAME840964, "Turm von Babel F49-4").
+-define(MAPNAME840965, "Turm von Babel F49-5").
+-define(MAPNAME840966, "Turm von Babel F49-6").
+-define(MAPNAME840967, "Turm von Babel F49-7").
+-define(MAPNAME840968, "Turm von Babel F49-8").
+-define(MAPNAME840969, "Turm von Babel F49-9").
+-define(MAPNAME840970, "Turm von Babel F49-10").
+-define(MAPNAME840971, "Turm von Babel F49-11").
+-define(MAPNAME840972, "Turm von Babel F49-12").
+-define(MAPNAME840973, "Turm von Babel F49-13").
+-define(MAPNAME840974, "Turm von Babel F49-14").
+-define(MAPNAME840975, "Turm von Babel F49-15").
+-define(MAPNAME840976, "Turm von Babel F49-16").
+-define(MAPNAME840977, "Turm von Babel F49-17").
+-define(MAPNAME840978, "Turm von Babel F49-18").
+-define(MAPNAME840979, "Turm von Babel F49-19").
+-define(MAPNAME840980, "Turm von Babel F49-20").
+-define(MAPNAME840981, "Turm von Babel F50-1").
+-define(MAPNAME840982, "Turm von Babel F50-2").
+-define(MAPNAME840983, "Turm von Babel F50-3").
+-define(MAPNAME840984, "Turm von Babel F50-4").
+-define(MAPNAME840985, "Turm von Babel F50-5").
+-define(MAPNAME840986, "Turm von Babel F50-6").
+-define(MAPNAME840987, "Turm von Babel F50-7").
+-define(MAPNAME840988, "Turm von Babel F50-8").
+-define(MAPNAME840989, "Turm von Babel F50-9").
+-define(MAPNAME840990, "Turm von Babel F50-10").
+-define(MAPNAME840991, "Turm von Babel F50-11").
+-define(MAPNAME840992, "Turm von Babel F50-12").
+-define(MAPNAME840993, "Turm von Babel F50-13").
+-define(MAPNAME840994, "Turm von Babel F50-14").
+-define(MAPNAME840995, "Turm von Babel F50-15").
+-define(MAPNAME840996, "Turm von Babel F50-16").
+-define(MAPNAME840997, "Turm von Babel F50-17").
+-define(MAPNAME840998, "Turm von Babel F50-18").
+-define(MAPNAME840999, "Turm von Babel F50-19").
+-define(MAPNAME841000, "Turm von Babel F50-20").
+-define(MAPNAME2800001, "Gottes Barriere").
+-define(MAPNAME2105000, "Lunares Nichts").
+-define(MAPNAME2105001, "Verfluchte Schatzkammer").
+-define(MAPNAME2105002, "Versteck des Sonnenjägers").
+-define(MAPNAME2105003, "Infernowelt").
+-define(MAPNAME2105004, "Rätselhaftes Traumland").
+-define(MAPNAME2105005, "Trostlose Welt").
+-define(MAPNAME2105006, "Giftige Tiefen").
+-define(MAPNAME2105007, "Drachenfriedhof").
+-define(MAPNAME2105008, "Garten der goldenen Äpfel").
+-define(MAPNAME2105009, "Reich der Begierde").
+-define(MAPNAME2105010, "Labyrinth des Nichts").
+-define(MAPNAME2105011, "Düstere Höhle").
+-define(MAPNAME2105012, "Stadt der Toten").
+-define(MAPNAME2105013, "Versteck der Gier").
+-define(MAPNAME2105014, "Versteck des Gottesmörders").
+-define(MAPNAME2105015, "Land des Chaos").
+-define(MAPNAME2105016, "Zentaurenhain").
+-define(MAPNAME2105017, "Sommerort").
+-define(MAPNAME2105018, "Schattenpalast").
+-define(MAPNAME2105019, "Bodenlose Tiefen").
+-define(MAPNAME2105020, "Ebene des Schreckens").
+-define(MAPNAME2105021, "Schattiger Hof").
+-define(MAPNAME2105022, "Trügerische Welt").
+-define(MAPNAME2105023, "Blutdimension").
+-define(MAPNAME2105024, "Traumland-Labyrinth").
+-define(MAPNAME2105025, "Wyrmhöhle").
+-define(MAPNAME2105026, "Hölle der Trägheit").
+-define(MAPNAME2110000, "Ochsen-Labyrinth").
+-define(MAPNAME2110001, "Donner-Finale").
+-define(MAPNAME2110005, "Donner-Qualifikation").
+-define(MAPNAME2110006, "Donner-Arena").
+-define(MAPNAME2110101, "Todeshölle Ⅱ").
+-define(MAPNAME2110102, "Todeshölle Ⅲ").
+-define(MAPNAME2110103, "Todeshölle Ⅳ").
+-define(MAPNAME2110104, "Todeshölle Ⅴ").
+-define(MAPNAME2110105, "Todeshölle Ⅵ").
+-define(MAPNAME2110106, "Todeshölle Ⅶ").
+-define(MAPNAME2110107, "Todeshölle Ⅷ").
+-define(MAPNAME2110123, "Todeshölle Ⅰ").
+-define(MAPNAME2110124, "Todeshölle Ⅸ").
+-define(MAPNAME2110100, "Todeshölle – Novize").
+-define(MAPNAME2110130, "Dämonenhöhle I").
+-define(MAPNAME2110131, "Dämonenhöhle II").
+-define(MAPNAME2110132, "Dämonenhöhle Ⅲ").
+-define(MAPNAME2110133, "Dämonenhöhle Ⅳ").
+-define(MAPNAME2110108, "Todesholz Ⅰ").
+-define(MAPNAME2110109, "Todesholz Ⅰ").
+-define(MAPNAME2110110, "Todesholz Ⅱ").
+-define(MAPNAME2110111, "Todesholz Ⅲ").
+-define(MAPNAME2110112, "Todesholz Ⅳ").
+-define(MAPNAME2110113, "Todesholz Ⅴ").
+-define(MAPNAME2110114, "Todesholz Ⅵ").
+-define(MAPNAME2110125, "Todesholz Ⅶ").
+-define(MAPNAME2110126, "Todesholz Ⅷ").
+-define(MAPNAME2110127, "Todesholz Ⅸ").
+-define(MAPNAME2110128, "Todesholz Ⅹ").
+-define(MAPNAME2110115, "Reich der Illusion I").
+-define(MAPNAME2110116, "Verzauberte Schlachtfront Ⅱ").
+-define(MAPNAME2110117, "Verzauberte Schlachtfront III").
+-define(MAPNAME2110118, "Verzauberte Schlachtfront IV").
+-define(MAPNAME2110135, "Verzauberte Schlachtfront V").
+-define(MAPNAME2110136, "Verzauberte Schlachtfront V").
+-define(MAPNAME2110119, "Verfluchte Ruinen I").
+-define(MAPNAME2110120, "Verfluchte Ruinen II").
+-define(MAPNAME2110121, "Verfluchte Ruinen Ⅲ").
+-define(MAPNAME2110122, "Verfluchte Ruinen Ⅳ").
+-define(MAPNAME2110134, "Verfluchte Ruinen V").
+-define(MAPNAME1410001, "Yggdrasil-Krieg").
+-define(MAPNAME2810001, "Schiff-Dungeon").
+-define(MAPNAME3000000, "d3测黄金秘境").
+-define(MAPNAME3000001, "d3测JJC").
+-define(MAPNAME3000002, "d3测战船").
+-define(MAPNAME3000003, "d3测守卫世界树").
+-define(MAPNAME3000004, "d3测叹息之森").
+-define(MAPNAME3000005, "d3测公会驻地").
+-define(MAPNAME3000006, "d3测雷霆要塞").
+-define(MAPNAME3000007, "d3测情侣试炼").
+-define(MAPNAME3000008, "D3测雅典娜城郊和避难所").
+-define(MAPNAME3000009, "d3测试城墙拼接").
+-define(MAPNAME3000010, "d3测试地精宝藏").
+-define(MAPNAME3000011, "d3测试精英副本").
+-define(MAPNAME3000012, "d3测试试炼之地").
+-define(MAPNAME3000013, "d3测试精英副本2").
+-define(MAPNAME3000014, "d3测试英雄副本").
+-define(MAPNAME3000015, "d3测试翅膀副本").
+-define(MAPNAME3000016, "d3测试坐骑副本").
+-define(MAPNAME3000017, "d3测试个人BOSS").
+-define(MAPNAME3000018, "d3测试公会争霸").
+-define(MAPNAME3000019, "d3测冥王宫殿").
+-define(MAPNAME3000020, "d3测熔岩地下城0").
+-define(MAPNAME3000021, "d3测太阳马车").
+-define(MAPNAME3000022, "d3测熔岩地下城1").
+-define(MAPNAME3000023, "d3测熔岩地下城3").
+-define(MAPNAME3000024, "d3测熔岩地下城4").
+-define(MAPNAME3000025, "d3测熔岩地下城5").
+-define(MAPNAME3000026, "d3测雅典城0").
+-define(MAPNAME3000027, "d3测熔岩地下城2").
+-define(MAPNAME3000028, "d3测单人活动封印副本").
+-define(MAPNAME3000029, "d3测活动xo房间").
+-define(MAPNAME3000030, "d3测牛怪迷宫").
+-define(MAPNAME3000031, "d3测雅典城2").
+-define(MAPNAME3000032, "d3测雅典城4").
+-define(MAPNAME3000033, "d3测雅典城5").
+-define(MAPNAME3000034, "d3测勇者试炼").
+-define(MAPNAME3000035, "d3测雅典城1").
+-define(MAPNAME3000036, "d3测雅典城3").
+-define(MAPNAME3000037, "d3测雅典城6").
+-define(MAPNAME3000038, "d3测城墙3").
+-define(MAPNAME3000039, "d3测冥界机关").
+-define(MAPNAME3000040, "d3测雅典城7机关").
+-define(MAPNAME3000041, "d3测诅咒遗迹").
+-define(MAPNAME3000046, "d3测亚特兰蒂斯0").
+-define(MAPNAME3000048, "d3测亚特兰蒂斯1").
+-define(MAPNAME3000049, "d3测亚特兰蒂斯2").
+-define(MAPNAME3000050, "d3测亚特兰蒂斯3").
+-define(MAPNAME3000051, "d3测亚特兰蒂斯4").
+-define(MAPNAME3000052, "d3测亚特兰蒂斯5").
+-define(MAPNAME3000053, "d3测德尔菲神殿2").
+-define(MAPNAME3000054, "d3测德尔菲神殿0").
+-define(MAPNAME3000055, "d3测德尔菲神殿1").
+-define(MAPNAME3000056, "d3测德尔菲神殿4").
+-define(MAPNAME3000057, "d3测德尔菲神殿3").
+-define(MAPNAME3000058, "d3测德尔菲神殿5").
+-define(MAPNAME3000059, "d3测王者1V1").
+-define(MAPNAME3000060, "d3测龙神塔").
+-define(MAPNAME3000061, "d3测寒风森林").
+-define(MAPNAME3000062, "d3测新勇者试炼").
+-define(MAPNAME3000063, "d3测荒原要塞02").
+-define(MAPNAME3000064, "d3测荒原要塞01").
+-define(MAPNAME3000065, "d3测火山02").
+-define(MAPNAME3000066, "d3测火山01").
+-define(MAPNAME3000067, "d3测雪地要塞").
+-define(MAPNAME3000068, "d3测雪地堡垒").
+-define(MAPNAME3000069, "d3测职业塔").
+-define(MAPNAME3000070, "d3测职业塔主塔").
+-define(MAPNAME3000071, "d3测公会boss01").
+-define(MAPNAME3000074, "d3测公会boss02").
+-define(MAPNAME3000075, "d3测公会采集").
+-define(MAPNAME3000076, "d3测公会迷宫01").
+-define(MAPNAME2910001, "Todeshölle: Leitfaden").
+-define(MAPNAME2910002, "Prüfung der Tapferkeit: Leitfaden").
+-define(MAPNAME2910003, "Ewiges Schlachtfeld – Tutorial").
+-define(MAPNAME2910004, "Yggdrasil-Krieg: Leitfaden").
+-define(MAPNAME2910005, "Festung des Donners – Tutorial").
+-define(MAPNAME2910006, "Welt-Boss: Leitfaden").
+-define(MAPNAME2910007, "Schiff – Tutorial").
+-define(MAPNAME2910008, "Privilegien-Boss – Tutorial").
+-define(MAPNAME2910009, "Arena – Tutorial").
+-define(MAPNAME2910010, "Prüfung der Tapferkeit: Leitfaden 2").
+-define(MAPNAME2350001, "Reittier-Dungeon 1").
+-define(MAPNAME2350002, "Reittier-Dungeon 2").
+-define(MAPNAME2350003, "Reittier-Dungeon 3").
+-define(MAPNAME2350004, "Reittier-Dungeon 4").
+-define(MAPNAME2350005, "Reittier-Dungeon 5").
+-define(MAPNAME2350006, "Reittier-Dungeon 6").
+-define(MAPNAME2350007, "Reittier-Dungeon 7").
+-define(MAPNAME2360001, "Schwingen-Dungeon 1").
+-define(MAPNAME2360002, "Schwingen-Dungeon 2").
+-define(MAPNAME2360003, "Schwingen-Dungeon 3").
+-define(MAPNAME2360004, "Schwingen-Dungeon 4").
+-define(MAPNAME2360005, "Schwingen-Dungeon 5").
+-define(MAPNAME2360006, "Schwingen-Dungeon 6").
+-define(MAPNAME2360007, "Schwingen-Dungeon 7").
+-define(MAPNAME2380001, "Pharao-
+Schatzkammer 1").
+-define(MAPNAME2380002, "Pharao-
+Schatzkammer 2").
+-define(MAPNAME2380003, "Pharao-
+Schatzkammer 3").
+-define(MAPNAME2380004, "Pharao-
+Schatzkammer 4").
+-define(MAPNAME2380005, "Pharao-
+Schatzkammer 5").
+-define(MAPNAME2380006, "Pharao-
+Schatzkammer 6").
+-define(MAPNAME2380007, "Pharao-
+Schatzkammer 7").
+-define(MAPNAME2410001, "Gott-Dungeon 1").
+-define(MAPNAME2410002, "Gott-Dungeon 2").
+-define(MAPNAME2410003, "Gott-Dungeon 3").
+-define(MAPNAME2410004, "Gott-Dungeon 4").
+-define(MAPNAME2410005, "Gott-Dungeon 5").
+-define(MAPNAME2410006, "Gott-Dungeon 6").
+-define(MAPNAME2410007, "Gott-Dungeon 7").
+-define(MAPNAME2460001, "Elfen-Wald 1").
+-define(MAPNAME2460002, "Elfen-Wald 2").
+-define(MAPNAME2460003, "Elfen-Wald 3").
+-define(MAPNAME2460004, "Elfen-Wald 4").
+-define(MAPNAME2460005, "Elfen-Wald 5").
+-define(MAPNAME2460006, "Elfen-Wald 6").
+-define(MAPNAME2460007, "Seelenabyss 1").
+-define(MAPNAME2460008, "Seelenabyss 2").
+-define(MAPNAME2460009, "Seelenabyss 3").
+-define(MAPNAME2460010, "Seelenabyss 4").
+-define(MAPNAME2460011, "Seelenabyss 5").
+-define(MAPNAME2460012, "Seelenabyss 6").
+-define(MAPNAME2460013, "Seelenabyss 7").
+-define(MAPNAME2460014, "Seelenabyss 8").
+-define(MAPNAME2460015, "Seelenabyss 9").
+-define(MAPNAME2460016, "Schwebende Insel 1").
+-define(MAPNAME2460017, "Schwebende Insel 2").
+-define(MAPNAME2460018, "Schwebende Insel 3").
+-define(MAPNAME2460019, "Schwebende Insel 4").
+-define(MAPNAME2460020, "Schwebende Insel 5").
+-define(MAPNAME2460021, "Schwebende Insel 6").
+-define(MAPNAME2460022, "Schwebende Insel 7").
+-define(MAPNAME2460023, "Schwebende Insel 8").
+-define(MAPNAME2460024, "Schwebende Insel 9").
+-define(MAPNAME2460025, "Festung des Wächters 1").
+-define(MAPNAME2460026, "Festung des Wächters 2").
+-define(MAPNAME2460027, "Festung des Wächters 3").
+-define(MAPNAME2460028, "Festung des Wächters 4").
+-define(MAPNAME2460029, "Festung des Wächters 5").
+-define(MAPNAME2460030, "Festung des Wächters 6").
+-define(MAPNAME2460031, "Festung des Wächters 7").
+-define(MAPNAME2460032, "Festung des Wächters 8").
+-define(MAPNAME2460033, "Festung des Wächters 9").
+-define(MAPNAME2460034, "Magmakern 1").
+-define(MAPNAME2460035, "Magmakern 2").
+-define(MAPNAME2460036, "Magmakern 3").
+-define(MAPNAME2460037, "Magmakern 4").
+-define(MAPNAME2460038, "Magmakern 5").
+-define(MAPNAME2460039, "Magmakern 6").
+-define(MAPNAME2460040, "Magmakern 7").
+-define(MAPNAME2460041, "Magmakern 8").
+-define(MAPNAME2460042, "Magmakern 9").
+-define(MAPNAME2460043, "Dunkler Pfad 1").
+-define(MAPNAME2460044, "Dunkler Pfad 2").
+-define(MAPNAME2460045, "Dunkler Pfad 3").
+-define(MAPNAME2460046, "Dunkler Pfad 4").
+-define(MAPNAME2460047, "Dunkler Pfad 5").
+-define(MAPNAME2460048, "Dunkler Pfad 6").
+-define(MAPNAME2460049, "Dunkler Pfad 7").
+-define(MAPNAME2460050, "Dunkler Pfad 8").
+-define(MAPNAME2460051, "Dunkler Pfad 9").
+-define(MAPNAME2460052, "Hurrikan-Fjord 1").
+-define(MAPNAME2460053, "Hurrikan-Fjord 2").
+-define(MAPNAME2460054, "Hurrikan-Fjord 3").
+-define(MAPNAME2460055, "Hurrikan-Fjord 4").
+-define(MAPNAME2460056, "Hurrikan-Fjord 5").
+-define(MAPNAME2460057, "Hurrikan-Fjord 6").
+-define(MAPNAME2460058, "Hurrikan-Fjord 7").
+-define(MAPNAME2460059, "Hurrikan-Fjord 8").
+-define(MAPNAME2460060, "Hurrikan-Fjord 9").
+-define(MAPNAME2460061, "Blutiger Außenposten 1").
+-define(MAPNAME2460062, "Blutiger Außenposten 2").
+-define(MAPNAME2460063, "Blutiger Außenposten 3").
+-define(MAPNAME2460064, "Blutiger Außenposten 4").
+-define(MAPNAME2460065, "Blutiger Außenposten 5").
+-define(MAPNAME2460066, "Blutiger Außenposten 6").
+-define(MAPNAME2460067, "Blutiger Außenposten 7").
+-define(MAPNAME2460068, "Blutiger Außenposten 8").
+-define(MAPNAME2460069, "Blutiger Außenposten 9").
+-define(MAPCUTSENCE1, "Finden Sie heraus, warum die Sonne fällt").
+-define(MAPNAME2820001, "Kriegsfestung").
+-define(MAPNAME2121001, "Wiedergeburt-Dungeon 1").
+-define(MAPNAME2121002, "Wiedergeburt-Dungeon 2").
+-define(MAPNAME2121003, "Wiedergeburt-Dungeon 3").
+-define(MAPNAME2121004, "Wiedergeburt-Dungeon 4").
+-define(MAPNAME2121005, "Wiedergeburt-Dungeon 5").
+-define(MAPNAME2350008, "Reittier-Dungeon 8").
+-define(MAPNAME2350009, "Reittier-Dungeon 9").
+-define(MAPNAME2350010, "Reittier-Dungeon 10").
+-define(MAPNAME2350011, "Reittier-Dungeon 11").
+-define(MAPNAME2350012, "Reittier-Dungeon 12").
+-define(MAPNAME2350013, "Reittier-Dungeon 13").
+-define(MAPNAME2350014, "Reittier-Dungeon 14").
+-define(MAPNAME2350015, "Reittier-Dungeon 15").
+-define(MAPNAME2350016, "Reittier-Dungeon 16").
+-define(MAPNAME2350017, "Reittier-Dungeon 17").
+-define(MAPNAME2350018, "Reittier-Dungeon 18").
+-define(MAPNAME2350019, "Reittier-Dungeon 19").
+-define(MAPNAME2350020, "Reittier-Dungeon 20").
+-define(MAPNAME2350021, "Reittier-Dungeon 21").
+-define(MAPNAME2350022, "Reittier-Dungeon 22").
+-define(MAPNAME2350023, "Reittier-Dungeon 23").
+-define(MAPNAME2350024, "Reittier-Dungeon 24").
+-define(MAPNAME2350025, "Reittier-Dungeon 25").
+-define(MAPNAME2350026, "Reittier-Dungeon 26").
+-define(MAPNAME2350027, "Reittier-Dungeon 27").
+-define(MAPNAME2350028, "Reittier-Dungeon 28").
+-define(MAPNAME2350029, "Reittier-Dungeon 29").
+-define(MAPNAME2350030, "Reittier-Dungeon 30").
+-define(MAPNAME2350031, "Reittier-Dungeon 31").
+-define(MAPNAME2350032, "Reittier-Dungeon 32").
+-define(MAPNAME2350033, "Reittier-Dungeon 33").
+-define(MAPNAME2350034, "Reittier-Dungeon 34").
+-define(MAPNAME2350035, "Reittier-Dungeon 35").
+-define(MAPNAME2350036, "Reittier-Dungeon 36").
+-define(MAPNAME2350037, "Reittier-Dungeon 37").
+-define(MAPNAME2350038, "Reittier-Dungeon 38").
+-define(MAPNAME2350039, "Reittier-Dungeon 39").
+-define(MAPNAME2350040, "Reittier-Dungeon 40").
+-define(MAPNAME2350041, "Reittier-Dungeon 41").
+-define(MAPNAME2350042, "Reittier-Dungeon 42").
+-define(MAPNAME2350043, "Reittier-Dungeon 43").
+-define(MAPNAME2350044, "Reittier-Dungeon 44").
+-define(MAPNAME2350045, "Reittier-Dungeon 45").
+-define(MAPNAME2350046, "Reittier-Dungeon 46").
+-define(MAPNAME2350047, "Reittier-Dungeon 47").
+-define(MAPNAME2360008, "Schwingen-Dungeon 8").
+-define(MAPNAME2360009, "Schwingen-Dungeon 9").
+-define(MAPNAME2360010, "Schwingen-Dungeon 10").
+-define(MAPNAME2360011, "Schwingen-Dungeon 11").
+-define(MAPNAME2360012, "Schwingen-Dungeon 12").
+-define(MAPNAME2360013, "Schwingen-Dungeon 13").
+-define(MAPNAME2360014, "Schwingen-Dungeon 14").
+-define(MAPNAME2360015, "Schwingen-Dungeon 15").
+-define(MAPNAME2360016, "Schwingen-Dungeon 16").
+-define(MAPNAME2360017, "Schwingen-Dungeon 17").
+-define(MAPNAME2360018, "Schwingen-Dungeon 18").
+-define(MAPNAME2360019, "Schwingen-Dungeon 19").
+-define(MAPNAME2360020, "Schwingen-Dungeon 20").
+-define(MAPNAME2360021, "Schwingen-Dungeon 21").
+-define(MAPNAME2360022, "Schwingen-Dungeon 22").
+-define(MAPNAME2360023, "Schwingen-Dungeon 23").
+-define(MAPNAME2360024, "Schwingen-Dungeon 24").
+-define(MAPNAME2360025, "Schwingen-Dungeon 25").
+-define(MAPNAME2360026, "Schwingen-Dungeon 26").
+-define(MAPNAME2360027, "Schwingen-Dungeon 27").
+-define(MAPNAME2360028, "Schwingen-Dungeon 28").
+-define(MAPNAME2360029, "Schwingen-Dungeon 29").
+-define(MAPNAME2360030, "Schwingen-Dungeon 30").
+-define(MAPNAME2360031, "Schwingen-Dungeon 31").
+-define(MAPNAME2360032, "Schwingen-Dungeon 32").
+-define(MAPNAME2360033, "Schwingen-Dungeon 33").
+-define(MAPNAME2360034, "Schwingen-Dungeon 34").
+-define(MAPNAME2360035, "Schwingen-Dungeon 35").
+-define(MAPNAME2360036, "Schwingen-Dungeon 36").
+-define(MAPNAME2360037, "Schwingen-Dungeon 37").
+-define(MAPNAME2360038, "Schwingen-Dungeon 38").
+-define(MAPNAME2360039, "Schwingen-Dungeon 39").
+-define(MAPNAME2360040, "Schwingen-Dungeon 40").
+-define(MAPNAME2360041, "Schwingen-Dungeon 41").
+-define(MAPNAME2360042, "Schwingen-Dungeon 42").
+-define(MAPNAME2360043, "Schwingen-Dungeon 43").
+-define(MAPNAME2360044, "Schwingen-Dungeon 44").
+-define(MAPNAME2360045, "Schwingen-Dungeon 45").
+-define(MAPNAME2360046, "Schwingen-Dungeon 46").
+-define(MAPNAME2360047, "Schwingen-Dungeon 47").
+-define(MAPNAME2360048, "Schwingen-Dungeon 48").
+-define(MAPNAME2360049, "Schwingen-Dungeon 49").
+-define(MAPNAME2360050, "Schwingen-Dungeon 50").
+-define(MAPNAME2360051, "Schwingen-Dungeon 51").
+-define(MAPNAME2360052, "Schwingen-Dungeon 52").
+-define(MAPNAME2360053, "Schwingen-Dungeon 53").
+-define(MAPNAME2360054, "Schwingen-Dungeon 54").
+-define(MAPNAME2360055, "Schwingen-Dungeon 55").
+-define(MAPNAME2360056, "Schwingen-Dungeon 56").
+-define(MAPNAME2360057, "Schwingen-Dungeon 57").
+-define(MAPNAME2360058, "Schwingen-Dungeon 58").
+-define(MAPNAME2380008, "Pharao-
+Schatzkammer 8").
+-define(MAPNAME2380009, "Pharao-
+Schatzkammer 9").
+-define(MAPNAME2380010, "Pharao-
+Schatzkammer 10").
+-define(MAPNAME2380011, "Pharao-
+Schatzkammer 11").
+-define(MAPNAME2380012, "Pharao-
+Schatzkammer 12").
+-define(MAPNAME2380013, "Pharao-
+Schatzkammer 13").
+-define(MAPNAME2380014, "Pharao-
+Schatzkammer 14").
+-define(MAPNAME2380015, "Pharao-
+Schatzkammer 15").
+-define(MAPNAME2380016, "Pharao-
+Schatzkammer 16").
+-define(MAPNAME2380017, "Pharao-
+Schatzkammer 17").
+-define(MAPNAME2380018, "Pharao-
+Schatzkammer 18").
+-define(MAPNAME2380019, "Pharao-
+Schatzkammer 19").
+-define(MAPNAME2380020, "Pharao-
+Schatzkammer 20").
+-define(MAPNAME2380021, "Pharao-
+Schatzkammer 21").
+-define(MAPNAME2380022, "Pharao-
+Schatzkammer 22").
+-define(MAPNAME2380023, "Pharao-
+Schatzkammer 23").
+-define(MAPNAME2380024, "Pharao-
+Schatzkammer 24").
+-define(MAPNAME2380025, "Pharao-
+Schatzkammer 25").
+-define(MAPNAME2380026, "Pharao-
+Schatzkammer 26").
+-define(MAPNAME2380027, "Pharao-
+Schatzkammer 27").
+-define(MAPNAME2380028, "Pharao-
+Schatzkammer 28").
+-define(MAPNAME2380029, "Pharao-
+Schatzkammer 29").
+-define(MAPNAME2380030, "Pharao-
+Schatzkammer 30").
+-define(MAPNAME2380031, "Pharao-
+Schatzkammer 31").
+-define(MAPNAME2380032, "Pharao-
+Schatzkammer 32").
+-define(MAPNAME2380033, "Pharao-
+Schatzkammer 33").
+-define(MAPNAME2380034, "Pharao-
+Schatzkammer 34").
+-define(MAPNAME2380035, "Pharao-
+Schatzkammer 35").
+-define(MAPNAME2380036, "Pharao-
+Schatzkammer 36").
+-define(MAPNAME2380037, "Pharao-
+Schatzkammer 37").
+-define(MAPNAME2380038, "Pharao-
+Schatzkammer 38").
+-define(MAPNAME2380039, "Pharao-
+Schatzkammer 39").
+-define(MAPNAME2380040, "Pharao-
+Schatzkammer 40").
+-define(MAPNAME2380041, "Pharao-
+Schatzkammer 41").
+-define(MAPNAME2380042, "Pharao-
+Schatzkammer 42").
+-define(MAPNAME2380043, "Pharao-
+Schatzkammer 43").
+-define(MAPNAME2380044, "Pharao-
+Schatzkammer 44").
+-define(MAPNAME2380045, "Pharao-
+Schatzkammer 45").
+-define(MAPNAME2380046, "Pharao-
+Schatzkammer 46").
+-define(MAPNAME2380047, "Pharao-
+Schatzkammer 47").
+-define(MAPNAME2380048, "Pharao-
+Schatzkammer 48").
+-define(MAPNAME2380049, "Pharao-
+Schatzkammer 49").
+-define(MAPNAME2380050, "Pharao-
+Schatzkammer 50").
+-define(MAPNAME2380051, "Pharao-
+Schatzkammer 51").
+-define(MAPNAME2380052, "Pharao-
+Schatzkammer 52").
+-define(MAPNAME2380053, "Pharao-
+Schatzkammer 53").
+-define(MAPNAME2380054, "Pharao-
+Schatzkammer 54").
+-define(MAPNAME2380055, "Pharao-
+Schatzkammer 55").
+-define(MAPNAME2380056, "Pharao-
+Schatzkammer 56").
+-define(MAPNAME2380057, "Pharao-
+Schatzkammer 57").
+-define(MAPNAME2380058, "Pharao-
+Schatzkammer 58").
+-define(MAPNAME2410008, "Gott-Dungeon 8").
+-define(MAPNAME2410009, "Gott-Dungeon 9").
+-define(MAPNAME2410010, "Gott-Dungeon 10").
+-define(MAPNAME2410011, "Gott-Dungeon 11").
+-define(MAPNAME2410012, "Gott-Dungeon 12").
+-define(MAPNAME2410013, "Gott-Dungeon 13").
+-define(MAPNAME2410014, "Gott-Dungeon 14").
+-define(MAPNAME2410015, "Gott-Dungeon 15").
+-define(MAPNAME2410016, "Gott-Dungeon 16").
+-define(MAPNAME2410017, "Gott-Dungeon 17").
+-define(MAPNAME2410018, "Gott-Dungeon 18").
+-define(MAPNAME2410019, "Gott-Dungeon 19").
+-define(MAPNAME2410020, "Gott-Dungeon 20").
+-define(MAPNAME2410021, "Gott-Dungeon 21").
+-define(MAPNAME2410022, "Gott-Dungeon 22").
+-define(MAPNAME2410023, "Gott-Dungeon 23").
+-define(MAPNAME2410024, "Gott-Dungeon 24").
+-define(MAPNAME2410025, "Gott-Dungeon 25").
+-define(MAPNAME2410026, "Gott-Dungeon 26").
+-define(MAPNAME2410027, "Gott-Dungeon 27").
+-define(MAPNAME2410028, "Gott-Dungeon 28").
+-define(MAPNAME2410029, "Gott-Dungeon 29").
+-define(MAPNAME2410030, "Gott-Dungeon 30").
+-define(MAPNAME2108002, "Apex-Match Vorbereitung").
+-define(MAPNAME2450001, "Könige des 1v1 (Reguläres Match)").
+-define(MAPNAME2450002, "Könige des 1v1 (Apex-Match)").
+-define(MAPNAME2490001, "Folter-Labyrinth").
+-define(MAPNAME2490002, "Folter-Labyrinth").
+-define(MAPNAME2490003, "Folter-Labyrinth").
+-define(MAPNAME2490004, "Folter-Labyrinth").
+-define(MAPNAME2490005, "Folter-Labyrinth").
+-define(MAPNAME2490006, "Folter-Labyrinth").
+-define(MAPNAME2490007, "Folter-Labyrinth").
+-define(MAPNAME2490008, "Folter-Labyrinth").
+-define(MAPNAME2490009, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490010, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490011, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490012, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490013, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490014, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490015, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490016, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490017, "Folter-Labyrinth").
+-define(MAPNAME2490018, "Folter-Labyrinth").
+-define(MAPNAME2490019, "Folter-Labyrinth").
+-define(MAPNAME2490020, "Folter-Labyrinth").
+-define(MAPNAME2490021, "Folter-Labyrinth").
+-define(MAPNAME2490022, "Folter-Labyrinth").
+-define(MAPNAME2490023, "Folter-Labyrinth").
+-define(MAPNAME2490024, "Folter-Labyrinth").
+-define(MAPNAME2490025, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490026, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490027, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490028, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490029, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490030, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490031, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490032, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490033, "Folter-Labyrinth").
+-define(MAPNAME2490034, "Folter-Labyrinth").
+-define(MAPNAME2490035, "Folter-Labyrinth").
+-define(MAPNAME2490036, "Folter-Labyrinth").
+-define(MAPNAME2490037, "Folter-Labyrinth").
+-define(MAPNAME2490038, "Folter-Labyrinth").
+-define(MAPNAME2490039, "Folter-Labyrinth").
+-define(MAPNAME2490040, "Folter-Labyrinth").
+-define(MAPNAME2490041, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490042, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490043, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490044, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490045, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490046, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490047, "Fegefeuer-Labyrinth").
+-define(MAPNAME2490048, "Fegefeuer-Labyrinth").
+-define(MAPNAME2600001, "Frostiger Wald F1").
+-define(MAPNAME2600002, "Frostiger Wald F2").
+-define(MAPNAME2600003, "Frostiger Wald F3").
+-define(MAPNAME2600004, "Frostiger Wald F4").
+-define(MAPNAME2600005, "Frostiger Wald F5").
+-define(MAPNAME2600006, "Frostiger Wald F6").
+-define(MAPNAME2600007, "Frostiger Wald F7").
+-define(MAPNAME2600008, "Frostiger Wald F8").
+-define(MAPNAME2600009, "Frostiger Wald F9").
+-define(MAPNAME2111006, "Dimension des Todes").
+-define(MAPNAME2105027, "Land der Bestien").
+-define(MAPNAME2105028, "Kriegführende Unterwelt").
+-define(MAPNAME2105029, "Akademie der Unterwelt").
+-define(MAPNAME2105030, "Reich des Frostes").
+-define(MAPNAME2105031, "Greifenhöhle").
+-define(MAPNAME2105032, "Zangengewässer").
+-define(MAPNAME2105033, "Zerklüfteter Schlund").
+-define(MAPNAME2105034, "Land der Steine").
+-define(MAPNAME2105035, "Königreich der Flammen").
+-define(MAPNAME2105036, "Hölle der Begierde").
+-define(MAPNAME2105037, "Glückseliges Land").
+-define(MAPNAME2105038, "Halle der Kleopatra").
+-define(MAPNAME2105039, "Garten des Helden").
+-define(MAPNAME2105040, "Schatten-Traumland").
+-define(MAPNAME2105041, "Lodernde Stadt").
+-define(MAPNAME2105042, "Unterwasser-Königreich").
+-define(MAPNAME100001, "").
+-define(MAPNAME100002, "").
+-define(MAPNAME100003, "").
+-define(MAPNAME100004, "").
+-define(MAPNAME100005, "").
+-define(MAPNAME100006, "").
+-define(MAPNAME100007, "").
+-define(MAPNAME100008, "").
+-define(MAPNAME100009, "").
+-define(MAPNAME100010, "").
+-define(MAPNAME100011, "").
+-define(MAPNAME100012, "").
+-define(MAPNAME100013, "").
+-define(MAPNAME100014, "").
+-define(MAPNAME100015, "").
+-define(MAPNAME100016, "").
+-define(MAPNAME100017, "").
+-define(MAPNAME100018, "").
+-define(MAPNAME100019, "").
+-define(MAPNAME100020, "").
+-define(MAPNAME100021, "").
+-define(MAPNAME100022, "").
+-define(MAPNAME100023, "").
+-define(MAPNAME100024, "").
+-define(MAPNAME100025, "").
+-define(MAPNAME100026, "").
+-define(MAPNAME100027, "").
+-define(MAPNAME100028, "").
+-define(MAPNAME100029, "").
+-define(MAPNAME100030, "").
+-define(MAPNAME100031, "").
+-define(MAPNAME100032, "").
+-define(MAPNAME100033, "").
+-define(MAPNAME100034, "").
+-define(MAPNAME100035, "").
+-define(MAPNAME100036, "").
+-define(MAPNAME100037, "").
+-define(MAPNAME100038, "").
+-define(MAPNAME100039, "").
+-define(MAPNAME100040, "").
+-define(MAPNAME100041, "").
+-define(MAPNAME100042, "").
+-define(MAPNAME100043, "").
+-define(MAPNAME100044, "").
+-define(MAPNAME100045, "").
+-define(MAPNAME100046, "").
+-define(MAPNAME100047, "").
+-define(MAPNAME100048, "").
+-define(MAPNAME100049, "").
+-define(MAPNAME100050, "").
+-define(MAPNAME100051, "").
+-define(MAPNAME100052, "").
+-define(MAPNAME100053, "").
+-define(MAPNAME100054, "").
+-define(MAPNAME100055, "").
+-define(MAPNAME100056, "").
+-define(MAPNAME100057, "").
+-define(MAPNAME100058, "").
+-define(MAPNAME100059, "").
+-define(MAPNAME100060, "").
+-define(MAPNAME100061, "").
+-define(MAPNAME100062, "").
+-define(MAPNAME100063, "").
+-define(MAPNAME100064, "").
+-define(MAPNAME100065, "").
+-define(MAPNAME100066, "").
+-define(MAPNAME100067, "").
+-define(MAPNAME100068, "").
+-define(MAPNAME100069, "").
+-define(MAPNAME100070, "").
+-define(MAPNAME100071, "").
+-define(MAPNAME100072, "").
+-define(MAPNAME100073, "").
+-define(MAPNAME100074, "").
+-define(MAPNAME100075, "").
+-define(MAPNAME100076, "").
+-define(MAPNAME100077, "").
+-define(MAPNAME100078, "").
+-define(MAPNAME100079, "").
+-define(MAPNAME100080, "").
+-define(MAPNAME100081, "").
+-define(MAPNAME100082, "").
+-define(MAPNAME100083, "").
+-define(MAPNAME100084, "").
+-define(MAPNAME100085, "").
+-define(MAPNAME100086, "").
+-define(MAPNAME100087, "").
+-define(MAPNAME100088, "").
+-define(MAPNAME100089, "").
+-define(MAPNAME100090, "").
+-define(MAPNAME100091, "").
+-define(MAPNAME100092, "").
+-define(MAPNAME100093, "").
+-define(MAPNAME100094, "").
+-define(MAPNAME100095, "").
+-define(MAPNAME100096, "").
+-define(MAPNAME100097, "").
+-define(MAPNAME100098, "").
+-define(MAPNAME100099, "").
+-define(MAPNAME100100, "").
+-define(MAPNAME100101, "").
+-define(MAPNAME100102, "").
+-define(MAPNAME100103, "").
+-define(MAPNAME100104, "").
+-define(MAPNAME100105, "").
+-define(MAPNAME100106, "").
+-define(MAPNAME100107, "").
+-define(MAPNAME100108, "").
+-define(MAPNAME100109, "").
+-define(MAPNAME100110, "").
+-define(MAPNAME100111, "").
+-define(MAPNAME100112, "").
+-define(MAPNAME100113, "").
+-define(MAPNAME100114, "").
+-define(MAPNAME100115, "").
+-define(MAPNAME100116, "").
+-define(MAPNAME100117, "").
+-define(MAPNAME100118, "").
+-define(MAPNAME100119, "").
+-define(MAPNAME100120, "").
+-define(MAPNAME100121, "").
+-define(MAPNAME100122, "").
+-define(MAPNAME100123, "").
+-define(MAPNAME100124, "").
+-define(MAPNAME100125, "").
+-define(MAPNAME100126, "").
+-define(MAPNAME100127, "").
+-define(MAPNAME100128, "").
+-define(MAPNAME100129, "").
+-define(MAPNAME100130, "").
+-define(MAPNAME100131, "").
+-define(MAPNAME100132, "").
+-define(MAPNAME100133, "").
+-define(MAPNAME100134, "").
+-define(MAPNAME100135, "").
+-define(MAPNAME100136, "").
+-define(MAPNAME100137, "").
+-define(MAPNAME100138, "").
+-define(MAPNAME100139, "").
+-define(MAPNAME100140, "").
+-define(MAPNAME100141, "").
+-define(MAPNAME100142, "").
+-define(MAPNAME100143, "").
+-define(MAPNAME100144, "").
+-define(MAPNAME100145, "").
+-define(MAPNAME100146, "").
+-define(MAPNAME100147, "").
+-define(MAPNAME100148, "").
+-define(MAPNAME100149, "").
+-define(MAPNAME100150, "").
+-define(MAPNAME100151, "").
+-define(MAPNAME100152, "").
+-define(MAPNAME100153, "").
+-define(MAPNAME100154, "").
+-define(MAPNAME100155, "").
+-define(MAPNAME100156, "").
+-define(MAPNAME100157, "").
+-define(MAPNAME100158, "").
+-define(MAPNAME100159, "").
+-define(MAPNAME100160, "").
+-define(MAPNAME100161, "").
+-define(MAPNAME100162, "").
+-define(MAPNAME100163, "").
+-define(MAPNAME100164, "").
+-define(MAPNAME100165, "").
+-define(MAPNAME100166, "").
+-define(MAPNAME100167, "").
+-define(MAPNAME100168, "").
+-define(MAPNAME100169, "").
+-define(MAPNAME100170, "").
+-define(MAPNAME100171, "").
+-define(MAPNAME100172, "").
+-define(MAPNAME100173, "").
+-define(MAPNAME100174, "").
+-define(MAPNAME100175, "").
+-define(MAPNAME100176, "").
+-define(MAPNAME100177, "").
+-define(MAPNAME100178, "").
+-define(MAPNAME100179, "").
+-define(MAPNAME100180, "").
+-define(MAPNAME100181, "").
+-define(MAPNAME100182, "").
+-define(MAPNAME100183, "").
+-define(MAPNAME100184, "").
+-define(MAPNAME100185, "").
+-define(MAPNAME100186, "").
+-define(MAPNAME100187, "").
+-define(MAPNAME100188, "").
+-define(MAPNAME100189, "").
+-define(MAPNAME100190, "").
+-define(MAPNAME100191, "").
+-define(MAPNAME100192, "").
+-define(MAPNAME100193, "").
+-define(MAPNAME100194, "").
+-define(MAPNAME100195, "").
+-define(MAPNAME100196, "").
+-define(MAPNAME100197, "").
+-define(MAPNAME100198, "").
+-define(MAPNAME100199, "").
+-define(MAPNAME100200, "").
+-define(MAPNAME100201, "").
+-define(MAPNAME100202, "").
+-define(MAPNAME100203, "").
+-define(MAPNAME100204, "").
+-define(MAPNAME100205, "").
+-define(MAPNAME100206, "").
+-define(MAPNAME100207, "").
+-define(MAPNAME100208, "").
+-define(MAPNAME100209, "").
+-define(MAPNAME100210, "").
+-define(MAPNAME100211, "").
+-define(MAPNAME100212, "").
+-define(MAPNAME100213, "").
+-define(MAPNAME100214, "").
+-define(MAPNAME100215, "").
+-define(MAPNAME100216, "").
+-define(MAPNAME100217, "").
+-define(MAPNAME100218, "").
+-define(MAPNAME100219, "").
+-define(MAPNAME100220, "").
+-define(MAPNAME100221, "").
+-define(MAPNAME100222, "").
+-define(MAPNAME100223, "").
+-define(MAPNAME100224, "").
+-define(MAPNAME100225, "").
+-define(MAPNAME100226, "").
+-define(MAPNAME100227, "").
+-define(MAPNAME100228, "").
+-define(MAPNAME100229, "").
+-define(MAPNAME100230, "").
+-define(MAPNAME100231, "").
+-define(MAPNAME100232, "").
+-define(MAPNAME100233, "").
+-define(MAPNAME100234, "").
+-define(MAPNAME100235, "").
+-define(MAPNAME100236, "").
+-define(MAPNAME100237, "").
+-define(MAPNAME100238, "").
+-define(MAPNAME100239, "").
+-define(MAPNAME100240, "").
+-define(MAPNAME100241, "").
+-define(MAPNAME100242, "").
+-define(MAPNAME100243, "").
+-define(MAPNAME100244, "").
+-define(MAPNAME100245, "").
+-define(MAPNAME100246, "").
+-define(MAPNAME100247, "").
+-define(MAPNAME100248, "").
+-define(MAPNAME100249, "").
+-define(MAPNAME100250, "").
+-define(MAPNAME100251, "").
+-define(MAPNAME100252, "").
+-define(MAPNAME100253, "").
+-define(MAPNAME100254, "").
+-define(MAPNAME100255, "").
+-define(MAPNAME100256, "").
+-define(MAPNAME100257, "").
+-define(MAPNAME100258, "").
+-define(MAPNAME100259, "").
+-define(MAPNAME100260, "").
+-define(MAPNAME100261, "").
+-define(MAPNAME100262, "").
+-define(MAPNAME100263, "").
+-define(MAPNAME100264, "").
+-define(MAPNAME100265, "").
+-define(MAPNAME100266, "").
+-define(MAPNAME100267, "").
+-define(MAPNAME100268, "").
+-define(MAPNAME100269, "").
+-define(MAPNAME100270, "").
+-define(MAPNAME100271, "").
+-define(MAPNAME100272, "").
+-define(MAPNAME100273, "").
+-define(MAPNAME100274, "").
+-define(MAPNAME100275, "").
+-define(MAPNAME100276, "").
+-define(MAPNAME100277, "").
+-define(MAPNAME100278, "").
+-define(MAPNAME100279, "").
+-define(MAPNAME100280, "").
+-define(MAPNAME100281, "").
+-define(MAPNAME100282, "").
+-define(MAPNAME100283, "").
+-define(MAPNAME100284, "").
+-define(MAPNAME100285, "").
+-define(MAPNAME100286, "").
+-define(MAPNAME100287, "").
+-define(MAPNAME100288, "").
+-define(MAPNAME100289, "").
+-define(MAPNAME100290, "").
+-define(MAPNAME100291, "").
+-define(MAPNAME100292, "").
+-define(MAPNAME100293, "").
+-define(MAPNAME100294, "").
+-define(MAPNAME100295, "").
+-define(MAPNAME100296, "").
+-define(MAPNAME100297, "").
+-define(MAPNAME100298, "").
+-define(MAPNAME100299, "").
+-define(MAPNAME100300, "").
+-define(MAPNAME100301, "").
+-define(MAPNAME100302, "").
+-define(MAPNAME100303, "").
+-define(MAPNAME100304, "").
+-define(MAPNAME100305, "").
+-define(MAPNAME100306, "").
+-define(MAPNAME100307, "").
+-define(MAPNAME100308, "").
+-define(MAPNAME100309, "").
+-define(MAPNAME100310, "").
+-define(MAPNAME100311, "").
+-define(MAPNAME100312, "").
+-define(MAPNAME100313, "").
+-define(MAPNAME100314, "").
+-define(MAPNAME100315, "").
+-define(MAPNAME100316, "").
+-define(MAPNAME100317, "").
+-define(MAPNAME100318, "").
+-define(MAPNAME100319, "").
+-define(MAPNAME100320, "").
+-define(MAPNAME100321, "").
+-define(MAPNAME100322, "").
+-define(MAPNAME100323, "").
+-define(MAPNAME100324, "").
+-define(MAPNAME100325, "").
+-define(MAPNAME100326, "").
+-define(MAPNAME100327, "").
+-define(MAPNAME100328, "").
+-define(MAPNAME100329, "").
+-define(MAPNAME100330, "").
+-define(MAPNAME100331, "").
+-define(MAPNAME100332, "").
+-define(MAPNAME100333, "").
+-define(MAPNAME100334, "").
+-define(MAPNAME100335, "").
+-define(MAPNAME100336, "").
+-define(MAPNAME100337, "").
+-define(MAPNAME100338, "").
+-define(MAPNAME100339, "").
+-define(MAPNAME100340, "").
+-define(MAPNAME100341, "").
+-define(MAPNAME100342, "").
+-define(MAPNAME100343, "").
+-define(MAPNAME100344, "").
+-define(MAPNAME100345, "").
+-define(MAPNAME100346, "").
+-define(MAPNAME100347, "").
+-define(MAPNAME100348, "").
+-define(MAPNAME100349, "").
+-define(MAPNAME100350, "").
+-define(MAPNAME100351, "").
+-define(MAPNAME100352, "").
+-define(MAPNAME100353, "").
+-define(MAPNAME100354, "").
+-define(MAPNAME100355, "").
+-define(MAPNAME100356, "").
+-define(MAPNAME100357, "").
+-define(MAPNAME100358, "").
+-define(MAPNAME100359, "").
+-define(MAPNAME100360, "").
+-define(MAPNAME100361, "").
+-define(MAPNAME100362, "").
+-define(MAPNAME100363, "").
+-define(MAPNAME100364, "").
+-define(MAPNAME100365, "").
+-define(MAPNAME100366, "").
+-define(MAPNAME100367, "").
+-define(MAPNAME100368, "").
+-define(MAPNAME100369, "").
+-define(MAPNAME100370, "").
+-define(MAPNAME100371, "").
+-define(MAPNAME100372, "").
+-define(MAPNAME100373, "").
+-define(MAPNAME100374, "").
+-define(MAPNAME100375, "").
+-define(MAPNAME100376, "").
+-define(MAPNAME100377, "").
+-define(MAPNAME100378, "").
+-define(MAPNAME100379, "").
+-define(MAPNAME100380, "").
+-define(MAPNAME100381, "").
+-define(MAPNAME100382, "").
+-define(MAPNAME100383, "").
+-define(MAPNAME100384, "").
+-define(MAPNAME100385, "").
+-define(MAPNAME100386, "").
+-define(MAPNAME100387, "").
+-define(MAPNAME100388, "").
+-define(MAPNAME100389, "").
+-define(MAPNAME100390, "").
+-define(MAPNAME100391, "").
+-define(MAPNAME100392, "").
+-define(MAPNAME100393, "").
+-define(MAPNAME100394, "").
+-define(MAPNAME100395, "").
+-define(MAPNAME100396, "").
+-define(MAPNAME100397, "").
+-define(MAPNAME100398, "").
+-define(MAPNAME100399, "").
+-define(MAPNAME100400, "").
+-define(MAPNAME100401, "").
+-define(MAPNAME100402, "").
+-define(MAPNAME100403, "").
+-define(MAPNAME100404, "").
+-define(MAPNAME100405, "").
+-define(MAPNAME100406, "").
+-define(MAPNAME100407, "").
+-define(MAPNAME100408, "").
+-define(MAPNAME100409, "").
+-define(MAPNAME100410, "").
+-define(MAPNAME100411, "").
+-define(MAPNAME100412, "").
+-define(MAPNAME100413, "").
+-define(MAPNAME100414, "").
+-define(MAPNAME100415, "").
+-define(MAPNAME100416, "").
+-define(MAPNAME100417, "").
+-define(MAPNAME100418, "").
+-define(MAPNAME100419, "").
+-define(MAPNAME100420, "").
+-define(MAPNAME100421, "").
+-define(MAPNAME100422, "").
+-define(MAPNAME100423, "").
+-define(MAPNAME100424, "").
+-define(MAPNAME100425, "").
+-define(MAPNAME100426, "").
+-define(MAPNAME100427, "").
+-define(MAPNAME100428, "").
+-define(MAPNAME100429, "").
+-define(MAPNAME100430, "").
+-define(MAPNAME100431, "").
+-define(MAPNAME100432, "").
+-define(MAPNAME100433, "").
+-define(MAPNAME100434, "").
+-define(MAPNAME100435, "").
+-define(MAPNAME100436, "").
+-define(MAPNAME100437, "").
+-define(MAPNAME100438, "").
+-define(MAPNAME100439, "").
+-define(MAPNAME100440, "").
+-define(MAPNAME100441, "").
+-define(MAPNAME100442, "").
+-define(MAPNAME100443, "").
+-define(MAPNAME100444, "").
+-define(MAPNAME100445, "").
+-define(MAPNAME100446, "").
+-define(MAPNAME100447, "").
+-define(MAPNAME100448, "").
+-define(MAPNAME100449, "").
+-define(MAPNAME100450, "").
+-define(MAPNAME100451, "").
+-define(MAPNAME100452, "").
+-define(MAPNAME100453, "").
+-define(MAPNAME100454, "").
+-define(MAPNAME100455, "").
+-define(MAPNAME100456, "").
+-define(MAPNAME100457, "").
+-define(MAPNAME100458, "").
+-define(MAPNAME100459, "").
+-define(MAPNAME100460, "").
+-define(MAPNAME100461, "").
+-define(MAPNAME100462, "").
+-define(MAPNAME100463, "").
+-define(MAPNAME100464, "").
+-define(MAPNAME100465, "").
+-define(MAPNAME100466, "").
+-define(MAPNAME100467, "").
+-define(MAPNAME100468, "").
+-define(MAPNAME100469, "").
+-define(MAPNAME100470, "").
+-define(MAPNAME100471, "").
+-define(MAPNAME100472, "").
+-define(MAPNAME100473, "").
+-define(MAPNAME100474, "").
+-define(MAPNAME100475, "").
+-define(MAPNAME100476, "").
+-define(MAPNAME100477, "").
+-define(MAPNAME100478, "").
+-define(MAPNAME100479, "").
+-define(MAPNAME100480, "").
+-define(MAPNAME100481, "").
+-define(MAPNAME100482, "").
+-define(MAPNAME100483, "").
+-define(MAPNAME100484, "").
+-define(MAPNAME100485, "").
+-define(MAPNAME100486, "").
+-define(MAPNAME100487, "").
+-define(MAPNAME100488, "").
+-define(MAPNAME100489, "").
+-define(MAPNAME100490, "").
+-define(MAPNAME100491, "").
+-define(MAPNAME100492, "").
+-define(MAPNAME100493, "").
+-define(MAPNAME100494, "").
+-define(MAPNAME100495, "").
+-define(MAPNAME100496, "").
+-define(MAPNAME100497, "").
+-define(MAPNAME100498, "").
+-define(MAPNAME100499, "").
+-define(MAPNAME100500, "").
+-define(MAPNAME100501, "").
+-define(MAPNAME100502, "").
+-define(MAPNAME100503, "").
+-define(MAPNAME100504, "").
+-define(MAPNAME100505, "").
+-define(MAPNAME100506, "").
+-define(MAPNAME100507, "").
+-define(MAPNAME100508, "").
+-define(MAPNAME100509, "").
+-define(MAPNAME100510, "").
+-define(MAPNAME100511, "").
+-define(MAPNAME100512, "").
+-define(MAPNAME100513, "").
+-define(MAPNAME100514, "").
+-define(MAPNAME100515, "").
+-define(MAPNAME100516, "").
+-define(MAPNAME100517, "").
+-define(MAPNAME100518, "").
+-define(MAPNAME100519, "").
+-define(MAPNAME100520, "").
+-define(MAPNAME100521, "").
+-define(MAPNAME100522, "").
+-define(MAPNAME100523, "").
+-define(MAPNAME100524, "").
+-define(MAPNAME100525, "").
+-define(MAPNAME100526, "").
+-define(MAPNAME100527, "").
+-define(MAPNAME100528, "").
+-define(MAPNAME100529, "").
+-define(MAPNAME100530, "").
+-define(MAPNAME100531, "").
+-define(MAPNAME100532, "").
+-define(MAPNAME100533, "").
+-define(MAPNAME100534, "").
+-define(MAPNAME100535, "").
+-define(MAPNAME100536, "").
+-define(MAPNAME100537, "").
+-define(MAPNAME100538, "").
+-define(MAPNAME100539, "").
+-define(MAPNAME100540, "").
+-define(MAPNAME100541, "").
+-define(MAPNAME100542, "").
+-define(MAPNAME100543, "").
+-define(MAPNAME100544, "").
+-define(MAPNAME100545, "").
+-define(MAPNAME100546, "").
+-define(MAPNAME100547, "").
+-define(MAPNAME100548, "").
+-define(MAPNAME100549, "").
+-define(MAPNAME100550, "").
+-define(MAPNAME100551, "").
+-define(MAPNAME100552, "").
+-define(MAPNAME100553, "").
+-define(MAPNAME100554, "").
+-define(MAPNAME100555, "").
+-define(MAPNAME100556, "").
+-define(MAPNAME100557, "").
+-define(MAPNAME100558, "").
+-define(MAPNAME100559, "").
+-define(MAPNAME100560, "").
+-define(MAPNAME100561, "").
+-define(MAPNAME100562, "").
+-define(MAPNAME100563, "").
+-define(MAPNAME100564, "").
+-define(MAPNAME100565, "").
+-define(MAPNAME100566, "").
+-define(MAPNAME100567, "").
+-define(MAPNAME100568, "").
+-define(MAPNAME100569, "").
+-define(MAPNAME100570, "").
+-define(MAPNAME100571, "").
+-define(MAPNAME100572, "").
+-define(MAPNAME100573, "").
+-define(MAPNAME100574, "").
+-define(MAPNAME100575, "").
+-define(MAPNAME100576, "").
+-define(MAPNAME100577, "").
+-define(MAPNAME100578, "").
+-define(MAPNAME100579, "").
+-define(MAPNAME100580, "").
+-define(MAPNAME100581, "").
+-define(MAPNAME100582, "").
+-define(MAPNAME100583, "").
+-define(MAPNAME100584, "").
+-define(MAPNAME100585, "").
+-define(MAPNAME100586, "").
+-define(MAPNAME100587, "").
+-define(MAPNAME100588, "").
+-define(MAPNAME100589, "").
+-define(MAPNAME100590, "").
+-define(MAPNAME100591, "").
+-define(MAPNAME100592, "").
+-define(MAPNAME100593, "").
+-define(MAPNAME100594, "").
+-define(MAPNAME100595, "").
+-define(MAPNAME100596, "").
+-define(MAPNAME100597, "").
+-define(MAPNAME100598, "").
+-define(MAPNAME100599, "").
+-define(MAPNAME100600, "").
+-define(MAPNAME100601, "").
+-define(MAPNAME100602, "").
+-define(MAPNAME100603, "").
+-define(MAPNAME100604, "").
+-define(MAPNAME100605, "").
+-define(MAPNAME100606, "").
+-define(MAPNAME100607, "").
+-define(MAPNAME100608, "").
+-define(MAPNAME100609, "").
+-define(MAPNAME100610, "").
+-define(MAPNAME100611, "").
+-define(MAPNAME100612, "").
+-define(MAPNAME100613, "").
+-define(MAPNAME100614, "").
+-define(MAPNAME100615, "").
+-define(MAPNAME100616, "").
+-define(MAPNAME100617, "").
+-define(MAPNAME100618, "").
+-define(MAPNAME100619, "").
+-define(MAPNAME100620, "").
+-define(MAPNAME100621, "").
+-define(MAPNAME100622, "").
+-define(MAPNAME100623, "").
+-define(MAPNAME100624, "").
+-define(MAPNAME100625, "").
+-define(MAPNAME100626, "").
+-define(MAPNAME100627, "").
+-define(MAPNAME100628, "").
+-define(MAPNAME100629, "").
+-define(MAPNAME100630, "").
+-define(MAPNAME100631, "").
+-define(MAPNAME100632, "").
+-define(MAPNAME100633, "").
+-define(MAPNAME100634, "").
+-define(MAPNAME100635, "").
+-define(MAPNAME100636, "").
+-define(MAPNAME100637, "").
+-define(MAPNAME100638, "").
+-define(MAPNAME100639, "").
+-define(MAPNAME100640, "").
+-define(MAPNAME100641, "").
+-define(MAPNAME100642, "").
+-define(MAPNAME100643, "").
+-define(MAPNAME100644, "").
+-define(MAPNAME100645, "").
+-define(MAPNAME100646, "").
+-define(MAPNAME100647, "").
+-define(MAPNAME100648, "").
+-define(MAPNAME100649, "").
+-define(MAPNAME100650, "").
+-define(MAPNAME100651, "").
+-define(MAPNAME100652, "").
+-define(MAPNAME100653, "").
+-define(MAPNAME100654, "").
+-define(MAPNAME100655, "").
+-define(MAPNAME100656, "").
+-define(MAPNAME100657, "").
+-define(MAPNAME100658, "").
+-define(MAPNAME100659, "").
+-define(MAPNAME100660, "").
+-define(MAPNAME100661, "").
+-define(MAPNAME100662, "").
+-define(MAPNAME100663, "").
+-define(MAPNAME100664, "").
+-define(MAPNAME100665, "").
+-define(MAPNAME100666, "").
+-define(MAPNAME100667, "").
+-define(MAPNAME100668, "").
+-define(MAPNAME100669, "").
+-define(MAPNAME100670, "").
+-define(MAPNAME100671, "").
+-define(MAPNAME100672, "").
+-define(MAPNAME100673, "").
+-define(MAPNAME100674, "").
+-define(MAPNAME100675, "").
+-define(MAPNAME100676, "").
+-define(MAPNAME100677, "").
+-define(MAPNAME100678, "").
+-define(MAPNAME100679, "").
+-define(MAPNAME100680, "").
+-define(MAPNAME100681, "").
+-define(MAPNAME100682, "").
+-define(MAPNAME100683, "").
+-define(MAPNAME100684, "").
+-define(MAPNAME100685, "").
+-define(MAPNAME100686, "").
+-define(MAPNAME100687, "").
+-define(MAPNAME100688, "").
+-define(MAPNAME100689, "").
+-define(MAPNAME100690, "").
+-define(MAPNAME100691, "").
+-define(MAPNAME100692, "").
+-define(MAPNAME100693, "").
+-define(MAPNAME100694, "").
+-define(MAPNAME100695, "").
+-define(MAPNAME100696, "").
+-define(MAPNAME100697, "").
+-define(MAPNAME100698, "").
+-define(MAPNAME100699, "").
+-define(MAPNAME100700, "").
+-define(MAPNAME100701, "").
+-define(MAPNAME100702, "").
+-define(MAPNAME100703, "").
+-define(MAPNAME100704, "").
+-define(MAPNAME100705, "").
+-define(MAPNAME100706, "").
+-define(MAPNAME100707, "").
+-define(MAPNAME100708, "").
+-define(MAPNAME100709, "").
+-define(MAPNAME100710, "").
+-define(MAPNAME100711, "").
+-define(MAPNAME100712, "").
+-define(MAPNAME100713, "").
+-define(MAPNAME100714, "").
+-define(MAPNAME100715, "").
+-define(MAPNAME100716, "").
+-define(MAPNAME100717, "").
+-define(MAPNAME100718, "").
+-define(MAPNAME100719, "").
+-define(MAPNAME100720, "").
+-define(MAPNAME100721, "").
+-define(MAPNAME100722, "").
+-define(MAPNAME100723, "").
+-define(MAPNAME100724, "").
+-define(MAPNAME100725, "").
+-define(MAPNAME100726, "").
+-define(MAPNAME100727, "").
+-define(MAPNAME100728, "").
+-define(MAPNAME100729, "").
+-define(MAPNAME100730, "").
+-define(MAPNAME100731, "").
+-define(MAPNAME100732, "").
+-define(MAPNAME100733, "").
+-define(MAPNAME100734, "").
+-define(MAPNAME100735, "").
+-define(MAPNAME100736, "").
+-define(MAPNAME100737, "").
+-define(MAPNAME100738, "").
+-define(MAPNAME100739, "").
+-define(MAPNAME100740, "").
+-define(MAPNAME100741, "").
+-define(MAPNAME100742, "").
+-define(MAPNAME100743, "").
+-define(MAPNAME100744, "").
+-define(MAPNAME100745, "").
+-define(MAPNAME100746, "").
+-define(MAPNAME100747, "").
+-define(MAPNAME100748, "").
+-define(MAPNAME100749, "").
+-define(MAPNAME100750, "").
+-define(MAPNAME100751, "").
+-define(MAPNAME100752, "").
+-define(MAPNAME100753, "").
+-define(MAPNAME100754, "").
+-define(MAPNAME100755, "").
+-define(MAPNAME100756, "").
+-define(MAPNAME100757, "").
+-define(MAPNAME100758, "").
+-define(MAPNAME100759, "").
+-define(MAPNAME100760, "").
+-define(MAPNAME100761, "").
+-define(MAPNAME100762, "").
+-define(MAPNAME100763, "").
+-define(MAPNAME100764, "").
+-define(MAPNAME100765, "").
+-define(MAPNAME100766, "").
+-define(MAPNAME100767, "").
+-define(MAPNAME100768, "").
+-define(MAPNAME100769, "").
+-define(MAPNAME100770, "").
+-define(MAPNAME100771, "").
+-define(MAPNAME100772, "").
+-define(MAPNAME100773, "").
+-define(MAPNAME100774, "").
+-define(MAPNAME100775, "").
+-define(MAPNAME100776, "").
+-define(MAPNAME100777, "").
+-define(MAPNAME100778, "").
+-define(MAPNAME100779, "").
+-define(MAPNAME100780, "").
+-define(MAPNAME100781, "").
+-define(MAPNAME100782, "").
+-define(MAPNAME100783, "").
+-define(MAPNAME100784, "").
+-define(MAPNAME100785, "").
+-define(MAPNAME100786, "").
+-define(MAPNAME100787, "").
+-define(MAPNAME100788, "").
+-define(MAPNAME100789, "").
+-define(MAPNAME100790, "").
+-define(MAPNAME100791, "").
+-define(MAPNAME100792, "").
+-define(MAPNAME100793, "").
+-define(MAPNAME100794, "").
+-define(MAPNAME100795, "").
+-define(MAPNAME100796, "").
+-define(MAPNAME100797, "").
+-define(MAPNAME100798, "").
+-define(MAPNAME100799, "").
+-define(MAPNAME100800, "").
+-define(MAPNAME100801, "").
+-define(MAPNAME100802, "").
+-define(MAPNAME100803, "").
+-define(MAPNAME100804, "").
+-define(MAPNAME100805, "").
+-define(MAPNAME100806, "").
+-define(MAPNAME100807, "").
+-define(MAPNAME100808, "").
+-define(MAPNAME100809, "").
+-define(MAPNAME100810, "").
+-define(MAPNAME100811, "").
+-define(MAPNAME100812, "").
+-define(MAPNAME100813, "").
+-define(MAPNAME100814, "").
+-define(MAPNAME100815, "").
+-define(MAPNAME100816, "").
+-define(MAPNAME100817, "").
+-define(MAPNAME100818, "").
+-define(MAPNAME100819, "").
+-define(MAPNAME100820, "").
+-define(MAPNAME100821, "").
+-define(MAPNAME100822, "").
+-define(MAPNAME100823, "").
+-define(MAPNAME100824, "").
+-define(MAPNAME100825, "").
+-define(MAPNAME100826, "").
+-define(MAPNAME100827, "").
+-define(MAPNAME100828, "").
+-define(MAPNAME100829, "").
+-define(MAPNAME100830, "").
+-define(MAPNAME100831, "").
+-define(MAPNAME100832, "").
+-define(MAPNAME100833, "").
+-define(MAPNAME100834, "").
+-define(MAPNAME100835, "").
+-define(MAPNAME100836, "").
+-define(MAPNAME100837, "").
+-define(MAPNAME100838, "").
+-define(MAPNAME100839, "").
+-define(MAPNAME100840, "").
+-define(MAPNAME100841, "").
+-define(MAPNAME100842, "").
+-define(MAPNAME100843, "").
+-define(MAPNAME100844, "").
+-define(MAPNAME100845, "").
+-define(MAPNAME100846, "").
+-define(MAPNAME100847, "").
+-define(MAPNAME100848, "").
+-define(MAPNAME100849, "").
+-define(MAPNAME100850, "").
+-define(MAPNAME100851, "").
+-define(MAPNAME100852, "").
+-define(MAPNAME100853, "").
+-define(MAPNAME100854, "").
+-define(MAPNAME100855, "").
+-define(MAPNAME100856, "").
+-define(MAPNAME100857, "").
+-define(MAPNAME100858, "").
+-define(MAPNAME100859, "").
+-define(MAPNAME100860, "").
+-define(MAPNAME100861, "").
+-define(MAPNAME100862, "").
+-define(MAPNAME100863, "").
+-define(MAPNAME100864, "").
+-define(MAPNAME100865, "").
+-define(MAPNAME100866, "").
+-define(MAPNAME100867, "").
+-define(MAPNAME100868, "").
+-define(MAPNAME100869, "").
+-define(MAPNAME100870, "").
+-define(MAPNAME100871, "").
+-define(MAPNAME100872, "").
+-define(MAPNAME100873, "").
+-define(MAPNAME100874, "").
+-define(MAPNAME100875, "").
+-define(MAPNAME100876, "").
+-define(MAPNAME100877, "").
+-define(MAPNAME100878, "").
+-define(MAPNAME100879, "").
+-define(MAPNAME100880, "").
+-define(MAPNAME100881, "").
+-define(MAPNAME100882, "").
+-define(MAPNAME100883, "").
+-define(MAPNAME100884, "").
+-define(MAPNAME100885, "").
+-define(MAPNAME100886, "").
+-define(MAPNAME100887, "").
+-define(MAPNAME100888, "").
+-define(MAPNAME100889, "").
+-define(MAPNAME100890, "").
+-define(MAPNAME100891, "").
+-define(MAPNAME100892, "").
+-define(MAPNAME100893, "").
+-define(MAPNAME100894, "").
+-define(MAPNAME100895, "").
+-define(MAPNAME100896, "").
+-define(MAPNAME100897, "").
+-define(MAPNAME100898, "").
+-define(MAPNAME100899, "").
+-define(MAPNAME100900, "").
+-define(MAPNAME100901, "").
+-define(MAPNAME100902, "").
+-define(MAPNAME100903, "").
+-define(MAPNAME100904, "").
+-define(MAPNAME100905, "").
+-define(MAPNAME100906, "").
+-define(MAPNAME100907, "").
+-define(MAPNAME100908, "").
+-define(MAPNAME100909, "").
+-define(MAPNAME100910, "").
+-define(MAPNAME100911, "").
+-define(MAPNAME100912, "").
+-define(MAPNAME100913, "").
+-define(MAPNAME100914, "").
+-define(MAPNAME100915, "").
+-define(MAPNAME100916, "").
+-define(MAPNAME100917, "").
+-define(MAPNAME100918, "").
+-define(MAPNAME100919, "").
+-define(MAPNAME100920, "").
+-define(MAPNAME100921, "").
+-define(MAPNAME100922, "").
+-define(MAPNAME100923, "").
+-define(MAPNAME100924, "").
+-define(MAPNAME100925, "").
+-define(MAPNAME100926, "").
+-define(MAPNAME100927, "").
+-define(MAPNAME100928, "").
+-define(MAPNAME100929, "").
+-define(MAPNAME100930, "").
+-define(MAPNAME100931, "").
+-define(MAPNAME100932, "").
+-define(MAPNAME100933, "").
+-define(MAPNAME100934, "").
+-define(MAPNAME100935, "").
+-define(MAPNAME100936, "").
+-define(MAPNAME100937, "").
+-define(MAPNAME100938, "").
+-define(MAPNAME100939, "").
+-define(MAPNAME100940, "").
+-define(MAPNAME100941, "").
+-define(MAPNAME100942, "").
+-define(MAPNAME100943, "").
+-define(MAPNAME100944, "").
+-define(MAPNAME100945, "").
+-define(MAPNAME100946, "").
+-define(MAPNAME100947, "").
+-define(MAPNAME100948, "").
+-define(MAPNAME100949, "").
+-define(MAPNAME100950, "").
+-define(MAPNAME100951, "").
+-define(MAPNAME100952, "").
+-define(MAPNAME100953, "").
+-define(MAPNAME100954, "").
+-define(MAPNAME100955, "").
+-define(MAPNAME100956, "").
+-define(MAPNAME100957, "").
+-define(MAPNAME100958, "").
+-define(MAPNAME100959, "").
+-define(MAPNAME100960, "").
+-define(MAPNAME100961, "").
+-define(MAPNAME100962, "").
+-define(MAPNAME100963, "").
+-define(MAPNAME100964, "").
+-define(MAPNAME100965, "").
+-define(MAPNAME100966, "").
+-define(MAPNAME100967, "").
+-define(MAPNAME100968, "").
+-define(MAPNAME100969, "").
+-define(MAPNAME100970, "").
+-define(MAPNAME100971, "").
+-define(MAPNAME100972, "").
+-define(MAPNAME100973, "").
+-define(MAPNAME100974, "").
+-define(MAPNAME100975, "").
+-define(MAPNAME100976, "").
+-define(MAPNAME100977, "").
+-define(MAPNAME100978, "").
+-define(MAPNAME100979, "").
+-define(MAPNAME100980, "").
+-define(MAPNAME100981, "").
+-define(MAPNAME100982, "").
+-define(MAPNAME100983, "").
+-define(MAPNAME100984, "").
+-define(MAPNAME100985, "").
+-define(MAPNAME100986, "").
+-define(MAPNAME100987, "").
+-define(MAPNAME100988, "").
+-define(MAPNAME100989, "").
+-define(MAPNAME100990, "").
+-define(MAPNAME100991, "").
+-define(MAPNAME100992, "").
+-define(MAPNAME100993, "").
+-define(MAPNAME100994, "").
+-define(MAPNAME100995, "").
+-define(MAPNAME100996, "").
+-define(MAPNAME100997, "").
+-define(MAPNAME100998, "").
+-define(MAPNAME100999, "").
+-define(MAPNAME101000, "").
+-define(MAPNAME101001, "").
+-define(MAPNAME101002, "").
+-define(MAPNAME101003, "").
+-define(MAPNAME101004, "").
+-define(MAPNAME101005, "").
+-define(MAPNAME101006, "").
+-define(MAPNAME101007, "").
+-define(MAPNAME101008, "").
+-define(MAPNAME101009, "").
+-define(MAPNAME101010, "").
+-define(MAPNAME101011, "").
+-define(MAPNAME101012, "").
+-define(MAPNAME101013, "").
+-define(MAPNAME101014, "").
+-define(MAPNAME101015, "").
+-define(MAPNAME101016, "").
+-define(MAPNAME101017, "").
+-define(MAPNAME101018, "").
+-define(MAPNAME101019, "").
+-define(MAPNAME101020, "").
+-define(MAPNAME101021, "").
+-define(MAPNAME101022, "").
+-define(MAPNAME101023, "").
+-define(MAPNAME101024, "").
+-define(MAPNAME101025, "").
+-define(MAPNAME101026, "").
+-define(MAPNAME101027, "").
+-define(MAPNAME101028, "").
+-define(MAPNAME101029, "").
+-define(MAPNAME101030, "").
+-define(MAPNAME101031, "").
+-define(MAPNAME101032, "").
+-define(MAPNAME101033, "").
+-define(MAPNAME101034, "").
+-define(MAPNAME101035, "").
+-define(MAPNAME101036, "").
+-define(MAPNAME101037, "").
+-define(MAPNAME101038, "").
+-define(MAPNAME101039, "").
+-define(MAPNAME101040, "").
+-define(MAPNAME101041, "").
+-define(MAPNAME101042, "").
+-define(MAPNAME101043, "").
+-define(MAPNAME101044, "").
+-define(MAPNAME101045, "").
+-define(MAPNAME101046, "").
+-define(MAPNAME101047, "").
+-define(MAPNAME101048, "").
+-define(MAPNAME101049, "").
+-define(MAPNAME101050, "").
+-define(MAPNAME101051, "").
+-define(MAPNAME101052, "").
+-define(MAPNAME101053, "").
+-define(MAPNAME101054, "").
+-define(MAPNAME101055, "").
+-define(MAPNAME101056, "").
+-define(MAPNAME101057, "").
+-define(MAPNAME101058, "").
+-define(MAPNAME101059, "").
+-define(MAPNAME101060, "").
+-define(MAPNAME101061, "").
+-define(MAPNAME101062, "").
+-define(MAPNAME101063, "").
+-define(MAPNAME101064, "").
+-define(MAPNAME101065, "").
+-define(MAPNAME101066, "").
+-define(MAPNAME101067, "").
+-define(MAPNAME101068, "").
+-define(MAPNAME101069, "").
+-define(MAPNAME101070, "").
+-define(MAPNAME101071, "").
+-define(MAPNAME101072, "").
+-define(MAPNAME101073, "").
+-define(MAPNAME101074, "").
+-define(MAPNAME101075, "").
+-define(MAPNAME101076, "").
+-define(MAPNAME101077, "").
+-define(MAPNAME101078, "").
+-define(MAPNAME101079, "").
+-define(MAPNAME101080, "").
+-define(MAPNAME101081, "").
+-define(MAPNAME101082, "").
+-define(MAPNAME101083, "").
+-define(MAPNAME101084, "").
+-define(MAPNAME101085, "").
+-define(MAPNAME101086, "").
+-define(MAPNAME101087, "").
+-define(MAPNAME101088, "").
+-define(MAPNAME101089, "").
+-define(MAPNAME101090, "").
+-define(MAPNAME101091, "").
+-define(MAPNAME101092, "").
+-define(MAPNAME101093, "").
+-define(MAPNAME101094, "").
+-define(MAPNAME101095, "").
+-define(MAPNAME101096, "").
+-define(MAPNAME101097, "").
+-define(MAPNAME101098, "").
+-define(MAPNAME101099, "").
+-define(MAPNAME101100, "").
+-define(MAPNAME101101, "").
+-define(MAPNAME101102, "").
+-define(MAPNAME101103, "").
+-define(MAPNAME101104, "").
+-define(MAPNAME101105, "").
+-define(MAPNAME101106, "").
+-define(MAPNAME101107, "").
+-define(MAPNAME101108, "").
+-define(MAPNAME101109, "").
+-define(MAPNAME101110, "").
+-define(MAPNAME101111, "").
+-define(MAPNAME101112, "").
+-define(MAPNAME101113, "").
+-define(MAPNAME101114, "").
+-define(MAPNAME101115, "").
+-define(MAPNAME101116, "").
+-define(MAPNAME101117, "").
+-define(MAPNAME101118, "").
+-define(MAPNAME101119, "").
+-define(MAPNAME101120, "").
+-define(MAPNAME101121, "").
+-define(MAPNAME101122, "").
+-define(MAPNAME101123, "").
+-define(MAPNAME101124, "").
+-define(MAPNAME101125, "").
+-define(MAPNAME101126, "").
+-define(MAPNAME101127, "").
+-define(MAPNAME101128, "").
+-define(MAPNAME101129, "").
+-define(MAPNAME101130, "").
+-define(MAPNAME101131, "").
+-define(MAPNAME101132, "").
+-define(MAPNAME101133, "").
+-define(MAPNAME101134, "").
+-define(MAPNAME101135, "").
+-define(MAPNAME101136, "").
+-define(MAPNAME101137, "").
+-define(MAPNAME101138, "").
+-define(MAPNAME101139, "").
+-define(MAPNAME101140, "").
+-define(MAPNAME101141, "").
+-define(MAPNAME101142, "").
+-define(MAPNAME101143, "").
+-define(MAPNAME101144, "").
+-define(MAPNAME101145, "").
+-define(MAPNAME101146, "").
+-define(MAPNAME101147, "").
+-define(MAPNAME101148, "").
+-define(MAPNAME101149, "").
+-define(MAPNAME101150, "").
+-define(MAPNAME101151, "").
+-define(MAPNAME101152, "").
+-define(MAPNAME101153, "").
+-define(MAPNAME101154, "").
+-define(MAPNAME101155, "").
+-define(MAPNAME101156, "").
+-define(MAPNAME101157, "").
+-define(MAPNAME101158, "").
+-define(MAPNAME101159, "").
+-define(MAPNAME101160, "").
+-define(MAPNAME101161, "").
+-define(MAPNAME101162, "").
+-define(MAPNAME101163, "").
+-define(MAPNAME101164, "").
+-define(MAPNAME101165, "").
+-define(MAPNAME101166, "").
+-define(MAPNAME101167, "").
+-define(MAPNAME101168, "").
+-define(MAPNAME101169, "").
+-define(MAPNAME101170, "").
+-define(MAPNAME101171, "").
+-define(MAPNAME101172, "").
+-define(MAPNAME101173, "").
+-define(MAPNAME101174, "").
+-define(MAPNAME101175, "").
+-define(MAPNAME101176, "").
+-define(MAPNAME101177, "").
+-define(MAPNAME101178, "").
+-define(MAPNAME101179, "").
+-define(MAPNAME101180, "").
+-define(MAPNAME101181, "").
+-define(MAPNAME101182, "").
+-define(MAPNAME101183, "").
+-define(MAPNAME101184, "").
+-define(MAPNAME101185, "").
+-define(MAPNAME101186, "").
+-define(MAPNAME101187, "").
+-define(MAPNAME101188, "").
+-define(MAPNAME101189, "").
+-define(MAPNAME101190, "").
+-define(MAPNAME101191, "").
+-define(MAPNAME101192, "").
+-define(MAPNAME101193, "").
+-define(MAPNAME101194, "").
+-define(MAPNAME101195, "").
+-define(MAPNAME101196, "").
+-define(MAPNAME101197, "").
+-define(MAPNAME101198, "").
+-define(MAPNAME101199, "").
+-define(MAPNAME101200, "").
+-define(MAPNAME101201, "Turm der Ewigkeit 1201").
+-define(MAPNAME101202, "Turm der Ewigkeit 1202").
+-define(MAPNAME101203, "Turm der Ewigkeit 1203").
+-define(MAPNAME101204, "Turm der Ewigkeit 1204").
+-define(MAPNAME101205, "Turm der Ewigkeit 1205").
+-define(MAPNAME101206, "Turm der Ewigkeit 1206").
+-define(MAPNAME101207, "Turm der Ewigkeit 1207").
+-define(MAPNAME101208, "Turm der Ewigkeit 1208").
+-define(MAPNAME101209, "Turm der Ewigkeit 1209").
+-define(MAPNAME101210, "Turm der Ewigkeit 1210").
+-define(MAPNAME101211, "Turm der Ewigkeit 1211").
+-define(MAPNAME101212, "Turm der Ewigkeit 1212").
+-define(MAPNAME101213, "Turm der Ewigkeit 1213").
+-define(MAPNAME101214, "Turm der Ewigkeit 1214").
+-define(MAPNAME101215, "Turm der Ewigkeit 1215").
+-define(MAPNAME101216, "Turm der Ewigkeit 1216").
+-define(MAPNAME101217, "Turm der Ewigkeit 1217").
+-define(MAPNAME101218, "Turm der Ewigkeit 1218").
+-define(MAPNAME101219, "Turm der Ewigkeit 1219").
+-define(MAPNAME101220, "Turm der Ewigkeit 1220").
+-define(MAPNAME101221, "Turm der Ewigkeit 1221").
+-define(MAPNAME101222, "Turm der Ewigkeit 1222").
+-define(MAPNAME101223, "Turm der Ewigkeit 1223").
+-define(MAPNAME101224, "Turm der Ewigkeit 1224").
+-define(MAPNAME101225, "Turm der Ewigkeit 1225").
+-define(MAPNAME101226, "Turm der Ewigkeit 1226").
+-define(MAPNAME101227, "Turm der Ewigkeit 1227").
+-define(MAPNAME101228, "Turm der Ewigkeit 1228").
+-define(MAPNAME101229, "Turm der Ewigkeit 1229").
+-define(MAPNAME101230, "Turm der Ewigkeit 1230").
+-define(MAPNAME101231, "Turm der Ewigkeit 1231").
+-define(MAPNAME101232, "Turm der Ewigkeit 1232").
+-define(MAPNAME101233, "Turm der Ewigkeit 1233").
+-define(MAPNAME101234, "Turm der Ewigkeit 1234").
+-define(MAPNAME101235, "Turm der Ewigkeit 1235").
+-define(MAPNAME101236, "Turm der Ewigkeit 1236").
+-define(MAPNAME101237, "Turm der Ewigkeit 1237").
+-define(MAPNAME101238, "Turm der Ewigkeit 1238").
+-define(MAPNAME101239, "Turm der Ewigkeit 1239").
+-define(MAPNAME101240, "Turm der Ewigkeit 1240").
+-define(MAPNAME101241, "Turm der Ewigkeit 1241").
+-define(MAPNAME101242, "Turm der Ewigkeit 1242").
+-define(MAPNAME101243, "Turm der Ewigkeit 1243").
+-define(MAPNAME101244, "Turm der Ewigkeit 1244").
+-define(MAPNAME101245, "Turm der Ewigkeit 1245").
+-define(MAPNAME101246, "Turm der Ewigkeit 1246").
+-define(MAPNAME101247, "Turm der Ewigkeit 1247").
+-define(MAPNAME101248, "Turm der Ewigkeit 1248").
+-define(MAPNAME101249, "Turm der Ewigkeit 1249").
+-define(MAPNAME101250, "Turm der Ewigkeit 1250").
+-define(MAPNAME101251, "Turm der Ewigkeit 1251").
+-define(MAPNAME101252, "Turm der Ewigkeit 1252").
+-define(MAPNAME101253, "Turm der Ewigkeit 1253").
+-define(MAPNAME101254, "Turm der Ewigkeit 1254").
+-define(MAPNAME101255, "Turm der Ewigkeit 1255").
+-define(MAPNAME101256, "Turm der Ewigkeit 1256").
+-define(MAPNAME101257, "Turm der Ewigkeit 1257").
+-define(MAPNAME101258, "Turm der Ewigkeit 1258").
+-define(MAPNAME101259, "Turm der Ewigkeit 1259").
+-define(MAPNAME101260, "Turm der Ewigkeit 1260").
+-define(MAPNAME101261, "Turm der Ewigkeit 1261").
+-define(MAPNAME101262, "Turm der Ewigkeit 1262").
+-define(MAPNAME101263, "Turm der Ewigkeit 1263").
+-define(MAPNAME101264, "Turm der Ewigkeit 1264").
+-define(MAPNAME101265, "Turm der Ewigkeit 1265").
+-define(MAPNAME101266, "Turm der Ewigkeit 1266").
+-define(MAPNAME101267, "Turm der Ewigkeit 1267").
+-define(MAPNAME101268, "Turm der Ewigkeit 1268").
+-define(MAPNAME101269, "Turm der Ewigkeit 1269").
+-define(MAPNAME101270, "Turm der Ewigkeit 1270").
+-define(MAPNAME101271, "Turm der Ewigkeit 1271").
+-define(MAPNAME101272, "Turm der Ewigkeit 1272").
+-define(MAPNAME101273, "Turm der Ewigkeit 1273").
+-define(MAPNAME101274, "Turm der Ewigkeit 1274").
+-define(MAPNAME101275, "Turm der Ewigkeit 1275").
+-define(MAPNAME101276, "Turm der Ewigkeit 1276").
+-define(MAPNAME101277, "Turm der Ewigkeit 1277").
+-define(MAPNAME101278, "Turm der Ewigkeit 1278").
+-define(MAPNAME101279, "Turm der Ewigkeit 1279").
+-define(MAPNAME101280, "Turm der Ewigkeit 1280").
+-define(MAPNAME101281, "Turm der Ewigkeit 1281").
+-define(MAPNAME101282, "Turm der Ewigkeit 1282").
+-define(MAPNAME101283, "Turm der Ewigkeit 1283").
+-define(MAPNAME101284, "Turm der Ewigkeit 1284").
+-define(MAPNAME101285, "Turm der Ewigkeit 1285").
+-define(MAPNAME101286, "Turm der Ewigkeit 1286").
+-define(MAPNAME101287, "Turm der Ewigkeit 1287").
+-define(MAPNAME101288, "Turm der Ewigkeit 1288").
+-define(MAPNAME101289, "Turm der Ewigkeit 1289").
+-define(MAPNAME101290, "Turm der Ewigkeit 1290").
+-define(MAPNAME101291, "Turm der Ewigkeit 1291").
+-define(MAPNAME101292, "Turm der Ewigkeit 1292").
+-define(MAPNAME101293, "Turm der Ewigkeit 1293").
+-define(MAPNAME101294, "Turm der Ewigkeit 1294").
+-define(MAPNAME101295, "Turm der Ewigkeit 1295").
+-define(MAPNAME101296, "Turm der Ewigkeit 1296").
+-define(MAPNAME101297, "Turm der Ewigkeit 1297").
+-define(MAPNAME101298, "Turm der Ewigkeit 1298").
+-define(MAPNAME101299, "Turm der Ewigkeit 1299").
+-define(MAPNAME101300, "Turm der Ewigkeit 1300").
+-define(MAPNAME101301, "Turm der Ewigkeit 1301").
+-define(MAPNAME101302, "Turm der Ewigkeit 1302").
+-define(MAPNAME101303, "Turm der Ewigkeit 1303").
+-define(MAPNAME101304, "Turm der Ewigkeit 1304").
+-define(MAPNAME101305, "Turm der Ewigkeit 1305").
+-define(MAPNAME101306, "Turm der Ewigkeit 1306").
+-define(MAPNAME101307, "Turm der Ewigkeit 1307").
+-define(MAPNAME101308, "Turm der Ewigkeit 1308").
+-define(MAPNAME101309, "Turm der Ewigkeit 1309").
+-define(MAPNAME101310, "Turm der Ewigkeit 1310").
+-define(MAPNAME101311, "Turm der Ewigkeit 1311").
+-define(MAPNAME101312, "Turm der Ewigkeit 1312").
+-define(MAPNAME101313, "Turm der Ewigkeit 1313").
+-define(MAPNAME101314, "Turm der Ewigkeit 1314").
+-define(MAPNAME101315, "Turm der Ewigkeit 1315").
+-define(MAPNAME101316, "Turm der Ewigkeit 1316").
+-define(MAPNAME101317, "Turm der Ewigkeit 1317").
+-define(MAPNAME101318, "Turm der Ewigkeit 1318").
+-define(MAPNAME101319, "Turm der Ewigkeit 1319").
+-define(MAPNAME101320, "Turm der Ewigkeit 1320").
+-define(MAPNAME101321, "Turm der Ewigkeit 1321").
+-define(MAPNAME101322, "Turm der Ewigkeit 1322").
+-define(MAPNAME101323, "Turm der Ewigkeit 1323").
+-define(MAPNAME101324, "Turm der Ewigkeit 1324").
+-define(MAPNAME101325, "Turm der Ewigkeit 1325").
+-define(MAPNAME101326, "Turm der Ewigkeit 1326").
+-define(MAPNAME101327, "Turm der Ewigkeit 1327").
+-define(MAPNAME101328, "Turm der Ewigkeit 1328").
+-define(MAPNAME101329, "Turm der Ewigkeit 1329").
+-define(MAPNAME101330, "Turm der Ewigkeit 1330").
+-define(MAPNAME101331, "Turm der Ewigkeit 1331").
+-define(MAPNAME101332, "Turm der Ewigkeit 1332").
+-define(MAPNAME101333, "Turm der Ewigkeit 1333").
+-define(MAPNAME101334, "Turm der Ewigkeit 1334").
+-define(MAPNAME101335, "Turm der Ewigkeit 1335").
+-define(MAPNAME101336, "Turm der Ewigkeit 1336").
+-define(MAPNAME101337, "Turm der Ewigkeit 1337").
+-define(MAPNAME101338, "Turm der Ewigkeit 1338").
+-define(MAPNAME101339, "Turm der Ewigkeit 1339").
+-define(MAPNAME101340, "Turm der Ewigkeit 1340").
+-define(MAPNAME101341, "Turm der Ewigkeit 1341").
+-define(MAPNAME101342, "Turm der Ewigkeit 1342").
+-define(MAPNAME101343, "Turm der Ewigkeit 1343").
+-define(MAPNAME101344, "Turm der Ewigkeit 1344").
+-define(MAPNAME101345, "Turm der Ewigkeit 1345").
+-define(MAPNAME101346, "Turm der Ewigkeit 1346").
+-define(MAPNAME101347, "Turm der Ewigkeit 1347").
+-define(MAPNAME101348, "Turm der Ewigkeit 1348").
+-define(MAPNAME101349, "Turm der Ewigkeit 1349").
+-define(MAPNAME101350, "Turm der Ewigkeit 1350").
+-define(MAPNAME101351, "Turm der Ewigkeit 1351").
+-define(MAPNAME101352, "Turm der Ewigkeit 1352").
+-define(MAPNAME101353, "Turm der Ewigkeit 1353").
+-define(MAPNAME101354, "Turm der Ewigkeit 1354").
+-define(MAPNAME101355, "Turm der Ewigkeit 1355").
+-define(MAPNAME101356, "Turm der Ewigkeit 1356").
+-define(MAPNAME101357, "Turm der Ewigkeit 1357").
+-define(MAPNAME101358, "Turm der Ewigkeit 1358").
+-define(MAPNAME101359, "Turm der Ewigkeit 1359").
+-define(MAPNAME101360, "Turm der Ewigkeit 1360").
+-define(MAPNAME101361, "Turm der Ewigkeit 1361").
+-define(MAPNAME101362, "Turm der Ewigkeit 1362").
+-define(MAPNAME101363, "Turm der Ewigkeit 1363").
+-define(MAPNAME101364, "Turm der Ewigkeit 1364").
+-define(MAPNAME101365, "Turm der Ewigkeit 1365").
+-define(MAPNAME101366, "Turm der Ewigkeit 1366").
+-define(MAPNAME101367, "Turm der Ewigkeit 1367").
+-define(MAPNAME101368, "Turm der Ewigkeit 1368").
+-define(MAPNAME101369, "Turm der Ewigkeit 1369").
+-define(MAPNAME101370, "Turm der Ewigkeit 1370").
+-define(MAPNAME101371, "Turm der Ewigkeit 1371").
+-define(MAPNAME101372, "Turm der Ewigkeit 1372").
+-define(MAPNAME101373, "Turm der Ewigkeit 1373").
+-define(MAPNAME101374, "Turm der Ewigkeit 1374").
+-define(MAPNAME101375, "Turm der Ewigkeit 1375").
+-define(MAPNAME101376, "Turm der Ewigkeit 1376").
+-define(MAPNAME101377, "Turm der Ewigkeit 1377").
+-define(MAPNAME101378, "Turm der Ewigkeit 1378").
+-define(MAPNAME101379, "Turm der Ewigkeit 1379").
+-define(MAPNAME101380, "Turm der Ewigkeit 1380").
+-define(MAPNAME101381, "Turm der Ewigkeit 1381").
+-define(MAPNAME101382, "Turm der Ewigkeit 1382").
+-define(MAPNAME101383, "Turm der Ewigkeit 1383").
+-define(MAPNAME101384, "Turm der Ewigkeit 1384").
+-define(MAPNAME101385, "Turm der Ewigkeit 1385").
+-define(MAPNAME101386, "Turm der Ewigkeit 1386").
+-define(MAPNAME101387, "Turm der Ewigkeit 1387").
+-define(MAPNAME101388, "Turm der Ewigkeit 1388").
+-define(MAPNAME101389, "Turm der Ewigkeit 1389").
+-define(MAPNAME101390, "Turm der Ewigkeit 1390").
+-define(MAPNAME101391, "Turm der Ewigkeit 1391").
+-define(MAPNAME101392, "Turm der Ewigkeit 1392").
+-define(MAPNAME101393, "Turm der Ewigkeit 1393").
+-define(MAPNAME101394, "Turm der Ewigkeit 1394").
+-define(MAPNAME101395, "Turm der Ewigkeit 1395").
+-define(MAPNAME101396, "Turm der Ewigkeit 1396").
+-define(MAPNAME101397, "Turm der Ewigkeit 1397").
+-define(MAPNAME101398, "Turm der Ewigkeit 1398").
+-define(MAPNAME101399, "Turm der Ewigkeit 1399").
+-define(MAPNAME101400, "Turm der Ewigkeit 1400").
+-define(MAPNAME101401, "Turm der Ewigkeit 1401").
+-define(MAPNAME101402, "Turm der Ewigkeit 1402").
+-define(MAPNAME101403, "Turm der Ewigkeit 1403").
+-define(MAPNAME101404, "Turm der Ewigkeit 1404").
+-define(MAPNAME101405, "Turm der Ewigkeit 1405").
+-define(MAPNAME101406, "Turm der Ewigkeit 1406").
+-define(MAPNAME101407, "Turm der Ewigkeit 1407").
+-define(MAPNAME101408, "Turm der Ewigkeit 1408").
+-define(MAPNAME101409, "Turm der Ewigkeit 1409").
+-define(MAPNAME101410, "Turm der Ewigkeit 1410").
+-define(MAPNAME101411, "Turm der Ewigkeit 1411").
+-define(MAPNAME101412, "Turm der Ewigkeit 1412").
+-define(MAPNAME101413, "Turm der Ewigkeit 1413").
+-define(MAPNAME101414, "Turm der Ewigkeit 1414").
+-define(MAPNAME101415, "Turm der Ewigkeit 1415").
+-define(MAPNAME101416, "Turm der Ewigkeit 1416").
+-define(MAPNAME101417, "Turm der Ewigkeit 1417").
+-define(MAPNAME101418, "Turm der Ewigkeit 1418").
+-define(MAPNAME101419, "Turm der Ewigkeit 1419").
+-define(MAPNAME101420, "Turm der Ewigkeit 1420").
+-define(MAPNAME101421, "Turm der Ewigkeit 1421").
+-define(MAPNAME101422, "Turm der Ewigkeit 1422").
+-define(MAPNAME101423, "Turm der Ewigkeit 1423").
+-define(MAPNAME101424, "Turm der Ewigkeit 1424").
+-define(MAPNAME101425, "Turm der Ewigkeit 1425").
+-define(MAPNAME101426, "Turm der Ewigkeit 1426").
+-define(MAPNAME101427, "Turm der Ewigkeit 1427").
+-define(MAPNAME101428, "Turm der Ewigkeit 1428").
+-define(MAPNAME101429, "Turm der Ewigkeit 1429").
+-define(MAPNAME101430, "Turm der Ewigkeit 1430").
+-define(MAPNAME101431, "Turm der Ewigkeit 1431").
+-define(MAPNAME101432, "Turm der Ewigkeit 1432").
+-define(MAPNAME101433, "Turm der Ewigkeit 1433").
+-define(MAPNAME101434, "Turm der Ewigkeit 1434").
+-define(MAPNAME101435, "Turm der Ewigkeit 1435").
+-define(MAPNAME101436, "Turm der Ewigkeit 1436").
+-define(MAPNAME101437, "Turm der Ewigkeit 1437").
+-define(MAPNAME101438, "Turm der Ewigkeit 1438").
+-define(MAPNAME101439, "Turm der Ewigkeit 1439").
+-define(MAPNAME101440, "Turm der Ewigkeit 1440").
+-define(MAPNAME101441, "Turm der Ewigkeit 1441").
+-define(MAPNAME101442, "Turm der Ewigkeit 1442").
+-define(MAPNAME101443, "Turm der Ewigkeit 1443").
+-define(MAPNAME101444, "Turm der Ewigkeit 1444").
+-define(MAPNAME101445, "Turm der Ewigkeit 1445").
+-define(MAPNAME101446, "Turm der Ewigkeit 1446").
+-define(MAPNAME101447, "Turm der Ewigkeit 1447").
+-define(MAPNAME101448, "Turm der Ewigkeit 1448").
+-define(MAPNAME101449, "Turm der Ewigkeit 1449").
+-define(MAPNAME101450, "Turm der Ewigkeit 1450").
+-define(MAPNAME101451, "Turm der Ewigkeit 1451").
+-define(MAPNAME101452, "Turm der Ewigkeit 1452").
+-define(MAPNAME101453, "Turm der Ewigkeit 1453").
+-define(MAPNAME101454, "Turm der Ewigkeit 1454").
+-define(MAPNAME101455, "Turm der Ewigkeit 1455").
+-define(MAPNAME101456, "Turm der Ewigkeit 1456").
+-define(MAPNAME101457, "Turm der Ewigkeit 1457").
+-define(MAPNAME101458, "Turm der Ewigkeit 1458").
+-define(MAPNAME101459, "Turm der Ewigkeit 1459").
+-define(MAPNAME101460, "Turm der Ewigkeit 1460").
+-define(MAPNAME101461, "Turm der Ewigkeit 1461").
+-define(MAPNAME101462, "Turm der Ewigkeit 1462").
+-define(MAPNAME101463, "Turm der Ewigkeit 1463").
+-define(MAPNAME101464, "Turm der Ewigkeit 1464").
+-define(MAPNAME101465, "Turm der Ewigkeit 1465").
+-define(MAPNAME101466, "Turm der Ewigkeit 1466").
+-define(MAPNAME101467, "Turm der Ewigkeit 1467").
+-define(MAPNAME101468, "Turm der Ewigkeit 1468").
+-define(MAPNAME101469, "Turm der Ewigkeit 1469").
+-define(MAPNAME101470, "Turm der Ewigkeit 1470").
+-define(MAPNAME101471, "Turm der Ewigkeit 1471").
+-define(MAPNAME101472, "Turm der Ewigkeit 1472").
+-define(MAPNAME101473, "Turm der Ewigkeit 1473").
+-define(MAPNAME101474, "Turm der Ewigkeit 1474").
+-define(MAPNAME101475, "Turm der Ewigkeit 1475").
+-define(MAPNAME101476, "Turm der Ewigkeit 1476").
+-define(MAPNAME101477, "Turm der Ewigkeit 1477").
+-define(MAPNAME101478, "Turm der Ewigkeit 1478").
+-define(MAPNAME101479, "Turm der Ewigkeit 1479").
+-define(MAPNAME101480, "Turm der Ewigkeit 1480").
+-define(MAPNAME101481, "Turm der Ewigkeit 1481").
+-define(MAPNAME101482, "Turm der Ewigkeit 1482").
+-define(MAPNAME101483, "Turm der Ewigkeit 1483").
+-define(MAPNAME101484, "Turm der Ewigkeit 1484").
+-define(MAPNAME101485, "Turm der Ewigkeit 1485").
+-define(MAPNAME101486, "Turm der Ewigkeit 1486").
+-define(MAPNAME101487, "Turm der Ewigkeit 1487").
+-define(MAPNAME101488, "Turm der Ewigkeit 1488").
+-define(MAPNAME101489, "Turm der Ewigkeit 1489").
+-define(MAPNAME101490, "Turm der Ewigkeit 1490").
+-define(MAPNAME101491, "Turm der Ewigkeit 1491").
+-define(MAPNAME101492, "Turm der Ewigkeit 1492").
+-define(MAPNAME101493, "Turm der Ewigkeit 1493").
+-define(MAPNAME101494, "Turm der Ewigkeit 1494").
+-define(MAPNAME101495, "Turm der Ewigkeit 1495").
+-define(MAPNAME101496, "Turm der Ewigkeit 1496").
+-define(MAPNAME101497, "Turm der Ewigkeit 1497").
+-define(MAPNAME101498, "Turm der Ewigkeit 1498").
+-define(MAPNAME101499, "Turm der Ewigkeit 1499").
+-define(MAPNAME101500, "Turm der Ewigkeit 1500").
+-define(MAPNAME101501, "Turm der Ewigkeit 1501").
+-define(MAPNAME101502, "Turm der Ewigkeit 1502").
+-define(MAPNAME101503, "Turm der Ewigkeit 1503").
+-define(MAPNAME101504, "Turm der Ewigkeit 1504").
+-define(MAPNAME101505, "Turm der Ewigkeit 1505").
+-define(MAPNAME101506, "Turm der Ewigkeit 1506").
+-define(MAPNAME101507, "Turm der Ewigkeit 1507").
+-define(MAPNAME101508, "Turm der Ewigkeit 1508").
+-define(MAPNAME101509, "Turm der Ewigkeit 1509").
+-define(MAPNAME101510, "Turm der Ewigkeit 1510").
+-define(MAPNAME101511, "Turm der Ewigkeit 1511").
+-define(MAPNAME101512, "Turm der Ewigkeit 1512").
+-define(MAPNAME101513, "Turm der Ewigkeit 1513").
+-define(MAPNAME101514, "Turm der Ewigkeit 1514").
+-define(MAPNAME101515, "Turm der Ewigkeit 1515").
+-define(MAPNAME101516, "Turm der Ewigkeit 1516").
+-define(MAPNAME101517, "Turm der Ewigkeit 1517").
+-define(MAPNAME101518, "Turm der Ewigkeit 1518").
+-define(MAPNAME101519, "Turm der Ewigkeit 1519").
+-define(MAPNAME101520, "Turm der Ewigkeit 1520").
+-define(MAPNAME101521, "Turm der Ewigkeit 1521").
+-define(MAPNAME101522, "Turm der Ewigkeit 1522").
+-define(MAPNAME101523, "Turm der Ewigkeit 1523").
+-define(MAPNAME101524, "Turm der Ewigkeit 1524").
+-define(MAPNAME101525, "Turm der Ewigkeit 1525").
+-define(MAPNAME101526, "Turm der Ewigkeit 1526").
+-define(MAPNAME101527, "Turm der Ewigkeit 1527").
+-define(MAPNAME101528, "Turm der Ewigkeit 1528").
+-define(MAPNAME101529, "Turm der Ewigkeit 1529").
+-define(MAPNAME101530, "Turm der Ewigkeit 1530").
+-define(MAPNAME101531, "Turm der Ewigkeit 1531").
+-define(MAPNAME101532, "Turm der Ewigkeit 1532").
+-define(MAPNAME101533, "Turm der Ewigkeit 1533").
+-define(MAPNAME101534, "Turm der Ewigkeit 1534").
+-define(MAPNAME101535, "Turm der Ewigkeit 1535").
+-define(MAPNAME101536, "Turm der Ewigkeit 1536").
+-define(MAPNAME101537, "Turm der Ewigkeit 1537").
+-define(MAPNAME101538, "Turm der Ewigkeit 1538").
+-define(MAPNAME101539, "Turm der Ewigkeit 1539").
+-define(MAPNAME101540, "Turm der Ewigkeit 1540").
+-define(MAPNAME101541, "Turm der Ewigkeit 1541").
+-define(MAPNAME101542, "Turm der Ewigkeit 1542").
+-define(MAPNAME101543, "Turm der Ewigkeit 1543").
+-define(MAPNAME101544, "Turm der Ewigkeit 1544").
+-define(MAPNAME101545, "Turm der Ewigkeit 1545").
+-define(MAPNAME101546, "Turm der Ewigkeit 1546").
+-define(MAPNAME101547, "Turm der Ewigkeit 1547").
+-define(MAPNAME101548, "Turm der Ewigkeit 1548").
+-define(MAPNAME101549, "Turm der Ewigkeit 1549").
+-define(MAPNAME101550, "Turm der Ewigkeit 1550").
+-define(MAPNAME101551, "Turm der Ewigkeit 1551").
+-define(MAPNAME101552, "Turm der Ewigkeit 1552").
+-define(MAPNAME101553, "Turm der Ewigkeit 1553").
+-define(MAPNAME101554, "Turm der Ewigkeit 1554").
+-define(MAPNAME101555, "Turm der Ewigkeit 1555").
+-define(MAPNAME101556, "Turm der Ewigkeit 1556").
+-define(MAPNAME101557, "Turm der Ewigkeit 1557").
+-define(MAPNAME101558, "Turm der Ewigkeit 1558").
+-define(MAPNAME101559, "Turm der Ewigkeit 1559").
+-define(MAPNAME101560, "Turm der Ewigkeit 1560").
+-define(MAPNAME101561, "Turm der Ewigkeit 1561").
+-define(MAPNAME101562, "Turm der Ewigkeit 1562").
+-define(MAPNAME101563, "Turm der Ewigkeit 1563").
+-define(MAPNAME101564, "Turm der Ewigkeit 1564").
+-define(MAPNAME101565, "Turm der Ewigkeit 1565").
+-define(MAPNAME101566, "Turm der Ewigkeit 1566").
+-define(MAPNAME101567, "Turm der Ewigkeit 1567").
+-define(MAPNAME101568, "Turm der Ewigkeit 1568").
+-define(MAPNAME101569, "Turm der Ewigkeit 1569").
+-define(MAPNAME101570, "Turm der Ewigkeit 1570").
+-define(MAPNAME101571, "Turm der Ewigkeit 1571").
+-define(MAPNAME101572, "Turm der Ewigkeit 1572").
+-define(MAPNAME101573, "Turm der Ewigkeit 1573").
+-define(MAPNAME101574, "Turm der Ewigkeit 1574").
+-define(MAPNAME101575, "Turm der Ewigkeit 1575").
+-define(MAPNAME101576, "Turm der Ewigkeit 1576").
+-define(MAPNAME101577, "Turm der Ewigkeit 1577").
+-define(MAPNAME101578, "Turm der Ewigkeit 1578").
+-define(MAPNAME101579, "Turm der Ewigkeit 1579").
+-define(MAPNAME101580, "Turm der Ewigkeit 1580").
+-define(MAPNAME101581, "Turm der Ewigkeit 1581").
+-define(MAPNAME101582, "Turm der Ewigkeit 1582").
+-define(MAPNAME101583, "Turm der Ewigkeit 1583").
+-define(MAPNAME101584, "Turm der Ewigkeit 1584").
+-define(MAPNAME101585, "Turm der Ewigkeit 1585").
+-define(MAPNAME101586, "Turm der Ewigkeit 1586").
+-define(MAPNAME101587, "Turm der Ewigkeit 1587").
+-define(MAPNAME101588, "Turm der Ewigkeit 1588").
+-define(MAPNAME101589, "Turm der Ewigkeit 1589").
+-define(MAPNAME101590, "Turm der Ewigkeit 1590").
+-define(MAPNAME101591, "Turm der Ewigkeit 1591").
+-define(MAPNAME101592, "Turm der Ewigkeit 1592").
+-define(MAPNAME101593, "Turm der Ewigkeit 1593").
+-define(MAPNAME101594, "Turm der Ewigkeit 1594").
+-define(MAPNAME101595, "Turm der Ewigkeit 1595").
+-define(MAPNAME101596, "Turm der Ewigkeit 1596").
+-define(MAPNAME101597, "Turm der Ewigkeit 1597").
+-define(MAPNAME101598, "Turm der Ewigkeit 1598").
+-define(MAPNAME101599, "Turm der Ewigkeit 1599").
+-define(MAPNAME101600, "Turm der Ewigkeit 1600").
+-define(MAPNAME101601, "Turm der Ewigkeit 1601").
+-define(MAPNAME101602, "Turm der Ewigkeit 1602").
+-define(MAPNAME101603, "Turm der Ewigkeit 1603").
+-define(MAPNAME101604, "Turm der Ewigkeit 1604").
+-define(MAPNAME101605, "Turm der Ewigkeit 1605").
+-define(MAPNAME101606, "Turm der Ewigkeit 1606").
+-define(MAPNAME101607, "Turm der Ewigkeit 1607").
+-define(MAPNAME101608, "Turm der Ewigkeit 1608").
+-define(MAPNAME101609, "Turm der Ewigkeit 1609").
+-define(MAPNAME101610, "Turm der Ewigkeit 1610").
+-define(MAPNAME101611, "Turm der Ewigkeit 1611").
+-define(MAPNAME101612, "Turm der Ewigkeit 1612").
+-define(MAPNAME101613, "Turm der Ewigkeit 1613").
+-define(MAPNAME101614, "Turm der Ewigkeit 1614").
+-define(MAPNAME101615, "Turm der Ewigkeit 1615").
+-define(MAPNAME101616, "Turm der Ewigkeit 1616").
+-define(MAPNAME101617, "Turm der Ewigkeit 1617").
+-define(MAPNAME101618, "Turm der Ewigkeit 1618").
+-define(MAPNAME101619, "Turm der Ewigkeit 1619").
+-define(MAPNAME101620, "Turm der Ewigkeit 1620").
+-define(MAPNAME101621, "Turm der Ewigkeit 1621").
+-define(MAPNAME101622, "Turm der Ewigkeit 1622").
+-define(MAPNAME101623, "Turm der Ewigkeit 1623").
+-define(MAPNAME101624, "Turm der Ewigkeit 1624").
+-define(MAPNAME101625, "Turm der Ewigkeit 1625").
+-define(MAPNAME101626, "Turm der Ewigkeit 1626").
+-define(MAPNAME101627, "Turm der Ewigkeit 1627").
+-define(MAPNAME101628, "Turm der Ewigkeit 1628").
+-define(MAPNAME101629, "Turm der Ewigkeit 1629").
+-define(MAPNAME101630, "Turm der Ewigkeit 1630").
+-define(MAPNAME101631, "Turm der Ewigkeit 1631").
+-define(MAPNAME101632, "Turm der Ewigkeit 1632").
+-define(MAPNAME101633, "Turm der Ewigkeit 1633").
+-define(MAPNAME101634, "Turm der Ewigkeit 1634").
+-define(MAPNAME101635, "Turm der Ewigkeit 1635").
+-define(MAPNAME101636, "Turm der Ewigkeit 1636").
+-define(MAPNAME101637, "Turm der Ewigkeit 1637").
+-define(MAPNAME101638, "Turm der Ewigkeit 1638").
+-define(MAPNAME101639, "Turm der Ewigkeit 1639").
+-define(MAPNAME101640, "Turm der Ewigkeit 1640").
+-define(MAPNAME101641, "Turm der Ewigkeit 1641").
+-define(MAPNAME101642, "Turm der Ewigkeit 1642").
+-define(MAPNAME101643, "Turm der Ewigkeit 1643").
+-define(MAPNAME101644, "Turm der Ewigkeit 1644").
+-define(MAPNAME101645, "Turm der Ewigkeit 1645").
+-define(MAPNAME101646, "Turm der Ewigkeit 1646").
+-define(MAPNAME101647, "Turm der Ewigkeit 1647").
+-define(MAPNAME101648, "Turm der Ewigkeit 1648").
+-define(MAPNAME101649, "Turm der Ewigkeit 1649").
+-define(MAPNAME101650, "Turm der Ewigkeit 1650").
+-define(MAPNAME101651, "Turm der Ewigkeit 1651").
+-define(MAPNAME101652, "Turm der Ewigkeit 1652").
+-define(MAPNAME101653, "Turm der Ewigkeit 1653").
+-define(MAPNAME101654, "Turm der Ewigkeit 1654").
+-define(MAPNAME101655, "Turm der Ewigkeit 1655").
+-define(MAPNAME101656, "Turm der Ewigkeit 1656").
+-define(MAPNAME101657, "Turm der Ewigkeit 1657").
+-define(MAPNAME101658, "Turm der Ewigkeit 1658").
+-define(MAPNAME101659, "Turm der Ewigkeit 1659").
+-define(MAPNAME101660, "Turm der Ewigkeit 1660").
+-define(MAPNAME101661, "Turm der Ewigkeit 1661").
+-define(MAPNAME101662, "Turm der Ewigkeit 1662").
+-define(MAPNAME101663, "Turm der Ewigkeit 1663").
+-define(MAPNAME101664, "Turm der Ewigkeit 1664").
+-define(MAPNAME101665, "Turm der Ewigkeit 1665").
+-define(MAPNAME101666, "Turm der Ewigkeit 1666").
+-define(MAPNAME101667, "Turm der Ewigkeit 1667").
+-define(MAPNAME101668, "Turm der Ewigkeit 1668").
+-define(MAPNAME101669, "Turm der Ewigkeit 1669").
+-define(MAPNAME101670, "Turm der Ewigkeit 1670").
+-define(MAPNAME101671, "Turm der Ewigkeit 1671").
+-define(MAPNAME101672, "Turm der Ewigkeit 1672").
+-define(MAPNAME101673, "Turm der Ewigkeit 1673").
+-define(MAPNAME101674, "Turm der Ewigkeit 1674").
+-define(MAPNAME101675, "Turm der Ewigkeit 1675").
+-define(MAPNAME101676, "Turm der Ewigkeit 1676").
+-define(MAPNAME101677, "Turm der Ewigkeit 1677").
+-define(MAPNAME101678, "Turm der Ewigkeit 1678").
+-define(MAPNAME101679, "Turm der Ewigkeit 1679").
+-define(MAPNAME101680, "Turm der Ewigkeit 1680").
+-define(MAPNAME101681, "Turm der Ewigkeit 1681").
+-define(MAPNAME101682, "Turm der Ewigkeit 1682").
+-define(MAPNAME101683, "Turm der Ewigkeit 1683").
+-define(MAPNAME101684, "Turm der Ewigkeit 1684").
+-define(MAPNAME101685, "Turm der Ewigkeit 1685").
+-define(MAPNAME101686, "Turm der Ewigkeit 1686").
+-define(MAPNAME101687, "Turm der Ewigkeit 1687").
+-define(MAPNAME101688, "Turm der Ewigkeit 1688").
+-define(MAPNAME101689, "Turm der Ewigkeit 1689").
+-define(MAPNAME101690, "Turm der Ewigkeit 1690").
+-define(MAPNAME101691, "Turm der Ewigkeit 1691").
+-define(MAPNAME101692, "Turm der Ewigkeit 1692").
+-define(MAPNAME101693, "Turm der Ewigkeit 1693").
+-define(MAPNAME101694, "Turm der Ewigkeit 1694").
+-define(MAPNAME101695, "Turm der Ewigkeit 1695").
+-define(MAPNAME101696, "Turm der Ewigkeit 1696").
+-define(MAPNAME101697, "Turm der Ewigkeit 1697").
+-define(MAPNAME101698, "Turm der Ewigkeit 1698").
+-define(MAPNAME101699, "Turm der Ewigkeit 1699").
+-define(MAPNAME101700, "Turm der Ewigkeit 1700").
+-define(MAPNAME101701, "Turm der Ewigkeit 1701").
+-define(MAPNAME101702, "Turm der Ewigkeit 1702").
+-define(MAPNAME101703, "Turm der Ewigkeit 1703").
+-define(MAPNAME101704, "Turm der Ewigkeit 1704").
+-define(MAPNAME101705, "Turm der Ewigkeit 1705").
+-define(MAPNAME101706, "Turm der Ewigkeit 1706").
+-define(MAPNAME101707, "Turm der Ewigkeit 1707").
+-define(MAPNAME101708, "Turm der Ewigkeit 1708").
+-define(MAPNAME101709, "Turm der Ewigkeit 1709").
+-define(MAPNAME101710, "Turm der Ewigkeit 1710").
+-define(MAPNAME101711, "Turm der Ewigkeit 1711").
+-define(MAPNAME101712, "Turm der Ewigkeit 1712").
+-define(MAPNAME101713, "Turm der Ewigkeit 1713").
+-define(MAPNAME101714, "Turm der Ewigkeit 1714").
+-define(MAPNAME101715, "Turm der Ewigkeit 1715").
+-define(MAPNAME101716, "Turm der Ewigkeit 1716").
+-define(MAPNAME101717, "Turm der Ewigkeit 1717").
+-define(MAPNAME101718, "Turm der Ewigkeit 1718").
+-define(MAPNAME101719, "Turm der Ewigkeit 1719").
+-define(MAPNAME101720, "Turm der Ewigkeit 1720").
+-define(MAPNAME101721, "Turm der Ewigkeit 1721").
+-define(MAPNAME101722, "Turm der Ewigkeit 1722").
+-define(MAPNAME101723, "Turm der Ewigkeit 1723").
+-define(MAPNAME101724, "Turm der Ewigkeit 1724").
+-define(MAPNAME101725, "Turm der Ewigkeit 1725").
+-define(MAPNAME101726, "Turm der Ewigkeit 1726").
+-define(MAPNAME101727, "Turm der Ewigkeit 1727").
+-define(MAPNAME101728, "Turm der Ewigkeit 1728").
+-define(MAPNAME101729, "Turm der Ewigkeit 1729").
+-define(MAPNAME101730, "Turm der Ewigkeit 1730").
+-define(MAPNAME101731, "Turm der Ewigkeit 1731").
+-define(MAPNAME101732, "Turm der Ewigkeit 1732").
+-define(MAPNAME101733, "Turm der Ewigkeit 1733").
+-define(MAPNAME101734, "Turm der Ewigkeit 1734").
+-define(MAPNAME101735, "Turm der Ewigkeit 1735").
+-define(MAPNAME101736, "Turm der Ewigkeit 1736").
+-define(MAPNAME101737, "Turm der Ewigkeit 1737").
+-define(MAPNAME101738, "Turm der Ewigkeit 1738").
+-define(MAPNAME101739, "Turm der Ewigkeit 1739").
+-define(MAPNAME101740, "Turm der Ewigkeit 1740").
+-define(MAPNAME101741, "Turm der Ewigkeit 1741").
+-define(MAPNAME101742, "Turm der Ewigkeit 1742").
+-define(MAPNAME101743, "Turm der Ewigkeit 1743").
+-define(MAPNAME101744, "Turm der Ewigkeit 1744").
+-define(MAPNAME101745, "Turm der Ewigkeit 1745").
+-define(MAPNAME101746, "Turm der Ewigkeit 1746").
+-define(MAPNAME101747, "Turm der Ewigkeit 1747").
+-define(MAPNAME101748, "Turm der Ewigkeit 1748").
+-define(MAPNAME101749, "Turm der Ewigkeit 1749").
+-define(MAPNAME101750, "Turm der Ewigkeit 1750").
+-define(MAPNAME101751, "Turm der Ewigkeit 1751").
+-define(MAPNAME101752, "Turm der Ewigkeit 1752").
+-define(MAPNAME101753, "Turm der Ewigkeit 1753").
+-define(MAPNAME101754, "Turm der Ewigkeit 1754").
+-define(MAPNAME101755, "Turm der Ewigkeit 1755").
+-define(MAPNAME101756, "Turm der Ewigkeit 1756").
+-define(MAPNAME101757, "Turm der Ewigkeit 1757").
+-define(MAPNAME101758, "Turm der Ewigkeit 1758").
+-define(MAPNAME101759, "Turm der Ewigkeit 1759").
+-define(MAPNAME101760, "Turm der Ewigkeit 1760").
+-define(MAPNAME101761, "Turm der Ewigkeit 1761").
+-define(MAPNAME101762, "Turm der Ewigkeit 1762").
+-define(MAPNAME101763, "Turm der Ewigkeit 1763").
+-define(MAPNAME101764, "Turm der Ewigkeit 1764").
+-define(MAPNAME101765, "Turm der Ewigkeit 1765").
+-define(MAPNAME101766, "Turm der Ewigkeit 1766").
+-define(MAPNAME101767, "Turm der Ewigkeit 1767").
+-define(MAPNAME101768, "Turm der Ewigkeit 1768").
+-define(MAPNAME101769, "Turm der Ewigkeit 1769").
+-define(MAPNAME101770, "Turm der Ewigkeit 1770").
+-define(MAPNAME101771, "Turm der Ewigkeit 1771").
+-define(MAPNAME101772, "Turm der Ewigkeit 1772").
+-define(MAPNAME101773, "Turm der Ewigkeit 1773").
+-define(MAPNAME101774, "Turm der Ewigkeit 1774").
+-define(MAPNAME101775, "Turm der Ewigkeit 1775").
+-define(MAPNAME101776, "Turm der Ewigkeit 1776").
+-define(MAPNAME101777, "Turm der Ewigkeit 1777").
+-define(MAPNAME101778, "Turm der Ewigkeit 1778").
+-define(MAPNAME101779, "Turm der Ewigkeit 1779").
+-define(MAPNAME101780, "Turm der Ewigkeit 1780").
+-define(MAPNAME101781, "Turm der Ewigkeit 1781").
+-define(MAPNAME101782, "Turm der Ewigkeit 1782").
+-define(MAPNAME101783, "Turm der Ewigkeit 1783").
+-define(MAPNAME101784, "Turm der Ewigkeit 1784").
+-define(MAPNAME101785, "Turm der Ewigkeit 1785").
+-define(MAPNAME101786, "Turm der Ewigkeit 1786").
+-define(MAPNAME101787, "Turm der Ewigkeit 1787").
+-define(MAPNAME101788, "Turm der Ewigkeit 1788").
+-define(MAPNAME101789, "Turm der Ewigkeit 1789").
+-define(MAPNAME101790, "Turm der Ewigkeit 1790").
+-define(MAPNAME101791, "Turm der Ewigkeit 1791").
+-define(MAPNAME101792, "Turm der Ewigkeit 1792").
+-define(MAPNAME101793, "Turm der Ewigkeit 1793").
+-define(MAPNAME101794, "Turm der Ewigkeit 1794").
+-define(MAPNAME101795, "Turm der Ewigkeit 1795").
+-define(MAPNAME101796, "Turm der Ewigkeit 1796").
+-define(MAPNAME101797, "Turm der Ewigkeit 1797").
+-define(MAPNAME101798, "Turm der Ewigkeit 1798").
+-define(MAPNAME101799, "Turm der Ewigkeit 1799").
+-define(MAPNAME101800, "Turm der Ewigkeit 1800").
+-define(MAPNAME101801, "Turm der Ewigkeit 1801").
+-define(MAPNAME101802, "Turm der Ewigkeit 1802").
+-define(MAPNAME101803, "Turm der Ewigkeit 1803").
+-define(MAPNAME101804, "Turm der Ewigkeit 1804").
+-define(MAPNAME101805, "Turm der Ewigkeit 1805").
+-define(MAPNAME101806, "Turm der Ewigkeit 1806").
+-define(MAPNAME101807, "Turm der Ewigkeit 1807").
+-define(MAPNAME101808, "Turm der Ewigkeit 1808").
+-define(MAPNAME101809, "Turm der Ewigkeit 1809").
+-define(MAPNAME101810, "Turm der Ewigkeit 1810").
+-define(MAPNAME101811, "Turm der Ewigkeit 1811").
+-define(MAPNAME101812, "Turm der Ewigkeit 1812").
+-define(MAPNAME101813, "Turm der Ewigkeit 1813").
+-define(MAPNAME101814, "Turm der Ewigkeit 1814").
+-define(MAPNAME101815, "Turm der Ewigkeit 1815").
+-define(MAPNAME101816, "Turm der Ewigkeit 1816").
+-define(MAPNAME101817, "Turm der Ewigkeit 1817").
+-define(MAPNAME101818, "Turm der Ewigkeit 1818").
+-define(MAPNAME101819, "Turm der Ewigkeit 1819").
+-define(MAPNAME101820, "Turm der Ewigkeit 1820").
+-define(MAPNAME101821, "Turm der Ewigkeit 1821").
+-define(MAPNAME101822, "Turm der Ewigkeit 1822").
+-define(MAPNAME101823, "Turm der Ewigkeit 1823").
+-define(MAPNAME101824, "Turm der Ewigkeit 1824").
+-define(MAPNAME101825, "Turm der Ewigkeit 1825").
+-define(MAPNAME101826, "Turm der Ewigkeit 1826").
+-define(MAPNAME101827, "Turm der Ewigkeit 1827").
+-define(MAPNAME101828, "Turm der Ewigkeit 1828").
+-define(MAPNAME101829, "Turm der Ewigkeit 1829").
+-define(MAPNAME101830, "Turm der Ewigkeit 1830").
+-define(MAPNAME101831, "Turm der Ewigkeit 1831").
+-define(MAPNAME101832, "Turm der Ewigkeit 1832").
+-define(MAPNAME101833, "Turm der Ewigkeit 1833").
+-define(MAPNAME101834, "Turm der Ewigkeit 1834").
+-define(MAPNAME101835, "Turm der Ewigkeit 1835").
+-define(MAPNAME101836, "Turm der Ewigkeit 1836").
+-define(MAPNAME101837, "Turm der Ewigkeit 1837").
+-define(MAPNAME101838, "Turm der Ewigkeit 1838").
+-define(MAPNAME101839, "Turm der Ewigkeit 1839").
+-define(MAPNAME101840, "Turm der Ewigkeit 1840").
+-define(MAPNAME101841, "Turm der Ewigkeit 1841").
+-define(MAPNAME101842, "Turm der Ewigkeit 1842").
+-define(MAPNAME101843, "Turm der Ewigkeit 1843").
+-define(MAPNAME101844, "Turm der Ewigkeit 1844").
+-define(MAPNAME101845, "Turm der Ewigkeit 1845").
+-define(MAPNAME101846, "Turm der Ewigkeit 1846").
+-define(MAPNAME101847, "Turm der Ewigkeit 1847").
+-define(MAPNAME101848, "Turm der Ewigkeit 1848").
+-define(MAPNAME101849, "Turm der Ewigkeit 1849").
+-define(MAPNAME101850, "Turm der Ewigkeit 1850").
+-define(MAPNAME101851, "Turm der Ewigkeit 1851").
+-define(MAPNAME101852, "Turm der Ewigkeit 1852").
+-define(MAPNAME101853, "Turm der Ewigkeit 1853").
+-define(MAPNAME101854, "Turm der Ewigkeit 1854").
+-define(MAPNAME101855, "Turm der Ewigkeit 1855").
+-define(MAPNAME101856, "Turm der Ewigkeit 1856").
+-define(MAPNAME101857, "Turm der Ewigkeit 1857").
+-define(MAPNAME101858, "Turm der Ewigkeit 1858").
+-define(MAPNAME101859, "Turm der Ewigkeit 1859").
+-define(MAPNAME101860, "Turm der Ewigkeit 1860").
+-define(MAPNAME101861, "Turm der Ewigkeit 1861").
+-define(MAPNAME101862, "Turm der Ewigkeit 1862").
+-define(MAPNAME101863, "Turm der Ewigkeit 1863").
+-define(MAPNAME101864, "Turm der Ewigkeit 1864").
+-define(MAPNAME101865, "Turm der Ewigkeit 1865").
+-define(MAPNAME101866, "Turm der Ewigkeit 1866").
+-define(MAPNAME101867, "Turm der Ewigkeit 1867").
+-define(MAPNAME101868, "Turm der Ewigkeit 1868").
+-define(MAPNAME101869, "Turm der Ewigkeit 1869").
+-define(MAPNAME101870, "Turm der Ewigkeit 1870").
+-define(MAPNAME101871, "Turm der Ewigkeit 1871").
+-define(MAPNAME101872, "Turm der Ewigkeit 1872").
+-define(MAPNAME101873, "Turm der Ewigkeit 1873").
+-define(MAPNAME101874, "Turm der Ewigkeit 1874").
+-define(MAPNAME101875, "Turm der Ewigkeit 1875").
+-define(MAPNAME101876, "Turm der Ewigkeit 1876").
+-define(MAPNAME101877, "Turm der Ewigkeit 1877").
+-define(MAPNAME101878, "Turm der Ewigkeit 1878").
+-define(MAPNAME101879, "Turm der Ewigkeit 1879").
+-define(MAPNAME101880, "Turm der Ewigkeit 1880").
+-define(MAPNAME101881, "Turm der Ewigkeit 1881").
+-define(MAPNAME101882, "Turm der Ewigkeit 1882").
+-define(MAPNAME101883, "Turm der Ewigkeit 1883").
+-define(MAPNAME101884, "Turm der Ewigkeit 1884").
+-define(MAPNAME101885, "Turm der Ewigkeit 1885").
+-define(MAPNAME101886, "Turm der Ewigkeit 1886").
+-define(MAPNAME101887, "Turm der Ewigkeit 1887").
+-define(MAPNAME101888, "Turm der Ewigkeit 1888").
+-define(MAPNAME101889, "Turm der Ewigkeit 1889").
+-define(MAPNAME101890, "Turm der Ewigkeit 1890").
+-define(MAPNAME101891, "Turm der Ewigkeit 1891").
+-define(MAPNAME101892, "Turm der Ewigkeit 1892").
+-define(MAPNAME101893, "Turm der Ewigkeit 1893").
+-define(MAPNAME101894, "Turm der Ewigkeit 1894").
+-define(MAPNAME101895, "Turm der Ewigkeit 1895").
+-define(MAPNAME101896, "Turm der Ewigkeit 1896").
+-define(MAPNAME101897, "Turm der Ewigkeit 1897").
+-define(MAPNAME101898, "Turm der Ewigkeit 1898").
+-define(MAPNAME101899, "Turm der Ewigkeit 1899").
+-define(MAPNAME101900, "Turm der Ewigkeit 1900").
+-define(MAPNAME101901, "Turm der Ewigkeit 1901").
+-define(MAPNAME101902, "Turm der Ewigkeit 1902").
+-define(MAPNAME101903, "Turm der Ewigkeit 1903").
+-define(MAPNAME101904, "Turm der Ewigkeit 1904").
+-define(MAPNAME101905, "Turm der Ewigkeit 1905").
+-define(MAPNAME101906, "Turm der Ewigkeit 1906").
+-define(MAPNAME101907, "Turm der Ewigkeit 1907").
+-define(MAPNAME101908, "Turm der Ewigkeit 1908").
+-define(MAPNAME101909, "Turm der Ewigkeit 1909").
+-define(MAPNAME101910, "Turm der Ewigkeit 1910").
+-define(MAPNAME101911, "Turm der Ewigkeit 1911").
+-define(MAPNAME101912, "Turm der Ewigkeit 1912").
+-define(MAPNAME101913, "Turm der Ewigkeit 1913").
+-define(MAPNAME101914, "Turm der Ewigkeit 1914").
+-define(MAPNAME101915, "Turm der Ewigkeit 1915").
+-define(MAPNAME101916, "Turm der Ewigkeit 1916").
+-define(MAPNAME101917, "Turm der Ewigkeit 1917").
+-define(MAPNAME101918, "Turm der Ewigkeit 1918").
+-define(MAPNAME101919, "Turm der Ewigkeit 1919").
+-define(MAPNAME101920, "Turm der Ewigkeit 1920").
+-define(MAPNAME101921, "Turm der Ewigkeit 1921").
+-define(MAPNAME101922, "Turm der Ewigkeit 1922").
+-define(MAPNAME101923, "Turm der Ewigkeit 1923").
+-define(MAPNAME101924, "Turm der Ewigkeit 1924").
+-define(MAPNAME101925, "Turm der Ewigkeit 1925").
+-define(MAPNAME101926, "Turm der Ewigkeit 1926").
+-define(MAPNAME101927, "Turm der Ewigkeit 1927").
+-define(MAPNAME101928, "Turm der Ewigkeit 1928").
+-define(MAPNAME101929, "Turm der Ewigkeit 1929").
+-define(MAPNAME101930, "Turm der Ewigkeit 1930").
+-define(MAPNAME101931, "Turm der Ewigkeit 1931").
+-define(MAPNAME101932, "Turm der Ewigkeit 1932").
+-define(MAPNAME101933, "Turm der Ewigkeit 1933").
+-define(MAPNAME101934, "Turm der Ewigkeit 1934").
+-define(MAPNAME101935, "Turm der Ewigkeit 1935").
+-define(MAPNAME101936, "Turm der Ewigkeit 1936").
+-define(MAPNAME101937, "Turm der Ewigkeit 1937").
+-define(MAPNAME101938, "Turm der Ewigkeit 1938").
+-define(MAPNAME101939, "Turm der Ewigkeit 1939").
+-define(MAPNAME101940, "Turm der Ewigkeit 1940").
+-define(MAPNAME101941, "Turm der Ewigkeit 1941").
+-define(MAPNAME101942, "Turm der Ewigkeit 1942").
+-define(MAPNAME101943, "Turm der Ewigkeit 1943").
+-define(MAPNAME101944, "Turm der Ewigkeit 1944").
+-define(MAPNAME101945, "Turm der Ewigkeit 1945").
+-define(MAPNAME101946, "Turm der Ewigkeit 1946").
+-define(MAPNAME101947, "Turm der Ewigkeit 1947").
+-define(MAPNAME101948, "Turm der Ewigkeit 1948").
+-define(MAPNAME101949, "Turm der Ewigkeit 1949").
+-define(MAPNAME101950, "Turm der Ewigkeit 1950").
+-define(MAPNAME101951, "Turm der Ewigkeit 1951").
+-define(MAPNAME101952, "Turm der Ewigkeit 1952").
+-define(MAPNAME101953, "Turm der Ewigkeit 1953").
+-define(MAPNAME101954, "Turm der Ewigkeit 1954").
+-define(MAPNAME101955, "Turm der Ewigkeit 1955").
+-define(MAPNAME101956, "Turm der Ewigkeit 1956").
+-define(MAPNAME101957, "Turm der Ewigkeit 1957").
+-define(MAPNAME101958, "Turm der Ewigkeit 1958").
+-define(MAPNAME101959, "Turm der Ewigkeit 1959").
+-define(MAPNAME101960, "Turm der Ewigkeit 1960").
+-define(MAPNAME101961, "Turm der Ewigkeit 1961").
+-define(MAPNAME101962, "Turm der Ewigkeit 1962").
+-define(MAPNAME101963, "Turm der Ewigkeit 1963").
+-define(MAPNAME101964, "Turm der Ewigkeit 1964").
+-define(MAPNAME101965, "Turm der Ewigkeit 1965").
+-define(MAPNAME101966, "Turm der Ewigkeit 1966").
+-define(MAPNAME101967, "Turm der Ewigkeit 1967").
+-define(MAPNAME101968, "Turm der Ewigkeit 1968").
+-define(MAPNAME101969, "Turm der Ewigkeit 1969").
+-define(MAPNAME101970, "Turm der Ewigkeit 1970").
+-define(MAPNAME101971, "Turm der Ewigkeit 1971").
+-define(MAPNAME101972, "Turm der Ewigkeit 1972").
+-define(MAPNAME101973, "Turm der Ewigkeit 1973").
+-define(MAPNAME101974, "Turm der Ewigkeit 1974").
+-define(MAPNAME101975, "Turm der Ewigkeit 1975").
+-define(MAPNAME101976, "Turm der Ewigkeit 1976").
+-define(MAPNAME101977, "Turm der Ewigkeit 1977").
+-define(MAPNAME101978, "Turm der Ewigkeit 1978").
+-define(MAPNAME101979, "Turm der Ewigkeit 1979").
+-define(MAPNAME101980, "Turm der Ewigkeit 1980").
+-define(MAPNAME101981, "Turm der Ewigkeit 1981").
+-define(MAPNAME101982, "Turm der Ewigkeit 1982").
+-define(MAPNAME101983, "Turm der Ewigkeit 1983").
+-define(MAPNAME101984, "Turm der Ewigkeit 1984").
+-define(MAPNAME101985, "Turm der Ewigkeit 1985").
+-define(MAPNAME101986, "Turm der Ewigkeit 1986").
+-define(MAPNAME101987, "Turm der Ewigkeit 1987").
+-define(MAPNAME101988, "Turm der Ewigkeit 1988").
+-define(MAPNAME101989, "Turm der Ewigkeit 1989").
+-define(MAPNAME101990, "Turm der Ewigkeit 1990").
+-define(MAPNAME101991, "Turm der Ewigkeit 1991").
+-define(MAPNAME101992, "Turm der Ewigkeit 1992").
+-define(MAPNAME101993, "Turm der Ewigkeit 1993").
+-define(MAPNAME101994, "Turm der Ewigkeit 1994").
+-define(MAPNAME101995, "Turm der Ewigkeit 1995").
+-define(MAPNAME101996, "Turm der Ewigkeit 1996").
+-define(MAPNAME101997, "Turm der Ewigkeit 1997").
+-define(MAPNAME101998, "Turm der Ewigkeit 1998").
+-define(MAPNAME101999, "Turm der Ewigkeit 1999").
+-define(MAPNAME102000, "Turm der Ewigkeit 2000").
+-define(MAPNAME140001, "Turm des Mutes 1").
+-define(MAPNAME140002, "Turm des Mutes 2").
+-define(MAPNAME140003, "Turm des Mutes 3").
+-define(MAPNAME140004, "Turm des Mutes 4").
+-define(MAPNAME140005, "Turm des Mutes 5").
+-define(MAPNAME140006, "Turm des Mutes 6").
+-define(MAPNAME140007, "Turm des Mutes 7").
+-define(MAPNAME140008, "Turm des Mutes 8").
+-define(MAPNAME140009, "Turm des Mutes 9").
+-define(MAPNAME140010, "Turm des Mutes 10").
+-define(MAPNAME140011, "Turm des Mutes 11").
+-define(MAPNAME140012, "Turm des Mutes 12").
+-define(MAPNAME140013, "Turm des Mutes 13").
+-define(MAPNAME140014, "Turm des Mutes 14").
+-define(MAPNAME140015, "Turm des Mutes 15").
+-define(MAPNAME140016, "Turm des Mutes 16").
+-define(MAPNAME140017, "Turm des Mutes 17").
+-define(MAPNAME140018, "Turm des Mutes 18").
+-define(MAPNAME140019, "Turm des Mutes 19").
+-define(MAPNAME140020, "Turm des Mutes 20").
+-define(MAPNAME140021, "Turm des Mutes 21").
+-define(MAPNAME140022, "Turm des Mutes 22").
+-define(MAPNAME140023, "Turm des Mutes 23").
+-define(MAPNAME140024, "Turm des Mutes 24").
+-define(MAPNAME140025, "Turm des Mutes 25").
+-define(MAPNAME140026, "Turm des Mutes 26").
+-define(MAPNAME140027, "Turm des Mutes 27").
+-define(MAPNAME140028, "Turm des Mutes 28").
+-define(MAPNAME140029, "Turm des Mutes 29").
+-define(MAPNAME140030, "Turm des Mutes 30").
+-define(MAPNAME140031, "Turm des Mutes 31").
+-define(MAPNAME140032, "Turm des Mutes 32").
+-define(MAPNAME140033, "Turm des Mutes 33").
+-define(MAPNAME140034, "Turm des Mutes 34").
+-define(MAPNAME140035, "Turm des Mutes 35").
+-define(MAPNAME140036, "Turm des Mutes 36").
+-define(MAPNAME140037, "Turm des Mutes 37").
+-define(MAPNAME140038, "Turm des Mutes 38").
+-define(MAPNAME140039, "Turm des Mutes 39").
+-define(MAPNAME140040, "Turm des Mutes 40").
+-define(MAPNAME140041, "Turm des Mutes 41").
+-define(MAPNAME140042, "Turm des Mutes 42").
+-define(MAPNAME140043, "Turm des Mutes 43").
+-define(MAPNAME140044, "Turm des Mutes 44").
+-define(MAPNAME140045, "Turm des Mutes 45").
+-define(MAPNAME140046, "Turm des Mutes 46").
+-define(MAPNAME140047, "Turm des Mutes 47").
+-define(MAPNAME140048, "Turm des Mutes 48").
+-define(MAPNAME140049, "Turm des Mutes 49").
+-define(MAPNAME140050, "Turm des Mutes 50").
+-define(MAPNAME140051, "Turm des Mutes 51").
+-define(MAPNAME140052, "Turm des Mutes 52").
+-define(MAPNAME140053, "Turm des Mutes 53").
+-define(MAPNAME140054, "Turm des Mutes 54").
+-define(MAPNAME140055, "Turm des Mutes 55").
+-define(MAPNAME140056, "Turm des Mutes 56").
+-define(MAPNAME140057, "Turm des Mutes 57").
+-define(MAPNAME140058, "Turm des Mutes 58").
+-define(MAPNAME140059, "Turm des Mutes 59").
+-define(MAPNAME140060, "Turm des Mutes 60").
+-define(MAPNAME140061, "Turm des Mutes 61").
+-define(MAPNAME140062, "Turm des Mutes 62").
+-define(MAPNAME140063, "Turm des Mutes 63").
+-define(MAPNAME140064, "Turm des Mutes 64").
+-define(MAPNAME140065, "Turm des Mutes 65").
+-define(MAPNAME140066, "Turm des Mutes 66").
+-define(MAPNAME140067, "Turm des Mutes 67").
+-define(MAPNAME140068, "Turm des Mutes 68").
+-define(MAPNAME140069, "Turm des Mutes 69").
+-define(MAPNAME140070, "Turm des Mutes 70").
+-define(MAPNAME140071, "Turm des Mutes 71").
+-define(MAPNAME140072, "Turm des Mutes 72").
+-define(MAPNAME140073, "Turm des Mutes 73").
+-define(MAPNAME140074, "Turm des Mutes 74").
+-define(MAPNAME140075, "Turm des Mutes 75").
+-define(MAPNAME140076, "Turm des Mutes 76").
+-define(MAPNAME140077, "Turm des Mutes 77").
+-define(MAPNAME140078, "Turm des Mutes 78").
+-define(MAPNAME140079, "Turm des Mutes 79").
+-define(MAPNAME140080, "Turm des Mutes 80").
+-define(MAPNAME140081, "Turm des Mutes 81").
+-define(MAPNAME140082, "Turm des Mutes 82").
+-define(MAPNAME140083, "Turm des Mutes 83").
+-define(MAPNAME140084, "Turm des Mutes 84").
+-define(MAPNAME140085, "Turm des Mutes 85").
+-define(MAPNAME140086, "Turm des Mutes 86").
+-define(MAPNAME140087, "Turm des Mutes 87").
+-define(MAPNAME140088, "Turm des Mutes 88").
+-define(MAPNAME140089, "Turm des Mutes 89").
+-define(MAPNAME140090, "Turm des Mutes 90").
+-define(MAPNAME140091, "Turm des Mutes 91").
+-define(MAPNAME140092, "Turm des Mutes 92").
+-define(MAPNAME140093, "Turm des Mutes 93").
+-define(MAPNAME140094, "Turm des Mutes 94").
+-define(MAPNAME140095, "Turm des Mutes 95").
+-define(MAPNAME140096, "Turm des Mutes 96").
+-define(MAPNAME140097, "Turm des Mutes 97").
+-define(MAPNAME140098, "Turm des Mutes 98").
+-define(MAPNAME140099, "Turm des Mutes 99").
+-define(MAPNAME140100, "Turm des Mutes 100").
+-define(MAPNAME140101, "Turm des Mutes 101").
+-define(MAPNAME140102, "Turm des Mutes 102").
+-define(MAPNAME140103, "Turm des Mutes 103").
+-define(MAPNAME140104, "Turm des Mutes 104").
+-define(MAPNAME140105, "Turm des Mutes 105").
+-define(MAPNAME140106, "Turm des Mutes 106").
+-define(MAPNAME140107, "Turm des Mutes 107").
+-define(MAPNAME140108, "Turm des Mutes 108").
+-define(MAPNAME140109, "Turm des Mutes 109").
+-define(MAPNAME140110, "Turm des Mutes 110").
+-define(MAPNAME140111, "Turm des Mutes 111").
+-define(MAPNAME140112, "Turm des Mutes 112").
+-define(MAPNAME140113, "Turm des Mutes 113").
+-define(MAPNAME140114, "Turm des Mutes 114").
+-define(MAPNAME140115, "Turm des Mutes 115").
+-define(MAPNAME140116, "Turm des Mutes 116").
+-define(MAPNAME140117, "Turm des Mutes 117").
+-define(MAPNAME140118, "Turm des Mutes 118").
+-define(MAPNAME140119, "Turm des Mutes 119").
+-define(MAPNAME140120, "Turm des Mutes 120").
+-define(MAPNAME140121, "Turm des Mutes 121").
+-define(MAPNAME140122, "Turm des Mutes 122").
+-define(MAPNAME140123, "Turm des Mutes 123").
+-define(MAPNAME140124, "Turm des Mutes 124").
+-define(MAPNAME140125, "Turm des Mutes 125").
+-define(MAPNAME140126, "Turm des Mutes 126").
+-define(MAPNAME140127, "Turm des Mutes 127").
+-define(MAPNAME140128, "Turm des Mutes 128").
+-define(MAPNAME140129, "Turm des Mutes 129").
+-define(MAPNAME140130, "Turm des Mutes 130").
+-define(MAPNAME140131, "Turm des Mutes 131").
+-define(MAPNAME140132, "Turm des Mutes 132").
+-define(MAPNAME140133, "Turm des Mutes 133").
+-define(MAPNAME140134, "Turm des Mutes 134").
+-define(MAPNAME140135, "Turm des Mutes 135").
+-define(MAPNAME140136, "Turm des Mutes 136").
+-define(MAPNAME140137, "Turm des Mutes 137").
+-define(MAPNAME140138, "Turm des Mutes 138").
+-define(MAPNAME140139, "Turm des Mutes 139").
+-define(MAPNAME140140, "Turm des Mutes 140").
+-define(MAPNAME140141, "Turm des Mutes 141").
+-define(MAPNAME140142, "Turm des Mutes 142").
+-define(MAPNAME140143, "Turm des Mutes 143").
+-define(MAPNAME140144, "Turm des Mutes 144").
+-define(MAPNAME140145, "Turm des Mutes 145").
+-define(MAPNAME140146, "Turm des Mutes 146").
+-define(MAPNAME140147, "Turm des Mutes 147").
+-define(MAPNAME140148, "Turm des Mutes 148").
+-define(MAPNAME140149, "Turm des Mutes 149").
+-define(MAPNAME140150, "Turm des Mutes 150").
+-define(MAPNAME140151, "Turm des Mutes 151").
+-define(MAPNAME140152, "Turm des Mutes 152").
+-define(MAPNAME140153, "Turm des Mutes 153").
+-define(MAPNAME140154, "Turm des Mutes 154").
+-define(MAPNAME140155, "Turm des Mutes 155").
+-define(MAPNAME140156, "Turm des Mutes 156").
+-define(MAPNAME140157, "Turm des Mutes 157").
+-define(MAPNAME140158, "Turm des Mutes 158").
+-define(MAPNAME140159, "Turm des Mutes 159").
+-define(MAPNAME140160, "Turm des Mutes 160").
+-define(MAPNAME140161, "Turm des Mutes 161").
+-define(MAPNAME140162, "Turm des Mutes 162").
+-define(MAPNAME140163, "Turm des Mutes 163").
+-define(MAPNAME140164, "Turm des Mutes 164").
+-define(MAPNAME140165, "Turm des Mutes 165").
+-define(MAPNAME140166, "Turm des Mutes 166").
+-define(MAPNAME140167, "Turm des Mutes 167").
+-define(MAPNAME140168, "Turm des Mutes 168").
+-define(MAPNAME140169, "Turm des Mutes 169").
+-define(MAPNAME140170, "Turm des Mutes 170").
+-define(MAPNAME140171, "Turm des Mutes 171").
+-define(MAPNAME140172, "Turm des Mutes 172").
+-define(MAPNAME140173, "Turm des Mutes 173").
+-define(MAPNAME140174, "Turm des Mutes 174").
+-define(MAPNAME140175, "Turm des Mutes 175").
+-define(MAPNAME140176, "Turm des Mutes 176").
+-define(MAPNAME140177, "Turm des Mutes 177").
+-define(MAPNAME140178, "Turm des Mutes 178").
+-define(MAPNAME140179, "Turm des Mutes 179").
+-define(MAPNAME140180, "Turm des Mutes 180").
+-define(MAPNAME140181, "Turm des Mutes 181").
+-define(MAPNAME140182, "Turm des Mutes 182").
+-define(MAPNAME140183, "Turm des Mutes 183").
+-define(MAPNAME140184, "Turm des Mutes 184").
+-define(MAPNAME140185, "Turm des Mutes 185").
+-define(MAPNAME140186, "Turm des Mutes 186").
+-define(MAPNAME140187, "Turm des Mutes 187").
+-define(MAPNAME140188, "Turm des Mutes 188").
+-define(MAPNAME140189, "Turm des Mutes 189").
+-define(MAPNAME140190, "Turm des Mutes 190").
+-define(MAPNAME140191, "Turm des Mutes 191").
+-define(MAPNAME140192, "Turm des Mutes 192").
+-define(MAPNAME140193, "Turm des Mutes 193").
+-define(MAPNAME140194, "Turm des Mutes 194").
+-define(MAPNAME140195, "Turm des Mutes 195").
+-define(MAPNAME140196, "Turm des Mutes 196").
+-define(MAPNAME140197, "Turm des Mutes 197").
+-define(MAPNAME140198, "Turm des Mutes 198").
+-define(MAPNAME140199, "Turm des Mutes 199").
+-define(MAPNAME140200, "Turm des Mutes 200").
+-define(MAPNAME140201, "Turm des Mutes 201").
+-define(MAPNAME140202, "Turm des Mutes 202").
+-define(MAPNAME140203, "Turm des Mutes 203").
+-define(MAPNAME140204, "Turm des Mutes 204").
+-define(MAPNAME140205, "Turm des Mutes 205").
+-define(MAPNAME140206, "Turm des Mutes 206").
+-define(MAPNAME140207, "Turm des Mutes 207").
+-define(MAPNAME140208, "Turm des Mutes 208").
+-define(MAPNAME140209, "Turm des Mutes 209").
+-define(MAPNAME140210, "Turm des Mutes 210").
+-define(MAPNAME140211, "Turm des Mutes 211").
+-define(MAPNAME140212, "Turm des Mutes 212").
+-define(MAPNAME140213, "Turm des Mutes 213").
+-define(MAPNAME140214, "Turm des Mutes 214").
+-define(MAPNAME140215, "Turm des Mutes 215").
+-define(MAPNAME140216, "Turm des Mutes 216").
+-define(MAPNAME140217, "Turm des Mutes 217").
+-define(MAPNAME140218, "Turm des Mutes 218").
+-define(MAPNAME140219, "Turm des Mutes 219").
+-define(MAPNAME140220, "Turm des Mutes 220").
+-define(MAPNAME140221, "Turm des Mutes 221").
+-define(MAPNAME140222, "Turm des Mutes 222").
+-define(MAPNAME140223, "Turm des Mutes 223").
+-define(MAPNAME140224, "Turm des Mutes 224").
+-define(MAPNAME140225, "Turm des Mutes 225").
+-define(MAPNAME140226, "Turm des Mutes 226").
+-define(MAPNAME140227, "Turm des Mutes 227").
+-define(MAPNAME140228, "Turm des Mutes 228").
+-define(MAPNAME140229, "Turm des Mutes 229").
+-define(MAPNAME140230, "Turm des Mutes 230").
+-define(MAPNAME140231, "Turm des Mutes 231").
+-define(MAPNAME140232, "Turm des Mutes 232").
+-define(MAPNAME140233, "Turm des Mutes 233").
+-define(MAPNAME140234, "Turm des Mutes 234").
+-define(MAPNAME140235, "Turm des Mutes 235").
+-define(MAPNAME140236, "Turm des Mutes 236").
+-define(MAPNAME140237, "Turm des Mutes 237").
+-define(MAPNAME140238, "Turm des Mutes 238").
+-define(MAPNAME140239, "Turm des Mutes 239").
+-define(MAPNAME140240, "Turm des Mutes 240").
+-define(MAPNAME140241, "Turm des Mutes 241").
+-define(MAPNAME140242, "Turm des Mutes 242").
+-define(MAPNAME140243, "Turm des Mutes 243").
+-define(MAPNAME140244, "Turm des Mutes 244").
+-define(MAPNAME140245, "Turm des Mutes 245").
+-define(MAPNAME140246, "Turm des Mutes 246").
+-define(MAPNAME140247, "Turm des Mutes 247").
+-define(MAPNAME140248, "Turm des Mutes 248").
+-define(MAPNAME140249, "Turm des Mutes 249").
+-define(MAPNAME140250, "Turm des Mutes 250").
+-define(MAPNAME140251, "Turm des Mutes 251").
+-define(MAPNAME140252, "Turm des Mutes 252").
+-define(MAPNAME140253, "Turm des Mutes 253").
+-define(MAPNAME140254, "Turm des Mutes 254").
+-define(MAPNAME140255, "Turm des Mutes 255").
+-define(MAPNAME140256, "Turm des Mutes 256").
+-define(MAPNAME140257, "Turm des Mutes 257").
+-define(MAPNAME140258, "Turm des Mutes 258").
+-define(MAPNAME140259, "Turm des Mutes 259").
+-define(MAPNAME140260, "Turm des Mutes 260").
+-define(MAPNAME140261, "Turm des Mutes 261").
+-define(MAPNAME140262, "Turm des Mutes 262").
+-define(MAPNAME140263, "Turm des Mutes 263").
+-define(MAPNAME140264, "Turm des Mutes 264").
+-define(MAPNAME140265, "Turm des Mutes 265").
+-define(MAPNAME140266, "Turm des Mutes 266").
+-define(MAPNAME140267, "Turm des Mutes 267").
+-define(MAPNAME140268, "Turm des Mutes 268").
+-define(MAPNAME140269, "Turm des Mutes 269").
+-define(MAPNAME140270, "Turm des Mutes 270").
+-define(MAPNAME140271, "Turm des Mutes 271").
+-define(MAPNAME140272, "Turm des Mutes 272").
+-define(MAPNAME140273, "Turm des Mutes 273").
+-define(MAPNAME140274, "Turm des Mutes 274").
+-define(MAPNAME140275, "Turm des Mutes 275").
+-define(MAPNAME140276, "Turm des Mutes 276").
+-define(MAPNAME140277, "Turm des Mutes 277").
+-define(MAPNAME140278, "Turm des Mutes 278").
+-define(MAPNAME140279, "Turm des Mutes 279").
+-define(MAPNAME140280, "Turm des Mutes 280").
+-define(MAPNAME140281, "Turm des Mutes 281").
+-define(MAPNAME140282, "Turm des Mutes 282").
+-define(MAPNAME140283, "Turm des Mutes 283").
+-define(MAPNAME140284, "Turm des Mutes 284").
+-define(MAPNAME140285, "Turm des Mutes 285").
+-define(MAPNAME140286, "Turm des Mutes 286").
+-define(MAPNAME140287, "Turm des Mutes 287").
+-define(MAPNAME140288, "Turm des Mutes 288").
+-define(MAPNAME140289, "Turm des Mutes 289").
+-define(MAPNAME140290, "Turm des Mutes 290").
+-define(MAPNAME140291, "Turm des Mutes 291").
+-define(MAPNAME140292, "Turm des Mutes 292").
+-define(MAPNAME140293, "Turm des Mutes 293").
+-define(MAPNAME140294, "Turm des Mutes 294").
+-define(MAPNAME140295, "Turm des Mutes 295").
+-define(MAPNAME140296, "Turm des Mutes 296").
+-define(MAPNAME140297, "Turm des Mutes 297").
+-define(MAPNAME140298, "Turm des Mutes 298").
+-define(MAPNAME140299, "Turm des Mutes 299").
+-define(MAPNAME140300, "Turm des Mutes 300").
+-define(MAPNAME140301, "Turm des Mutes 301").
+-define(MAPNAME140302, "Turm des Mutes 302").
+-define(MAPNAME140303, "Turm des Mutes 303").
+-define(MAPNAME140304, "Turm des Mutes 304").
+-define(MAPNAME140305, "Turm des Mutes 305").
+-define(MAPNAME140306, "Turm des Mutes 306").
+-define(MAPNAME140307, "Turm des Mutes 307").
+-define(MAPNAME140308, "Turm des Mutes 308").
+-define(MAPNAME140309, "Turm des Mutes 309").
+-define(MAPNAME140310, "Turm des Mutes 310").
+-define(MAPNAME140311, "Turm des Mutes 311").
+-define(MAPNAME140312, "Turm des Mutes 312").
+-define(MAPNAME140313, "Turm des Mutes 313").
+-define(MAPNAME140314, "Turm des Mutes 314").
+-define(MAPNAME140315, "Turm des Mutes 315").
+-define(MAPNAME140316, "Turm des Mutes 316").
+-define(MAPNAME140317, "Turm des Mutes 317").
+-define(MAPNAME140318, "Turm des Mutes 318").
+-define(MAPNAME140319, "Turm des Mutes 319").
+-define(MAPNAME140320, "Turm des Mutes 320").
+-define(MAPNAME140321, "Turm des Mutes 321").
+-define(MAPNAME140322, "Turm des Mutes 322").
+-define(MAPNAME140323, "Turm des Mutes 323").
+-define(MAPNAME140324, "Turm des Mutes 324").
+-define(MAPNAME140325, "Turm des Mutes 325").
+-define(MAPNAME140326, "Turm des Mutes 326").
+-define(MAPNAME140327, "Turm des Mutes 327").
+-define(MAPNAME140328, "Turm des Mutes 328").
+-define(MAPNAME140329, "Turm des Mutes 329").
+-define(MAPNAME140330, "Turm des Mutes 330").
+-define(MAPNAME140331, "Turm des Mutes 331").
+-define(MAPNAME140332, "Turm des Mutes 332").
+-define(MAPNAME140333, "Turm des Mutes 333").
+-define(MAPNAME140334, "Turm des Mutes 334").
+-define(MAPNAME140335, "Turm des Mutes 335").
+-define(MAPNAME140336, "Turm des Mutes 336").
+-define(MAPNAME140337, "Turm des Mutes 337").
+-define(MAPNAME140338, "Turm des Mutes 338").
+-define(MAPNAME140339, "Turm des Mutes 339").
+-define(MAPNAME140340, "Turm des Mutes 340").
+-define(MAPNAME140341, "Turm des Mutes 341").
+-define(MAPNAME140342, "Turm des Mutes 342").
+-define(MAPNAME140343, "Turm des Mutes 343").
+-define(MAPNAME140344, "Turm des Mutes 344").
+-define(MAPNAME140345, "Turm des Mutes 345").
+-define(MAPNAME140346, "Turm des Mutes 346").
+-define(MAPNAME140347, "Turm des Mutes 347").
+-define(MAPNAME140348, "Turm des Mutes 348").
+-define(MAPNAME140349, "Turm des Mutes 349").
+-define(MAPNAME140350, "Turm des Mutes 350").
+-define(MAPNAME140351, "Turm des Mutes 351").
+-define(MAPNAME140352, "Turm des Mutes 352").
+-define(MAPNAME140353, "Turm des Mutes 353").
+-define(MAPNAME140354, "Turm des Mutes 354").
+-define(MAPNAME140355, "Turm des Mutes 355").
+-define(MAPNAME140356, "Turm des Mutes 356").
+-define(MAPNAME140357, "Turm des Mutes 357").
+-define(MAPNAME140358, "Turm des Mutes 358").
+-define(MAPNAME140359, "Turm des Mutes 359").
+-define(MAPNAME140360, "Turm des Mutes 360").
+-define(MAPNAME140361, "Turm des Mutes 361").
+-define(MAPNAME140362, "Turm des Mutes 362").
+-define(MAPNAME140363, "Turm des Mutes 363").
+-define(MAPNAME140364, "Turm des Mutes 364").
+-define(MAPNAME140365, "Turm des Mutes 365").
+-define(MAPNAME140366, "Turm des Mutes 366").
+-define(MAPNAME140367, "Turm des Mutes 367").
+-define(MAPNAME140368, "Turm des Mutes 368").
+-define(MAPNAME140369, "Turm des Mutes 369").
+-define(MAPNAME140370, "Turm des Mutes 370").
+-define(MAPNAME140371, "Turm des Mutes 371").
+-define(MAPNAME140372, "Turm des Mutes 372").
+-define(MAPNAME140373, "Turm des Mutes 373").
+-define(MAPNAME140374, "Turm des Mutes 374").
+-define(MAPNAME140375, "Turm des Mutes 375").
+-define(MAPNAME140376, "Turm des Mutes 376").
+-define(MAPNAME140377, "Turm des Mutes 377").
+-define(MAPNAME140378, "Turm des Mutes 378").
+-define(MAPNAME140379, "Turm des Mutes 379").
+-define(MAPNAME140380, "Turm des Mutes 380").
+-define(MAPNAME140381, "Turm des Mutes 381").
+-define(MAPNAME140382, "Turm des Mutes 382").
+-define(MAPNAME140383, "Turm des Mutes 383").
+-define(MAPNAME140384, "Turm des Mutes 384").
+-define(MAPNAME140385, "Turm des Mutes 385").
+-define(MAPNAME140386, "Turm des Mutes 386").
+-define(MAPNAME140387, "Turm des Mutes 387").
+-define(MAPNAME140388, "Turm des Mutes 388").
+-define(MAPNAME140389, "Turm des Mutes 389").
+-define(MAPNAME140390, "Turm des Mutes 390").
+-define(MAPNAME140391, "Turm des Mutes 391").
+-define(MAPNAME140392, "Turm des Mutes 392").
+-define(MAPNAME140393, "Turm des Mutes 393").
+-define(MAPNAME140394, "Turm des Mutes 394").
+-define(MAPNAME140395, "Turm des Mutes 395").
+-define(MAPNAME140396, "Turm des Mutes 396").
+-define(MAPNAME140397, "Turm des Mutes 397").
+-define(MAPNAME140398, "Turm des Mutes 398").
+-define(MAPNAME140399, "Turm des Mutes 399").
+-define(MAPNAME140400, "Turm des Mutes 400").
+-define(MAPNAME140401, "Turm des Mutes 401").
+-define(MAPNAME140402, "Turm des Mutes 402").
+-define(MAPNAME140403, "Turm des Mutes 403").
+-define(MAPNAME140404, "Turm des Mutes 404").
+-define(MAPNAME140405, "Turm des Mutes 405").
+-define(MAPNAME140406, "Turm des Mutes 406").
+-define(MAPNAME140407, "Turm des Mutes 407").
+-define(MAPNAME140408, "Turm des Mutes 408").
+-define(MAPNAME140409, "Turm des Mutes 409").
+-define(MAPNAME140410, "Turm des Mutes 410").
+-define(MAPNAME140411, "Turm des Mutes 411").
+-define(MAPNAME140412, "Turm des Mutes 412").
+-define(MAPNAME140413, "Turm des Mutes 413").
+-define(MAPNAME140414, "Turm des Mutes 414").
+-define(MAPNAME140415, "Turm des Mutes 415").
+-define(MAPNAME140416, "Turm des Mutes 416").
+-define(MAPNAME140417, "Turm des Mutes 417").
+-define(MAPNAME140418, "Turm des Mutes 418").
+-define(MAPNAME140419, "Turm des Mutes 419").
+-define(MAPNAME140420, "Turm des Mutes 420").
+-define(MAPNAME140421, "Turm des Mutes 421").
+-define(MAPNAME140422, "Turm des Mutes 422").
+-define(MAPNAME140423, "Turm des Mutes 423").
+-define(MAPNAME140424, "Turm des Mutes 424").
+-define(MAPNAME140425, "Turm des Mutes 425").
+-define(MAPNAME140426, "Turm des Mutes 426").
+-define(MAPNAME140427, "Turm des Mutes 427").
+-define(MAPNAME140428, "Turm des Mutes 428").
+-define(MAPNAME140429, "Turm des Mutes 429").
+-define(MAPNAME140430, "Turm des Mutes 430").
+-define(MAPNAME140431, "Turm des Mutes 431").
+-define(MAPNAME140432, "Turm des Mutes 432").
+-define(MAPNAME140433, "Turm des Mutes 433").
+-define(MAPNAME140434, "Turm des Mutes 434").
+-define(MAPNAME140435, "Turm des Mutes 435").
+-define(MAPNAME140436, "Turm des Mutes 436").
+-define(MAPNAME140437, "Turm des Mutes 437").
+-define(MAPNAME140438, "Turm des Mutes 438").
+-define(MAPNAME140439, "Turm des Mutes 439").
+-define(MAPNAME140440, "Turm des Mutes 440").
+-define(MAPNAME140441, "Turm des Mutes 441").
+-define(MAPNAME140442, "Turm des Mutes 442").
+-define(MAPNAME140443, "Turm des Mutes 443").
+-define(MAPNAME140444, "Turm des Mutes 444").
+-define(MAPNAME140445, "Turm des Mutes 445").
+-define(MAPNAME140446, "Turm des Mutes 446").
+-define(MAPNAME140447, "Turm des Mutes 447").
+-define(MAPNAME140448, "Turm des Mutes 448").
+-define(MAPNAME140449, "Turm des Mutes 449").
+-define(MAPNAME140450, "Turm des Mutes 450").
+-define(MAPNAME140451, "Turm des Mutes 451").
+-define(MAPNAME140452, "Turm des Mutes 452").
+-define(MAPNAME140453, "Turm des Mutes 453").
+-define(MAPNAME140454, "Turm des Mutes 454").
+-define(MAPNAME140455, "Turm des Mutes 455").
+-define(MAPNAME140456, "Turm des Mutes 456").
+-define(MAPNAME140457, "Turm des Mutes 457").
+-define(MAPNAME140458, "Turm des Mutes 458").
+-define(MAPNAME140459, "Turm des Mutes 459").
+-define(MAPNAME140460, "Turm des Mutes 460").
+-define(MAPNAME140461, "Turm des Mutes 461").
+-define(MAPNAME140462, "Turm des Mutes 462").
+-define(MAPNAME140463, "Turm des Mutes 463").
+-define(MAPNAME140464, "Turm des Mutes 464").
+-define(MAPNAME140465, "Turm des Mutes 465").
+-define(MAPNAME140466, "Turm des Mutes 466").
+-define(MAPNAME140467, "Turm des Mutes 467").
+-define(MAPNAME140468, "Turm des Mutes 468").
+-define(MAPNAME140469, "Turm des Mutes 469").
+-define(MAPNAME140470, "Turm des Mutes 470").
+-define(MAPNAME140471, "Turm des Mutes 471").
+-define(MAPNAME140472, "Turm des Mutes 472").
+-define(MAPNAME140473, "Turm des Mutes 473").
+-define(MAPNAME140474, "Turm des Mutes 474").
+-define(MAPNAME140475, "Turm des Mutes 475").
+-define(MAPNAME140476, "Turm des Mutes 476").
+-define(MAPNAME140477, "Turm des Mutes 477").
+-define(MAPNAME140478, "Turm des Mutes 478").
+-define(MAPNAME140479, "Turm des Mutes 479").
+-define(MAPNAME140480, "Turm des Mutes 480").
+-define(MAPNAME140481, "Turm des Mutes 481").
+-define(MAPNAME140482, "Turm des Mutes 482").
+-define(MAPNAME140483, "Turm des Mutes 483").
+-define(MAPNAME140484, "Turm des Mutes 484").
+-define(MAPNAME140485, "Turm des Mutes 485").
+-define(MAPNAME140486, "Turm des Mutes 486").
+-define(MAPNAME140487, "Turm des Mutes 487").
+-define(MAPNAME140488, "Turm des Mutes 488").
+-define(MAPNAME140489, "Turm des Mutes 489").
+-define(MAPNAME140490, "Turm des Mutes 490").
+-define(MAPNAME140491, "Turm des Mutes 491").
+-define(MAPNAME140492, "Turm des Mutes 492").
+-define(MAPNAME140493, "Turm des Mutes 493").
+-define(MAPNAME140494, "Turm des Mutes 494").
+-define(MAPNAME140495, "Turm des Mutes 495").
+-define(MAPNAME140496, "Turm des Mutes 496").
+-define(MAPNAME140497, "Turm des Mutes 497").
+-define(MAPNAME140498, "Turm des Mutes 498").
+-define(MAPNAME140499, "Turm des Mutes 499").
+-define(MAPNAME140500, "Turm des Mutes 500").
+-define(MAPNAME140501, "Turm des Mutes 501").
+-define(MAPNAME140502, "Turm des Mutes 502").
+-define(MAPNAME140503, "Turm des Mutes 503").
+-define(MAPNAME140504, "Turm des Mutes 504").
+-define(MAPNAME140505, "Turm des Mutes 505").
+-define(MAPNAME140506, "Turm des Mutes 506").
+-define(MAPNAME140507, "Turm des Mutes 507").
+-define(MAPNAME140508, "Turm des Mutes 508").
+-define(MAPNAME140509, "Turm des Mutes 509").
+-define(MAPNAME140510, "Turm des Mutes 510").
+-define(MAPNAME140511, "Turm des Mutes 511").
+-define(MAPNAME140512, "Turm des Mutes 512").
+-define(MAPNAME140513, "Turm des Mutes 513").
+-define(MAPNAME140514, "Turm des Mutes 514").
+-define(MAPNAME140515, "Turm des Mutes 515").
+-define(MAPNAME140516, "Turm des Mutes 516").
+-define(MAPNAME140517, "Turm des Mutes 517").
+-define(MAPNAME140518, "Turm des Mutes 518").
+-define(MAPNAME140519, "Turm des Mutes 519").
+-define(MAPNAME140520, "Turm des Mutes 520").
+-define(MAPNAME140521, "Turm des Mutes 521").
+-define(MAPNAME140522, "Turm des Mutes 522").
+-define(MAPNAME140523, "Turm des Mutes 523").
+-define(MAPNAME140524, "Turm des Mutes 524").
+-define(MAPNAME140525, "Turm des Mutes 525").
+-define(MAPNAME140526, "Turm des Mutes 526").
+-define(MAPNAME140527, "Turm des Mutes 527").
+-define(MAPNAME140528, "Turm des Mutes 528").
+-define(MAPNAME140529, "Turm des Mutes 529").
+-define(MAPNAME140530, "Turm des Mutes 530").
+-define(MAPNAME140531, "Turm des Mutes 531").
+-define(MAPNAME140532, "Turm des Mutes 532").
+-define(MAPNAME140533, "Turm des Mutes 533").
+-define(MAPNAME140534, "Turm des Mutes 534").
+-define(MAPNAME140535, "Turm des Mutes 535").
+-define(MAPNAME140536, "Turm des Mutes 536").
+-define(MAPNAME140537, "Turm des Mutes 537").
+-define(MAPNAME140538, "Turm des Mutes 538").
+-define(MAPNAME140539, "Turm des Mutes 539").
+-define(MAPNAME140540, "Turm des Mutes 540").
+-define(MAPNAME140541, "Turm des Mutes 541").
+-define(MAPNAME140542, "Turm des Mutes 542").
+-define(MAPNAME140543, "Turm des Mutes 543").
+-define(MAPNAME140544, "Turm des Mutes 544").
+-define(MAPNAME140545, "Turm des Mutes 545").
+-define(MAPNAME140546, "Turm des Mutes 546").
+-define(MAPNAME140547, "Turm des Mutes 547").
+-define(MAPNAME140548, "Turm des Mutes 548").
+-define(MAPNAME140549, "Turm des Mutes 549").
+-define(MAPNAME140550, "Turm des Mutes 550").
+-define(MAPNAME140551, "Turm des Mutes 551").
+-define(MAPNAME140552, "Turm des Mutes 552").
+-define(MAPNAME140553, "Turm des Mutes 553").
+-define(MAPNAME140554, "Turm des Mutes 554").
+-define(MAPNAME140555, "Turm des Mutes 555").
+-define(MAPNAME140556, "Turm des Mutes 556").
+-define(MAPNAME140557, "Turm des Mutes 557").
+-define(MAPNAME140558, "Turm des Mutes 558").
+-define(MAPNAME140559, "Turm des Mutes 559").
+-define(MAPNAME140560, "Turm des Mutes 560").
+-define(MAPNAME140561, "Turm des Mutes 561").
+-define(MAPNAME140562, "Turm des Mutes 562").
+-define(MAPNAME140563, "Turm des Mutes 563").
+-define(MAPNAME140564, "Turm des Mutes 564").
+-define(MAPNAME140565, "Turm des Mutes 565").
+-define(MAPNAME140566, "Turm des Mutes 566").
+-define(MAPNAME140567, "Turm des Mutes 567").
+-define(MAPNAME140568, "Turm des Mutes 568").
+-define(MAPNAME140569, "Turm des Mutes 569").
+-define(MAPNAME140570, "Turm des Mutes 570").
+-define(MAPNAME140571, "Turm des Mutes 571").
+-define(MAPNAME140572, "Turm des Mutes 572").
+-define(MAPNAME140573, "Turm des Mutes 573").
+-define(MAPNAME140574, "Turm des Mutes 574").
+-define(MAPNAME140575, "Turm des Mutes 575").
+-define(MAPNAME140576, "Turm des Mutes 576").
+-define(MAPNAME140577, "Turm des Mutes 577").
+-define(MAPNAME140578, "Turm des Mutes 578").
+-define(MAPNAME140579, "Turm des Mutes 579").
+-define(MAPNAME140580, "Turm des Mutes 580").
+-define(MAPNAME140581, "Turm des Mutes 581").
+-define(MAPNAME140582, "Turm des Mutes 582").
+-define(MAPNAME140583, "Turm des Mutes 583").
+-define(MAPNAME140584, "Turm des Mutes 584").
+-define(MAPNAME140585, "Turm des Mutes 585").
+-define(MAPNAME140586, "Turm des Mutes 586").
+-define(MAPNAME140587, "Turm des Mutes 587").
+-define(MAPNAME140588, "Turm des Mutes 588").
+-define(MAPNAME140589, "Turm des Mutes 589").
+-define(MAPNAME140590, "Turm des Mutes 590").
+-define(MAPNAME140591, "Turm des Mutes 591").
+-define(MAPNAME140592, "Turm des Mutes 592").
+-define(MAPNAME140593, "Turm des Mutes 593").
+-define(MAPNAME140594, "Turm des Mutes 594").
+-define(MAPNAME140595, "Turm des Mutes 595").
+-define(MAPNAME140596, "Turm des Mutes 596").
+-define(MAPNAME140597, "Turm des Mutes 597").
+-define(MAPNAME140598, "Turm des Mutes 598").
+-define(MAPNAME140599, "Turm des Mutes 599").
+-define(MAPNAME140600, "Turm des Mutes 600").
+-define(MAPNAME150001, "Turm der Magie 1").
+-define(MAPNAME150002, "Turm der Magie 2").
+-define(MAPNAME150003, "Turm der Magie 3").
+-define(MAPNAME150004, "Turm der Magie 4").
+-define(MAPNAME150005, "Turm der Magie 5").
+-define(MAPNAME150006, "Turm der Magie 6").
+-define(MAPNAME150007, "Turm der Magie 7").
+-define(MAPNAME150008, "Turm der Magie 8").
+-define(MAPNAME150009, "Turm der Magie 9").
+-define(MAPNAME150010, "Turm der Magie 10").
+-define(MAPNAME150011, "Turm der Magie 11").
+-define(MAPNAME150012, "Turm der Magie 12").
+-define(MAPNAME150013, "Turm der Magie 13").
+-define(MAPNAME150014, "Turm der Magie 14").
+-define(MAPNAME150015, "Turm der Magie 15").
+-define(MAPNAME150016, "Turm der Magie 16").
+-define(MAPNAME150017, "Turm der Magie 17").
+-define(MAPNAME150018, "Turm der Magie 18").
+-define(MAPNAME150019, "Turm der Magie 19").
+-define(MAPNAME150020, "Turm der Magie 20").
+-define(MAPNAME150021, "Turm der Magie 21").
+-define(MAPNAME150022, "Turm der Magie 22").
+-define(MAPNAME150023, "Turm der Magie 23").
+-define(MAPNAME150024, "Turm der Magie 24").
+-define(MAPNAME150025, "Turm der Magie 25").
+-define(MAPNAME150026, "Turm der Magie 26").
+-define(MAPNAME150027, "Turm der Magie 27").
+-define(MAPNAME150028, "Turm der Magie 28").
+-define(MAPNAME150029, "Turm der Magie 29").
+-define(MAPNAME150030, "Turm der Magie 30").
+-define(MAPNAME150031, "Turm der Magie 31").
+-define(MAPNAME150032, "Turm der Magie 32").
+-define(MAPNAME150033, "Turm der Magie 33").
+-define(MAPNAME150034, "Turm der Magie 34").
+-define(MAPNAME150035, "Turm der Magie 35").
+-define(MAPNAME150036, "Turm der Magie 36").
+-define(MAPNAME150037, "Turm der Magie 37").
+-define(MAPNAME150038, "Turm der Magie 38").
+-define(MAPNAME150039, "Turm der Magie 39").
+-define(MAPNAME150040, "Turm der Magie 40").
+-define(MAPNAME150041, "Turm der Magie 41").
+-define(MAPNAME150042, "Turm der Magie 42").
+-define(MAPNAME150043, "Turm der Magie 43").
+-define(MAPNAME150044, "Turm der Magie 44").
+-define(MAPNAME150045, "Turm der Magie 45").
+-define(MAPNAME150046, "Turm der Magie 46").
+-define(MAPNAME150047, "Turm der Magie 47").
+-define(MAPNAME150048, "Turm der Magie 48").
+-define(MAPNAME150049, "Turm der Magie 49").
+-define(MAPNAME150050, "Turm der Magie 50").
+-define(MAPNAME150051, "Turm der Magie 51").
+-define(MAPNAME150052, "Turm der Magie 52").
+-define(MAPNAME150053, "Turm der Magie 53").
+-define(MAPNAME150054, "Turm der Magie 54").
+-define(MAPNAME150055, "Turm der Magie 55").
+-define(MAPNAME150056, "Turm der Magie 56").
+-define(MAPNAME150057, "Turm der Magie 57").
+-define(MAPNAME150058, "Turm der Magie 58").
+-define(MAPNAME150059, "Turm der Magie 59").
+-define(MAPNAME150060, "Turm der Magie 60").
+-define(MAPNAME150061, "Turm der Magie 61").
+-define(MAPNAME150062, "Turm der Magie 62").
+-define(MAPNAME150063, "Turm der Magie 63").
+-define(MAPNAME150064, "Turm der Magie 64").
+-define(MAPNAME150065, "Turm der Magie 65").
+-define(MAPNAME150066, "Turm der Magie 66").
+-define(MAPNAME150067, "Turm der Magie 67").
+-define(MAPNAME150068, "Turm der Magie 68").
+-define(MAPNAME150069, "Turm der Magie 69").
+-define(MAPNAME150070, "Turm der Magie 70").
+-define(MAPNAME150071, "Turm der Magie 71").
+-define(MAPNAME150072, "Turm der Magie 72").
+-define(MAPNAME150073, "Turm der Magie 73").
+-define(MAPNAME150074, "Turm der Magie 74").
+-define(MAPNAME150075, "Turm der Magie 75").
+-define(MAPNAME150076, "Turm der Magie 76").
+-define(MAPNAME150077, "Turm der Magie 77").
+-define(MAPNAME150078, "Turm der Magie 78").
+-define(MAPNAME150079, "Turm der Magie 79").
+-define(MAPNAME150080, "Turm der Magie 80").
+-define(MAPNAME150081, "Turm der Magie 81").
+-define(MAPNAME150082, "Turm der Magie 82").
+-define(MAPNAME150083, "Turm der Magie 83").
+-define(MAPNAME150084, "Turm der Magie 84").
+-define(MAPNAME150085, "Turm der Magie 85").
+-define(MAPNAME150086, "Turm der Magie 86").
+-define(MAPNAME150087, "Turm der Magie 87").
+-define(MAPNAME150088, "Turm der Magie 88").
+-define(MAPNAME150089, "Turm der Magie 89").
+-define(MAPNAME150090, "Turm der Magie 90").
+-define(MAPNAME150091, "Turm der Magie 91").
+-define(MAPNAME150092, "Turm der Magie 92").
+-define(MAPNAME150093, "Turm der Magie 93").
+-define(MAPNAME150094, "Turm der Magie 94").
+-define(MAPNAME150095, "Turm der Magie 95").
+-define(MAPNAME150096, "Turm der Magie 96").
+-define(MAPNAME150097, "Turm der Magie 97").
+-define(MAPNAME150098, "Turm der Magie 98").
+-define(MAPNAME150099, "Turm der Magie 99").
+-define(MAPNAME150100, "Turm der Magie 100").
+-define(MAPNAME150101, "Turm der Magie 101").
+-define(MAPNAME150102, "Turm der Magie 102").
+-define(MAPNAME150103, "Turm der Magie 103").
+-define(MAPNAME150104, "Turm der Magie 104").
+-define(MAPNAME150105, "Turm der Magie 105").
+-define(MAPNAME150106, "Turm der Magie 106").
+-define(MAPNAME150107, "Turm der Magie 107").
+-define(MAPNAME150108, "Turm der Magie 108").
+-define(MAPNAME150109, "Turm der Magie 109").
+-define(MAPNAME150110, "Turm der Magie 110").
+-define(MAPNAME150111, "Turm der Magie 111").
+-define(MAPNAME150112, "Turm der Magie 112").
+-define(MAPNAME150113, "Turm der Magie 113").
+-define(MAPNAME150114, "Turm der Magie 114").
+-define(MAPNAME150115, "Turm der Magie 115").
+-define(MAPNAME150116, "Turm der Magie 116").
+-define(MAPNAME150117, "Turm der Magie 117").
+-define(MAPNAME150118, "Turm der Magie 118").
+-define(MAPNAME150119, "Turm der Magie 119").
+-define(MAPNAME150120, "Turm der Magie 120").
+-define(MAPNAME150121, "Turm der Magie 121").
+-define(MAPNAME150122, "Turm der Magie 122").
+-define(MAPNAME150123, "Turm der Magie 123").
+-define(MAPNAME150124, "Turm der Magie 124").
+-define(MAPNAME150125, "Turm der Magie 125").
+-define(MAPNAME150126, "Turm der Magie 126").
+-define(MAPNAME150127, "Turm der Magie 127").
+-define(MAPNAME150128, "Turm der Magie 128").
+-define(MAPNAME150129, "Turm der Magie 129").
+-define(MAPNAME150130, "Turm der Magie 130").
+-define(MAPNAME150131, "Turm der Magie 131").
+-define(MAPNAME150132, "Turm der Magie 132").
+-define(MAPNAME150133, "Turm der Magie 133").
+-define(MAPNAME150134, "Turm der Magie 134").
+-define(MAPNAME150135, "Turm der Magie 135").
+-define(MAPNAME150136, "Turm der Magie 136").
+-define(MAPNAME150137, "Turm der Magie 137").
+-define(MAPNAME150138, "Turm der Magie 138").
+-define(MAPNAME150139, "Turm der Magie 139").
+-define(MAPNAME150140, "Turm der Magie 140").
+-define(MAPNAME150141, "Turm der Magie 141").
+-define(MAPNAME150142, "Turm der Magie 142").
+-define(MAPNAME150143, "Turm der Magie 143").
+-define(MAPNAME150144, "Turm der Magie 144").
+-define(MAPNAME150145, "Turm der Magie 145").
+-define(MAPNAME150146, "Turm der Magie 146").
+-define(MAPNAME150147, "Turm der Magie 147").
+-define(MAPNAME150148, "Turm der Magie 148").
+-define(MAPNAME150149, "Turm der Magie 149").
+-define(MAPNAME150150, "Turm der Magie 150").
+-define(MAPNAME150151, "Turm der Magie 151").
+-define(MAPNAME150152, "Turm der Magie 152").
+-define(MAPNAME150153, "Turm der Magie 153").
+-define(MAPNAME150154, "Turm der Magie 154").
+-define(MAPNAME150155, "Turm der Magie 155").
+-define(MAPNAME150156, "Turm der Magie 156").
+-define(MAPNAME150157, "Turm der Magie 157").
+-define(MAPNAME150158, "Turm der Magie 158").
+-define(MAPNAME150159, "Turm der Magie 159").
+-define(MAPNAME150160, "Turm der Magie 160").
+-define(MAPNAME150161, "Turm der Magie 161").
+-define(MAPNAME150162, "Turm der Magie 162").
+-define(MAPNAME150163, "Turm der Magie 163").
+-define(MAPNAME150164, "Turm der Magie 164").
+-define(MAPNAME150165, "Turm der Magie 165").
+-define(MAPNAME150166, "Turm der Magie 166").
+-define(MAPNAME150167, "Turm der Magie 167").
+-define(MAPNAME150168, "Turm der Magie 168").
+-define(MAPNAME150169, "Turm der Magie 169").
+-define(MAPNAME150170, "Turm der Magie 170").
+-define(MAPNAME150171, "Turm der Magie 171").
+-define(MAPNAME150172, "Turm der Magie 172").
+-define(MAPNAME150173, "Turm der Magie 173").
+-define(MAPNAME150174, "Turm der Magie 174").
+-define(MAPNAME150175, "Turm der Magie 175").
+-define(MAPNAME150176, "Turm der Magie 176").
+-define(MAPNAME150177, "Turm der Magie 177").
+-define(MAPNAME150178, "Turm der Magie 178").
+-define(MAPNAME150179, "Turm der Magie 179").
+-define(MAPNAME150180, "Turm der Magie 180").
+-define(MAPNAME150181, "Turm der Magie 181").
+-define(MAPNAME150182, "Turm der Magie 182").
+-define(MAPNAME150183, "Turm der Magie 183").
+-define(MAPNAME150184, "Turm der Magie 184").
+-define(MAPNAME150185, "Turm der Magie 185").
+-define(MAPNAME150186, "Turm der Magie 186").
+-define(MAPNAME150187, "Turm der Magie 187").
+-define(MAPNAME150188, "Turm der Magie 188").
+-define(MAPNAME150189, "Turm der Magie 189").
+-define(MAPNAME150190, "Turm der Magie 190").
+-define(MAPNAME150191, "Turm der Magie 191").
+-define(MAPNAME150192, "Turm der Magie 192").
+-define(MAPNAME150193, "Turm der Magie 193").
+-define(MAPNAME150194, "Turm der Magie 194").
+-define(MAPNAME150195, "Turm der Magie 195").
+-define(MAPNAME150196, "Turm der Magie 196").
+-define(MAPNAME150197, "Turm der Magie 197").
+-define(MAPNAME150198, "Turm der Magie 198").
+-define(MAPNAME150199, "Turm der Magie 199").
+-define(MAPNAME150200, "Turm der Magie 200").
+-define(MAPNAME150201, "Turm der Magie 201").
+-define(MAPNAME150202, "Turm der Magie 202").
+-define(MAPNAME150203, "Turm der Magie 203").
+-define(MAPNAME150204, "Turm der Magie 204").
+-define(MAPNAME150205, "Turm der Magie 205").
+-define(MAPNAME150206, "Turm der Magie 206").
+-define(MAPNAME150207, "Turm der Magie 207").
+-define(MAPNAME150208, "Turm der Magie 208").
+-define(MAPNAME150209, "Turm der Magie 209").
+-define(MAPNAME150210, "Turm der Magie 210").
+-define(MAPNAME150211, "Turm der Magie 211").
+-define(MAPNAME150212, "Turm der Magie 212").
+-define(MAPNAME150213, "Turm der Magie 213").
+-define(MAPNAME150214, "Turm der Magie 214").
+-define(MAPNAME150215, "Turm der Magie 215").
+-define(MAPNAME150216, "Turm der Magie 216").
+-define(MAPNAME150217, "Turm der Magie 217").
+-define(MAPNAME150218, "Turm der Magie 218").
+-define(MAPNAME150219, "Turm der Magie 219").
+-define(MAPNAME150220, "Turm der Magie 220").
+-define(MAPNAME150221, "Turm der Magie 221").
+-define(MAPNAME150222, "Turm der Magie 222").
+-define(MAPNAME150223, "Turm der Magie 223").
+-define(MAPNAME150224, "Turm der Magie 224").
+-define(MAPNAME150225, "Turm der Magie 225").
+-define(MAPNAME150226, "Turm der Magie 226").
+-define(MAPNAME150227, "Turm der Magie 227").
+-define(MAPNAME150228, "Turm der Magie 228").
+-define(MAPNAME150229, "Turm der Magie 229").
+-define(MAPNAME150230, "Turm der Magie 230").
+-define(MAPNAME150231, "Turm der Magie 231").
+-define(MAPNAME150232, "Turm der Magie 232").
+-define(MAPNAME150233, "Turm der Magie 233").
+-define(MAPNAME150234, "Turm der Magie 234").
+-define(MAPNAME150235, "Turm der Magie 235").
+-define(MAPNAME150236, "Turm der Magie 236").
+-define(MAPNAME150237, "Turm der Magie 237").
+-define(MAPNAME150238, "Turm der Magie 238").
+-define(MAPNAME150239, "Turm der Magie 239").
+-define(MAPNAME150240, "Turm der Magie 240").
+-define(MAPNAME150241, "Turm der Magie 241").
+-define(MAPNAME150242, "Turm der Magie 242").
+-define(MAPNAME150243, "Turm der Magie 243").
+-define(MAPNAME150244, "Turm der Magie 244").
+-define(MAPNAME150245, "Turm der Magie 245").
+-define(MAPNAME150246, "Turm der Magie 246").
+-define(MAPNAME150247, "Turm der Magie 247").
+-define(MAPNAME150248, "Turm der Magie 248").
+-define(MAPNAME150249, "Turm der Magie 249").
+-define(MAPNAME150250, "Turm der Magie 250").
+-define(MAPNAME150251, "Turm der Magie 251").
+-define(MAPNAME150252, "Turm der Magie 252").
+-define(MAPNAME150253, "Turm der Magie 253").
+-define(MAPNAME150254, "Turm der Magie 254").
+-define(MAPNAME150255, "Turm der Magie 255").
+-define(MAPNAME150256, "Turm der Magie 256").
+-define(MAPNAME150257, "Turm der Magie 257").
+-define(MAPNAME150258, "Turm der Magie 258").
+-define(MAPNAME150259, "Turm der Magie 259").
+-define(MAPNAME150260, "Turm der Magie 260").
+-define(MAPNAME150261, "Turm der Magie 261").
+-define(MAPNAME150262, "Turm der Magie 262").
+-define(MAPNAME150263, "Turm der Magie 263").
+-define(MAPNAME150264, "Turm der Magie 264").
+-define(MAPNAME150265, "Turm der Magie 265").
+-define(MAPNAME150266, "Turm der Magie 266").
+-define(MAPNAME150267, "Turm der Magie 267").
+-define(MAPNAME150268, "Turm der Magie 268").
+-define(MAPNAME150269, "Turm der Magie 269").
+-define(MAPNAME150270, "Turm der Magie 270").
+-define(MAPNAME150271, "Turm der Magie 271").
+-define(MAPNAME150272, "Turm der Magie 272").
+-define(MAPNAME150273, "Turm der Magie 273").
+-define(MAPNAME150274, "Turm der Magie 274").
+-define(MAPNAME150275, "Turm der Magie 275").
+-define(MAPNAME150276, "Turm der Magie 276").
+-define(MAPNAME150277, "Turm der Magie 277").
+-define(MAPNAME150278, "Turm der Magie 278").
+-define(MAPNAME150279, "Turm der Magie 279").
+-define(MAPNAME150280, "Turm der Magie 280").
+-define(MAPNAME150281, "Turm der Magie 281").
+-define(MAPNAME150282, "Turm der Magie 282").
+-define(MAPNAME150283, "Turm der Magie 283").
+-define(MAPNAME150284, "Turm der Magie 284").
+-define(MAPNAME150285, "Turm der Magie 285").
+-define(MAPNAME150286, "Turm der Magie 286").
+-define(MAPNAME150287, "Turm der Magie 287").
+-define(MAPNAME150288, "Turm der Magie 288").
+-define(MAPNAME150289, "Turm der Magie 289").
+-define(MAPNAME150290, "Turm der Magie 290").
+-define(MAPNAME150291, "Turm der Magie 291").
+-define(MAPNAME150292, "Turm der Magie 292").
+-define(MAPNAME150293, "Turm der Magie 293").
+-define(MAPNAME150294, "Turm der Magie 294").
+-define(MAPNAME150295, "Turm der Magie 295").
+-define(MAPNAME150296, "Turm der Magie 296").
+-define(MAPNAME150297, "Turm der Magie 297").
+-define(MAPNAME150298, "Turm der Magie 298").
+-define(MAPNAME150299, "Turm der Magie 299").
+-define(MAPNAME150300, "Turm der Magie 300").
+-define(MAPNAME150301, "Turm der Magie 301").
+-define(MAPNAME150302, "Turm der Magie 302").
+-define(MAPNAME150303, "Turm der Magie 303").
+-define(MAPNAME150304, "Turm der Magie 304").
+-define(MAPNAME150305, "Turm der Magie 305").
+-define(MAPNAME150306, "Turm der Magie 306").
+-define(MAPNAME150307, "Turm der Magie 307").
+-define(MAPNAME150308, "Turm der Magie 308").
+-define(MAPNAME150309, "Turm der Magie 309").
+-define(MAPNAME150310, "Turm der Magie 310").
+-define(MAPNAME150311, "Turm der Magie 311").
+-define(MAPNAME150312, "Turm der Magie 312").
+-define(MAPNAME150313, "Turm der Magie 313").
+-define(MAPNAME150314, "Turm der Magie 314").
+-define(MAPNAME150315, "Turm der Magie 315").
+-define(MAPNAME150316, "Turm der Magie 316").
+-define(MAPNAME150317, "Turm der Magie 317").
+-define(MAPNAME150318, "Turm der Magie 318").
+-define(MAPNAME150319, "Turm der Magie 319").
+-define(MAPNAME150320, "Turm der Magie 320").
+-define(MAPNAME150321, "Turm der Magie 321").
+-define(MAPNAME150322, "Turm der Magie 322").
+-define(MAPNAME150323, "Turm der Magie 323").
+-define(MAPNAME150324, "Turm der Magie 324").
+-define(MAPNAME150325, "Turm der Magie 325").
+-define(MAPNAME150326, "Turm der Magie 326").
+-define(MAPNAME150327, "Turm der Magie 327").
+-define(MAPNAME150328, "Turm der Magie 328").
+-define(MAPNAME150329, "Turm der Magie 329").
+-define(MAPNAME150330, "Turm der Magie 330").
+-define(MAPNAME150331, "Turm der Magie 331").
+-define(MAPNAME150332, "Turm der Magie 332").
+-define(MAPNAME150333, "Turm der Magie 333").
+-define(MAPNAME150334, "Turm der Magie 334").
+-define(MAPNAME150335, "Turm der Magie 335").
+-define(MAPNAME150336, "Turm der Magie 336").
+-define(MAPNAME150337, "Turm der Magie 337").
+-define(MAPNAME150338, "Turm der Magie 338").
+-define(MAPNAME150339, "Turm der Magie 339").
+-define(MAPNAME150340, "Turm der Magie 340").
+-define(MAPNAME150341, "Turm der Magie 341").
+-define(MAPNAME150342, "Turm der Magie 342").
+-define(MAPNAME150343, "Turm der Magie 343").
+-define(MAPNAME150344, "Turm der Magie 344").
+-define(MAPNAME150345, "Turm der Magie 345").
+-define(MAPNAME150346, "Turm der Magie 346").
+-define(MAPNAME150347, "Turm der Magie 347").
+-define(MAPNAME150348, "Turm der Magie 348").
+-define(MAPNAME150349, "Turm der Magie 349").
+-define(MAPNAME150350, "Turm der Magie 350").
+-define(MAPNAME150351, "Turm der Magie 351").
+-define(MAPNAME150352, "Turm der Magie 352").
+-define(MAPNAME150353, "Turm der Magie 353").
+-define(MAPNAME150354, "Turm der Magie 354").
+-define(MAPNAME150355, "Turm der Magie 355").
+-define(MAPNAME150356, "Turm der Magie 356").
+-define(MAPNAME150357, "Turm der Magie 357").
+-define(MAPNAME150358, "Turm der Magie 358").
+-define(MAPNAME150359, "Turm der Magie 359").
+-define(MAPNAME150360, "Turm der Magie 360").
+-define(MAPNAME150361, "Turm der Magie 361").
+-define(MAPNAME150362, "Turm der Magie 362").
+-define(MAPNAME150363, "Turm der Magie 363").
+-define(MAPNAME150364, "Turm der Magie 364").
+-define(MAPNAME150365, "Turm der Magie 365").
+-define(MAPNAME150366, "Turm der Magie 366").
+-define(MAPNAME150367, "Turm der Magie 367").
+-define(MAPNAME150368, "Turm der Magie 368").
+-define(MAPNAME150369, "Turm der Magie 369").
+-define(MAPNAME150370, "Turm der Magie 370").
+-define(MAPNAME150371, "Turm der Magie 371").
+-define(MAPNAME150372, "Turm der Magie 372").
+-define(MAPNAME150373, "Turm der Magie 373").
+-define(MAPNAME150374, "Turm der Magie 374").
+-define(MAPNAME150375, "Turm der Magie 375").
+-define(MAPNAME150376, "Turm der Magie 376").
+-define(MAPNAME150377, "Turm der Magie 377").
+-define(MAPNAME150378, "Turm der Magie 378").
+-define(MAPNAME150379, "Turm der Magie 379").
+-define(MAPNAME150380, "Turm der Magie 380").
+-define(MAPNAME150381, "Turm der Magie 381").
+-define(MAPNAME150382, "Turm der Magie 382").
+-define(MAPNAME150383, "Turm der Magie 383").
+-define(MAPNAME150384, "Turm der Magie 384").
+-define(MAPNAME150385, "Turm der Magie 385").
+-define(MAPNAME150386, "Turm der Magie 386").
+-define(MAPNAME150387, "Turm der Magie 387").
+-define(MAPNAME150388, "Turm der Magie 388").
+-define(MAPNAME150389, "Turm der Magie 389").
+-define(MAPNAME150390, "Turm der Magie 390").
+-define(MAPNAME150391, "Turm der Magie 391").
+-define(MAPNAME150392, "Turm der Magie 392").
+-define(MAPNAME150393, "Turm der Magie 393").
+-define(MAPNAME150394, "Turm der Magie 394").
+-define(MAPNAME150395, "Turm der Magie 395").
+-define(MAPNAME150396, "Turm der Magie 396").
+-define(MAPNAME150397, "Turm der Magie 397").
+-define(MAPNAME150398, "Turm der Magie 398").
+-define(MAPNAME150399, "Turm der Magie 399").
+-define(MAPNAME150400, "Turm der Magie 400").
+-define(MAPNAME150401, "Turm der Magie 401").
+-define(MAPNAME150402, "Turm der Magie 402").
+-define(MAPNAME150403, "Turm der Magie 403").
+-define(MAPNAME150404, "Turm der Magie 404").
+-define(MAPNAME150405, "Turm der Magie 405").
+-define(MAPNAME150406, "Turm der Magie 406").
+-define(MAPNAME150407, "Turm der Magie 407").
+-define(MAPNAME150408, "Turm der Magie 408").
+-define(MAPNAME150409, "Turm der Magie 409").
+-define(MAPNAME150410, "Turm der Magie 410").
+-define(MAPNAME150411, "Turm der Magie 411").
+-define(MAPNAME150412, "Turm der Magie 412").
+-define(MAPNAME150413, "Turm der Magie 413").
+-define(MAPNAME150414, "Turm der Magie 414").
+-define(MAPNAME150415, "Turm der Magie 415").
+-define(MAPNAME150416, "Turm der Magie 416").
+-define(MAPNAME150417, "Turm der Magie 417").
+-define(MAPNAME150418, "Turm der Magie 418").
+-define(MAPNAME150419, "Turm der Magie 419").
+-define(MAPNAME150420, "Turm der Magie 420").
+-define(MAPNAME150421, "Turm der Magie 421").
+-define(MAPNAME150422, "Turm der Magie 422").
+-define(MAPNAME150423, "Turm der Magie 423").
+-define(MAPNAME150424, "Turm der Magie 424").
+-define(MAPNAME150425, "Turm der Magie 425").
+-define(MAPNAME150426, "Turm der Magie 426").
+-define(MAPNAME150427, "Turm der Magie 427").
+-define(MAPNAME150428, "Turm der Magie 428").
+-define(MAPNAME150429, "Turm der Magie 429").
+-define(MAPNAME150430, "Turm der Magie 430").
+-define(MAPNAME150431, "Turm der Magie 431").
+-define(MAPNAME150432, "Turm der Magie 432").
+-define(MAPNAME150433, "Turm der Magie 433").
+-define(MAPNAME150434, "Turm der Magie 434").
+-define(MAPNAME150435, "Turm der Magie 435").
+-define(MAPNAME150436, "Turm der Magie 436").
+-define(MAPNAME150437, "Turm der Magie 437").
+-define(MAPNAME150438, "Turm der Magie 438").
+-define(MAPNAME150439, "Turm der Magie 439").
+-define(MAPNAME150440, "Turm der Magie 440").
+-define(MAPNAME150441, "Turm der Magie 441").
+-define(MAPNAME150442, "Turm der Magie 442").
+-define(MAPNAME150443, "Turm der Magie 443").
+-define(MAPNAME150444, "Turm der Magie 444").
+-define(MAPNAME150445, "Turm der Magie 445").
+-define(MAPNAME150446, "Turm der Magie 446").
+-define(MAPNAME150447, "Turm der Magie 447").
+-define(MAPNAME150448, "Turm der Magie 448").
+-define(MAPNAME150449, "Turm der Magie 449").
+-define(MAPNAME150450, "Turm der Magie 450").
+-define(MAPNAME150451, "Turm der Magie 451").
+-define(MAPNAME150452, "Turm der Magie 452").
+-define(MAPNAME150453, "Turm der Magie 453").
+-define(MAPNAME150454, "Turm der Magie 454").
+-define(MAPNAME150455, "Turm der Magie 455").
+-define(MAPNAME150456, "Turm der Magie 456").
+-define(MAPNAME150457, "Turm der Magie 457").
+-define(MAPNAME150458, "Turm der Magie 458").
+-define(MAPNAME150459, "Turm der Magie 459").
+-define(MAPNAME150460, "Turm der Magie 460").
+-define(MAPNAME150461, "Turm der Magie 461").
+-define(MAPNAME150462, "Turm der Magie 462").
+-define(MAPNAME150463, "Turm der Magie 463").
+-define(MAPNAME150464, "Turm der Magie 464").
+-define(MAPNAME150465, "Turm der Magie 465").
+-define(MAPNAME150466, "Turm der Magie 466").
+-define(MAPNAME150467, "Turm der Magie 467").
+-define(MAPNAME150468, "Turm der Magie 468").
+-define(MAPNAME150469, "Turm der Magie 469").
+-define(MAPNAME150470, "Turm der Magie 470").
+-define(MAPNAME150471, "Turm der Magie 471").
+-define(MAPNAME150472, "Turm der Magie 472").
+-define(MAPNAME150473, "Turm der Magie 473").
+-define(MAPNAME150474, "Turm der Magie 474").
+-define(MAPNAME150475, "Turm der Magie 475").
+-define(MAPNAME150476, "Turm der Magie 476").
+-define(MAPNAME150477, "Turm der Magie 477").
+-define(MAPNAME150478, "Turm der Magie 478").
+-define(MAPNAME150479, "Turm der Magie 479").
+-define(MAPNAME150480, "Turm der Magie 480").
+-define(MAPNAME150481, "Turm der Magie 481").
+-define(MAPNAME150482, "Turm der Magie 482").
+-define(MAPNAME150483, "Turm der Magie 483").
+-define(MAPNAME150484, "Turm der Magie 484").
+-define(MAPNAME150485, "Turm der Magie 485").
+-define(MAPNAME150486, "Turm der Magie 486").
+-define(MAPNAME150487, "Turm der Magie 487").
+-define(MAPNAME150488, "Turm der Magie 488").
+-define(MAPNAME150489, "Turm der Magie 489").
+-define(MAPNAME150490, "Turm der Magie 490").
+-define(MAPNAME150491, "Turm der Magie 491").
+-define(MAPNAME150492, "Turm der Magie 492").
+-define(MAPNAME150493, "Turm der Magie 493").
+-define(MAPNAME150494, "Turm der Magie 494").
+-define(MAPNAME150495, "Turm der Magie 495").
+-define(MAPNAME150496, "Turm der Magie 496").
+-define(MAPNAME150497, "Turm der Magie 497").
+-define(MAPNAME150498, "Turm der Magie 498").
+-define(MAPNAME150499, "Turm der Magie 499").
+-define(MAPNAME150500, "Turm der Magie 500").
+-define(MAPNAME150501, "Turm der Magie 501").
+-define(MAPNAME150502, "Turm der Magie 502").
+-define(MAPNAME150503, "Turm der Magie 503").
+-define(MAPNAME150504, "Turm der Magie 504").
+-define(MAPNAME150505, "Turm der Magie 505").
+-define(MAPNAME150506, "Turm der Magie 506").
+-define(MAPNAME150507, "Turm der Magie 507").
+-define(MAPNAME150508, "Turm der Magie 508").
+-define(MAPNAME150509, "Turm der Magie 509").
+-define(MAPNAME150510, "Turm der Magie 510").
+-define(MAPNAME150511, "Turm der Magie 511").
+-define(MAPNAME150512, "Turm der Magie 512").
+-define(MAPNAME150513, "Turm der Magie 513").
+-define(MAPNAME150514, "Turm der Magie 514").
+-define(MAPNAME150515, "Turm der Magie 515").
+-define(MAPNAME150516, "Turm der Magie 516").
+-define(MAPNAME150517, "Turm der Magie 517").
+-define(MAPNAME150518, "Turm der Magie 518").
+-define(MAPNAME150519, "Turm der Magie 519").
+-define(MAPNAME150520, "Turm der Magie 520").
+-define(MAPNAME150521, "Turm der Magie 521").
+-define(MAPNAME150522, "Turm der Magie 522").
+-define(MAPNAME150523, "Turm der Magie 523").
+-define(MAPNAME150524, "Turm der Magie 524").
+-define(MAPNAME150525, "Turm der Magie 525").
+-define(MAPNAME150526, "Turm der Magie 526").
+-define(MAPNAME150527, "Turm der Magie 527").
+-define(MAPNAME150528, "Turm der Magie 528").
+-define(MAPNAME150529, "Turm der Magie 529").
+-define(MAPNAME150530, "Turm der Magie 530").
+-define(MAPNAME150531, "Turm der Magie 531").
+-define(MAPNAME150532, "Turm der Magie 532").
+-define(MAPNAME150533, "Turm der Magie 533").
+-define(MAPNAME150534, "Turm der Magie 534").
+-define(MAPNAME150535, "Turm der Magie 535").
+-define(MAPNAME150536, "Turm der Magie 536").
+-define(MAPNAME150537, "Turm der Magie 537").
+-define(MAPNAME150538, "Turm der Magie 538").
+-define(MAPNAME150539, "Turm der Magie 539").
+-define(MAPNAME150540, "Turm der Magie 540").
+-define(MAPNAME150541, "Turm der Magie 541").
+-define(MAPNAME150542, "Turm der Magie 542").
+-define(MAPNAME150543, "Turm der Magie 543").
+-define(MAPNAME150544, "Turm der Magie 544").
+-define(MAPNAME150545, "Turm der Magie 545").
+-define(MAPNAME150546, "Turm der Magie 546").
+-define(MAPNAME150547, "Turm der Magie 547").
+-define(MAPNAME150548, "Turm der Magie 548").
+-define(MAPNAME150549, "Turm der Magie 549").
+-define(MAPNAME150550, "Turm der Magie 550").
+-define(MAPNAME150551, "Turm der Magie 551").
+-define(MAPNAME150552, "Turm der Magie 552").
+-define(MAPNAME150553, "Turm der Magie 553").
+-define(MAPNAME150554, "Turm der Magie 554").
+-define(MAPNAME150555, "Turm der Magie 555").
+-define(MAPNAME150556, "Turm der Magie 556").
+-define(MAPNAME150557, "Turm der Magie 557").
+-define(MAPNAME150558, "Turm der Magie 558").
+-define(MAPNAME150559, "Turm der Magie 559").
+-define(MAPNAME150560, "Turm der Magie 560").
+-define(MAPNAME150561, "Turm der Magie 561").
+-define(MAPNAME150562, "Turm der Magie 562").
+-define(MAPNAME150563, "Turm der Magie 563").
+-define(MAPNAME150564, "Turm der Magie 564").
+-define(MAPNAME150565, "Turm der Magie 565").
+-define(MAPNAME150566, "Turm der Magie 566").
+-define(MAPNAME150567, "Turm der Magie 567").
+-define(MAPNAME150568, "Turm der Magie 568").
+-define(MAPNAME150569, "Turm der Magie 569").
+-define(MAPNAME150570, "Turm der Magie 570").
+-define(MAPNAME150571, "Turm der Magie 571").
+-define(MAPNAME150572, "Turm der Magie 572").
+-define(MAPNAME150573, "Turm der Magie 573").
+-define(MAPNAME150574, "Turm der Magie 574").
+-define(MAPNAME150575, "Turm der Magie 575").
+-define(MAPNAME150576, "Turm der Magie 576").
+-define(MAPNAME150577, "Turm der Magie 577").
+-define(MAPNAME150578, "Turm der Magie 578").
+-define(MAPNAME150579, "Turm der Magie 579").
+-define(MAPNAME150580, "Turm der Magie 580").
+-define(MAPNAME150581, "Turm der Magie 581").
+-define(MAPNAME150582, "Turm der Magie 582").
+-define(MAPNAME150583, "Turm der Magie 583").
+-define(MAPNAME150584, "Turm der Magie 584").
+-define(MAPNAME150585, "Turm der Magie 585").
+-define(MAPNAME150586, "Turm der Magie 586").
+-define(MAPNAME150587, "Turm der Magie 587").
+-define(MAPNAME150588, "Turm der Magie 588").
+-define(MAPNAME150589, "Turm der Magie 589").
+-define(MAPNAME150590, "Turm der Magie 590").
+-define(MAPNAME150591, "Turm der Magie 591").
+-define(MAPNAME150592, "Turm der Magie 592").
+-define(MAPNAME150593, "Turm der Magie 593").
+-define(MAPNAME150594, "Turm der Magie 594").
+-define(MAPNAME150595, "Turm der Magie 595").
+-define(MAPNAME150596, "Turm der Magie 596").
+-define(MAPNAME150597, "Turm der Magie 597").
+-define(MAPNAME150598, "Turm der Magie 598").
+-define(MAPNAME150599, "Turm der Magie 599").
+-define(MAPNAME150600, "Turm der Magie 600").
+-define(MAPNAME160001, "Turm der Natur 1").
+-define(MAPNAME160002, "Turm der Natur 2").
+-define(MAPNAME160003, "Turm der Natur 3").
+-define(MAPNAME160004, "Turm der Natur 4").
+-define(MAPNAME160005, "Turm der Natur 5").
+-define(MAPNAME160006, "Turm der Natur 6").
+-define(MAPNAME160007, "Turm der Natur 7").
+-define(MAPNAME160008, "Turm der Natur 8").
+-define(MAPNAME160009, "Turm der Natur 9").
+-define(MAPNAME160010, "Turm der Natur 10").
+-define(MAPNAME160011, "Turm der Natur 11").
+-define(MAPNAME160012, "Turm der Natur 12").
+-define(MAPNAME160013, "Turm der Natur 13").
+-define(MAPNAME160014, "Turm der Natur 14").
+-define(MAPNAME160015, "Turm der Natur 15").
+-define(MAPNAME160016, "Turm der Natur 16").
+-define(MAPNAME160017, "Turm der Natur 17").
+-define(MAPNAME160018, "Turm der Natur 18").
+-define(MAPNAME160019, "Turm der Natur 19").
+-define(MAPNAME160020, "Turm der Natur 20").
+-define(MAPNAME160021, "Turm der Natur 21").
+-define(MAPNAME160022, "Turm der Natur 22").
+-define(MAPNAME160023, "Turm der Natur 23").
+-define(MAPNAME160024, "Turm der Natur 24").
+-define(MAPNAME160025, "Turm der Natur 25").
+-define(MAPNAME160026, "Turm der Natur 26").
+-define(MAPNAME160027, "Turm der Natur 27").
+-define(MAPNAME160028, "Turm der Natur 28").
+-define(MAPNAME160029, "Turm der Natur 29").
+-define(MAPNAME160030, "Turm der Natur 30").
+-define(MAPNAME160031, "Turm der Natur 31").
+-define(MAPNAME160032, "Turm der Natur 32").
+-define(MAPNAME160033, "Turm der Natur 33").
+-define(MAPNAME160034, "Turm der Natur 34").
+-define(MAPNAME160035, "Turm der Natur 35").
+-define(MAPNAME160036, "Turm der Natur 36").
+-define(MAPNAME160037, "Turm der Natur 37").
+-define(MAPNAME160038, "Turm der Natur 38").
+-define(MAPNAME160039, "Turm der Natur 39").
+-define(MAPNAME160040, "Turm der Natur 40").
+-define(MAPNAME160041, "Turm der Natur 41").
+-define(MAPNAME160042, "Turm der Natur 42").
+-define(MAPNAME160043, "Turm der Natur 43").
+-define(MAPNAME160044, "Turm der Natur 44").
+-define(MAPNAME160045, "Turm der Natur 45").
+-define(MAPNAME160046, "Turm der Natur 46").
+-define(MAPNAME160047, "Turm der Natur 47").
+-define(MAPNAME160048, "Turm der Natur 48").
+-define(MAPNAME160049, "Turm der Natur 49").
+-define(MAPNAME160050, "Turm der Natur 50").
+-define(MAPNAME160051, "Turm der Natur 51").
+-define(MAPNAME160052, "Turm der Natur 52").
+-define(MAPNAME160053, "Turm der Natur 53").
+-define(MAPNAME160054, "Turm der Natur 54").
+-define(MAPNAME160055, "Turm der Natur 55").
+-define(MAPNAME160056, "Turm der Natur 56").
+-define(MAPNAME160057, "Turm der Natur 57").
+-define(MAPNAME160058, "Turm der Natur 58").
+-define(MAPNAME160059, "Turm der Natur 59").
+-define(MAPNAME160060, "Turm der Natur 60").
+-define(MAPNAME160061, "Turm der Natur 61").
+-define(MAPNAME160062, "Turm der Natur 62").
+-define(MAPNAME160063, "Turm der Natur 63").
+-define(MAPNAME160064, "Turm der Natur 64").
+-define(MAPNAME160065, "Turm der Natur 65").
+-define(MAPNAME160066, "Turm der Natur 66").
+-define(MAPNAME160067, "Turm der Natur 67").
+-define(MAPNAME160068, "Turm der Natur 68").
+-define(MAPNAME160069, "Turm der Natur 69").
+-define(MAPNAME160070, "Turm der Natur 70").
+-define(MAPNAME160071, "Turm der Natur 71").
+-define(MAPNAME160072, "Turm der Natur 72").
+-define(MAPNAME160073, "Turm der Natur 73").
+-define(MAPNAME160074, "Turm der Natur 74").
+-define(MAPNAME160075, "Turm der Natur 75").
+-define(MAPNAME160076, "Turm der Natur 76").
+-define(MAPNAME160077, "Turm der Natur 77").
+-define(MAPNAME160078, "Turm der Natur 78").
+-define(MAPNAME160079, "Turm der Natur 79").
+-define(MAPNAME160080, "Turm der Natur 80").
+-define(MAPNAME160081, "Turm der Natur 81").
+-define(MAPNAME160082, "Turm der Natur 82").
+-define(MAPNAME160083, "Turm der Natur 83").
+-define(MAPNAME160084, "Turm der Natur 84").
+-define(MAPNAME160085, "Turm der Natur 85").
+-define(MAPNAME160086, "Turm der Natur 86").
+-define(MAPNAME160087, "Turm der Natur 87").
+-define(MAPNAME160088, "Turm der Natur 88").
+-define(MAPNAME160089, "Turm der Natur 89").
+-define(MAPNAME160090, "Turm der Natur 90").
+-define(MAPNAME160091, "Turm der Natur 91").
+-define(MAPNAME160092, "Turm der Natur 92").
+-define(MAPNAME160093, "Turm der Natur 93").
+-define(MAPNAME160094, "Turm der Natur 94").
+-define(MAPNAME160095, "Turm der Natur 95").
+-define(MAPNAME160096, "Turm der Natur 96").
+-define(MAPNAME160097, "Turm der Natur 97").
+-define(MAPNAME160098, "Turm der Natur 98").
+-define(MAPNAME160099, "Turm der Natur 99").
+-define(MAPNAME160100, "Turm der Natur 100").
+-define(MAPNAME160101, "Turm der Natur 101").
+-define(MAPNAME160102, "Turm der Natur 102").
+-define(MAPNAME160103, "Turm der Natur 103").
+-define(MAPNAME160104, "Turm der Natur 104").
+-define(MAPNAME160105, "Turm der Natur 105").
+-define(MAPNAME160106, "Turm der Natur 106").
+-define(MAPNAME160107, "Turm der Natur 107").
+-define(MAPNAME160108, "Turm der Natur 108").
+-define(MAPNAME160109, "Turm der Natur 109").
+-define(MAPNAME160110, "Turm der Natur 110").
+-define(MAPNAME160111, "Turm der Natur 111").
+-define(MAPNAME160112, "Turm der Natur 112").
+-define(MAPNAME160113, "Turm der Natur 113").
+-define(MAPNAME160114, "Turm der Natur 114").
+-define(MAPNAME160115, "Turm der Natur 115").
+-define(MAPNAME160116, "Turm der Natur 116").
+-define(MAPNAME160117, "Turm der Natur 117").
+-define(MAPNAME160118, "Turm der Natur 118").
+-define(MAPNAME160119, "Turm der Natur 119").
+-define(MAPNAME160120, "Turm der Natur 120").
+-define(MAPNAME160121, "Turm der Natur 121").
+-define(MAPNAME160122, "Turm der Natur 122").
+-define(MAPNAME160123, "Turm der Natur 123").
+-define(MAPNAME160124, "Turm der Natur 124").
+-define(MAPNAME160125, "Turm der Natur 125").
+-define(MAPNAME160126, "Turm der Natur 126").
+-define(MAPNAME160127, "Turm der Natur 127").
+-define(MAPNAME160128, "Turm der Natur 128").
+-define(MAPNAME160129, "Turm der Natur 129").
+-define(MAPNAME160130, "Turm der Natur 130").
+-define(MAPNAME160131, "Turm der Natur 131").
+-define(MAPNAME160132, "Turm der Natur 132").
+-define(MAPNAME160133, "Turm der Natur 133").
+-define(MAPNAME160134, "Turm der Natur 134").
+-define(MAPNAME160135, "Turm der Natur 135").
+-define(MAPNAME160136, "Turm der Natur 136").
+-define(MAPNAME160137, "Turm der Natur 137").
+-define(MAPNAME160138, "Turm der Natur 138").
+-define(MAPNAME160139, "Turm der Natur 139").
+-define(MAPNAME160140, "Turm der Natur 140").
+-define(MAPNAME160141, "Turm der Natur 141").
+-define(MAPNAME160142, "Turm der Natur 142").
+-define(MAPNAME160143, "Turm der Natur 143").
+-define(MAPNAME160144, "Turm der Natur 144").
+-define(MAPNAME160145, "Turm der Natur 145").
+-define(MAPNAME160146, "Turm der Natur 146").
+-define(MAPNAME160147, "Turm der Natur 147").
+-define(MAPNAME160148, "Turm der Natur 148").
+-define(MAPNAME160149, "Turm der Natur 149").
+-define(MAPNAME160150, "Turm der Natur 150").
+-define(MAPNAME160151, "Turm der Natur 151").
+-define(MAPNAME160152, "Turm der Natur 152").
+-define(MAPNAME160153, "Turm der Natur 153").
+-define(MAPNAME160154, "Turm der Natur 154").
+-define(MAPNAME160155, "Turm der Natur 155").
+-define(MAPNAME160156, "Turm der Natur 156").
+-define(MAPNAME160157, "Turm der Natur 157").
+-define(MAPNAME160158, "Turm der Natur 158").
+-define(MAPNAME160159, "Turm der Natur 159").
+-define(MAPNAME160160, "Turm der Natur 160").
+-define(MAPNAME160161, "Turm der Natur 161").
+-define(MAPNAME160162, "Turm der Natur 162").
+-define(MAPNAME160163, "Turm der Natur 163").
+-define(MAPNAME160164, "Turm der Natur 164").
+-define(MAPNAME160165, "Turm der Natur 165").
+-define(MAPNAME160166, "Turm der Natur 166").
+-define(MAPNAME160167, "Turm der Natur 167").
+-define(MAPNAME160168, "Turm der Natur 168").
+-define(MAPNAME160169, "Turm der Natur 169").
+-define(MAPNAME160170, "Turm der Natur 170").
+-define(MAPNAME160171, "Turm der Natur 171").
+-define(MAPNAME160172, "Turm der Natur 172").
+-define(MAPNAME160173, "Turm der Natur 173").
+-define(MAPNAME160174, "Turm der Natur 174").
+-define(MAPNAME160175, "Turm der Natur 175").
+-define(MAPNAME160176, "Turm der Natur 176").
+-define(MAPNAME160177, "Turm der Natur 177").
+-define(MAPNAME160178, "Turm der Natur 178").
+-define(MAPNAME160179, "Turm der Natur 179").
+-define(MAPNAME160180, "Turm der Natur 180").
+-define(MAPNAME160181, "Turm der Natur 181").
+-define(MAPNAME160182, "Turm der Natur 182").
+-define(MAPNAME160183, "Turm der Natur 183").
+-define(MAPNAME160184, "Turm der Natur 184").
+-define(MAPNAME160185, "Turm der Natur 185").
+-define(MAPNAME160186, "Turm der Natur 186").
+-define(MAPNAME160187, "Turm der Natur 187").
+-define(MAPNAME160188, "Turm der Natur 188").
+-define(MAPNAME160189, "Turm der Natur 189").
+-define(MAPNAME160190, "Turm der Natur 190").
+-define(MAPNAME160191, "Turm der Natur 191").
+-define(MAPNAME160192, "Turm der Natur 192").
+-define(MAPNAME160193, "Turm der Natur 193").
+-define(MAPNAME160194, "Turm der Natur 194").
+-define(MAPNAME160195, "Turm der Natur 195").
+-define(MAPNAME160196, "Turm der Natur 196").
+-define(MAPNAME160197, "Turm der Natur 197").
+-define(MAPNAME160198, "Turm der Natur 198").
+-define(MAPNAME160199, "Turm der Natur 199").
+-define(MAPNAME160200, "Turm der Natur 200").
+-define(MAPNAME160201, "Turm der Natur 201").
+-define(MAPNAME160202, "Turm der Natur 202").
+-define(MAPNAME160203, "Turm der Natur 203").
+-define(MAPNAME160204, "Turm der Natur 204").
+-define(MAPNAME160205, "Turm der Natur 205").
+-define(MAPNAME160206, "Turm der Natur 206").
+-define(MAPNAME160207, "Turm der Natur 207").
+-define(MAPNAME160208, "Turm der Natur 208").
+-define(MAPNAME160209, "Turm der Natur 209").
+-define(MAPNAME160210, "Turm der Natur 210").
+-define(MAPNAME160211, "Turm der Natur 211").
+-define(MAPNAME160212, "Turm der Natur 212").
+-define(MAPNAME160213, "Turm der Natur 213").
+-define(MAPNAME160214, "Turm der Natur 214").
+-define(MAPNAME160215, "Turm der Natur 215").
+-define(MAPNAME160216, "Turm der Natur 216").
+-define(MAPNAME160217, "Turm der Natur 217").
+-define(MAPNAME160218, "Turm der Natur 218").
+-define(MAPNAME160219, "Turm der Natur 219").
+-define(MAPNAME160220, "Turm der Natur 220").
+-define(MAPNAME160221, "Turm der Natur 221").
+-define(MAPNAME160222, "Turm der Natur 222").
+-define(MAPNAME160223, "Turm der Natur 223").
+-define(MAPNAME160224, "Turm der Natur 224").
+-define(MAPNAME160225, "Turm der Natur 225").
+-define(MAPNAME160226, "Turm der Natur 226").
+-define(MAPNAME160227, "Turm der Natur 227").
+-define(MAPNAME160228, "Turm der Natur 228").
+-define(MAPNAME160229, "Turm der Natur 229").
+-define(MAPNAME160230, "Turm der Natur 230").
+-define(MAPNAME160231, "Turm der Natur 231").
+-define(MAPNAME160232, "Turm der Natur 232").
+-define(MAPNAME160233, "Turm der Natur 233").
+-define(MAPNAME160234, "Turm der Natur 234").
+-define(MAPNAME160235, "Turm der Natur 235").
+-define(MAPNAME160236, "Turm der Natur 236").
+-define(MAPNAME160237, "Turm der Natur 237").
+-define(MAPNAME160238, "Turm der Natur 238").
+-define(MAPNAME160239, "Turm der Natur 239").
+-define(MAPNAME160240, "Turm der Natur 240").
+-define(MAPNAME160241, "Turm der Natur 241").
+-define(MAPNAME160242, "Turm der Natur 242").
+-define(MAPNAME160243, "Turm der Natur 243").
+-define(MAPNAME160244, "Turm der Natur 244").
+-define(MAPNAME160245, "Turm der Natur 245").
+-define(MAPNAME160246, "Turm der Natur 246").
+-define(MAPNAME160247, "Turm der Natur 247").
+-define(MAPNAME160248, "Turm der Natur 248").
+-define(MAPNAME160249, "Turm der Natur 249").
+-define(MAPNAME160250, "Turm der Natur 250").
+-define(MAPNAME160251, "Turm der Natur 251").
+-define(MAPNAME160252, "Turm der Natur 252").
+-define(MAPNAME160253, "Turm der Natur 253").
+-define(MAPNAME160254, "Turm der Natur 254").
+-define(MAPNAME160255, "Turm der Natur 255").
+-define(MAPNAME160256, "Turm der Natur 256").
+-define(MAPNAME160257, "Turm der Natur 257").
+-define(MAPNAME160258, "Turm der Natur 258").
+-define(MAPNAME160259, "Turm der Natur 259").
+-define(MAPNAME160260, "Turm der Natur 260").
+-define(MAPNAME160261, "Turm der Natur 261").
+-define(MAPNAME160262, "Turm der Natur 262").
+-define(MAPNAME160263, "Turm der Natur 263").
+-define(MAPNAME160264, "Turm der Natur 264").
+-define(MAPNAME160265, "Turm der Natur 265").
+-define(MAPNAME160266, "Turm der Natur 266").
+-define(MAPNAME160267, "Turm der Natur 267").
+-define(MAPNAME160268, "Turm der Natur 268").
+-define(MAPNAME160269, "Turm der Natur 269").
+-define(MAPNAME160270, "Turm der Natur 270").
+-define(MAPNAME160271, "Turm der Natur 271").
+-define(MAPNAME160272, "Turm der Natur 272").
+-define(MAPNAME160273, "Turm der Natur 273").
+-define(MAPNAME160274, "Turm der Natur 274").
+-define(MAPNAME160275, "Turm der Natur 275").
+-define(MAPNAME160276, "Turm der Natur 276").
+-define(MAPNAME160277, "Turm der Natur 277").
+-define(MAPNAME160278, "Turm der Natur 278").
+-define(MAPNAME160279, "Turm der Natur 279").
+-define(MAPNAME160280, "Turm der Natur 280").
+-define(MAPNAME160281, "Turm der Natur 281").
+-define(MAPNAME160282, "Turm der Natur 282").
+-define(MAPNAME160283, "Turm der Natur 283").
+-define(MAPNAME160284, "Turm der Natur 284").
+-define(MAPNAME160285, "Turm der Natur 285").
+-define(MAPNAME160286, "Turm der Natur 286").
+-define(MAPNAME160287, "Turm der Natur 287").
+-define(MAPNAME160288, "Turm der Natur 288").
+-define(MAPNAME160289, "Turm der Natur 289").
+-define(MAPNAME160290, "Turm der Natur 290").
+-define(MAPNAME160291, "Turm der Natur 291").
+-define(MAPNAME160292, "Turm der Natur 292").
+-define(MAPNAME160293, "Turm der Natur 293").
+-define(MAPNAME160294, "Turm der Natur 294").
+-define(MAPNAME160295, "Turm der Natur 295").
+-define(MAPNAME160296, "Turm der Natur 296").
+-define(MAPNAME160297, "Turm der Natur 297").
+-define(MAPNAME160298, "Turm der Natur 298").
+-define(MAPNAME160299, "Turm der Natur 299").
+-define(MAPNAME160300, "Turm der Natur 300").
+-define(MAPNAME160301, "Turm der Natur 301").
+-define(MAPNAME160302, "Turm der Natur 302").
+-define(MAPNAME160303, "Turm der Natur 303").
+-define(MAPNAME160304, "Turm der Natur 304").
+-define(MAPNAME160305, "Turm der Natur 305").
+-define(MAPNAME160306, "Turm der Natur 306").
+-define(MAPNAME160307, "Turm der Natur 307").
+-define(MAPNAME160308, "Turm der Natur 308").
+-define(MAPNAME160309, "Turm der Natur 309").
+-define(MAPNAME160310, "Turm der Natur 310").
+-define(MAPNAME160311, "Turm der Natur 311").
+-define(MAPNAME160312, "Turm der Natur 312").
+-define(MAPNAME160313, "Turm der Natur 313").
+-define(MAPNAME160314, "Turm der Natur 314").
+-define(MAPNAME160315, "Turm der Natur 315").
+-define(MAPNAME160316, "Turm der Natur 316").
+-define(MAPNAME160317, "Turm der Natur 317").
+-define(MAPNAME160318, "Turm der Natur 318").
+-define(MAPNAME160319, "Turm der Natur 319").
+-define(MAPNAME160320, "Turm der Natur 320").
+-define(MAPNAME160321, "Turm der Natur 321").
+-define(MAPNAME160322, "Turm der Natur 322").
+-define(MAPNAME160323, "Turm der Natur 323").
+-define(MAPNAME160324, "Turm der Natur 324").
+-define(MAPNAME160325, "Turm der Natur 325").
+-define(MAPNAME160326, "Turm der Natur 326").
+-define(MAPNAME160327, "Turm der Natur 327").
+-define(MAPNAME160328, "Turm der Natur 328").
+-define(MAPNAME160329, "Turm der Natur 329").
+-define(MAPNAME160330, "Turm der Natur 330").
+-define(MAPNAME160331, "Turm der Natur 331").
+-define(MAPNAME160332, "Turm der Natur 332").
+-define(MAPNAME160333, "Turm der Natur 333").
+-define(MAPNAME160334, "Turm der Natur 334").
+-define(MAPNAME160335, "Turm der Natur 335").
+-define(MAPNAME160336, "Turm der Natur 336").
+-define(MAPNAME160337, "Turm der Natur 337").
+-define(MAPNAME160338, "Turm der Natur 338").
+-define(MAPNAME160339, "Turm der Natur 339").
+-define(MAPNAME160340, "Turm der Natur 340").
+-define(MAPNAME160341, "Turm der Natur 341").
+-define(MAPNAME160342, "Turm der Natur 342").
+-define(MAPNAME160343, "Turm der Natur 343").
+-define(MAPNAME160344, "Turm der Natur 344").
+-define(MAPNAME160345, "Turm der Natur 345").
+-define(MAPNAME160346, "Turm der Natur 346").
+-define(MAPNAME160347, "Turm der Natur 347").
+-define(MAPNAME160348, "Turm der Natur 348").
+-define(MAPNAME160349, "Turm der Natur 349").
+-define(MAPNAME160350, "Turm der Natur 350").
+-define(MAPNAME160351, "Turm der Natur 351").
+-define(MAPNAME160352, "Turm der Natur 352").
+-define(MAPNAME160353, "Turm der Natur 353").
+-define(MAPNAME160354, "Turm der Natur 354").
+-define(MAPNAME160355, "Turm der Natur 355").
+-define(MAPNAME160356, "Turm der Natur 356").
+-define(MAPNAME160357, "Turm der Natur 357").
+-define(MAPNAME160358, "Turm der Natur 358").
+-define(MAPNAME160359, "Turm der Natur 359").
+-define(MAPNAME160360, "Turm der Natur 360").
+-define(MAPNAME160361, "Turm der Natur 361").
+-define(MAPNAME160362, "Turm der Natur 362").
+-define(MAPNAME160363, "Turm der Natur 363").
+-define(MAPNAME160364, "Turm der Natur 364").
+-define(MAPNAME160365, "Turm der Natur 365").
+-define(MAPNAME160366, "Turm der Natur 366").
+-define(MAPNAME160367, "Turm der Natur 367").
+-define(MAPNAME160368, "Turm der Natur 368").
+-define(MAPNAME160369, "Turm der Natur 369").
+-define(MAPNAME160370, "Turm der Natur 370").
+-define(MAPNAME160371, "Turm der Natur 371").
+-define(MAPNAME160372, "Turm der Natur 372").
+-define(MAPNAME160373, "Turm der Natur 373").
+-define(MAPNAME160374, "Turm der Natur 374").
+-define(MAPNAME160375, "Turm der Natur 375").
+-define(MAPNAME160376, "Turm der Natur 376").
+-define(MAPNAME160377, "Turm der Natur 377").
+-define(MAPNAME160378, "Turm der Natur 378").
+-define(MAPNAME160379, "Turm der Natur 379").
+-define(MAPNAME160380, "Turm der Natur 380").
+-define(MAPNAME160381, "Turm der Natur 381").
+-define(MAPNAME160382, "Turm der Natur 382").
+-define(MAPNAME160383, "Turm der Natur 383").
+-define(MAPNAME160384, "Turm der Natur 384").
+-define(MAPNAME160385, "Turm der Natur 385").
+-define(MAPNAME160386, "Turm der Natur 386").
+-define(MAPNAME160387, "Turm der Natur 387").
+-define(MAPNAME160388, "Turm der Natur 388").
+-define(MAPNAME160389, "Turm der Natur 389").
+-define(MAPNAME160390, "Turm der Natur 390").
+-define(MAPNAME160391, "Turm der Natur 391").
+-define(MAPNAME160392, "Turm der Natur 392").
+-define(MAPNAME160393, "Turm der Natur 393").
+-define(MAPNAME160394, "Turm der Natur 394").
+-define(MAPNAME160395, "Turm der Natur 395").
+-define(MAPNAME160396, "Turm der Natur 396").
+-define(MAPNAME160397, "Turm der Natur 397").
+-define(MAPNAME160398, "Turm der Natur 398").
+-define(MAPNAME160399, "Turm der Natur 399").
+-define(MAPNAME160400, "Turm der Natur 400").
+-define(MAPNAME160401, "Turm der Natur 401").
+-define(MAPNAME160402, "Turm der Natur 402").
+-define(MAPNAME160403, "Turm der Natur 403").
+-define(MAPNAME160404, "Turm der Natur 404").
+-define(MAPNAME160405, "Turm der Natur 405").
+-define(MAPNAME160406, "Turm der Natur 406").
+-define(MAPNAME160407, "Turm der Natur 407").
+-define(MAPNAME160408, "Turm der Natur 408").
+-define(MAPNAME160409, "Turm der Natur 409").
+-define(MAPNAME160410, "Turm der Natur 410").
+-define(MAPNAME160411, "Turm der Natur 411").
+-define(MAPNAME160412, "Turm der Natur 412").
+-define(MAPNAME160413, "Turm der Natur 413").
+-define(MAPNAME160414, "Turm der Natur 414").
+-define(MAPNAME160415, "Turm der Natur 415").
+-define(MAPNAME160416, "Turm der Natur 416").
+-define(MAPNAME160417, "Turm der Natur 417").
+-define(MAPNAME160418, "Turm der Natur 418").
+-define(MAPNAME160419, "Turm der Natur 419").
+-define(MAPNAME160420, "Turm der Natur 420").
+-define(MAPNAME160421, "Turm der Natur 421").
+-define(MAPNAME160422, "Turm der Natur 422").
+-define(MAPNAME160423, "Turm der Natur 423").
+-define(MAPNAME160424, "Turm der Natur 424").
+-define(MAPNAME160425, "Turm der Natur 425").
+-define(MAPNAME160426, "Turm der Natur 426").
+-define(MAPNAME160427, "Turm der Natur 427").
+-define(MAPNAME160428, "Turm der Natur 428").
+-define(MAPNAME160429, "Turm der Natur 429").
+-define(MAPNAME160430, "Turm der Natur 430").
+-define(MAPNAME160431, "Turm der Natur 431").
+-define(MAPNAME160432, "Turm der Natur 432").
+-define(MAPNAME160433, "Turm der Natur 433").
+-define(MAPNAME160434, "Turm der Natur 434").
+-define(MAPNAME160435, "Turm der Natur 435").
+-define(MAPNAME160436, "Turm der Natur 436").
+-define(MAPNAME160437, "Turm der Natur 437").
+-define(MAPNAME160438, "Turm der Natur 438").
+-define(MAPNAME160439, "Turm der Natur 439").
+-define(MAPNAME160440, "Turm der Natur 440").
+-define(MAPNAME160441, "Turm der Natur 441").
+-define(MAPNAME160442, "Turm der Natur 442").
+-define(MAPNAME160443, "Turm der Natur 443").
+-define(MAPNAME160444, "Turm der Natur 444").
+-define(MAPNAME160445, "Turm der Natur 445").
+-define(MAPNAME160446, "Turm der Natur 446").
+-define(MAPNAME160447, "Turm der Natur 447").
+-define(MAPNAME160448, "Turm der Natur 448").
+-define(MAPNAME160449, "Turm der Natur 449").
+-define(MAPNAME160450, "Turm der Natur 450").
+-define(MAPNAME160451, "Turm der Natur 451").
+-define(MAPNAME160452, "Turm der Natur 452").
+-define(MAPNAME160453, "Turm der Natur 453").
+-define(MAPNAME160454, "Turm der Natur 454").
+-define(MAPNAME160455, "Turm der Natur 455").
+-define(MAPNAME160456, "Turm der Natur 456").
+-define(MAPNAME160457, "Turm der Natur 457").
+-define(MAPNAME160458, "Turm der Natur 458").
+-define(MAPNAME160459, "Turm der Natur 459").
+-define(MAPNAME160460, "Turm der Natur 460").
+-define(MAPNAME160461, "Turm der Natur 461").
+-define(MAPNAME160462, "Turm der Natur 462").
+-define(MAPNAME160463, "Turm der Natur 463").
+-define(MAPNAME160464, "Turm der Natur 464").
+-define(MAPNAME160465, "Turm der Natur 465").
+-define(MAPNAME160466, "Turm der Natur 466").
+-define(MAPNAME160467, "Turm der Natur 467").
+-define(MAPNAME160468, "Turm der Natur 468").
+-define(MAPNAME160469, "Turm der Natur 469").
+-define(MAPNAME160470, "Turm der Natur 470").
+-define(MAPNAME160471, "Turm der Natur 471").
+-define(MAPNAME160472, "Turm der Natur 472").
+-define(MAPNAME160473, "Turm der Natur 473").
+-define(MAPNAME160474, "Turm der Natur 474").
+-define(MAPNAME160475, "Turm der Natur 475").
+-define(MAPNAME160476, "Turm der Natur 476").
+-define(MAPNAME160477, "Turm der Natur 477").
+-define(MAPNAME160478, "Turm der Natur 478").
+-define(MAPNAME160479, "Turm der Natur 479").
+-define(MAPNAME160480, "Turm der Natur 480").
+-define(MAPNAME160481, "Turm der Natur 481").
+-define(MAPNAME160482, "Turm der Natur 482").
+-define(MAPNAME160483, "Turm der Natur 483").
+-define(MAPNAME160484, "Turm der Natur 484").
+-define(MAPNAME160485, "Turm der Natur 485").
+-define(MAPNAME160486, "Turm der Natur 486").
+-define(MAPNAME160487, "Turm der Natur 487").
+-define(MAPNAME160488, "Turm der Natur 488").
+-define(MAPNAME160489, "Turm der Natur 489").
+-define(MAPNAME160490, "Turm der Natur 490").
+-define(MAPNAME160491, "Turm der Natur 491").
+-define(MAPNAME160492, "Turm der Natur 492").
+-define(MAPNAME160493, "Turm der Natur 493").
+-define(MAPNAME160494, "Turm der Natur 494").
+-define(MAPNAME160495, "Turm der Natur 495").
+-define(MAPNAME160496, "Turm der Natur 496").
+-define(MAPNAME160497, "Turm der Natur 497").
+-define(MAPNAME160498, "Turm der Natur 498").
+-define(MAPNAME160499, "Turm der Natur 499").
+-define(MAPNAME160500, "Turm der Natur 500").
+-define(MAPNAME160501, "Turm der Natur 501").
+-define(MAPNAME160502, "Turm der Natur 502").
+-define(MAPNAME160503, "Turm der Natur 503").
+-define(MAPNAME160504, "Turm der Natur 504").
+-define(MAPNAME160505, "Turm der Natur 505").
+-define(MAPNAME160506, "Turm der Natur 506").
+-define(MAPNAME160507, "Turm der Natur 507").
+-define(MAPNAME160508, "Turm der Natur 508").
+-define(MAPNAME160509, "Turm der Natur 509").
+-define(MAPNAME160510, "Turm der Natur 510").
+-define(MAPNAME160511, "Turm der Natur 511").
+-define(MAPNAME160512, "Turm der Natur 512").
+-define(MAPNAME160513, "Turm der Natur 513").
+-define(MAPNAME160514, "Turm der Natur 514").
+-define(MAPNAME160515, "Turm der Natur 515").
+-define(MAPNAME160516, "Turm der Natur 516").
+-define(MAPNAME160517, "Turm der Natur 517").
+-define(MAPNAME160518, "Turm der Natur 518").
+-define(MAPNAME160519, "Turm der Natur 519").
+-define(MAPNAME160520, "Turm der Natur 520").
+-define(MAPNAME160521, "Turm der Natur 521").
+-define(MAPNAME160522, "Turm der Natur 522").
+-define(MAPNAME160523, "Turm der Natur 523").
+-define(MAPNAME160524, "Turm der Natur 524").
+-define(MAPNAME160525, "Turm der Natur 525").
+-define(MAPNAME160526, "Turm der Natur 526").
+-define(MAPNAME160527, "Turm der Natur 527").
+-define(MAPNAME160528, "Turm der Natur 528").
+-define(MAPNAME160529, "Turm der Natur 529").
+-define(MAPNAME160530, "Turm der Natur 530").
+-define(MAPNAME160531, "Turm der Natur 531").
+-define(MAPNAME160532, "Turm der Natur 532").
+-define(MAPNAME160533, "Turm der Natur 533").
+-define(MAPNAME160534, "Turm der Natur 534").
+-define(MAPNAME160535, "Turm der Natur 535").
+-define(MAPNAME160536, "Turm der Natur 536").
+-define(MAPNAME160537, "Turm der Natur 537").
+-define(MAPNAME160538, "Turm der Natur 538").
+-define(MAPNAME160539, "Turm der Natur 539").
+-define(MAPNAME160540, "Turm der Natur 540").
+-define(MAPNAME160541, "Turm der Natur 541").
+-define(MAPNAME160542, "Turm der Natur 542").
+-define(MAPNAME160543, "Turm der Natur 543").
+-define(MAPNAME160544, "Turm der Natur 544").
+-define(MAPNAME160545, "Turm der Natur 545").
+-define(MAPNAME160546, "Turm der Natur 546").
+-define(MAPNAME160547, "Turm der Natur 547").
+-define(MAPNAME160548, "Turm der Natur 548").
+-define(MAPNAME160549, "Turm der Natur 549").
+-define(MAPNAME160550, "Turm der Natur 550").
+-define(MAPNAME160551, "Turm der Natur 551").
+-define(MAPNAME160552, "Turm der Natur 552").
+-define(MAPNAME160553, "Turm der Natur 553").
+-define(MAPNAME160554, "Turm der Natur 554").
+-define(MAPNAME160555, "Turm der Natur 555").
+-define(MAPNAME160556, "Turm der Natur 556").
+-define(MAPNAME160557, "Turm der Natur 557").
+-define(MAPNAME160558, "Turm der Natur 558").
+-define(MAPNAME160559, "Turm der Natur 559").
+-define(MAPNAME160560, "Turm der Natur 560").
+-define(MAPNAME160561, "Turm der Natur 561").
+-define(MAPNAME160562, "Turm der Natur 562").
+-define(MAPNAME160563, "Turm der Natur 563").
+-define(MAPNAME160564, "Turm der Natur 564").
+-define(MAPNAME160565, "Turm der Natur 565").
+-define(MAPNAME160566, "Turm der Natur 566").
+-define(MAPNAME160567, "Turm der Natur 567").
+-define(MAPNAME160568, "Turm der Natur 568").
+-define(MAPNAME160569, "Turm der Natur 569").
+-define(MAPNAME160570, "Turm der Natur 570").
+-define(MAPNAME160571, "Turm der Natur 571").
+-define(MAPNAME160572, "Turm der Natur 572").
+-define(MAPNAME160573, "Turm der Natur 573").
+-define(MAPNAME160574, "Turm der Natur 574").
+-define(MAPNAME160575, "Turm der Natur 575").
+-define(MAPNAME160576, "Turm der Natur 576").
+-define(MAPNAME160577, "Turm der Natur 577").
+-define(MAPNAME160578, "Turm der Natur 578").
+-define(MAPNAME160579, "Turm der Natur 579").
+-define(MAPNAME160580, "Turm der Natur 580").
+-define(MAPNAME160581, "Turm der Natur 581").
+-define(MAPNAME160582, "Turm der Natur 582").
+-define(MAPNAME160583, "Turm der Natur 583").
+-define(MAPNAME160584, "Turm der Natur 584").
+-define(MAPNAME160585, "Turm der Natur 585").
+-define(MAPNAME160586, "Turm der Natur 586").
+-define(MAPNAME160587, "Turm der Natur 587").
+-define(MAPNAME160588, "Turm der Natur 588").
+-define(MAPNAME160589, "Turm der Natur 589").
+-define(MAPNAME160590, "Turm der Natur 590").
+-define(MAPNAME160591, "Turm der Natur 591").
+-define(MAPNAME160592, "Turm der Natur 592").
+-define(MAPNAME160593, "Turm der Natur 593").
+-define(MAPNAME160594, "Turm der Natur 594").
+-define(MAPNAME160595, "Turm der Natur 595").
+-define(MAPNAME160596, "Turm der Natur 596").
+-define(MAPNAME160597, "Turm der Natur 597").
+-define(MAPNAME160598, "Turm der Natur 598").
+-define(MAPNAME160599, "Turm der Natur 599").
+-define(MAPNAME160600, "Turm der Natur 600").
+-define(MAPNAME170001, "Turm der Herrschaft 1").
+-define(MAPNAME170002, "Turm der Herrschaft 2").
+-define(MAPNAME170003, "Turm der Herrschaft 3").
+-define(MAPNAME170004, "Turm der Herrschaft 4").
+-define(MAPNAME170005, "Turm der Herrschaft 5").
+-define(MAPNAME170006, "Turm der Herrschaft 6").
+-define(MAPNAME170007, "Turm der Herrschaft 7").
+-define(MAPNAME170008, "Turm der Herrschaft 8").
+-define(MAPNAME170009, "Turm der Herrschaft 9").
+-define(MAPNAME170010, "Turm der Herrschaft 10").
+-define(MAPNAME170011, "Turm der Herrschaft 11").
+-define(MAPNAME170012, "Turm der Herrschaft 12").
+-define(MAPNAME170013, "Turm der Herrschaft 13").
+-define(MAPNAME170014, "Turm der Herrschaft 14").
+-define(MAPNAME170015, "Turm der Herrschaft 15").
+-define(MAPNAME170016, "Turm der Herrschaft 16").
+-define(MAPNAME170017, "Turm der Herrschaft 17").
+-define(MAPNAME170018, "Turm der Herrschaft 18").
+-define(MAPNAME170019, "Turm der Herrschaft 19").
+-define(MAPNAME170020, "Turm der Herrschaft 20").
+-define(MAPNAME170021, "Turm der Herrschaft 21").
+-define(MAPNAME170022, "Turm der Herrschaft 22").
+-define(MAPNAME170023, "Turm der Herrschaft 23").
+-define(MAPNAME170024, "Turm der Herrschaft 24").
+-define(MAPNAME170025, "Turm der Herrschaft 25").
+-define(MAPNAME170026, "Turm der Herrschaft 26").
+-define(MAPNAME170027, "Turm der Herrschaft 27").
+-define(MAPNAME170028, "Turm der Herrschaft 28").
+-define(MAPNAME170029, "Turm der Herrschaft 29").
+-define(MAPNAME170030, "Turm der Herrschaft 30").
+-define(MAPNAME170031, "Turm der Herrschaft 31").
+-define(MAPNAME170032, "Turm der Herrschaft 32").
+-define(MAPNAME170033, "Turm der Herrschaft 33").
+-define(MAPNAME170034, "Turm der Herrschaft 34").
+-define(MAPNAME170035, "Turm der Herrschaft 35").
+-define(MAPNAME170036, "Turm der Herrschaft 36").
+-define(MAPNAME170037, "Turm der Herrschaft 37").
+-define(MAPNAME170038, "Turm der Herrschaft 38").
+-define(MAPNAME170039, "Turm der Herrschaft 39").
+-define(MAPNAME170040, "Turm der Herrschaft 40").
+-define(MAPNAME170041, "Turm der Herrschaft 41").
+-define(MAPNAME170042, "Turm der Herrschaft 42").
+-define(MAPNAME170043, "Turm der Herrschaft 43").
+-define(MAPNAME170044, "Turm der Herrschaft 44").
+-define(MAPNAME170045, "Turm der Herrschaft 45").
+-define(MAPNAME170046, "Turm der Herrschaft 46").
+-define(MAPNAME170047, "Turm der Herrschaft 47").
+-define(MAPNAME170048, "Turm der Herrschaft 48").
+-define(MAPNAME170049, "Turm der Herrschaft 49").
+-define(MAPNAME170050, "Turm der Herrschaft 50").
+-define(MAPNAME170051, "Turm der Herrschaft 51").
+-define(MAPNAME170052, "Turm der Herrschaft 52").
+-define(MAPNAME170053, "Turm der Herrschaft 53").
+-define(MAPNAME170054, "Turm der Herrschaft 54").
+-define(MAPNAME170055, "Turm der Herrschaft 55").
+-define(MAPNAME170056, "Turm der Herrschaft 56").
+-define(MAPNAME170057, "Turm der Herrschaft 57").
+-define(MAPNAME170058, "Turm der Herrschaft 58").
+-define(MAPNAME170059, "Turm der Herrschaft 59").
+-define(MAPNAME170060, "Turm der Herrschaft 60").
+-define(MAPNAME170061, "Turm der Herrschaft 61").
+-define(MAPNAME170062, "Turm der Herrschaft 62").
+-define(MAPNAME170063, "Turm der Herrschaft 63").
+-define(MAPNAME170064, "Turm der Herrschaft 64").
+-define(MAPNAME170065, "Turm der Herrschaft 65").
+-define(MAPNAME170066, "Turm der Herrschaft 66").
+-define(MAPNAME170067, "Turm der Herrschaft 67").
+-define(MAPNAME170068, "Turm der Herrschaft 68").
+-define(MAPNAME170069, "Turm der Herrschaft 69").
+-define(MAPNAME170070, "Turm der Herrschaft 70").
+-define(MAPNAME170071, "Turm der Herrschaft 71").
+-define(MAPNAME170072, "Turm der Herrschaft 72").
+-define(MAPNAME170073, "Turm der Herrschaft 73").
+-define(MAPNAME170074, "Turm der Herrschaft 74").
+-define(MAPNAME170075, "Turm der Herrschaft 75").
+-define(MAPNAME170076, "Turm der Herrschaft 76").
+-define(MAPNAME170077, "Turm der Herrschaft 77").
+-define(MAPNAME170078, "Turm der Herrschaft 78").
+-define(MAPNAME170079, "Turm der Herrschaft 79").
+-define(MAPNAME170080, "Turm der Herrschaft 80").
+-define(MAPNAME170081, "Turm der Herrschaft 81").
+-define(MAPNAME170082, "Turm der Herrschaft 82").
+-define(MAPNAME170083, "Turm der Herrschaft 83").
+-define(MAPNAME170084, "Turm der Herrschaft 84").
+-define(MAPNAME170085, "Turm der Herrschaft 85").
+-define(MAPNAME170086, "Turm der Herrschaft 86").
+-define(MAPNAME170087, "Turm der Herrschaft 87").
+-define(MAPNAME170088, "Turm der Herrschaft 88").
+-define(MAPNAME170089, "Turm der Herrschaft 89").
+-define(MAPNAME170090, "Turm der Herrschaft 90").
+-define(MAPNAME170091, "Turm der Herrschaft 91").
+-define(MAPNAME170092, "Turm der Herrschaft 92").
+-define(MAPNAME170093, "Turm der Herrschaft 93").
+-define(MAPNAME170094, "Turm der Herrschaft 94").
+-define(MAPNAME170095, "Turm der Herrschaft 95").
+-define(MAPNAME170096, "Turm der Herrschaft 96").
+-define(MAPNAME170097, "Turm der Herrschaft 97").
+-define(MAPNAME170098, "Turm der Herrschaft 98").
+-define(MAPNAME170099, "Turm der Herrschaft 99").
+-define(MAPNAME170100, "Turm der Herrschaft 100").
+-define(MAPNAME170101, "Turm der Herrschaft 101").
+-define(MAPNAME170102, "Turm der Herrschaft 102").
+-define(MAPNAME170103, "Turm der Herrschaft 103").
+-define(MAPNAME170104, "Turm der Herrschaft 104").
+-define(MAPNAME170105, "Turm der Herrschaft 105").
+-define(MAPNAME170106, "Turm der Herrschaft 106").
+-define(MAPNAME170107, "Turm der Herrschaft 107").
+-define(MAPNAME170108, "Turm der Herrschaft 108").
+-define(MAPNAME170109, "Turm der Herrschaft 109").
+-define(MAPNAME170110, "Turm der Herrschaft 110").
+-define(MAPNAME170111, "Turm der Herrschaft 111").
+-define(MAPNAME170112, "Turm der Herrschaft 112").
+-define(MAPNAME170113, "Turm der Herrschaft 113").
+-define(MAPNAME170114, "Turm der Herrschaft 114").
+-define(MAPNAME170115, "Turm der Herrschaft 115").
+-define(MAPNAME170116, "Turm der Herrschaft 116").
+-define(MAPNAME170117, "Turm der Herrschaft 117").
+-define(MAPNAME170118, "Turm der Herrschaft 118").
+-define(MAPNAME170119, "Turm der Herrschaft 119").
+-define(MAPNAME170120, "Turm der Herrschaft 120").
+-define(MAPNAME170121, "Turm der Herrschaft 121").
+-define(MAPNAME170122, "Turm der Herrschaft 122").
+-define(MAPNAME170123, "Turm der Herrschaft 123").
+-define(MAPNAME170124, "Turm der Herrschaft 124").
+-define(MAPNAME170125, "Turm der Herrschaft 125").
+-define(MAPNAME170126, "Turm der Herrschaft 126").
+-define(MAPNAME170127, "Turm der Herrschaft 127").
+-define(MAPNAME170128, "Turm der Herrschaft 128").
+-define(MAPNAME170129, "Turm der Herrschaft 129").
+-define(MAPNAME170130, "Turm der Herrschaft 130").
+-define(MAPNAME170131, "Turm der Herrschaft 131").
+-define(MAPNAME170132, "Turm der Herrschaft 132").
+-define(MAPNAME170133, "Turm der Herrschaft 133").
+-define(MAPNAME170134, "Turm der Herrschaft 134").
+-define(MAPNAME170135, "Turm der Herrschaft 135").
+-define(MAPNAME170136, "Turm der Herrschaft 136").
+-define(MAPNAME170137, "Turm der Herrschaft 137").
+-define(MAPNAME170138, "Turm der Herrschaft 138").
+-define(MAPNAME170139, "Turm der Herrschaft 139").
+-define(MAPNAME170140, "Turm der Herrschaft 140").
+-define(MAPNAME170141, "Turm der Herrschaft 141").
+-define(MAPNAME170142, "Turm der Herrschaft 142").
+-define(MAPNAME170143, "Turm der Herrschaft 143").
+-define(MAPNAME170144, "Turm der Herrschaft 144").
+-define(MAPNAME170145, "Turm der Herrschaft 145").
+-define(MAPNAME170146, "Turm der Herrschaft 146").
+-define(MAPNAME170147, "Turm der Herrschaft 147").
+-define(MAPNAME170148, "Turm der Herrschaft 148").
+-define(MAPNAME170149, "Turm der Herrschaft 149").
+-define(MAPNAME170150, "Turm der Herrschaft 150").
+-define(MAPNAME170151, "Turm der Herrschaft 151").
+-define(MAPNAME170152, "Turm der Herrschaft 152").
+-define(MAPNAME170153, "Turm der Herrschaft 153").
+-define(MAPNAME170154, "Turm der Herrschaft 154").
+-define(MAPNAME170155, "Turm der Herrschaft 155").
+-define(MAPNAME170156, "Turm der Herrschaft 156").
+-define(MAPNAME170157, "Turm der Herrschaft 157").
+-define(MAPNAME170158, "Turm der Herrschaft 158").
+-define(MAPNAME170159, "Turm der Herrschaft 159").
+-define(MAPNAME170160, "Turm der Herrschaft 160").
+-define(MAPNAME170161, "Turm der Herrschaft 161").
+-define(MAPNAME170162, "Turm der Herrschaft 162").
+-define(MAPNAME170163, "Turm der Herrschaft 163").
+-define(MAPNAME170164, "Turm der Herrschaft 164").
+-define(MAPNAME170165, "Turm der Herrschaft 165").
+-define(MAPNAME170166, "Turm der Herrschaft 166").
+-define(MAPNAME170167, "Turm der Herrschaft 167").
+-define(MAPNAME170168, "Turm der Herrschaft 168").
+-define(MAPNAME170169, "Turm der Herrschaft 169").
+-define(MAPNAME170170, "Turm der Herrschaft 170").
+-define(MAPNAME170171, "Turm der Herrschaft 171").
+-define(MAPNAME170172, "Turm der Herrschaft 172").
+-define(MAPNAME170173, "Turm der Herrschaft 173").
+-define(MAPNAME170174, "Turm der Herrschaft 174").
+-define(MAPNAME170175, "Turm der Herrschaft 175").
+-define(MAPNAME170176, "Turm der Herrschaft 176").
+-define(MAPNAME170177, "Turm der Herrschaft 177").
+-define(MAPNAME170178, "Turm der Herrschaft 178").
+-define(MAPNAME170179, "Turm der Herrschaft 179").
+-define(MAPNAME170180, "Turm der Herrschaft 180").
+-define(MAPNAME170181, "Turm der Herrschaft 181").
+-define(MAPNAME170182, "Turm der Herrschaft 182").
+-define(MAPNAME170183, "Turm der Herrschaft 183").
+-define(MAPNAME170184, "Turm der Herrschaft 184").
+-define(MAPNAME170185, "Turm der Herrschaft 185").
+-define(MAPNAME170186, "Turm der Herrschaft 186").
+-define(MAPNAME170187, "Turm der Herrschaft 187").
+-define(MAPNAME170188, "Turm der Herrschaft 188").
+-define(MAPNAME170189, "Turm der Herrschaft 189").
+-define(MAPNAME170190, "Turm der Herrschaft 190").
+-define(MAPNAME170191, "Turm der Herrschaft 191").
+-define(MAPNAME170192, "Turm der Herrschaft 192").
+-define(MAPNAME170193, "Turm der Herrschaft 193").
+-define(MAPNAME170194, "Turm der Herrschaft 194").
+-define(MAPNAME170195, "Turm der Herrschaft 195").
+-define(MAPNAME170196, "Turm der Herrschaft 196").
+-define(MAPNAME170197, "Turm der Herrschaft 197").
+-define(MAPNAME170198, "Turm der Herrschaft 198").
+-define(MAPNAME170199, "Turm der Herrschaft 199").
+-define(MAPNAME170200, "Turm der Herrschaft 200").
+-define(MAPNAME170201, "Turm der Herrschaft 201").
+-define(MAPNAME170202, "Turm der Herrschaft 202").
+-define(MAPNAME170203, "Turm der Herrschaft 203").
+-define(MAPNAME170204, "Turm der Herrschaft 204").
+-define(MAPNAME170205, "Turm der Herrschaft 205").
+-define(MAPNAME170206, "Turm der Herrschaft 206").
+-define(MAPNAME170207, "Turm der Herrschaft 207").
+-define(MAPNAME170208, "Turm der Herrschaft 208").
+-define(MAPNAME170209, "Turm der Herrschaft 209").
+-define(MAPNAME170210, "Turm der Herrschaft 210").
+-define(MAPNAME170211, "Turm der Herrschaft 211").
+-define(MAPNAME170212, "Turm der Herrschaft 212").
+-define(MAPNAME170213, "Turm der Herrschaft 213").
+-define(MAPNAME170214, "Turm der Herrschaft 214").
+-define(MAPNAME170215, "Turm der Herrschaft 215").
+-define(MAPNAME170216, "Turm der Herrschaft 216").
+-define(MAPNAME170217, "Turm der Herrschaft 217").
+-define(MAPNAME170218, "Turm der Herrschaft 218").
+-define(MAPNAME170219, "Turm der Herrschaft 219").
+-define(MAPNAME170220, "Turm der Herrschaft 220").
+-define(MAPNAME170221, "Turm der Herrschaft 221").
+-define(MAPNAME170222, "Turm der Herrschaft 222").
+-define(MAPNAME170223, "Turm der Herrschaft 223").
+-define(MAPNAME170224, "Turm der Herrschaft 224").
+-define(MAPNAME170225, "Turm der Herrschaft 225").
+-define(MAPNAME170226, "Turm der Herrschaft 226").
+-define(MAPNAME170227, "Turm der Herrschaft 227").
+-define(MAPNAME170228, "Turm der Herrschaft 228").
+-define(MAPNAME170229, "Turm der Herrschaft 229").
+-define(MAPNAME170230, "Turm der Herrschaft 230").
+-define(MAPNAME170231, "Turm der Herrschaft 231").
+-define(MAPNAME170232, "Turm der Herrschaft 232").
+-define(MAPNAME170233, "Turm der Herrschaft 233").
+-define(MAPNAME170234, "Turm der Herrschaft 234").
+-define(MAPNAME170235, "Turm der Herrschaft 235").
+-define(MAPNAME170236, "Turm der Herrschaft 236").
+-define(MAPNAME170237, "Turm der Herrschaft 237").
+-define(MAPNAME170238, "Turm der Herrschaft 238").
+-define(MAPNAME170239, "Turm der Herrschaft 239").
+-define(MAPNAME170240, "Turm der Herrschaft 240").
+-define(MAPNAME170241, "Turm der Herrschaft 241").
+-define(MAPNAME170242, "Turm der Herrschaft 242").
+-define(MAPNAME170243, "Turm der Herrschaft 243").
+-define(MAPNAME170244, "Turm der Herrschaft 244").
+-define(MAPNAME170245, "Turm der Herrschaft 245").
+-define(MAPNAME170246, "Turm der Herrschaft 246").
+-define(MAPNAME170247, "Turm der Herrschaft 247").
+-define(MAPNAME170248, "Turm der Herrschaft 248").
+-define(MAPNAME170249, "Turm der Herrschaft 249").
+-define(MAPNAME170250, "Turm der Herrschaft 250").
+-define(MAPNAME170251, "Turm der Herrschaft 251").
+-define(MAPNAME170252, "Turm der Herrschaft 252").
+-define(MAPNAME170253, "Turm der Herrschaft 253").
+-define(MAPNAME170254, "Turm der Herrschaft 254").
+-define(MAPNAME170255, "Turm der Herrschaft 255").
+-define(MAPNAME170256, "Turm der Herrschaft 256").
+-define(MAPNAME170257, "Turm der Herrschaft 257").
+-define(MAPNAME170258, "Turm der Herrschaft 258").
+-define(MAPNAME170259, "Turm der Herrschaft 259").
+-define(MAPNAME170260, "Turm der Herrschaft 260").
+-define(MAPNAME170261, "Turm der Herrschaft 261").
+-define(MAPNAME170262, "Turm der Herrschaft 262").
+-define(MAPNAME170263, "Turm der Herrschaft 263").
+-define(MAPNAME170264, "Turm der Herrschaft 264").
+-define(MAPNAME170265, "Turm der Herrschaft 265").
+-define(MAPNAME170266, "Turm der Herrschaft 266").
+-define(MAPNAME170267, "Turm der Herrschaft 267").
+-define(MAPNAME170268, "Turm der Herrschaft 268").
+-define(MAPNAME170269, "Turm der Herrschaft 269").
+-define(MAPNAME170270, "Turm der Herrschaft 270").
+-define(MAPNAME170271, "Turm der Herrschaft 271").
+-define(MAPNAME170272, "Turm der Herrschaft 272").
+-define(MAPNAME170273, "Turm der Herrschaft 273").
+-define(MAPNAME170274, "Turm der Herrschaft 274").
+-define(MAPNAME170275, "Turm der Herrschaft 275").
+-define(MAPNAME170276, "Turm der Herrschaft 276").
+-define(MAPNAME170277, "Turm der Herrschaft 277").
+-define(MAPNAME170278, "Turm der Herrschaft 278").
+-define(MAPNAME170279, "Turm der Herrschaft 279").
+-define(MAPNAME170280, "Turm der Herrschaft 280").
+-define(MAPNAME170281, "Turm der Herrschaft 281").
+-define(MAPNAME170282, "Turm der Herrschaft 282").
+-define(MAPNAME170283, "Turm der Herrschaft 283").
+-define(MAPNAME170284, "Turm der Herrschaft 284").
+-define(MAPNAME170285, "Turm der Herrschaft 285").
+-define(MAPNAME170286, "Turm der Herrschaft 286").
+-define(MAPNAME170287, "Turm der Herrschaft 287").
+-define(MAPNAME170288, "Turm der Herrschaft 288").
+-define(MAPNAME170289, "Turm der Herrschaft 289").
+-define(MAPNAME170290, "Turm der Herrschaft 290").
+-define(MAPNAME170291, "Turm der Herrschaft 291").
+-define(MAPNAME170292, "Turm der Herrschaft 292").
+-define(MAPNAME170293, "Turm der Herrschaft 293").
+-define(MAPNAME170294, "Turm der Herrschaft 294").
+-define(MAPNAME170295, "Turm der Herrschaft 295").
+-define(MAPNAME170296, "Turm der Herrschaft 296").
+-define(MAPNAME170297, "Turm der Herrschaft 297").
+-define(MAPNAME170298, "Turm der Herrschaft 298").
+-define(MAPNAME170299, "Turm der Herrschaft 299").
+-define(MAPNAME170300, "Turm der Herrschaft 300").
+-define(MAPNAME170301, "Turm der Herrschaft 301").
+-define(MAPNAME170302, "Turm der Herrschaft 302").
+-define(MAPNAME170303, "Turm der Herrschaft 303").
+-define(MAPNAME170304, "Turm der Herrschaft 304").
+-define(MAPNAME170305, "Turm der Herrschaft 305").
+-define(MAPNAME170306, "Turm der Herrschaft 306").
+-define(MAPNAME170307, "Turm der Herrschaft 307").
+-define(MAPNAME170308, "Turm der Herrschaft 308").
+-define(MAPNAME170309, "Turm der Herrschaft 309").
+-define(MAPNAME170310, "Turm der Herrschaft 310").
+-define(MAPNAME170311, "Turm der Herrschaft 311").
+-define(MAPNAME170312, "Turm der Herrschaft 312").
+-define(MAPNAME170313, "Turm der Herrschaft 313").
+-define(MAPNAME170314, "Turm der Herrschaft 314").
+-define(MAPNAME170315, "Turm der Herrschaft 315").
+-define(MAPNAME170316, "Turm der Herrschaft 316").
+-define(MAPNAME170317, "Turm der Herrschaft 317").
+-define(MAPNAME170318, "Turm der Herrschaft 318").
+-define(MAPNAME170319, "Turm der Herrschaft 319").
+-define(MAPNAME170320, "Turm der Herrschaft 320").
+-define(MAPNAME170321, "Turm der Herrschaft 321").
+-define(MAPNAME170322, "Turm der Herrschaft 322").
+-define(MAPNAME170323, "Turm der Herrschaft 323").
+-define(MAPNAME170324, "Turm der Herrschaft 324").
+-define(MAPNAME170325, "Turm der Herrschaft 325").
+-define(MAPNAME170326, "Turm der Herrschaft 326").
+-define(MAPNAME170327, "Turm der Herrschaft 327").
+-define(MAPNAME170328, "Turm der Herrschaft 328").
+-define(MAPNAME170329, "Turm der Herrschaft 329").
+-define(MAPNAME170330, "Turm der Herrschaft 330").
+-define(MAPNAME170331, "Turm der Herrschaft 331").
+-define(MAPNAME170332, "Turm der Herrschaft 332").
+-define(MAPNAME170333, "Turm der Herrschaft 333").
+-define(MAPNAME170334, "Turm der Herrschaft 334").
+-define(MAPNAME170335, "Turm der Herrschaft 335").
+-define(MAPNAME170336, "Turm der Herrschaft 336").
+-define(MAPNAME170337, "Turm der Herrschaft 337").
+-define(MAPNAME170338, "Turm der Herrschaft 338").
+-define(MAPNAME170339, "Turm der Herrschaft 339").
+-define(MAPNAME170340, "Turm der Herrschaft 340").
+-define(MAPNAME170341, "Turm der Herrschaft 341").
+-define(MAPNAME170342, "Turm der Herrschaft 342").
+-define(MAPNAME170343, "Turm der Herrschaft 343").
+-define(MAPNAME170344, "Turm der Herrschaft 344").
+-define(MAPNAME170345, "Turm der Herrschaft 345").
+-define(MAPNAME170346, "Turm der Herrschaft 346").
+-define(MAPNAME170347, "Turm der Herrschaft 347").
+-define(MAPNAME170348, "Turm der Herrschaft 348").
+-define(MAPNAME170349, "Turm der Herrschaft 349").
+-define(MAPNAME170350, "Turm der Herrschaft 350").
+-define(MAPNAME170351, "Turm der Herrschaft 351").
+-define(MAPNAME170352, "Turm der Herrschaft 352").
+-define(MAPNAME170353, "Turm der Herrschaft 353").
+-define(MAPNAME170354, "Turm der Herrschaft 354").
+-define(MAPNAME170355, "Turm der Herrschaft 355").
+-define(MAPNAME170356, "Turm der Herrschaft 356").
+-define(MAPNAME170357, "Turm der Herrschaft 357").
+-define(MAPNAME170358, "Turm der Herrschaft 358").
+-define(MAPNAME170359, "Turm der Herrschaft 359").
+-define(MAPNAME170360, "Turm der Herrschaft 360").
+-define(MAPNAME170361, "Turm der Herrschaft 361").
+-define(MAPNAME170362, "Turm der Herrschaft 362").
+-define(MAPNAME170363, "Turm der Herrschaft 363").
+-define(MAPNAME170364, "Turm der Herrschaft 364").
+-define(MAPNAME170365, "Turm der Herrschaft 365").
+-define(MAPNAME170366, "Turm der Herrschaft 366").
+-define(MAPNAME170367, "Turm der Herrschaft 367").
+-define(MAPNAME170368, "Turm der Herrschaft 368").
+-define(MAPNAME170369, "Turm der Herrschaft 369").
+-define(MAPNAME170370, "Turm der Herrschaft 370").
+-define(MAPNAME170371, "Turm der Herrschaft 371").
+-define(MAPNAME170372, "Turm der Herrschaft 372").
+-define(MAPNAME170373, "Turm der Herrschaft 373").
+-define(MAPNAME170374, "Turm der Herrschaft 374").
+-define(MAPNAME170375, "Turm der Herrschaft 375").
+-define(MAPNAME170376, "Turm der Herrschaft 376").
+-define(MAPNAME170377, "Turm der Herrschaft 377").
+-define(MAPNAME170378, "Turm der Herrschaft 378").
+-define(MAPNAME170379, "Turm der Herrschaft 379").
+-define(MAPNAME170380, "Turm der Herrschaft 380").
+-define(MAPNAME170381, "Turm der Herrschaft 381").
+-define(MAPNAME170382, "Turm der Herrschaft 382").
+-define(MAPNAME170383, "Turm der Herrschaft 383").
+-define(MAPNAME170384, "Turm der Herrschaft 384").
+-define(MAPNAME170385, "Turm der Herrschaft 385").
+-define(MAPNAME170386, "Turm der Herrschaft 386").
+-define(MAPNAME170387, "Turm der Herrschaft 387").
+-define(MAPNAME170388, "Turm der Herrschaft 388").
+-define(MAPNAME170389, "Turm der Herrschaft 389").
+-define(MAPNAME170390, "Turm der Herrschaft 390").
+-define(MAPNAME170391, "Turm der Herrschaft 391").
+-define(MAPNAME170392, "Turm der Herrschaft 392").
+-define(MAPNAME170393, "Turm der Herrschaft 393").
+-define(MAPNAME170394, "Turm der Herrschaft 394").
+-define(MAPNAME170395, "Turm der Herrschaft 395").
+-define(MAPNAME170396, "Turm der Herrschaft 396").
+-define(MAPNAME170397, "Turm der Herrschaft 397").
+-define(MAPNAME170398, "Turm der Herrschaft 398").
+-define(MAPNAME170399, "Turm der Herrschaft 399").
+-define(MAPNAME170400, "Turm der Herrschaft 400").
+-define(MAPNAME170401, "Turm der Herrschaft 401").
+-define(MAPNAME170402, "Turm der Herrschaft 402").
+-define(MAPNAME170403, "Turm der Herrschaft 403").
+-define(MAPNAME170404, "Turm der Herrschaft 404").
+-define(MAPNAME170405, "Turm der Herrschaft 405").
+-define(MAPNAME170406, "Turm der Herrschaft 406").
+-define(MAPNAME170407, "Turm der Herrschaft 407").
+-define(MAPNAME170408, "Turm der Herrschaft 408").
+-define(MAPNAME170409, "Turm der Herrschaft 409").
+-define(MAPNAME170410, "Turm der Herrschaft 410").
+-define(MAPNAME170411, "Turm der Herrschaft 411").
+-define(MAPNAME170412, "Turm der Herrschaft 412").
+-define(MAPNAME170413, "Turm der Herrschaft 413").
+-define(MAPNAME170414, "Turm der Herrschaft 414").
+-define(MAPNAME170415, "Turm der Herrschaft 415").
+-define(MAPNAME170416, "Turm der Herrschaft 416").
+-define(MAPNAME170417, "Turm der Herrschaft 417").
+-define(MAPNAME170418, "Turm der Herrschaft 418").
+-define(MAPNAME170419, "Turm der Herrschaft 419").
+-define(MAPNAME170420, "Turm der Herrschaft 420").
+-define(MAPNAME170421, "Turm der Herrschaft 421").
+-define(MAPNAME170422, "Turm der Herrschaft 422").
+-define(MAPNAME170423, "Turm der Herrschaft 423").
+-define(MAPNAME170424, "Turm der Herrschaft 424").
+-define(MAPNAME170425, "Turm der Herrschaft 425").
+-define(MAPNAME170426, "Turm der Herrschaft 426").
+-define(MAPNAME170427, "Turm der Herrschaft 427").
+-define(MAPNAME170428, "Turm der Herrschaft 428").
+-define(MAPNAME170429, "Turm der Herrschaft 429").
+-define(MAPNAME170430, "Turm der Herrschaft 430").
+-define(MAPNAME170431, "Turm der Herrschaft 431").
+-define(MAPNAME170432, "Turm der Herrschaft 432").
+-define(MAPNAME170433, "Turm der Herrschaft 433").
+-define(MAPNAME170434, "Turm der Herrschaft 434").
+-define(MAPNAME170435, "Turm der Herrschaft 435").
+-define(MAPNAME170436, "Turm der Herrschaft 436").
+-define(MAPNAME170437, "Turm der Herrschaft 437").
+-define(MAPNAME170438, "Turm der Herrschaft 438").
+-define(MAPNAME170439, "Turm der Herrschaft 439").
+-define(MAPNAME170440, "Turm der Herrschaft 440").
+-define(MAPNAME170441, "Turm der Herrschaft 441").
+-define(MAPNAME170442, "Turm der Herrschaft 442").
+-define(MAPNAME170443, "Turm der Herrschaft 443").
+-define(MAPNAME170444, "Turm der Herrschaft 444").
+-define(MAPNAME170445, "Turm der Herrschaft 445").
+-define(MAPNAME170446, "Turm der Herrschaft 446").
+-define(MAPNAME170447, "Turm der Herrschaft 447").
+-define(MAPNAME170448, "Turm der Herrschaft 448").
+-define(MAPNAME170449, "Turm der Herrschaft 449").
+-define(MAPNAME170450, "Turm der Herrschaft 450").
+-define(MAPNAME170451, "Turm der Herrschaft 451").
+-define(MAPNAME170452, "Turm der Herrschaft 452").
+-define(MAPNAME170453, "Turm der Herrschaft 453").
+-define(MAPNAME170454, "Turm der Herrschaft 454").
+-define(MAPNAME170455, "Turm der Herrschaft 455").
+-define(MAPNAME170456, "Turm der Herrschaft 456").
+-define(MAPNAME170457, "Turm der Herrschaft 457").
+-define(MAPNAME170458, "Turm der Herrschaft 458").
+-define(MAPNAME170459, "Turm der Herrschaft 459").
+-define(MAPNAME170460, "Turm der Herrschaft 460").
+-define(MAPNAME170461, "Turm der Herrschaft 461").
+-define(MAPNAME170462, "Turm der Herrschaft 462").
+-define(MAPNAME170463, "Turm der Herrschaft 463").
+-define(MAPNAME170464, "Turm der Herrschaft 464").
+-define(MAPNAME170465, "Turm der Herrschaft 465").
+-define(MAPNAME170466, "Turm der Herrschaft 466").
+-define(MAPNAME170467, "Turm der Herrschaft 467").
+-define(MAPNAME170468, "Turm der Herrschaft 468").
+-define(MAPNAME170469, "Turm der Herrschaft 469").
+-define(MAPNAME170470, "Turm der Herrschaft 470").
+-define(MAPNAME170471, "Turm der Herrschaft 471").
+-define(MAPNAME170472, "Turm der Herrschaft 472").
+-define(MAPNAME170473, "Turm der Herrschaft 473").
+-define(MAPNAME170474, "Turm der Herrschaft 474").
+-define(MAPNAME170475, "Turm der Herrschaft 475").
+-define(MAPNAME170476, "Turm der Herrschaft 476").
+-define(MAPNAME170477, "Turm der Herrschaft 477").
+-define(MAPNAME170478, "Turm der Herrschaft 478").
+-define(MAPNAME170479, "Turm der Herrschaft 479").
+-define(MAPNAME170480, "Turm der Herrschaft 480").
+-define(MAPNAME170481, "Turm der Herrschaft 481").
+-define(MAPNAME170482, "Turm der Herrschaft 482").
+-define(MAPNAME170483, "Turm der Herrschaft 483").
+-define(MAPNAME170484, "Turm der Herrschaft 484").
+-define(MAPNAME170485, "Turm der Herrschaft 485").
+-define(MAPNAME170486, "Turm der Herrschaft 486").
+-define(MAPNAME170487, "Turm der Herrschaft 487").
+-define(MAPNAME170488, "Turm der Herrschaft 488").
+-define(MAPNAME170489, "Turm der Herrschaft 489").
+-define(MAPNAME170490, "Turm der Herrschaft 490").
+-define(MAPNAME170491, "Turm der Herrschaft 491").
+-define(MAPNAME170492, "Turm der Herrschaft 492").
+-define(MAPNAME170493, "Turm der Herrschaft 493").
+-define(MAPNAME170494, "Turm der Herrschaft 494").
+-define(MAPNAME170495, "Turm der Herrschaft 495").
+-define(MAPNAME170496, "Turm der Herrschaft 496").
+-define(MAPNAME170497, "Turm der Herrschaft 497").
+-define(MAPNAME170498, "Turm der Herrschaft 498").
+-define(MAPNAME170499, "Turm der Herrschaft 499").
+-define(MAPNAME170500, "Turm der Herrschaft 500").
+-define(MAPNAME170501, "Turm der Herrschaft 501").
+-define(MAPNAME170502, "Turm der Herrschaft 502").
+-define(MAPNAME170503, "Turm der Herrschaft 503").
+-define(MAPNAME170504, "Turm der Herrschaft 504").
+-define(MAPNAME170505, "Turm der Herrschaft 505").
+-define(MAPNAME170506, "Turm der Herrschaft 506").
+-define(MAPNAME170507, "Turm der Herrschaft 507").
+-define(MAPNAME170508, "Turm der Herrschaft 508").
+-define(MAPNAME170509, "Turm der Herrschaft 509").
+-define(MAPNAME170510, "Turm der Herrschaft 510").
+-define(MAPNAME170511, "Turm der Herrschaft 511").
+-define(MAPNAME170512, "Turm der Herrschaft 512").
+-define(MAPNAME170513, "Turm der Herrschaft 513").
+-define(MAPNAME170514, "Turm der Herrschaft 514").
+-define(MAPNAME170515, "Turm der Herrschaft 515").
+-define(MAPNAME170516, "Turm der Herrschaft 516").
+-define(MAPNAME170517, "Turm der Herrschaft 517").
+-define(MAPNAME170518, "Turm der Herrschaft 518").
+-define(MAPNAME170519, "Turm der Herrschaft 519").
+-define(MAPNAME170520, "Turm der Herrschaft 520").
+-define(MAPNAME170521, "Turm der Herrschaft 521").
+-define(MAPNAME170522, "Turm der Herrschaft 522").
+-define(MAPNAME170523, "Turm der Herrschaft 523").
+-define(MAPNAME170524, "Turm der Herrschaft 524").
+-define(MAPNAME170525, "Turm der Herrschaft 525").
+-define(MAPNAME170526, "Turm der Herrschaft 526").
+-define(MAPNAME170527, "Turm der Herrschaft 527").
+-define(MAPNAME170528, "Turm der Herrschaft 528").
+-define(MAPNAME170529, "Turm der Herrschaft 529").
+-define(MAPNAME170530, "Turm der Herrschaft 530").
+-define(MAPNAME170531, "Turm der Herrschaft 531").
+-define(MAPNAME170532, "Turm der Herrschaft 532").
+-define(MAPNAME170533, "Turm der Herrschaft 533").
+-define(MAPNAME170534, "Turm der Herrschaft 534").
+-define(MAPNAME170535, "Turm der Herrschaft 535").
+-define(MAPNAME170536, "Turm der Herrschaft 536").
+-define(MAPNAME170537, "Turm der Herrschaft 537").
+-define(MAPNAME170538, "Turm der Herrschaft 538").
+-define(MAPNAME170539, "Turm der Herrschaft 539").
+-define(MAPNAME170540, "Turm der Herrschaft 540").
+-define(MAPNAME170541, "Turm der Herrschaft 541").
+-define(MAPNAME170542, "Turm der Herrschaft 542").
+-define(MAPNAME170543, "Turm der Herrschaft 543").
+-define(MAPNAME170544, "Turm der Herrschaft 544").
+-define(MAPNAME170545, "Turm der Herrschaft 545").
+-define(MAPNAME170546, "Turm der Herrschaft 546").
+-define(MAPNAME170547, "Turm der Herrschaft 547").
+-define(MAPNAME170548, "Turm der Herrschaft 548").
+-define(MAPNAME170549, "Turm der Herrschaft 549").
+-define(MAPNAME170550, "Turm der Herrschaft 550").
+-define(MAPNAME170551, "Turm der Herrschaft 551").
+-define(MAPNAME170552, "Turm der Herrschaft 552").
+-define(MAPNAME170553, "Turm der Herrschaft 553").
+-define(MAPNAME170554, "Turm der Herrschaft 554").
+-define(MAPNAME170555, "Turm der Herrschaft 555").
+-define(MAPNAME170556, "Turm der Herrschaft 556").
+-define(MAPNAME170557, "Turm der Herrschaft 557").
+-define(MAPNAME170558, "Turm der Herrschaft 558").
+-define(MAPNAME170559, "Turm der Herrschaft 559").
+-define(MAPNAME170560, "Turm der Herrschaft 560").
+-define(MAPNAME170561, "Turm der Herrschaft 561").
+-define(MAPNAME170562, "Turm der Herrschaft 562").
+-define(MAPNAME170563, "Turm der Herrschaft 563").
+-define(MAPNAME170564, "Turm der Herrschaft 564").
+-define(MAPNAME170565, "Turm der Herrschaft 565").
+-define(MAPNAME170566, "Turm der Herrschaft 566").
+-define(MAPNAME170567, "Turm der Herrschaft 567").
+-define(MAPNAME170568, "Turm der Herrschaft 568").
+-define(MAPNAME170569, "Turm der Herrschaft 569").
+-define(MAPNAME170570, "Turm der Herrschaft 570").
+-define(MAPNAME170571, "Turm der Herrschaft 571").
+-define(MAPNAME170572, "Turm der Herrschaft 572").
+-define(MAPNAME170573, "Turm der Herrschaft 573").
+-define(MAPNAME170574, "Turm der Herrschaft 574").
+-define(MAPNAME170575, "Turm der Herrschaft 575").
+-define(MAPNAME170576, "Turm der Herrschaft 576").
+-define(MAPNAME170577, "Turm der Herrschaft 577").
+-define(MAPNAME170578, "Turm der Herrschaft 578").
+-define(MAPNAME170579, "Turm der Herrschaft 579").
+-define(MAPNAME170580, "Turm der Herrschaft 580").
+-define(MAPNAME170581, "Turm der Herrschaft 581").
+-define(MAPNAME170582, "Turm der Herrschaft 582").
+-define(MAPNAME170583, "Turm der Herrschaft 583").
+-define(MAPNAME170584, "Turm der Herrschaft 584").
+-define(MAPNAME170585, "Turm der Herrschaft 585").
+-define(MAPNAME170586, "Turm der Herrschaft 586").
+-define(MAPNAME170587, "Turm der Herrschaft 587").
+-define(MAPNAME170588, "Turm der Herrschaft 588").
+-define(MAPNAME170589, "Turm der Herrschaft 589").
+-define(MAPNAME170590, "Turm der Herrschaft 590").
+-define(MAPNAME170591, "Turm der Herrschaft 591").
+-define(MAPNAME170592, "Turm der Herrschaft 592").
+-define(MAPNAME170593, "Turm der Herrschaft 593").
+-define(MAPNAME170594, "Turm der Herrschaft 594").
+-define(MAPNAME170595, "Turm der Herrschaft 595").
+-define(MAPNAME170596, "Turm der Herrschaft 596").
+-define(MAPNAME170597, "Turm der Herrschaft 597").
+-define(MAPNAME170598, "Turm der Herrschaft 598").
+-define(MAPNAME170599, "Turm der Herrschaft 599").
+-define(MAPNAME170600, "Turm der Herrschaft 600").
+-define(MAPNAME100000, "Turm der Ewigkeit").
+-define(MAPNAME140000, "Turm des Mutes").
+-define(MAPNAME150000, "Turm der Magie").
+-define(MAPNAME160000, "Turm der Natur").
+-define(MAPNAME170000, "Turm der Herrschaft").
+-define(MAPNAME2110007, "Vorbereitungsbereich").
+-define(MAPNAME3000077, "d3测公会熔岩采集").
+-define(MAPNAME3000078, "d3测公会熔岩BOSS02").
+-define(MAPNAME3000079, "d3测公会熔岩BOSS01").
+-define(MAPNAME3000080, "d3测公会熔岩迷宫").
+-define(MAPNAME3000081, "d3测公会城墙迷宫").
+-define(MAPNAME3000082, "d3测试雅典拼接").
+-define(MAPNAME3000083, "d3测公会城墙采集").
+-define(MAPNAME3100000, "").
+-define(MAPNAME3100001, "").
+-define(MAPNAME3100002, "").
+-define(MAPNAME3100003, "").
+-define(MAPNAME3100004, "").
+-define(MAPNAME3100005, "").
+-define(MAPNAME3100006, "").
+-define(MAPNAME3100007, "").
+-define(MAPNAME3100008, "").
+-define(MAPNAME3110000, "").
+-define(MAPNAME3110001, "").
+-define(MAPNAME3120000, "").
+-define(MAPNAME3120001, "").
+-define(MAPNAME3120002, "").
+-define(MAPNAME3120003, "").
+-define(MAPNAME3120004, "").
+-define(MAPNAME3120005, "").
+-define(MAPNAME2000000, "Athenas Parthenon").
+-define(MAPNAME2000007, "Reich der Götter").
+-define(MAPNAME2000012, "Mauer von Athen").
+-define(MAPNAME2670001, "").
+-define(MAPNAME2670002, "").
+-define(MAPNAME2670003, "").
+-define(MAPNAME2670004, "").
+-define(MAPNAME2670005, "").
+-define(MAPNAME2670006, "").
+-define(MAPNAME2670007, "").
+-define(MAPNAME2670008, "").
+-define(MAPNAME2670009, "").
+-define(MAPNAME2670010, "").
+-define(MAPNAME2670011, "").
+-define(MAPNAME2670012, "").
+-define(MAPNAME2670013, "").
+-define(MAPNAME2670014, "").
+-define(MAPNAME2670015, "").
+-define(MAPNAME2670187, "").
+-define(MAPNAME2670188, "").
+-define(MAPNAME2670189, "").
+-define(MAPNAME2670190, "").
+-define(MAPNAME2670191, "").
+-define(MAPNAME2670192, "").
+-define(MAPNAME2670193, "").
+-define(MAPNAME2670194, "").
+-define(MAPNAME2670195, "").
+-define(MAPNAME2670196, "").
+-define(MAPNAME2670022, "").
+-define(MAPNAME2670156, "").
+-define(MAPNAME2670165, "").
+-define(MAPNAME2670174, "").
+-define(MAPNAME2670183, "").
+-define(MAPNAME2670184, "").
+-define(MAPNAME2120130, "").
+-define(MAPNAME2120131, "").
+-define(MAPNAME2120132, "").
+-define(MAPNAME2120133, "").
+-define(MAPNAME2120134, "").
+-define(MAPNAME2120135, "").
+-define(MAPNAME2120136, "").
+-define(MAPNAME2120137, "").
+-define(MAPNAME2120138, "").
+-define(MAPNAME2000013, "").
+-define(MAPNAME2680001, "").
+-define(MAPNAME2680002, "").
+-define(MAPNAME2680003, "").
+-define(MAPNAME2680004, "").
+-define(MAPNAME2680005, "").
+-define(MAPNAME2680006, "").
+-define(MAPNAME2680007, "").
+-define(MAPNAME2680008, "").
+-define(MAPNAME3000084, "d3测阿瓦隆7").
+-define(MAPNAME3000085, "d3测公会金字塔迷宫").
+-define(MAPNAME3000086, "d3测公会阿斯加德BOSS01").
+-define(MAPNAME3000087, "d3测公会阿斯加德迷宫").
+-define(MAPNAME3000088, "d3测公会金字塔boss01").
+-define(MAPNAME3000089, "d3测公会金字塔boss02").
+-define(MAPNAME2121006, "Wiedergeburt-Dungeon 6").
+-define(MAPNAME2121007, "Wiedergeburt-Dungeon 7").
+-define(MAPNAME2121008, "Wiedergeburt-Dungeon 8").
+-define(GUILDCOPYNODENAME00, "").
+-define(GUILDCOPYNODENAME01, "").
+-define(GUILDCOPYNODENAME02, "").
+-define(GUILDCOPYNODENAME03, "").
+-define(GUILDCOPYNODENAME04, "").
+-define(GUILDCOPYNODENAME05, "").
+-define(GUILDCOPYNODENAME06, "").
+-define(GUILDCOPYNODENAME07, "").
+-define(GUILDCOPYNODENAME08, "").
+-define(GUILDCOPYNODENAME09, "").
+-define(GUILDCOPYNODENAME10, "").
+-define(GUILDCOPYNODENAME11, "").
+-define(GUILDCOPYNODENAME12, "").
+-define(GUILDCOPYNODENAME13, "").
+-define(GUILDCOPYNODENAME14, "").
+-define(GUILDCOPYNODENAME15, "").
+-define(GUILDCOPYNODENAME16, "").
+-define(GUILDCOPYNODENAME17, "").
+-define(GUILDCOPYNODENAME18, "").
+-define(GUILDCOPYNODENAME19, "").
+-define(GUILDCOPYNODENAME20, "").
+-define(GUILDCOPYNODENAME21, "").
+-define(GUILDCOPYNODENAME22, "").
+-define(GUILDCOPYNODENAME23, "").
+-define(GUILDCOPYNODENAME24, "").
+-define(GUILDCOPYNODENAME25, "").
+-define(GUILDCOPYNODENAME26, "").
+-define(GUILDCOPYNODENAME27, "").
+-define(GUILDCOPYNODENAME28, "").
+-define(GUILDCOPYNODENAME29, "").
+-define(GUILDCOPYNAME01, "").
+-define(GUILDCOPYNAME02, "").
+-define(GUILDCOPYNAME03, "").
+-define(GUILDCOPYNAME04, "").
+-define(GUILDCOPYNAME05, "").
+-define(GUILDCOPYNAME06, "").
+-define(GUILDCOPYNAME07, "").
+-define(GUILDCOPYNAME08, "").
+-define(MAPNAME3000090, "d3测杨哥之专用").
+-define(MAPNAME3000092, "d3测温泉关").
+-define(MAPNAME2000010, "").
+-define(MAPNAME2500001, "Schwingen-Dungeon").
+-define(MAPNAME3000093, "d3测军械库").
+-define(MAPNAME3000094, "d3测攻城锤").
+-define(MAPNAME3000095, "").
+-define(WINGCOPYNAME1, "Schwingen-Dungeon 1").
+-define(WINGCOPYNAME2, "Schwingen-Dungeon 2").
+-define(WINGCOPYNAME3, "Schwingen-Dungeon 3").
+-define(WINGCOPYNAME4, "Schwingen-Dungeon 4").
+-define(WINGCOPYNAME5, "Schwingen-Dungeon 5").
+-define(WINGCOPYNAME6, "Schwingen-Dungeon 6").
+-define(WINGCOPYNAME7, "Schwingen-Dungeon 7").
+-define(WINGCOPYNAME8, "Schwingen-Dungeon 8").
+-define(WINGCOPYNAME9, "Schwingen-Dungeon 9").
+-define(WINGCOPYNAME10, "Schwingen-Dungeon 10").
+-define(WINGCOPYNAME11, "Schwingen-Dungeon 11").
+-define(WINGCOPYNAME12, "Schwingen-Dungeon 12").
+-define(WINGCOPYNAME13, "Schwingen-Dungeon 13").
+-define(WINGCOPYNAME14, "Schwingen-Dungeon 14").
+-define(WINGCOPYNAME15, "Schwingen-Dungeon 15").
+-define(WINGCOPYNAME16, "Schwingen-Dungeon 16").
+-define(WINGCOPYNAME17, "Schwingen-Dungeon 17").
+-define(WINGCOPYNAME18, "Schwingen-Dungeon 18").
+-define(WINGCOPYNAME19, "Schwingen-Dungeon 19").
+-define(WINGCOPYNAME20, "Schwingen-Dungeon 20").
+-define(WINGCOPYNAME21, "Schwingen-Dungeon 21").
+-define(WINGCOPYNAME22, "Schwingen-Dungeon 22").
+-define(WINGCOPYNAME23, "Schwingen-Dungeon 23").
+-define(WINGCOPYNAME24, "Schwingen-Dungeon 24").
+-define(WINGCOPYNAME25, "Schwingen-Dungeon 25").
+-define(WINGCOPYNAME26, "Schwingen-Dungeon 26").
+-define(WINGCOPYNAME27, "Schwingen-Dungeon 27").
+-define(WINGCOPYNAME28, "Schwingen-Dungeon 28").
+-define(WINGCOPYNAME29, "Schwingen-Dungeon 29").
+-define(WINGCOPYNAME30, "Schwingen-Dungeon 30").
+-define(WINGCOPYNAME31, "Schwingen-Dungeon 31").
+-define(WINGCOPYNAME32, "Schwingen-Dungeon 32").
+-define(WINGCOPYNAME33, "Schwingen-Dungeon 33").
+-define(WINGCOPYNAME34, "Schwingen-Dungeon 34").
+-define(WINGCOPYNAME35, "Schwingen-Dungeon 35").
+-define(WINGCOPYNAME36, "Schwingen-Dungeon 36").
+-define(WINGCOPYNAME37, "Schwingen-Dungeon 37").
+-define(WINGCOPYNAME38, "Schwingen-Dungeon 38").
+-define(WINGCOPYNAME39, "Schwingen-Dungeon 39").
+-define(WINGCOPYNAME40, "Schwingen-Dungeon 40").
+-define(WINGCOPYNAME41, "Schwingen-Dungeon 41").
+-define(WINGCOPYNAME42, "Schwingen-Dungeon 42").
+-define(WINGCOPYNAME43, "Schwingen-Dungeon 43").
+-define(WINGCOPYNAME44, "Schwingen-Dungeon 44").
+-define(WINGCOPYNAME45, "Schwingen-Dungeon 45").
+-define(WINGCOPYNAME46, "Schwingen-Dungeon 46").
+-define(WINGCOPYNAME47, "Schwingen-Dungeon 47").
+-define(WINGCOPYNAME48, "Schwingen-Dungeon 48").
+-define(WINGCOPYNAME49, "Schwingen-Dungeon 49").
+-define(WINGCOPYNAME50, "Schwingen-Dungeon 50").
+-define(MAPNAME6900001, "Prolog 02").
+-define(MAPNAME6900002, "Prolog 03").
+-define(MAPNAME6900003, "").
+-define(MAPNAME6900004, "").
+-define(MAPNAME6900005, "").
+-define(MAPNAME6900006, "").
+-define(MAPNAME2479001, "Elite-Raubzug 1-1").
+-define(MAPNAME2479002, "Elite-Raubzug 1-2").
+-define(MAPNAME2479003, "Elite-Raubzug 1-3").
+-define(MAPNAME2479004, "Elite-Raubzug 1-4").
+-define(MAPNAME2479005, "Elite-Raubzug 1-5").
+-define(MAPNAME2479006, "Elite-Raubzug 1-6").
+-define(MAPNAME2479007, "Elite-Raubzug 1-7").
+-define(MAPNAME2479008, "Elite-Raubzug 1-8").
+-define(MAPNAME2479009, "Elite-Raubzug 1-9").
+-define(MAPNAME2479010, "Elite-Raubzug 1-10").
+-define(MAPNAME2479011, "Elite-Raubzug 1-11").
+-define(MAPNAME2479012, "Elite-Raubzug 1-12").
+-define(MAPNAME2479013, "Elite-Raubzug 1-13").
+-define(MAPNAME2479014, "Elite-Raubzug 1-14").
+-define(MAPNAME2479015, "Elite-Raubzug 1-15").
+-define(MAPNAME2470001, "Elite-Raubzug 2-1").
+-define(MAPNAME2470002, "Elite-Raubzug 2-2").
+-define(MAPNAME2470003, "Elite-Raubzug 2-3").
+-define(MAPNAME2470004, "Elite-Raubzug 2-4").
+-define(MAPNAME2470005, "Elite-Raubzug 2-5").
+-define(MAPNAME2470006, "Elite-Raubzug 2-6").
+-define(MAPNAME2470007, "Elite-Raubzug 2-7").
+-define(MAPNAME2479016, "Elite-Raubzug 2-8").
+-define(MAPNAME2479017, "Elite-Raubzug 2-9").
+-define(MAPNAME2479018, "Elite-Raubzug 2-10").
+-define(MAPNAME2479019, "Elite-Raubzug 2-11").
+-define(MAPNAME2479020, "Elite-Raubzug 2-12").
+-define(MAPNAME2479021, "Elite-Raubzug 2-13").
+-define(MAPNAME2479022, "Elite-Raubzug 2-14").
+-define(MAPNAME2479023, "Elite-Raubzug 2-15").
+-define(MAPNAME2470008, "Elite-Raubzug 3-1").
+-define(MAPNAME2470009, "Elite-Raubzug 3-2").
+-define(MAPNAME2470010, "Elite-Raubzug 3-3").
+-define(MAPNAME2470011, "Elite-Raubzug 3-4").
+-define(MAPNAME2470012, "Elite-Raubzug 3-5").
+-define(MAPNAME2470013, "Elite-Raubzug 3-6").
+-define(MAPNAME2470014, "Elite-Raubzug 3-7").
+-define(MAPNAME2470015, "Elite-Raubzug 3-8").
+-define(MAPNAME2479024, "Elite-Raubzug 3-9").
+-define(MAPNAME2479025, "Elite-Raubzug 3-10").
+-define(MAPNAME2479026, "Elite-Raubzug 3-11").
+-define(MAPNAME2479027, "Elite-Raubzug 3-12").
+-define(MAPNAME2479028, "Elite-Raubzug 3-13").
+-define(MAPNAME2479029, "Elite-Raubzug 3-14").
+-define(MAPNAME2479030, "Elite-Raubzug 3-15").
+-define(MAPNAME2470016, "Elite-Raubzug 4-1").
+-define(MAPNAME2470017, "Elite-Raubzug 4-2").
+-define(MAPNAME2470018, "Elite-Raubzug 4-3").
+-define(MAPNAME2470019, "Elite-Raubzug 4-4").
+-define(MAPNAME2470020, "Elite-Raubzug 4-5").
+-define(MAPNAME2470021, "Elite-Raubzug 4-6").
+-define(MAPNAME2470022, "Elite-Raubzug 4-7").
+-define(MAPNAME2470023, "Elite-Raubzug 4-8").
+-define(MAPNAME2479031, "Elite-Raubzug 4-9").
+-define(MAPNAME2479032, "Elite-Raubzug 4-10").
+-define(MAPNAME2479033, "Elite-Raubzug 4-11").
+-define(MAPNAME2479034, "Elite-Raubzug 4-12").
+-define(MAPNAME2479035, "Elite-Raubzug 4-13").
+-define(MAPNAME2479036, "Elite-Raubzug 4-14").
+-define(MAPNAME2479037, "Elite-Raubzug 4-15").
+-define(MAPNAME2470024, "Elite-Raubzug 5-1").
+-define(MAPNAME2470025, "Elite-Raubzug 5-2").
+-define(MAPNAME2470026, "Elite-Raubzug 5-3").
+-define(MAPNAME2470027, "Elite-Raubzug 5-4").
+-define(MAPNAME2470028, "Elite-Raubzug 5-5").
+-define(MAPNAME2470029, "Elite-Raubzug 5-6").
+-define(MAPNAME2470030, "Elite-Raubzug 5-7").
+-define(MAPNAME2470031, "Elite-Raubzug 5-8").
+-define(MAPNAME2470032, "Elite-Raubzug 5-9").
+-define(MAPNAME2470033, "Elite-Raubzug 5-10").
+-define(MAPNAME2479038, "Elite-Raubzug 5-11").
+-define(MAPNAME2479039, "Elite-Raubzug 5-12").
+-define(MAPNAME2479040, "Elite-Raubzug 5-13").
+-define(MAPNAME2479041, "Elite-Raubzug 5-14").
+-define(MAPNAME2479042, "Elite-Raubzug 5-15").
+-define(MAPNAME2470034, "Elite-Raubzug 6-1").
+-define(MAPNAME2470035, "Elite-Raubzug 6-2").
+-define(MAPNAME2470036, "Elite-Raubzug 6-3").
+-define(MAPNAME2470037, "Elite-Raubzug 6-4").
+-define(MAPNAME2470038, "Elite-Raubzug 6-5").
+-define(MAPNAME2470039, "Elite-Raubzug 6-6").
+-define(MAPNAME2470040, "Elite-Raubzug 6-7").
+-define(MAPNAME2470041, "Elite-Raubzug 6-8").
+-define(MAPNAME2470042, "Elite-Raubzug 6-9").
+-define(MAPNAME2470043, "Elite-Raubzug 6-10").
+-define(MAPNAME2479043, "Elite-Raubzug 6-11").
+-define(MAPNAME2479044, "Elite-Raubzug 6-12").
+-define(MAPNAME2479045, "Elite-Raubzug 6-13").
+-define(MAPNAME2479046, "Elite-Raubzug 6-14").
+-define(MAPNAME2479047, "Elite-Raubzug 6-15").
+-define(MAPNAME2470044, "Elite-Raubzug 7-1").
+-define(MAPNAME2470045, "Elite-Raubzug 7-2").
+-define(MAPNAME2470046, "Elite-Raubzug 7-3").
+-define(MAPNAME2470047, "Elite-Raubzug 7-4").
+-define(MAPNAME2470048, "Elite-Raubzug 7-5").
+-define(MAPNAME2470049, "Elite-Raubzug 7-6").
+-define(MAPNAME2470050, "Elite-Raubzug 7-7").
+-define(MAPNAME2470051, "Elite-Raubzug 7-8").
+-define(MAPNAME2470052, "Elite-Raubzug 7-9").
+-define(MAPNAME2470053, "Elite-Raubzug 7-10").
+-define(MAPNAME2479048, "Elite-Raubzug 7-11").
+-define(MAPNAME2479049, "Elite-Raubzug 7-12").
+-define(MAPNAME2479050, "Elite-Raubzug 7-13").
+-define(MAPNAME2479051, "Elite-Raubzug 7-14").
+-define(MAPNAME2479052, "Elite-Raubzug 7-15").
+-define(MAPNAME2470054, "Elite-Raubzug 8-1").
+-define(MAPNAME2470055, "Elite-Raubzug 8-2").
+-define(MAPNAME2470056, "Elite-Raubzug 8-3").
+-define(MAPNAME2470057, "Elite-Raubzug 8-4").
+-define(MAPNAME2470058, "Elite-Raubzug 8-5").
+-define(MAPNAME2470059, "Elite-Raubzug 8-6").
+-define(MAPNAME2470060, "Elite-Raubzug 8-7").
+-define(MAPNAME2470061, "Elite-Raubzug 8-8").
+-define(MAPNAME2470062, "Elite-Raubzug 8-9").
+-define(MAPNAME2470063, "Elite-Raubzug 8-10").
+-define(MAPNAME2479053, "Elite-Raubzug 8-11").
+-define(MAPNAME2479054, "Elite-Raubzug 8-12").
+-define(MAPNAME2479055, "Elite-Raubzug 8-13").
+-define(MAPNAME2479056, "Elite-Raubzug 8-14").
+-define(MAPNAME2479057, "Elite-Raubzug 8-15").
+-define(MAPNAME2470064, "Elite-Raubzug 9-1").
+-define(MAPNAME2470065, "Elite-Raubzug 9-2").
+-define(MAPNAME2470066, "Elite-Raubzug 9-3").
+-define(MAPNAME2470067, "Elite-Raubzug 9-4").
+-define(MAPNAME2470068, "Elite-Raubzug 9-5").
+-define(MAPNAME2470069, "Elite-Raubzug 9-6").
+-define(MAPNAME2470070, "Elite-Raubzug 9-7").
+-define(MAPNAME2470071, "Elite-Raubzug 9-8").
+-define(MAPNAME2470072, "Elite-Raubzug 9-9").
+-define(MAPNAME2470073, "Elite-Raubzug 9-10").
+-define(MAPNAME2479058, "Elite-Raubzug 9-11").
+-define(MAPNAME2479059, "Elite-Raubzug 9-12").
+-define(MAPNAME2479060, "Elite-Raubzug 9-13").
+-define(MAPNAME2479061, "Elite-Raubzug 9-14").
+-define(MAPNAME2479062, "Elite-Raubzug 9-15").
+-define(MAPNAME2470074, "Elite-Raubzug 10-1").
+-define(MAPNAME2470075, "Elite-Raubzug 10-2").
+-define(MAPNAME2470076, "Elite-Raubzug 10-3").
+-define(MAPNAME2470077, "Elite-Raubzug 10-4").
+-define(MAPNAME2470078, "Elite-Raubzug 10-5").
+-define(MAPNAME2470079, "Elite-Raubzug 10-6").
+-define(MAPNAME2470080, "Elite-Raubzug 10-7").
+-define(MAPNAME2470081, "Elite-Raubzug 10-8").
+-define(MAPNAME2470082, "Elite-Raubzug 10-9").
+-define(MAPNAME2470083, "Elite-Raubzug 10-10").
+-define(MAPNAME2479063, "Elite-Raubzug 10-11").
+-define(MAPNAME2479064, "Elite-Raubzug 10-12").
+-define(MAPNAME2479065, "Elite-Raubzug 10-13").
+-define(MAPNAME2479066, "Elite-Raubzug 10-14").
+-define(MAPNAME2479067, "Elite-Raubzug 10-15").
+-define(MAPNAME2470084, "Elite-Raubzug 11-1").
+-define(MAPNAME2470085, "Elite-Raubzug 11-2").
+-define(MAPNAME2470086, "Elite-Raubzug 11-3").
+-define(MAPNAME2470087, "Elite-Raubzug 11-4").
+-define(MAPNAME2470088, "Elite-Raubzug 11-5").
+-define(MAPNAME2470089, "Elite-Raubzug 11-6").
+-define(MAPNAME2470090, "Elite-Raubzug 11-7").
+-define(MAPNAME2470091, "Elite-Raubzug 11-8").
+-define(MAPNAME2470092, "Elite-Raubzug 11-9").
+-define(MAPNAME2470093, "Elite-Raubzug 11-10").
+-define(MAPNAME2479068, "Elite-Raubzug 11-11").
+-define(MAPNAME2479069, "Elite-Raubzug 11-12").
+-define(MAPNAME2479070, "Elite-Raubzug 11-13").
+-define(MAPNAME2479071, "Elite-Raubzug 11-14").
+-define(MAPNAME2479072, "Elite-Raubzug 11-15").
+-define(MAPNAME2470094, "Elite-Raubzug 12-1").
+-define(MAPNAME2470095, "Elite-Raubzug 12-2").
+-define(MAPNAME2470096, "Elite-Raubzug 12-3").
+-define(MAPNAME2470097, "Elite-Raubzug 12-4").
+-define(MAPNAME2470098, "Elite-Raubzug 12-5").
+-define(MAPNAME2470099, "Elite-Raubzug 12-6").
+-define(MAPNAME2470100, "Elite-Raubzug 12-7").
+-define(MAPNAME2470101, "Elite-Raubzug 12-8").
+-define(MAPNAME2470102, "Elite-Raubzug 12-9").
+-define(MAPNAME2470103, "Elite-Raubzug 12-10").
+-define(MAPNAME2479073, "Elite-Raubzug 12-11").
+-define(MAPNAME2479074, "Elite-Raubzug 12-12").
+-define(MAPNAME2479075, "Elite-Raubzug 12-13").
+-define(MAPNAME2479076, "Elite-Raubzug 12-14").
+-define(MAPNAME2479077, "Elite-Raubzug 12-15").
+-define(MAPNAME2470104, "Elite-Raubzug 13-1").
+-define(MAPNAME2470105, "Elite-Raubzug 13-2").
+-define(MAPNAME2470106, "Elite-Raubzug 13-3").
+-define(MAPNAME2470107, "Elite-Raubzug 13-4").
+-define(MAPNAME2470108, "Elite-Raubzug 13-5").
+-define(MAPNAME2470109, "Elite-Raubzug 13-6").
+-define(MAPNAME2470110, "Elite-Raubzug 13-7").
+-define(MAPNAME2470111, "Elite-Raubzug 13-8").
+-define(MAPNAME2470112, "Elite-Raubzug 13-9").
+-define(MAPNAME2470113, "Elite-Raubzug 13-10").
+-define(MAPNAME2479078, "Elite-Raubzug 13-11").
+-define(MAPNAME2479079, "Elite-Raubzug 13-12").
+-define(MAPNAME2479080, "Elite-Raubzug 13-13").
+-define(MAPNAME2479081, "Elite-Raubzug 13-14").
+-define(MAPNAME2479082, "Elite-Raubzug 13-15").
+-define(MAPNAME2470114, "Elite-Raubzug 14-1").
+-define(MAPNAME2470115, "Elite-Raubzug 14-2").
+-define(MAPNAME2470116, "Elite-Raubzug 14-3").
+-define(MAPNAME2470117, "Elite-Raubzug 14-4").
+-define(MAPNAME2470118, "Elite-Raubzug 14-5").
+-define(MAPNAME2470119, "Elite-Raubzug 14-6").
+-define(MAPNAME2470120, "Elite-Raubzug 14-7").
+-define(MAPNAME2470121, "Elite-Raubzug 14-8").
+-define(MAPNAME2470122, "Elite-Raubzug 14-9").
+-define(MAPNAME2470123, "Elite-Raubzug 14-10").
+-define(MAPNAME2479083, "Elite-Raubzug 14-11").
+-define(MAPNAME2479084, "Elite-Raubzug 14-12").
+-define(MAPNAME2479085, "Elite-Raubzug 14-13").
+-define(MAPNAME2479086, "Elite-Raubzug 14-14").
+-define(MAPNAME2479087, "Elite-Raubzug 14-15").
+-define(MAPNAME2470124, "Elite-Raubzug 15-1").
+-define(MAPNAME2470125, "Elite-Raubzug 15-2").
+-define(MAPNAME2470126, "Elite-Raubzug 15-3").
+-define(MAPNAME2470127, "Elite-Raubzug 15-4").
+-define(MAPNAME2470128, "Elite-Raubzug 15-5").
+-define(MAPNAME2470129, "Elite-Raubzug 15-6").
+-define(MAPNAME2470130, "Elite-Raubzug 15-7").
+-define(MAPNAME2470131, "Elite-Raubzug 15-8").
+-define(MAPNAME2470132, "Elite-Raubzug 15-9").
+-define(MAPNAME2470133, "Elite-Raubzug 15-10").
+-define(MAPNAME2479088, "Elite-Raubzug 15-11").
+-define(MAPNAME2479089, "Elite-Raubzug 15-12").
+-define(MAPNAME2479090, "Elite-Raubzug 15-13").
+-define(MAPNAME2479091, "Elite-Raubzug 15-14").
+-define(MAPNAME2479092, "Elite-Raubzug 15-15").
+-define(MAPNAME2470134, "Elite-Raubzug 16-1").
+-define(MAPNAME2470135, "Elite-Raubzug 16-2").
+-define(MAPNAME2470136, "Elite-Raubzug 16-3").
+-define(MAPNAME2470137, "Elite-Raubzug 16-4").
+-define(MAPNAME2470138, "Elite-Raubzug 16-5").
+-define(MAPNAME2470139, "Elite-Raubzug 16-6").
+-define(MAPNAME2470140, "Elite-Raubzug 16-7").
+-define(MAPNAME2470141, "Elite-Raubzug 16-8").
+-define(MAPNAME2470142, "Elite-Raubzug 16-9").
+-define(MAPNAME2470143, "Elite-Raubzug 16-10").
+-define(MAPNAME2479093, "Elite-Raubzug 16-11").
+-define(MAPNAME2479094, "Elite-Raubzug 16-12").
+-define(MAPNAME2479095, "Elite-Raubzug 16-13").
+-define(MAPNAME2479096, "Elite-Raubzug 16-14").
+-define(MAPNAME2479097, "Elite-Raubzug 16-15").
+-define(MAPNAME2470144, "Elite-Raubzug 17-1").
+-define(MAPNAME2470145, "Elite-Raubzug 17-2").
+-define(MAPNAME2470146, "Elite-Raubzug 17-3").
+-define(MAPNAME2470147, "Elite-Raubzug 17-4").
+-define(MAPNAME2470148, "Elite-Raubzug 17-5").
+-define(MAPNAME2470149, "Elite-Raubzug 17-6").
+-define(MAPNAME2470150, "Elite-Raubzug 17-7").
+-define(MAPNAME2470151, "Elite-Raubzug 17-8").
+-define(MAPNAME2470152, "Elite-Raubzug 17-9").
+-define(MAPNAME2470153, "Elite-Raubzug 17-10").
+-define(MAPNAME2479098, "Elite-Raubzug 17-11").
+-define(MAPNAME2479099, "Elite-Raubzug 17-12").
+-define(MAPNAME2479100, "Elite-Raubzug 17-13").
+-define(MAPNAME2479101, "Elite-Raubzug 17-14").
+-define(MAPNAME2479102, "Elite-Raubzug 17-15").
+-define(MAPNAME2470154, "Elite-Raubzug 18-1").
+-define(MAPNAME2470155, "Elite-Raubzug 18-2").
+-define(MAPNAME2470156, "Elite-Raubzug 18-3").
+-define(MAPNAME2470157, "Elite-Raubzug 18-4").
+-define(MAPNAME2470158, "Elite-Raubzug 18-5").
+-define(MAPNAME2470159, "Elite-Raubzug 18-6").
+-define(MAPNAME2470160, "Elite-Raubzug 18-7").
+-define(MAPNAME2470161, "Elite-Raubzug 18-8").
+-define(MAPNAME2470162, "Elite-Raubzug 18-9").
+-define(MAPNAME2470163, "Elite-Raubzug 18-10").
+-define(MAPNAME2470164, "Elite-Raubzug 18-11").
+-define(MAPNAME2470165, "Elite-Raubzug 18-12").
+-define(MAPNAME2470166, "Elite-Raubzug 18-13").
+-define(MAPNAME2470167, "Elite-Raubzug 18-14").
+-define(MAPNAME2470168, "Elite-Raubzug 18-15").
+-define(MAPNAME2470169, "Elite-Raubzug 19-1").
+-define(MAPNAME2470170, "Elite-Raubzug 19-2").
+-define(MAPNAME2470171, "Elite-Raubzug 19-3").
+-define(MAPNAME2470172, "Elite-Raubzug 19-4").
+-define(MAPNAME2470173, "Elite-Raubzug 19-5").
+-define(MAPNAME2470174, "Elite-Raubzug 19-6").
+-define(MAPNAME2470175, "Elite-Raubzug 19-7").
+-define(MAPNAME2470176, "Elite-Raubzug 19-8").
+-define(MAPNAME2470177, "Elite-Raubzug 19-9").
+-define(MAPNAME2470178, "Elite-Raubzug 19-10").
+-define(MAPNAME2470179, "Elite-Raubzug 19-11").
+-define(MAPNAME2470180, "Elite-Raubzug 19-12").
+-define(MAPNAME2470181, "Elite-Raubzug 19-13").
+-define(MAPNAME2470182, "Elite-Raubzug 19-14").
+-define(MAPNAME2470183, "Elite-Raubzug 19-15").
+-define(MAPNAME2470184, "Elite-Raubzug 20-1").
+-define(MAPNAME2470185, "Elite-Raubzug 20-2").
+-define(MAPNAME2470186, "Elite-Raubzug 20-3").
+-define(MAPNAME2470187, "Elite-Raubzug 20-4").
+-define(MAPNAME2470188, "Elite-Raubzug 20-5").
+-define(MAPNAME2470189, "Elite-Raubzug 20-6").
+-define(MAPNAME2470190, "Elite-Raubzug 20-7").
+-define(MAPNAME2470191, "Elite-Raubzug 20-8").
+-define(MAPNAME2470192, "Elite-Raubzug 20-9").
+-define(MAPNAME2470193, "Elite-Raubzug 20-10").
+-define(MAPNAME2470194, "Elite-Raubzug 20-11").
+-define(MAPNAME2470195, "Elite-Raubzug 20-12").
+-define(MAPNAME2470196, "Elite-Raubzug 20-13").
+-define(MAPNAME2470197, "Elite-Raubzug 20-14").
+-define(MAPNAME2470198, "Elite-Raubzug 20-15").
+-define(MAPNAME2470199, "Elite-Raubzug 21-1").
+-define(MAPNAME2470200, "Elite-Raubzug 21-2").
+-define(MAPNAME2470201, "Elite-Raubzug 21-3").
+-define(MAPNAME2470202, "Elite-Raubzug 21-4").
+-define(MAPNAME2470203, "Elite-Raubzug 21-5").
+-define(MAPNAME2470204, "Elite-Raubzug 21-6").
+-define(MAPNAME2470205, "Elite-Raubzug 21-7").
+-define(MAPNAME2470206, "Elite-Raubzug 21-8").
+-define(MAPNAME2470207, "Elite-Raubzug 21-9").
+-define(MAPNAME2470208, "Elite-Raubzug 21-10").
+-define(MAPNAME2470209, "Elite-Raubzug 21-11").
+-define(MAPNAME2470210, "Elite-Raubzug 21-12").
+-define(MAPNAME2470211, "Elite-Raubzug 21-13").
+-define(MAPNAME2470212, "Elite-Raubzug 21-14").
+-define(MAPNAME2470213, "Elite-Raubzug 21-15").
+-define(MAPNAME2470214, "Elite-Raubzug 22-1").
+-define(MAPNAME2470215, "Elite-Raubzug 22-2").
+-define(MAPNAME2470216, "Elite-Raubzug 22-3").
+-define(MAPNAME2470217, "Elite-Raubzug 22-4").
+-define(MAPNAME2470218, "Elite-Raubzug 22-5").
+-define(MAPNAME2470219, "Elite-Raubzug 22-6").
+-define(MAPNAME2470220, "Elite-Raubzug 22-7").
+-define(MAPNAME2470221, "Elite-Raubzug 22-8").
+-define(MAPNAME2470222, "Elite-Raubzug 22-9").
+-define(MAPNAME2470223, "Elite-Raubzug 22-10").
+-define(MAPNAME2470224, "Elite-Raubzug 22-11").
+-define(MAPNAME2470225, "Elite-Raubzug 22-12").
+-define(MAPNAME2470226, "Elite-Raubzug 22-13").
+-define(MAPNAME2470227, "Elite-Raubzug 22-14").
+-define(MAPNAME2470228, "Elite-Raubzug 22-15").
+-define(MAPNAME2470229, "Elite-Raubzug 23-1").
+-define(MAPNAME2470230, "Elite-Raubzug 23-2").
+-define(MAPNAME2470231, "Elite-Raubzug 23-3").
+-define(MAPNAME2470232, "Elite-Raubzug 23-4").
+-define(MAPNAME2470233, "Elite-Raubzug 23-5").
+-define(MAPNAME2470234, "Elite-Raubzug 23-6").
+-define(MAPNAME2470235, "Elite-Raubzug 23-7").
+-define(MAPNAME2470236, "Elite-Raubzug 23-8").
+-define(MAPNAME2470237, "Elite-Raubzug 23-9").
+-define(MAPNAME2470238, "Elite-Raubzug 23-10").
+-define(MAPNAME2470239, "Elite-Raubzug 23-11").
+-define(MAPNAME2470240, "Elite-Raubzug 23-12").
+-define(MAPNAME2470241, "Elite-Raubzug 23-13").
+-define(MAPNAME2470242, "Elite-Raubzug 23-14").
+-define(MAPNAME2470243, "Elite-Raubzug 23-15").
+-define(MAPNAME2470244, "Elite-Raubzug 24-1").
+-define(MAPNAME2470245, "Elite-Raubzug 24-2").
+-define(MAPNAME2470246, "Elite-Raubzug 24-3").
+-define(MAPNAME2470247, "Elite-Raubzug 24-4").
+-define(MAPNAME2470248, "Elite-Raubzug 24-5").
+-define(MAPNAME2470249, "Elite-Raubzug 24-6").
+-define(MAPNAME2470250, "Elite-Raubzug 24-7").
+-define(MAPNAME2470251, "Elite-Raubzug 24-8").
+-define(MAPNAME2470252, "Elite-Raubzug 24-9").
+-define(MAPNAME2470253, "Elite-Raubzug 24-10").
+-define(MAPNAME2470254, "Elite-Raubzug 24-11").
+-define(MAPNAME2470255, "Elite-Raubzug 24-12").
+-define(MAPNAME2470256, "Elite-Raubzug 24-13").
+-define(MAPNAME2470257, "Elite-Raubzug 24-14").
+-define(MAPNAME2470258, "Elite-Raubzug 24-15").
+-define(MAPNAME2470259, "Elite-Raubzug 25-1").
+-define(MAPNAME2470260, "Elite-Raubzug 25-2").
+-define(MAPNAME2470261, "Elite-Raubzug 25-3").
+-define(MAPNAME2470262, "Elite-Raubzug 25-4").
+-define(MAPNAME2470263, "Elite-Raubzug 25-5").
+-define(MAPNAME2470264, "Elite-Raubzug 25-6").
+-define(MAPNAME2470265, "Elite-Raubzug 25-7").
+-define(MAPNAME2470266, "Elite-Raubzug 25-8").
+-define(MAPNAME2470267, "Elite-Raubzug 25-9").
+-define(MAPNAME2470268, "Elite-Raubzug 25-10").
+-define(MAPNAME2470269, "Elite-Raubzug 25-11").
+-define(MAPNAME2470270, "Elite-Raubzug 25-12").
+-define(MAPNAME2470271, "Elite-Raubzug 25-13").
+-define(MAPNAME2470272, "Elite-Raubzug 25-14").
+-define(MAPNAME2470273, "Elite-Raubzug 25-15").
+-define(MAPNAME2470274, "Elite-Raubzug 26-1").
+-define(MAPNAME2470275, "Elite-Raubzug 26-2").
+-define(MAPNAME2470276, "Elite-Raubzug 26-3").
+-define(MAPNAME2470277, "Elite-Raubzug 26-4").
+-define(MAPNAME2470278, "Elite-Raubzug 26-5").
+-define(MAPNAME2470279, "Elite-Raubzug 26-6").
+-define(MAPNAME2470280, "Elite-Raubzug 26-7").
+-define(MAPNAME2470281, "Elite-Raubzug 26-8").
+-define(MAPNAME2470282, "Elite-Raubzug 26-9").
+-define(MAPNAME2470283, "Elite-Raubzug 26-10").
+-define(MAPNAME2470284, "Elite-Raubzug 26-11").
+-define(MAPNAME2470285, "Elite-Raubzug 26-12").
+-define(MAPNAME2470286, "Elite-Raubzug 26-13").
+-define(MAPNAME2470287, "Elite-Raubzug 26-14").
+-define(MAPNAME2470288, "Elite-Raubzug 26-15").
+-define(MAPNAME2470289, "Elite-Raubzug 27-1").
+-define(MAPNAME2470290, "Elite-Raubzug 27-2").
+-define(MAPNAME2470291, "Elite-Raubzug 27-3").
+-define(MAPNAME2470292, "Elite-Raubzug 27-4").
+-define(MAPNAME2470293, "Elite-Raubzug 27-5").
+-define(MAPNAME2470294, "Elite-Raubzug 27-6").
+-define(MAPNAME2470295, "Elite-Raubzug 27-7").
+-define(MAPNAME2470296, "Elite-Raubzug 27-8").
+-define(MAPNAME2470297, "Elite-Raubzug 27-9").
+-define(MAPNAME2470298, "Elite-Raubzug 27-10").
+-define(MAPNAME2470299, "Elite-Raubzug 27-11").
+-define(MAPNAME2470300, "Elite-Raubzug 27-12").
+-define(MAPNAME2470301, "Elite-Raubzug 27-13").
+-define(MAPNAME2470302, "Elite-Raubzug 27-14").
+-define(MAPNAME2470303, "Elite-Raubzug 27-15").
+-define(MAPNAME2470304, "Elite-Raubzug 28-1").
+-define(MAPNAME2470305, "Elite-Raubzug 28-2").
+-define(MAPNAME2470306, "Elite-Raubzug 28-3").
+-define(MAPNAME2470307, "Elite-Raubzug 28-4").
+-define(MAPNAME2470308, "Elite-Raubzug 28-5").
+-define(MAPNAME2470309, "Elite-Raubzug 28-6").
+-define(MAPNAME2470310, "Elite-Raubzug 28-7").
+-define(MAPNAME2470311, "Elite-Raubzug 28-8").
+-define(MAPNAME2470312, "Elite-Raubzug 28-9").
+-define(MAPNAME2470313, "Elite-Raubzug 28-10").
+-define(MAPNAME2470314, "Elite-Raubzug 28-11").
+-define(MAPNAME2470315, "Elite-Raubzug 28-12").
+-define(MAPNAME2470316, "Elite-Raubzug 28-13").
+-define(MAPNAME2470317, "Elite-Raubzug 28-14").
+-define(MAPNAME2470318, "Elite-Raubzug 28-15").
+-define(MAPNAME2470319, "Elite-Raubzug 29-1").
+-define(MAPNAME2470320, "Elite-Raubzug 29-2").
+-define(MAPNAME2470321, "Elite-Raubzug 29-3").
+-define(MAPNAME2470322, "Elite-Raubzug 29-4").
+-define(MAPNAME2470323, "Elite-Raubzug 29-5").
+-define(MAPNAME2470324, "Elite-Raubzug 29-6").
+-define(MAPNAME2470325, "Elite-Raubzug 29-7").
+-define(MAPNAME2470326, "Elite-Raubzug 29-8").
+-define(MAPNAME2470327, "Elite-Raubzug 29-9").
+-define(MAPNAME2470328, "Elite-Raubzug 29-10").
+-define(MAPNAME2470329, "Elite-Raubzug 29-11").
+-define(MAPNAME2470330, "Elite-Raubzug 29-12").
+-define(MAPNAME2470331, "Elite-Raubzug 29-13").
+-define(MAPNAME2470332, "Elite-Raubzug 29-14").
+-define(MAPNAME2470333, "Elite-Raubzug 29-15").
+-define(MAPNAME2470334, "Elite-Raubzug 30-1").
+-define(MAPNAME2470335, "Elite-Raubzug 30-2").
+-define(MAPNAME2470336, "Elite-Raubzug 30-3").
+-define(MAPNAME2470337, "Elite-Raubzug 30-4").
+-define(MAPNAME2470338, "Elite-Raubzug 30-5").
+-define(MAPNAME2470339, "Elite-Raubzug 30-6").
+-define(MAPNAME2470340, "Elite-Raubzug 30-7").
+-define(MAPNAME2470341, "Elite-Raubzug 30-8").
+-define(MAPNAME2470342, "Elite-Raubzug 30-9").
+-define(MAPNAME2470343, "Elite-Raubzug 30-10").
+-define(MAPNAME2470344, "Elite-Raubzug 30-11").
+-define(MAPNAME2470345, "Elite-Raubzug 30-12").
+-define(MAPNAME2470346, "Elite-Raubzug 30-13").
+-define(MAPNAME2470347, "Elite-Raubzug 30-14").
+-define(MAPNAME2470348, "Elite-Raubzug 30-15").
+-define(MAPNAME2470349, "Elite-Raubzug 31-1").
+-define(MAPNAME2470350, "Elite-Raubzug 31-2").
+-define(MAPNAME2470351, "Elite-Raubzug 31-3").
+-define(MAPNAME2470352, "Elite-Raubzug 31-4").
+-define(MAPNAME2470353, "Elite-Raubzug 31-5").
+-define(MAPNAME2470354, "Elite-Raubzug 31-6").
+-define(MAPNAME2470355, "Elite-Raubzug 31-7").
+-define(MAPNAME2470356, "Elite-Raubzug 31-8").
+-define(MAPNAME2470357, "Elite-Raubzug 31-9").
+-define(MAPNAME2470358, "Elite-Raubzug 31-10").
+-define(MAPNAME2470359, "Elite-Raubzug 31-11").
+-define(MAPNAME2470360, "Elite-Raubzug 31-12").
+-define(MAPNAME2470361, "Elite-Raubzug 31-13").
+-define(MAPNAME2470362, "Elite-Raubzug 31-14").
+-define(MAPNAME2470363, "Elite-Raubzug 31-15").
+-define(MAPNAME2470364, "Elite-Raubzug 32-1").
+-define(MAPNAME2470365, "Elite-Raubzug 32-2").
+-define(MAPNAME2470366, "Elite-Raubzug 32-3").
+-define(MAPNAME2470367, "Elite-Raubzug 32-4").
+-define(MAPNAME2470368, "Elite-Raubzug 32-5").
+-define(MAPNAME2470369, "Elite-Raubzug 32-6").
+-define(MAPNAME2470370, "Elite-Raubzug 32-7").
+-define(MAPNAME2470371, "Elite-Raubzug 32-8").
+-define(MAPNAME2470372, "Elite-Raubzug 32-9").
+-define(MAPNAME2470373, "Elite-Raubzug 32-10").
+-define(MAPNAME2470374, "Elite-Raubzug 32-11").
+-define(MAPNAME2470375, "Elite-Raubzug 32-12").
+-define(MAPNAME2470376, "Elite-Raubzug 32-13").
+-define(MAPNAME2470377, "Elite-Raubzug 32-14").
+-define(MAPNAME2470378, "Elite-Raubzug 32-15").
+-define(MAPNAME2470379, "Elite-Raubzug 33-1").
+-define(MAPNAME2470380, "Elite-Raubzug 33-2").
+-define(MAPNAME2470381, "Elite-Raubzug 33-3").
+-define(MAPNAME2470382, "Elite-Raubzug 33-4").
+-define(MAPNAME2470383, "Elite-Raubzug 33-5").
+-define(MAPNAME2470384, "Elite-Raubzug 33-6").
+-define(MAPNAME2470385, "Elite-Raubzug 33-7").
+-define(MAPNAME2470386, "Elite-Raubzug 33-8").
+-define(MAPNAME2470387, "Elite-Raubzug 33-9").
+-define(MAPNAME2470388, "Elite-Raubzug 33-10").
+-define(MAPNAME2470389, "Elite-Raubzug 33-11").
+-define(MAPNAME2470390, "Elite-Raubzug 33-12").
+-define(MAPNAME2470391, "Elite-Raubzug 33-13").
+-define(MAPNAME2470392, "Elite-Raubzug 33-14").
+-define(MAPNAME2470393, "Elite-Raubzug 33-15").
+-define(MAPNAME2470394, "Elite-Raubzug 34-1").
+-define(MAPNAME2470395, "Elite-Raubzug 34-2").
+-define(MAPNAME2470396, "Elite-Raubzug 34-3").
+-define(MAPNAME2470397, "Elite-Raubzug 34-4").
+-define(MAPNAME2470398, "Elite-Raubzug 34-5").
+-define(MAPNAME2470399, "Elite-Raubzug 34-6").
+-define(MAPNAME2470400, "Elite-Raubzug 34-7").
+-define(MAPNAME2470401, "Elite-Raubzug 34-8").
+-define(MAPNAME2470402, "Elite-Raubzug 34-9").
+-define(MAPNAME2470403, "Elite-Raubzug 34-10").
+-define(MAPNAME2470404, "Elite-Raubzug 34-11").
+-define(MAPNAME2470405, "Elite-Raubzug 34-12").
+-define(MAPNAME2470406, "Elite-Raubzug 34-13").
+-define(MAPNAME2470407, "Elite-Raubzug 34-14").
+-define(MAPNAME2470408, "Elite-Raubzug 34-15").
+-define(MAPNAME2470409, "Elite-Raubzug 35-1").
+-define(MAPNAME2470410, "Elite-Raubzug 35-2").
+-define(MAPNAME2470411, "Elite-Raubzug 35-3").
+-define(MAPNAME2470412, "Elite-Raubzug 35-4").
+-define(MAPNAME2470413, "Elite-Raubzug 35-5").
+-define(MAPNAME2470414, "Elite-Raubzug 35-6").
+-define(MAPNAME2470415, "Elite-Raubzug 35-7").
+-define(MAPNAME2470416, "Elite-Raubzug 35-8").
+-define(MAPNAME2470417, "Elite-Raubzug 35-9").
+-define(MAPNAME2470418, "Elite-Raubzug 35-10").
+-define(MAPNAME2470419, "Elite-Raubzug 35-11").
+-define(MAPNAME2470420, "Elite-Raubzug 35-12").
+-define(MAPNAME2470421, "Elite-Raubzug 35-13").
+-define(MAPNAME2470422, "Elite-Raubzug 35-14").
+-define(MAPNAME2470423, "Elite-Raubzug 35-15").
+-define(MAPNAME2470424, "Elite-Raubzug 36-1").
+-define(MAPNAME2470425, "Elite-Raubzug 36-2").
+-define(MAPNAME2470426, "Elite-Raubzug 36-3").
+-define(MAPNAME2470427, "Elite-Raubzug 36-4").
+-define(MAPNAME2470428, "Elite-Raubzug 36-5").
+-define(MAPNAME2470429, "Elite-Raubzug 36-6").
+-define(MAPNAME2470430, "Elite-Raubzug 36-7").
+-define(MAPNAME2470431, "Elite-Raubzug 36-8").
+-define(MAPNAME2470432, "Elite-Raubzug 36-9").
+-define(MAPNAME2470433, "Elite-Raubzug 36-10").
+-define(MAPNAME2470434, "Elite-Raubzug 36-11").
+-define(MAPNAME2470435, "Elite-Raubzug 36-12").
+-define(MAPNAME2470436, "Elite-Raubzug 36-13").
+-define(MAPNAME2470437, "Elite-Raubzug 36-14").
+-define(MAPNAME2470438, "Elite-Raubzug 36-15").
+-define(MAPNAME2470439, "Elite-Raubzug 37-1").
+-define(MAPNAME2470440, "Elite-Raubzug 37-2").
+-define(MAPNAME2470441, "Elite-Raubzug 37-3").
+-define(MAPNAME2470442, "Elite-Raubzug 37-4").
+-define(MAPNAME2470443, "Elite-Raubzug 37-5").
+-define(MAPNAME2470444, "Elite-Raubzug 37-6").
+-define(MAPNAME2470445, "Elite-Raubzug 37-7").
+-define(MAPNAME2470446, "Elite-Raubzug 37-8").
+-define(MAPNAME2470447, "Elite-Raubzug 37-9").
+-define(MAPNAME2470448, "Elite-Raubzug 37-10").
+-define(MAPNAME2470449, "Elite-Raubzug 37-11").
+-define(MAPNAME2470450, "Elite-Raubzug 37-12").
+-define(MAPNAME2470451, "Elite-Raubzug 37-13").
+-define(MAPNAME2470452, "Elite-Raubzug 37-14").
+-define(MAPNAME2470453, "Elite-Raubzug 37-15").
+-define(MAPNAME2470454, "Elite-Raubzug 38-1").
+-define(MAPNAME2470455, "Elite-Raubzug 38-2").
+-define(MAPNAME2470456, "Elite-Raubzug 38-3").
+-define(MAPNAME2470457, "Elite-Raubzug 38-4").
+-define(MAPNAME2470458, "Elite-Raubzug 38-5").
+-define(MAPNAME2470459, "Elite-Raubzug 38-6").
+-define(MAPNAME2470460, "Elite-Raubzug 38-7").
+-define(MAPNAME2470461, "Elite-Raubzug 38-8").
+-define(MAPNAME2470462, "Elite-Raubzug 38-9").
+-define(MAPNAME2470463, "Elite-Raubzug 38-10").
+-define(MAPNAME2470464, "Elite-Raubzug 38-11").
+-define(MAPNAME2470465, "Elite-Raubzug 38-12").
+-define(MAPNAME2470466, "Elite-Raubzug 38-13").
+-define(MAPNAME2470467, "Elite-Raubzug 38-14").
+-define(MAPNAME2470468, "Elite-Raubzug 38-15").
+-define(MAPNAME2470469, "Elite-Raubzug 39-1").
+-define(MAPNAME2470470, "Elite-Raubzug 39-2").
+-define(MAPNAME2470471, "Elite-Raubzug 39-3").
+-define(MAPNAME2470472, "Elite-Raubzug 39-4").
+-define(MAPNAME2470473, "Elite-Raubzug 39-5").
+-define(MAPNAME2470474, "Elite-Raubzug 39-6").
+-define(MAPNAME2470475, "Elite-Raubzug 39-7").
+-define(MAPNAME2470476, "Elite-Raubzug 39-8").
+-define(MAPNAME2470477, "Elite-Raubzug 39-9").
+-define(MAPNAME2470478, "Elite-Raubzug 39-10").
+-define(MAPNAME2470479, "Elite-Raubzug 39-11").
+-define(MAPNAME2470480, "Elite-Raubzug 39-12").
+-define(MAPNAME2470481, "Elite-Raubzug 39-13").
+-define(MAPNAME2470482, "Elite-Raubzug 39-14").
+-define(MAPNAME2470483, "Elite-Raubzug 39-15").
+-define(MAPNAME2470484, "Elite-Raubzug 40-1").
+-define(MAPNAME2470485, "Elite-Raubzug 40-2").
+-define(MAPNAME2470486, "Elite-Raubzug 40-3").
+-define(MAPNAME2470487, "Elite-Raubzug 40-4").
+-define(MAPNAME2470488, "Elite-Raubzug 40-5").
+-define(MAPNAME2470489, "Elite-Raubzug 40-6").
+-define(MAPNAME2470490, "Elite-Raubzug 40-7").
+-define(MAPNAME2470491, "Elite-Raubzug 40-8").
+-define(MAPNAME2470492, "Elite-Raubzug 40-9").
+-define(MAPNAME2470493, "Elite-Raubzug 40-10").
+-define(MAPNAME2470494, "Elite-Raubzug 40-11").
+-define(MAPNAME2470495, "Elite-Raubzug 40-12").
+-define(MAPNAME2470496, "Elite-Raubzug 40-13").
+-define(MAPNAME2470497, "Elite-Raubzug 40-14").
+-define(MAPNAME2470498, "Elite-Raubzug 40-15").
+-define(MAPNAME2470499, "Elite-Raubzug 41-1").
+-define(MAPNAME2470500, "Elite-Raubzug 41-2").
+-define(MAPNAME2470501, "Elite-Raubzug 41-3").
+-define(MAPNAME2470502, "Elite-Raubzug 41-4").
+-define(MAPNAME2470503, "Elite-Raubzug 41-5").
+-define(MAPNAME2470504, "Elite-Raubzug 41-6").
+-define(MAPNAME2470505, "Elite-Raubzug 41-7").
+-define(MAPNAME2470506, "Elite-Raubzug 41-8").
+-define(MAPNAME2470507, "Elite-Raubzug 41-9").
+-define(MAPNAME2470508, "Elite-Raubzug 41-10").
+-define(MAPNAME2470509, "Elite-Raubzug 41-11").
+-define(MAPNAME2470510, "Elite-Raubzug 41-12").
+-define(MAPNAME2470511, "Elite-Raubzug 41-13").
+-define(MAPNAME2470512, "Elite-Raubzug 41-14").
+-define(MAPNAME2470513, "Elite-Raubzug 41-15").
+-define(MAPNAME2470514, "Elite-Raubzug 42-1").
+-define(MAPNAME2470515, "Elite-Raubzug 42-2").
+-define(MAPNAME2470516, "Elite-Raubzug 42-3").
+-define(MAPNAME2470517, "Elite-Raubzug 42-4").
+-define(MAPNAME2470518, "Elite-Raubzug 42-5").
+-define(MAPNAME2470519, "Elite-Raubzug 42-6").
+-define(MAPNAME2470520, "Elite-Raubzug 42-7").
+-define(MAPNAME2470521, "Elite-Raubzug 42-8").
+-define(MAPNAME2470522, "Elite-Raubzug 42-9").
+-define(MAPNAME2470523, "Elite-Raubzug 42-10").
+-define(MAPNAME2470524, "Elite-Raubzug 42-11").
+-define(MAPNAME2470525, "Elite-Raubzug 42-12").
+-define(MAPNAME2470526, "Elite-Raubzug 42-13").
+-define(MAPNAME2470527, "Elite-Raubzug 42-14").
+-define(MAPNAME2470528, "Elite-Raubzug 42-15").
+-define(MAPNAME2470529, "Elite-Raubzug 43-1").
+-define(MAPNAME2470530, "Elite-Raubzug 43-2").
+-define(MAPNAME2470531, "Elite-Raubzug 43-3").
+-define(MAPNAME2470532, "Elite-Raubzug 43-4").
+-define(MAPNAME2470533, "Elite-Raubzug 43-5").
+-define(MAPNAME2470534, "Elite-Raubzug 43-6").
+-define(MAPNAME2470535, "Elite-Raubzug 43-7").
+-define(MAPNAME2470536, "Elite-Raubzug 43-8").
+-define(MAPNAME2470537, "Elite-Raubzug 43-9").
+-define(MAPNAME2470538, "Elite-Raubzug 43-10").
+-define(MAPNAME2470539, "Elite-Raubzug 43-11").
+-define(MAPNAME2470540, "Elite-Raubzug 43-12").
+-define(MAPNAME2470541, "Elite-Raubzug 43-13").
+-define(MAPNAME2470542, "Elite-Raubzug 43-14").
+-define(MAPNAME2470543, "Elite-Raubzug 43-15").
+-define(MAPNAME2470544, "Elite-Raubzug 44-1").
+-define(MAPNAME2470545, "Elite-Raubzug 44-2").
+-define(MAPNAME2470546, "Elite-Raubzug 44-3").
+-define(MAPNAME2470547, "Elite-Raubzug 44-4").
+-define(MAPNAME2470548, "Elite-Raubzug 44-5").
+-define(MAPNAME2470549, "Elite-Raubzug 44-6").
+-define(MAPNAME2470550, "Elite-Raubzug 44-7").
+-define(MAPNAME2470551, "Elite-Raubzug 44-8").
+-define(MAPNAME2470552, "Elite-Raubzug 44-9").
+-define(MAPNAME2470553, "Elite-Raubzug 44-10").
+-define(MAPNAME2470554, "Elite-Raubzug 44-11").
+-define(MAPNAME2470555, "Elite-Raubzug 44-12").
+-define(MAPNAME2470556, "Elite-Raubzug 44-13").
+-define(MAPNAME2470557, "Elite-Raubzug 44-14").
+-define(MAPNAME2470558, "Elite-Raubzug 44-15").
+-define(MAPNAME2470559, "Elite-Raubzug 45-1").
+-define(MAPNAME2470560, "Elite-Raubzug 45-2").
+-define(MAPNAME2470561, "Elite-Raubzug 45-3").
+-define(MAPNAME2470562, "Elite-Raubzug 45-4").
+-define(MAPNAME2470563, "Elite-Raubzug 45-5").
+-define(MAPNAME2470564, "Elite-Raubzug 45-6").
+-define(MAPNAME2470565, "Elite-Raubzug 45-7").
+-define(MAPNAME2470566, "Elite-Raubzug 45-8").
+-define(MAPNAME2470567, "Elite-Raubzug 45-9").
+-define(MAPNAME2470568, "Elite-Raubzug 45-10").
+-define(MAPNAME2470569, "Elite-Raubzug 45-11").
+-define(MAPNAME2470570, "Elite-Raubzug 45-12").
+-define(MAPNAME2470571, "Elite-Raubzug 45-13").
+-define(MAPNAME2470572, "Elite-Raubzug 45-14").
+-define(MAPNAME2470573, "Elite-Raubzug 46-15").
+-define(MAPNAME2470574, "Elite-Raubzug 46-1").
+-define(MAPNAME2470575, "Elite-Raubzug 46-2").
+-define(MAPNAME2470576, "Elite-Raubzug 46-3").
+-define(MAPNAME2470577, "Elite-Raubzug 46-4").
+-define(MAPNAME2470578, "Elite-Raubzug 46-5").
+-define(MAPNAME2470579, "Elite-Raubzug 46-6").
+-define(MAPNAME2470580, "Elite-Raubzug 46-7").
+-define(MAPNAME2470581, "Elite-Raubzug 46-8").
+-define(MAPNAME2470582, "Elite-Raubzug 46-9").
+-define(MAPNAME2470583, "Elite-Raubzug 46-10").
+-define(MAPNAME2470584, "Elite-Raubzug 46-11").
+-define(MAPNAME2470585, "Elite-Raubzug 46-12").
+-define(MAPNAME2470586, "Elite-Raubzug 46-13").
+-define(MAPNAME2470587, "Elite-Raubzug 46-14").
+-define(MAPNAME2470588, "Elite-Raubzug 46-15").
+-define(MAPNAME2470589, "Elite-Raubzug 47-1").
+-define(MAPNAME2470590, "Elite-Raubzug 47-2").
+-define(MAPNAME2470591, "Elite-Raubzug 47-3").
+-define(MAPNAME2470592, "Elite-Raubzug 47-4").
+-define(MAPNAME2470593, "Elite-Raubzug 47-5").
+-define(MAPNAME2470594, "Elite-Raubzug 47-6").
+-define(MAPNAME2470595, "Elite-Raubzug 47-7").
+-define(MAPNAME2470596, "Elite-Raubzug 47-8").
+-define(MAPNAME2470597, "Elite-Raubzug 47-9").
+-define(MAPNAME2470598, "Elite-Raubzug 47-10").
+-define(MAPNAME2470599, "Elite-Raubzug 47-11").
+-define(MAPNAME2470600, "Elite-Raubzug 47-12").
+-define(MAPNAME2470601, "Elite-Raubzug 47-13").
+-define(MAPNAME2470602, "Elite-Raubzug 47-14").
+-define(MAPNAME2470603, "Elite-Raubzug 47-15").
+-define(MAPNAME2470604, "Elite-Raubzug 48-1").
+-define(MAPNAME2470605, "Elite-Raubzug 48-2").
+-define(MAPNAME2470606, "Elite-Raubzug 48-3").
+-define(MAPNAME2470607, "Elite-Raubzug 48-4").
+-define(MAPNAME2470608, "Elite-Raubzug 48-5").
+-define(MAPNAME2470609, "Elite-Raubzug 48-6").
+-define(MAPNAME2470610, "Elite-Raubzug 48-7").
+-define(MAPNAME2470611, "Elite-Raubzug 48-8").
+-define(MAPNAME2470612, "Elite-Raubzug 48-9").
+-define(MAPNAME2470613, "Elite-Raubzug 48-10").
+-define(MAPNAME2470614, "Elite-Raubzug 48-11").
+-define(MAPNAME2470615, "Elite-Raubzug 48-12").
+-define(MAPNAME2470616, "Elite-Raubzug 48-13").
+-define(MAPNAME2470617, "Elite-Raubzug 48-14").
+-define(MAPNAME2470618, "Elite-Raubzug 48-15").
+-define(MAPNAME2470619, "Elite-Raubzug 49-1").
+-define(MAPNAME2470620, "Elite-Raubzug 49-2").
+-define(MAPNAME2470621, "Elite-Raubzug 49-3").
+-define(MAPNAME2470622, "Elite-Raubzug 49-4").
+-define(MAPNAME2470623, "Elite-Raubzug 49-5").
+-define(MAPNAME2470624, "Elite-Raubzug 49-6").
+-define(MAPNAME2470625, "Elite-Raubzug 49-7").
+-define(MAPNAME2470626, "Elite-Raubzug 49-8").
+-define(MAPNAME2470627, "Elite-Raubzug 49-9").
+-define(MAPNAME2470628, "Elite-Raubzug 49-10").
+-define(MAPNAME2470629, "Elite-Raubzug 49-11").
+-define(MAPNAME2470630, "Elite-Raubzug 49-12").
+-define(MAPNAME2470631, "Elite-Raubzug 49-13").
+-define(MAPNAME2470632, "Elite-Raubzug 49-14").
+-define(MAPNAME2470633, "Elite-Raubzug 49-15").
+-define(MAPNAME2470634, "Elite-Raubzug 50-1").
+-define(MAPNAME2470635, "Elite-Raubzug 50-2").
+-define(MAPNAME2470636, "Elite-Raubzug 50-3").
+-define(MAPNAME2470637, "Elite-Raubzug 50-4").
+-define(MAPNAME2470638, "Elite-Raubzug 50-5").
+-define(MAPNAME2470639, "Elite-Raubzug 50-6").
+-define(MAPNAME2470640, "Elite-Raubzug 50-7").
+-define(MAPNAME2470641, "Elite-Raubzug 50-8").
+-define(MAPNAME2470642, "Elite-Raubzug 50-9").
+-define(MAPNAME2470643, "Elite-Raubzug 50-10").
+-define(MAPNAME2470644, "Elite-Raubzug 50-11").
+-define(MAPNAME2470645, "Elite-Raubzug 50-12").
+-define(MAPNAME2470646, "Elite-Raubzug 50-13").
+-define(MAPNAME2470647, "Elite-Raubzug 50-14").
+-define(MAPNAME2470648, "Elite-Raubzug 50-15").
+-define(MAPNAME2470649, "Elite-Raubzug 51-1").
+-define(MAPNAME2470650, "Elite-Raubzug 51-2").
+-define(MAPNAME2470651, "Elite-Raubzug 51-3").
+-define(MAPNAME2470652, "Elite-Raubzug 51-4").
+-define(MAPNAME2470653, "Elite-Raubzug 51-5").
+-define(MAPNAME2470654, "Elite-Raubzug 51-6").
+-define(MAPNAME2470655, "Elite-Raubzug 51-7").
+-define(MAPNAME2470656, "Elite-Raubzug 51-8").
+-define(MAPNAME2470657, "Elite-Raubzug 51-9").
+-define(MAPNAME2470658, "Elite-Raubzug 51-10").
+-define(MAPNAME2470659, "Elite-Raubzug 51-11").
+-define(MAPNAME2470660, "Elite-Raubzug 51-12").
+-define(MAPNAME2470661, "Elite-Raubzug 51-13").
+-define(MAPNAME2470662, "Elite-Raubzug 51-14").
+-define(MAPNAME2470663, "Elite-Raubzug 51-15").
+-define(MAPNAME2470664, "Elite-Raubzug 52-1").
+-define(MAPNAME2470665, "Elite-Raubzug 52-2").
+-define(MAPNAME2470666, "Elite-Raubzug 52-3").
+-define(MAPNAME2470667, "Elite-Raubzug 52-4").
+-define(MAPNAME2470668, "Elite-Raubzug 52-5").
+-define(MAPNAME2470669, "Elite-Raubzug 52-6").
+-define(MAPNAME2470670, "Elite-Raubzug 52-7").
+-define(MAPNAME2470671, "Elite-Raubzug 52-8").
+-define(MAPNAME2470672, "Elite-Raubzug 52-9").
+-define(MAPNAME2470673, "Elite-Raubzug 52-10").
+-define(MAPNAME2470674, "Elite-Raubzug 52-11").
+-define(MAPNAME2470675, "Elite-Raubzug 52-12").
+-define(MAPNAME2470676, "Elite-Raubzug 52-13").
+-define(MAPNAME2470677, "Elite-Raubzug 52-14").
+-define(MAPNAME2470678, "Elite-Raubzug 52-15").
+-define(MAPNAME2470679, "Elite-Raubzug 53-1").
+-define(MAPNAME2470680, "Elite-Raubzug 53-2").
+-define(MAPNAME2470681, "Elite-Raubzug 53-3").
+-define(MAPNAME2470682, "Elite-Raubzug 53-4").
+-define(MAPNAME2470683, "Elite-Raubzug 53-5").
+-define(MAPNAME2470684, "Elite-Raubzug 53-6").
+-define(MAPNAME2470685, "Elite-Raubzug 53-7").
+-define(MAPNAME2470686, "Elite-Raubzug 53-8").
+-define(MAPNAME2470687, "Elite-Raubzug 53-9").
+-define(MAPNAME2470688, "Elite-Raubzug 53-10").
+-define(MAPNAME2470689, "Elite-Raubzug 53-11").
+-define(MAPNAME2470690, "Elite-Raubzug 53-12").
+-define(MAPNAME2470691, "Elite-Raubzug 53-13").
+-define(MAPNAME2470692, "Elite-Raubzug 53-14").
+-define(MAPNAME2470693, "Elite-Raubzug 53-15").
+-define(MAPNAME2470694, "Elite-Raubzug 54-1").
+-define(MAPNAME2470695, "Elite-Raubzug 54-2").
+-define(MAPNAME2470696, "Elite-Raubzug 54-3").
+-define(MAPNAME2470697, "Elite-Raubzug 54-4").
+-define(MAPNAME2470698, "Elite-Raubzug 54-5").
+-define(MAPNAME2470699, "Elite-Raubzug 54-6").
+-define(MAPNAME2470700, "Elite-Raubzug 54-7").
+-define(MAPNAME2470701, "Elite-Raubzug 54-8").
+-define(MAPNAME2470702, "Elite-Raubzug 54-9").
+-define(MAPNAME2470703, "Elite-Raubzug 54-10").
+-define(MAPNAME2470704, "Elite-Raubzug 54-11").
+-define(MAPNAME2470705, "Elite-Raubzug 54-12").
+-define(MAPNAME2470706, "Elite-Raubzug 54-13").
+-define(MAPNAME2470707, "Elite-Raubzug 54-14").
+-define(MAPNAME2470708, "Elite-Raubzug 54-15").
+-define(MAPNAME2470709, "Elite-Raubzug 55-1").
+-define(MAPNAME2470710, "Elite-Raubzug 55-2").
+-define(MAPNAME2470711, "Elite-Raubzug 55-3").
+-define(MAPNAME2470712, "Elite-Raubzug 55-4").
+-define(MAPNAME2470713, "Elite-Raubzug 55-5").
+-define(MAPNAME2470714, "Elite-Raubzug 55-6").
+-define(MAPNAME2470715, "Elite-Raubzug 55-7").
+-define(MAPNAME2470716, "Elite-Raubzug 55-8").
+-define(MAPNAME2470717, "Elite-Raubzug 55-9").
+-define(MAPNAME2470718, "Elite-Raubzug 55-10").
+-define(MAPNAME2470719, "Elite-Raubzug 55-11").
+-define(MAPNAME2470720, "Elite-Raubzug 55-12").
+-define(MAPNAME2470721, "Elite-Raubzug 55-13").
+-define(MAPNAME2470722, "Elite-Raubzug 55-14").
+-define(MAPNAME2470723, "Elite-Raubzug 55-15").
+-define(MAPNAME2470724, "Elite-Raubzug 56-1").
+-define(MAPNAME2470725, "Elite-Raubzug 56-2").
+-define(MAPNAME2470726, "Elite-Raubzug 56-3").
+-define(MAPNAME2470727, "Elite-Raubzug 56-4").
+-define(MAPNAME2470728, "Elite-Raubzug 56-5").
+-define(MAPNAME2470729, "Elite-Raubzug 56-6").
+-define(MAPNAME2470730, "Elite-Raubzug 56-7").
+-define(MAPNAME2470731, "Elite-Raubzug 56-8").
+-define(MAPNAME2470732, "Elite-Raubzug 56-9").
+-define(MAPNAME2470733, "Elite-Raubzug 56-10").
+-define(MAPNAME2470734, "Elite-Raubzug 56-11").
+-define(MAPNAME2470735, "Elite-Raubzug 56-12").
+-define(MAPNAME2470736, "Elite-Raubzug 56-13").
+-define(MAPNAME2470737, "Elite-Raubzug 56-14").
+-define(MAPNAME2470738, "Elite-Raubzug 56-15").
+-define(MAPNAME2470739, "Elite-Raubzug 57-1").
+-define(MAPNAME2470740, "Elite-Raubzug 57-2").
+-define(MAPNAME2470741, "Elite-Raubzug 57-3").
+-define(MAPNAME2470742, "Elite-Raubzug 57-4").
+-define(MAPNAME2470743, "Elite-Raubzug 57-5").
+-define(MAPNAME2470744, "Elite-Raubzug 57-6").
+-define(MAPNAME2470745, "Elite-Raubzug 57-7").
+-define(MAPNAME2470746, "Elite-Raubzug 57-8").
+-define(MAPNAME2470747, "Elite-Raubzug 57-9").
+-define(MAPNAME2470748, "Elite-Raubzug 57-10").
+-define(MAPNAME2470749, "Elite-Raubzug 57-11").
+-define(MAPNAME2470750, "Elite-Raubzug 57-12").
+-define(MAPNAME2470751, "Elite-Raubzug 57-13").
+-define(MAPNAME2470752, "Elite-Raubzug 57-14").
+-define(MAPNAME2470753, "Elite-Raubzug 57-15").
+-define(MAPNAME2470754, "Elite-Raubzug 58-1").
+-define(MAPNAME2470755, "Elite-Raubzug 58-2").
+-define(MAPNAME2470756, "Elite-Raubzug 58-3").
+-define(MAPNAME2470757, "Elite-Raubzug 58-4").
+-define(MAPNAME2470758, "Elite-Raubzug 58-5").
+-define(MAPNAME2470759, "Elite-Raubzug 58-6").
+-define(MAPNAME2470760, "Elite-Raubzug 58-7").
+-define(MAPNAME2470761, "Elite-Raubzug 58-8").
+-define(MAPNAME2470762, "Elite-Raubzug 58-9").
+-define(MAPNAME2470763, "Elite-Raubzug 58-10").
+-define(MAPNAME2470764, "Elite-Raubzug 58-11").
+-define(MAPNAME2470765, "Elite-Raubzug 58-12").
+-define(MAPNAME2470766, "Elite-Raubzug 58-13").
+-define(MAPNAME2470767, "Elite-Raubzug 58-14").
+-define(MAPNAME2470768, "Elite-Raubzug 58-15").
+-define(MAPNAME2470769, "Elite-Raubzug 59-1").
+-define(MAPNAME2470770, "Elite-Raubzug 59-2").
+-define(MAPNAME2470771, "Elite-Raubzug 59-3").
+-define(MAPNAME2470772, "Elite-Raubzug 59-4").
+-define(MAPNAME2470773, "Elite-Raubzug 59-5").
+-define(MAPNAME2470774, "Elite-Raubzug 59-6").
+-define(MAPNAME2470775, "Elite-Raubzug 59-7").
+-define(MAPNAME2470776, "Elite-Raubzug 59-8").
+-define(MAPNAME2470777, "Elite-Raubzug 59-9").
+-define(MAPNAME2470778, "Elite-Raubzug 59-10").
+-define(MAPNAME2470779, "Elite-Raubzug 59-11").
+-define(MAPNAME2470780, "Elite-Raubzug 59-12").
+-define(MAPNAME2470781, "Elite-Raubzug 59-13").
+-define(MAPNAME2470782, "Elite-Raubzug 59-14").
+-define(MAPNAME2470783, "Elite-Raubzug 59-15").
+-define(MAPNAME2470784, "Elite-Raubzug 60-1").
+-define(MAPNAME2470785, "Elite-Raubzug 60-2").
+-define(MAPNAME2470786, "Elite-Raubzug 60-3").
+-define(MAPNAME2470787, "Elite-Raubzug 60-4").
+-define(MAPNAME2470788, "Elite-Raubzug 60-5").
+-define(MAPNAME2470789, "Elite-Raubzug 60-6").
+-define(MAPNAME2470790, "Elite-Raubzug 60-7").
+-define(MAPNAME2470791, "Elite-Raubzug 60-8").
+-define(MAPNAME2470792, "Elite-Raubzug 60-9").
+-define(MAPNAME2470793, "Elite-Raubzug 60-10").
+-define(MAPNAME2470794, "Elite-Raubzug 60-11").
+-define(MAPNAME2470795, "Elite-Raubzug 60-12").
+-define(MAPNAME2470796, "Elite-Raubzug 60-13").
+-define(MAPNAME2470797, "Elite-Raubzug 60-14").
+-define(MAPNAME2470798, "Elite-Raubzug 60-15").
+-define(MAPNAME2470799, "Elite-Raubzug 61-1").
+-define(MAPNAME2470800, "Elite-Raubzug 61-2").
+-define(MAPNAME2470801, "Elite-Raubzug 61-3").
+-define(MAPNAME2470802, "Elite-Raubzug 61-4").
+-define(MAPNAME2470803, "Elite-Raubzug 61-5").
+-define(MAPNAME2470804, "Elite-Raubzug 61-6").
+-define(MAPNAME2470805, "Elite-Raubzug 61-7").
+-define(MAPNAME2470806, "Elite-Raubzug 61-8").
+-define(MAPNAME2470807, "Elite-Raubzug 61-9").
+-define(MAPNAME2470808, "Elite-Raubzug 61-10").
+-define(MAPNAME2470809, "Elite-Raubzug 61-11").
+-define(MAPNAME2470810, "Elite-Raubzug 61-12").
+-define(MAPNAME2470811, "Elite-Raubzug 61-13").
+-define(MAPNAME2470812, "Elite-Raubzug 61-14").
+-define(MAPNAME2470813, "Elite-Raubzug 61-15").
+-define(MAPNAME2470814, "Elite-Raubzug 62-1").
+-define(MAPNAME2470815, "Elite-Raubzug 62-2").
+-define(MAPNAME2470816, "Elite-Raubzug 62-3").
+-define(MAPNAME2470817, "Elite-Raubzug 62-4").
+-define(MAPNAME2470818, "Elite-Raubzug 62-5").
+-define(MAPNAME2470819, "Elite-Raubzug 62-6").
+-define(MAPNAME2470820, "Elite-Raubzug 62-7").
+-define(MAPNAME2470821, "Elite-Raubzug 62-8").
+-define(MAPNAME2470822, "Elite-Raubzug 62-9").
+-define(MAPNAME2470823, "Elite-Raubzug 62-10").
+-define(MAPNAME2470824, "Elite-Raubzug 62-11").
+-define(MAPNAME2470825, "Elite-Raubzug 62-12").
+-define(MAPNAME2470826, "Elite-Raubzug 62-13").
+-define(MAPNAME2470827, "Elite-Raubzug 62-14").
+-define(MAPNAME2470828, "Elite-Raubzug 62-15").
+-define(MAPNAME2470829, "Elite-Raubzug 63-1").
+-define(MAPNAME2470830, "Elite-Raubzug 63-2").
+-define(MAPNAME2470831, "Elite-Raubzug 63-3").
+-define(MAPNAME2470832, "Elite-Raubzug 63-4").
+-define(MAPNAME2470833, "Elite-Raubzug 63-5").
+-define(MAPNAME2470834, "Elite-Raubzug 63-6").
+-define(MAPNAME2470835, "Elite-Raubzug 63-7").
+-define(MAPNAME2470836, "Elite-Raubzug 63-8").
+-define(MAPNAME2470837, "Elite-Raubzug 63-9").
+-define(MAPNAME2470838, "Elite-Raubzug 63-10").
+-define(MAPNAME2470839, "Elite-Raubzug 63-11").
+-define(MAPNAME2470840, "Elite-Raubzug 63-12").
+-define(MAPNAME2470841, "Elite-Raubzug 63-13").
+-define(MAPNAME2470842, "Elite-Raubzug 63-14").
+-define(MAPNAME2470843, "Elite-Raubzug 63-15").
+-define(MAPNAME2470844, "Elite-Raubzug 64-1").
+-define(MAPNAME2470845, "Elite-Raubzug 64-2").
+-define(MAPNAME2470846, "Elite-Raubzug 64-3").
+-define(MAPNAME2470847, "Elite-Raubzug 64-4").
+-define(MAPNAME2470848, "Elite-Raubzug 64-5").
+-define(MAPNAME2470849, "Elite-Raubzug 64-6").
+-define(MAPNAME2470850, "Elite-Raubzug 64-7").
+-define(MAPNAME2470851, "Elite-Raubzug 64-8").
+-define(MAPNAME2470852, "Elite-Raubzug 64-9").
+-define(MAPNAME2470853, "Elite-Raubzug 64-10").
+-define(MAPNAME2470854, "Elite-Raubzug 64-11").
+-define(MAPNAME2470855, "Elite-Raubzug 64-12").
+-define(MAPNAME2470856, "Elite-Raubzug 64-13").
+-define(MAPNAME2470857, "Elite-Raubzug 64-14").
+-define(MAPNAME2470858, "Elite-Raubzug 64-15").
+-define(MAPNAME2470859, "Elite-Raubzug 65-1").
+-define(MAPNAME2470860, "Elite-Raubzug 65-2").
+-define(MAPNAME2470861, "Elite-Raubzug 65-3").
+-define(MAPNAME2470862, "Elite-Raubzug 65-4").
+-define(MAPNAME2470863, "Elite-Raubzug 65-5").
+-define(MAPNAME2470864, "Elite-Raubzug 65-6").
+-define(MAPNAME2470865, "Elite-Raubzug 65-7").
+-define(MAPNAME2470866, "Elite-Raubzug 65-8").
+-define(MAPNAME2470867, "Elite-Raubzug 65-9").
+-define(MAPNAME2470868, "Elite-Raubzug 65-10").
+-define(MAPNAME2470869, "Elite-Raubzug 65-11").
+-define(MAPNAME2470870, "Elite-Raubzug 65-12").
+-define(MAPNAME2470871, "Elite-Raubzug 65-13").
+-define(MAPNAME2470872, "Elite-Raubzug 65-14").
+-define(MAPNAME2470873, "Elite-Raubzug 65-15").
+-define(MAPNAME2470874, "Elite-Raubzug 66-1").
+-define(MAPNAME2470875, "Elite-Raubzug 66-2").
+-define(MAPNAME2470876, "Elite-Raubzug 66-3").
+-define(MAPNAME2470877, "Elite-Raubzug 66-4").
+-define(MAPNAME2470878, "Elite-Raubzug 66-5").
+-define(MAPNAME2470879, "Elite-Raubzug 66-6").
+-define(MAPNAME2470880, "Elite-Raubzug 66-7").
+-define(MAPNAME2470881, "Elite-Raubzug 66-8").
+-define(MAPNAME2470882, "Elite-Raubzug 66-9").
+-define(MAPNAME2470883, "Elite-Raubzug 66-10").
+-define(MAPNAME2470884, "Elite-Raubzug 66-11").
+-define(MAPNAME2470885, "Elite-Raubzug 66-12").
+-define(MAPNAME2470886, "Elite-Raubzug 66-13").
+-define(MAPNAME2470887, "Elite-Raubzug 66-14").
+-define(MAPNAME2470888, "Elite-Raubzug 66-15").
+-define(MAPNAME2470889, "Elite-Raubzug 67-1").
+-define(MAPNAME2470890, "Elite-Raubzug 67-2").
+-define(MAPNAME2470891, "Elite-Raubzug 67-3").
+-define(MAPNAME2470892, "Elite-Raubzug 67-4").
+-define(MAPNAME2470893, "Elite-Raubzug 67-5").
+-define(MAPNAME2470894, "Elite-Raubzug 67-6").
+-define(MAPNAME2470895, "Elite-Raubzug 67-7").
+-define(MAPNAME2470896, "Elite-Raubzug 67-8").
+-define(MAPNAME2470897, "Elite-Raubzug 67-9").
+-define(MAPNAME2470898, "Elite-Raubzug 67-10").
+-define(MAPNAME2470899, "Elite-Raubzug 67-11").
+-define(MAPNAME2470900, "Elite-Raubzug 67-12").
+-define(MAPNAME2470901, "Elite-Raubzug 67-13").
+-define(MAPNAME2470902, "Elite-Raubzug 67-14").
+-define(MAPNAME2470903, "Elite-Raubzug 67-15").
+-define(MAPNAME2470904, "Elite-Raubzug 68-1").
+-define(MAPNAME2470905, "Elite-Raubzug 68-2").
+-define(MAPNAME2470906, "Elite-Raubzug 68-3").
+-define(MAPNAME2470907, "Elite-Raubzug 68-4").
+-define(MAPNAME2470908, "Elite-Raubzug 68-5").
+-define(MAPNAME2470909, "Elite-Raubzug 68-6").
+-define(MAPNAME2470910, "Elite-Raubzug 68-7").
+-define(MAPNAME2470911, "Elite-Raubzug 68-8").
+-define(MAPNAME2470912, "Elite-Raubzug 68-9").
+-define(MAPNAME2470913, "Elite-Raubzug 68-10").
+-define(MAPNAME2470914, "Elite-Raubzug 68-11").
+-define(MAPNAME2470915, "Elite-Raubzug 68-12").
+-define(MAPNAME2470916, "Elite-Raubzug 68-13").
+-define(MAPNAME2470917, "Elite-Raubzug 68-14").
+-define(MAPNAME2470918, "Elite-Raubzug 68-15").
+-define(MAPNAME2470919, "Elite-Raubzug 69-1").
+-define(MAPNAME2470920, "Elite-Raubzug 69-2").
+-define(MAPNAME2470921, "Elite-Raubzug 69-3").
+-define(MAPNAME2470922, "Elite-Raubzug 69-4").
+-define(MAPNAME2470923, "Elite-Raubzug 69-5").
+-define(MAPNAME2470924, "Elite-Raubzug 69-6").
+-define(MAPNAME2470925, "Elite-Raubzug 69-7").
+-define(MAPNAME2470926, "Elite-Raubzug 69-8").
+-define(MAPNAME2470927, "Elite-Raubzug 69-9").
+-define(MAPNAME2470928, "Elite-Raubzug 69-10").
+-define(MAPNAME2470929, "Elite-Raubzug 69-11").
+-define(MAPNAME2470930, "Elite-Raubzug 69-12").
+-define(MAPNAME2470931, "Elite-Raubzug 69-13").
+-define(MAPNAME2470932, "Elite-Raubzug 69-14").
+-define(MAPNAME2470933, "Elite-Raubzug 69-15").
+-define(MAPNAME2470934, "Elite-Raubzug 70-1").
+-define(MAPNAME2470935, "Elite-Raubzug 70-2").
+-define(MAPNAME2470936, "Elite-Raubzug 70-3").
+-define(MAPNAME2470937, "Elite-Raubzug 70-4").
+-define(MAPNAME2470938, "Elite-Raubzug 70-5").
+-define(MAPNAME2470939, "Elite-Raubzug 70-6").
+-define(MAPNAME2470940, "Elite-Raubzug 70-7").
+-define(MAPNAME2470941, "Elite-Raubzug 70-8").
+-define(MAPNAME2470942, "Elite-Raubzug 70-9").
+-define(MAPNAME2470943, "Elite-Raubzug 70-10").
+-define(MAPNAME2470944, "Elite-Raubzug 70-11").
+-define(MAPNAME2470945, "Elite-Raubzug 70-12").
+-define(MAPNAME2470946, "Elite-Raubzug 70-13").
+-define(MAPNAME2470947, "Elite-Raubzug 70-14").
+-define(MAPNAME2470948, "Elite-Raubzug 70-15").
+-define(MAPNAME2470949, "Elite-Raubzug 71-1").
+-define(MAPNAME2470950, "Elite-Raubzug 71-2").
+-define(MAPNAME2470951, "Elite-Raubzug 71-3").
+-define(MAPNAME2470952, "Elite-Raubzug 71-4").
+-define(MAPNAME2470953, "Elite-Raubzug 71-5").
+-define(MAPNAME2470954, "Elite-Raubzug 71-6").
+-define(MAPNAME2470955, "Elite-Raubzug 71-7").
+-define(MAPNAME2470956, "Elite-Raubzug 71-8").
+-define(MAPNAME2470957, "Elite-Raubzug 71-9").
+-define(MAPNAME2470958, "Elite-Raubzug 71-10").
+-define(MAPNAME2470959, "Elite-Raubzug 71-11").
+-define(MAPNAME2470960, "Elite-Raubzug 71-12").
+-define(MAPNAME2470961, "Elite-Raubzug 71-13").
+-define(MAPNAME2470962, "Elite-Raubzug 71-14").
+-define(MAPNAME2470963, "Elite-Raubzug 71-15").
+-define(MAPNAME2470964, "Elite-Raubzug 72-1").
+-define(MAPNAME2470965, "Elite-Raubzug 72-2").
+-define(MAPNAME2470966, "Elite-Raubzug 72-3").
+-define(MAPNAME2470967, "Elite-Raubzug 72-4").
+-define(MAPNAME2470968, "Elite-Raubzug 72-5").
+-define(MAPNAME2470969, "Elite-Raubzug 72-6").
+-define(MAPNAME2470970, "Elite-Raubzug 72-7").
+-define(MAPNAME2470971, "Elite-Raubzug 72-8").
+-define(MAPNAME2470972, "Elite-Raubzug 72-9").
+-define(MAPNAME2470973, "Elite-Raubzug 72-10").
+-define(MAPNAME2470974, "Elite-Raubzug 72-11").
+-define(MAPNAME2470975, "Elite-Raubzug 72-12").
+-define(MAPNAME2470976, "Elite-Raubzug 72-13").
+-define(MAPNAME2470977, "Elite-Raubzug 72-14").
+-define(MAPNAME2470978, "Elite-Raubzug 72-15").
+-define(MAPNAME2470979, "Elite-Raubzug 73-1").
+-define(MAPNAME2470980, "Elite-Raubzug 73-2").
+-define(MAPNAME2470981, "Elite-Raubzug 73-3").
+-define(MAPNAME2470982, "Elite-Raubzug 73-4").
+-define(MAPNAME2470983, "Elite-Raubzug 73-5").
+-define(MAPNAME2470984, "Elite-Raubzug 73-6").
+-define(MAPNAME2470985, "Elite-Raubzug 73-7").
+-define(MAPNAME2470986, "Elite-Raubzug 73-8").
+-define(MAPNAME2470987, "Elite-Raubzug 73-9").
+-define(MAPNAME2470988, "Elite-Raubzug 73-10").
+-define(MAPNAME2470989, "Elite-Raubzug 73-11").
+-define(MAPNAME2470990, "Elite-Raubzug 73-12").
+-define(MAPNAME2470991, "Elite-Raubzug 73-13").
+-define(MAPNAME2470992, "Elite-Raubzug 73-14").
+-define(MAPNAME2470993, "Elite-Raubzug 73-15").
+-define(MAPNAME2470994, "Elite-Raubzug 74-1").
+-define(MAPNAME2470995, "Elite-Raubzug 74-2").
+-define(MAPNAME2470996, "Elite-Raubzug 74-3").
+-define(MAPNAME2470997, "Elite-Raubzug 74-4").
+-define(MAPNAME2470998, "Elite-Raubzug 74-5").
+-define(MAPNAME2470999, "Elite-Raubzug 74-6").
+-define(MAPNAME2471000, "Elite-Raubzug 74-7").
+-define(MAPNAME2471001, "Elite-Raubzug 74-8").
+-define(MAPNAME2471002, "Elite-Raubzug 74-9").
+-define(MAPNAME2471003, "Elite-Raubzug 74-10").
+-define(MAPNAME2471004, "Elite-Raubzug 74-11").
+-define(MAPNAME2471005, "Elite-Raubzug 74-12").
+-define(MAPNAME2471006, "Elite-Raubzug 74-13").
+-define(MAPNAME2471007, "Elite-Raubzug 74-14").
+-define(MAPNAME2471008, "Elite-Raubzug 74-15").
+-define(MAPNAME2471009, "Elite-Raubzug 75-1").
+-define(MAPNAME2471010, "Elite-Raubzug 75-2").
+-define(MAPNAME2471011, "Elite-Raubzug 75-3").
+-define(MAPNAME2471012, "Elite-Raubzug 75-4").
+-define(MAPNAME2471013, "Elite-Raubzug 75-5").
+-define(MAPNAME2471014, "Elite-Raubzug 75-6").
+-define(MAPNAME2471015, "Elite-Raubzug 75-7").
+-define(MAPNAME2471016, "Elite-Raubzug 75-8").
+-define(MAPNAME2471017, "Elite-Raubzug 75-9").
+-define(MAPNAME2471018, "Elite-Raubzug 75-10").
+-define(MAPNAME2471019, "Elite-Raubzug 75-11").
+-define(MAPNAME2471020, "Elite-Raubzug 75-12").
+-define(MAPNAME2471021, "Elite-Raubzug 75-13").
+-define(MAPNAME2471022, "Elite-Raubzug 75-14").
+-define(MAPNAME2471023, "Elite-Raubzug 75-15").
+-define(MAPNAME2471024, "Elite-Raubzug 76-1").
+-define(MAPNAME2471025, "Elite-Raubzug 76-2").
+-define(MAPNAME2471026, "Elite-Raubzug 76-3").
+-define(MAPNAME2471027, "Elite-Raubzug 76-4").
+-define(MAPNAME2471028, "Elite-Raubzug 76-5").
+-define(MAPNAME2471029, "Elite-Raubzug 76-6").
+-define(MAPNAME2471030, "Elite-Raubzug 76-7").
+-define(MAPNAME2471031, "Elite-Raubzug 76-8").
+-define(MAPNAME2471032, "Elite-Raubzug 76-9").
+-define(MAPNAME2471033, "Elite-Raubzug 76-10").
+-define(MAPNAME2471034, "Elite-Raubzug 76-11").
+-define(MAPNAME2471035, "Elite-Raubzug 76-12").
+-define(MAPNAME2471036, "Elite-Raubzug 76-13").
+-define(MAPNAME2471037, "Elite-Raubzug 76-14").
+-define(MAPNAME2471038, "Elite-Raubzug 76-15").
+-define(MAPNAME2471039, "Elite-Raubzug 77-1").
+-define(MAPNAME2471040, "Elite-Raubzug 77-2").
+-define(MAPNAME2471041, "Elite-Raubzug 77-3").
+-define(MAPNAME2471042, "Elite-Raubzug 77-4").
+-define(MAPNAME2471043, "Elite-Raubzug 77-5").
+-define(MAPNAME2471044, "Elite-Raubzug 77-6").
+-define(MAPNAME2471045, "Elite-Raubzug 77-7").
+-define(MAPNAME2471046, "Elite-Raubzug 77-8").
+-define(MAPNAME2471047, "Elite-Raubzug 77-9").
+-define(MAPNAME2471048, "Elite-Raubzug 77-10").
+-define(MAPNAME2471049, "Elite-Raubzug 77-11").
+-define(MAPNAME2471050, "Elite-Raubzug 77-12").
+-define(MAPNAME2471051, "Elite-Raubzug 77-13").
+-define(MAPNAME2471052, "Elite-Raubzug 77-14").
+-define(MAPNAME2471053, "Elite-Raubzug 77-15").
+-define(MAPNAME2471054, "Elite-Raubzug 78-1").
+-define(MAPNAME2471055, "Elite-Raubzug 78-2").
+-define(MAPNAME2471056, "Elite-Raubzug 78-3").
+-define(MAPNAME2471057, "Elite-Raubzug 78-4").
+-define(MAPNAME2471058, "Elite-Raubzug 78-5").
+-define(MAPNAME2471059, "Elite-Raubzug 78-6").
+-define(MAPNAME2471060, "Elite-Raubzug 78-7").
+-define(MAPNAME2471061, "Elite-Raubzug 78-8").
+-define(MAPNAME2471062, "Elite-Raubzug 78-9").
+-define(MAPNAME2471063, "Elite-Raubzug 78-10").
+-define(MAPNAME2471064, "Elite-Raubzug 78-11").
+-define(MAPNAME2471065, "Elite-Raubzug 78-12").
+-define(MAPNAME2471066, "Elite-Raubzug 78-13").
+-define(MAPNAME2471067, "Elite-Raubzug 78-14").
+-define(MAPNAME2471068, "Elite-Raubzug 78-15").
+-define(MAPNAME2471069, "Elite-Raubzug 79-1").
+-define(MAPNAME2471070, "Elite-Raubzug 79-2").
+-define(MAPNAME2471071, "Elite-Raubzug 79-3").
+-define(MAPNAME2471072, "Elite-Raubzug 79-4").
+-define(MAPNAME2471073, "Elite-Raubzug 79-5").
+-define(MAPNAME2471074, "Elite-Raubzug 79-6").
+-define(MAPNAME2471075, "Elite-Raubzug 79-7").
+-define(MAPNAME2471076, "Elite-Raubzug 79-8").
+-define(MAPNAME2471077, "Elite-Raubzug 79-9").
+-define(MAPNAME2471078, "Elite-Raubzug 79-10").
+-define(MAPNAME2471079, "Elite-Raubzug 79-11").
+-define(MAPNAME2471080, "Elite-Raubzug 79-12").
+-define(MAPNAME2471081, "Elite-Raubzug 79-13").
+-define(MAPNAME2471082, "Elite-Raubzug 79-14").
+-define(MAPNAME2471083, "Elite-Raubzug 79-15").
+-define(MAPNAME2471084, "Elite-Raubzug 80-1").
+-define(MAPNAME2471085, "Elite-Raubzug 80-2").
+-define(MAPNAME2471086, "Elite-Raubzug 80-3").
+-define(MAPNAME2471087, "Elite-Raubzug 80-4").
+-define(MAPNAME2471088, "Elite-Raubzug 80-5").
+-define(MAPNAME2471089, "Elite-Raubzug 80-6").
+-define(MAPNAME2471090, "Elite-Raubzug 80-7").
+-define(MAPNAME2471091, "Elite-Raubzug 80-8").
+-define(MAPNAME2471092, "Elite-Raubzug 80-9").
+-define(MAPNAME2471093, "Elite-Raubzug 80-10").
+-define(MAPNAME2471094, "Elite-Raubzug 80-11").
+-define(MAPNAME2471095, "Elite-Raubzug 80-12").
+-define(MAPNAME2471096, "Elite-Raubzug 80-13").
+-define(MAPNAME2471097, "Elite-Raubzug 80-14").
+-define(MAPNAME2471098, "Elite-Raubzug 80-15").
+-define(MAPNAME2471099, "Elite-Raubzug 81-1").
+-define(MAPNAME2471100, "Elite-Raubzug 81-2").
+-define(MAPNAME2471101, "Elite-Raubzug 81-3").
+-define(MAPNAME2471102, "Elite-Raubzug 81-4").
+-define(MAPNAME2471103, "Elite-Raubzug 81-5").
+-define(MAPNAME2471104, "Elite-Raubzug 81-6").
+-define(MAPNAME2471105, "Elite-Raubzug 81-7").
+-define(MAPNAME2471106, "Elite-Raubzug 81-8").
+-define(MAPNAME2471107, "Elite-Raubzug 81-9").
+-define(MAPNAME2471108, "Elite-Raubzug 81-10").
+-define(MAPNAME2471109, "Elite-Raubzug 81-11").
+-define(MAPNAME2471110, "Elite-Raubzug 81-12").
+-define(MAPNAME2471111, "Elite-Raubzug 81-13").
+-define(MAPNAME2471112, "Elite-Raubzug 81-14").
+-define(MAPNAME2471113, "Elite-Raubzug 81-15").
+-define(MAPNAME2471114, "Elite-Raubzug 82-1").
+-define(MAPNAME2471115, "Elite-Raubzug 82-2").
+-define(MAPNAME2471116, "Elite-Raubzug 82-3").
+-define(MAPNAME2471117, "Elite-Raubzug 82-4").
+-define(MAPNAME2471118, "Elite-Raubzug 82-5").
+-define(MAPNAME2471119, "Elite-Raubzug 82-6").
+-define(MAPNAME2471120, "Elite-Raubzug 82-7").
+-define(MAPNAME2471121, "Elite-Raubzug 82-8").
+-define(MAPNAME2471122, "Elite-Raubzug 82-9").
+-define(MAPNAME2471123, "Elite-Raubzug 82-10").
+-define(MAPNAME2471124, "Elite-Raubzug 82-11").
+-define(MAPNAME2471125, "Elite-Raubzug 82-12").
+-define(MAPNAME2471126, "Elite-Raubzug 82-13").
+-define(MAPNAME2471127, "Elite-Raubzug 82-14").
+-define(MAPNAME2471128, "Elite-Raubzug 82-15").
+-define(MAPNAME2471129, "Elite-Raubzug 83-1").
+-define(MAPNAME2471130, "Elite-Raubzug 83-2").
+-define(MAPNAME2471131, "Elite-Raubzug 83-3").
+-define(MAPNAME2471132, "Elite-Raubzug 83-4").
+-define(MAPNAME2471133, "Elite-Raubzug 83-5").
+-define(MAPNAME2471134, "Elite-Raubzug 83-6").
+-define(MAPNAME2471135, "Elite-Raubzug 83-7").
+-define(MAPNAME2471136, "Elite-Raubzug 83-8").
+-define(MAPNAME2471137, "Elite-Raubzug 83-9").
+-define(MAPNAME2471138, "Elite-Raubzug 83-10").
+-define(MAPNAME2471139, "Elite-Raubzug 83-11").
+-define(MAPNAME2471140, "Elite-Raubzug 83-12").
+-define(MAPNAME2471141, "Elite-Raubzug 83-13").
+-define(MAPNAME2471142, "Elite-Raubzug 83-14").
+-define(MAPNAME2471143, "Elite-Raubzug 83-15").
+-define(MAPNAME2471144, "Elite-Raubzug 84-1").
+-define(MAPNAME2471145, "Elite-Raubzug 84-2").
+-define(MAPNAME2471146, "Elite-Raubzug 84-3").
+-define(MAPNAME2471147, "Elite-Raubzug 84-4").
+-define(MAPNAME2471148, "Elite-Raubzug 84-5").
+-define(MAPNAME2471149, "Elite-Raubzug 84-6").
+-define(MAPNAME2471150, "Elite-Raubzug 84-7").
+-define(MAPNAME2471151, "Elite-Raubzug 84-8").
+-define(MAPNAME2471152, "Elite-Raubzug 84-9").
+-define(MAPNAME2471153, "Elite-Raubzug 84-10").
+-define(MAPNAME2471154, "Elite-Raubzug 84-11").
+-define(MAPNAME2471155, "Elite-Raubzug 84-12").
+-define(MAPNAME2471156, "Elite-Raubzug 84-13").
+-define(MAPNAME2471157, "Elite-Raubzug 84-14").
+-define(MAPNAME2471158, "Elite-Raubzug 84-15").
+-define(MAPNAME2471159, "Elite-Raubzug 85-1").
+-define(MAPNAME2471160, "Elite-Raubzug 85-2").
+-define(MAPNAME2471161, "Elite-Raubzug 85-3").
+-define(MAPNAME2471162, "Elite-Raubzug 85-4").
+-define(MAPNAME2471163, "Elite-Raubzug 85-5").
+-define(MAPNAME2471164, "Elite-Raubzug 85-6").
+-define(MAPNAME2471165, "Elite-Raubzug 85-7").
+-define(MAPNAME2471166, "Elite-Raubzug 85-8").
+-define(MAPNAME2471167, "Elite-Raubzug 85-9").
+-define(MAPNAME2471168, "Elite-Raubzug 85-10").
+-define(MAPNAME2471169, "Elite-Raubzug 85-11").
+-define(MAPNAME2471170, "Elite-Raubzug 85-12").
+-define(MAPNAME2471171, "Elite-Raubzug 85-13").
+-define(MAPNAME2471172, "Elite-Raubzug 85-14").
+-define(MAPNAME2471173, "Elite-Raubzug 85-15").
+-define(MAPNAME2471174, "Elite-Raubzug 86-1").
+-define(MAPNAME2471175, "Elite-Raubzug 86-2").
+-define(MAPNAME2471176, "Elite-Raubzug 86-3").
+-define(MAPNAME2471177, "Elite-Raubzug 86-4").
+-define(MAPNAME2471178, "Elite-Raubzug 86-5").
+-define(MAPNAME2471179, "Elite-Raubzug 86-6").
+-define(MAPNAME2471180, "Elite-Raubzug 86-7").
+-define(MAPNAME2471181, "Elite-Raubzug 86-8").
+-define(MAPNAME2471182, "Elite-Raubzug 86-9").
+-define(MAPNAME2471183, "Elite-Raubzug 86-10").
+-define(MAPNAME2471184, "Elite-Raubzug 86-11").
+-define(MAPNAME2471185, "Elite-Raubzug 86-12").
+-define(MAPNAME2471186, "Elite-Raubzug 86-13").
+-define(MAPNAME2471187, "Elite-Raubzug 86-14").
+-define(MAPNAME2471188, "Elite-Raubzug 86-15").
+-define(MAPNAME2471189, "Elite-Raubzug 87-1").
+-define(MAPNAME2471190, "Elite-Raubzug 87-2").
+-define(MAPNAME2471191, "Elite-Raubzug 87-3").
+-define(MAPNAME2471192, "Elite-Raubzug 87-4").
+-define(MAPNAME2471193, "Elite-Raubzug 87-5").
+-define(MAPNAME2471194, "Elite-Raubzug 87-6").
+-define(MAPNAME2471195, "Elite-Raubzug 87-7").
+-define(MAPNAME2471196, "Elite-Raubzug 87-8").
+-define(MAPNAME2471197, "Elite-Raubzug 87-9").
+-define(MAPNAME2471198, "Elite-Raubzug 87-10").
+-define(MAPNAME2471199, "Elite-Raubzug 87-11").
+-define(MAPNAME2471200, "Elite-Raubzug 87-12").
+-define(MAPNAME2471201, "Elite-Raubzug 87-13").
+-define(MAPNAME2471202, "Elite-Raubzug 87-14").
+-define(MAPNAME2471203, "Elite-Raubzug 87-15").
+-define(MAPNAME2471204, "Elite-Raubzug 88-1").
+-define(MAPNAME2471205, "Elite-Raubzug 88-2").
+-define(MAPNAME2471206, "Elite-Raubzug 88-3").
+-define(MAPNAME2471207, "Elite-Raubzug 88-4").
+-define(MAPNAME2471208, "Elite-Raubzug 88-5").
+-define(MAPNAME2471209, "Elite-Raubzug 88-6").
+-define(MAPNAME2471210, "Elite-Raubzug 88-7").
+-define(MAPNAME2471211, "Elite-Raubzug 88-8").
+-define(MAPNAME2471212, "Elite-Raubzug 88-9").
+-define(MAPNAME2471213, "Elite-Raubzug 88-10").
+-define(MAPNAME2471214, "Elite-Raubzug 88-11").
+-define(MAPNAME2471215, "Elite-Raubzug 88-12").
+-define(MAPNAME2471216, "Elite-Raubzug 88-13").
+-define(MAPNAME2471217, "Elite-Raubzug 88-14").
+-define(MAPNAME2471218, "Elite-Raubzug 88-15").
+-define(MAPNAME2471219, "Elite-Raubzug 89-1").
+-define(MAPNAME2471220, "Elite-Raubzug 89-2").
+-define(MAPNAME2471221, "Elite-Raubzug 89-3").
+-define(MAPNAME2471222, "Elite-Raubzug 89-4").
+-define(MAPNAME2471223, "Elite-Raubzug 89-5").
+-define(MAPNAME2471224, "Elite-Raubzug 89-6").
+-define(MAPNAME2471225, "Elite-Raubzug 89-7").
+-define(MAPNAME2471226, "Elite-Raubzug 89-8").
+-define(MAPNAME2471227, "Elite-Raubzug 89-9").
+-define(MAPNAME2471228, "Elite-Raubzug 89-10").
+-define(MAPNAME2471229, "Elite-Raubzug 89-11").
+-define(MAPNAME2471230, "Elite-Raubzug 89-12").
+-define(MAPNAME2471231, "Elite-Raubzug 89-13").
+-define(MAPNAME2471232, "Elite-Raubzug 89-14").
+-define(MAPNAME2471233, "Elite-Raubzug 89-15").
+-define(MAPNAME2471234, "Elite-Raubzug 90-1").
+-define(MAPNAME2471235, "Elite-Raubzug 90-2").
+-define(MAPNAME2471236, "Elite-Raubzug 90-3").
+-define(MAPNAME2471237, "Elite-Raubzug 90-4").
+-define(MAPNAME2471238, "Elite-Raubzug 90-5").
+-define(MAPNAME2471239, "Elite-Raubzug 90-6").
+-define(MAPNAME2471240, "Elite-Raubzug 90-7").
+-define(MAPNAME2471241, "Elite-Raubzug 90-8").
+-define(MAPNAME2471242, "Elite-Raubzug 90-9").
+-define(MAPNAME2471243, "Elite-Raubzug 90-10").
+-define(MAPNAME2471244, "Elite-Raubzug 90-11").
+-define(MAPNAME2471245, "Elite-Raubzug 90-12").
+-define(MAPNAME2471246, "Elite-Raubzug 90-13").
+-define(MAPNAME2471247, "Elite-Raubzug 90-14").
+-define(MAPNAME2471248, "Elite-Raubzug 90-15").
+-define(MAPNAME2471249, "Elite-Raubzug 91-1").
+-define(MAPNAME2471250, "Elite-Raubzug 91-2").
+-define(MAPNAME2471251, "Elite-Raubzug 91-3").
+-define(MAPNAME2471252, "Elite-Raubzug 91-4").
+-define(MAPNAME2471253, "Elite-Raubzug 91-5").
+-define(MAPNAME2471254, "Elite-Raubzug 91-6").
+-define(MAPNAME2471255, "Elite-Raubzug 91-7").
+-define(MAPNAME2471256, "Elite-Raubzug 91-8").
+-define(MAPNAME2471257, "Elite-Raubzug 91-9").
+-define(MAPNAME2471258, "Elite-Raubzug 91-10").
+-define(MAPNAME2471259, "Elite-Raubzug 91-11").
+-define(MAPNAME2471260, "Elite-Raubzug 91-12").
+-define(MAPNAME2471261, "Elite-Raubzug 91-13").
+-define(MAPNAME2471262, "Elite-Raubzug 91-14").
+-define(MAPNAME2471263, "Elite-Raubzug 91-15").
+-define(MAPNAME2471264, "Elite-Raubzug 92-1").
+-define(MAPNAME2471265, "Elite-Raubzug 92-2").
+-define(MAPNAME2471266, "Elite-Raubzug 92-3").
+-define(MAPNAME2471267, "Elite-Raubzug 92-4").
+-define(MAPNAME2471268, "Elite-Raubzug 92-5").
+-define(MAPNAME2471269, "Elite-Raubzug 92-6").
+-define(MAPNAME2471270, "Elite-Raubzug 92-7").
+-define(MAPNAME2471271, "Elite-Raubzug 92-8").
+-define(MAPNAME2471272, "Elite-Raubzug 92-9").
+-define(MAPNAME2471273, "Elite-Raubzug 92-10").
+-define(MAPNAME2471274, "Elite-Raubzug 92-11").
+-define(MAPNAME2471275, "Elite-Raubzug 92-12").
+-define(MAPNAME2471276, "Elite-Raubzug 92-13").
+-define(MAPNAME2471277, "Elite-Raubzug 92-14").
+-define(MAPNAME2471278, "Elite-Raubzug 92-15").
+-define(MAPNAME2471279, "Elite-Raubzug 93-1").
+-define(MAPNAME2471280, "Elite-Raubzug 93-2").
+-define(MAPNAME2471281, "Elite-Raubzug 93-3").
+-define(MAPNAME2471282, "Elite-Raubzug 93-4").
+-define(MAPNAME2471283, "Elite-Raubzug 93-5").
+-define(MAPNAME2471284, "Elite-Raubzug 93-6").
+-define(MAPNAME2471285, "Elite-Raubzug 93-7").
+-define(MAPNAME2471286, "Elite-Raubzug 93-8").
+-define(MAPNAME2471287, "Elite-Raubzug 93-9").
+-define(MAPNAME2471288, "Elite-Raubzug 93-10").
+-define(MAPNAME2471289, "Elite-Raubzug 93-11").
+-define(MAPNAME2471290, "Elite-Raubzug 93-12").
+-define(MAPNAME2471291, "Elite-Raubzug 93-13").
+-define(MAPNAME2471292, "Elite-Raubzug 93-14").
+-define(MAPNAME2471293, "Elite-Raubzug 93-15").
+-define(MAPNAME2000015, "测试小怪-客户端").
+-define(MAPNAME2000016, "测试小怪-服务器").
+-define(MAPNAME3300002, "").
+-define(MAPNAME110001, "").
+-define(MAPNAME110002, "").
+-define(MAPNAME110003, "").
+-define(MAPNAME110004, "").
+-define(MAPNAME110005, "").
+-define(MAPNAME110006, "").
+-define(MAPNAME110007, "").
+-define(MAPNAME110008, "").
+-define(MAPNAME110009, "").
+-define(MAPNAME110010, "").
+-define(MAPNAME110011, "").
+-define(MAPNAME110012, "").
+-define(MAPNAME110013, "").
+-define(MAPNAME110014, "").
+-define(MAPNAME110015, "").
+-define(MAPNAME110016, "").
+-define(MAPNAME110017, "").
+-define(MAPNAME110018, "").
+-define(MAPNAME110019, "").
+-define(MAPNAME110020, "").
+-define(MAPNAME110021, "").
+-define(MAPNAME110022, "").
+-define(MAPNAME110023, "").
+-define(MAPNAME110024, "").
+-define(MAPNAME110025, "").
+-define(MAPNAME110026, "").
+-define(MAPNAME110027, "").
+-define(MAPNAME110028, "").
+-define(MAPNAME110029, "").
+-define(MAPNAME110030, "").
+-define(MAPNAME110031, "").
+-define(MAPNAME110032, "").
+-define(MAPNAME110033, "").
+-define(MAPNAME110034, "").
+-define(MAPNAME110035, "").
+-define(MAPNAME110036, "").
+-define(MAPNAME110037, "").
+-define(MAPNAME110038, "").
+-define(MAPNAME110039, "").
+-define(MAPNAME110040, "").
+-define(MAPNAME110041, "").
+-define(MAPNAME110042, "").
+-define(MAPNAME110043, "").
+-define(MAPNAME110044, "").
+-define(MAPNAME110045, "").
+-define(MAPNAME110046, "").
+-define(MAPNAME110047, "").
+-define(MAPNAME110048, "").
+-define(MAPNAME110049, "").
+-define(MAPNAME110050, "").
+-define(MAPNAME110051, "").
+-define(MAPNAME110052, "").
+-define(MAPNAME110053, "").
+-define(MAPNAME110054, "").
+-define(MAPNAME110055, "").
+-define(MAPNAME110056, "").
+-define(MAPNAME110057, "").
+-define(MAPNAME110058, "").
+-define(MAPNAME110059, "").
+-define(MAPNAME110060, "").
+-define(MAPNAME110061, "").
+-define(MAPNAME110062, "").
+-define(MAPNAME110063, "").
+-define(MAPNAME110064, "").
+-define(MAPNAME110065, "").
+-define(MAPNAME110066, "").
+-define(MAPNAME110067, "").
+-define(MAPNAME110068, "").
+-define(MAPNAME110069, "").
+-define(MAPNAME110070, "").
+-define(MAPNAME110071, "").
+-define(MAPNAME110072, "").
+-define(MAPNAME110073, "").
+-define(MAPNAME110074, "").
+-define(MAPNAME110075, "").
+-define(MAPNAME110076, "").
+-define(MAPNAME110077, "").
+-define(MAPNAME110078, "").
+-define(MAPNAME110079, "").
+-define(MAPNAME110080, "").
+-define(MAPNAME110081, "").
+-define(MAPNAME110082, "").
+-define(MAPNAME110083, "").
+-define(MAPNAME110084, "").
+-define(MAPNAME110085, "").
+-define(MAPNAME110086, "").
+-define(MAPNAME110087, "").
+-define(MAPNAME110088, "").
+-define(MAPNAME110089, "").
+-define(MAPNAME110090, "").
+-define(MAPNAME110091, "").
+-define(MAPNAME110092, "").
+-define(MAPNAME110093, "").
+-define(MAPNAME110094, "").
+-define(MAPNAME110095, "").
+-define(MAPNAME110096, "").
+-define(MAPNAME110097, "").
+-define(MAPNAME110098, "").
+-define(MAPNAME110099, "").
+-define(MAPNAME110100, "").
+-define(MAPNAME110101, "").
+-define(MAPNAME110102, "").
+-define(MAPNAME110103, "").
+-define(MAPNAME110104, "").
+-define(MAPNAME110105, "").
+-define(MAPNAME110106, "").
+-define(MAPNAME110107, "").
+-define(MAPNAME110108, "").
+-define(MAPNAME110109, "").
+-define(MAPNAME110110, "").
+-define(MAPNAME110111, "").
+-define(MAPNAME110112, "").
+-define(MAPNAME110113, "").
+-define(MAPNAME110114, "").
+-define(MAPNAME110115, "").
+-define(MAPNAME110116, "").
+-define(MAPNAME110117, "").
+-define(MAPNAME110118, "").
+-define(MAPNAME110119, "").
+-define(MAPNAME110120, "").
+-define(MAPNAME110121, "").
+-define(MAPNAME110122, "").
+-define(MAPNAME110123, "").
+-define(MAPNAME110124, "").
+-define(MAPNAME110125, "").
+-define(MAPNAME110126, "").
+-define(MAPNAME110127, "").
+-define(MAPNAME110128, "").
+-define(MAPNAME110129, "").
+-define(MAPNAME110130, "").
+-define(MAPNAME110131, "").
+-define(MAPNAME110132, "").
+-define(MAPNAME110133, "").
+-define(MAPNAME110134, "").
+-define(MAPNAME110135, "").
+-define(MAPNAME110136, "").
+-define(MAPNAME110137, "").
+-define(MAPNAME110138, "").
+-define(MAPNAME110139, "").
+-define(MAPNAME110140, "").
+-define(MAPNAME110141, "").
+-define(MAPNAME110142, "").
+-define(MAPNAME110143, "").
+-define(MAPNAME110144, "").
+-define(MAPNAME110145, "").
+-define(MAPNAME110146, "").
+-define(MAPNAME110147, "").
+-define(MAPNAME110148, "").
+-define(MAPNAME110149, "").
+-define(MAPNAME110150, "").
+-define(MAPNAME110151, "").
+-define(MAPNAME110152, "").
+-define(MAPNAME110153, "").
+-define(MAPNAME110154, "").
+-define(MAPNAME110155, "").
+-define(MAPNAME110156, "").
+-define(MAPNAME110157, "").
+-define(MAPNAME110158, "").
+-define(MAPNAME110159, "").
+-define(MAPNAME110160, "").
+-define(MAPNAME110161, "").
+-define(MAPNAME110162, "").
+-define(MAPNAME110163, "").
+-define(MAPNAME110164, "").
+-define(MAPNAME110165, "").
+-define(MAPNAME110166, "").
+-define(MAPNAME110167, "").
+-define(MAPNAME110168, "").
+-define(MAPNAME110169, "").
+-define(MAPNAME110170, "").
+-define(MAPNAME110171, "").
+-define(MAPNAME110172, "").
+-define(MAPNAME110173, "").
+-define(MAPNAME110174, "").
+-define(MAPNAME110175, "").
+-define(MAPNAME110176, "").
+-define(MAPNAME110177, "").
+-define(MAPNAME110178, "").
+-define(MAPNAME110179, "").
+-define(MAPNAME110180, "").
+-define(MAPNAME110181, "").
+-define(MAPNAME110182, "").
+-define(MAPNAME110183, "").
+-define(MAPNAME110184, "").
+-define(MAPNAME110185, "").
+-define(MAPNAME110186, "").
+-define(MAPNAME110187, "").
+-define(MAPNAME110188, "").
+-define(MAPNAME110189, "").
+-define(MAPNAME110190, "").
+-define(MAPNAME110191, "").
+-define(MAPNAME110192, "").
+-define(MAPNAME110193, "").
+-define(MAPNAME110194, "").
+-define(MAPNAME110195, "").
+-define(MAPNAME110196, "").
+-define(MAPNAME110197, "").
+-define(MAPNAME110198, "").
+-define(MAPNAME110199, "").
+-define(MAPNAME110200, "").
+-define(MAPNAME110201, "").
+-define(MAPNAME110202, "").
+-define(MAPNAME110203, "").
+-define(MAPNAME110204, "").
+-define(MAPNAME110205, "").
+-define(MAPNAME110206, "").
+-define(MAPNAME110207, "").
+-define(MAPNAME110208, "").
+-define(MAPNAME110209, "").
+-define(MAPNAME110210, "").
+-define(MAPNAME110211, "").
+-define(MAPNAME110212, "").
+-define(MAPNAME110213, "").
+-define(MAPNAME110214, "").
+-define(MAPNAME110215, "").
+-define(MAPNAME110216, "").
+-define(MAPNAME110217, "").
+-define(MAPNAME110218, "").
+-define(MAPNAME110219, "").
+-define(MAPNAME110220, "").
+-define(MAPNAME110221, "").
+-define(MAPNAME110222, "").
+-define(MAPNAME110223, "").
+-define(MAPNAME110224, "").
+-define(MAPNAME110225, "").
+-define(MAPNAME110226, "").
+-define(MAPNAME110227, "").
+-define(MAPNAME110228, "").
+-define(MAPNAME110229, "").
+-define(MAPNAME110230, "").
+-define(MAPNAME110231, "").
+-define(MAPNAME110232, "").
+-define(MAPNAME110233, "").
+-define(MAPNAME110234, "").
+-define(MAPNAME110235, "").
+-define(MAPNAME110236, "").
+-define(MAPNAME110237, "").
+-define(MAPNAME110238, "").
+-define(MAPNAME110239, "").
+-define(MAPNAME110240, "").
+-define(MAPNAME110241, "").
+-define(MAPNAME110242, "").
+-define(MAPNAME110243, "").
+-define(MAPNAME110244, "").
+-define(MAPNAME110245, "").
+-define(MAPNAME110246, "").
+-define(MAPNAME110247, "").
+-define(MAPNAME110248, "").
+-define(MAPNAME110249, "").
+-define(MAPNAME110250, "").
+-define(MAPNAME110251, "").
+-define(MAPNAME110252, "").
+-define(MAPNAME110253, "").
+-define(MAPNAME110254, "").
+-define(MAPNAME110255, "").
+-define(MAPNAME110256, "").
+-define(MAPNAME110257, "").
+-define(MAPNAME110258, "").
+-define(MAPNAME110259, "").
+-define(MAPNAME110260, "").
+-define(MAPNAME110261, "").
+-define(MAPNAME110262, "").
+-define(MAPNAME110263, "").
+-define(MAPNAME110264, "").
+-define(MAPNAME110265, "").
+-define(MAPNAME110266, "").
+-define(MAPNAME110267, "").
+-define(MAPNAME110268, "").
+-define(MAPNAME110269, "").
+-define(MAPNAME110270, "").
+-define(MAPNAME110271, "").
+-define(MAPNAME110272, "").
+-define(MAPNAME110273, "").
+-define(MAPNAME110274, "").
+-define(MAPNAME110275, "").
+-define(MAPNAME110276, "").
+-define(MAPNAME110277, "").
+-define(MAPNAME110278, "").
+-define(MAPNAME110279, "").
+-define(MAPNAME110280, "").
+-define(MAPNAME110281, "").
+-define(MAPNAME110282, "").
+-define(MAPNAME110283, "").
+-define(MAPNAME110284, "").
+-define(MAPNAME110285, "").
+-define(MAPNAME110286, "").
+-define(MAPNAME110287, "").
+-define(MAPNAME110288, "").
+-define(MAPNAME110289, "").
+-define(MAPNAME110290, "").
+-define(MAPNAME110291, "").
+-define(MAPNAME110292, "").
+-define(MAPNAME110293, "").
+-define(MAPNAME110294, "").
+-define(MAPNAME110295, "").
+-define(MAPNAME110296, "").
+-define(MAPNAME110297, "").
+-define(MAPNAME110298, "").
+-define(MAPNAME110299, "").
+-define(MAPNAME110300, "").
+-define(MAPNAME110301, "").
+-define(MAPNAME110302, "").
+-define(MAPNAME110303, "").
+-define(MAPNAME110304, "").
+-define(MAPNAME110305, "").
+-define(MAPNAME110306, "").
+-define(MAPNAME110307, "").
+-define(MAPNAME110308, "").
+-define(MAPNAME110309, "").
+-define(MAPNAME110310, "").
+-define(MAPNAME110311, "").
+-define(MAPNAME110312, "").
+-define(MAPNAME110313, "").
+-define(MAPNAME110314, "").
+-define(MAPNAME110315, "").
+-define(MAPNAME110316, "").
+-define(MAPNAME110317, "").
+-define(MAPNAME110318, "").
+-define(MAPNAME110319, "").
+-define(MAPNAME110320, "").
+-define(MAPNAME110321, "").
+-define(MAPNAME110322, "").
+-define(MAPNAME110323, "").
+-define(MAPNAME110324, "").
+-define(MAPNAME110325, "").
+-define(MAPNAME110326, "").
+-define(MAPNAME110327, "").
+-define(MAPNAME110328, "").
+-define(MAPNAME110329, "").
+-define(MAPNAME110330, "").
+-define(MAPNAME110331, "").
+-define(MAPNAME110332, "").
+-define(MAPNAME110333, "").
+-define(MAPNAME110334, "").
+-define(MAPNAME110335, "").
+-define(MAPNAME110336, "").
+-define(MAPNAME110337, "").
+-define(MAPNAME110338, "").
+-define(MAPNAME110339, "").
+-define(MAPNAME110340, "").
+-define(MAPNAME110341, "").
+-define(MAPNAME110342, "").
+-define(MAPNAME110343, "").
+-define(MAPNAME110344, "").
+-define(MAPNAME110345, "").
+-define(MAPNAME110346, "").
+-define(MAPNAME110347, "").
+-define(MAPNAME110348, "").
+-define(MAPNAME110349, "").
+-define(MAPNAME110350, "").
+-define(MAPNAME110351, "").
+-define(MAPNAME110352, "").
+-define(MAPNAME110353, "").
+-define(MAPNAME110354, "").
+-define(MAPNAME110355, "").
+-define(MAPNAME110356, "").
+-define(MAPNAME110357, "").
+-define(MAPNAME110358, "").
+-define(MAPNAME110359, "").
+-define(MAPNAME110360, "").
+-define(MAPNAME110361, "").
+-define(MAPNAME110362, "").
+-define(MAPNAME110363, "").
+-define(MAPNAME110364, "").
+-define(MAPNAME110365, "").
+-define(MAPNAME110366, "").
+-define(MAPNAME110367, "").
+-define(MAPNAME110368, "").
+-define(MAPNAME110369, "").
+-define(MAPNAME110370, "").
+-define(MAPNAME110371, "").
+-define(MAPNAME110372, "").
+-define(MAPNAME110373, "").
+-define(MAPNAME110374, "").
+-define(MAPNAME110375, "").
+-define(MAPNAME110376, "").
+-define(MAPNAME110377, "").
+-define(MAPNAME110378, "").
+-define(MAPNAME110379, "").
+-define(MAPNAME110380, "").
+-define(MAPNAME110381, "").
+-define(MAPNAME110382, "").
+-define(MAPNAME110383, "").
+-define(MAPNAME110384, "").
+-define(MAPNAME110385, "").
+-define(MAPNAME110386, "").
+-define(MAPNAME110387, "").
+-define(MAPNAME110388, "").
+-define(MAPNAME110389, "").
+-define(MAPNAME110390, "").
+-define(MAPNAME110391, "").
+-define(MAPNAME110392, "").
+-define(MAPNAME110393, "").
+-define(MAPNAME110394, "").
+-define(MAPNAME110395, "").
+-define(MAPNAME110396, "").
+-define(MAPNAME110397, "").
+-define(MAPNAME110398, "").
+-define(MAPNAME110399, "").
+-define(MAPNAME110400, "").
+-define(MAPNAME110401, "").
+-define(MAPNAME110402, "").
+-define(MAPNAME110403, "").
+-define(MAPNAME110404, "").
+-define(MAPNAME110405, "").
+-define(MAPNAME110406, "").
+-define(MAPNAME110407, "").
+-define(MAPNAME110408, "").
+-define(MAPNAME110409, "").
+-define(MAPNAME110410, "").
+-define(MAPNAME110411, "").
+-define(MAPNAME110412, "").
+-define(MAPNAME110413, "").
+-define(MAPNAME110414, "").
+-define(MAPNAME110415, "").
+-define(MAPNAME110416, "").
+-define(MAPNAME110417, "").
+-define(MAPNAME110418, "").
+-define(MAPNAME110419, "").
+-define(MAPNAME110420, "").
+-define(MAPNAME110421, "").
+-define(MAPNAME110422, "").
+-define(MAPNAME110423, "").
+-define(MAPNAME110424, "").
+-define(MAPNAME110425, "").
+-define(MAPNAME110426, "").
+-define(MAPNAME110427, "").
+-define(MAPNAME110428, "").
+-define(MAPNAME110429, "").
+-define(MAPNAME110430, "").
+-define(MAPNAME110431, "").
+-define(MAPNAME110432, "").
+-define(MAPNAME110433, "").
+-define(MAPNAME110434, "").
+-define(MAPNAME110435, "").
+-define(MAPNAME110436, "").
+-define(MAPNAME110437, "").
+-define(MAPNAME110438, "").
+-define(MAPNAME110439, "").
+-define(MAPNAME110440, "").
+-define(MAPNAME110441, "").
+-define(MAPNAME110442, "").
+-define(MAPNAME110443, "").
+-define(MAPNAME110444, "").
+-define(MAPNAME110445, "").
+-define(MAPNAME110446, "").
+-define(MAPNAME110447, "").
+-define(MAPNAME110448, "").
+-define(MAPNAME110449, "").
+-define(MAPNAME110450, "").
+-define(MAPNAME110451, "").
+-define(MAPNAME110452, "").
+-define(MAPNAME110453, "").
+-define(MAPNAME110454, "").
+-define(MAPNAME110455, "").
+-define(MAPNAME110456, "").
+-define(MAPNAME110457, "").
+-define(MAPNAME110458, "").
+-define(MAPNAME110459, "").
+-define(MAPNAME110460, "").
+-define(MAPNAME110461, "").
+-define(MAPNAME110462, "").
+-define(MAPNAME110463, "").
+-define(MAPNAME110464, "").
+-define(MAPNAME110465, "").
+-define(MAPNAME110466, "").
+-define(MAPNAME110467, "").
+-define(MAPNAME110468, "").
+-define(MAPNAME110469, "").
+-define(MAPNAME110470, "").
+-define(MAPNAME110471, "").
+-define(MAPNAME110472, "").
+-define(MAPNAME110473, "").
+-define(MAPNAME110474, "").
+-define(MAPNAME110475, "").
+-define(MAPNAME110476, "").
+-define(MAPNAME110477, "").
+-define(MAPNAME110478, "").
+-define(MAPNAME110479, "").
+-define(MAPNAME110480, "").
+-define(MAPNAME110481, "").
+-define(MAPNAME110482, "").
+-define(MAPNAME110483, "").
+-define(MAPNAME110484, "").
+-define(MAPNAME110485, "").
+-define(MAPNAME110486, "").
+-define(MAPNAME110487, "").
+-define(MAPNAME110488, "").
+-define(MAPNAME110489, "").
+-define(MAPNAME110490, "").
+-define(MAPNAME110491, "").
+-define(MAPNAME110492, "").
+-define(MAPNAME110493, "").
+-define(MAPNAME110494, "").
+-define(MAPNAME110495, "").
+-define(MAPNAME110496, "").
+-define(MAPNAME110497, "").
+-define(MAPNAME110498, "").
+-define(MAPNAME110499, "").
+-define(MAPNAME110500, "").
+-define(MAPNAME110501, "").
+-define(MAPNAME110502, "").
+-define(MAPNAME110503, "").
+-define(MAPNAME110504, "").
+-define(MAPNAME110505, "").
+-define(MAPNAME110506, "").
+-define(MAPNAME110507, "").
+-define(MAPNAME110508, "").
+-define(MAPNAME110509, "").
+-define(MAPNAME110510, "").
+-define(MAPNAME110511, "").
+-define(MAPNAME110512, "").
+-define(MAPNAME110513, "").
+-define(MAPNAME110514, "").
+-define(MAPNAME110515, "").
+-define(MAPNAME110516, "").
+-define(MAPNAME110517, "").
+-define(MAPNAME110518, "").
+-define(MAPNAME110519, "").
+-define(MAPNAME110520, "").
+-define(MAPNAME110521, "").
+-define(MAPNAME110522, "").
+-define(MAPNAME110523, "").
+-define(MAPNAME110524, "").
+-define(MAPNAME110525, "").
+-define(MAPNAME110526, "").
+-define(MAPNAME110527, "").
+-define(MAPNAME110528, "").
+-define(MAPNAME110529, "").
+-define(MAPNAME110530, "").
+-define(MAPNAME110531, "").
+-define(MAPNAME110532, "").
+-define(MAPNAME110533, "").
+-define(MAPNAME110534, "").
+-define(MAPNAME110535, "").
+-define(MAPNAME110536, "").
+-define(MAPNAME110537, "").
+-define(MAPNAME110538, "").
+-define(MAPNAME110539, "").
+-define(MAPNAME110540, "").
+-define(MAPNAME110541, "").
+-define(MAPNAME110542, "").
+-define(MAPNAME110543, "").
+-define(MAPNAME110544, "").
+-define(MAPNAME110545, "").
+-define(MAPNAME110546, "").
+-define(MAPNAME110547, "").
+-define(MAPNAME110548, "").
+-define(MAPNAME110549, "").
+-define(MAPNAME110550, "").
+-define(MAPNAME110551, "").
+-define(MAPNAME110552, "").
+-define(MAPNAME110553, "").
+-define(MAPNAME110554, "").
+-define(MAPNAME110555, "").
+-define(MAPNAME110556, "").
+-define(MAPNAME110557, "").
+-define(MAPNAME110558, "").
+-define(MAPNAME110559, "").
+-define(MAPNAME110560, "").
+-define(MAPNAME110561, "").
+-define(MAPNAME110562, "").
+-define(MAPNAME110563, "").
+-define(MAPNAME110564, "").
+-define(MAPNAME110565, "").
+-define(MAPNAME110566, "").
+-define(MAPNAME110567, "").
+-define(MAPNAME110568, "").
+-define(MAPNAME110569, "").
+-define(MAPNAME110570, "").
+-define(MAPNAME110571, "").
+-define(MAPNAME110572, "").
+-define(MAPNAME110573, "").
+-define(MAPNAME110574, "").
+-define(MAPNAME110575, "").
+-define(MAPNAME110576, "").
+-define(MAPNAME110577, "").
+-define(MAPNAME110578, "").
+-define(MAPNAME110579, "").
+-define(MAPNAME110580, "").
+-define(MAPNAME110581, "").
+-define(MAPNAME110582, "").
+-define(MAPNAME110583, "").
+-define(MAPNAME110584, "").
+-define(MAPNAME110585, "").
+-define(MAPNAME110586, "").
+-define(MAPNAME110587, "").
+-define(MAPNAME110588, "").
+-define(MAPNAME110589, "").
+-define(MAPNAME110590, "").
+-define(MAPNAME110591, "").
+-define(MAPNAME110592, "").
+-define(MAPNAME110593, "").
+-define(MAPNAME110594, "").
+-define(MAPNAME110595, "").
+-define(MAPNAME110596, "").
+-define(MAPNAME110597, "").
+-define(MAPNAME110598, "").
+-define(MAPNAME110599, "").
+-define(MAPNAME110600, "").
+-define(MAPNAME110601, "").
+-define(MAPNAME110602, "").
+-define(MAPNAME110603, "").
+-define(MAPNAME110604, "").
+-define(MAPNAME110605, "").
+-define(MAPNAME110606, "").
+-define(MAPNAME110607, "").
+-define(MAPNAME110608, "").
+-define(MAPNAME110609, "").
+-define(MAPNAME110610, "").
+-define(MAPNAME110611, "").
+-define(MAPNAME110612, "").
+-define(MAPNAME110613, "").
+-define(MAPNAME110614, "").
+-define(MAPNAME110615, "").
+-define(MAPNAME110616, "").
+-define(MAPNAME110617, "").
+-define(MAPNAME110618, "").
+-define(MAPNAME110619, "").
+-define(MAPNAME110620, "").
+-define(MAPNAME110621, "").
+-define(MAPNAME110622, "").
+-define(MAPNAME110623, "").
+-define(MAPNAME110624, "").
+-define(MAPNAME110625, "").
+-define(MAPNAME110626, "").
+-define(MAPNAME110627, "").
+-define(MAPNAME110628, "").
+-define(MAPNAME110629, "").
+-define(MAPNAME110630, "").
+-define(MAPNAME110631, "").
+-define(MAPNAME110632, "").
+-define(MAPNAME110633, "").
+-define(MAPNAME110634, "").
+-define(MAPNAME110635, "").
+-define(MAPNAME110636, "").
+-define(MAPNAME110637, "").
+-define(MAPNAME110638, "").
+-define(MAPNAME110639, "").
+-define(MAPNAME110640, "").
+-define(MAPNAME110641, "").
+-define(MAPNAME110642, "").
+-define(MAPNAME110643, "").
+-define(MAPNAME110644, "").
+-define(MAPNAME110645, "").
+-define(MAPNAME110646, "").
+-define(MAPNAME110647, "").
+-define(MAPNAME110648, "").
+-define(MAPNAME110649, "").
+-define(MAPNAME110650, "").
+-define(MAPNAME110651, "").
+-define(MAPNAME110652, "").
+-define(MAPNAME110653, "").
+-define(MAPNAME110654, "").
+-define(MAPNAME110655, "").
+-define(MAPNAME110656, "").
+-define(MAPNAME110657, "").
+-define(MAPNAME110658, "").
+-define(MAPNAME110659, "").
+-define(MAPNAME110660, "").
+-define(MAPNAME110661, "").
+-define(MAPNAME110662, "").
+-define(MAPNAME110663, "").
+-define(MAPNAME110664, "").
+-define(MAPNAME110665, "").
+-define(MAPNAME110666, "").
+-define(MAPNAME110667, "").
+-define(MAPNAME110668, "").
+-define(MAPNAME110669, "").
+-define(MAPNAME110670, "").
+-define(MAPNAME110671, "").
+-define(MAPNAME110672, "").
+-define(MAPNAME110673, "").
+-define(MAPNAME110674, "").
+-define(MAPNAME110675, "").
+-define(MAPNAME110676, "").
+-define(MAPNAME110677, "").
+-define(MAPNAME110678, "").
+-define(MAPNAME110679, "").
+-define(MAPNAME110680, "").
+-define(MAPNAME110681, "").
+-define(MAPNAME110682, "").
+-define(MAPNAME110683, "").
+-define(MAPNAME110684, "").
+-define(MAPNAME110685, "").
+-define(MAPNAME110686, "").
+-define(MAPNAME110687, "").
+-define(MAPNAME110688, "").
+-define(MAPNAME110689, "").
+-define(MAPNAME110690, "").
+-define(MAPNAME110691, "").
+-define(MAPNAME110692, "").
+-define(MAPNAME110693, "").
+-define(MAPNAME110694, "").
+-define(MAPNAME110695, "").
+-define(MAPNAME110696, "").
+-define(MAPNAME110697, "").
+-define(MAPNAME110698, "").
+-define(MAPNAME110699, "").
+-define(MAPNAME110700, "").
+-define(MAPNAME110701, "").
+-define(MAPNAME110702, "").
+-define(MAPNAME110703, "").
+-define(MAPNAME110704, "").
+-define(MAPNAME110705, "").
+-define(MAPNAME110706, "").
+-define(MAPNAME110707, "").
+-define(MAPNAME110708, "").
+-define(MAPNAME110709, "").
+-define(MAPNAME110710, "").
+-define(MAPNAME110711, "").
+-define(MAPNAME110712, "").
+-define(MAPNAME110713, "").
+-define(MAPNAME110714, "").
+-define(MAPNAME110715, "").
+-define(MAPNAME110716, "").
+-define(MAPNAME110717, "").
+-define(MAPNAME110718, "").
+-define(MAPNAME110719, "").
+-define(MAPNAME110720, "").
+-define(MAPNAME110721, "").
+-define(MAPNAME110722, "").
+-define(MAPNAME110723, "").
+-define(MAPNAME110724, "").
+-define(MAPNAME110725, "").
+-define(MAPNAME110726, "").
+-define(MAPNAME110727, "").
+-define(MAPNAME110728, "").
+-define(MAPNAME110729, "").
+-define(MAPNAME110730, "").
+-define(MAPNAME110731, "").
+-define(MAPNAME110732, "").
+-define(MAPNAME110733, "").
+-define(MAPNAME110734, "").
+-define(MAPNAME110735, "").
+-define(MAPNAME110736, "").
+-define(MAPNAME110737, "").
+-define(MAPNAME110738, "").
+-define(MAPNAME110739, "").
+-define(MAPNAME110740, "").
+-define(MAPNAME110741, "").
+-define(MAPNAME110742, "").
+-define(MAPNAME110743, "").
+-define(MAPNAME110744, "").
+-define(MAPNAME110745, "").
+-define(MAPNAME110746, "").
+-define(MAPNAME110747, "").
+-define(MAPNAME110748, "").
+-define(MAPNAME110749, "").
+-define(MAPNAME110750, "").
+-define(MAPNAME110751, "").
+-define(MAPNAME110752, "").
+-define(MAPNAME110753, "").
+-define(MAPNAME110754, "").
+-define(MAPNAME110755, "").
+-define(MAPNAME110756, "").
+-define(MAPNAME110757, "").
+-define(MAPNAME110758, "").
+-define(MAPNAME110759, "").
+-define(MAPNAME110760, "").
+-define(MAPNAME110761, "").
+-define(MAPNAME110762, "").
+-define(MAPNAME110763, "").
+-define(MAPNAME110764, "").
+-define(MAPNAME110765, "").
+-define(MAPNAME110766, "").
+-define(MAPNAME110767, "").
+-define(MAPNAME110768, "").
+-define(MAPNAME110769, "").
+-define(MAPNAME110770, "").
+-define(MAPNAME110771, "").
+-define(MAPNAME110772, "").
+-define(MAPNAME110773, "").
+-define(MAPNAME110774, "").
+-define(MAPNAME110775, "").
+-define(MAPNAME110776, "").
+-define(MAPNAME110777, "").
+-define(MAPNAME110778, "").
+-define(MAPNAME110779, "").
+-define(MAPNAME110780, "").
+-define(MAPNAME110781, "").
+-define(MAPNAME110782, "").
+-define(MAPNAME110783, "").
+-define(MAPNAME110784, "").
+-define(MAPNAME110785, "").
+-define(MAPNAME110786, "").
+-define(MAPNAME110787, "").
+-define(MAPNAME110788, "").
+-define(MAPNAME110789, "").
+-define(MAPNAME110790, "").
+-define(MAPNAME110791, "").
+-define(MAPNAME110792, "").
+-define(MAPNAME110793, "").
+-define(MAPNAME110794, "").
+-define(MAPNAME110795, "").
+-define(MAPNAME110796, "").
+-define(MAPNAME110797, "").
+-define(MAPNAME110798, "").
+-define(MAPNAME110799, "").
+-define(MAPNAME110800, "").
+-define(MAPNAME110801, "").
+-define(MAPNAME110802, "").
+-define(MAPNAME110803, "").
+-define(MAPNAME110804, "").
+-define(MAPNAME110805, "").
+-define(MAPNAME110806, "").
+-define(MAPNAME110807, "").
+-define(MAPNAME110808, "").
+-define(MAPNAME110809, "").
+-define(MAPNAME110810, "").
+-define(MAPNAME110811, "").
+-define(MAPNAME110812, "").
+-define(MAPNAME110813, "").
+-define(MAPNAME110814, "").
+-define(MAPNAME110815, "").
+-define(MAPNAME110816, "").
+-define(MAPNAME110817, "").
+-define(MAPNAME110818, "").
+-define(MAPNAME110819, "").
+-define(MAPNAME110820, "").
+-define(MAPNAME110821, "").
+-define(MAPNAME110822, "").
+-define(MAPNAME110823, "").
+-define(MAPNAME110824, "").
+-define(MAPNAME110825, "").
+-define(MAPNAME110826, "").
+-define(MAPNAME110827, "").
+-define(MAPNAME110828, "").
+-define(MAPNAME110829, "").
+-define(MAPNAME110830, "").
+-define(MAPNAME110831, "").
+-define(MAPNAME110832, "").
+-define(MAPNAME110833, "").
+-define(MAPNAME110834, "").
+-define(MAPNAME110835, "").
+-define(MAPNAME110836, "").
+-define(MAPNAME110837, "").
+-define(MAPNAME110838, "").
+-define(MAPNAME110839, "").
+-define(MAPNAME110840, "").
+-define(MAPNAME110841, "").
+-define(MAPNAME110842, "").
+-define(MAPNAME110843, "").
+-define(MAPNAME110844, "").
+-define(MAPNAME110845, "").
+-define(MAPNAME110846, "").
+-define(MAPNAME110847, "").
+-define(MAPNAME110848, "").
+-define(MAPNAME110849, "").
+-define(MAPNAME110850, "").
+-define(MAPNAME110851, "").
+-define(MAPNAME110852, "").
+-define(MAPNAME110853, "").
+-define(MAPNAME110854, "").
+-define(MAPNAME110855, "").
+-define(MAPNAME110856, "").
+-define(MAPNAME110857, "").
+-define(MAPNAME110858, "").
+-define(MAPNAME110859, "").
+-define(MAPNAME110860, "").
+-define(MAPNAME110861, "").
+-define(MAPNAME110862, "").
+-define(MAPNAME110863, "").
+-define(MAPNAME110864, "").
+-define(MAPNAME110865, "").
+-define(MAPNAME110866, "").
+-define(MAPNAME110867, "").
+-define(MAPNAME110868, "").
+-define(MAPNAME110869, "").
+-define(MAPNAME110870, "").
+-define(MAPNAME110871, "").
+-define(MAPNAME110872, "").
+-define(MAPNAME110873, "").
+-define(MAPNAME110874, "").
+-define(MAPNAME110875, "").
+-define(MAPNAME110876, "").
+-define(MAPNAME110877, "").
+-define(MAPNAME110878, "").
+-define(MAPNAME110879, "").
+-define(MAPNAME110880, "").
+-define(MAPNAME110881, "").
+-define(MAPNAME110882, "").
+-define(MAPNAME110883, "").
+-define(MAPNAME110884, "").
+-define(MAPNAME110885, "").
+-define(MAPNAME110886, "").
+-define(MAPNAME110887, "").
+-define(MAPNAME110888, "").
+-define(MAPNAME110889, "").
+-define(MAPNAME110890, "").
+-define(MAPNAME110891, "").
+-define(MAPNAME110892, "").
+-define(MAPNAME110893, "").
+-define(MAPNAME110894, "").
+-define(MAPNAME110895, "").
+-define(MAPNAME110896, "").
+-define(MAPNAME110897, "").
+-define(MAPNAME110898, "").
+-define(MAPNAME110899, "").
+-define(MAPNAME110900, "").
+-define(MAPNAME110901, "").
+-define(MAPNAME110902, "").
+-define(MAPNAME110903, "").
+-define(MAPNAME110904, "").
+-define(MAPNAME110905, "").
+-define(MAPNAME110906, "").
+-define(MAPNAME110907, "").
+-define(MAPNAME110908, "").
+-define(MAPNAME110909, "").
+-define(MAPNAME110910, "").
+-define(MAPNAME110911, "").
+-define(MAPNAME110912, "").
+-define(MAPNAME110913, "").
+-define(MAPNAME110914, "").
+-define(MAPNAME110915, "").
+-define(MAPNAME110916, "").
+-define(MAPNAME110917, "").
+-define(MAPNAME110918, "").
+-define(MAPNAME110919, "").
+-define(MAPNAME110920, "").
+-define(MAPNAME110921, "").
+-define(MAPNAME110922, "").
+-define(MAPNAME110923, "").
+-define(MAPNAME110924, "").
+-define(MAPNAME110925, "").
+-define(MAPNAME110926, "").
+-define(MAPNAME110927, "").
+-define(MAPNAME110928, "").
+-define(MAPNAME110929, "").
+-define(MAPNAME110930, "").
+-define(MAPNAME110931, "").
+-define(MAPNAME110932, "").
+-define(MAPNAME110933, "").
+-define(MAPNAME110934, "").
+-define(MAPNAME110935, "").
+-define(MAPNAME110936, "").
+-define(MAPNAME110937, "").
+-define(MAPNAME110938, "").
+-define(MAPNAME110939, "").
+-define(MAPNAME110940, "").
+-define(MAPNAME110941, "").
+-define(MAPNAME110942, "").
+-define(MAPNAME110943, "").
+-define(MAPNAME110944, "").
+-define(MAPNAME110945, "").
+-define(MAPNAME110946, "").
+-define(MAPNAME110947, "").
+-define(MAPNAME110948, "").
+-define(MAPNAME110949, "").
+-define(MAPNAME110950, "").
+-define(MAPNAME110951, "").
+-define(MAPNAME110952, "").
+-define(MAPNAME110953, "").
+-define(MAPNAME110954, "").
+-define(MAPNAME110955, "").
+-define(MAPNAME110956, "").
+-define(MAPNAME110957, "").
+-define(MAPNAME110958, "").
+-define(MAPNAME110959, "").
+-define(MAPNAME110960, "").
+-define(MAPNAME110961, "").
+-define(MAPNAME110962, "").
+-define(MAPNAME110963, "").
+-define(MAPNAME110964, "").
+-define(MAPNAME110965, "").
+-define(MAPNAME110966, "").
+-define(MAPNAME110967, "").
+-define(MAPNAME110968, "").
+-define(MAPNAME110969, "").
+-define(MAPNAME110970, "").
+-define(MAPNAME110971, "").
+-define(MAPNAME110972, "").
+-define(MAPNAME110973, "").
+-define(MAPNAME110974, "").
+-define(MAPNAME110975, "").
+-define(MAPNAME110976, "").
+-define(MAPNAME110977, "").
+-define(MAPNAME110978, "").
+-define(MAPNAME110979, "").
+-define(MAPNAME110980, "").
+-define(MAPNAME110981, "").
+-define(MAPNAME110982, "").
+-define(MAPNAME110983, "").
+-define(MAPNAME110984, "").
+-define(MAPNAME110985, "").
+-define(MAPNAME110986, "").
+-define(MAPNAME110987, "").
+-define(MAPNAME110988, "").
+-define(MAPNAME110989, "").
+-define(MAPNAME110990, "").
+-define(MAPNAME110991, "").
+-define(MAPNAME110992, "").
+-define(MAPNAME110993, "").
+-define(MAPNAME110994, "").
+-define(MAPNAME110995, "").
+-define(MAPNAME110996, "").
+-define(MAPNAME110997, "").
+-define(MAPNAME110998, "").
+-define(MAPNAME110999, "").
+-define(MAPNAME111000, "").
+-define(MAPNAME111001, "").
+-define(MAPNAME111002, "").
+-define(MAPNAME111003, "").
+-define(MAPNAME111004, "").
+-define(MAPNAME111005, "").
+-define(MAPNAME111006, "").
+-define(MAPNAME111007, "").
+-define(MAPNAME111008, "").
+-define(MAPNAME111009, "").
+-define(MAPNAME111010, "").
+-define(MAPNAME111011, "").
+-define(MAPNAME111012, "").
+-define(MAPNAME111013, "").
+-define(MAPNAME111014, "").
+-define(MAPNAME111015, "").
+-define(MAPNAME111016, "").
+-define(MAPNAME111017, "").
+-define(MAPNAME111018, "").
+-define(MAPNAME111019, "").
+-define(MAPNAME111020, "").
+-define(MAPNAME111021, "").
+-define(MAPNAME111022, "").
+-define(MAPNAME111023, "").
+-define(MAPNAME111024, "").
+-define(MAPNAME111025, "").
+-define(MAPNAME111026, "").
+-define(MAPNAME111027, "").
+-define(MAPNAME111028, "").
+-define(MAPNAME111029, "").
+-define(MAPNAME111030, "").
+-define(MAPNAME111031, "").
+-define(MAPNAME111032, "").
+-define(MAPNAME111033, "").
+-define(MAPNAME111034, "").
+-define(MAPNAME111035, "").
+-define(MAPNAME111036, "").
+-define(MAPNAME111037, "").
+-define(MAPNAME111038, "").
+-define(MAPNAME111039, "").
+-define(MAPNAME111040, "").
+-define(MAPNAME2120001, "").
+-define(MAPNAME2120002, "").
+-define(MAPNAME2120003, "").
+-define(MAPNAME2120004, "").
+-define(MAPNAME2120005, "").
+-define(MAPNAME2120006, "").
+-define(MAPNAME2120007, "").
+-define(MAPNAME2120008, "").
+-define(MAPNAME2120009, "").
+-define(MAPNAME2120010, "").
+-define(MAPNAME2120011, "").
+-define(MAPNAME2120012, "").
+-define(MAPNAME2120013, "").
+-define(MAPNAME2120014, "").
+-define(MAPNAME2120015, "").
+-define(MAPNAME2120016, "").
+-define(MAPNAME2120017, "").
+-define(MAPNAME2120018, "").
+-define(MAPNAME2120019, "").
+-define(MAPNAME2120020, "").
+-define(MAPNAME2120021, "").
+-define(MAPNAME2120022, "").
+-define(MAPNAME2120023, "").
+-define(MAPNAME2120024, "").
+-define(MAPNAME2120025, "").
+-define(MAPNAME2120026, "").
+-define(MAPNAME2120027, "").
+-define(MAPNAME2120028, "").
+-define(MAPNAME2120029, "").
+-define(MAPNAME2120030, "").
+-define(MAPNAME2120031, "").
+-define(MAPNAME2120032, "").
+-define(MAPNAME2120033, "").
+-define(MAPNAME2120034, "").
+-define(MAPNAME2120035, "").
+-define(MAPNAME2120036, "").
+-define(MAPNAME2120037, "").
+-define(MAPNAME2107001, "").
+-define(MAPNAME2107002, "").
+-define(MAPNAME2107004, "").
+-define(MAPNAME3000096, "").
+-define(MAPNAME3000097, "").
+-define(MAPNAME3000098, "").
+-define(MAPNAME3000099, "").
+-define(MAPNAME2460070, "").
+-define(MAPNAME2460071, "").
+-define(MAPNAME2460072, "").
+-define(MAPNAME2460073, "").
+-define(MAPNAME2460074, "").
+-define(MAPNAME2460075, "").
+-define(MAPNAME2460076, "").
+-define(MAPNAME2460077, "").
+-define(MAPNAME2460078, "").
+-define(MAPNAME2460079, "").
+-define(MAPNAME2460080, "").
+-define(MAPNAME2460081, "").
+-define(MAPNAME2460082, "").
+-define(MAPNAME2460083, "").
+-define(MAPNAME2460084, "").
+-define(MAPNAME2460085, "").
+-define(MAPNAME2460086, "").
+-define(MAPNAME2460087, "").
+-define(MAPNAME2460088, "").
+-define(MAPNAME2460089, "").
+-define(MAPNAME2460090, "").
+-define(MAPNAME2460091, "").
+-define(MAPNAME2460092, "").
+-define(MAPNAME2460093, "").
+-define(MAPNAME2460094, "").
+-define(MAPNAME2460095, "").
+-define(MAPNAME2460096, "").
+-define(MAPNAME2460097, "").
+-define(MAPNAME2460098, "").
+-define(MAPNAME2460099, "").
+-define(MAPNAME2460100, "").
+-define(MAPNAME2460101, "").
+-define(MAPNAME2460102, "").
+-define(MAPNAME2460103, "").
+-define(MAPNAME2460104, "").
+-define(MAPNAME2460105, "").
+-define(MAPNAME2460106, "").
+-define(MAPNAME2460107, "").
+-define(MAPNAME2460108, "").
+-define(MAPNAME2460109, "").
+-define(MAPNAME2460110, "").
+-define(MAPNAME2460111, "").
+-define(MAPNAME2460112, "").
+-define(MAPNAME2460113, "").
+-define(MAPNAME2460114, "").
+-define(MAPNAME2460115, "").
+-define(MAPNAME2460116, "").
+-define(MAPNAME2460117, "").
+-define(MAPNAME2460118, "").
+-define(MAPNAME2460119, "").
+-define(MAPNAME2460120, "").
+-define(MAPNAME2460121, "").
+-define(MAPNAME2460122, "").
+-define(MAPNAME2460123, "").
+-define(MAPNAME2460124, "").
+-define(MAPNAME2460125, "").
+-define(MAPNAME2460126, "").
+-define(MAPNAME2460127, "").
+-define(MAPNAME2460128, "").
+-define(MAPNAME2460129, "").
+-define(MAPNAME2460130, "").
+-define(MAPNAME2460131, "").
+-define(MAPNAME2460132, "").
+-define(MAPNAME2460133, "").
+-define(MAPNAME2460134, "").
+-define(MAPNAME2460135, "").
+-define(MAPNAME2460136, "").
+-define(MAPNAME2460137, "").
+-define(MAPNAME2460138, "").
+-define(MAPNAME2460139, "").
+-define(MAPNAME2460140, "").
+-define(MAPNAME2460141, "").
+-define(MAPNAME2460142, "").
+-define(MAPNAME2460143, "").
+-define(MAPNAME2460144, "").
+-define(MAPNAME2460145, "").
+-define(MAPNAME2460146, "").
+-define(MAPNAME2460147, "").
+-define(MAPNAME2460148, "").
+-define(MAPNAME2460149, "").
+-define(MAPNAME2460150, "").
+-define(MAPNAME2460151, "").
+-define(MAPNAME2460152, "").
+-define(MAPNAME2460153, "").
+-define(MAPNAME2460154, "").
+-define(MAPNAME2460155, "").
+-define(MAPNAME2460156, "").
+-define(MAPNAME2460157, "").
+-define(MAPNAME2460158, "").
+-define(MAPNAME2460159, "").
+-define(MAPNAME2460160, "").
+-define(MAPNAME2460161, "").
+-define(MAPNAME2460162, "").
+-define(MAPNAME2460163, "").
+-define(MAPNAME2460164, "").
+-define(MAPNAME2460165, "").
+-define(MAPNAME2460166, "").
+-define(MAPNAME2460167, "").
+-define(MAPNAME2460168, "").
+-define(MAPNAME2460169, "").
+-define(MAPNAME2460170, "").
+-define(MAPNAME2460171, "").
+-define(MAPNAME2460172, "").
+-define(MAPNAME2460173, "").
+-define(MAPNAME2460174, "").
+-define(MAPNAME2460175, "").
+-define(MAPNAME2460176, "").
+-define(MAPNAME2460177, "").
+-define(MAPNAME2460178, "").
+-define(MAPNAME2460179, "").
+-define(MAPNAME2460180, "").
+-define(MAPNAME2460181, "").
+-define(MAPNAME2460182, "").
+-define(MAPNAME2460183, "").
+-define(MAPNAME2460184, "").
+-define(MAPNAME2460185, "").
+-define(MAPNAME2460186, "").
+-define(MAPNAME2460187, "").
+-define(MAPNAME2460188, "").
+-define(MAPNAME2460189, "").
+-define(MAPNAME2460190, "").
+-define(MAPNAME2460191, "").
+-define(MAPNAME2460192, "").
+-define(MAPNAME2460193, "").
+-define(MAPNAME2460194, "").
+-define(MAPNAME2460195, "").
+-define(MAPNAME2460196, "").
+-define(MAPNAME2460197, "").
+-define(MAPNAME2460198, "").
+-define(MAPNAME2460199, "").
+-define(MAPNAME2460200, "").
+-define(MAPNAME2460201, "").
+-define(MAPNAME2460202, "").
+-define(MAPNAME2460203, "").
+-define(MAPNAME2460204, "").
+-define(MAPNAME2460205, "").
+-define(MAPNAME2460206, "").
+-define(MAPNAME2460207, "").
+-define(MAPNAME2460208, "").
+-define(MAPNAME2460209, "").
+-define(MAPNAME2460210, "").
+-define(MAPNAME2460211, "").
+-define(MAPNAME2460212, "").
+-define(MAPNAME2460213, "").
+-define(MAPNAME3300001, "").
+-define(MAPNAME2700001, "").
+-define(MAPNAME2700002, "").
+-define(MAPNAME2700003, "").
+-define(MAPNAME2700004, "").
+-define(MAPNAME2700005, "").
+-define(MAPNAME2700006, "").
+-define(MAPNAME2700007, "").
+-define(MAPNAME2700008, "").
+-define(MAPNAME2700009, "").
+-define(MAPNAME2700010, "").
+-define(MAPNAME2700011, "").
+-define(MAPNAME2700012, "").
+-define(MAPNAME2700013, "").
+-define(MAPNAME2700014, "").
+-define(MAPNAME2700015, "").
+-define(MAPNAME2700016, "").
+-define(MAPNAME2700017, "").
+-define(MAPNAME2700018, "").
+-define(MAPNAME2700019, "").
+-define(MAPNAME2700020, "").
+-define(MAPNAME2700021, "").
+-define(MAPNAME2700022, "").
+-define(MAPNAME2700023, "").
+-define(MAPNAME2700024, "").
+-define(MAPNAME2700025, "").
+-define(MAPNAME2700026, "").
+-define(MAPNAME2700027, "").
+-define(MAPNAME2700028, "").
+-define(MAPNAME2700029, "").
+-define(MAPNAME2700030, "").
+-define(MAPNAME2700031, "").
+-define(MAPNAME2700032, "").
+-define(MAPNAME2900001, "").
+-define(MAPNAME2106000, "").
+-define(MAPNAME2106001, "").
+-define(MAPNAME2106002, "").
+-define(MAPNAME2106003, "").
+-define(MAPNAME2106004, "").
+-define(MAPNAME2106005, "").
+-define(MAPNAME2106006, "").
+-define(MAPNAME2106007, "").
+-define(MAPNAME2106008, "").
+-define(MAPNAME2106009, "").
+-define(MAPNAME2106010, "").
+-define(MAPNAME2106011, "").
+-define(MAPNAME2106012, "").
+-define(MAPNAME2920001, "").
+-define(MAPNAME2920002, "").
+-define(MAPNAME2920003, "").
+-define(MAPNAME2920004, "").
+-define(MAPNAME2920005, "").
+-define(MAPNAME2920006, "").
+-define(MAPNAME2920007, "").
+-define(MAPNAME2920008, "").
+-define(MAPNAME2920009, "").
+-define(MAPNAME2920010, "").
+-define(MAPNAME2920011, "").
+-define(MAPNAME2920012, "").
+-define(MAPNAME2920013, "").
+-define(MAPNAME2920014, "").
+-define(MAPNAME2920015, "").
+-define(MAPNAME2920016, "").
+-define(MAPNAME2920017, "").
+-define(MAPNAME2920018, "").
+-define(MAPNAME2920019, "").
+-define(MAPNAME2920020, "").
+-define(MAPNAME2920021, "").
+-define(MAPNAME2920022, "").
+-define(MAPNAME2920023, "").
+-define(MAPNAME2920024, "").
+-define(MAPNAME2920025, "").
+-define(MAPNAME2920026, "").
+-define(MAPNAME2920027, "").
+-define(MAPNAME2920028, "").
+-define(MAPNAME2920029, "").
+-define(MAPNAME2920030, "").
+-define(MAPNAME2920031, "").
+-define(MAPNAME2920032, "").
+-define(MAPNAME2920033, "").
+-define(MAPNAME2920034, "").
+-define(MAPNAME2920035, "").
+-define(MAPNAME2920036, "").
+-define(MAPNAME2920037, "").
+-define(MAPNAME2920038, "").
+-define(MAPNAME2920039, "").
+-define(MAPNAME2920040, "").
+-define(MAPNAME2920041, "").
+-define(MAPNAME2920042, "").
+-define(MAPNAME2920043, "").
+-define(MAPNAME2920044, "").
+-define(MAPNAME2920045, "").
+-define(MAPNAME2920046, "").
+-define(MAPNAME2920047, "").
+-define(MAPNAME2620001, "").
+-define(MAPNAME2620002, "").
+-define(MAPNAME2620003, "").
+-define(MAPNAME2620004, "").
+-define(MAPNAME2620005, "").
+-define(MAPNAME2900002, "").
+-define(MAPNAME2310036, "").
+-define(MAPNAME2310037, "").
+-define(MAPNAME2310038, "").
+-define(MAPNAME2310039, "").
+-define(MAPNAME2310040, "").
+-define(MAPNAME2310041, "").
+-define(MAPNAME2310042, "").
+-define(MAPNAME2310043, "").
+-define(MAPNAME2310044, "").
+-define(MAPNAME2310045, "").
+-define(MAPNAME2310046, "").
+-define(MAPNAME2310047, "").
+-define(MAPNAME2310048, "").
+-define(MAPNAME2110141, "").
+-define(MAPNAME2110142, "").
+-define(MAPNAME2110143, "").
+-define(MAPNAME2110129, "").
+-define(MAPNAME2110140, "").
+-define(MAPNAME2105043, "").
+-define(MAPNAME2105044, "").
+-define(MAPNAME2105045, "").
+-define(MAPNAME2105046, "").
+-define(MAPNAME2105047, "").
+-define(MAPNAME2105048, "").
+-define(MAPNAME2105049, "").
+-define(MAPNAME2105050, "").
+-define(MAPNAME2105051, "").
+-define(MAPNAME2105052, "").
+-define(MAPNAME2105053, "").
+-define(MAPNAME2105054, "").
+-define(MAPNAME2105055, "").
+-define(MAPNAME2105056, "").
+-define(MAPNAME2105057, "").
+-define(MAPNAME2105058, "").
+-define(MAPNAME2105059, "").
+-define(MAPNAME2105060, "").
+-define(MAPNAME2105061, "").
+-define(MAPNAME2105062, "").
+-define(MAPNAME2105063, "").
+-define(MAPNAME2105064, "").
+-define(MAPNAME2105065, "").
+-define(MAPNAME2105066, "").
+-define(MAPNAME2105067, "").
+-define(MAPNAME2105068, "").
+-define(MAPNAME2105069, "").
+-define(MAPNAME2105070, "").
+-define(MAPNAME2105071, "").
+-define(MAPNAME2105072, "").
+-define(MAPNAME102001, "").
+-define(MAPNAME102002, "").
+-define(MAPNAME102003, "").
+-define(MAPNAME102004, "").
+-define(MAPNAME102005, "").
+-define(MAPNAME102006, "").
+-define(MAPNAME102007, "").
+-define(MAPNAME102008, "").
+-define(MAPNAME102009, "").
+-define(MAPNAME102010, "").
+-define(MAPNAME102011, "").
+-define(MAPNAME102012, "").
+-define(MAPNAME102013, "").
+-define(MAPNAME102014, "").
+-define(MAPNAME102015, "").
+-define(MAPNAME102016, "").
+-define(MAPNAME102017, "").
+-define(MAPNAME102018, "").
+-define(MAPNAME102019, "").
+-define(MAPNAME102020, "").
+-define(MAPNAME102021, "").
+-define(MAPNAME102022, "").
+-define(MAPNAME102023, "").
+-define(MAPNAME102024, "").
+-define(MAPNAME102025, "").
+-define(MAPNAME102026, "").
+-define(MAPNAME102027, "").
+-define(MAPNAME102028, "").
+-define(MAPNAME102029, "").
+-define(MAPNAME102030, "").
+-define(MAPNAME102031, "").
+-define(MAPNAME102032, "").
+-define(MAPNAME102033, "").
+-define(MAPNAME102034, "").
+-define(MAPNAME102035, "").
+-define(MAPNAME102036, "").
+-define(MAPNAME102037, "").
+-define(MAPNAME102038, "").
+-define(MAPNAME102039, "").
+-define(MAPNAME102040, "").
+-define(MAPNAME102041, "").
+-define(MAPNAME102042, "").
+-define(MAPNAME102043, "").
+-define(MAPNAME102044, "").
+-define(MAPNAME102045, "").
+-define(MAPNAME102046, "").
+-define(MAPNAME102047, "").
+-define(MAPNAME102048, "").
+-define(MAPNAME102049, "").
+-define(MAPNAME102050, "").
+-define(MAPNAME102051, "").
+-define(MAPNAME102052, "").
+-define(MAPNAME102053, "").
+-define(MAPNAME102054, "").
+-define(MAPNAME102055, "").
+-define(MAPNAME102056, "").
+-define(MAPNAME102057, "").
+-define(MAPNAME102058, "").
+-define(MAPNAME102059, "").
+-define(MAPNAME102060, "").
+-define(MAPNAME102061, "").
+-define(MAPNAME102062, "").
+-define(MAPNAME102063, "").
+-define(MAPNAME102064, "").
+-define(MAPNAME102065, "").
+-define(MAPNAME102066, "").
+-define(MAPNAME102067, "").
+-define(MAPNAME102068, "").
+-define(MAPNAME102069, "").
+-define(MAPNAME102070, "").
+-define(MAPNAME102071, "").
+-define(MAPNAME102072, "").
+-define(MAPNAME102073, "").
+-define(MAPNAME102074, "").
+-define(MAPNAME102075, "").
+-define(MAPNAME102076, "").
+-define(MAPNAME102077, "").
+-define(MAPNAME102078, "").
+-define(MAPNAME102079, "").
+-define(MAPNAME102080, "").
+-define(MAPNAME102081, "").
+-define(MAPNAME102082, "").
+-define(MAPNAME102083, "").
+-define(MAPNAME102084, "").
+-define(MAPNAME102085, "").
+-define(MAPNAME102086, "").
+-define(MAPNAME102087, "").
+-define(MAPNAME102088, "").
+-define(MAPNAME102089, "").
+-define(MAPNAME102090, "").
+-define(MAPNAME102091, "").
+-define(MAPNAME102092, "").
+-define(MAPNAME102093, "").
+-define(MAPNAME102094, "").
+-define(MAPNAME102095, "").
+-define(MAPNAME102096, "").
+-define(MAPNAME102097, "").
+-define(MAPNAME102098, "").
+-define(MAPNAME102099, "").
+-define(MAPNAME102100, "").
+-define(MAPNAME2120139, "").
+-define(MAPNAME2121009, "").
+-define(MAPNAME2121010, "").
+-define(MAPNAME2121011, "").
+-define(MAPNAME2121012, "").
+-define(WINGCOPYNAME51, "").
+-define(WINGCOPYNAME52, "").
+-define(WINGCOPYNAME53, "").
+-define(WINGCOPYNAME54, "").
+-define(WINGCOPYNAME55, "").
+-define(WINGCOPYNAME56, "").
+-define(WINGCOPYNAME57, "").
+-define(WINGCOPYNAME58, "").
+-define(WINGCOPYNAME59, "").
+-define(WINGCOPYNAME60, "").
+-define(WINGCOPYNAME61, "").
+-define(WINGCOPYNAME62, "").
+-define(WINGCOPYNAME63, "").
+-define(WINGCOPYNAME64, "").
+-define(WINGCOPYNAME65, "").
+-define(WINGCOPYNAME66, "").
+-define(WINGCOPYNAME67, "").
+-define(WINGCOPYNAME68, "").
+-endif.
+

@@ -1,4 +1,6 @@
-加载顺序
+加载顺序:
+GameResources：游戏资源-游戏设置数据等
+
 IdGenerator：唯一id生成器
 
 ModLoadSystem: 模组加载器 读取模组相关数据

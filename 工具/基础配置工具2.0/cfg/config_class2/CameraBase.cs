@@ -6,14 +6,14 @@ namespace Remnant_Afterglow
     public partial class CameraBase
     {
         /// <summary>
-        /// 初始化数据-构造函数后运行
+        /// 创建配置时，初始化数据-构造函数中运行
         /// </summary>
         public void InitData()
         {
         }
 
         /// <summary>
-        /// 初始化数据-构造函数后运行
+        /// 创建缓存时，初始化数据-构造函数后运行
         /// </summary>        
         public void InitData2()
         {

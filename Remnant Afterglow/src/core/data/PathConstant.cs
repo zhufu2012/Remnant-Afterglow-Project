@@ -28,7 +28,7 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 游戏配置路径  PathConstant.GetPathUser(PathConstant.SequenceMap_PATH_USER)
         /// </summary>
-        public static string SequenceMap_PATH_USER = "./data/sequence_map/";
+        public static string SequenceMap_PATH_USER = "./data/config/sequence_map/";
 
 
 
@@ -53,14 +53,42 @@ namespace Remnant_Afterglow
         /// </summary>
         public static string MOD_LOAD_PATH_USER = "./mods/";
         /// <summary>
+        /// mod组加载路径-目前使用的路径  PathConstant.GetPathUser(PathConstant.MOD_LOAD_PAHT_GROUP)
+        /// </summary>
+        public static string MOD_LOAD_PAHT_GROUP = "./data/mod_group.json";
+
+
+        /// <summary>
         /// mod列表路径-目前使用的路径 PathConstant.GetPathUser(PathConstant.MOD_LIST_PATH_USER)
         /// </summary>
         public static string MOD_LIST_PATH_USER = "./mods/mod_list.json";
+        /// <summary>
+        /// mod列表路径-dll和pck文件路径-目前使用的路径 PathConstant.GetPathUser(PathConstant.MOD_LIST_Dll_USER)
+        /// </summary>
+        public static string MOD_LIST_Dll_USER = "/Patches/";
+        /// <summary>
+        /// mod列表路径-配置文件路径-目前使用的路径 PathConstant.GetPathUser(PathConstant.MOD_LIST_CONFIG_USER)
+        /// </summary>
+        public static string MOD_LIST_CONFIG_USER = "/config/";
+        /// <summary>
+        /// mod列表路径-配置文件filename路径-目前使用的路径 PathConstant.GetPathUser(PathConstant.MOD_LIST_CONFIG_FileName_USER)
+        /// </summary>
+        public static string MOD_LIST_CONFIG_FileName_USER = "/config/file_name.json";
+
 
         /// <summary>
         /// 地图生成用噪声工具的保存路径 PathConstant.GetPathUser(PathConstant.NOISE_SETTING_PATH_USER)
         /// </summary>
         public static string NOISE_SETTING_PATH_USER = "./data/tool_noise_setting.cfg";
+
+
+
+        /// <summary>
+        /// 子弹运行模式的路径 PathConstant.GetPathUser(PathConstant.BULLET_LOGIC_PATH_USER)
+        /// </summary>
+        public static string BULLET_LOGIC_PATH_USER = "./data/bullet/";
+
+
 
         /// <summary>
         /// 获取对应路径

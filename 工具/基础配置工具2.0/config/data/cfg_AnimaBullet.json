@@ -1,25 +1,25 @@
 [
     {
-        "KEY_INDEX": "1_1",
-        "ObjectId": 1,
+        "KEY_INDEX": "add2way_1",
+        "BulletLabel": "add2way",
         "AnimaType": 1,
         "Coords": [
             0,
             0
         ],
         "LengWidth": [
-            20,
-            48
+            100,
+            100
         ],
-        "MaxIndex": 4,
+        "MaxIndex": 1,
         "Size": [
-            4,
+            1,
             1
         ],
         "DurationMs": 20,
         "FrameCount": 3,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png"
+        "Picture": "./data/config/images/ID_0F2E3DE674534288BE9A0F6B995263B2.png"
     }
 ]

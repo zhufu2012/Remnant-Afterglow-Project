@@ -2,12 +2,32 @@ using GameLog;
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Remnant_Afterglow
 {
-    //常用函数
+    /// <summary>
+    /// 常用函数
+    /// </summary>
     public class Common
     {
+
+        /// <summary>
+        /// 通用函数，用于清除指定节点的所有子节点
+        /// </summary>
+        /// <param name="parent"></param>
+        public static void ClearChildren(Node parent)
+        {
+            foreach (Node child in parent.GetChildren())
+            {
+                if (child != parent)
+                {
+                    child.QueueFree();
+                }
+            }
+        }
+
+
         public static PackedScene GetPackedScene(Node node)
         {
             PackedScene pack = new PackedScene();
@@ -23,9 +43,13 @@ namespace Remnant_Afterglow
             }
         }
 
+        /// <summary>
+        /// 时间戳
+        /// </summary>
+        /// <returns></returns>
         public static long GetS()
         {
-            return (long)Time.GetUnixTimeFromSystem();//祝福注释-时间戳
+            return (long)Time.GetUnixTimeFromSystem();
         }
 
 
@@ -37,6 +61,8 @@ namespace Remnant_Afterglow
         {
             return Engine.GetFramesPerSecond();
         }
+
+
 
 
         /// <summary>
@@ -63,6 +89,26 @@ namespace Remnant_Afterglow
                 }
             }
             return subTextures;
+        }
+
+
+        /// <summary>
+        /// 计算掩模
+        /// </summary>
+        /// <param name="maskList"></param>
+        /// <returns></returns>
+        public static uint CalculateMaskSum(List<int> maskList)
+        {
+            float sum = 0;
+            foreach (int position in maskList)
+            {
+                if (position >= 1 && position <= 32)
+                {
+                    // 使用位移操作来计算2的(position - 1)次方
+                    sum += Mathf.Pow(2, position - 1);
+                }
+            }
+            return (uint)sum;
         }
     }
 }

@@ -9,12 +9,13 @@ namespace Remnant_Afterglow
     {
         #region 参数及初始化
         /// <summary>        
-        /// 实体id
-        ///子弹
+        /// 子弹标签
         /// </summary>
-        public int ObjectId { get; set; }
+        public string BulletLabel { get; set; }
         /// <summary>        
         /// 帧动画类型
+        ///1 默认动画
+        ///
         /// </summary>
         public int AnimaType { get; set; }
         /// <summary>        
@@ -22,8 +23,8 @@ namespace Remnant_Afterglow
         /// </summary>
         public Vector2I Coords { get; set; }
         /// <summary>        
-        /// 单个帧图
-        ///长宽（横纵）
+        /// 单个帧
+        ///横纵像素px
         /// </summary>
         public Vector2I LengWidth { get; set; }
         /// <summary>        
@@ -33,6 +34,8 @@ namespace Remnant_Afterglow
         public int MaxIndex { get; set; }
         /// <summary>        
         /// 帧图大小
+        ///横向多少张图
+        ///纵向多少张图
         ///（横,纵）
         /// </summary>
         public Vector2I Size { get; set; }
@@ -61,7 +64,7 @@ namespace Remnant_Afterglow
         public AnimaBullet(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_AnimaBullet, id);//public const string Config_AnimaBullet = "cfg_AnimaBullet"; 
-			ObjectId = (int)dict["ObjectId"];
+			BulletLabel = (string)dict["BulletLabel"];
 			AnimaType = (int)dict["AnimaType"];
 			Coords = (Vector2I)dict["Coords"];
 			LengWidth = (Vector2I)dict["LengWidth"];
@@ -79,7 +82,7 @@ namespace Remnant_Afterglow
         public AnimaBullet(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_AnimaBullet, cfg_id);//public const string Config_AnimaBullet = "cfg_AnimaBullet"; 
-			ObjectId = (int)dict["ObjectId"];
+			BulletLabel = (string)dict["BulletLabel"];
 			AnimaType = (int)dict["AnimaType"];
 			Coords = (Vector2I)dict["Coords"];
 			LengWidth = (Vector2I)dict["LengWidth"];
@@ -95,7 +98,7 @@ namespace Remnant_Afterglow
 
         public AnimaBullet(Dictionary<string, object> dict)
         {
-			ObjectId = (int)dict["ObjectId"];
+			BulletLabel = (string)dict["BulletLabel"];
 			AnimaType = (int)dict["AnimaType"];
 			Coords = (Vector2I)dict["Coords"];
 			LengWidth = (Vector2I)dict["LengWidth"];

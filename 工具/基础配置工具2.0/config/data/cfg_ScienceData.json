@@ -1,7 +1,6 @@
 [
     {
-        "KEY_INDEX": "1_1",
-        "ChapterId": 1,
+        "KEY_INDEX": "1",
         "ScienceId": 1,
         "ScienceRangeId": 1,
         "ScienceType": 1,
@@ -12,8 +11,7 @@
         "ScienceParamList": []
     },
     {
-        "KEY_INDEX": "1_2",
-        "ChapterId": 1,
+        "KEY_INDEX": "2",
         "ScienceId": 2,
         "ScienceRangeId": 1,
         "ScienceType": 2,
@@ -24,8 +22,7 @@
         "ScienceParamList": []
     },
     {
-        "KEY_INDEX": "1_3",
-        "ChapterId": 1,
+        "KEY_INDEX": "3",
         "ScienceId": 3,
         "ScienceRangeId": 1,
         "ScienceType": 0,
@@ -36,8 +33,7 @@
         "ScienceParamList": []
     },
     {
-        "KEY_INDEX": "1_4",
-        "ChapterId": 1,
+        "KEY_INDEX": "4",
         "ScienceId": 4,
         "ScienceRangeId": 1,
         "ScienceType": 1,
@@ -48,8 +44,7 @@
         "ScienceParamList": []
     },
     {
-        "KEY_INDEX": "1_5",
-        "ChapterId": 1,
+        "KEY_INDEX": "5",
         "ScienceId": 5,
         "ScienceRangeId": 1,
         "ScienceType": 2,
@@ -60,8 +55,7 @@
         "ScienceParamList": []
     },
     {
-        "KEY_INDEX": "1_6",
-        "ChapterId": 1,
+        "KEY_INDEX": "6",
         "ScienceId": 6,
         "ScienceRangeId": 1,
         "ScienceType": 3,
@@ -72,8 +66,7 @@
         "ScienceParamList": []
     },
     {
-        "KEY_INDEX": "1_7",
-        "ChapterId": 1,
+        "KEY_INDEX": "7",
         "ScienceId": 7,
         "ScienceRangeId": 1,
         "ScienceType": 4,
@@ -84,10 +77,9 @@
         "ScienceParamList": []
     },
     {
-        "KEY_INDEX": "1_8",
-        "ChapterId": 1,
+        "KEY_INDEX": "8",
         "ScienceId": 8,
-        "ScienceRangeId": 8,
+        "ScienceRangeId": 2,
         "ScienceType": 5,
         "IsUnlock": false,
         "UnlockCurrList": [],

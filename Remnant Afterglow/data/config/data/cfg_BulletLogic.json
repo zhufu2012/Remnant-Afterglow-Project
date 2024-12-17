@@ -1,0 +1,17 @@
+[
+    {
+        "KEY_INDEX": "add2way",
+        "BulletLabel": "add2way",
+        "BulletName": "测试子弹",
+        "AttrHarm": [
+            [
+                1.0,
+                -10.0
+            ]
+        ],
+        "MaxLifeTime": 10.0,
+        "MaxDistance": 4000.0,
+        "BounceCount": 0.0,
+        "Penetration": 0.0
+    }
+]

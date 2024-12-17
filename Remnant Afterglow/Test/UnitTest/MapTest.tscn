@@ -107,7 +107,7 @@ offset_bottom = 29.0
 [node name="TowerList" type="Node2D" parent="."]
 
 [node name="Tower1" parent="TowerList" instance=ExtResource("7_tqe0e")]
-position = Vector2(-120, 504)
+position = Vector2(-184, 512)
 rot_speed = 100.0
 
 [node name="BuildTest" type="Node2D" parent="."]

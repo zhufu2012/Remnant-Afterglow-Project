@@ -15,7 +15,11 @@ namespace Remnant_Afterglow
         public int ObjectId { get; set; }
         /// <summary>        
         /// 帧动画类型
-        ///1 默认状态
+        ///1 默认动画
+        ///2 静止时动画
+        ///3 开火动画
+        ///4 装填动画
+        ///播放时发现没有该动画就播放默认动画
         /// </summary>
         public int AnimaType { get; set; }
         /// <summary>        

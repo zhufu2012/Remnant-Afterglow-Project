@@ -69,11 +69,8 @@ namespace Remnant_Afterglow
         {
             foreach (List<int> var in CfgData.WeaponList)
             {
-                int CampId = Camp;
-                if (var[1] != 0)
-                    CampId = var[1];
-                Weapon weapon = new Weapon(var[0], CampId);
-                WeaponList.Add(weapon);
+                WeaponBase weapon = new WeaponBase(var[0]);
+                WeaponList.Add(weapon);//祝福注释-这里位置等参数要改
             }
         }
 

@@ -6,12 +6,12 @@
         "Zindex": 1,
         "SizeType": 1,
         "ViewSize": [
-            1152.0,
-            648.0
+            1600.0,
+            900.0
         ],
         "ViewPos": [
-            20.0,
-            20.0
+            160.0,
+            90.0
         ],
         "BackdropColor": [
             100,
@@ -27,12 +27,12 @@
         "Zindex": 1,
         "SizeType": 2,
         "ViewSize": [
-            1152.0,
-            648.0
+            1600.0,
+            900.0
         ],
         "ViewPos": [
-            20.0,
-            20.0
+            160.0,
+            90.0
         ],
         "BackdropColor": [
             0,
@@ -48,12 +48,12 @@
         "Zindex": 1,
         "SizeType": 2,
         "ViewSize": [
-            1152.0,
-            648.0
+            1600.0,
+            900.0
         ],
         "ViewPos": [
-            20.0,
-            20.0
+            160.0,
+            90.0
         ],
         "BackdropColor": [
             0,
@@ -69,12 +69,12 @@
         "Zindex": 1,
         "SizeType": 1,
         "ViewSize": [
-            1152.0,
-            648.0
+            1600.0,
+            900.0
         ],
         "ViewPos": [
-            20.0,
-            20.0
+            160.0,
+            90.0
         ],
         "BackdropColor": [
             0,
@@ -90,12 +90,12 @@
         "Zindex": 1,
         "SizeType": 1,
         "ViewSize": [
-            1152.0,
-            648.0
+            1600.0,
+            900.0
         ],
         "ViewPos": [
-            20.0,
-            20.0
+            160.0,
+            90.0
         ],
         "BackdropColor": [
             0,
@@ -111,12 +111,12 @@
         "Zindex": 1,
         "SizeType": 1,
         "ViewSize": [
-            1152.0,
-            648.0
+            1600.0,
+            900.0
         ],
         "ViewPos": [
-            20.0,
-            20.0
+            160.0,
+            90.0
         ],
         "BackdropColor": [
             0,

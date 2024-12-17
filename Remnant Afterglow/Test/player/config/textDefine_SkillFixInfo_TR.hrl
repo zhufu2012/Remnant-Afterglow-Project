@@ -1,0 +1,373 @@
+-ifndef(textDefine_SkillFixInfo_TR_hrl).
+-define(textDefine_SkillFixInfo_TR_hrl, 1).
+-define(SCN213, "Kaderin Dönüşü").
+-define(SCD213, "Relikleri kullanarak saldırdığında, {0}% ihtimalle Kaderin Dönüşünü tetikler ve 100% Sülük etkisiyle {1}% HSR verir.GS: {2} sn.").
+-define(SCN41001, "Yetenek Yükseltme").
+-define(SCD40001, "Yeteneğin sabit hasarını {0} arttırır").
+-define(SCN51001, "Geçici Yetenek Güçlendirme").
+-define(SCD51001, "Sabit Yetenek HSR katlayanı +{0}%").
+-define(BCN1021, "Savaş Tanrısının Gücü Güçlendirildi").
+-define(BCN1031, "Thor'un Gardiyanı Güçlendirildi").
+-define(BCN2011, "Vulcan Ruhu Güçlendirildi").
+-define(BCN2021, "Khione Ruhu Güçlendirildi").
+-define(BCN3021, "Doğa Gücü Güçlendirildi").
+-define(BCN3031, "Yıldırım Gücü Güçlendirildi").
+-define(BCD1021, "Savaş Tanrısının Güç Süresi +{0} sn").
+-define(BCD1031, "Thor'un Gardiyanının Süresi +{0} sn").
+-define(BCD2011, "Vulcan Ruhunun Süresi +{0} sn").
+-define(BCD2021, "Khione Ruhunun Süresi +{0} sn").
+-define(BCD3021, "Doğa Gücünün Süresi +{0} sn").
+-define(BCD3031, "Yıldırım Gücünün Süresi +{0} sn").
+-define(BCN1001, "Öfke Güçlendirme").
+-define(BCD1001, "Öfke +{0}% SLDR Bonusu verir.Kükreme +{1}% Kritik Oran verir.").
+-define(BCN2001, "Sihir İşle").
+-define(BCD2001, "Tüm Yetkilendirme süreleri +{0} sn.").
+-define(BCN3001, "Savaş Güçlendirmesi").
+-define(BCD3001, "Her Odaklanan yığın {0}% HSR Bonusu verir.Her Yıldırım yığını +{1}% HSR Azaltma verir.").
+-define(SCN30001, "Bilgelik Avatarı: Yükseldi").
+-define(SCN30011, "Zafer Yargıcı: Yükseldi").
+-define(SCN30021, "Hortum Mızrağı: Yükseldi").
+-define(SCN30031, "İç Çekme Kalkanı: Yükseldi").
+-define(SCN30041, "Mızrak Delici: Yükseldi").
+-define(SCN30051, "Kutsal Mızrak: Yükseldi").
+-define(SCN30101, "İntikam Mühürü: Yükseldi").
+-define(SCN30111, "Karga Çağırma: Yükseldi").
+-define(SCN30121, "Enerji Sifonu: Yükseldi").
+-define(SCN30131, "Karga Ayini: Yükseldi").
+-define(SCN30141, "Karga Dansı: Yükseldi").
+-define(SCN30151, "İntikam Girdabı: Yükseldi").
+-define(SCN30201, "Thor'un Egemenliği: Yükseldi").
+-define(SCN30211, "Yıldırım: Yükseldi").
+-define(SCN30221, "Yıldırım Çatlağı: Yükseldi").
+-define(SCN30231, "Yıldırım Patlaması: Yükseldi").
+-define(SCN30241, "Yıldırım Düşmesi: Yükseldi").
+-define(SCN30251, "Thor'un Çekici: Yükseldi").
+-define(SCN30301, "Firavun Gardiyan: Yükseldi").
+-define(SCN30311, "Korona: Yükseldi").
+-define(SCN30321, "Güneş Işığı: Yükseldi").
+-define(SCN30331, "Güneş Diski: Yükseldi").
+-define(SCN30341, "Antik Lanet: Yükseldi").
+-define(SCN30351, "Güneş Rüzgarı: Yükseldi").
+-define(SCN30901, "").
+-define(SCN31001, "").
+-define(SCN31101, "").
+-define(SCD30001, "Verilen Temel HSR +{0}%").
+-define(SCD30011, "Verilen Temel HSR +{0}%").
+-define(SCD30021, "Verilen Temel HSR +{0}%").
+-define(SCD30031, "Verilen Temel HSR +{0}%").
+-define(SCD30041, "Verilen Temel HSR +{0}%").
+-define(SCD30051, "Verilen Temel HSR +{0}%").
+-define(SCD30101, "Verilen Temel HSR +{0}%").
+-define(SCD30111, "Verilen Temel HSR +{0}%").
+-define(SCD30121, "Verilen Temel HSR +{0}%").
+-define(SCD30131, "Verilen Temel HSR +{0}%").
+-define(SCD30141, "Verilen Temel HSR +{0}%").
+-define(SCD30151, "Verilen Temel HSR +{0}%").
+-define(SCD30201, "Verilen Temel HSR +{0}%").
+-define(SCD30211, "Verilen Temel HSR +{0}%").
+-define(SCD30221, "Verilen Temel HSR +{0}%").
+-define(SCD30231, "Verilen Temel HSR +{0}%").
+-define(SCD30241, "Verilen Temel HSR +{0}%").
+-define(SCD30251, "Verilen Temel HSR +{0}%").
+-define(SCD30301, "Verilen Temel HSR +{0}%").
+-define(SCD30311, "Verilen Temel HSR +{0}%").
+-define(SCD30321, "Verilen Temel HSR +{0}%").
+-define(SCD30331, "Verilen Temel HSR +{0}%").
+-define(SCD30341, "Verilen Temel HSR +{0}%").
+-define(SCD30351, "Verilen Temel HSR +{0}%").
+-define(SCD61001, "Öfke aktifken, Yetenek HSR katlayanı +{0}%").
+-define(SCD61011, "Savaş Tanrısının Gücü ekstra {0}% Kritik Oran sağlar").
+-define(SCD61021, "Thor'un Koruması ekstra {0}% Engelleme Azaltma sağlar").
+-define(SCD62001, "Her Yetkilendirmenin sağladığı Yetenek HSR katlayanı +{0}%").
+-define(SCD62011, "Her Yetkilendirmenin sağladığı Yetenek İyileştirme katlayanı +{0}%").
+-define(SCD62021, "Bir yetenek ateşleme {0}% ihtimalle Yetkilendirme - Ateş Fırtınası (Yetenek HSR Bonusu +{1}%) verebilir").
+-define(SCD62041, "Bir yetenek ateşleme {0}% ihtimalle Yetkilendirme - Ateş Fırtınası (Yetenek HSR Bonusu +{1}%) verebilir").
+-define(SCD63001, "{0}% ihtimalle 2 katman Odaklanma elde etme şansı vardır").
+-define(SCD63011, "{0}% ihtimalle 2 katman Yıldırım elde etme şansı vardır").
+-define(SCD63021, "Her yığın Odaklanmada Yetenek HSR katlayanı +{0}%").
+-define(SCD63031, "Her yığın Yıldırımnde Yetenek HSR katlayanı +{0}%").
+-define(BCD1041, "Öfke Süresi +{0} sn").
+-define(BCD1051, "Kükreme Süresi +{0} sn").
+-define(BCD1061, "Kükreme aktifken, Sersemletme uygulama şansını {0}% arttırabilir").
+-define(BCD1071, "Gardiyan Süresi +{0} sn").
+-define(BCD1081, "Kanama Süresi +{0} sn").
+-define(BCD2031, "Kalp Ateşi durumu bittiğinde, {0}% ihtimalle tekrar durum ekleyebilir").
+-define(BCD2041, "Büyülü Buz durumu bittiğinde, {0}% ihtimalle tekrar durum ekleyebilir").
+-define(BCD3041, "Doğa Gücü aktifken, her {0} sn 1 katman Odaklanma al").
+-define(BCD3051, "Yıldırım Gücü aktifken, her {0} sn 1 katman Gök Gürültüsü al").
+-define(SFI_UNITS103, "sn").
+-define(SCN117, "Güçlendirilmiş Buz Fırtınası").
+-define(SCD117, "Verilen Temel HSR +{0}%").
+-define(SCN118, "Güçlendirilmiş Buz Konisi").
+-define(SCD118, "Verilen Temel HSR +{0}%").
+-define(SCD70001, "").
+-define(SCD41001, "Sabit Yetenek HSR katlayanını {0}% arttırır; sabit Yetenek HSR {1} artar").
+-define(SCN80001, "Zafer Yargıcı: Uyandırıldı").
+-define(SCN80011, "Zafer Yargıcı: Uyandırıldı").
+-define(SCN80021, "Hortum Mızrağı: Uyandırıldı").
+-define(SCN80031, "İç Çekme Kalkanı: Uyandırıldı").
+-define(SCN80041, "Mızrak Delici: Uyandırıldı").
+-define(SCN80051, "Kutsal Mızrak: Uyandırıldı").
+-define(SCN80101, "Karga Dansı: Uyandırıldı").
+-define(SCN80111, "Karga Çağırma: Uyandırıldı").
+-define(SCN80121, "Enerji Sifonu: Uyandırıldı").
+-define(SCN80131, "Karga Ayini: Uyandırıldı").
+-define(SCN80141, "Karga Dansı: Uyandırıldı").
+-define(SCN80151, "İntikam Girdabı: Uyandırıldı").
+-define(SCN80201, "").
+-define(SCN80211, "Yıldırım: Uyandırıldı").
+-define(SCN80221, "Yıldırım Çatlağı: Uyandırıldı").
+-define(SCN80231, "Yıldırım Patlaması: Uyandırıldı").
+-define(SCN80241, "Yıldırım Düşmesi: Uyandırıldı").
+-define(SCN80251, "Thor'un Çekici: Uyandırıldı").
+-define(SCN80301, "").
+-define(SCN80311, "Korona: Uyandırıldı").
+-define(SCN80321, "Güneş Işığı: Uyandırıldı").
+-define(SCN80331, "Güneş Diski: Uyandırıldı").
+-define(SCN80341, "Antik Lanet: Uyandırıldı").
+-define(SCN80351, "Güneş Rüzgarı: Uyandırıldı").
+-define(SCN80901, "").
+-define(SCD80901, "").
+-define(SCN81001, "").
+-define(SCN81101, "").
+-define(SCD81001, "").
+-define(SCD80001, "Son Vuruş {0}% ihtimalle düşmanı {1} saniye kör edebilir (Vuruş Oranı -10%) ve sakinleştirebilir (Kritik Oran -20%).").
+-define(SCD80011, "{0}% ihtimalle {1} sn Kiriş (Hareket Hızı -33%) uygular.").
+-define(SCD80021, "{0}% SVNM kadar hasar verir.").
+-define(SCD80031, "{0}% ihtimalle takım arkadaşlarına bir {1}% SLDR kalkanı verir.").
+-define(SCD80041, "Maks HP'nin {0}% kadarına eşit ek hasar verir.").
+-define(SCD80051, "{0}% ihtimalle 1 katman debuff kaldırabilir.").
+-define(SCD80101, "Yetenek ateşlerken, Maks HP'nin {0}% kadarını iyileştirir.").
+-define(SCD80111, "Her yetenek saldığında {0}% ihtimalle Solma uygular.").
+-define(SCD80121, "Hedefe kanama uygular, {0}% HP kaybetmelerine sebep olur.").
+-define(SCD80131, "Hedefe kanama uygular, {0}% HP kaybetmelerine sebep olur.").
+-define(SCD80141, "Her yetenek saldığında {0}% ihtimalle Solma uygular.").
+-define(SCD80151, "{0}% SLDR kadar tüm takımı iyileştirir.").
+-define(SCD80201, "Maks HP'nin {0}% kadarına eşit ek hasar verir.").
+-define(SCD80211, "{0}% ihtimalle yakındaki hedeflerden bir buff kaldırabilir.").
+-define(SCD80221, "Maks HP'nin {0}% kadarına eşit ek hasar verir.").
+-define(SCD80231, "{0}% ihtimalle yakındaki hedeflerden 2 buff kaldırabilir.").
+-define(SCD80241, "Maks HP'nin {0}% kadarına eşit ek hasar verir.").
+-define(SCD80251, "Maks HP'nin {0}% kadarına eşit ek hasar verir.").
+-define(SCD80301, "").
+-define(SCD80311, "Her vuruş {0}% ihtimalle Yakma tetikleyebilir.").
+-define(SCD80321, "{0}% ihtimalle Yakmayı 1 defa daha tetikleme şansı vardır.").
+-define(SCD80331, "{0}% ihtimalle Yakmayı 2 defa daha tetikleme şansı vardır.").
+-define(SCD80341, "{0}% ihtimalle hedefi 1.5 saniye Sersemletme şansı vardır.").
+-define(SCD80351, "Her vuruş {0}% ihtimalle 1 defa daha Yakma tetikleyebilir.").
+-define(SCN70001, "Zafer Yargıcı: Güçlendirilmiş").
+-define(SCN70011, "Zafer Yargıcı: Güçlendirilmiş").
+-define(SCN70021, "Hortum Mızrağı: Güçlendirilmiş").
+-define(SCN70031, "İç Çekme Kalkanı: Güçlendirilmiş").
+-define(SCN70041, "Mızrak Delici: Güçlendirilmiş").
+-define(SCN70051, "Kutsal Mızrak: Güçlendirilmiş").
+-define(SCN70101, "Karga Dansı: Güçlendirilmiş").
+-define(SCN70111, "Karga Çağırma: Güçlendirilmiş").
+-define(SCN70121, "Enerji Sifonu: Güçlendirilmiş").
+-define(SCN70131, "Karga Ayini: Güçlendirilmiş").
+-define(SCN70141, "Karga Dansı: Güçlendirilmiş").
+-define(SCN70151, "İntikam Girdabı: Güçlendirilmiş").
+-define(SCN70201, "").
+-define(SCN70211, "Yıldırım: Güçlendirilmiş").
+-define(SCN70221, "Yıldırım Çatlağı: Güçlendirilmiş").
+-define(SCN70231, "Yıldırım Patlaması: Güçlendirilmiş").
+-define(SCN70241, "Yıldırım Düşmesi: Güçlendirilmiş").
+-define(SCN70251, "Thor'un Çekici: Güçlendirilmiş").
+-define(SCN70301, "").
+-define(SCN70311, "Korona: Güçlendirilmiş").
+-define(SCN70321, "Güneş Işığı: Güçlendirilmiş").
+-define(SCN70331, "Güneş Diski: Güçlendirilmiş").
+-define(SCN70341, "Antik Lanet: Güçlendirilmiş").
+-define(SCN70351, "Güneş Rüzgarı: Güçlendirilmiş").
+-define(SCN70901, "").
+-define(SCN71001, "").
+-define(SCN71101, "").
+-define(SCD61031, "Kanayan düşmanlarda {0}% SVNM yoksayılır.").
+-define(SCD62061, "HP {0}% üzerindeyken, Yetenek HSR katlayanı +{1}%.").
+-define(SCD62071, "Dondurma etkisini uygulama şansı +{0}%").
+-define(SCD63061, "Alınan her Odaklanma etkisi için, Hedefin Maks HP'sinde HSR katlayanı {0}% artar.").
+-define(SCD63071, "Alınan her Yıldırım etkisi için, Yetenek Bonusu {0}% artar.").
+-define(SCD10001, "Atlı Arabada SLDR +{0}%").
+-define(SCN70401, "Tartarus Kral: Güçlendirilmiş").
+-define(SCN70411, "Hayalet Orak: Güçlendirilmiş").
+-define(SCN70421, "Tartarus Kurt: Güçlendirilmiş").
+-define(SCN70431, "Ürkütücü Darbe: Güçlendirilmiş").
+-define(SCN70441, "Hayalet Sarmalama: Güçlendirilmiş").
+-define(SCN70451, "Banshee Boşluğu: Güçlendirilmiş").
+-define(SCN70501, "Savaş Lordu: Güçlendirilmiş").
+-define(SCN70511, "Hasat Yeteneği: Güçlendirilmiş").
+-define(SCN70521, "Pala Saldırısı: Güçlendirilmiş").
+-define(SCN70531, "Köşe Hücumu: Güçlendirilmiş").
+-define(SCN70541, "Pala Boğması: Güçlendirilmiş").
+-define(SCN70551, "Final İdam: Güçlendirilmiş").
+-define(SCN80401, "Tartarus Kral: Uyandırıldı").
+-define(SCN80411, "Hayalet Orak: Uyandırıldı").
+-define(SCN80421, "Tartarus Kurt: Uyandırıldı").
+-define(SCN80431, "Ürkütücü Darbe: Uyandırıldı").
+-define(SCN80441, "Hayalet Sarmalama: Uyandırıldı").
+-define(SCN80451, "Banshee Boşluğu: Uyandırıldı").
+-define(SCN80501, "Savaş Lordu: Uyandırıldı").
+-define(SCN80511, "Hasat Yeteneği: Uyandırıldı").
+-define(SCN80521, "Pala Saldırısı: Uyandırıldı").
+-define(SCN80531, "Köşe Hücumu: Uyandırıldı").
+-define(SCN80541, "Pala Boğması: Uyandırıldı").
+-define(SCN80551, "Final İdam: Uyandırıldı").
+-define(SCD80401, "İlk verilen HSR {0} sn Kırılganlık uygular (Yetenek HSR Azaltma -15%).").
+-define(SCD80411, "Hedefte {0}% SVNM yoksayar.").
+-define(SCD80421, "{0}% SLDR kadar bir defa daha HP iyileştirir.").
+-define(SCD80431, "İlk verilen HSR (HSR Azaltma -10%) {0} sn Yumuşatma uygular.").
+-define(SCD80441, "İlk verilen HSR {0} sn (Vuruş Oranı -20%) Lanet uygular.").
+-define(SCD80451, "İlk verilen HSR (İyileşme Bonusu -20%) {0} sn Buluşma uygular.").
+-define(SCD80501, "{0}% ihtimalle başarılı bir dönüşümden sonra bir katman debuff kaldırma şansına sahiptir.").
+-define(SCD80511, "Yetenek Kritik Oranı +{0}%").
+-define(SCD80521, "Hedefin kaybettiği her {0}% HP için, {1}% Yetenek HSR Katlayanı alır.").
+-define(SCD80531, "Hedefin kaybettiği her {0}% HP için, {1}% Yetenek HSR Katlayanı alır.").
+-define(SCD80541, "Hedefin kaybettiği her {0}% HP için, {1}% Yetenek HSR Katlayanı alır.").
+-define(SCD80551, "50% HP altında bir Karakterde kullanıldığında, tetikleyen {0} sn Yenilmezlik alır.").
+-define(SCN70601, "Bahar Geliyor: Güçlendirilmiş").
+-define(SCN70611, "Sarmaşık Saldırısı: Güçlendirilmiş").
+-define(SCN70621, "Kamış Testere: Güçlendirilmiş").
+-define(SCN70631, "Açan Çiçekler: Güçlendirilmiş").
+-define(SCN70641, "Doğa Alemi: Güçlendirilmiş").
+-define(SCN70651, "Toprağın Öfkesi: Güçlendirilmiş").
+-define(SCN80601, "Bahar Geliyor: Uyandırıldı").
+-define(SCN80611, "Sarmaşık Saldırısı: Uyandırıldı").
+-define(SCN80621, "Kamış Testere: Uyandırıldı").
+-define(SCN80631, "Açan Çiçekler: Uyandırıldı").
+-define(SCN80641, "Doğa Alemi: Uyandırıldı").
+-define(SCN80651, "Toprağın Öfkesi: Uyandırıldı").
+-define(SCD80601, "Başarılı bir Dönüşümden sonra {0} müttefikte {1}% SLDR kadar HP iyileştirir.").
+-define(SCD80611, "{0}% ihtimalle müttefikte {1} katman debuff kaldırma şansı vardır.").
+-define(SCD80621, "Bağlantı Kesme (SLDR -{0}%) {1} sn uygulanır.").
+-define(SCD80631, "İyileşme Süresi +{0} sn").
+-define(SCD80641, "Hedefte HP {0}% altındaysa, İyileşme katlayanı +{1}%.").
+-define(SCD80651, "Yetenek (saniye başı {0}% HSR alır) {1} sn Zehir uygular.").
+-define(SCN30401, "Tartarus Kral: Yükseldi").
+-define(SCN30411, "Hayalet Orak: Yükseldi").
+-define(SCN30421, "Tartarus Kurt: Yükseldi").
+-define(SCN30431, "Ürkütücü Darbe: Yükseldi").
+-define(SCN30441, "Hayalet Sarmalama: Yükseldi").
+-define(SCN30451, "Banshee Boşluğu: Yükseldi").
+-define(SCN30501, "Savaş Lordu: Yükseldi").
+-define(SCN30511, "Hasat Yeteneği: Yükseldi").
+-define(SCN30521, "Pala Saldırısı: Yükseldi").
+-define(SCN30531, "Köşe Hücumu: Yükseldi").
+-define(SCN30541, "Pala Boğması: Yükseldi").
+-define(SCN30551, "Final İdam: Yükseldi").
+-define(SCN30601, "Bahar Geliyor: Yükseldi").
+-define(SCN30611, "Sarmaşık Saldırısı: Yükseldi").
+-define(SCN30621, "Kamış Testere: Yükseldi").
+-define(SCN30631, "Açan Çiçekler: Yükseldi").
+-define(SCN30641, "Doğa Alemi: Yükseldi").
+-define(SCN30651, "Toprağın Öfkesi: Yükseldi").
+-define(SCD30401, "Verilen Temel HSR +{0}%").
+-define(SCD30411, "Verilen Temel HSR +{0}%").
+-define(SCD30421, "Verilen Temel HSR +{0}%").
+-define(SCD30431, "Verilen Temel HSR +{0}%").
+-define(SCD30441, "Verilen Temel HSR +{0}%").
+-define(SCD30451, "Verilen Temel HSR +{0}%").
+-define(SCD30501, "Verilen Temel HSR +{0}%").
+-define(SCD30511, "Verilen Temel HSR +{0}%").
+-define(SCD30521, "Verilen Temel HSR +{0}%").
+-define(SCD30531, "Verilen Temel HSR +{0}%").
+-define(SCD30541, "Verilen Temel HSR +{0}%").
+-define(SCD30551, "Verilen Temel HSR +{0}%").
+-define(SCD30601, "Verilen Temel HSR +{0}%").
+-define(SCD30611, "Verilen Temel HSR +{0}%").
+-define(SCD30621, "Verilen Temel HSR +{0}%").
+-define(SCD30631, "Verilen Temel HSR +{0}%").
+-define(SCD30641, "Temel iyileşme +{0}%").
+-define(SCD30651, "Verilen Temel HSR +{0}%").
+-define(SCD70641, "Yetenek Sabit İyileşmesi +{0}").
+-define(SCN70701, "Ay Tanrıçası: Güçlendirilmiş").
+-define(SCN70711, "Ay Oku: Güçlendirilmiş").
+-define(SCN70721, "Ay Kılıcı Patlaması: Güçlendirilmiş").
+-define(SCN70731, "Ay Işığı Vuruşu: Güçlendirilmiş").
+-define(SCN70741, "Ay Işığı Sığınağı: Güçlendirilmiş").
+-define(SCN70751, "Ay Özü: Güçlendirilmiş").
+-define(SCN30701, "Ay Tanrıçası: Güçlendirildi").
+-define(SCN30711, "Ay Oku: Güçlendirildi").
+-define(SCN30721, "Ay Kılıcı Patlaması: Güçlendirildi").
+-define(SCN30731, "Ay Işığı Vuruşu: Güçlendirildi").
+-define(SCN30741, "Ay Işığı Sığınağı: Güçlendirildi").
+-define(SCN30751, "Ay Özü: Güçlendirildi").
+-define(SCN80701, "Ay Tanrıçası: Uyandırıldı").
+-define(SCN80711, "Ay Oku: Uyandırıldı").
+-define(SCN80721, "Ay Kılıcı Patlaması: Uyandırıldı").
+-define(SCN80731, "Ay Işığı Vuruşu: Uyandırıldı").
+-define(SCN80741, "Ay Işığı Sığınağı: Uyandırıldı").
+-define(SCN80751, "Ay Özü: Uyandırıldı").
+-define(SCD80701, "Başarılı bir Dönüşüm ile müttefiklere {1} sn {0}% SLDR verir.").
+-define(SCD80711, "{0}% ihtimalle hedeflere (SVNM -{1}%) {2} sn Delici verebilir.").
+-define(SCD80721, "Yetenek {1} sn (Hareket Hızı -{0}%) Sakatlama verir").
+-define(SCD80731, "Sersemletme süresi+{0} sn.").
+-define(SCD80741, "Kalkan HSR emmesi {0}%'e arttı.").
+-define(SCD80751, "Sersemleyen düşmanlara saldırıldığında yeteneğin HSR katlayanı {0}% artar.").
+-define(BCN4001, "").
+-define(BCD4001, "").
+-define(BCN4002, "").
+-define(BCD4002, "").
+-define(SCN64001, "").
+-define(SCD64001, "").
+-define(SCN64011, "").
+-define(SCD64011, "").
+-define(SCN64021, "").
+-define(SCD64021, "").
+-define(SCN64031, "").
+-define(SCD64031, "").
+-define(SCN64041, "").
+-define(SCD64041, "").
+-define(SCN64051, "").
+-define(SCD64051, "").
+-define(SCN64061, "").
+-define(SCD64061, "").
+-define(SCN64071, "").
+-define(SCD64071, "").
+-define(SCN64081, "").
+-define(SCD64081, "").
+-define(SCN64091, "").
+-define(SCD64091, "").
+-define(SN301001, "").
+-define(SCD61051, "").
+-define(SCD61061, "").
+-define(SCD62081, "").
+-define(SCD62091, "").
+-define(SCD63081, "").
+-define(SCD63091, "").
+-define(SCD64101, "").
+-define(SCD64111, "").
+-define(SCN193091, "").
+-define(SCD193091, "").
+-define(SCN193101, "").
+-define(SCD193101, "").
+-define(SCN193111, "").
+-define(SCD193111, "").
+-define(BCD1042, "").
+-define(BCD1052, "").
+-define(BCD1062, "").
+-define(SCD61032, "").
+-define(SCD61041, "").
+-define(BCD2032, "").
+-define(BCD2042, "").
+-define(SCD62031, "").
+-define(SCD62051, "").
+-define(SCD62072, "").
+-define(SCD63041, "").
+-define(SCD63051, "").
+-define(BCD3042, "").
+-define(BCD3052, "").
+-define(SCD81101, "").
+-define(SCN31201, "").
+-define(SCN71201, "").
+-define(SCN81201, "").
+-define(SCD81201, "").
+-define(SCN170441, "").
+-define(SCD170441, "").
+-define(SCN170451, "").
+-define(SCD170451, "").
+-define(SCN170461, "").
+-define(SCD170461, "").
+-define(SCN170471, "").
+-define(SCD170471, "").
+-endif.
+

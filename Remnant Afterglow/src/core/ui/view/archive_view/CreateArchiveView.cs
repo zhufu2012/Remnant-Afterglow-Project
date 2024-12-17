@@ -110,9 +110,9 @@ namespace Remnant_Afterglow
                 GameError error = SaveLoadSystem.CreateSaveData(SaveLoadName.Text, select_camp, select_battle, select_diff);//创建存档
                 if (error.error == 0)
                 {
-                    BigMapDraw bigMapDraw = (BigMapDraw)GD.Load<PackedScene>("res://scenes/map/BigMapView.tscn").Instantiate();
-                    GlobalData.PutParam("chapter_id", select_battle);
-                    GetTree().ChangeSceneToPacked(Common.GetPackedScene(bigMapDraw));
+                    SceneManager.PutParam("chapter_id", select_battle);
+                    //GetTree().ChangeSceneToPacked(Common.GetPackedScene(bigMapDraw));
+                    SceneManager.ChangeSceneName("BigMapCopy", this);
                 }
                 else
                 {

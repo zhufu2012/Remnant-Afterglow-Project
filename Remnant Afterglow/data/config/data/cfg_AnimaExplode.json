@@ -1,0 +1,25 @@
+[
+    {
+        "KEY_INDEX": "1_1",
+        "ExplodeId": 1,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            50,
+            126
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "DurationMs": 20,
+        "FrameCount": 3,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B1E5BBB75DF144E6BCE87AD7FFB08D41.png"
+    }
+]

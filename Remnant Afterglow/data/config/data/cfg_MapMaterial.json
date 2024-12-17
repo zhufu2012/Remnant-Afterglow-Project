@@ -7,6 +7,13 @@
         "Probability": 0.0001,
         "ImageSetId": 1,
         "ImageSetIndex": 20,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
         "Parame": 1.0
     },
     {
@@ -17,6 +24,25 @@
         "Probability": 0.0001,
         "ImageSetId": 1,
         "ImageSetIndex": 13,
+        "CollisionPolygon": [
+            [
+                0,
+                -10,
+                -10,
+                10,
+                -10,
+                10,
+                10,
+                -10,
+                10
+            ]
+        ],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
         "Parame": 1.0
     },
     {
@@ -27,6 +53,13 @@
         "Probability": 0.0001,
         "ImageSetId": 1,
         "ImageSetIndex": 19,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
         "Parame": 1.0
     },
     {
@@ -37,6 +70,13 @@
         "Probability": 1.0,
         "ImageSetId": 2,
         "ImageSetIndex": 21,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
         "Parame": 1.0
     },
     {
@@ -47,16 +87,30 @@
         "Probability": 1.0,
         "ImageSetId": 2,
         "ImageSetIndex": 22,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
         "Parame": 1.0
     },
     {
-        "KEY_INDEX": "2",
-        "MaterialId": 2,
+        "KEY_INDEX": "6",
+        "MaterialId": 6,
         "MaterialName": "悬崖",
         "PassTypeId": 3,
         "Probability": 0.0001,
         "ImageSetId": 1,
         "ImageSetIndex": 13,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
         "Parame": 1.0
     }
 ]

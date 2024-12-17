@@ -4,20 +4,16 @@
         "ChapterId": 1,
         "CopyId": 1,
         "CopyType": 0,
-        "WaveNum": 10,
-        "BrushSpace": 60,
+        "AllWave": 2,
+        "BrushSpace": 0,
         "BrushSpaceList": [
             [
                 1,
-                5
+                0
             ],
             [
                 2,
-                10
-            ],
-            [
-                3,
-                60
+                5
             ]
         ],
         "BrushIdList": [

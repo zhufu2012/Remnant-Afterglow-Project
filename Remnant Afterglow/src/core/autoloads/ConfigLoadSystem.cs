@@ -111,7 +111,7 @@ namespace Remnant_Afterglow
                 }
                 catch (Exception e)
                 {
-                    Log.Print("配置报错！");
+                    Log.Error("配置报错！", e.StackTrace);
 
                 }
             }
@@ -122,9 +122,9 @@ namespace Remnant_Afterglow
         /// </summary>
         public void LoadModBaseConfigData()
         {
-            foreach (var k in ModLoadSystem.LoadModList)
+            foreach (var k in ModLoadSystem.load_mod_list)
             {
-                string path = PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER) + k.Key + "/" + "config/file_name.json";
+                string path = PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER) + k.Key + PathConstant.GetPathUser(PathConstant.MOD_LIST_CONFIG_FileName_USER);
                 string jsonText = File.ReadAllText(path);
                 ConfigFiles file_data = JsonConvert.DeserializeObject<ConfigFiles>(jsonText);
                 List<ConfigDict> filedata = file_data.cfg_files;
@@ -142,7 +142,7 @@ namespace Remnant_Afterglow
                             {
                                 string keyIndex = obj["KEY_INDEX"].Value<string>();
                                 Dictionary<string, object> dataDict = new Dictionary<string, object>();
-                                if(innerDict.ContainsKey(keyIndex))
+                                if (innerDict.ContainsKey(keyIndex))
                                 {
                                     dataDict = innerDict[keyIndex];
                                 }
@@ -162,7 +162,7 @@ namespace Remnant_Afterglow
                     }
                     catch (Exception e)
                     {
-                        Log.Print("配置报错！" + e.StackTrace);
+                        Log.Error("配置报错！" + e.StackTrace);
                     }
                 }
             }
@@ -345,6 +345,14 @@ namespace Remnant_Afterglow
                     root.meta.InitMetaData();
                     root.InitSequenceMap();
                     return root;
+                case "HashSet<int>":
+                    List<int> list7 = value.ToObject<List<int>>();
+                    HashSet<int> hash_set = new HashSet<int>();
+                    foreach(int id in list7)
+                    {
+                        hash_set.Add(id);
+                    }
+                    return hash_set;
                 case "ulong":
                     return value.Value<ulong>();
                 case "bool":

@@ -6,7 +6,6 @@ namespace Remnant_Afterglow
     {
         public override void _Ready()
         {
-            base._Ready();
         }
 
         #region 检测性能

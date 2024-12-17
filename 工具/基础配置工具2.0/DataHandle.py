@@ -10,7 +10,6 @@ import shutil
 import ClassExport
 
 isCompact = False  ##False  ##True
-ConfigData = Config.load_data()  ##工具配置数据
 
 
 # region  数据处理部分
@@ -53,7 +52,7 @@ def number_to_column_name(n):
 
 
 ##对一个xlsx文件的子表名称读取 之前的需要导出数据字典  xlsx路径   返回(子表显示名称列表，)
-def OneXlsxDataHandle(path):
+def OneXlsxDataHandle(NowProjectConfig, path):
     dicts, image_path = read_xlsx.read_text_all(path)
     subtable_show_name_list = [table_name for table_name in dicts if table_name.startswith("cfg_")]
     return subtable_show_name_list, image_path
@@ -95,33 +94,44 @@ def GetExportRow(file_path, table_name, list):
 ##获取需要导出的行
 def GetExportLine(item_list):
     export_list = []
+    line_dict = {}  ##横排要导出的位置{假行数，真行数}
+    line_add = 0
     for index, item in enumerate(item_list[3:]):
         value = item[1]
         line = index + 3
         if check_value(value, 0):
             continue
         elif check_value(value, 1):
+            line_dict[line_add] = line + 2
             export_list.append(line)
+            line_add += 1
         elif check_value(value, 2):
+            line_dict[line_add] = line + 2
             export_list.append(line)
+            line_add += 1
             break
         else:
             continue
 
-    return export_list
+    return export_list, line_dict
 
 
 ##根据导出行，导出列，只获取对应行，对应列的数据
 ##先行后列，获取新的数据，主键位置，和键名称
 def GetExportItemList(file_path, table_name, export_list_line, key_export_list_row, export_list_row, item_list):
     new_all_data = []  ##新数据
+
+    row_dict = {}  ##纵排要导出的位置 {假纵数，真纵数}
+
     main_key_row = []  ##主键在新列表中的每行位置
     key_row = []  ##普通键在新列表中的每行位置
     key_name_list = ["KEY_INDEX"]  ##键列表
     key_type_list = []  ##字段类型
-    row = 0
+    key_isnull_dict = {}  ##该列数据为空是否使用默认值
+
+    row = 0  ##假纵数
     for line, item in enumerate(item_list):
-        if line in export_list_line:
+        if line in export_list_line:  ##这一排需要导出
             new_line_data = []
             for index, value in enumerate(item):
                 if index in export_list_row:  ##要导出
@@ -141,7 +151,13 @@ def GetExportItemList(file_path, table_name, export_list_line, key_export_list_r
                     if index in key_export_list_row:  ##如果还在主键中
                         main_key_row.append(row)
                     key_row.append(row)
-                    key_name_list.append(value)
+                    row_dict[row] = index  ##假纵数|真纵数
+                    if value.startswith('#'):
+                        key_isnull_dict[value[1:]] = True
+                        key_name_list.append(value[1:])
+                    else:
+                        key_isnull_dict[value] = False
+                        key_name_list.append(value)
                     row += 1
         elif line == 2:  ##字段类型
             for index, value in enumerate(item):
@@ -151,12 +167,13 @@ def GetExportItemList(file_path, table_name, export_list_line, key_export_list_r
                                        f"第{number_to_column_name(index)}列， 不应该使用nan，或者字段类型为空，错误码:11")
                         return None
                     key_type_list.append(value)
-    return new_all_data, main_key_row, key_row, key_name_list, key_type_list
+    return new_all_data, row_dict, main_key_row, key_row, key_name_list, key_type_list, key_isnull_dict
 
 
 ##对一行数据进行组装
 ##                 文件路径     子表名称     一行数据     主键列数列表   键列数列表     键名称列表    键类型列表
-def row_data_conver(file_path, table_name, line, row_data, main_key_row, key_row, key_name_list, key_type_list):
+def row_data_conver(NowProjectConfig, row_dict, line_dict, file_path, table_name, line, row_data, main_key_row, key_row,
+                    key_name_list, key_type_list, key_isnull_dict):
     key_dict = {}  ##一行的各字段 与数据的字典  字段是键 ,默认有个 KEY_INDEX
     key_index = ""
     if len(main_key_row) == 1:
@@ -167,7 +184,9 @@ def row_data_conver(file_path, table_name, line, row_data, main_key_row, key_row
             key_index = key_index + "_" + str(row_data[main_row])
     key_dict["KEY_INDEX"] = key_index
     for row in key_row:
-        Data = TypeConversion.TO_DATA(file_path, table_name, row + 2, line + 5, key_type_list[row], row_data[row])
+        Data = TypeConversion.TO_DATA(NowProjectConfig, file_path, table_name, row_dict[row], line_dict[line],
+                                      key_type_list[row],
+                                      row_data[row], key_isnull_dict[key_name_list[row + 1]])
         if Data is not None:
             key_dict[key_name_list[row + 1]] = Data
         else:
@@ -179,13 +198,12 @@ def row_data_conver(file_path, table_name, line, row_data, main_key_row, key_row
 
 # region  xlsx文件数据相关操作
 ##对一个子表的数据读取     子表名称      子表数据    所有配置表的数据  所有配置表的字段数据
-def SubTableDataHandle(file_path, table_name, item_list, data_dict, data_key_dict, image_path):
+def SubTableDataHandle(NowProjectConfig, file_path, table_name, item_list, data_dict, data_key_dict, image_path):
     sub_table_name = table_name  ##一个子表的名称
     res_image_path = image_path
     if table_name.find("_") != table_name.rfind("_"):
         sub_table_name = table_name[:table_name.rfind("_")]
     if check_key_exist(data_dict, sub_table_name):
-        ##print(data_dict, sub_table_name)
         Config.add_log(
             f"导出失败！  配置文件:[{file_path}]  有出现重复的子表，请确保子表名称不会重复！ 表名:{table_name}，错误码:5")
         return None
@@ -194,17 +212,19 @@ def SubTableDataHandle(file_path, table_name, item_list, data_dict, data_key_dic
         ##需要导出的主键列 列表，以及导出列数列表
         (key_export_list_row, export_list_row) = row_data
         ##需要导出的行数
-        export_list_line = GetExportLine(item_list)
+        (export_list_line, line_dict) = GetExportLine(item_list)
         ##去掉不需要导出部分的剩余数据
         all_data = GetExportItemList(file_path, table_name, export_list_line, key_export_list_row, export_list_row,
                                      item_list)
         if all_data is not None:
             # {新数据，主键列数，键名列表，类型列表}
-            (new_all_data, main_key_row, key_row, key_name_list, key_type_list) = all_data
+            (new_all_data, row_dict, main_key_row, key_row, key_name_list, key_type_list,
+             key_isnull_dict) = all_data
             data_list = []
             for line, row_data in enumerate(new_all_data):
-                key_dict_list = row_data_conver(file_path, table_name, line, row_data, main_key_row, key_row,
-                                                key_name_list, key_type_list)  ##对一行数据进行组装
+                key_dict_list = row_data_conver(NowProjectConfig, row_dict, line_dict, file_path, table_name, line,
+                                                row_data, main_key_row, key_row, key_name_list,
+                                                key_type_list, key_isnull_dict)  ##对一行数据进行组装
                 if key_dict_list is not None:
                     if len(key_dict_list) > 0:
                         data_list.append(key_dict_list)
@@ -225,15 +245,17 @@ def SubTableDataHandle(file_path, table_name, item_list, data_dict, data_key_dic
     return data_dict, data_key_dict, sub_table_name, res_image_path
 
 
-def TableDataHandle(file_path, image_path_list, data_dict, data_key_dict, subtable_name_list, subtable_name_list2):
+def TableDataHandle(NowProjectConfig, file_path, image_path_list, data_dict, data_key_dict, subtable_name_list,
+                    subtable_name_list2):
     dicts, image_path = read_xlsx.read_text_all(file_path)
     for table_name, item_list in dicts.items():  ##配置文件的一个子表
         if len(item_list) < 3:
             continue
-        data = SubTableDataHandle(file_path, table_name, item_list, data_dict, data_key_dict, image_path)
+        data = SubTableDataHandle(NowProjectConfig, file_path, table_name, item_list, data_dict, data_key_dict,
+                                  image_path)
         if data is not None:
-            (data_dict, data_key_dict, sub_table_name, image_path) = data
-            image_path_list += image_path
+            (data_dict, data_key_dict, sub_table_name, image_path2) = data
+            image_path_list += image_path2
             if sub_table_name not in subtable_name_list:
                 subtable_name_list.append(sub_table_name)
                 subtable_name_list2.append(table_name)
@@ -248,7 +270,7 @@ def TableDataHandle(file_path, image_path_list, data_dict, data_key_dict, subtab
 
 
 ##对文件路径列表进行检查，导出每一个是.xls或者.xlsx文件的数据
-def data_conver(pathlist):
+def data_conver(NowProjectConfig, pathlist):
     image_path_list = []  ##保存存在图片的表，然后在数据导出正确后，再导出图片，防止数据污染
     data_dict = {}  ##所有配置表的数据
     data_key_dict = {}  ##所有配置表的字段数据
@@ -258,7 +280,9 @@ def data_conver(pathlist):
         if file_path.find("~$") != -1:
             continue
         if file_path.endswith(".xlsx"):
-            data = TableDataHandle(file_path, image_path_list, data_dict, data_key_dict, subtable_name_list,subtable_name_list2)
+            data = TableDataHandle(NowProjectConfig, file_path, image_path_list, data_dict, data_key_dict,
+                                   subtable_name_list,
+                                   subtable_name_list2)
             if data is not None:
                 pass
             else:
@@ -294,20 +318,19 @@ def get_files_from_directory(directory):
 
 
 ##导出配置数据到文件
-def export_config_file(image_path_list, data_dict, data_key_dict, subtable_name_list2):
+def export_config_file(NowProjectConfig, image_path_list, data_dict, data_key_dict, subtable_name_list2):
     languages_table_name = []
-    Config.del_file(ConfigData["工具导出配置的存放路径"])  ##删除原基础配置
-    Config.del_file(ConfigData["工具导出图片的存放路径"])  ##删除原图片资源
+    Config.del_file(NowProjectConfig["导出配置的存放路径"])  ##删除原基础配置
+    Config.del_file(NowProjectConfig["导出配置图片的存放路径"])  ##删除原图片资源
     new_image_path_list = []
     for i in image_path_list:
         if i not in new_image_path_list:
             new_image_path_list.append(i)
-
     for image_path in new_image_path_list:
-        read_xlsx.output_id_image(image_path)
+        read_xlsx.output_id_image(NowProjectConfig, image_path)
     for table_name, jsonstr in data_dict.items():
         # 打开文件进行写入，如果文件不存在则创建文件
-        with open(ConfigData["工具导出配置的存放路径"] + table_name + ConfigData["导出的数据后缀"], 'w',
+        with open(NowProjectConfig["导出配置的存放路径"] + table_name + NowProjectConfig["导出的数据后缀"], 'w',
                   encoding='utf-8') as file:
             file.write(jsonstr)
         subtable_names = ""
@@ -320,9 +343,9 @@ def export_config_file(image_path_list, data_dict, data_key_dict, subtable_name_
         if subtable_names != "":
             subtable_name_list2.remove(subtable_names)
         languages_table_name.append({"file_name": table_name,
-                                     "file_path": ConfigData["在项目中读取配置文件所用的路径"] + table_name +
-                                                  ConfigData["导出的数据后缀"],
-                                     "xlsx_dec" : xlsx_dec,
+                                     "file_path": NowProjectConfig["项目中读取配置文件的路径"] + table_name +
+                                                  NowProjectConfig["导出的数据后缀"],
+                                     "xlsx_dec": xlsx_dec,
                                      "key_list": data_key_dict[table_name]})
     ##生成基础配置文件
     if isCompact:
@@ -331,27 +354,27 @@ def export_config_file(image_path_list, data_dict, data_key_dict, subtable_name_
     else:
         languages_table_name_text = json.dumps({"cfg_files": languages_table_name}, indent=4, ensure_ascii=False)
     ##languages_table_name_text = json.dumps({"cfg_files": languages_table_name}, separators=(',', ':'), indent=None, ensure_ascii=False) #紧凑版
-    with open(ConfigData["工具导出配置的索引文件路径"], 'w',
+    with open(NowProjectConfig["导出配置的索引文件路径"], 'w',
               encoding='utf-8') as file:
         file.write(languages_table_name_text)
 
 
 ##导出配置的类
-def export_config_class(data_dict, data_key_dict, subtable_name_list2):
-    result_dict = read_xlsx.read_sheet_name()  ##所有xlsx表的每个子表的列名 和 导出选项 和键名称
-    export_class1(result_dict, data_dict, data_key_dict, subtable_name_list2)
-    export_class2(result_dict, data_dict, data_key_dict, subtable_name_list2)
-    if ConfigData["导出类是否需要复制到开发路径"]:  ##复制到开发路径
-        ClassExport.export_config_constant(ConfigData, data_dict.items(), result_dict, subtable_name_list2)  ##导出
-    if ConfigData["是否导出类的缓存代码"]:  ##复制到开发路径
-        ClassExport.export_ConfigCache(ConfigData, data_dict.items(), result_dict, subtable_name_list2)  ##导出
+def export_config_class(NowProjectConfig, data_dict, data_key_dict, subtable_name_list2):
+    result_dict = read_xlsx.read_sheet_name(NowProjectConfig)  ##所有xlsx表的每个子表的列名 和 导出选项 和键名称
+    export_class1(NowProjectConfig, result_dict, data_dict, data_key_dict, subtable_name_list2)
+    export_class2(NowProjectConfig, result_dict, data_dict, data_key_dict, subtable_name_list2)
+    if NowProjectConfig["是否导出配置类"]:  ##复制到开发路径
+        ClassExport.export_config_constant(NowProjectConfig, data_dict.items(), result_dict, subtable_name_list2)  ##导出
+    if NowProjectConfig["是否导出缓存类"]:  ##复制到开发路径
+        ClassExport.export_ConfigCache(NowProjectConfig, data_dict.items(), result_dict, subtable_name_list2)  ##导出
 
 
 ##导出基础类到基础类路径
-def export_class1(result_dict, data_dict, data_key_dict, subtable_name_list2):
-    Config.del_file(ConfigData["工具导出配置基础类路径"])  ##删除原class文件
+def export_class1(NowProjectConfig, result_dict, data_dict, data_key_dict, subtable_name_list2):
+    Config.del_file(NowProjectConfig["配置类导出路径"])  ##删除原class文件
     for table_name, jsonstr in data_dict.items():  ##导出所有配置类
-        if table_name in ConfigData["不自动生成配置类的配置表"]:
+        if table_name in NowProjectConfig["不自动生成配置类的配置表"]:
             continue
         sheet_data = []
         for xlsx_path in result_dict:
@@ -359,27 +382,27 @@ def export_class1(result_dict, data_dict, data_key_dict, subtable_name_list2):
                 sheet_data = result_dict[xlsx_path][table_name]
                 break
         data = {"file_name": table_name,
-                "file_path": ConfigData["在项目中读取配置文件所用的路径"] + table_name +
-                             ConfigData["导出的数据后缀"],
+                "file_path": NowProjectConfig["项目中读取配置文件的路径"] + table_name +
+                             NowProjectConfig["导出的数据后缀"],
                 "key_list": data_key_dict[table_name]}
-        generator = ClassGenerator.CSharpClassGenerator(data, ConfigData)
+        generator = ClassGenerator.CSharpClassGenerator(data, NowProjectConfig)
         csharp_code = generator.generate_class(sheet_data, subtable_name_list2)
         # 打开文件进行写入，如果文件不存在则创建文件
-        with open(ConfigData["工具导出配置基础类路径"] + "/" + table_name[4:5].upper() + table_name[5:] + ".cs", 'w',
+        with open(NowProjectConfig["配置类导出路径"] + "/" + table_name[4:5].upper() + table_name[5:] + ".cs", 'w',
                   encoding='utf-8') as file:
             file.write(csharp_code)
-        if ConfigData["导出类是否需要复制到开发路径"]:  ##复制到开发路径
-            project_path = ConfigData["工具导出配置基础类复制到项目开发路径"]
+        if NowProjectConfig["导出类是否需要复制到开发路径"]:  ##复制到开发路径
+            project_path = NowProjectConfig["根路径"] + NowProjectConfig["根路径+配置类复制路径"]
             Config.delete_folder(project_path)
-            class_export_path = ConfigData["工具导出配置基础类路径"]
+            class_export_path = NowProjectConfig["配置类导出路径"]
             shutil.copytree(class_export_path, project_path)
 
 
 ##导出基础类2到基础类路径
-def export_class2(result_dict, data_dict, data_key_dict, subtable_name_list2):
-    Config.del_file(ConfigData["工具导出配置基础类2路径"])  ##删除原class文件
+def export_class2(NowProjectConfig, result_dict, data_dict, data_key_dict, subtable_name_list2):
+    Config.del_file(NowProjectConfig["配置类拓展导出路径"])  ##删除原class文件
     for table_name, jsonstr in data_dict.items():  ##导出所有配置类
-        if table_name in ConfigData["不自动生成配置类的配置表"]:
+        if table_name in NowProjectConfig["不自动生成配置类的配置表"]:
             continue
         sheet_data = []
         for xlsx_path in result_dict:
@@ -387,53 +410,51 @@ def export_class2(result_dict, data_dict, data_key_dict, subtable_name_list2):
                 sheet_data = result_dict[xlsx_path][table_name]
                 break
         data = {"file_name": table_name,
-                "file_path": ConfigData["在项目中读取配置文件所用的路径"] + table_name +
-                             ConfigData["导出的数据后缀"],
+                "file_path": NowProjectConfig["项目中读取配置文件的路径"] + table_name +
+                             NowProjectConfig["导出的数据后缀"],
                 "key_list": data_key_dict[table_name]}
-        generator = ClassGenerator.CSharpClassGenerator(data, ConfigData)
+        generator = ClassGenerator.CSharpClassGenerator(data, NowProjectConfig)
         csharp_code = generator.generate_class2(subtable_name_list2)
         # 打开文件进行写入，如果文件不存在则创建文件
-        with open(ConfigData["工具导出配置基础类2路径"] + "/" + table_name[4:5].upper() + table_name[5:] + ".cs", 'w',
+        with open(NowProjectConfig["配置类拓展导出路径"] + "/" + table_name[4:5].upper() + table_name[5:] + ".cs", 'w',
                   encoding='utf-8') as file:
             file.write(csharp_code)
-        if ConfigData["导出类是否需要复制到开发路径"]:  ##复制到开发路径
-            project_path = ConfigData["工具导出配置基础类2复制到项目开发路径"]
-            Config.del_file2(project_path, ConfigData["不自动覆盖的配置表2"])
-            class_export_path = ConfigData["工具导出配置基础类2路径"]
-
-            Config.copy_dir2(class_export_path, project_path, ConfigData["不自动覆盖的配置表2"])
-
+        if NowProjectConfig["导出类是否需要复制到开发路径"]:  ##复制到开发路径
+            project_path = NowProjectConfig["根路径"] + NowProjectConfig["根路径+配置类拓展复制路径"]
+            Config.del_file2(project_path, NowProjectConfig["不自动覆盖的配置类拓展"])
+            class_export_path = NowProjectConfig["配置类拓展导出路径"]
+            Config.copy_dir2(class_export_path, project_path, NowProjectConfig["不自动覆盖的配置类拓展"])
 
 
 ##对该路径下所有xlsx文件的数据处理后，导出配置
-def AllXlsxDataHandle(path, isCompacts):
+def AllXlsxDataHandle(NowProjectConfig, isCompacts):
     global isCompact
     if isCompacts == 1:
         isCompact = False
     else:
         isCompact = True
     Config.close_log()  ##清除日志
-    pathlist = get_files_from_directory(path)  ##路径下所有文件数据
-    data = data_conver(pathlist)
+    pathlist = get_files_from_directory(NowProjectConfig["读取的xlsx文件夹路径"])  ##路径下所有文件数据
+    data = data_conver(NowProjectConfig, pathlist)
     if data is not None:
         (image_path_list, data_dict, data_key_dict, subtable_name_list, subtable_name_list2) = data
         ##导出所有配置数据
-        export_config_file(image_path_list, data_dict, data_key_dict,subtable_name_list2)
+        export_config_file(NowProjectConfig, image_path_list, data_dict, data_key_dict, subtable_name_list2)
 
 
 ##对该路径下所有xlsx文件的数据处理后，导出为Class
-def AllXlsxDataHandleClass(path):
+def AllXlsxDataHandleClass(NowProjectConfig):
     Config.close_log()  ##清除日志
-    pathlist = get_files_from_directory(path)  ##路径下所有文件数据
-    data = data_conver(pathlist)
+    pathlist = get_files_from_directory(NowProjectConfig["读取的xlsx文件夹路径"])  ##路径下所有文件数据
+    data = data_conver(NowProjectConfig, pathlist)
     if data is not None:
         (image_path_list, data_dict, data_key_dict, subtable_name_list, subtable_name_list2) = data
         ##导出所有配置数据
-        export_config_class(data_dict, data_key_dict, subtable_name_list2)
+        export_config_class(NowProjectConfig, data_dict, data_key_dict, subtable_name_list2)
 
 
 # 刷新表中的数据类型
-def RefreshAllData(filepath):
+def RefreshAllData(NowProjectConfig, filepath):
     pathlist = get_files_from_directory(filepath)
     for path in pathlist:
         if ".xlsx" in path and "~$" not in path:

@@ -56,7 +56,8 @@ namespace Project_Core_Test
 
         public override void _PhysicsProcess(double delta)
         {
-            Vector2 now_pos = ToLocal(agent.GetNextPathPosition()).Normalized();
+         
+                Vector2 now_pos = ToLocal(agent.GetNextPathPosition()).Normalized();
             Velocity = Speed * now_pos;
             MoveAndSlide();
         }

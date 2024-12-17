@@ -1,0 +1,50 @@
+{
+    "cfg_files": [
+        {
+            "file_name": "cfg_ScienceRange",
+            "file_path": "./mods/test_mod3/config/data/cfg_ScienceRange.json",
+            "xlsx_dec": "科技范围配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ScienceRangeId": "int",
+                "ScienceRangeName": "string",
+                "ShowMoneyList": "List<int>",
+                "Offset": "Vector2I",
+                "Interval": "Vector2I",
+                "NodeSize": "Vector2I",
+                "ScienceRangeDes": "string"
+            }
+        },
+        {
+            "file_name": "cfg_ScienceBase",
+            "file_path": "./mods/test_mod3/config/data/cfg_ScienceBase.json",
+            "xlsx_dec": "科技基础显示配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ScienceId": "int",
+                "ScienceRangeId": "int",
+                "ScienceName": "string",
+                "ScienceDes": "string",
+                "Pos": "Vector2I",
+                "ConnectList": "List<int>",
+                "SciencePng": "Texture2D"
+            }
+        },
+        {
+            "file_name": "cfg_ScienceData",
+            "file_path": "./mods/test_mod3/config/data/cfg_ScienceData.json",
+            "xlsx_dec": "科技激活相关数据",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ScienceId": "int",
+                "ScienceRangeId": "int",
+                "ScienceType": "int",
+                "IsUnlock": "bool",
+                "UnlockCurrList": "List<List<int>>",
+                "MapBuildIDList": "List<int>",
+                "ScienceParam1": "int",
+                "ScienceParamList": "List<List<int>>"
+            }
+        }
+    ]
+}

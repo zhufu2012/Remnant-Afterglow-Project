@@ -1,327 +1,302 @@
 [
     {
-        "KEY_INDEX": "1_1_1",
-        "ObjectType": 1,
-        "ObjectId": 1,
+        "KEY_INDEX": "1001_1",
+        "ObjectId": 1001,
         "AttributeId": 1,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                0,
-                0,
-                0,
-                0,
-                5
-            ],
-            [
-                2,
-                700,
-                0,
-                0,
-                6
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_1_2",
-        "ObjectType": 1,
-        "ObjectId": 1,
+        "KEY_INDEX": "1001_2",
+        "ObjectId": 1001,
         "AttributeId": 2,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                2,
-                500,
-                0,
-                0,
-                2
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_1_3",
-        "ObjectType": 1,
-        "ObjectId": 1,
+        "KEY_INDEX": "1001_3",
+        "ObjectId": 1001,
         "AttributeId": 3,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                3,
-                900,
-                0,
-                0,
-                3
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_1_4",
-        "ObjectType": 1,
-        "ObjectId": 1,
+        "KEY_INDEX": "1001_4",
+        "ObjectId": 1001,
         "AttributeId": 4,
         "StartValue": 100.0,
         "Max": 100.0,
         "Min": 0.0,
         "Regen": -1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                6,
-                0,
-                0,
-                0,
-                4
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_2_1",
-        "ObjectType": 1,
-        "ObjectId": 2,
+        "KEY_INDEX": "1002_1",
+        "ObjectId": 1002,
         "AttributeId": 1,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": -2.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
         "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_2_2",
-        "ObjectType": 1,
-        "ObjectId": 2,
+        "KEY_INDEX": "1002_2",
+        "ObjectId": 1002,
         "AttributeId": 2,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
         "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_2_3",
-        "ObjectType": 1,
-        "ObjectId": 2,
+        "KEY_INDEX": "1002_3",
+        "ObjectId": 1002,
         "AttributeId": 3,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
         "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_2_4",
-        "ObjectType": 1,
-        "ObjectId": 2,
+        "KEY_INDEX": "1002_4",
+        "ObjectId": 1002,
         "AttributeId": 4,
         "StartValue": 100.0,
         "Max": 100.0,
         "Min": 0.0,
         "Regen": -0.1,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
         "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "2_1_1",
-        "ObjectType": 2,
+        "KEY_INDEX": "1_1",
         "ObjectId": 1,
         "AttributeId": 1,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                0,
-                0,
-                0,
-                0,
-                5
-            ],
-            [
-                2,
-                700,
-                0,
-                0,
-                6
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "2_1_2",
-        "ObjectType": 2,
+        "KEY_INDEX": "1_2",
         "ObjectId": 1,
         "AttributeId": 2,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                2,
-                500,
-                0,
-                0,
-                2
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "2_1_3",
-        "ObjectType": 2,
+        "KEY_INDEX": "1_3",
         "ObjectId": 1,
         "AttributeId": 3,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                3,
-                900,
-                0,
-                0,
-                3
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "2_1_4",
-        "ObjectType": 2,
+        "KEY_INDEX": "1_4",
         "ObjectId": 1,
         "AttributeId": 4,
         "StartValue": 100.0,
         "Max": 100.0,
         "Min": 0.0,
         "Regen": -1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                6,
-                0,
-                0,
-                0,
-                4
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_-1_1",
-        "ObjectType": 1,
+        "KEY_INDEX": "-1_1",
         "ObjectId": -1,
         "AttributeId": 1,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                0,
-                0,
-                0,
-                0,
-                5
-            ],
-            [
-                2,
-                700,
-                0,
-                0,
-                6
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_-1_2",
-        "ObjectType": 1,
+        "KEY_INDEX": "-1_2",
         "ObjectId": -1,
         "AttributeId": 2,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                2,
-                500,
-                0,
-                0,
-                2
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_-1_3",
-        "ObjectType": 1,
+        "KEY_INDEX": "-1_3",
         "ObjectId": -1,
         "AttributeId": 3,
         "StartValue": 0.0,
         "Max": 1000.0,
         "Min": 0.0,
         "Regen": 1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                3,
-                900,
-                0,
-                0,
-                3
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     },
     {
-        "KEY_INDEX": "1_-1_4",
-        "ObjectType": 1,
+        "KEY_INDEX": "-1_4",
         "ObjectId": -1,
         "AttributeId": 4,
         "StartValue": 100.0,
         "Max": 100.0,
         "Min": 0.0,
         "Regen": -1.0,
-        "RegenFps": 1.0,
-        "StartEventIdList": [],
-        "AttrEventIdList": [
-            [
-                6,
-                0,
-                0,
-                0,
-                4
-            ]
-        ]
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "-1_9",
+        "ObjectId": -1,
+        "AttributeId": 9,
+        "StartValue": 100.0,
+        "Max": 100.0,
+        "Min": 0.0,
+        "Regen": -1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "-2_1",
+        "ObjectId": -2,
+        "AttributeId": 1,
+        "StartValue": 0.0,
+        "Max": 1000.0,
+        "Min": 0.0,
+        "Regen": 1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "-2_2",
+        "ObjectId": -2,
+        "AttributeId": 2,
+        "StartValue": 0.0,
+        "Max": 1000.0,
+        "Min": 0.0,
+        "Regen": 1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "-2_3",
+        "ObjectId": -2,
+        "AttributeId": 3,
+        "StartValue": 0.0,
+        "Max": 1000.0,
+        "Min": 0.0,
+        "Regen": 1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "-2_4",
+        "ObjectId": -2,
+        "AttributeId": 4,
+        "StartValue": 100.0,
+        "Max": 100.0,
+        "Min": 0.0,
+        "Regen": -1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "-3_1",
+        "ObjectId": -3,
+        "AttributeId": 1,
+        "StartValue": 0.0,
+        "Max": 1000.0,
+        "Min": 0.0,
+        "Regen": 1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "-3_2",
+        "ObjectId": -3,
+        "AttributeId": 2,
+        "StartValue": 0.0,
+        "Max": 1000.0,
+        "Min": 0.0,
+        "Regen": 1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "-4_1",
+        "ObjectId": -4,
+        "AttributeId": 1,
+        "StartValue": 0.0,
+        "Max": 1000.0,
+        "Min": 0.0,
+        "Regen": 1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "-4_2",
+        "ObjectId": -4,
+        "AttributeId": 2,
+        "StartValue": 0.0,
+        "Max": 1000.0,
+        "Min": 0.0,
+        "Regen": 1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
     }
 ]

@@ -46,10 +46,13 @@ namespace Remnant_Afterglow
         ///刷新方式为1，就是直接全部刷新
         ///刷新方式为2，就是从组序号1开始刷新
         ///每隔WaveTime帧刷新下一组
+        ///
+        ///注意！刷新数据列表1 和刷新数据列表2的组序号可以重复
         /// </summary>
         public List<List<int>> WaveData { get; set; }
         /// <summary>        
         /// 波数随机刷新数据列表
+        ///()
         /// </summary>
         public List<List<int>> WaveRandData { get; set; }
         /// <summary>        

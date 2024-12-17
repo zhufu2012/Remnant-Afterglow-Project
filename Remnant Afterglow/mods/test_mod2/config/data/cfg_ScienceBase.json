@@ -1,0 +1,15 @@
+[
+    {
+        "KEY_INDEX": "100201",
+        "ScienceId": 100201,
+        "ScienceRangeId": 1002,
+        "ScienceName": "对模组1的科技分支2科技的修改",
+        "ScienceDes": "对模组1的科技分支2科技的修改",
+        "Pos": [
+            1,
+            1
+        ],
+        "ConnectList": [],
+        "SciencePng": "./mods/test_mod2/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
+    }
+]

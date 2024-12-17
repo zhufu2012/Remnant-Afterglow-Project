@@ -32,7 +32,7 @@ namespace Remnant_Afterglow
 
             poolItems.Push(poolItem);
             poolItem.IsRecycled = true;
-            poolItem.OnReclaim();
+            //poolItem.OnReclaim();//祝福注释
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace Remnant_Afterglow
                 {
                     var poolItem = poolItems.Pop();
                     poolItem.IsRecycled = false;
-                    poolItem.OnLeavePool();
+                    //poolItem.OnLeavePool();//祝福注释
                     return poolItem;
                 }
             }

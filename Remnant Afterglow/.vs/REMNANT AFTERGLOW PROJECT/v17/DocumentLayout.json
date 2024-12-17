@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\autoloads\\saveloadsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\autoloads\\saveloadsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\baseobject_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\baseobject_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\ui\\view\\archive_view\\saveloadview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\ui\\view\\archive_view\\saveloadview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\system\\bullets\\bulletbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\system\\bullets\\bulletbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\utilities\\file_op\\fileutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\utilities\\file_op\\fileutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\baseobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\baseobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\weapons\\weaponbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\weapons\\weaponbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\towers\\towerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\towers\\towerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\units\\unitbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\units\\unitbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\map\\generatemap\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\map\\generatemap\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,50 +38,102 @@
       "DocumentGroups": [
         {
           "DockedHeight": 203,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FileUtils.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\utilities\\file_op\\FileUtils.cs",
-              "RelativeDocumentMoniker": "src\\core\\utilities\\file_op\\FileUtils.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\utilities\\file_op\\FileUtils.cs",
-              "RelativeToolTip": "src\\core\\utilities\\file_op\\FileUtils.cs",
-              "ViewState": "AQIAAI4AAAAAAAAAAAAYwKAAAAAYAAAA",
+              "DocumentIndex": 0,
+              "Title": "BaseObject_Move.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\BaseObject_Move.cs",
+              "RelativeDocumentMoniker": "src\\core\\characters\\BaseObject_Move.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\BaseObject_Move.cs",
+              "RelativeToolTip": "src\\core\\characters\\BaseObject_Move.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAcwFYAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T22:52:07.711Z",
+              "WhenOpened": "2024-12-15T15:28:20.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SaveLoadView.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\ui\\view\\archive_view\\SaveLoadView.cs",
-              "RelativeDocumentMoniker": "src\\core\\ui\\view\\archive_view\\SaveLoadView.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\ui\\view\\archive_view\\SaveLoadView.cs",
-              "RelativeToolTip": "src\\core\\ui\\view\\archive_view\\SaveLoadView.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAYwHUAAAAeAAAA",
+              "Title": "BulletBase.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\bullets\\BulletBase.cs",
+              "RelativeDocumentMoniker": "src\\core\\system\\bullets\\BulletBase.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\bullets\\BulletBase.cs",
+              "RelativeToolTip": "src\\core\\system\\bullets\\BulletBase.cs",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAowI8AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T22:46:42.562Z",
+              "WhenOpened": "2024-12-15T15:22:51.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SaveLoadSystem.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\autoloads\\SaveLoadSystem.cs",
-              "RelativeDocumentMoniker": "src\\core\\autoloads\\SaveLoadSystem.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\autoloads\\SaveLoadSystem.cs",
-              "RelativeToolTip": "src\\core\\autoloads\\SaveLoadSystem.cs",
-              "ViewState": "AQIAALoAAAAAAAAAAAAuwMoAAACRAAAA",
+              "DocumentIndex": 2,
+              "Title": "BaseObject.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\BaseObject.cs",
+              "RelativeDocumentMoniker": "src\\core\\characters\\BaseObject.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\BaseObject.cs",
+              "RelativeToolTip": "src\\core\\characters\\BaseObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T22:36:11.037Z",
+              "WhenOpened": "2024-12-15T14:51:15.992Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TowerBase.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\towers\\TowerBase.cs",
+              "RelativeDocumentMoniker": "src\\core\\characters\\towers\\TowerBase.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\towers\\TowerBase.cs",
+              "RelativeToolTip": "src\\core\\characters\\towers\\TowerBase.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAA4wGEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:50:07.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UnitBase.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\units\\UnitBase.cs",
+              "RelativeDocumentMoniker": "src\\core\\characters\\units\\UnitBase.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\units\\UnitBase.cs",
+              "RelativeToolTip": "src\\core\\characters\\units\\UnitBase.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAtwFEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:49:58.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeaponBase.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\weapons\\WeaponBase.cs",
+              "RelativeDocumentMoniker": "src\\core\\characters\\weapons\\WeaponBase.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\weapons\\WeaponBase.cs",
+              "RelativeToolTip": "src\\core\\characters\\weapons\\WeaponBase.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAnwFYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:49:46.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cell.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\generatemap\\Cell.cs",
+              "RelativeDocumentMoniker": "src\\core\\map\\generatemap\\Cell.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\generatemap\\Cell.cs",
+              "RelativeToolTip": "src\\core\\map\\generatemap\\Cell.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:49:35.223Z",
+              "EditorCaption": ""
             }
           ]
         },

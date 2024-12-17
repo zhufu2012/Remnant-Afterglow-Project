@@ -16,6 +16,14 @@ namespace GameLog
             }
         }
 
+        public static void PrintArray<T>(T[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                GD.Print(array[i].ToString());
+            }
+        }
+
         //输出数据
         public static void Print(params object[] What)
         {
@@ -49,6 +57,12 @@ namespace GameLog
         public static void Error(params object[] What)
         {
             //GD.PrintErr(What);
+            GD.Print(What);
+        }
+
+        //输出配置错误！如没有配置等-祝福注释-这里可以改成带参数的
+        public static void PrintConfigError(params object[] What)
+        {
             GD.Print(What);
         }
     }

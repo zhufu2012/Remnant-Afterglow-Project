@@ -104,7 +104,7 @@ namespace Remnant_Afterglow
             string str = SaveExtension.SerializeObject(data);
             string path;
             if (directoryPath.EndsWith("/"))
-                path = directoryPath + simpleName ;
+                path = directoryPath + simpleName;
             else
                 path = directoryPath + "/" + simpleName;
             WriteAllText(path, str);
@@ -170,7 +170,7 @@ namespace Remnant_Afterglow
         /// <returns>反序列化的对象</returns>
         public static T ReadSaveData<T>(string directoryPath, string filename)
         {
-            return (T)ReadSaveData<T>(typeof(T), directoryPath  + filename);
+            return (T)ReadSaveData<T>(typeof(T), directoryPath + filename);
         }
 
         /// <summary>
@@ -453,5 +453,45 @@ namespace Remnant_Afterglow
             }
             return filesList;
         }
+
+        /// <summary>
+        /// 提取给定路径中的文件夹名称。
+        /// </summary>
+        /// <param name="path">完整的文件路径。</param>
+        /// <returns>文件夹名称。</returns>
+        public static string ExtractFolderNameFromPath(string path)
+        {
+            // 获取路径的最后一级目录
+            string directoryName = System.IO.Path.GetDirectoryName(path);
+            if (directoryName == null)
+            {
+                throw new ArgumentException("路径无效或无法确定目录名称。", nameof(path));
+            }
+
+            // 获取文件夹名称
+            string folderName = System.IO.Path.GetFileName(directoryName);
+            return folderName;
+        }
+
+        /// <summary>
+        /// 获取路径中/之后的字符串
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static string ExtractModName(string path)
+        {
+            // 从路径中提取最后一个部分
+            int lastSlashIndex = path.LastIndexOf('/');
+            if (lastSlashIndex != -1)
+            {
+                return path.Substring(lastSlashIndex + 1);
+            }
+            else
+            {
+                // 如果路径中没有斜杠，直接返回整个字符串
+                return path;
+            }
+        }
+
     }
 }

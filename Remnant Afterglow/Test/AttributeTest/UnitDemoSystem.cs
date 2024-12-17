@@ -24,8 +24,8 @@ namespace Project_Core_Test
             UnitList = GetNode<Node2D>("UnitList");
             for (int i = 0; i < UnitCount; i++)
             {
-                UnitBase unit = new UnitBase(1, 1);
-                UnitList.AddChild(unit);
+                //UnitBase unit = new UnitBase(1);
+                //UnitList.AddChild(unit);
             }
             FloatManagedAttribute f1 = new FloatManagedAttribute(1, 1000);
             FloatManagedAttribute f2 = new FloatManagedAttribute(2, 1000);

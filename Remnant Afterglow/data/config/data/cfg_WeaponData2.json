@@ -1,0 +1,24 @@
+[
+    {
+        "KEY_INDEX": "4001",
+        "ObjectId": 4001,
+        "Range": 40.0,
+        "LaunchTotal": 10,
+        "EmissionInterval": 1,
+        "FirePointList": [
+            [
+                40.0,
+                40.0
+            ],
+            [
+                41.0,
+                40.0
+            ]
+        ],
+        "EmissionNum": 5,
+        "CoolTime": 120,
+        "StartAngle": 0.0,
+        "RotationSpeed": 90.0,
+        "CurrScatteringRange": 2.0
+    }
+]

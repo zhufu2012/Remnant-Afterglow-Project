@@ -9,14 +9,15 @@ namespace Remnant_Afterglow
     {
         #region 参数及初始化
         /// <summary>        
-        /// 战役id
-        ///cfg_ChapterBase_战役基础数据表id
-        /// </summary>
-        public int ChapterId { get; set; }
-        /// <summary>        
         /// 科技id
         /// </summary>
         public int ScienceId { get; set; }
+        /// <summary>        
+        /// 科技所属范围
+        ///cfg_ScienceType_科技类型配置id
+        ///
+        /// </summary>
+        public int ScienceRangeId { get; set; }
         /// <summary>        
         /// 科技显示文字
         /// </summary>
@@ -25,12 +26,6 @@ namespace Remnant_Afterglow
         /// 科技描述
         /// </summary>
         public string ScienceDes { get; set; }
-        /// <summary>        
-        /// 科技所属范围
-        ///cfg_ScienceType_科技类型配置id
-        ///
-        /// </summary>
-        public int ScienceRangeId { get; set; }
         /// <summary>        
         /// 科技所在位置
         ///(科技树网格中哪一列,哪一行)
@@ -51,11 +46,10 @@ namespace Remnant_Afterglow
         public ScienceBase(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_ScienceBase, id);//public const string Config_ScienceBase = "cfg_ScienceBase"; 
-			ChapterId = (int)dict["ChapterId"];
 			ScienceId = (int)dict["ScienceId"];
+			ScienceRangeId = (int)dict["ScienceRangeId"];
 			ScienceName = (string)dict["ScienceName"];
 			ScienceDes = (string)dict["ScienceDes"];
-			ScienceRangeId = (int)dict["ScienceRangeId"];
 			Pos = (Vector2I)dict["Pos"];
 			ConnectList = (List<int>)dict["ConnectList"];
 			SciencePng = (Texture2D)dict["SciencePng"];
@@ -66,11 +60,10 @@ namespace Remnant_Afterglow
         public ScienceBase(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_ScienceBase, cfg_id);//public const string Config_ScienceBase = "cfg_ScienceBase"; 
-			ChapterId = (int)dict["ChapterId"];
 			ScienceId = (int)dict["ScienceId"];
+			ScienceRangeId = (int)dict["ScienceRangeId"];
 			ScienceName = (string)dict["ScienceName"];
 			ScienceDes = (string)dict["ScienceDes"];
-			ScienceRangeId = (int)dict["ScienceRangeId"];
 			Pos = (Vector2I)dict["Pos"];
 			ConnectList = (List<int>)dict["ConnectList"];
 			SciencePng = (Texture2D)dict["SciencePng"];
@@ -79,11 +72,10 @@ namespace Remnant_Afterglow
 
         public ScienceBase(Dictionary<string, object> dict)
         {
-			ChapterId = (int)dict["ChapterId"];
 			ScienceId = (int)dict["ScienceId"];
+			ScienceRangeId = (int)dict["ScienceRangeId"];
 			ScienceName = (string)dict["ScienceName"];
 			ScienceDes = (string)dict["ScienceDes"];
-			ScienceRangeId = (int)dict["ScienceRangeId"];
 			Pos = (Vector2I)dict["Pos"];
 			ConnectList = (List<int>)dict["ConnectList"];
 			SciencePng = (Texture2D)dict["SciencePng"];

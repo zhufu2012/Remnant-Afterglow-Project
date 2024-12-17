@@ -6,7 +6,7 @@ namespace Remnant_Afterglow
     /// <summary>
     /// 建筑动画
     /// </summary>
-    public partial class BuildBase
+    public partial class BuildBase : BaseObject, IBuild
     {
         /// <summary>
         /// 建筑动画

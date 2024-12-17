@@ -4,7 +4,9 @@
         "ChapterId": 1,
         "CopyId": 1,
         "CopyUiId": 1,
+        "CopyType": 1,
         "CameraId": 1,
+        "MapType": 1,
         "GenerateMapId": 1,
         "Pos": [
             4,

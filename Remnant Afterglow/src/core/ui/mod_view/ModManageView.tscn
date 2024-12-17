@@ -1,0 +1,214 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjwf72oxaqggu"]
+
+[ext_resource type="Script" path="res://src/core/ui/mod_view/ModManageView.cs" id="1_4o07g"]
+
+[node name="ModManageView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4o07g")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReturnView" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 170.0
+offset_bottom = 50.0
+text = "返回上一个界面"
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 640.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="AllModCon" type="VBoxContainer" parent="Panel/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 80.0
+offset_right = 880.0
+offset_bottom = 640.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="LoadModCon" type="VBoxContainer" parent="Panel/Panel2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ModDataPanel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 80.0
+offset_right = 1145.0
+offset_bottom = 640.0
+
+[node name="Label" type="Label" parent="Panel/ModDataPanel"]
+layout_mode = 0
+offset_right = 260.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ModDataPanel"]
+layout_mode = 0
+offset_top = 194.0
+offset_right = 260.0
+offset_bottom = 558.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/ModDataPanel"]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 260.0
+offset_bottom = 194.0
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ModDataPanel/ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 55.0
+offset_right = 351.0
+offset_bottom = 78.0
+text = "所有可加载模组："
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 55.0
+offset_right = 760.0
+offset_bottom = 78.0
+text = "所有可加载模组："
+
+[node name="OptionButton" type="OptionButton" parent="Panel"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 10.0
+offset_right = 720.0
+offset_bottom = 50.0
+
+[node name="LoadModGroup" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 10.0
+offset_right = 900.0
+offset_bottom = 50.0
+text = "加载模组列表"
+
+[node name="SaveModGroup" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 10.0
+offset_right = 1063.0
+offset_bottom = 50.0
+text = "保存当前模组列表"
+
+[node name="Panel2" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ReturnView" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 170.0
+offset_bottom = 50.0
+text = "返回上一个界面"
+
+[node name="LineEdit" type="LineEdit" parent="Panel2"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 10.0
+offset_right = 720.0
+offset_bottom = 50.0
+
+[node name="SaveModGroup" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 16.0
+offset_right = 1046.0
+offset_bottom = 56.0
+text = "保存当前模组列表"
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 10.0
+offset_right = 320.0
+offset_bottom = 50.0
+text = "mod组名称："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 70.0
+offset_right = 320.0
+offset_bottom = 110.0
+text = "mod列表："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel2"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 70.0
+offset_right = 680.0
+offset_bottom = 630.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

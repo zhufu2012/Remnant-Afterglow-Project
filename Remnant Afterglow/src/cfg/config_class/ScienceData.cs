@@ -8,11 +8,6 @@ namespace Remnant_Afterglow
     {
         #region 参数及初始化
         /// <summary>        
-        /// 战役id
-        ///cfg_ChapterBase_战役基础数据表id
-        /// </summary>
-        public int ChapterId { get; set; }
-        /// <summary>        
         /// 科技id
         /// </summary>
         public int ScienceId { get; set; }
@@ -55,7 +50,6 @@ namespace Remnant_Afterglow
         public ScienceData(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_ScienceData, id);//public const string Config_ScienceData = "cfg_ScienceData"; 
-			ChapterId = (int)dict["ChapterId"];
 			ScienceId = (int)dict["ScienceId"];
 			ScienceRangeId = (int)dict["ScienceRangeId"];
 			ScienceType = (int)dict["ScienceType"];
@@ -71,7 +65,6 @@ namespace Remnant_Afterglow
         public ScienceData(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_ScienceData, cfg_id);//public const string Config_ScienceData = "cfg_ScienceData"; 
-			ChapterId = (int)dict["ChapterId"];
 			ScienceId = (int)dict["ScienceId"];
 			ScienceRangeId = (int)dict["ScienceRangeId"];
 			ScienceType = (int)dict["ScienceType"];
@@ -85,7 +78,6 @@ namespace Remnant_Afterglow
 
         public ScienceData(Dictionary<string, object> dict)
         {
-			ChapterId = (int)dict["ChapterId"];
 			ScienceId = (int)dict["ScienceId"];
 			ScienceRangeId = (int)dict["ScienceRangeId"];
 			ScienceType = (int)dict["ScienceType"];

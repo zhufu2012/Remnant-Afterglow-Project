@@ -1,0 +1,23 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "CollideId": 1,
+        "IsCollide": true,
+        "CollisionLayerList": [
+            1
+        ],
+        "MaskLayerList": [],
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 3,
+        "ShapePointList": [
+            [
+                5.0
+            ]
+        ],
+        "CollideRotate": 0.0,
+        "SafeMargin ": 0.0
+    }
+]

@@ -44,13 +44,6 @@ namespace Remnant_Afterglow
         /// </summary>
         public int WallMaterialId { get; set; }
         /// <summary>        
-        /// 墙壁连接贴图
-        ///地图图像集的id
-        ///9宫格法处理墙壁连接
-        ///
-        /// </summary>
-        public int WallImageId { get; set; }
-        /// <summary>        
         /// 是否使用
         ///噪声编辑器的数据
         ///True就是使用
@@ -156,7 +149,6 @@ namespace Remnant_Afterglow
 			WallThickness = (int)dict["WallThickness"];
 			DefaultMaterialId = (int)dict["DefaultMaterialId"];
 			WallMaterialId = (int)dict["WallMaterialId"];
-			WallImageId = (int)dict["WallImageId"];
 			IsUseNoiseEdit = (bool)dict["IsUseNoiseEdit"];
 			SeedTypeId = (int)dict["SeedTypeId"];
 			IsDensityContrary = (bool)dict["IsDensityContrary"];
@@ -187,7 +179,6 @@ namespace Remnant_Afterglow
 			WallThickness = (int)dict["WallThickness"];
 			DefaultMaterialId = (int)dict["DefaultMaterialId"];
 			WallMaterialId = (int)dict["WallMaterialId"];
-			WallImageId = (int)dict["WallImageId"];
 			IsUseNoiseEdit = (bool)dict["IsUseNoiseEdit"];
 			SeedTypeId = (int)dict["SeedTypeId"];
 			IsDensityContrary = (bool)dict["IsDensityContrary"];
@@ -216,7 +207,6 @@ namespace Remnant_Afterglow
 			WallThickness = (int)dict["WallThickness"];
 			DefaultMaterialId = (int)dict["DefaultMaterialId"];
 			WallMaterialId = (int)dict["WallMaterialId"];
-			WallImageId = (int)dict["WallImageId"];
 			IsUseNoiseEdit = (bool)dict["IsUseNoiseEdit"];
 			SeedTypeId = (int)dict["SeedTypeId"];
 			IsDensityContrary = (bool)dict["IsDensityContrary"];

@@ -15,7 +15,10 @@ namespace Remnant_Afterglow
         public int ObjectId { get; set; }
         /// <summary>        
         /// 帧动画类型
-        ///1 默认状态
+        ///1 默认动画
+        ///2 静止时动画
+        ///3 移动动画
+        ///播放时发现没有该动画就播放默认动画
         /// </summary>
         public int AnimaType { get; set; }
         /// <summary>        
@@ -48,6 +51,7 @@ namespace Remnant_Afterglow
         public int FrameCount { get; set; }
         /// <summary>        
         /// 是否自动播放
+        ///一个实体的动画只能有最多一个自动播放
         /// </summary>
         public bool IsAutoplay { get; set; }
         /// <summary>        

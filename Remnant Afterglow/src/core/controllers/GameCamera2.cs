@@ -181,21 +181,21 @@ namespace Remnant_Afterglow
 
             if (cfgData.IsMove && @event is InputEventKey eventKey)
             {
-                if (Input.IsActionPressed("cam_w") || Input.IsActionPressed("cam_d") || Input.IsActionPressed("cam_a") || Input.IsActionPressed("cam_s"))
+                if (Input.IsActionPressed(KeyConstant.Input_Key_W) || Input.IsActionPressed(KeyConstant.Input_Key_D) || Input.IsActionPressed(KeyConstant.Input_Key_A) || Input.IsActionPressed(KeyConstant.Input_Key_S))
                 {
-                    if (Input.IsActionPressed("cam_w"))
+                    if (Input.IsActionPressed(KeyConstant.Input_Key_W))
                     {
                         MoveCamera(0, -1);
                     }
-                    else if (Input.IsActionPressed("cam_s"))
+                    else if (Input.IsActionPressed(KeyConstant.Input_Key_S))
                     {
                         MoveCamera(0, 1);
                     }
-                    else if (Input.IsActionPressed("cam_a"))
+                    else if (Input.IsActionPressed(KeyConstant.Input_Key_A))
                     {
                         MoveCamera(-1, 0);
                     }
-                    else if (Input.IsActionPressed("cam_d"))
+                    else if (Input.IsActionPressed(KeyConstant.Input_Key_D))
                     {
                         MoveCamera(1, 0);
                     }

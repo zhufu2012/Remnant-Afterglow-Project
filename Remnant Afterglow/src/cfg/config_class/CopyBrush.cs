@@ -17,7 +17,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public int CopyId { get; set; }
         /// <summary>        
-        /// 关卡类型
+        /// 关卡刷怪类型
         ///0 通用类型，造塔刷怪，
         ///且无玩家实体
         ///
@@ -26,7 +26,7 @@ namespace Remnant_Afterglow
         /// <summary>        
         /// 总波数
         /// </summary>
-        public int WaveNum { get; set; }
+        public int AllWave { get; set; }
         /// <summary>        
         /// 刷怪默认时间
         ///（秒）
@@ -52,7 +52,7 @@ namespace Remnant_Afterglow
 			ChapterId = (int)dict["ChapterId"];
 			CopyId = (int)dict["CopyId"];
 			CopyType = (int)dict["CopyType"];
-			WaveNum = (int)dict["WaveNum"];
+			AllWave = (int)dict["AllWave"];
 			BrushSpace = (int)dict["BrushSpace"];
 			BrushSpaceList = (List<List<int>>)dict["BrushSpaceList"];
 			BrushIdList = (List<int>)dict["BrushIdList"];
@@ -66,7 +66,7 @@ namespace Remnant_Afterglow
 			ChapterId = (int)dict["ChapterId"];
 			CopyId = (int)dict["CopyId"];
 			CopyType = (int)dict["CopyType"];
-			WaveNum = (int)dict["WaveNum"];
+			AllWave = (int)dict["AllWave"];
 			BrushSpace = (int)dict["BrushSpace"];
 			BrushSpaceList = (List<List<int>>)dict["BrushSpaceList"];
 			BrushIdList = (List<int>)dict["BrushIdList"];
@@ -78,7 +78,7 @@ namespace Remnant_Afterglow
 			ChapterId = (int)dict["ChapterId"];
 			CopyId = (int)dict["CopyId"];
 			CopyType = (int)dict["CopyType"];
-			WaveNum = (int)dict["WaveNum"];
+			AllWave = (int)dict["AllWave"];
 			BrushSpace = (int)dict["BrushSpace"];
 			BrushSpaceList = (List<List<int>>)dict["BrushSpaceList"];
 			BrushIdList = (List<int>)dict["BrushIdList"];

@@ -1,8 +1,8 @@
 [
     {
-        "KEY_INDEX": "1000",
-        "ScienceRangeId": 1000,
-        "ScienceRangeName": "测试模组拓展",
+        "KEY_INDEX": "1001",
+        "ScienceRangeId": 1001,
+        "ScienceRangeName": "模组1分支1",
         "ShowMoneyList": [],
         "Offset": [
             1,
@@ -16,6 +16,25 @@
             100,
             50
         ],
-        "ScienceRangeDes": "哈哈哈哈"
+        "ScienceRangeDes": "模组1分支1"
+    },
+    {
+        "KEY_INDEX": "1002",
+        "ScienceRangeId": 1002,
+        "ScienceRangeName": "模组1分支2",
+        "ShowMoneyList": [],
+        "Offset": [
+            1,
+            1
+        ],
+        "Interval": [
+            10,
+            10
+        ],
+        "NodeSize": [
+            100,
+            40
+        ],
+        "ScienceRangeDes": "模组1分支2"
     }
 ]

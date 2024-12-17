@@ -56,13 +56,7 @@ namespace Remnant_Afterglow
                         label.Visible = cfgDict[id].IsDefineShow;
                         AddChild(label);
                         break;
-                    case 1://噪声编辑器
-                        Control control = (Control)GD.Load<PackedScene>("res://addons/fastnoiselite-configurator/fastnoiselite-configurator.tscn").Instantiate();
-                        controls[id] = control;
-                        controls[id].Visible = cfgDict[id].IsDefineShow;
-                        AddChild(control);
-                        break;
-                    case 2://图片组 ParamPosLIst是后面图片的坐标
+                    case 1://图片组 ParamPosLIst是后面图片的坐标
                         break;
                     case 3://常规按钮 需要处理具体类型
                         SetButton(id, cfgDict[id]);
@@ -102,24 +96,6 @@ namespace Remnant_Afterglow
                 int id = control.Key;
                 switch (cfgDict[id].Type1)
                 {
-                    case 1://噪声编辑器
-                        var data = new ConfigFile();
-                        Error err = data.Load(PathConstant.GetPathUser(PathConstant.NOISE_SETTING_PATH_USER));
-                        if (err != Error.Ok)
-                        {
-                            Log.Print("出现错误,错误码：" + err);
-                            return;
-                        }
-                        noise = new FastNoiseLite();
-                        foreach (String key in data.GetSectionKeys("Setting"))
-                        {
-                            // Fetch the data for each section.
-                            var Value = data.GetValue("Setting", key);
-                            noise.Set(key, Value);
-                        }
-                        Size.X = (float)data.GetValue("Param", "SizeX");
-                        Size.Y = (float)data.GetValue("Param", "SizeY");
-                        break;
                     default:
                         break;
                 }
@@ -148,7 +124,6 @@ namespace Remnant_Afterglow
                     AddChild(deployView);
                     button.ButtonDown += () =>
                     {
-                        Log.Print("默认配置界面");
                         if (deployView.Visible)
                             deployView.Visible = false;
                         else
@@ -161,7 +136,6 @@ namespace Remnant_Afterglow
                     AddChild(scienceTreeView);
                     button.ButtonDown += () =>
                     {
-                        Log.Print("科技树界面");
                         if (scienceTreeView.Visible)
                             scienceTreeView.Visible = false;
                         else
@@ -174,7 +148,6 @@ namespace Remnant_Afterglow
                     AddChild(databaseView);
                     button.ButtonDown += () =>
                     {
-                        Log.Print("数据库界面");
                         if (databaseView.Visible)
                             databaseView.Visible = false;
                         else

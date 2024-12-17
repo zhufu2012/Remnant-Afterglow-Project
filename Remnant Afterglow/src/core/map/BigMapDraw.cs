@@ -1,86 +1,62 @@
-using GameLog;
 using Godot;
 using System;
 using System.Collections.Generic;
 
 namespace Remnant_Afterglow
 {
-    public partial class BigMapDraw : Node2D
+    public partial class BigMapDraw : TileMap
     {
-        private TileMap tilemap;
         public LoadTileSetConfig loadTileSetConfig;
         public BigMapGenerate bigMapGenerate;
-        public Node2D BigCellList;
-        /// <summary>
-        /// 相机
-        /// </summary>
-        private GameCamera gameCamera;
+
 
         public Dictionary<int, Hex[,]> layer_dict = new Dictionary<int, Hex[,]>();
 
-        /// <summary>
-        /// 战役基础配置数据
-        /// </summary>
-        public ChapterBase chapterBase;
-        /// <summary>
-        /// 关卡基础配置列表  <坐标，关卡基础配置>
-        /// </summary>
-        public Dictionary<Vector2I, ChapterCopyBase> copyBaseDict = new Dictionary<Vector2I, ChapterCopyBase>();
-
-        /// <summary>
-        /// 章节id
-        /// </summary>
-        public int ChapterId;
 
         /// <summary>
         /// 是否显示设置下的各按钮
         /// </summary>
         public bool is_show_setview = false;
+
+
         /// <summary>
-        /// 初始化数据
+        /// 章节id
         /// </summary>
-        public void InitData()
+        public int ChapterId;
+        /// <summary>
+        /// 地图大小
+        /// </summary>
+        public Vector2 Size;
+        /// <summary>
+        /// 随机数生成器
+        /// </summary>
+        public FastNoiseLite noise;
+        public BigMapDraw(int ChapterId, Vector2 Size, FastNoiseLite noise)
         {
-            int ChapterId = (int)GlobalData.GetParam("chapter_id");
-            GlobalData.Clear();
-            chapterBase = ConfigCache.GetChapterBase("" + ChapterId);
-            List<Dictionary<string, object>> list = ConfigLoadSystem.QueryCfgAllLine(ConfigConstant.Config_ChapterCopyBase, new Dictionary<string, object> { { "ChapterId", ChapterId } });
-            for (int i = 0; i < list.Count; i++)
-            {
-                ChapterCopyBase chapterCopy = ConfigCache.GetChapterCopyBase("" + ChapterId + "_" + (int)list[i]["CopyId"]);
-                copyBaseDict[chapterCopy.Pos] = chapterCopy;
-            }
-            gameCamera = new GameCamera(chapterBase.CameraId);//游戏相机
-            AddChild(gameCamera);
+            this.ChapterId = ChapterId;
+            this.noise = noise;
+            this.Size = Size;
         }
+
 
         public override void _Ready()
         {
-            InitData();
             InitView();
             InitMap();//初始化地图
         }
 
         public void InitView()
         {
-            tilemap = GetNode<TileMap>("TileMap");
-            BigCellList = GetNode<Node2D>("BigCellList");
             loadTileSetConfig = new LoadTileSetConfig(2);
-            tilemap.TileSet = loadTileSetConfig.GetTileSet();
+            TileSet = loadTileSetConfig.GetTileSet();
             bigMapGenerate = new BigMapGenerate(1);//祝福注释-暂时
 
-        }
-
-        public override void _Process(double delta)
-        {
-            QueueRedraw();
         }
 
         public override void _UnhandledInput(InputEvent @event)
         {
             if (@event.IsActionPressed("mapview_drawmap"))
             {
-                RemoveBigCell();
                 InitMap();
             }
             base._UnhandledInput(@event);
@@ -91,16 +67,15 @@ namespace Remnant_Afterglow
         /// </summary>
         public void InitMap()
         {
-            Log.Print("绘制地图");
-            layer_dict = bigMapGenerate.GenerateMap(gameCamera.canvasLayer.noise, gameCamera.canvasLayer.Size);
+            layer_dict = bigMapGenerate.GenerateMap(noise, Size);
             foreach (var Layer in layer_dict)
             {
                 Hex[,] map = Layer.Value;//每层
-                if (Layer.Key >= tilemap.GetLayersCount())
+                if (Layer.Key >= GetLayersCount())
                 {
-                    for (int i = tilemap.GetLayersCount(); i <= Layer.Key; i++)
+                    for (int i = GetLayersCount(); i <= Layer.Key; i++)
                     {
-                        tilemap.AddLayer(i);
+                        AddLayer(i);
                     }
                 }
                 for (int i = 0; i < map.GetLength(0); i++)
@@ -108,16 +83,17 @@ namespace Remnant_Afterglow
                     for (int j = 0; j < map.GetLength(1); j++)
                     {
                         Vector2I pos = new Vector2I(i, j);
-                        if (copyBaseDict.ContainsKey(pos))//是关卡
+                        if (BigMapCopy.Instance.copyBaseDict.ContainsKey(pos))//是关卡
                         {
-                            ChapterCopyBase chapter = copyBaseDict[pos];
+                            ChapterCopyBase chapter = BigMapCopy.Instance.copyBaseDict[pos];
+
                             BigMapMaterial bigcellMaterial = new BigMapMaterial(chapter.NodeId);
-                            tilemap.SetCell(Layer.Key, pos, bigcellMaterial.ImageSetId, LoadTileSetConfig.GetImageIndex_TO_Vector2(bigcellMaterial.ImageSetId, bigcellMaterial.ImageSetIndex));
+                            SetCell(Layer.Key, pos, bigcellMaterial.ImageSetId, LoadTileSetConfig.GetImageIndex_TO_Vector2(bigcellMaterial.ImageSetId, bigcellMaterial.ImageSetIndex));
                             AddBigCell(map[i, j], pos, true);
                         }
                         else
                         {
-                            tilemap.SetCell(Layer.Key, pos, map[i, j].MapImageId, LoadTileSetConfig.GetImageIndex_TO_Vector2(map[i, j].MapImageId, map[i, j].MapImageIndex));
+                            SetCell(Layer.Key, pos, map[i, j].MapImageId, LoadTileSetConfig.GetImageIndex_TO_Vector2(map[i, j].MapImageId, map[i, j].MapImageIndex));
                             AddBigCell(map[i, j], pos, false);
                         }
                     }
@@ -134,28 +110,26 @@ namespace Remnant_Afterglow
         {
             if (IsCopy)
             {
-                ChapterCopyBase chapter = copyBaseDict[pos];
+                ChapterCopyBase chapter = BigMapCopy.Instance.copyBaseDict[pos];
                 BigCell bigCell = new BigCell(chapter.NodeId, pos, chapter);
-                bigCell.Position = tilemap.MapToLocal(pos);
+                bigCell.Position = MapToLocal(pos);
                 bigCell.SetLable("cell_x:" + pos.X + ",cell_y:" + pos.Y);
-                BigCellList.AddChild(bigCell);
+                BigMapCopy.Instance.BigCellList.AddChild(bigCell);
             }
             else
             {
                 BigCell bigCell = new BigCell(hex.index, pos);
-                bigCell.Position = tilemap.MapToLocal(pos);
+                bigCell.Position = MapToLocal(pos);
                 bigCell.SetLable("cell_x:" + pos.X + ",cell_y:" + pos.Y);
-                BigCellList.AddChild(bigCell);
+                BigMapCopy.Instance.BigCellList.AddChild(bigCell);
             }
         }
         public void RemoveBigCell()
         {
-            for (int i = BigCellList.GetChildCount() - 1; i >= 0; i--)
+            for (int i = BigMapCopy.Instance.BigCellList.GetChildCount() - 1; i >= 0; i--)
             {
-                Node child = BigCellList.GetChild(i);
-                BigCellList.RemoveChild(child);
-                // 由于RemoveChild也会从场景树中移除子节点，所以不需要显式调用QueueFree()
-                // child.QueueFree();
+                Node child = BigMapCopy.Instance.BigCellList.GetChild(i);
+                BigMapCopy.Instance.BigCellList.RemoveChild(child);
             }
         }
     }

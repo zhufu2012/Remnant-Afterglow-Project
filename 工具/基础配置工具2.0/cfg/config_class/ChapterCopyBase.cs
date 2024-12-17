@@ -22,11 +22,26 @@ namespace Remnant_Afterglow
         /// </summary>
         public int CopyUiId { get; set; }
         /// <summary>        
+        /// 关卡类型
+        ///1 常规刷怪关
+        ///2 点击奖励关
+        /// </summary>
+        public int CopyType { get; set; }
+        /// <summary>        
         /// 地图相机id
         /// </summary>
         public int CameraId { get; set; }
         /// <summary>        
+        /// 关卡所用地图类型
+        ///1 固定地图
+        ///2 随机地图
+        /// </summary>
+        public int MapType { get; set; }
+        /// <summary>        
         /// 关卡所用地图id
+        ///地图类型为1，使用地图生成.xlsx表的
+        ///cfg_GenerateFixedMap_固定地图配置
+        ///地图类型为2：
         ///地图生成.xlsx表的
         ///cfg_GenerateBottomMap_
         ///随机生成地图方式表id
@@ -59,7 +74,9 @@ namespace Remnant_Afterglow
 			ChapterId = (int)dict["ChapterId"];
 			CopyId = (int)dict["CopyId"];
 			CopyUiId = (int)dict["CopyUiId"];
+			CopyType = (int)dict["CopyType"];
 			CameraId = (int)dict["CameraId"];
+			MapType = (int)dict["MapType"];
 			GenerateMapId = (int)dict["GenerateMapId"];
 			Pos = (Vector2I)dict["Pos"];
 			NodeId = (int)dict["NodeId"];
@@ -74,7 +91,9 @@ namespace Remnant_Afterglow
 			ChapterId = (int)dict["ChapterId"];
 			CopyId = (int)dict["CopyId"];
 			CopyUiId = (int)dict["CopyUiId"];
+			CopyType = (int)dict["CopyType"];
 			CameraId = (int)dict["CameraId"];
+			MapType = (int)dict["MapType"];
 			GenerateMapId = (int)dict["GenerateMapId"];
 			Pos = (Vector2I)dict["Pos"];
 			NodeId = (int)dict["NodeId"];
@@ -87,7 +106,9 @@ namespace Remnant_Afterglow
 			ChapterId = (int)dict["ChapterId"];
 			CopyId = (int)dict["CopyId"];
 			CopyUiId = (int)dict["CopyUiId"];
+			CopyType = (int)dict["CopyType"];
 			CameraId = (int)dict["CameraId"];
+			MapType = (int)dict["MapType"];
 			GenerateMapId = (int)dict["GenerateMapId"];
 			Pos = (Vector2I)dict["Pos"];
 			NodeId = (int)dict["NodeId"];

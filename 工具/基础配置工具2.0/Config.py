@@ -4,15 +4,9 @@ import os
 
 
 def load_data():
-    with open('config.txt', 'r', encoding='utf-8') as file:
+    with open('config.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
     return data
-
-
-def load_data_key(key):
-    with open('config.txt', 'r', encoding='utf-8') as file:
-        data = json.load(file)
-    return data[key]
 
 
 ##读取日志数据
@@ -120,60 +114,30 @@ def copy_dir2(class_export_path, project_path, ignore_list):
         shutil.copy2(os.path.join(class_export_path, copy_path), project_path)
 
 
-##复制数据到开发路径
-def copy_config_develop(path_name):
-    Config = load_data()
+##复制数据到对应路径
+def copy_config_develop(NowProjectConfig, path_name):
+    path_list = NowProjectConfig["复制用路径列表"][path_name]
+    root_path = path_list[0]
     # 定义源文件夹和目标文件夹的路径
-    src_dir_config = Config["工具导出配置的存放路径"]
-    src_dir_images = Config["工具导出图片的存放路径"]
-    src_file = Config["工具导出配置的索引文件路径"]
+    src_dir_config = NowProjectConfig["导出配置的存放路径"]
+    src_dir_images = NowProjectConfig["导出配置图片的存放路径"]
+    src_file = NowProjectConfig["导出配置的索引文件路径"]
 
-    dst_dir_config = Config["复制配置数据列表"][path_name][1]
-    dst_dir_images = Config["复制配置数据列表"][path_name][2]
-    dst_folder = Config["复制配置数据列表"][path_name][3]
-    del_file(Config["复制配置数据列表"][path_name][0])
+    dst_dir_config = root_path + path_list[2]
+    dst_dir_images = root_path + path_list[3]
+    dst_folder = root_path + path_list[4]
+    del_file(root_path + path_list[1])
 
     # 使用shutil模块中的copytree()方法复制文件夹
     shutil.copytree(src_dir_config, dst_dir_config)
     shutil.copytree(src_dir_images, dst_dir_images)
     shutil.copy2(src_file, dst_folder)
-
-
-##复制数据到测试路径
-def copy_config_test():
-    path_name = "测试路径"
-    Config = load_data()
-    # 定义源文件夹和目标文件夹的路径
-    src_dir_config = Config["工具导出配置的存放路径"]
-    src_dir_images = Config["工具导出图片的存放路径"]
-    src_file = Config["工具导出配置的索引文件路径"]
-
-    dst_dir_config = Config["复制配置数据列表"][path_name][1]
-    dst_dir_images = Config["复制配置数据列表"][path_name][2]
-    dst_folder = Config["复制配置数据列表"][path_name][3]
-    del_file(Config["复制配置数据列表"][path_name][0])
-
-    # 使用shutil模块中的copytree()方法复制文件夹
-    shutil.copytree(src_dir_config, dst_dir_config)
-    shutil.copytree(src_dir_images, dst_dir_images)
-    shutil.copy2(src_file, dst_folder)
-
-##复制数据到测试路径
-def copy_config_con(path_name):
-    Config = load_data()
+    if(len(path_list)>5):# 说明有多出的需要复制的路径
+        otherList = path_list[5:]
+        for other_str in otherList:
+            config_path = NowProjectConfig["导出的配置基础路径"] + other_str
+            other_path = root_path + other_str
+            shutil.copytree(config_path,other_path)
+        
     
-    # 定义源文件夹和目标文件夹的路径
-    src_dir_config = Config["工具导出配置的存放路径"]
-    src_dir_images = Config["工具导出图片的存放路径"]
-    src_file = Config["工具导出配置的索引文件路径"]
 
-
-    dst_dir_config = Config["复制配置数据列表"][path_name][1]
-    dst_dir_images = Config["复制配置数据列表"][path_name][2]
-    dst_folder = Config["复制配置数据列表"][path_name][3]
-    del_file(Config["复制配置数据列表"][path_name][0])
-
-    # 使用shutil模块中的copytree()方法复制文件夹
-    shutil.copytree(src_dir_config, dst_dir_config)
-    shutil.copytree(src_dir_images, dst_dir_images)
-    shutil.copy2(src_file, dst_folder)

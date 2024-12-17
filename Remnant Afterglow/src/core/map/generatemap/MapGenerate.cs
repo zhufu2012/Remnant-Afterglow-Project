@@ -128,8 +128,17 @@ namespace Remnant_Afterglow
         Bitmap mapFlags = new Bitmap();
 
         //常用格子数据
+        /// <summary>
+        /// 墙
+        /// </summary>
         Cell wallCell;
+        /// <summary>
+        /// 默认材料
+        /// </summary>
         Cell defaultCell;
+        /// <summary>
+        /// 通道材料
+        /// </summary>
         Cell passCell;
 
         public MapGenerate(int id)
@@ -460,7 +469,7 @@ namespace Remnant_Afterglow
                 }
                 else
                 {
-                    MapRegion sRoom = new MapRegion(roomRegion, map, Width);
+                    MapRegion sRoom = new MapRegion(roomRegion, map);
                     roomList.Add(sRoom); //添加到幸存房间列表里
                     if (maxSize < roomRegion.Count)
                     {

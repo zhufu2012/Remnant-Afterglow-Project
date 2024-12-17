@@ -25,34 +25,37 @@ namespace Remnant_Afterglow
         /// </summary>        
         public void InitData2()
         {
-            foreach (int Id in AllyList)
+            foreach (int Id in AllyList)//盟友组名列表
             {
-                AllyGroupNameList[BaseObjectType.BaseFloor].Add(MapGroup.GroupName_Floor + Id);
-                AllyGroupNameList[BaseObjectType.BaseUnit].Add(MapGroup.GroupName_Unit + Id);
-                AllyGroupNameList[BaseObjectType.BaseTower].Add(MapGroup.GroupName_Tower + Id);
-                AllyGroupNameList[BaseObjectType.BaseBuild].Add(MapGroup.GroupName_Build + Id);
-                AllyGroupNameList[BaseObjectType.BaseBullet].Add(MapGroup.GroupName_Bullet + Id);
+                AllyGroupNameList[BaseObjectType.BaseFloor].Add(MapCamp.CampName_Floor + Id);
+                AllyGroupNameList[BaseObjectType.BaseUnit].Add(MapCamp.CampName_Unit + Id);
+                AllyGroupNameList[BaseObjectType.BaseTower].Add(MapCamp.CampName_Tower + Id);
+                AllyGroupNameList[BaseObjectType.BaseBuild].Add(MapCamp.CampName_Build + Id);
+                AllyGroupNameList[BaseObjectType.BaseBullet].Add(MapCamp.CampName_Bullet + Id);
+                AllyGroupNameList[BaseObjectType.BaseWorker].Add(MapCamp.CampName_Worker + Id);
             }
-            foreach (int Id in NeutralList)
+            foreach (int Id in NeutralList)//中立
             {
-                NeutralGroupNameList[BaseObjectType.BaseFloor].Add(MapGroup.GroupName_Floor + Id);
-                NeutralGroupNameList[BaseObjectType.BaseUnit].Add(MapGroup.GroupName_Unit + Id);
-                NeutralGroupNameList[BaseObjectType.BaseTower].Add(MapGroup.GroupName_Tower + Id);
-                NeutralGroupNameList[BaseObjectType.BaseBuild].Add(MapGroup.GroupName_Build + Id);
-                NeutralGroupNameList[BaseObjectType.BaseBullet].Add(MapGroup.GroupName_Bullet + Id);
+                NeutralGroupNameList[BaseObjectType.BaseFloor].Add(MapCamp.CampName_Floor + Id);
+                NeutralGroupNameList[BaseObjectType.BaseUnit].Add(MapCamp.CampName_Unit + Id);
+                NeutralGroupNameList[BaseObjectType.BaseTower].Add(MapCamp.CampName_Tower + Id);
+                NeutralGroupNameList[BaseObjectType.BaseBuild].Add(MapCamp.CampName_Build + Id);
+                NeutralGroupNameList[BaseObjectType.BaseBullet].Add(MapCamp.CampName_Bullet + Id);
+                NeutralGroupNameList[BaseObjectType.BaseWorker].Add(MapCamp.CampName_Worker + Id);
             }
-            foreach (int Id in HostileList)
+            foreach (int Id in HostileList)//敌对
             {
-                HostileGroupNameList[BaseObjectType.BaseFloor].Add(MapGroup.GroupName_Floor + Id);
-                HostileGroupNameList[BaseObjectType.BaseUnit].Add(MapGroup.GroupName_Unit + Id);
-                HostileGroupNameList[BaseObjectType.BaseTower].Add(MapGroup.GroupName_Tower + Id);
-                HostileGroupNameList[BaseObjectType.BaseBuild].Add(MapGroup.GroupName_Build + Id);
-                HostileGroupNameList[BaseObjectType.BaseBullet].Add(MapGroup.GroupName_Bullet + Id);
+                HostileGroupNameList[BaseObjectType.BaseFloor].Add(MapCamp.CampName_Floor + Id);
+                HostileGroupNameList[BaseObjectType.BaseUnit].Add(MapCamp.CampName_Unit + Id);
+                HostileGroupNameList[BaseObjectType.BaseTower].Add(MapCamp.CampName_Tower + Id);
+                HostileGroupNameList[BaseObjectType.BaseBuild].Add(MapCamp.CampName_Build + Id);
+                HostileGroupNameList[BaseObjectType.BaseBullet].Add(MapCamp.CampName_Bullet + Id);
+                HostileGroupNameList[BaseObjectType.BaseWorker].Add(MapCamp.CampName_Worker + Id);
             }
         }
 
         /// <summary>
-        /// 获取盟友列表
+        /// 获取对应实体类型的盟友列表
         /// </summary>
         /// <returns></returns>
         public List<string> GetAllyList(BaseObjectType type)
@@ -61,7 +64,7 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 获取中立列表
+        /// 获取对应实体类型的中立列表
         /// </summary>
         /// <returns></returns>
         public List<string> GetNeutralList(BaseObjectType type)
@@ -71,9 +74,9 @@ namespace Remnant_Afterglow
 
 
         /// <summary>
-        /// 获取敌对列表
+        /// 获取敌对组列表
         /// </summary>
-        /// <returns></returns>
+        /// <returns>一个包含对应类型的 所有敌对阵营的组名的列表</returns>
         public List<string> GetHostileList(BaseObjectType type)
         {
             return HostileGroupNameList[type];

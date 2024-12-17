@@ -15,7 +15,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public int BrushId { get; set; }
         /// <summary>        
-        /// 刷新点是否显示
+        /// 刷新点边缘是否显示
         /// </summary>
         public bool BrushShowType { get; set; }
         /// <summary>        
@@ -28,28 +28,18 @@ namespace Remnant_Afterglow
         /// </summary>
         public List<int> WaveIdList { get; set; }
         /// <summary>        
-        /// 刷新点使用选择，
-        ///0，表示全图随机刷新
-        ///1，表示在一个点刷新，读取Polygon第一个坐标
-        ///2，表示多边形刷新
-        ///读取Polygon所有坐标相连
-        ///（至少一个点）
-        ///3，表示圆形刷新
+        /// 刷新点形状:
+        ///1，表示矩形刷新 (Widht,Height)
+        ///2，表示圆形刷新 (Radiu)
         ///
         /// </summary>
-        public int ShapeSelect { get; set; }
+        public int ShapeType { get; set; }
         /// <summary>        
-        /// 刷新点 坐标列表(块坐标)
-        ///该点坐标
-        ///是相对于刷新点的坐标
-        ///多个坐标点首尾相连成为一个多边形
+        /// 刷新点形状参数:
+        /// (都是以一个地图块的长度为单位)
+        ///
         /// </summary>
-        public List<Vector2I> Polygon { get; set; }
-        /// <summary>        
-        /// 刷新半径，以刷新点
-        ///为圆心的半径内
-        /// </summary>
-        public float Radius { get; set; }
+        public List<List<int>> ShapeParame { get; set; }
 
         public BrushPoint(int id)
         {
@@ -58,9 +48,8 @@ namespace Remnant_Afterglow
 			BrushShowType = (bool)dict["BrushShowType"];
 			BrushPos = (Vector2I)dict["BrushPos"];
 			WaveIdList = (List<int>)dict["WaveIdList"];
-			ShapeSelect = (int)dict["ShapeSelect"];
-			Polygon = (List<Vector2I>)dict["Polygon"];
-			Radius = (float)dict["Radius"];
+			ShapeType = (int)dict["ShapeType"];
+			ShapeParame = (List<List<int>>)dict["ShapeParame"];
 			InitData();
         }
 
@@ -72,9 +61,8 @@ namespace Remnant_Afterglow
 			BrushShowType = (bool)dict["BrushShowType"];
 			BrushPos = (Vector2I)dict["BrushPos"];
 			WaveIdList = (List<int>)dict["WaveIdList"];
-			ShapeSelect = (int)dict["ShapeSelect"];
-			Polygon = (List<Vector2I>)dict["Polygon"];
-			Radius = (float)dict["Radius"];
+			ShapeType = (int)dict["ShapeType"];
+			ShapeParame = (List<List<int>>)dict["ShapeParame"];
 			InitData();
         }
 
@@ -84,9 +72,8 @@ namespace Remnant_Afterglow
 			BrushShowType = (bool)dict["BrushShowType"];
 			BrushPos = (Vector2I)dict["BrushPos"];
 			WaveIdList = (List<int>)dict["WaveIdList"];
-			ShapeSelect = (int)dict["ShapeSelect"];
-			Polygon = (List<Vector2I>)dict["Polygon"];
-			Radius = (float)dict["Radius"];
+			ShapeType = (int)dict["ShapeType"];
+			ShapeParame = (List<List<int>>)dict["ShapeParame"];
 			InitData();
         }
         #endregion

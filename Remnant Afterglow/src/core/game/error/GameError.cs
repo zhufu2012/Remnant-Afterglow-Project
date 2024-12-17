@@ -15,7 +15,7 @@ namespace Remnant_Afterglow
         public static void PrintError(int error)
         {
             ErrorBase errorBase = ConfigCache.GetErrorBase(error);
-            Log.Print(errorBase.GetError(GameResources.gameParam.language));
+            Log.Error(errorBase.GetError(GameResources.gameParam.language));
         }
     }
 }

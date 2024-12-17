@@ -7,36 +7,73 @@ using System.Linq;
 namespace Remnant_Afterglow
 {
     /// <summary>
-    /// 敌人，炮塔等对象的基类,实现了武器位搭载接口
+    /// 单位，炮塔，建筑，武器等对象的基类，不包含子弹,需要实现武器位搭载功能
     /// </summary>
-    public partial class BaseObject : Node2D
+    public partial class BaseObject : CharacterBody2D, IPoolItem
     {
+        #region IPoolItem
         /// <summary>
-        /// 属性容器
+        /// 是否已经回收
         /// </summary>
-        public ManagedAttributeContainer attributeContainer = new ManagedAttributeContainer();
+        public bool IsRecycled { get; set; }
+        /// <summary>
+        /// 对象唯一id,IdGenerator生成
+        /// </summary>
+        public string Logotype { get; set; }
+        /// <summary>
+        /// 对象池id = 对象类型+ _ + cfg_id
+        /// </summary>
+        public string PoolId { get; set; }
+        /// <summary>
+        /// 返回物体是否已经被销毁
+        /// </summary>
+        public bool IsDestroyed { get; }
+        /// <summary>
+        /// 当物体被回收时调用，也就是进入对象池
+        /// </summary>
+        public void OnReclaim()
+        { }
+        /// <summary>
+        /// 离开对象池时调用
+        /// </summary>
+        public void OnLeavePool()
+        {
+        }
+        /// <summary>
+        /// 销毁实体
+        /// </summary>
+        public void Destroy()
+        {
+        }
+        #endregion
 
         /// <summary>
-        /// 属性实体配置列表 
+        /// 是否开启实体逻辑
         /// </summary>
-        /// <param name="id"></param>
-        public List<AttributeData> attrList = new List<AttributeData>();
+        public bool IsLogic = true;
 
         /// <summary>
-        /// 周期事件-时间  <事件顺序id,事件下一次触发时间>
+        /// 实体相关配置
         /// </summary>
-        public Dictionary<int, ulong> cycleDict = new Dictionary<int, ulong>();
+        public BaseObjectData baseData;
+        /// <summary>
+        /// 实体武器配置
+        /// </summary>
+        public BaseObjectWeapon baseWeapon;
+        /// <summary>
+        /// 实体id
+        /// </summary>
+        public int ObjectId;
+        /// <summary>
+        /// 所在阵营
+        /// </summary>
+        public int Camp { get; set; }
 
-        public NavigationAgent2D agent = new NavigationAgent2D();
         /// <summary>
         /// 当前帧数
         /// </summary>
         public ulong NowTick = 0;
 
-        /// <summary>
-        /// 实体id
-        /// </summary>
-        public int ObjectId;
 
         /// <summary>
         /// 实体类型
@@ -44,176 +81,79 @@ namespace Remnant_Afterglow
         public BaseObjectType object_type;
 
         /// <summary>
-        /// 组名称
+        /// 阵营子名称
         /// </summary>
-        public string GroupName;
+        public string CampSubName;
+        /// <summary>
+        /// 当前物体显示的精灵图像, 节点名称必须叫 "AnimatedSprite2D", 类型为 AnimatedSprite2D
+        /// </summary>
+        public AnimatedSprite2D AnimatedSprite = new AnimatedSprite2D();
+        /// <summary>
+        /// 当前物体显示的阴影图像, 节点名称必须叫 "ShadowSprite", 类型为 Sprite2D
+        /// </summary>
+        public Sprite2D ShadowSprite = new Sprite2D();
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="ObjectId"></param>
+        public BaseObject(int ObjectId)
+        {
+            MotionMode = MotionModeEnum.Floating;//没有天花板之类的概念=
+            baseData = ConfigCache.GetBaseObjectData(ObjectId);
+            this.ObjectId = ObjectId;
+            Camp = baseData.CampId;
+            InitAttr(ObjectId);//初始化属性
+            InitBuff(ObjectId);//初始化Buff
 
+        }
+
+        public override void _Ready()
+        {
+            InitObjectMove();//初始化移动相关模块
+            InitMove();//初始化移动
+        }
+
+        /// <summary>
+        /// 物理帧
+        /// </summary>
+        /// <param name="delta"></param>
         public override void _PhysicsProcess(double delta)
         {
-            NowTick += 1;
-            Update(NowTick);
-        }
-
-        /// <summary>
-        /// 初始化属性
-        /// </summary>
-        /// <param name="type">实体类型</param>
-        /// <param name="objectId">实体id</param>
-        public void InitAttr(BaseObjectType type, int objectId)
-        {
-            InitAttr(type, objectId, new List<int>());
-        }
-
-        /// <summary>
-        /// 初始化属性
-        /// </summary>
-        /// <param name="type">实体类型</param>
-        /// <param name="objectId">实体id</param>
-        /// <param name="TempLateIdList">属性模板id列表</param>
-        public void InitAttr(BaseObjectType type, int objectId, List<int> TempLateIdList)
-        {
-            object_type = type;
-            ObjectId = objectId;
-            foreach (int TempLateId in TempLateIdList)//模板属性
+            if (IsLogic)
             {
-                AttributeTemplate template = ConfigCache.GetAttributeTemplate(TempLateId);
-                attributeContainer.Merge(template.attributeContainer, template.IsCover);
+                NowTick += 1;
+                Update(delta);//各系统刷新
+                PhysicsProcess(delta);
             }
-            //祝福注释-还有覆盖属性需要加
-
-            foreach (var attr in attributeContainer.Attributes)
-            {
-                AttributeBase attributeBase = ConfigCache.GetAttributeBase(attr.Key);//属性默认配置
-                AttributeData attributeData = ConfigCache.GetAttributeData((int)type + "_" + objectId + "_" + attr.Key);
-                FloatManagedAttribute attribute = attr.Value as FloatManagedAttribute;
-                attribute.AttributeUpdated += (IManagedAttribute attribute) =>
-                {
-
-                    List<List<int>> AttrEventIdList = attributeData.AttrEventIdList;//事件触发列表
-                    for (int i = 0; i < AttrEventIdList.Count; i++)
-                    {
-                        switch (AttrEventIdList[i][0])
-                        {
-                            case 2://等于某值触发
-                                if (attribute.Get<float>(AttributeValueType.Value) == AttrEventIdList[i][1])
-                                    AddEvent(AttrEventIdList[i].Last(), attributeBase.AttributeId);
-                                break;
-                            case 3://大于某值触发 （参数1是触发值）
-                                if (attribute.Get<float>(AttributeValueType.Value) > AttrEventIdList[i][1])
-                                    AddEvent(AttrEventIdList[i].Last(), attributeBase.AttributeId);
-                                break;
-                            case 4://小于某值触发 （参数1是触发值）
-                                if (attribute.Get<float>(AttributeValueType.Value) < AttrEventIdList[i][1])
-                                    AddEvent(AttrEventIdList[i].Last(), attributeBase.AttributeId);
-                                break;
-                            case 5://大于等于某值触发 （参数1是触发值）
-                                if (attribute.Get<float>(AttributeValueType.Value) >= AttrEventIdList[i][1])
-                                    AddEvent(AttrEventIdList[i].Last(), attributeBase.AttributeId);
-                                break;
-                            case 6://小于等于某值触发 （参数1是触发值）
-                                if (attribute.Get<float>(AttributeValueType.Value) <= AttrEventIdList[i][1])
-                                    AddEvent(AttrEventIdList[i].Last(), attributeBase.AttributeId);
-                                break;
-                            case 7://周期性达到触发 （参数1是周期（帧））
-                                break;
-                            case 8://随机触发（参数1是触发值，参数2是最大随机值，随机数在1到参数2之间，小于触发值就触发）
-                                break;
-                            default: break;
-                        }
-                    }
-                };
-
-                attrList.Add(attributeData);
-            }
-            StartRunEvent();//兵种创建后 按顺序触发各属性的开局事件
         }
+
+
         /// <summary>
         /// 实体更新
         /// </summary>
         /// <param name="tick"></param>
-        public void Update(ulong tick)
+        public virtual void Update(double delta)
         {
-            attributeContainer.Update(tick);
+            attributeContainer.Update(NowTick);//属性系统刷新
+
+        }
+
+
+        /// <summary>
+        /// 每物理帧调用一次, 物体的 PhysicsProcess() 会在组件的 PhysicsProcess() 之前调用
+        /// </summary>
+        protected virtual void PhysicsProcess(double delta)
+        {
+            if (baseData.IsMove)//能移动
+                DoMove();
         }
 
         /// <summary>
-        /// 属性创建后就触发的事件 AttrEventTouchType.StartRun
+        /// 如果开启 debug, 则每帧调用该函数, 可用于绘制文字线段等
         /// </summary>
-        private void StartRunEvent()
+        protected virtual void DebugDraw()
         {
-            foreach (AttributeData attributeData in attrList)
-            {
-                List<int> AttrEventIdList = attributeData.StartEventIdList;//添加属性后运行
-                for (int i = 0; i < AttrEventIdList.Count; i++)
-                {
-                    AddEvent(AttrEventIdList[i], attributeData.AttributeId);
-                }
-            }
         }
 
-        public AttributeData FindAttributeData(int AttributeId)
-        {
-            // 使用LINQ查询id为4的AttributeData
-            var result = attrList.FirstOrDefault(ad => ad.AttributeId == 4);
-            if (result != null)
-            {
-                return result;
-            }
-            else
-            {
-                Log.Error($"错误！不存在属性:{AttributeId}");
-                return result;
-            }
-        }
-
-        /// <summary>
-        /// 添加事件
-        /// </summary>
-        /// <param name="event_id"></param>
-        public void AddEvent(int event_id, int attr_id)
-        {
-            AttributeEvent unitAttrEvent = new AttributeEvent(event_id);
-            switch (unitAttrEvent.EventType)
-            {
-                case AttrEventType.LogEvent:
-                    Log.Print($"时间:{NowTick},事件id:{event_id},事件描述{unitAttrEvent.AttrEventDescribe}");
-                    break;
-                case AttrEventType.ModifierEvent:
-                    List<List<float>> ParamList = unitAttrEvent.ParamList;
-                    for (int i = 0; i < ParamList.Count; i++)
-                    {
-                        List<float> RowParam = ParamList[i];
-                        if (FindAttributeData((int)RowParam[0]) != null)//是否存在该属性
-                        {
-                            //FloatManagedAttribute attr = (FloatManagedAttribute)attributeContainer[""];
-                        }
-                    }
-                    /*AttributeData attData = attrDict[(int)RowParam[0])];
-                    FloatManagedAttribute attr = (FloatManagedAttribute)attributeContainer[attData.ShowName];
-                    var modifier = new ManagedAttributeModifier
-                    {
-                        ExpiryTick = NowTick + unitAttrEvent.DelayTime, // 设置过期帧
-                        for(int i = 0;i<unitAttrEvent.ParamList.Count;i++)
-                        {
-                            ModifierValues[]
-                        }
-                        ModifierValues = new Dictionary<AttributeValueType, ManagedAttributeModifierValue>
-                        {
-                            { AttributeValueType.Value, new ManagedAttributeModifierValue { Add = 50, Multiplier = 1.1f } }
-                        }
-                    };
-                    attr.AddModifier(modifier);//添加属性修饰器*/
-                    break;
-                case AttrEventType.Event:
-                    break;
-                case AttrEventType.Sound:
-                    break;
-                case AttrEventType.Animation:
-                    break;
-                case AttrEventType.ScriptAnimation:
-                    break;
-                default: break;
-            }
-        }
     }
 }

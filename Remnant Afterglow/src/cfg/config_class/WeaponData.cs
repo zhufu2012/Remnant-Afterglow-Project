@@ -3,18 +3,13 @@ using Godot;
 namespace Remnant_Afterglow
 {
     /// <summary>
-    /// 自动生成的配置类 WeaponData 用于 武器基础数据,拓展请在expand_class文件下使用partial拓展
+    /// 自动生成的配置类 WeaponData 用于 武器数据1,拓展请在expand_class文件下使用partial拓展
     /// </summary>
     public partial class WeaponData
     {
         #region 参数及初始化
         /// <summary>        
-        /// 武器id
-        /// </summary>
-        public int WeaponId { get; set; }
-        /// <summary>        
         /// 实体id
-        ///用于属性等配置(要求唯一)
         /// </summary>
         public int ObjectId { get; set; }
         /// <summary>        
@@ -27,7 +22,8 @@ namespace Remnant_Afterglow
         public string Describe { get; set; }
         /// <summary>        
         /// 武器类型
-        ///
+        ///1 射弹类型
+        ///2 激光类型
         /// </summary>
         public int Type { get; set; }
         /// <summary>        
@@ -55,7 +51,6 @@ namespace Remnant_Afterglow
         public WeaponData(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_WeaponData, id);//public const string Config_WeaponData = "cfg_WeaponData"; 
-			WeaponId = (int)dict["WeaponId"];
 			ObjectId = (int)dict["ObjectId"];
 			Name = (string)dict["Name"];
 			Describe = (string)dict["Describe"];
@@ -71,7 +66,6 @@ namespace Remnant_Afterglow
         public WeaponData(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_WeaponData, cfg_id);//public const string Config_WeaponData = "cfg_WeaponData"; 
-			WeaponId = (int)dict["WeaponId"];
 			ObjectId = (int)dict["ObjectId"];
 			Name = (string)dict["Name"];
 			Describe = (string)dict["Describe"];
@@ -85,7 +79,6 @@ namespace Remnant_Afterglow
 
         public WeaponData(Dictionary<string, object> dict)
         {
-			WeaponId = (int)dict["WeaponId"];
 			ObjectId = (int)dict["ObjectId"];
 			Name = (string)dict["Name"];
 			Describe = (string)dict["Describe"];
