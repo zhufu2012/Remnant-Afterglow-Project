@@ -66,14 +66,14 @@
         "ConfigValue": "./data/config/images/ID_592F75BF494C463291CC98E844FD0829.png"
     },
     {
-        "KEY_INDEX": "Map_BuildList_1",
-        "Configid": "Map_BuildList_1",
+        "KEY_INDEX": "Map_BuildList_2",
+        "Configid": "Map_BuildList_2",
         "ConfigName": "建造列表支架右",
         "ConfigValue": "./data/config/images/ID_D86BD9E5CFEF411CB0703A9D3BAA4C9E.png"
     },
     {
-        "KEY_INDEX": "Map_BuildList_2",
-        "Configid": "Map_BuildList_2",
+        "KEY_INDEX": "Map_BuildList_1",
+        "Configid": "Map_BuildList_1",
         "ConfigName": "建造列表支架左",
         "ConfigValue": "./data/config/images/ID_7A16C4365B5D4F22B4CF6879B4E8370F.png"
     },
@@ -123,6 +123,6 @@
         "KEY_INDEX": "Map_Resources_1",
         "Configid": "Map_Resources_1",
         "ConfigName": "资源列表-主要显示窗口",
-        "ConfigValue": "./data/config/images/ID_3129688A6F744B2ABC15FA1FCF740C56.png"
+        "ConfigValue": "./data/config/images/ID_A920E77A61504F50A4810863C50E7AF0.png"
     }
 ]

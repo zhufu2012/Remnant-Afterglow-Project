@@ -1,1 +1,37 @@
-[]
+[
+    {
+        "KEY_INDEX": "1",
+        "TagId": 1,
+        "TagName": "燃烧",
+        "ReplaceTagIdList": [],
+        "BanTagIdList": []
+    },
+    {
+        "KEY_INDEX": "2",
+        "TagId": 2,
+        "TagName": "电磁",
+        "ReplaceTagIdList": [],
+        "BanTagIdList": []
+    },
+    {
+        "KEY_INDEX": "3",
+        "TagId": 3,
+        "TagName": "腐化",
+        "ReplaceTagIdList": [],
+        "BanTagIdList": []
+    },
+    {
+        "KEY_INDEX": "4",
+        "TagId": 4,
+        "TagName": "结晶",
+        "ReplaceTagIdList": [],
+        "BanTagIdList": []
+    },
+    {
+        "KEY_INDEX": "5",
+        "TagId": 5,
+        "TagName": "减速",
+        "ReplaceTagIdList": [],
+        "BanTagIdList": []
+    }
+]

@@ -177,6 +177,32 @@ namespace Remnant_Afterglow
         /// </summary>
         public const string Config_SpeciallyEffect = "cfg_SpeciallyEffect";
         #endregion
+        #region 固定地图配置
+        /// <summary>
+        /// 固定地图图集 
+        /// </summary>
+        public const string Config_MapFixedSet = "cfg_MapFixedSet";
+
+        /// <summary>
+        /// 固定地图用材料
+        /// </summary>
+        public const string Config_MapFixedMaterial = "cfg_MapFixedMaterial";
+
+        /// <summary>
+        /// 固定地图配置
+        /// </summary>
+        public const string Config_GenerateFixedMap = "cfg_GenerateFixedMap";
+
+        /// <summary>
+        /// 地图可通过类型
+        /// </summary>
+        public const string Config_MapPassType = "cfg_MapPassType";
+
+        /// <summary>
+        /// 地图边缘连接配置
+        /// </summary>
+        public const string Config_MapEdge = "cfg_MapEdge";
+        #endregion
         #region 图块相关
         /// <summary>
         /// 地图图像集
@@ -206,14 +232,9 @@ namespace Remnant_Afterglow
         #endregion
         #region 地图生成
         /// <summary>
-        /// 生成地图用材料
+        /// 随机生成地图用材料
         /// </summary>
         public const string Config_MapMaterial = "cfg_MapMaterial";
-
-        /// <summary>
-        /// 固定地图配置
-        /// </summary>
-        public const string Config_GenerateFixedMap = "cfg_GenerateFixedMap";
 
         /// <summary>
         /// 随机生成地图方式
@@ -234,16 +255,6 @@ namespace Remnant_Afterglow
         /// 装饰绘制层
         /// </summary>
         public const string Config_GenerateAdornMap = "cfg_GenerateAdornMap";
-
-        /// <summary>
-        /// 地图可通过类型
-        /// </summary>
-        public const string Config_MapPassType = "cfg_MapPassType";
-
-        /// <summary>
-        /// 地图边缘连接配置
-        /// </summary>
-        public const string Config_MapEdge = "cfg_MapEdge";
         #endregion
         #region 大地图生成
         /// <summary>
@@ -485,9 +496,9 @@ namespace Remnant_Afterglow
         public const string Config_MapBuildLable = "cfg_MapBuildLable";
 
         /// <summary>
-        /// 建造子列表
+        /// 建造项数据
         /// </summary>
-        public const string Config_MapBuildList = "cfg_MapBuildList";
+        public const string Config_MapBuildItem = "cfg_MapBuildItem";
 
         /// <summary>
         /// 建造规则

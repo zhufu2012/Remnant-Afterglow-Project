@@ -38,6 +38,7 @@ namespace Remnant_Afterglow
         public float fCost;
         /// <summary>
         /// 流速向量-非真实矢量-真实单位矢量按照单位所处的上下左右四个节点的矢量 按权重计算
+        ///Normalized 归一化过了
         /// </summary>
         public Vector2 direction;
         /// <summary>

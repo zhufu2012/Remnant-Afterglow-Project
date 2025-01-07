@@ -5,8 +5,8 @@
         "MaterialName": "空地",
         "PassTypeId": 1,
         "Probability": 0.0001,
-        "ImageSetId": 1,
-        "ImageSetIndex": 20,
+        "ImageSetId": 6,
+        "ImageSetIndex": 1,
         "CollisionPolygon": [],
         "IsEdge": false,
         "PreviewColor": [
@@ -105,6 +105,35 @@
         "ImageSetId": 1,
         "ImageSetIndex": 13,
         "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "7",
+        "MaterialId": 7,
+        "MaterialName": "深层工厂地板",
+        "PassTypeId": 1,
+        "Probability": 0.0001,
+        "ImageSetId": 7,
+        "ImageSetIndex": 1,
+        "CollisionPolygon": [
+            [
+                0,
+                -10,
+                -10,
+                10,
+                -10,
+                10,
+                10,
+                -10,
+                10
+            ]
+        ],
         "IsEdge": false,
         "PreviewColor": [
             0,

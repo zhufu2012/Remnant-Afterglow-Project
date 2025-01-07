@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://0o11jkpjrxv"]
+
+[ext_resource type="Script" path="res://src/edit/edit_map/EditMapView.cs" id="1_ynj5o"]
+[ext_resource type="PackedScene" uid="uid://idu7fgf7xoq0" path="res://src/edit/common_view/grid_select/GridSelectPanel.tscn" id="2_aee5m"]
+[ext_resource type="PackedScene" uid="uid://b7n1248vrbcli" path="res://src/edit/common_view/layer_select/LayerSelectPane.tscn" id="3_460tr"]
+[ext_resource type="Script" path="res://src/edit/edit_map/EditCamera2D.cs" id="4_4wtmk"]
+
+[sub_resource type="TileSet" id="TileSet_sjdkv"]
+tile_size = Vector2i(20, 20)
+
+[node name="EditMapView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ynj5o")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_sjdkv")
+format = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(3, 3)
+script = ExtResource("4_4wtmk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="ReturnButton" type="Button" parent="Camera2D/CanvasLayer"]
+offset_right = 181.0
+offset_bottom = 74.0
+text = "返回上一个界面"
+
+[node name="GridSelectPanel" parent="Camera2D/CanvasLayer" instance=ExtResource("2_aee5m")]
+
+[node name="LayerSelectPane" parent="Camera2D/CanvasLayer" instance=ExtResource("3_460tr")]

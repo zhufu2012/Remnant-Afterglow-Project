@@ -1,4 +1,5 @@
-﻿using Godot;
+﻿using GameLog;
+using Godot;
 using System.Collections.Generic;
 
 namespace Remnant_Afterglow
@@ -89,10 +90,14 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public bool IsCreat(int cell_x, int cell_y, Cell[,] map, MapMaterial wallmaterial)
         {
+            int MapX = map.GetLength(0);
+            int MapY = map.GetLength(1);
             for (int i = 0; i < Size_X; i++)
             {
                 for (int j = 0; j < Size_Y; j++)
                 {
+                    if (i + cell_x >= MapX || j + cell_y >= MapY)
+                        return false;
                     if (map[i + cell_x, j + cell_y] == wallmaterial.GetCell() && BigCell[i, j] != new Cell())//当前位置是墙壁 并且当前位置材料不是默认参数
                         return false;
                 }

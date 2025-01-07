@@ -8,38 +8,40 @@
         public static string LineGroupName_1 = "1";
 
 
+        /// <summary>
+        /// 墙壁和地板
+        /// </summary>
+        public static string FloorGroup = "floor";
 
         /// <summary>
-        /// 地板组名称前缀,组名称+阵营id
+        /// 单位
         /// </summary>
-        public static string CampName_Floor = "floor_";
-
-        /// <summary>
-        /// 单位组名称前缀,组名称+阵营id
-        /// </summary>
-        public static string CampName_Unit = "unit_";
-
-        /// <summary>
-        /// 防御塔组名称前缀,组名称+阵营id
-        /// </summary>
-        public static string CampName_Tower = "tower_";
+        public static string UnitGroup = "unit";
 
 
         /// <summary>
-        /// 建筑组名称前缀,组名称+阵营id
+        /// 防御塔
         /// </summary>
-        public static string CampName_Build = "build_";
-
-        /// <summary>
-        /// 无人机名称前缀,组名称+阵营id
-        /// </summary>
-        public static string CampName_Worker = "worker_";
+        public static string TowerGroup = "tower";
 
 
         /// <summary>
-        /// 子弹塔组名称前缀,组名称+阵营id
+        /// 建筑
         /// </summary>
-        public static string CampName_Bullet = "bullet_";
+        public static string BuildGroup = "build";
+
+
+        /// <summary>
+        /// 无人机
+        /// </summary>
+        public static string WorkerGroup = "worker";
+
+
+        /// <summary>
+        /// 子弹
+        /// </summary>
+        public static string BulletGroup = "bullet";
+
 
     }
 }

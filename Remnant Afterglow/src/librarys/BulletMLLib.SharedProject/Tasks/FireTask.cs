@@ -272,7 +272,7 @@ public class FireTask : BulletMLTask
     public override ERunStatus Run(Bullet bullet)
     {
         //创建新子弹
-        var newBullet = bullet.MyBulletManager.CreateBullet(bullet.BulletLabel, bullet.targetObject);
+        var newBullet = bullet.MyBulletManager.CreateBullet(bullet.BulletLabel, bullet.targetObject, bullet.createObject);
 
         if (newBullet == null)
         {
@@ -293,7 +293,7 @@ public class FireTask : BulletMLTask
         //initialize the bullet with the bullet node stored in the Fire node
         var myFireNode = Node as FireNode;
         Debug.Assert(null != myFireNode);
-        newBullet.InitNode(myFireNode.BulletDescriptionNode, bullet.targetObject);
+        newBullet.InitNode(myFireNode.BulletDescriptionNode, bullet.targetObject, bullet.createObject);
 
         //set the owner of all the top level tasks for the new bullet to this dude
         foreach (var task in newBullet.Tasks)

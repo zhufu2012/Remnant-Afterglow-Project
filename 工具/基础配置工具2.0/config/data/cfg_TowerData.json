@@ -22,5 +22,53 @@
         "AnimaTypeList": [
             1
         ]
+    },
+    {
+        "KEY_INDEX": "2002",
+        "ObjectId": 2002,
+        "TowerName": "测试炮塔2",
+        "TowerSize": [
+            3,
+            3
+        ],
+        "BuildingRules": [
+            1,
+            3
+        ],
+        "BuildProgress": 600,
+        "WeaponList": [
+            [
+                4001,
+                40,
+                40
+            ]
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "2003",
+        "ObjectId": 2003,
+        "TowerName": "测试炮塔3",
+        "TowerSize": [
+            3,
+            3
+        ],
+        "BuildingRules": [
+            1,
+            3
+        ],
+        "BuildProgress": 600,
+        "WeaponList": [
+            [
+                4001,
+                40,
+                40
+            ]
+        ],
+        "AnimaTypeList": [
+            1
+        ]
     }
 ]

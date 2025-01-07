@@ -98,7 +98,7 @@ namespace Remnant_Afterglow
         public List<BaseObject> RangeList = new List<BaseObject>();
 
         /// <summary>
-        /// 攻击范围-维护一个可攻击对象表
+        /// 攻击范围-需要维护一个可攻击对象表
         /// </summary>
         public Area2D rangeArea;
 

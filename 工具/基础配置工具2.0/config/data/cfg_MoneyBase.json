@@ -4,55 +4,64 @@
         "MoneyId": 1,
         "MoneyType": 2,
         "MoneyName": "废料",
-        "MoneyDescribe": "废料----",
         "NowValue": 0.0,
-        "Max": 1000000.0,
+        "Max": 99999.0,
         "Min": 0.0,
         "Regen": 0.0,
         "RegenFps": 60.0,
         "MoneyImg": "./data/config/images/ID_939AC8FC18334A08863030C950C79B6C.png",
-        "MoneyImgShow": "./data/config/images/ID_31D4D0A79C894E47B87D911C34A74D14.png"
+        "MoneyImgShow": "./data/config/images/ID_9CEEDA2E8A1B4B23B847B51ACADD29A9.png"
     },
     {
         "KEY_INDEX": "2",
         "MoneyId": 2,
         "MoneyType": 2,
         "MoneyName": "万能齿轮",
-        "MoneyDescribe": "万能齿轮----",
         "NowValue": 0.0,
-        "Max": 1000000.0,
+        "Max": 99999.0,
         "Min": 0.0,
         "Regen": 0.0,
         "RegenFps": 60.0,
         "MoneyImg": "./data/config/images/ID_8468A759A4F14251AF11A7BB2CC96E9F.png",
-        "MoneyImgShow": "./data/config/images/ID_3810F6E807B2445394E68D66882E4197.png"
+        "MoneyImgShow": "./data/config/images/ID_A9D3AAFAD75A47A192D3D3E968FAE7B0.png"
     },
     {
         "KEY_INDEX": "3",
         "MoneyId": 3,
         "MoneyType": 2,
         "MoneyName": "怨灵水晶",
-        "MoneyDescribe": "怨灵水晶-----",
         "NowValue": 0.0,
-        "Max": 1000000.0,
+        "Max": 99999.0,
         "Min": 0.0,
         "Regen": 0.0,
         "RegenFps": 60.0,
         "MoneyImg": "./data/config/images/ID_5B7B3AD2D12B4F01A2F925F96FFFB78A.png",
-        "MoneyImgShow": "./data/config/images/ID_9309EF61719C429E951CC3A89AB4002B.png"
+        "MoneyImgShow": "./data/config/images/ID_39C65F2DBD3749ACB9C994AC80BA74A3.png"
     },
     {
         "KEY_INDEX": "4",
         "MoneyId": 4,
         "MoneyType": 2,
         "MoneyName": "次元岛溶剂",
-        "MoneyDescribe": "次元岛溶剂———",
         "NowValue": 0.0,
-        "Max": 1000000.0,
+        "Max": 99999.0,
         "Min": 0.0,
         "Regen": 0.0,
         "RegenFps": 60.0,
         "MoneyImg": "./data/config/images/ID_6CDAFD46F94845659D2079055E20B351.png",
-        "MoneyImgShow": "./data/config/images/ID_7CF6053CD50C41D0BB44AA5E01B7C92E.png"
+        "MoneyImgShow": "./data/config/images/ID_36B1F02104A6410EB450593DD655BB37.png"
+    },
+    {
+        "KEY_INDEX": "101",
+        "MoneyId": 101,
+        "MoneyType": 1,
+        "MoneyName": "核心单元",
+        "NowValue": 0.0,
+        "Max": 99999.0,
+        "Min": 0.0,
+        "Regen": 0.0,
+        "RegenFps": 0.0,
+        "MoneyImg": "./data/config/images/ID_C833BB38982C471F84C7091A3E686EE1.png",
+        "MoneyImgShow": "./data/config/images/ID_C833BB38982C471F84C7091A3E686EE1.png"
     }
 ]

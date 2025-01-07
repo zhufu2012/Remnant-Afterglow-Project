@@ -28,7 +28,11 @@ namespace Remnant_Afterglow
             { "SaveLoadView","res://src/core/ui/view/archive_view/SaveLoadView.tscn" },//存档管理界面
             { "ModManageView","res://src/core/ui/mod_view/ModManageView.tscn" },//mod管理界面
             { "SettingView","res://src/core/ui/set_menu/SettingView.tscn" },//设置界面
-            { "CreateArchiveView","res://src/core/ui/view/archive_view/CreateArchiveView.tscn" }//创建存档界面
+            { "CreateArchiveView","res://src/core/ui/view/archive_view/CreateArchiveView.tscn" },//创建存档界面
+
+
+            { "EditMapCreateView","res://src/edit/EditMapCreateView.tscn" }//地图创建和管理页面
+            { "EditMapView","res://src/edit/edit_map/EditMapView.tscn" }//地图编辑器界面
         };
 
 
@@ -69,7 +73,7 @@ namespace Remnant_Afterglow
         /// <param name="var"></param>
         public static void PutParam(string str, Variant var)
         {
-            dict[str] = var;
+            DataDict[str] = var;
         }
 
         /// <summary>
@@ -79,10 +83,13 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public static Variant? GetParam(string str)
         {
-            if (dict.ContainsKey(str))
-                return dict[str];
+            if (DataDict.ContainsKey(str))
+                return DataDict[str];
             else
+            {
+                Log.Error("场景参数获取时报错，无Key键:" + str);
                 return null;
+            }
         }
         //跨场景数据清理
         public static void DataClear()

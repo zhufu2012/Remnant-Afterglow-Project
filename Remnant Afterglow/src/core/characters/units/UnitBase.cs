@@ -30,12 +30,9 @@ namespace Remnant_Afterglow
         public UnitBase(int ObjectId) : base(ObjectId)
         {
             object_type = BaseObjectType.BaseUnit;
-            CampSubName = MapCamp.CampName_Unit + Camp;//设置组名
             InitData();//初始化配置
             InitChild();//初始化节点数据
         }
-
-
 
         /// <summary>
         /// 根据实体id和阵营数据初始化配置数据
@@ -55,6 +52,12 @@ namespace Remnant_Afterglow
             AnimatedSprite = GetUnitFrame(unitData);
             AddChild(AnimatedSprite);
         }
+
+        public override void InitView()
+        {
+            base.InitView();
+            AddToGroup(MapGroup.UnitGroup);
+        }
         #endregion
 
         #region 单位属性
@@ -63,7 +66,7 @@ namespace Remnant_Afterglow
         // 当前位置
         public  Vector2 nowPosition;
         // 目标位置
-        public Vector2 targetPosition;
+        public Vector2I targetPosition;
         #endregion
 
         #region 单位组数据

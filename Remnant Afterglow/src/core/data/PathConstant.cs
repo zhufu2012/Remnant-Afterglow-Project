@@ -25,11 +25,6 @@ namespace Remnant_Afterglow
         /// </summary>
         public static string CONFIG_PATH_USER = "./data/config/file_name.json";
 
-        /// <summary>
-        /// 游戏配置路径  PathConstant.GetPathUser(PathConstant.SequenceMap_PATH_USER)
-        /// </summary>
-        public static string SequenceMap_PATH_USER = "./data/config/sequence_map/";
-
 
 
         /// <summary>
@@ -86,9 +81,12 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 子弹运行模式的路径 PathConstant.GetPathUser(PathConstant.BULLET_LOGIC_PATH_USER)
         /// </summary>
-        public static string BULLET_LOGIC_PATH_USER = "./data/bullet/";
+        public static string BULLET_LOGIC_PATH_USER = "./data/config/bullet/";
 
-
+        /// <summary>
+        /// 序列图路径  PathConstant.GetPathUser(PathConstant.SequenceMap_PATH_USER)
+        /// </summary>
+        public static string SequenceMap_PATH_USER = "./data/config/sequence_map/";
 
         /// <summary>
         /// 获取对应路径

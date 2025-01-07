@@ -231,7 +231,7 @@ offset_bottom = 598.0
 follow_focus = true
 vertical_scroll_mode = 2
 
-[node name="updatelog" type="Label" parent="Panel/ScrollContainer"]
+[node name="updatelog" type="RichTextLabel" parent="Panel/ScrollContainer"]
 custom_minimum_size = Vector2(390, 9999)
 layout_mode = 2
 text = "更新日志
@@ -485,4 +485,3 @@ text = "更新日志
 新增道具：轨道炮
 "
 autowrap_mode = 1
-clip_text = true

@@ -20,7 +20,6 @@ namespace Remnant_Afterglow
         public TowerBase(int ObjectId) : base(ObjectId)
         {
             object_type = BaseObjectType.BaseTower;
-            CampSubName = MapCamp.CampName_Tower + Camp;
             InitData();//初始化配置
             InitChild();//初始化节点数据
         }
@@ -46,6 +45,12 @@ namespace Remnant_Afterglow
             {
                 AddChild(WeaponList[i]);
             }
+        }
+
+        public override void InitView()
+        {
+            base.InitView();
+            AddToGroup(MapGroup.TowerGroup);
         }
         #endregion
 

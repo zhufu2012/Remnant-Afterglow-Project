@@ -53,12 +53,14 @@ namespace BulletMLLib.SharedProject
         /// 使用顶级节点初始化这颗子弹。
         /// </summary>
         /// <param name="rootNode">顶级节点，用于定义这颗子弹的行为。</param>
-        void InitTopNode(BulletMLNode rootNode, BaseObject baseObject);
+        void InitTopNode(BulletMLNode rootNode, BaseObject targetObject, BaseObject createObject);
 
         /// <summary>
         /// 这颗子弹是从另一颗子弹发射出来的，从发射它的节点初始化。
         /// </summary>
         /// <param name="subNode">定义这颗子弹的子节点。</param>
-        void InitNode(BulletMLNode subNode, BaseObject baseObject);
+        /// <param name="baseObject">定义这颗子弹的子节点。</param>
+        /// <param name="baseObject2">定义这颗子弹的子节点。</param>
+        void InitNode(BulletMLNode subNode, BaseObject targetObject, BaseObject createObject);
     }
 }

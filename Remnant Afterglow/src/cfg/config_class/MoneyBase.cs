@@ -24,10 +24,6 @@ namespace Remnant_Afterglow
         /// </summary>
         public string MoneyName { get; set; }
         /// <summary>        
-        /// 货币描述
-        /// </summary>
-        public string MoneyDescribe { get; set; }
-        /// <summary>        
         /// 基础值
         /// </summary>
         public float NowValue { get; set; }
@@ -62,7 +58,6 @@ namespace Remnant_Afterglow
 			MoneyId = (int)dict["MoneyId"];
 			MoneyType = (int)dict["MoneyType"];
 			MoneyName = (string)dict["MoneyName"];
-			MoneyDescribe = (string)dict["MoneyDescribe"];
 			NowValue = (float)dict["NowValue"];
 			Max = (float)dict["Max"];
 			Min = (float)dict["Min"];
@@ -80,7 +75,6 @@ namespace Remnant_Afterglow
 			MoneyId = (int)dict["MoneyId"];
 			MoneyType = (int)dict["MoneyType"];
 			MoneyName = (string)dict["MoneyName"];
-			MoneyDescribe = (string)dict["MoneyDescribe"];
 			NowValue = (float)dict["NowValue"];
 			Max = (float)dict["Max"];
 			Min = (float)dict["Min"];
@@ -96,7 +90,6 @@ namespace Remnant_Afterglow
 			MoneyId = (int)dict["MoneyId"];
 			MoneyType = (int)dict["MoneyType"];
 			MoneyName = (string)dict["MoneyName"];
-			MoneyDescribe = (string)dict["MoneyDescribe"];
 			NowValue = (float)dict["NowValue"];
 			Max = (float)dict["Max"];
 			Min = (float)dict["Min"];

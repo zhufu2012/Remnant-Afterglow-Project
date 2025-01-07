@@ -1,0 +1,313 @@
+-ifndef(textDefine_MonsterName_EN_hrl).
+-define(textDefine_MonsterName_EN_hrl, 1).
+-define(MONSN1, "MonsN1").
+-define(MONSN301, "Bulna").
+-define(MONSN308, "Herakliss").
+-define(MONST309, "Origin Witch").
+-define(MONSN309, "Pandora").
+-define(MD3N01, "Spartan Dragoon").
+-define(MD3N02, "Spartan Warrior").
+-define(MD3N03, "Bull of Minos").
+-define(MD3N04, "Spartan Rider").
+-define(MD3N05, "Battle Priest").
+-define(MD3N06, "Spartan Berserk").
+-define(MD3N07, "Spartan Gladiator").
+-define(MD3N08, "Harpy Priest").
+-define(MD3N09, "Harpy Mage").
+-define(MD3N10, "Amazon Jaguar").
+-define(MD3N11, "Amazon Warrior").
+-define(MD3N12, "Amazon Soldier").
+-define(MD3N13, "Amazon Hunter").
+-define(MD3N14, "Abyssal Hound").
+-define(MD3N15, "Abyssal Balor").
+-define(MD3N16, "Abyssal Beholder").
+-define(MD3N17, "Demon Warrior").
+-define(MD3N18, "Demon Grunt").
+-define(MD3N19, "Demon Overseer").
+-define(MD3N20, "Demon Mage").
+-define(MD3N21, "Exploding Imp").
+-define(MD3N22, "Fallen Demon").
+-define(MD3N23, "Vandal Demon").
+-define(MD3N24, "Abyssal Witch").
+-define(MD3N25, "Blade Horror").
+-define(MD3N26, "Demon Executer").
+-define(MD3N27, "Demon Berserk").
+-define(MD3N28, "Demon Guard").
+-define(MD3N29, "Rage Demon").
+-define(MD3N30, "Devourer").
+-define(MD3N31, "Dark Mage").
+-define(MD3N32, "Demon Priest").
+-define(MD3N33, "Naga Warrior").
+-define(MD3N34, "Naga Berserk").
+-define(MD3N35, "Naga Mage").
+-define(MD3N36, "Fairy Dragon").
+-define(MD3N37, "Onyx Leopard").
+-define(MD3N38, "Demon Wolf").
+-define(MD3N39, "Viking War Bear").
+-define(MD3N40, "Dwarven Axeman").
+-define(MD3N41, "Dwarven Warrior").
+-define(MD3N42, "Dwarven Berserk").
+-define(MD3N43, "Dwarven Rider").
+-define(MD3N44, "Fay Assassin").
+-define(MD3N45, "Fay Warrior").
+-define(MD3N46, "Fay Priest").
+-define(MD3N47, "Fay Archer").
+-define(MD3N48, "Fay Mage").
+-define(MD3N49, "Maneater").
+-define(MD3N50, "Werewolf").
+-define(MD3N51, "Viking Swordsman").
+-define(MD3N52, "Viking Axeman").
+-define(MD3N53, "Viking Bear Rider").
+-define(MD3N54, "Viking Shaman").
+-define(MD3N55, "Eldritch Skeleton").
+-define(MD3N56, "Crawling Body").
+-define(MD3N57, "Gargoyle").
+-define(MD3N58, "Crawler").
+-define(MD3N59, "Spiderling").
+-define(MD3N60, "Skeletal Warrior").
+-define(MD3N61, "Skeletal Soldier").
+-define(MD3N62, "Skeletal Mage").
+-define(MD3N63, "Skeletal Archer").
+-define(MD3N64, "Skeletal Executer").
+-define(MD3N65, "Walking Dead").
+-define(MD3N66, "Zombie").
+-define(MD3N67, "Necrophage").
+-define(MD3N68, "Ghast of Hate").
+-define(MD3N69, "Abomination").
+-define(MD3N70, "Lich").
+-define(MD3N71, "Hell Ghast").
+-define(MD3N72, "Hell Hound").
+-define(MD3N73, "Hel Priest").
+-define(MD3N74, "Banshee").
+-define(MD3N75, "Gnawing Rat").
+-define(MD3N76, "Blood Hornet").
+-define(MD3N77, "Blood Bat").
+-define(MD3N78, "Bat Lair").
+-define(MD3N79, "Chest Mimic").
+-define(MD3N80, "Viking Frost Wolf").
+-define(MD3N81, "不翻译").
+-define(MD3N82, "Shadow Element").
+-define(MD3N83, "Shadow Guard").
+-define(MD3N84, "Fire Element").
+-define(MD3N85, "Blaze Guard").
+-define(MD3N86, "Terra Guard").
+-define(MD3N87, "Demon Eel").
+-define(MD3N88, "Demon Fish").
+-define(MD3N89, "Angler Fish").
+-define(MD3N90, "Blood Shark").
+-define(MD3N91, "Merfolk Warrior").
+-define(MD3N92, "Merfolk Berserk").
+-define(MD3N93, "Merfolk Guard").
+-define(MD3N94, "Merfolk Mage").
+-define(MD3N95, "Water Element").
+-define(MD3N96, "Water Guard").
+-define(MD3T97, "Dragon of Ruin").
+-define(MD3N97, "Nidhogg").
+-define(MD3T98, "War God").
+-define(MD3N98, "Ares").
+-define(MD3N99, "Hippolyte").
+-define(MD3N100, "Leonidas").
+-define(MD3N101, "Chimera").
+-define(MD3T102, "Morph Wyrm").
+-define(MD3N102, "Ladon").
+-define(MD3N103, "Harpy Chieftain").
+-define(MD3N104, "Four Armed Giant").
+-define(MD3T105, "Lord of Ruin").
+-define(MD3N105, "Baal").
+-define(MD3N106, "Fury Demon").
+-define(MD3N107, "Frenzy Demon").
+-define(MD3N108, "Hell Warden").
+-define(MD3N109, "Hell Legatus").
+-define(MD3N110, "Oneiric Witch").
+-define(MD3N111, "Death Guide").
+-define(MD3N112, "Skeletal Captain").
+-define(MD3N113, "Scholar of Death").
+-define(MD3N114, "Nightmare Rider").
+-define(MD3N115, "Ghoul King").
+-define(MD3N116, "Soul Eater").
+-define(MD3N117, "Dragon Lich").
+-define(MD3N118, "Demon Frog").
+-define(MD3N119, "Griffin King").
+-define(MD3T120, "Lake Hag").
+-define(MD3N120, "Vivian").
+-define(MD3T121, "Fenrir").
+-define(MD3N121, "Fenrir").
+-define(MD3T122, "World Serpent").
+-define(MD3N122, "Jormungand").
+-define(MD3N123, "Eye of Odin").
+-define(MD3T124, "Sun Eater").
+-define(MD3N124, "Skoll").
+-define(MD3T125, "Ravenous Wolf").
+-define(MD3N125, "Hati").
+-define(MD3N126, "Darkfay Queen").
+-define(MD3N127, "Darkfay Assassin").
+-define(MD3T128, "Stone Giant").
+-define(MD3N128, "Hrungnir").
+-define(MD3N129, "Maneater Chief").
+-define(MD3N130, "Loup Garou").
+-define(MD3N131, "Hell Cerberus").
+-define(MD3T132, "Judge of Death").
+-define(MD3N132, "Rhadamanthys").
+-define(MD3N133, "Argos").
+-define(MD3N134, "Sword Spider").
+-define(MD3N135, "Blazing Roar").
+-define(MD3N136, "Three-headed Wyrm").
+-define(MD3T137, "Lord of Desires").
+-define(MD3N137, "Asmodeus").
+-define(MD3T138, "Dark Lord").
+-define(MD3N138, "Belial").
+-define(MD3N139, "Glutton").
+-define(MD3N140, "Terror Demon").
+-define(MD3N141, "Blood Drinker").
+-define(MD3N142, "Succubus").
+-define(MD3N143, "Spider Demon").
+-define(MD3N144, "Sphinx").
+-define(MD3N145, "Scarab").
+-define(MD3N146, "Basilisk").
+-define(MD3N147, "Loki").
+-define(MD3N148, "Dwarven King").
+-define(MD3N149, "Fire Lord").
+-define(MD3T150, "Morph Wyrm").
+-define(MD3N150, "Fafnir").
+-define(MD3T151, "Prophet Witch").
+-define(MD3N151, "Cassandra").
+-define(MD3T153, "Centaur").
+-define(MD3N153, "Charon").
+-define(MD3N154, "Iris").
+-define(MD3T154, "Waste Witch").
+-define(MD3N155, "Shadow Witch").
+-define(MD3N157, "不翻译").
+-define(MD3N158, "Poseidon").
+-define(MD3N159, "Siren").
+-define(MD3N160, "Leviathan").
+-define(MD3N161, "Scylla").
+-define(MD3N162, "Medusa").
+-define(MD3N163, "Deep Giant").
+-define(MD3N164, "Pincer Marshal").
+-define(MD3N165, "Deep Lord").
+-define(MD3N166, "Deep Captain").
+-define(MD3N167, "Deep Guard").
+-define(MD3N168, "Lava Scorpion").
+-define(MD3N169, "Venom Drake").
+-define(MD3N171, "Surtr").
+-define(MD3N172, "Laufey").
+-define(MD3N173, "Lord of Frost").
+-define(MD3N174, "Typhon").
+-define(MD3T175, "Hades").
+-define(MD3N175, "Hades").
+-define(MD3T177, "Valkyrie").
+-define(MD3N177, "Brunhild").
+-define(MD3N178, "Thor").
+-define(MD3T179, "Dragon Slayer").
+-define(MD3N179, "Siegfried").
+-define(MD3T180, "Desert Flower").
+-define(MD3N180, "Queen Sheba").
+-define(MD3T181, "King of Heroes").
+-define(MD3N181, "Gilgamesh").
+-define(MD3T182, "Battle Deva").
+-define(MD3N182, "Ishtar").
+-define(MD3T183, "Eldritch Master").
+-define(MD3N183, "Merlin").
+-define(MD3N184, "Morrigan").
+-define(MD3T186, "Mystery Sprite").
+-define(MD3N186, "Magic Lamp").
+-define(MD3N187, "Minotaur").
+-define(MD3N188, "Horus").
+-define(MD3T189, "Queen of Egypt").
+-define(MD3N189, "Cleopatra").
+-define(MD3N190, "Dracula").
+-define(MD3T184, "Goodness of Revenge").
+-define(MD3T188, "Pharaoh Guardian").
+-define(MONSN184, "War God").
+-define(MONSN180, "Nit the Diviner").
+-define(MONSN181, "Kaia the Windseeker").
+-define(MONSN182, "Ironblood Sheffield").
+-define(MONSN183, "Dadalit").
+-define(MONSN235, "Lethal Malefic").
+-define(MONSN234, "Browning the Seeker").
+-define(MONSN233, "Bruce the Windraider").
+-define(MONSN232, "Gladiator V").
+-define(MONSN230, "Cally the Blademaster").
+-define(MONSN229, "Carol the Fighter").
+-define(MONSN226, "Chaplin the Loner").
+-define(MONSN237, "Athenian Legion").
+-define(MONSN306, "Eula the Demon Hunter").
+-define(MONSN236, "Unrivaled").
+-define(MT_NTJ, "Repair Crossbow").
+-define(MD3N191, "Monaca").
+-define(MONSN238, "Thor's Hammer").
+-define(MD3N192, "City Gate").
+-define(MD3N193, "Athena Statue").
+-define(MD3N194, "Morrigan Statue").
+-define(MD3N195, "Ishtar Statue").
+-define(MD3N196, "Freya").
+-define(MD3N197, "Anubis").
+-define(MD3N198, "Nefertiti").
+-define(MD3N199, "Mimir's Head").
+-define(MD3N200, "Gate (Bott)").
+-define(MD3N201, "Gate (Mid)").
+-define(MD3N202, "Gate (Top)").
+-define(MD3N203, "Dwarven Workshop").
+-define(MD3N204, "Alchemy Lab").
+-define(MD3N205, "Mage Tower").
+-define(MD3N206, "Chimera").
+-define(MD3N207, "Frost Bear").
+-define(MD3N208, "Ifrit").
+-define(MD3N209, "Gem Beetle").
+-define(MD3N210, "Hela").
+-define(MD3N211, "Artemis").
+-define(MD3N212, "Cronus").
+-define(MD3N213, "Joan of Arc").
+-define(MD3N214, "Athena").
+-define(MD3N215, "Double Athena").
+-define(MD3N216, "Gold Wolf King").
+-define(MD3N217, "Gold Siren").
+-define(MD3N218, "Gold Dwarf").
+-define(MD3N219, "Gold Succubus").
+-define(MD3N220, "Gold Warrior").
+-define(MD3N221, "Gold Enchantress").
+-define(MD3N222, "Gold Hexer").
+-define(MD3N223, "Gold Fighter").
+-define(MD3N224, "Gold Shaman").
+-define(MD3N225, "Gold Power").
+-define(MD3N226, "Gold Lich").
+-define(MD3N227, "Gold Soul Demon").
+-define(MD3N228, "Gold General").
+-define(MD3N229, "Gold Giant").
+-define(MD3N230, "Gold Commander").
+-define(MD3N231, "Gold Magistrate").
+-define(MD3N232, "Gold Minotaur").
+-define(MD3N233, "Gold Centaur").
+-define(MD3N234, "Gold Maiden").
+-define(MD3N235, "Gold Knight").
+-define(MD3N236, "Gold Boulder").
+-define(MD3N237, "Gold Overlord").
+-define(MD3N238, "Gold Monarch").
+-define(MD3N239, "Gold Queen").
+-define(MD3N240, "Gold Lord of Gluttony").
+-define(MD3N241, "Gold Lord of Fury").
+-define(MD3N242, "Gold Lord of Desires").
+-define(MD3N243, "Gold Lord of Terror").
+-define(MD3N244, "Gold Lord of Flame").
+-define(MD3N245, "Gold Lord of Ruin").
+-define(MD3N246, "Traveler Joey").
+-define(ARENAROBOTNAME1, "Thor the Pious").
+-define(ARENAROBOTNAME2, "Philip the Godslayer").
+-define(ARENAROBOTNAME3, "Ward the Wanderer").
+-define(ARENAROBOTNAME4, "Bud the Mercenary").
+-define(ARENAROBOTNAME5, "Candace the Swordsman").
+-define(MD3T171, "Eldjotnar King").
+-define(MD3N247, "Mammon").
+-define(MD3N248, "Samael").
+-define(MD3N249, "Ashmonde").
+-define(MD3N250, "").
+-define(MD3N251, "Hattori Hanzo").
+-define(MD3N252, "Scathach").
+-define(MD3N253, "Saladin").
+-define(MD3N254, "").
+-define(MD3N255, "").
+-define(MD3N256, "Archangel").
+-define(MD3N257, "Elizabeth").
+-define(MD3N258, "").
+-endif.
+

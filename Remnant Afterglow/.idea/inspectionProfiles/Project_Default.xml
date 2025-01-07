@@ -1,0 +1,36 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Erlang17Syntax" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="Erlang18Syntax" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangAmbiguousCallOfAutoImportedFunction" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangConflictingBehaviours" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangDefiningImportedFunction" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangDuplicateBehaviour" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangDuplicateFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangDuplicateFunctionExport" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangFunctionAlreadyImported" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangHeadMismatch" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangIllegalGuard" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangIllegalPattern" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangImportDirectiveOverridesAutoImportedBif" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangIncludeDirectories" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangIncorrectAritySpecification" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangIncorrectModuleName" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangIoFormat" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangSpecificationForUndefinedFunction" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnboundVariable" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangUndefinedBehaviour" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangUndefinedCallbackFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnresolvedExportFunction" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnresolvedFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnresolvedInclude" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnresolvedIncludeLib" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnresolvedMacros" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnresolvedRecord" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnresolvedRecordField" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnusedFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnusedType" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErlangUnusedVariable" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>

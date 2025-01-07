@@ -14,20 +14,22 @@ namespace Remnant_Afterglow
         /// 当时要建造的实体
         /// </summary>
         public BaseObject nowObject;
-        //地图所在位置
+        /// <summary>
+        /// 地图所在位置
+        /// </summary>
         public Vector2I mapPos;
         /// <summary>
         /// 当前建造速度
         /// </summary>
-        public int BuildSpeed = 1;
+        public float BuildSpeed = 1;
         /// <summary>
         /// 当前建造进度-与属性-建造时间相关
         /// </summary>
-        public int NowProgress = 0;
+        public float NowProgress = 0;
         /// <summary>
         /// 最大建造进度=开始的建造时间相关
         /// </summary>
-        public int MaxProgress = 0;
+        public float MaxProgress = 0;
         /// <summary>
         /// 建造的图像
         /// </summary>
@@ -39,26 +41,31 @@ namespace Remnant_Afterglow
         /// 构造函数，实体建造
         /// </summary>
         /// <param name="nowObject"></param>
-        public ObjectBuild(BaseObject nowObject,Vector2I mapPos)
+        public ObjectBuild(BaseObject nowObject, Vector2I mapPos)
         {
             objectType = nowObject.object_type;
             this.NowProgress = 0;
             this.nowObject = nowObject;
             MaxProgress = nowObject.GetAttrNow(Attr.Attr_101);//最大建造时间
             objectTextureRect.Texture = nowObject.AnimatedSprite.SpriteFrames.GetFrameTexture("1", 1);//获取默认动画第一帧-不一定对，看第一帧是不是有问题
-            objectTextureRect.Modulate = new Color(1, 1, 1, 0.5f);
+            objectTextureRect.Modulate = new Color(1, 1, 1, 0.5f);//祝福注释-待修改
         }
-        //初始化显示
+
+        /// <summary>
+        /// 初始化显示
+        /// </summary>
         public void InitView()
         {
-            AddChild(objectSprite);
+            AddChild(objectTextureRect);
         }
 
 
-        //建造更新-每帧更新一次
+        /// <summary>
+        /// 建造更新-每帧更新一次
+        /// </summary>
         public void BuildUpdate()
         {
-            if(NowProgress>=MaxProgress)
+            if (NowProgress >= MaxProgress)
             {
                 //这里是建造完成
             }
@@ -70,8 +77,11 @@ namespace Remnant_Afterglow
             }
         }
 
-        //更新进度条，和界面显示透明度
-        public void UpdateShow(int NowProgress)
+        /// <summary>
+        /// 更新进度条，和界面显示透明度
+        /// </summary>
+        /// <param name="NowProgress"></param>
+        public void UpdateShow(float NowProgress)
         {
             objectTextureRect.Modulate = new Color(1, 1, 1, 0.5f + NowProgress / MaxProgress);
         }

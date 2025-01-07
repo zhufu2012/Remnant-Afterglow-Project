@@ -19,7 +19,7 @@
         "MapImageSetName": "资源图像集",
         "ImageSetDescribe": "第二层的图像集",
         "ImageSetType": 1,
-        "ImageSetMaxId": 24,
+        "ImageSetMaxId": 32,
         "ImageSetLayer": 2,
         "MapImageSize": [
             4,
@@ -68,5 +68,33 @@
             5
         ],
         "MapImageSet": "./data/config/images/ID_788E732D8C794339B84E4666740DF142.png"
+    },
+    {
+        "KEY_INDEX": "6",
+        "MapImageSetId": 6,
+        "MapImageSetName": "工厂地板",
+        "ImageSetDescribe": "工厂第一层的图像集",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 1,
+        "ImageSetLayer": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_764A8BE326274A46B0D383B40B10E88E.png"
+    },
+    {
+        "KEY_INDEX": "7",
+        "MapImageSetId": 7,
+        "MapImageSetName": "深层工厂地板",
+        "ImageSetDescribe": "工厂第二层的图像集",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 1,
+        "ImageSetLayer": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_E53FDC4CF002421FBAD532A993EF844A.png"
     }
 ]

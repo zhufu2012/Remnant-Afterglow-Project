@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cimgpq4sv75aa"]
+
+[ext_resource type="Script" path="res://src/edit/EditMapCreateView.cs" id="1_msc83"]
+
+[node name="EditMapCreateView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_msc83")
+
+[node name="ReturnButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 181.0
+offset_bottom = 74.0
+text = "返回上一个界面"

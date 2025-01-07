@@ -26,6 +26,33 @@ namespace Remnant_Afterglow
     /// </summary>
     public partial class BaseObject : CharacterBody2D, IPoolItem
     {
+        [Signal]//实体死亡事件
+        public delegate void MobKilledEventHandler(BaseObject killObject,BaseObject casterObject);
+
+        [Signal]//实体受损事件
+        public delegate void HarmedEventHandler(BaseObject killObject,BaseObject casterObject);
+
+        //实体死亡-Buff给与者，或者子弹创建者导致的死亡
+        public void ObjectKilled(BaseObject casterObject)
+        {
+            EmitSignal(SignalName.MobKilled,this,casterObject);//实体死亡信号
+        }
+
+        //实体受伤特殊属性被改变-Buff给与者，或者子弹创建者导致的伤害，属性id，伤害大小
+        public void ObjectHarmed(BaseObject casterObject)
+        {
+            EmitSignal(SignalName.Harmed,this,casterObject);//实体死亡信号
+        }
+
+        //有其他区域进入单位身体区域
+        public void Area2DEntered(Area2D area)
+        {
+            if(area.IsInGroup(MapGroup.BulletGroup))//检查-是子弹
+            {
+                //检查阵营
+            }
+        }
+
         /// <summary>
         /// 运行事件
         /// </summary>

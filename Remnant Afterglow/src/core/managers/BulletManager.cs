@@ -133,9 +133,9 @@ namespace Remnant_Afterglow
         /// <param name="Direction">子弹发射方向，弧度</param>
         /// <param name="targetObject">攻击对象</param>
         /// <returns>新创建的顶级子弹。</returns>
-        public BulletBase CreateTopBullet(string BulletLabel, Vector2 Pos, float Direction, BaseObject targetObject)
+        public BulletBase CreateTopBullet(string BulletLabel, Vector2 Pos, float Direction, BaseObject targetObject, BaseObject createObject)
         {
-            BulletBase topLevelBullet = (BulletBase)CreateTopBullet(BulletLabel, targetObject);
+            BulletBase topLevelBullet = (BulletBase)CreateTopBullet(BulletLabel, targetObject, createObject);
             topLevelBullet.Position = Pos;
             topLevelBullet.Direction = Direction;
             return topLevelBullet;
@@ -157,9 +157,9 @@ namespace Remnant_Afterglow
         /// 创建一个新的普通子弹。
         /// </summary>
         /// <returns>新创建的子弹。</returns>
-        public IBullet CreateBullet(string BulletLabel, BaseObject targetObject)
+        public IBullet CreateBullet(string BulletLabel, BaseObject targetObject, BaseObject createObject)
         {
-            var bullet = new BulletBase(this, BulletLabel, targetObject) // 创建一个新的Mover实例
+            var bullet = new BulletBase(this, BulletLabel, targetObject, createObject) // 创建一个新的Mover实例
             {
                 TimeSpeed = timeSpeed, // 设置时间速度
                 Scale = scale // 设置缩放比例
@@ -176,9 +176,9 @@ namespace Remnant_Afterglow
         /// 创建一个新的顶级子弹。
         /// </summary>
         /// <returns>新创建的顶级子弹。</returns>
-        public IBullet CreateTopBullet(string BulletLabel, BaseObject targetObject)
+        public IBullet CreateTopBullet(string BulletLabel, BaseObject targetObject, BaseObject createObject)
         {
-            var bullet = new BulletBase(this, BulletLabel, targetObject) // 创建一个新的Mover实例
+            var bullet = new BulletBase(this, BulletLabel, targetObject, createObject) // 创建一个新的Mover实例
             {
                 TimeSpeed = timeSpeed, // 设置时间速度
                 Scale = scale // 设置缩放比例
@@ -186,7 +186,7 @@ namespace Remnant_Afterglow
 
             // 初始化子弹，存储在列表中，并返回
             bullet.Init();
-            bullet.InitTopNode(PatternDict[BulletLabel].RootNode, targetObject);//设置子弹模式
+            bullet.InitTopNode(PatternDict[BulletLabel].RootNode, targetObject, createObject);//设置子弹模式
 
             topBulletList.Add(bullet);
             return bullet;

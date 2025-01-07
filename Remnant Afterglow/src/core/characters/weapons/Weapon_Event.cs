@@ -1,3 +1,4 @@
+using Godot;
 using System;
 
 namespace Remnant_Afterglow
@@ -35,6 +36,26 @@ namespace Remnant_Afterglow
         protected virtual void OnCoolDownEnded()
         {
             CoolDownEnded?.Invoke();
+        }
+
+        /// <summary>
+        /// 实体进入攻击范围
+        /// </summary>
+        public void Area2DEntered(Area2D area)
+        {
+            if(area.IsInGroup(MapGroup.BulletGroup))//检查-是子弹
+            {
+            }
+        }
+
+        /// <summary>
+        /// 实体退出攻击范围
+        /// </summary>
+        public void Area2DExited(Area2D area)
+        {
+            if(area.IsInGroup(MapGroup.BulletGroup))//检查-是子弹
+            {
+            }
         }
     }
 }

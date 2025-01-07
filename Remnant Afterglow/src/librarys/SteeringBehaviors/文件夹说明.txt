@@ -1,3 +1,0 @@
-SteeringBehaviors 是我根据Steering Behaviors 行为 开发的 用于ai移动操作 的库
-其中，墙壁需要继承wall 类
-ai 实体需要继承 SteeringBehavior类

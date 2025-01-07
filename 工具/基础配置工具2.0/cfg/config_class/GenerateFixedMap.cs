@@ -20,7 +20,11 @@ namespace Remnant_Afterglow
         /// </summary>
         public string MapDescribe { get; set; }
         /// <summary>        
-        /// 地图文件路径
+        /// 地图文件名称，可以带文件夹
+        ///默认路径在这里 Remnant Afterglow\map\
+        ///举例：1.json
+        ///2.json
+        ///key/3.json
         ///无法仅填写#BASEVALUE
         /// </summary>
         public string MapPath { get; set; }

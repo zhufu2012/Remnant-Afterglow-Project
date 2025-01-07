@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\baseobject_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\baseobject_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\map\\mapimageset\\loadmapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\map\\mapimageset\\loadmapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\system\\bullets\\bulletbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\system\\bullets\\bulletbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\map\\mapimageset\\mapimageset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\map\\mapimageset\\mapimageset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\baseobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\baseobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\utilities\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\utilities\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\weapons\\weaponbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\weapons\\weaponbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\edit\\common_view\\grid_select\\gridselectcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\edit\\common_view\\grid_select\\gridselectcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\towers\\towerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\towers\\towerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\map\\mapimageset\\loadtilesetconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\map\\mapimageset\\loadtilesetconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\units\\unitbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\units\\unitbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\edit\\common_view\\grid_select\\gridselectpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\edit\\common_view\\grid_select\\gridselectpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\map\\generatemap\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\map\\generatemap\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\edit\\edit_map\\editmapview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\edit\\edit_map\\editmapview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\autoloads\\gameresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\autoloads\\gameresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\EditMapCreateView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\edit\\EditMapCreateView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,101 +46,127 @@
       "DocumentGroups": [
         {
           "DockedHeight": 203,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoadTileSetConfig.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\LoadTileSetConfig.cs",
+              "RelativeDocumentMoniker": "src\\core\\map\\mapimageset\\LoadTileSetConfig.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\LoadTileSetConfig.cs",
+              "RelativeToolTip": "src\\core\\map\\mapimageset\\LoadTileSetConfig.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAAAIIAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T17:00:36.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameResources.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\autoloads\\GameResources.cs",
+              "RelativeDocumentMoniker": "src\\core\\autoloads\\GameResources.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\autoloads\\GameResources.cs",
+              "RelativeToolTip": "src\\core\\autoloads\\GameResources.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAswDwAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T16:36:31.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoadMapConfig.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\LoadMapConfig.cs",
+              "RelativeDocumentMoniker": "src\\core\\map\\mapimageset\\LoadMapConfig.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\LoadMapConfig.cs",
+              "RelativeToolTip": "src\\core\\map\\mapimageset\\LoadMapConfig.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAqwEcAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T16:29:55.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GridSelectPanel.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\grid_select\\GridSelectPanel.cs",
+              "RelativeDocumentMoniker": "src\\edit\\common_view\\grid_select\\GridSelectPanel.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\grid_select\\GridSelectPanel.cs",
+              "RelativeToolTip": "src\\edit\\common_view\\grid_select\\GridSelectPanel.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAqwC4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T15:07:32.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GridSelectCon.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\grid_select\\GridSelectCon.cs",
+              "RelativeDocumentMoniker": "src\\edit\\common_view\\grid_select\\GridSelectCon.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\grid_select\\GridSelectCon.cs",
+              "RelativeToolTip": "src\\edit\\common_view\\grid_select\\GridSelectCon.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAmwDoAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T15:47:27.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditMapView.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\edit_map\\EditMapView.cs",
+              "RelativeDocumentMoniker": "src\\edit\\edit_map\\EditMapView.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\edit_map\\EditMapView.cs",
+              "RelativeToolTip": "src\\edit\\edit_map\\EditMapView.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAgwGEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T15:00:08.947Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseObject_Move.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\BaseObject_Move.cs",
-              "RelativeDocumentMoniker": "src\\core\\characters\\BaseObject_Move.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\BaseObject_Move.cs",
-              "RelativeToolTip": "src\\core\\characters\\BaseObject_Move.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAcwFYAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T15:28:20.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BulletBase.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\bullets\\BulletBase.cs",
-              "RelativeDocumentMoniker": "src\\core\\system\\bullets\\BulletBase.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\system\\bullets\\BulletBase.cs",
-              "RelativeToolTip": "src\\core\\system\\bullets\\BulletBase.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAowI8AAAAsAAAA",
+              "Title": "MapImageSet.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\MapImageSet.cs",
+              "RelativeDocumentMoniker": "src\\core\\map\\mapimageset\\MapImageSet.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\MapImageSet.cs",
+              "RelativeToolTip": "src\\core\\map\\mapimageset\\MapImageSet.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAArwDIAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T15:22:51.036Z",
+              "WhenOpened": "2025-01-05T14:48:05.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BaseObject.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\BaseObject.cs",
-              "RelativeDocumentMoniker": "src\\core\\characters\\BaseObject.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\BaseObject.cs",
-              "RelativeToolTip": "src\\core\\characters\\BaseObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAAiAAAA",
+              "Title": "Common.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\utilities\\Common.cs",
+              "RelativeDocumentMoniker": "src\\core\\utilities\\Common.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\utilities\\Common.cs",
+              "RelativeToolTip": "src\\core\\utilities\\Common.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAArwFYAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:51:15.992Z",
+              "WhenOpened": "2025-01-05T14:48:20.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TowerBase.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\towers\\TowerBase.cs",
-              "RelativeDocumentMoniker": "src\\core\\characters\\towers\\TowerBase.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\towers\\TowerBase.cs",
-              "RelativeToolTip": "src\\core\\characters\\towers\\TowerBase.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAA4wGEAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "EditMapCreateView.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\EditMapCreateView.cs",
+              "RelativeDocumentMoniker": "src\\edit\\EditMapCreateView.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\EditMapCreateView.cs",
+              "RelativeToolTip": "src\\edit\\EditMapCreateView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:50:07.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UnitBase.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\units\\UnitBase.cs",
-              "RelativeDocumentMoniker": "src\\core\\characters\\units\\UnitBase.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\units\\UnitBase.cs",
-              "RelativeToolTip": "src\\core\\characters\\units\\UnitBase.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAtwFEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:49:58.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeaponBase.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\weapons\\WeaponBase.cs",
-              "RelativeDocumentMoniker": "src\\core\\characters\\weapons\\WeaponBase.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\weapons\\WeaponBase.cs",
-              "RelativeToolTip": "src\\core\\characters\\weapons\\WeaponBase.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAnwFYAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:49:46.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Cell.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\generatemap\\Cell.cs",
-              "RelativeDocumentMoniker": "src\\core\\map\\generatemap\\Cell.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\generatemap\\Cell.cs",
-              "RelativeToolTip": "src\\core\\map\\generatemap\\Cell.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:49:35.223Z",
+              "WhenOpened": "2025-01-05T15:06:28.967Z",
               "EditorCaption": ""
             }
           ]

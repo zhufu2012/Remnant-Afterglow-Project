@@ -29,5 +29,11 @@ namespace Remnant_Afterglow
             MapCopy.Instance.TowerNode.AddChild(towerBase);
             return towerBase;
         }
+
+        //防御塔死亡后处理
+        private void TowerKilledAfter(BaseObject casterObject)
+        {
+            casterObject.QueueFree();
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 流场数据<坐标，对应流场节点>
         /// </summary>
-        public Dictionary<Vector2I, FlowFieldNode> nodeData = new Dictionary<Vector2I, FlowFieldNode>();
+        public FlowFieldNode[,] nodeData;
         /// <summary>
         /// 创建一个位置流场
         /// </summary>
@@ -46,8 +46,10 @@ namespace Remnant_Afterglow
         /// <param name="targetObject"></param>
         public FlowField(BaseObject targetObject)
         {
-            this.targetPos = targetObject.mapPos;
-            this.type = 1;
+            targetPos = targetObject.mapPos;
+            Width = FlowFieldSystem.Instance.Width;
+            Height = FlowFieldSystem.Instance.Height;
+            type = 1;
             InitNodeData();
         }
 
@@ -57,11 +59,12 @@ namespace Remnant_Afterglow
         public void InitNodeData()
         {
             Cell[,] layer = FlowFieldSystem.Instance.layer;
-            for (int i = 0; i < layer.GetLength(0); i++)
+            nodeData = new FlowFieldNode[Width, Height];
+            for (int i = 0; i < Width; i++)
             {
-                for (int j = 0; j < layer.GetLength(1); j++)
+                for (int j = 0; j < Height; j++)
                 {
-                    nodeData[new Vector2I(i, j)] = layer[i, j].GetGridNode();
+                    nodeData[i, j] = layer[i, j].GetGridNode();
                 }
             }
         }
@@ -71,30 +74,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public void Generate()
         {
-            FlowFieldNode target = nodeData[targetPos];
-            foreach (var node in nodeData.Values)
+            FlowFieldNode target = nodeData[targetPos.X, targetPos.Y];
+            for (int x = 0; x < Width; x++)
             {
-                List<FlowFieldNode> neighbourNodes = GetNeighbouringNodes(node);
-                float fCost = node.fCost;
-                FlowFieldNode temp = null;
-                for (int i = 0; i < neighbourNodes.Count; i++)
+                for (int y = 0; y < Height; y++)
                 {
-                    FlowFieldNode neighbourNode = neighbourNodes[i];
-                    if (neighbourNode.fCost < fCost)
+                    FlowFieldNode node = nodeData[x, y];
+                    List<FlowFieldNode> neighbourNodes = GetNeighbouringNodes(node);
+                    float fCost = node.fCost;
+                    FlowFieldNode temp = null;
+                    for (int i = 0; i < neighbourNodes.Count; i++)
                     {
-                        temp = neighbourNode;
-                        fCost = neighbourNode.fCost;
-                        node.direction = new Vector2(
-                            neighbourNode.x - node.x, neighbourNode.y - node.y);
-                    }
-                    else if (neighbourNode.fCost == fCost && temp != null)
-                    {
-                        if (CalculateCost(neighbourNode, target) < CalculateCost(temp, target))
+                        FlowFieldNode neighbourNode = neighbourNodes[i];
+                        if (neighbourNode.fCost < fCost)
                         {
                             temp = neighbourNode;
                             fCost = neighbourNode.fCost;
                             node.direction = new Vector2(
-                                neighbourNode.x - node.x, neighbourNode.y - node.y);
+                                neighbourNode.x - node.x, neighbourNode.y - node.y).Normalized();
+                        }
+                        else if (neighbourNode.fCost == fCost && temp != null)
+                        {
+                            if (CalculateCost(neighbourNode, target) < CalculateCost(temp, target))
+                            {
+                                temp = neighbourNode;
+                                fCost = neighbourNode.fCost;
+                                node.direction = new Vector2(
+                                    neighbourNode.x - node.x, neighbourNode.y - node.y).Normalized();
+                            }
                         }
                     }
                 }
@@ -107,12 +114,16 @@ namespace Remnant_Afterglow
         /// <param name="target">目标位置</param>
         public void SetTarget()
         {
-            FlowFieldNode target = nodeData[targetPos];
-            foreach (var node in nodeData.Values)
+            for (int x = 0; x < Width; x++)
             {
-                node.cost = node.isWalkable ? 10 : int.MaxValue;
-                node.fCost = int.MaxValue;
+                for (int y = 0; y < Height; y++)
+                {
+                    FlowFieldNode node = nodeData[x, y];
+                    node.cost = node.isWalkable ? 10 : int.MaxValue;
+                    node.fCost = int.MaxValue;
+                }
             }
+            FlowFieldNode target = nodeData[targetPos.X, targetPos.Y];
             target.cost = 0;
             target.fCost = 0;
             target.direction = Vector2.Zero;
@@ -154,8 +165,8 @@ namespace Remnant_Afterglow
                     if (i == 0 && j == 0) continue;
                     int x = node.x + i;
                     int y = node.y + j;
-                    if (x >= 0 && x < this.Width && y >= 0 && y < this.Height)
-                        neighbours.Add(nodeData[new Vector2I(x, y)]);
+                    if (x >= 0 && x < Width && y >= 0 && y < Height && nodeData[x, y].isWalkable)
+                        neighbours.Add(nodeData[x, y]);
                 }
             }
             return neighbours;
@@ -174,12 +185,41 @@ namespace Remnant_Afterglow
             if (deltaX < 0) deltaX = -deltaX;
             int deltaY = node1.y - node2.y;
             if (deltaY < 0) deltaY = -deltaY;
+            // 先判断是否是斜向移动，如果是斜向，检查中间节点是否可通行
+            if (deltaX!= 0 && deltaY!= 0)
+            {
+                int intermediateX = node1.x < node2.x? node1.x + 1 : node1.x - 1;
+                int intermediateY = node1.y < node2.y? node1.y + 1 : node1.y - 1;
+                if (!IsValid(intermediateX, intermediateY))//这个格子能使用
+                {
+                    return int.MaxValue;
+                }
+            }
             int delta = deltaX - deltaY;
             if (delta < 0) delta = -delta;
-            //每向上、下、左、右方向移动一个节点代价增加10
-            //每斜向移动一个节点代价增加14（勾股定理，精确来说是近似14.14~）
+            //每向上、下、左、右方向移动一个节点代价增加1
+            //每斜向移动一个节点代价增加1.414（勾股定理，精确来说是近似1.414~）
             return 1.414f * (deltaX > deltaY ? deltaY : deltaX) + 1 * delta;
         }
 
+        /// <summary>
+        /// 某个格子是否可以使用
+        /// </summary>
+        /// <param name="pos"></param>
+        /// <returns></returns>
+        public bool IsValid(int X, int Y)
+        {
+            return X >= 0 && Y >= 0 && X < Width && Y < Height && nodeData[X, Y].cost != int.MaxValue;
+        }
+
+        public Vector2 GetDirection(int x, int y)
+        {
+            return nodeData[x, y].direction;
+        }
+
+        public Vector2 GetDirection(Vector2I pos)
+        {
+            return nodeData[pos.X, pos.Y].direction;
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace Remnant_Afterglow
     public class ModInfo
     {
         /// <summary>
-        /// 
+        /// 模组名称
         /// </summary>
         public string Name { get; set; }
         /// <summary>

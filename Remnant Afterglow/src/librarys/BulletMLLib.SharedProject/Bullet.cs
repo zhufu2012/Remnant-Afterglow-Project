@@ -118,10 +118,13 @@ public abstract class Bullet : IBullet
 
     #endregion //属性
     /// <summary>
+    /// 创建子弹者
+    /// </summary>
+    public BaseObject createObject;
+    /// <summary>
     /// 攻击目标
     /// </summary>
     public BaseObject targetObject;
-
 
 
 
@@ -131,9 +134,12 @@ public abstract class Bullet : IBullet
     /// 初始化 <see cref="Bullet"/> 类的新实例。
     /// </summary>
     /// <param name="myBulletManager">我的子弹管理器。</param>
-    protected Bullet(IBulletManager myBulletManager, BaseObject targetObject)
+    /// <param name="targetObject">目标</param>
+    /// <param name="createObject">创建者</param>
+    protected Bullet(IBulletManager myBulletManager, BaseObject targetObject, BaseObject createObject)
     {
         this.targetObject = targetObject;
+        this.createObject = createObject;
         // 获取此子弹的子弹管理器
         Debug.Assert(null != myBulletManager);
         MyBulletManager = myBulletManager;
@@ -152,7 +158,7 @@ public abstract class Bullet : IBullet
     /// 使用顶级节点初始化此子弹
     /// </summary>
     /// <param name="rootNode">这是一个顶级节点... 找到第一个“top”节点并使用它来定义此子弹</param>
-    public void InitTopNode(BulletMLNode rootNode, BaseObject baseObject)
+    public void InitTopNode(BulletMLNode rootNode, BaseObject baseObject, BaseObject baseObject2)
     {
         Debug.Assert(null != rootNode);
 
@@ -162,7 +168,7 @@ public abstract class Bullet : IBullet
         if (topNode != null)
         {
             // 使用我们找到的顶部节点进行初始化！
-            InitNode(topNode, baseObject);
+            InitNode(topNode, baseObject, baseObject2);
             bValidBullet = true;
         }
         else
@@ -176,20 +182,20 @@ public abstract class Bullet : IBullet
                     if (!bValidBullet)
                     {
                         // 使用这个子弹！
-                        InitNode(topNode, baseObject);
+                        InitNode(topNode, baseObject, baseObject2);
                         bValidBullet = true;
                     }
                     else
                     {
                         // 创建一个新的子弹
-                        var newDude = MyBulletManager.CreateTopBullet(rootNode.Label, baseObject);
+                        var newDude = MyBulletManager.CreateTopBullet(rootNode.Label, baseObject, baseObject2);
 
                         // 设置新子弹的位置为此子弹的位置
                         newDude.X = X;
                         newDude.Y = Y;
 
                         // 使用我们找到的节点进行初始化
-                        newDude.InitNode(topNode, baseObject);
+                        newDude.InitNode(topNode, baseObject, baseObject2);
                     }
                 }
             }
@@ -206,7 +212,7 @@ public abstract class Bullet : IBullet
     /// 此子弹由另一个子弹发射，从发射它的节点初始化
     /// </summary>
     /// <param name="subNode">定义此子弹的子节点</param>
-    public void InitNode(BulletMLNode subNode, BaseObject baseObject)
+    public void InitNode(BulletMLNode subNode, BaseObject baseObject, BaseObject baseObject2)
     {
         Debug.Assert(null != subNode);
 

@@ -19,7 +19,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public Area2D area2D;
         /// <summary>
-        /// 当前物体碰撞器节点, 节点名称必须叫 "Collision", 类型为 CollisionShape2D
+        /// 当前实体碰撞器节点, 节点名称必须叫 "Collision", 类型为 CollisionShape2D
         /// </summary>
         public CollisionShape2D Collision { get; set; }
 
@@ -46,11 +46,11 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 虚拟函数-子类重写-用于移动初始化-比如初始化速度
+        /// 虚拟函数-子类重写-用于移动初始化-比如初始化速度,初始化位置
         /// </summary>
         public virtual void InitMove()
         {
-
+            mapPos = MapCopy.GetWorldPos(GlobalPosition);
         }
 
         /// <summary>
@@ -60,43 +60,29 @@ namespace Remnant_Afterglow
         {
             Collision = baseData.GetCollisionShape2D();
             AddChild(Collision);
-            CollisionLayer = Common.CalculateMaskSum(baseData.CollisionLayerList);
-            CollisionMask = Common.CalculateMaskSum(baseData.MaskLayerList);
 
             area2D = GD.Load<PackedScene>("res://src/core/characters/Area.tscn").Instantiate<Area2D>();
             //area2D.ProcessMode = ProcessModeEnum.Always;
-            //area2D.CollisionMask = Common.CalculateMaskSum(baseData.MaskLayerList);
-            //area2D.CollisionLayer = Common.CalculateMaskSum(baseData.CollisionLayerList);
+            area2D.CollisionMask = Common.CalculateMaskSum(baseData.MaskLayerList);
+            area2D.CollisionLayer = Common.CalculateMaskSum(baseData.CollisionLayerList);
             //CollisionShape2D Collision2 = baseData.GetCollisionShape2D();
             //area2D.AddChild(Collision2);
             //area2D.AddToGroup("1");
-            
 
-            area2D.AreaEntered += Area2DAreaEntered;
-            //area2D.Connect(Area2D.SignalName.AreaEntered, Callable.From<Area2D>(Area2DAreaEntered));
-            // 使用 SignalName 枚举进行连接
-            //Error error = area2D.Connect(Area2D.SignalName.AreaEntered, Callable.From<Area2D>(Area2DAreaEntered));
+
+            area2D.AreaEntered += Area2DEntered;
             AddChild(area2D);
-        }
-
-
-        public void Area2DAreaEntered(Area2D area)
-        {
-            if(area.IsInGroup("bullet"))//祝福测试-是子弹
-            {
-                Log.Print(111);
-            }
         }
 
         /// <summary>
         /// 执行移动操作
         /// </summary>
-        public virtual void DoMove() { }
+        public virtual void DoMove(double delta) { }
 
 
 
         /// <summary>
-        /// 获取实体的移动速度
+        /// 获取实体的当前移动速度
         /// </summary>
         /// <returns></returns>
         public float GetSpeed()
@@ -105,12 +91,29 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 获取实体的旋转速度
+        /// 获取实体的最大移动速度
+        /// </summary>
+        /// <returns></returns>
+        public float GetMaxSpeed()
+        {
+            return GetAttrValue(Attr.Attr_40, AttributeValueType.Max);
+        }
+
+        /// <summary>
+        /// 获取实体的最大加速度速度
+        /// </summary>
+        /// <returns></returns>
+        public float GetMaxAddSpeed()
+        {
+            return GetAttrValue(Attr.Attr_41, AttributeValueType.Max);
+        }
+        /// <summary>
+        /// 获取实体的当前旋转速度
         /// </summary>
         /// <returns></returns>
         public float GetRotateSpeed()
         {
-            return GetAttrValue(Attr.Attr_41, AttributeValueType.Value);
+            return GetAttrValue(Attr.Attr_42, AttributeValueType.Value);
         }
 
     }

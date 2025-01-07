@@ -48,7 +48,6 @@ namespace Remnant_Afterglow
         public WeaponBase(int object_id) : base(object_id)
         {
             object_type = BaseObjectType.BaseUnit;
-            CampSubName = MapCamp.CampName_Unit + Camp;//设置组名
             InitData();//初始化配置
             InitChild();//初始化节点数据
         }
@@ -72,6 +71,15 @@ namespace Remnant_Afterglow
         {
             AnimatedSprite = GetWeaponFrame(CfgData);
             AddChild(AnimatedSprite);
+            rangeArea = new Area2D();//攻击范围
+            rangeArea.AreaEntered += Area2DEntered;
+            rangeArea.AreaExited += Area2DExited;
+        }
+
+        public override void InitView()
+        {
+            base.InitView();
+            AddToGroup(MapGroup.WeaponGroup);
         }
         #endregion
 

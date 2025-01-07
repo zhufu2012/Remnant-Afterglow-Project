@@ -37,7 +37,8 @@ namespace Remnant_Afterglow
         public Vector2I MapImageSize;
 
         public Dictionary<Vector2I, Texture2D> textureList = new Dictionary<Vector2I, Texture2D>();
-        public ImageSetData(Dictionary<string, Object> dict)
+        //Width 和Height 是切分图片的指定大小
+        public ImageSetData(Dictionary<string, Object> dict,int Width, int Height)
         {
             MapImageSetId = (int)dict["MapImageSetId"];
             MapImageSetName = (string)dict["MapImageSetName"];
@@ -47,8 +48,7 @@ namespace Remnant_Afterglow
             ImageSetLayer = (int)dict["ImageSetLayer"];
             MapImageSize = (Vector2I)dict["MapImageSize"];
             Texture2D texture = (Texture2D)dict["MapImageSet"];
-            Vector2I vector2I = ((Vector2I)((MapImageSize.X > 0 && MapImageSize.Y > 0) ? MapImageSize : new Vector2I(1, 1)));
-            textureList = Common.SplitTexture(texture, vector2I);
+            textureList = Common.SplitTexture2(texture, new Vector2I(Width, Height));
         }
     }
 
@@ -62,7 +62,7 @@ namespace Remnant_Afterglow
         /// </summary>
 		public Dictionary<int, TileSetAtlasSource> MapSetDict = new Dictionary<int, TileSetAtlasSource>();
         /// <summary>
-        /// 地图图像集 数据列表
+        /// 地图图像集 数据字典
         /// </summary>
         public Dictionary<int, ImageSetData> MapSetDataDict = new Dictionary<int, ImageSetData>();
 
@@ -137,7 +137,7 @@ namespace Remnant_Afterglow
                         index++;
                     }
                 }
-                MapSetDataDict[(int)kvp["MapImageSetId"]] = new ImageSetData(kvp);
+                MapSetDataDict[(int)kvp["MapImageSetId"]] = new ImageSetData(kvp,Width,Height);
                 MapSetDict[(int)kvp["MapImageSetId"]] = source;
             }
         }

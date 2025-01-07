@@ -1,0 +1,373 @@
+-ifndef(textDefine_SkillFixInfo_GE_hrl).
+-define(textDefine_SkillFixInfo_GE_hrl, 1).
+-define(SCN213, "Schicksalsumkehr").
+-define(SCD213, "Wenn man Relikte zum Angreifen benutzt, besteht eine {0}% Chance, Schicksalsumkehr auszulösen und {1}% SCH mit 100% LP-Abzug-Effekt zu verursachen.AZ: {2} Sek.").
+-define(SCN41001, "Fertigkeitsaufwertung").
+-define(SCD40001, "Erhöht den festen Schaden der Fertigkeit {0}").
+-define(SCN51001, "Temporärer Fertigkeitsaufstieg").
+-define(SCD51001, "Fester Fertigkeit-SCH-Multiplikator +{0}%").
+-define(BCN1021, "Kraft des Kriegsgottes verbessert").
+-define(BCN1031, "Thors Wächter verbessert").
+-define(BCN2011, "Vulkans Geist verbessert").
+-define(BCN2021, "Khiones Geist verbessert").
+-define(BCN3021, "Kraft der Natur verbessert").
+-define(BCN3031, "Blitzkraft verbessert").
+-define(BCD1021, "Kraft des Kriegsgottes Dauer +{0} Sek.").
+-define(BCD1031, "Thors Wächter Dauer +{0} Sek.").
+-define(BCD2011, "Vulkans Geist Dauer +{0} Sek.").
+-define(BCD2021, "Khiones Geist Dauer +{0} Sek.").
+-define(BCD3021, "Kraft der Natur Dauer +{0} Sek.").
+-define(BCD3031, "Blitzkraft Dauer +{0} Sek.").
+-define(BCN1001, "Zornsteigerung").
+-define(BCD1001, "Zorn gewährt +{0}% ANG-Bonus.Brüllen gewährt +{1}% Krit-Rate.").
+-define(BCN2001, "Magie-Durchdringung").
+-define(BCD2001, "Alle Verstärkungsdauern +{0} Sek.").
+-define(BCN3001, "Schlachtverbesserung").
+-define(BCD3001, "Jeder Fokus-Stapel gewährt {0}% SCH-Bonus.Jeder Donner-Stapel gewährt +{1}% SCH-Reduktion.").
+-define(SCN30001, "Avatar der Weisheit: Aufgestiegen").
+-define(SCN30011, "Siegreicher Richter: Aufgestiegen").
+-define(SCN30021, "Wirbelnder Speer: Aufgestiegen").
+-define(SCN30031, "Schild der Seufzer: Aufgestiegen").
+-define(SCN30041, "Speerwurf: Aufgestiegen").
+-define(SCN30051, "Göttlicher Speer: Aufgestiegen").
+-define(SCN30101, "Siegel der Rache: Aufgestiegen").
+-define(SCN30111, "Rabenruf: Aufgestiegen").
+-define(SCN30121, "Energie-Siphon: Aufgestiegen").
+-define(SCN30131, "Rabenrituale: Aufgestiegen").
+-define(SCN30141, "Rabentanz: Aufgestiegen").
+-define(SCN30151, "Wirbel der Rache: Aufgestiegen").
+-define(SCN30201, "Thors Herrschaft: Aufgestiegen").
+-define(SCN30211, "Blitzschlag: Aufgestiegen").
+-define(SCN30221, "Donnerknall: Aufgestiegen").
+-define(SCN30231, "Blitzexplosion: Aufgestiegen").
+-define(SCN30241, "Peitschender Donner: Aufgestiegen").
+-define(SCN30251, "Thors Hammer: Aufgestiegen").
+-define(SCN30301, "Pharao-Wächter: Aufgestiegen").
+-define(SCN30311, "Korona: Aufgestiegen").
+-define(SCN30321, "Sonnenkranz: Aufgestiegen").
+-define(SCN30331, "Sonnenscheibe: Aufgestiegen").
+-define(SCN30341, "Uralter Fluch: Aufgestiegen").
+-define(SCN30351, "Sonnenwind: Aufgestiegen").
+-define(SCN30901, "").
+-define(SCN31001, "").
+-define(SCN31101, "").
+-define(SCD30001, "Verursachter Basis-SCH +{0}%").
+-define(SCD30011, "Verursachter Basis-SCH +{0}%").
+-define(SCD30021, "Verursachter Basis-SCH +{0}%").
+-define(SCD30031, "Verursachter Basis-SCH +{0}%").
+-define(SCD30041, "Verursachter Basis-SCH +{0}%").
+-define(SCD30051, "Verursachter Basis-SCH +{0}%").
+-define(SCD30101, "Verursachter Basis-SCH +{0}%").
+-define(SCD30111, "Verursachter Basis-SCH +{0}%").
+-define(SCD30121, "Verursachter Basis-SCH +{0}%").
+-define(SCD30131, "Verursachter Basis-SCH +{0}%").
+-define(SCD30141, "Verursachter Basis-SCH +{0}%").
+-define(SCD30151, "Verursachter Basis-SCH +{0}%").
+-define(SCD30201, "Verursachter Basis-SCH +{0}%").
+-define(SCD30211, "Verursachter Basis-SCH +{0}%").
+-define(SCD30221, "Verursachter Basis-SCH +{0}%").
+-define(SCD30231, "Verursachter Basis-SCH +{0}%").
+-define(SCD30241, "Verursachter Basis-SCH +{0}%").
+-define(SCD30251, "Verursachter Basis-SCH +{0}%").
+-define(SCD30301, "Verursachter Basis-SCH +{0}%").
+-define(SCD30311, "Verursachter Basis-SCH +{0}%").
+-define(SCD30321, "Verursachter Basis-SCH +{0}%").
+-define(SCD30331, "Verursachter Basis-SCH +{0}%").
+-define(SCD30341, "Verursachter Basis-SCH +{0}%").
+-define(SCD30351, "Verursachter Basis-SCH +{0}%").
+-define(SCD61001, "Wenn Zorn aktiv ist, wird der Fertigkeit-SCH-Multiplikator +{0}%").
+-define(SCD61011, "Kraft des Kriegsgottes gewährt zusätzlich {0}% Krit-Rate").
+-define(SCD61021, "Thors Wächter gewährt zusätzlich {0}% Block-Reduktion").
+-define(SCD62001, "Fertigkeit-SCH-Multiplikator, der von jeder Verstärkung gewährt wird +{0}%").
+-define(SCD62011, "Fertigkeitswiederherstellung-Multiplikator, der von jeder Verstärkung gewährt wird +{0}%").
+-define(SCD62021, "Das Zaubern der Fertigkeit hat eine {0}% Chance, Verstärkung - Feuersturm (Fertigkeit-SCH-Bonus +{1}%) zu gewähren").
+-define(SCD62041, "Das Zaubern der Fertigkeit hat eine {0}% Chance, Verstärkung - Feuersturm (Fertigkeit-SCH-Bonus +{1}%) zu gewähren").
+-define(SCD63001, "Hat eine {0}% Chance, 2 Schichten von Fokus zu erhalten").
+-define(SCD63011, "Hat eine {0}% Chance, 2 Schichten von Donner zu erhalten").
+-define(SCD63021, "Erhöht Fertigkeit-SCH-Multiplikator für jeden Stapel von Fokus +{0}%").
+-define(SCD63031, "Erhöht Fertigkeit-SCH-Multiplikator für jeden Stapel von Donner +{0}%").
+-define(BCD1041, "Zorn-Dauer +{0} Sek.").
+-define(BCD1051, "Brüllen-Dauer +{0} Sek.").
+-define(BCD1061, "Wenn Brüllen aktiv ist, erhöht sich die Chance, Betäuben zuzufügen, um {0}%").
+-define(BCD1071, "Wächter-Dauer +{0} Sek.").
+-define(BCD1081, "Blutungsdauer +{0} Sek.").
+-define(BCD2031, "Wenn der Herzfeuer-Status endet, hast du eine {0}% Chance, den Status erneut hinzuzufügen").
+-define(BCD2041, "Wenn der Unsägliches Eis Status endet, hast du eine {0}% Chance, den Status erneut hinzuzufügen").
+-define(BCD3041, "Wenn Kraft der Natur aktiv ist, erhält man alle {0} Sek.1 Schicht Fokus").
+-define(BCD3051, "Wenn die Blitzkraft aktiviert ist, erhältst du alle {0} Sek.eine 1 Schicht Donner").
+-define(SFI_UNITS103, "Sek.").
+-define(SCN117, "Verbesserter Froststurm").
+-define(SCD117, "Verursachter Basis-SCH +{0}%").
+-define(SCN118, "Verbesserter Eiszapfen").
+-define(SCD118, "Verursachter Basis-SCH +{0}%").
+-define(SCD70001, "").
+-define(SCD41001, "Erhöht festen Fertigkeit-SCH-Multiplikator um {0}%; Erhöht festen Fertigkeit-SCH um {1}").
+-define(SCN80001, "Siegreicher Richter: Erwacht").
+-define(SCN80011, "Siegreicher Richter: Erwacht").
+-define(SCN80021, "Wirbelnder Speer: Erwacht").
+-define(SCN80031, "Schild der Seufzer: Erwacht").
+-define(SCN80041, "Speerwurf: Erwacht").
+-define(SCN80051, "Göttlicher Speer: Erwacht").
+-define(SCN80101, "Rabentanz: Erwacht").
+-define(SCN80111, "Rabenruf: Erwacht").
+-define(SCN80121, "Energie-Siphon: Erwacht").
+-define(SCN80131, "Rabenrituale: Erwacht").
+-define(SCN80141, "Rabentanz: Erwacht").
+-define(SCN80151, "Wirbel der Rache: Erwacht").
+-define(SCN80201, "").
+-define(SCN80211, "Blitzschlag: Erwacht").
+-define(SCN80221, "Donnerknall: Erwacht").
+-define(SCN80231, "Blitzexplosion: Erwacht").
+-define(SCN80241, "Peitschender Donner: Erwacht").
+-define(SCN80251, "Thors Hammer: Erwacht").
+-define(SCN80301, "").
+-define(SCN80311, "Korona: Erwacht").
+-define(SCN80321, "Sonnenkranz: Erwacht").
+-define(SCN80331, "Sonnenscheibe: Erwacht").
+-define(SCN80341, "Uralter Fluch: Erwacht").
+-define(SCN80351, "Sonnenwind: Erwacht").
+-define(SCN80901, "").
+-define(SCD80901, "").
+-define(SCN81001, "").
+-define(SCN81101, "").
+-define(SCD81001, "").
+-define(SCD80001, "Der letzte Treffer hat eine {0}% Chance, den Gegner für {1} Sek.zu blenden (Trefferrate -10%) und ihm Gelassenheit (Krit-Rate -20%) zu verleihen.").
+-define(SCD80011, "{0}% Chance, für {1} Sek.Kniesehne (Bewegungsgeschwindigkeit -33%) zu verursachen.").
+-define(SCD80021, "Fügt {0}% VER als Schaden zu.").
+-define(SCD80031, "{0}% Chance, Teamkollegen einen Schild von {1}% ANG zu gewähren.").
+-define(SCD80041, "Fügt zusätzlichen Schaden in Höhe von {0}% der max.LP zu.").
+-define(SCD80051, "{0}% Chance, 1 Schichten des Debuffs zu entfernen.").
+-define(SCD80101, "Beim Zaubern der Fertigkeit werden {0}% der max.LP wiederhergestellt.").
+-define(SCD80111, "{0}% Chance, jedes Mal, wenn die Fertigkeit gezaubert wird, Verwelken zu verursachen.").
+-define(SCD80121, "Fügt dem Ziel Bluten zu, wodurch es {0}% LP verliert.").
+-define(SCD80131, "Fügt dem Ziel Bluten zu, wodurch es {0}% LP verliert.").
+-define(SCD80141, "{0}% Chance, jedes Mal, wenn die Fertigkeit gezaubert wird, Verwelken zu verursachen.").
+-define(SCD80151, "Heilt das gesamte Team für {0}% des ANG.").
+-define(SCD80201, "Fügt zusätzlichen Schaden in Höhe von {0}% der max.LP zu.").
+-define(SCD80211, "{0}% Chance, einen Buff von Zielen in der Nähe zu entfernen.").
+-define(SCD80221, "Fügt zusätzlichen Schaden in Höhe von {0}% der max.LP zu.").
+-define(SCD80231, "{0}% Chance, 2 Buffs von Zielen in der Nähe zu entfernen.").
+-define(SCD80241, "Fügt zusätzlichen Schaden in Höhe von {0}% der max.LP zu.").
+-define(SCD80251, "Fügt zusätzlichen Schaden in Höhe von {0}% der max.LP zu.").
+-define(SCD80301, "").
+-define(SCD80311, "Jeder Treffer hat {0}% Chance, Verbrennen auszulösen.").
+-define(SCD80321, "{0}% Chance, zusätzlich 1 weiteres Mal Verbrennen auszulösen.").
+-define(SCD80331, "{0}% Chance, zusätzlich 2 weitere Male Verbrennen auszulösen.").
+-define(SCD80341, "{0}% Chance, das Ziel für 1,5 Sek.zu betäuben.").
+-define(SCD80351, "Jeder Treffer hat eine {0}% Chance, 1 weiteres Mal Verbrennen auszulösen.").
+-define(SCN70001, "Siegreicher Richter: Verbessert").
+-define(SCN70011, "Siegreicher Richter: Verbessert").
+-define(SCN70021, "Wirbelnder Speer: Verbessert").
+-define(SCN70031, "Schild der Seufzer: Verbessert").
+-define(SCN70041, "Speerwurf: Verbessert").
+-define(SCN70051, "Göttlicher Speer: Verbessert").
+-define(SCN70101, "Rabentanz: Verbessert").
+-define(SCN70111, "Rabenruf: Verbessert").
+-define(SCN70121, "Energie-Siphon: Verbessert").
+-define(SCN70131, "Rabenrituale: Verbessert").
+-define(SCN70141, "Rabentanz: Verbessert").
+-define(SCN70151, "Wirbel der Rache: Verbessert").
+-define(SCN70201, "").
+-define(SCN70211, "Blitzschlag: Verbessert").
+-define(SCN70221, "Donnerknall: Verbessert").
+-define(SCN70231, "Blitzexplosion: Verbessert").
+-define(SCN70241, "Peitschender Donner: Verbessert").
+-define(SCN70251, "Thors Hammer: Verbessert").
+-define(SCN70301, "").
+-define(SCN70311, "Korona: Verbessert").
+-define(SCN70321, "Sonnenkranz: Verbessert").
+-define(SCN70331, "Sonnenscheibe: Verbessert").
+-define(SCN70341, "Uralter Fluch: Verbessert").
+-define(SCN70351, "Sonnenwind: Verbessert").
+-define(SCN70901, "").
+-define(SCN71001, "").
+-define(SCN71101, "").
+-define(SCD61031, "Ignoriert {0}% VER von blutenden Feinden.").
+-define(SCD62061, "Wenn die LP über {0}% liegen, Fertigkeit-SCH-Multiplikator +{1}%.").
+-define(SCD62071, "Chance, den Einfrieren-Effekt zu verursachen +{0}%").
+-define(SCD63061, "Erhöht für jeden erhaltenen Fokus-Effekt den SCH-Multiplikator der max.LP des Ziels um {0}%.").
+-define(SCD63071, "Für jeden gewonnenen Donner-Effekt wird der Fertigkeitsbonus um {0}% erhöht.").
+-define(SCD10001, "Streitwagen-ANG +{0}%").
+-define(SCN70401, "Tartarus-König: Verbessert").
+-define(SCN70411, "Gespenstersense: Verbessert").
+-define(SCN70421, "Tartarus-Wolf: Verbessert").
+-define(SCN70431, "Gespenstischer Einschlag: Verbessert").
+-define(SCN70441, "Geistverstrickung: Verbessert").
+-define(SCN70451, "Banshee-Raum: Verbessert").
+-define(SCN70501, "Lord des Krieges: Verbessert").
+-define(SCN70511, "Erntefertigkeit: Verbessert").
+-define(SCN70521, "Entermesser-Angriff: Verbessert").
+-define(SCN70531, "Schneide-Raid: Verbessert").
+-define(SCN70541, "Entermesser-Würgen: Verbessert").
+-define(SCN70551, "Letzte Hinrichtung: Verbessert").
+-define(SCN80401, "Tartarus-König: Erwacht").
+-define(SCN80411, "Gespenstersense: Erwacht").
+-define(SCN80421, "Tartarus-Wolf: Erwacht").
+-define(SCN80431, "Gespenstischer Einschlag: Erwacht").
+-define(SCN80441, "Geistverstrickung: Erwacht").
+-define(SCN80451, "Banshee-Raum: Erwacht").
+-define(SCN80501, "Lord des Krieges: Erwacht").
+-define(SCN80511, "Erntefertigkeit: Erwacht").
+-define(SCN80521, "Entermesser-Angriff: Erwacht").
+-define(SCN80531, "Schneide-Raid: Erwacht").
+-define(SCN80541, "Entermesser-Würgen: Erwacht").
+-define(SCN80551, "Letzte Hinrichtung: Erwacht").
+-define(SCD80401, "Erster verursachter SCH fügt Zerbrechlich (Fertigkeit-SCH-Reduktion -15%) für {0} Sek.zu.").
+-define(SCD80411, "Ignoriert {0}% VER des Ziels.").
+-define(SCD80421, "Heilt ein zusätzliches Mal LP in Höhe von {0}% des ANG.").
+-define(SCD80431, "Erster verursachter SCH fügt Erweichen (SCH-Reduktion -10%) für {0} Sek.zu.").
+-define(SCD80441, "Erster verursachter SCH fügt Verfluchen (Trefferrate -20%) für {0} Sek.zu.").
+-define(SCD80451, "Erster verursachter SCH fügt Kontaminiert (Heilungsbonus -20%) für {0} Sek.zu.").
+-define(SCD80501, "Hat eine {0}% Chance, nach erfolgreichem Morphing eine Debuff-Schicht für den Zaubernden zu entfernen.").
+-define(SCD80511, "Fertigkeit-Krit-Rate +{0}%").
+-define(SCD80521, "Für jede {0}% LP, die das Ziel verliert, erhält man {1}% Fertigkeit-SCH-Multiplikator.").
+-define(SCD80531, "Für jede {0}% LP, die das Ziel verliert, erhält man {1}% Fertigkeit-SCH-Multiplikator.").
+-define(SCD80541, "Für jede {0}% LP, die das Ziel verliert, erhält man {1}% Fertigkeit-SCH-Multiplikator.").
+-define(SCD80551, "Bei Verwendung gegen einen Charakter mit weniger als 50% LP wird der Zaubernde für {0} Sek.unbesiegbar.").
+-define(SCN70601, "Der Frühling kommt: Verbessert").
+-define(SCN70611, "Lianen-Offensive: Verbessert").
+-define(SCN70621, "Rattan-Säge: Verbessert").
+-define(SCN70631, "Blühende Blumen: Verbessert").
+-define(SCN70641, "Reich der Natur: Verbessert").
+-define(SCN70651, "Zorn der Erde: Verbessert").
+-define(SCN80601, "Der Frühling kommt: Erwacht").
+-define(SCN80611, "Lianen-Offensive: Erwacht").
+-define(SCN80621, "Rattan-Säge: Erwacht").
+-define(SCN80631, "Blühende Blumen: Erwacht").
+-define(SCN80641, "Reich der Natur: Erwacht").
+-define(SCN80651, "Zorn der Erde: Erwacht").
+-define(SCD80601, "Heilt von {0} Verbündeten LP in Höhe von {1}% des ANG nach einen erfolgreichen Morph.").
+-define(SCD80611, "Hat eine {0}% Chance, {1} Debuff-Schicht(en) für Verbündete zu entfernen.").
+-define(SCD80621, "Verursacht Entkopplung (ANG -{0}%) für {1} Sek.").
+-define(SCD80631, "Heilungsdauer +{0} Sek.").
+-define(SCD80641, "Wenn das Ziel weniger als {0}% LP hat, Heilungsmultiplikator +{1}%.").
+-define(SCD80651, "Die Fertigkeit fügt Vergiften (nimmt {0}% SCH pro Sekunde) für {1} Sek.zu.").
+-define(SCN30401, "Tartarus-König: Aufgestiegen").
+-define(SCN30411, "Gespenstersense: Aufgestiegen").
+-define(SCN30421, "Tartarus-Wolf: Aufgestiegen").
+-define(SCN30431, "Gespenstischer Einschlag: Aufgestiegen").
+-define(SCN30441, "Geistverstrickung: Aufgestiegen").
+-define(SCN30451, "Banshee-Raum: Aufgestiegen").
+-define(SCN30501, "Lord des Krieges: Aufgestiegen").
+-define(SCN30511, "Erntefertigkeit: Aufgestiegen").
+-define(SCN30521, "Entermesser-Angriff: Aufgestiegen").
+-define(SCN30531, "Schneide-Raid: Aufgestiegen").
+-define(SCN30541, "Entermesser-Würgen: Aufgestiegen").
+-define(SCN30551, "Letzte Hinrichtung: Aufgestiegen").
+-define(SCN30601, "Der Frühling kommt: Aufgestiegen").
+-define(SCN30611, "Lianen-Offensive: Aufgestiegen").
+-define(SCN30621, "Rattan-Säge: Aufgestiegen").
+-define(SCN30631, "Blühende Blumen: Aufgestiegen").
+-define(SCN30641, "Reich der Natur: Aufgestiegen").
+-define(SCN30651, "Zorn der Erde: Aufgestiegen").
+-define(SCD30401, "Verursachter Basis-SCH +{0}%").
+-define(SCD30411, "Verursachter Basis-SCH +{0}%").
+-define(SCD30421, "Verursachter Basis-SCH +{0}%").
+-define(SCD30431, "Verursachter Basis-SCH +{0}%").
+-define(SCD30441, "Verursachter Basis-SCH +{0}%").
+-define(SCD30451, "Verursachter Basis-SCH +{0}%").
+-define(SCD30501, "Verursachter Basis-SCH +{0}%").
+-define(SCD30511, "Verursachter Basis-SCH +{0}%").
+-define(SCD30521, "Verursachter Basis-SCH +{0}%").
+-define(SCD30531, "Verursachter Basis-SCH +{0}%").
+-define(SCD30541, "Verursachter Basis-SCH +{0}%").
+-define(SCD30551, "Verursachter Basis-SCH +{0}%").
+-define(SCD30601, "Verursachter Basis-SCH +{0}%").
+-define(SCD30611, "Verursachter Basis-SCH +{0}%").
+-define(SCD30621, "Verursachter Basis-SCH +{0}%").
+-define(SCD30631, "Verursachter Basis-SCH +{0}%").
+-define(SCD30641, "Basis-Heilung +{0}%").
+-define(SCD30651, "Verursachter Basis-SCH +{0}%").
+-define(SCD70641, "Fertigkeit Feste Heilung +{0}").
+-define(SCN70701, "Lunar-Göttin: Verbessert").
+-define(SCN70711, "Lunar-Pfeil: Verbessert").
+-define(SCN70721, "Mondklingen-Einschlag: Verbessert").
+-define(SCN70731, "Mondhell-Schuss: Verbessert").
+-define(SCN70741, "Mondhell-Unterstand: Verbessert").
+-define(SCN70751, "Lunar-Essenz: Verbessert").
+-define(SCN30701, "Lunar-Göttin: Aufgestiegen").
+-define(SCN30711, "Lunar-Pfeil: Aufgestiegen").
+-define(SCN30721, "Mondklingen-Einschlag: Aufgestiegen").
+-define(SCN30731, "Mondhell-Schuss: Aufgestiegen").
+-define(SCN30741, "Mondhell-Unterstand: Aufgestiegen").
+-define(SCN30751, "Lunar-Essenz: Aufgestiegen").
+-define(SCN80701, "Lunar-Göttin: Erwacht").
+-define(SCN80711, "Lunar-Pfeil: Erwacht").
+-define(SCN80721, "Mondklingen-Einschlag: Erwacht").
+-define(SCN80731, "Mondhell-Schuss: Erwacht").
+-define(SCN80741, "Mondhell-Unterstand: Erwacht").
+-define(SCN80751, "Lunar-Essenz: Erwacht").
+-define(SCD80701, "Gewährt Verbündeten nach einem erfolgreichen Morph {1} Sek.lang {0}% ANG.").
+-define(SCD80711, "Hat eine {0}% Chance, {2} Sek.lang Ziele zu durchbohren (VER -{1}%)").
+-define(SCD80721, "Die Fertigkeit fügt {1} Sek.lang Kniesehne (Bewegungs-GSW -{0}%) zu.").
+-define(SCD80731, "Betäuben-Dauer +{0} Sek.").
+-define(SCD80741, "SCH-Absorption des Schildes auf {0}% erhöht.").
+-define(SCD80751, "Bei Angriffen auf betäubte Gegner erhöht sich der SCH-Modifikator der Fertigkeit um {0}%.").
+-define(BCN4001, "").
+-define(BCD4001, "").
+-define(BCN4002, "").
+-define(BCD4002, "").
+-define(SCN64001, "").
+-define(SCD64001, "").
+-define(SCN64011, "").
+-define(SCD64011, "").
+-define(SCN64021, "").
+-define(SCD64021, "").
+-define(SCN64031, "").
+-define(SCD64031, "").
+-define(SCN64041, "").
+-define(SCD64041, "").
+-define(SCN64051, "").
+-define(SCD64051, "").
+-define(SCN64061, "").
+-define(SCD64061, "").
+-define(SCN64071, "").
+-define(SCD64071, "").
+-define(SCN64081, "").
+-define(SCD64081, "").
+-define(SCN64091, "").
+-define(SCD64091, "").
+-define(SN301001, "").
+-define(SCD61051, "").
+-define(SCD61061, "").
+-define(SCD62081, "").
+-define(SCD62091, "").
+-define(SCD63081, "").
+-define(SCD63091, "").
+-define(SCD64101, "").
+-define(SCD64111, "").
+-define(SCN193091, "").
+-define(SCD193091, "").
+-define(SCN193101, "").
+-define(SCD193101, "").
+-define(SCN193111, "").
+-define(SCD193111, "").
+-define(BCD1042, "").
+-define(BCD1052, "").
+-define(BCD1062, "").
+-define(SCD61032, "").
+-define(SCD61041, "").
+-define(BCD2032, "").
+-define(BCD2042, "").
+-define(SCD62031, "").
+-define(SCD62051, "").
+-define(SCD62072, "").
+-define(SCD63041, "").
+-define(SCD63051, "").
+-define(BCD3042, "").
+-define(BCD3052, "").
+-define(SCD81101, "").
+-define(SCN31201, "").
+-define(SCN71201, "").
+-define(SCN81201, "").
+-define(SCD81201, "").
+-define(SCN170441, "").
+-define(SCD170441, "").
+-define(SCN170451, "").
+-define(SCD170451, "").
+-define(SCN170461, "").
+-define(SCD170461, "").
+-define(SCN170471, "").
+-define(SCD170471, "").
+-endif.
+

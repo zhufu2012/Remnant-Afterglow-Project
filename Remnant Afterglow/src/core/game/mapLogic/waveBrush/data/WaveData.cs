@@ -5,18 +5,28 @@ using System.Collections.Generic;
 
 namespace Remnant_Afterglow
 {
-    //这是一个波次的数据
+    /// <summary>
+    /// 这是一个波次的数据
+    /// </summary>
     public class WaveData
     {
-        //波数配置
+        /// <summary>
+        /// 波数配置
+        /// </summary>
         public WaveBase cfgData;
-        //波数
+        /// <summary>
+        /// 波数
+        /// </summary>
         public int WaveId = 0;
 
 
-        //当前要刷新的组数-每次只加1
+        /// <summary>
+        /// 当前要刷新的组数-每次只加1
+        /// </summary>
         public int nowGroupId = 1;
-        //最大的可刷新组id-当刷新组大于这个id时，刷新结束
+        /// <summary>
+        /// 最大的可刷新组id-当刷新组大于这个id时，刷新结束
+        /// </summary>
         public int MaxGroupId;
         /// <summary>
         /// 上一次组刷新的帧数,分组刷新中为0表示还没开始刷新
@@ -39,17 +49,20 @@ namespace Remnant_Afterglow
             MaxGroupId = 0;//设置最大组号，
             switch (cfgData.WaveType)
             {
-                case 1:
-                    foreach(List<int> DataList in cfgData.WaveData)
+                case 1://固定方式刷怪
+                    foreach (List<int> DataList in cfgData.WaveData)
                     {
-                        if(DataList[0] > MaxGroupId)
+                        if (DataList[0] > MaxGroupId)
                             MaxGroupId = DataList[0];
                     }
-                    foreach(List<int> DataList in cfgData.WaveData2)
+                    foreach (List<int> DataList in cfgData.WaveData2)
                     {
-                        if(DataList[0] > MaxGroupId)
+                        if (DataList[0] > MaxGroupId)
                             MaxGroupId = DataList[0];
                     }
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -57,7 +70,7 @@ namespace Remnant_Afterglow
         /// 刷新敌人
         /// </summary>
         /// <returns><<怪物id,阵营id>,数量></returns>
-        public Dictionary<KeyValuePair<int, int>, int> GetUnitDict(double nowTime,double frameNumber)
+        public Dictionary<KeyValuePair<int, int>, int> GetUnitDict(double nowTime, double frameNumber)
         {
             Dictionary<KeyValuePair<int, int>, int> dict = new Dictionary<KeyValuePair<int, int>, int>();
             switch (cfgData.WaveType)
@@ -71,14 +84,14 @@ namespace Remnant_Afterglow
                     switch (cfgData.WaveWay)
                     {
                         case 1://全部一次性刷新
-                            foreach(List<int> DataList in list)
+                            foreach (List<int> DataList in list)
                             {
                                 dict[new KeyValuePair<int, int>(DataList[1], DataList[2])] = DataList[3];
                             }
                             is_flush_acc = true;
                             return dict;
                         case 2://分组刷新
-                            if(LastGroupFlushFrame==0 || frameNumber >= LastGroupFlushFrame + cfgData.WaveTime)//间隔足够时间后
+                            if (LastGroupFlushFrame == 0 || frameNumber >= LastGroupFlushFrame + cfgData.WaveTime)//间隔足够时间后
                             {
                                 if (!HistoryGroupList.Contains(nowGroupId))//历史刷新组数中不存在当前要刷新的组
                                 {

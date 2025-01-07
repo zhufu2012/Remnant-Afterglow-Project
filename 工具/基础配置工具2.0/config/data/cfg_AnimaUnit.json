@@ -44,5 +44,97 @@
         "IsAutoplay": false,
         "IsLoop": true,
         "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png"
+    },
+    {
+        "KEY_INDEX": "1003_1",
+        "ObjectId": 1003,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            20,
+            48
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "DurationMs": 16,
+        "FrameCount": 3,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png"
+    },
+    {
+        "KEY_INDEX": "1003_2",
+        "ObjectId": 1003,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            20,
+            48
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "DurationMs": 16,
+        "FrameCount": 3,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png"
+    },
+    {
+        "KEY_INDEX": "1009_1",
+        "ObjectId": 1009,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            63,
+            62
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "DurationMs": 20,
+        "FrameCount": 3,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B967F5BF18684EFFA6C6E0F02372A10A.png"
+    },
+    {
+        "KEY_INDEX": "1009_1",
+        "ObjectId": 1009,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            63,
+            62
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "DurationMs": 20,
+        "FrameCount": 3,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B967F5BF18684EFFA6C6E0F02372A10A.png"
     }
 ]

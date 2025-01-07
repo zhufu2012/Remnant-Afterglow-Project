@@ -28,16 +28,13 @@ namespace Remnant_Afterglow
         public BuildBase(int ObjectId) : base(ObjectId)
         {
             object_type = BaseObjectType.BaseBuild;
-            CampSubName = MapCamp.CampName_Build + Camp;
             InitData();//初始化配置
             InitChild();
         }
 
         /// <summary>
-        /// 根据配置id和阵营数据初始化配置数据
+        /// 根据实体id和阵营数据初始化配置数据
         /// </summary>
-        /// <param name="object_id"></param>
-        /// <param name="camp"></param>
         public void InitData()
         {
             CfgData = ConfigCache.GetBuildData("" + ObjectId);
@@ -53,6 +50,11 @@ namespace Remnant_Afterglow
             AddChild(AnimatedSprite);
         }
 
+        public override void InitView()
+        {
+            base.InitView();
+            AddToGroup(MapGroup.BuildGroup);
+        }
         /// <summary>
         /// 逻辑执行完成
         /// </summary>

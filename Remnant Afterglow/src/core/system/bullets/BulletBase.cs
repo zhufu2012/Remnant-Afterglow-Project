@@ -28,7 +28,7 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 阵营组参数
         /// </summary>
-        public string CampSubName;
+        public int Camp;
 
         #region 子弹配置数据
         /// <summary>
@@ -48,10 +48,11 @@ namespace Remnant_Afterglow
         /// 构造函数，初始化Mover实例，并设置其管理器。
         /// </summary>
         /// <param name="myBulletManager">管理此子弹的IBulletManager实例。</param>
-        public BulletBase(IBulletManager myBulletManager, string BulletLabel, BaseObject baseObject)
-            : base(myBulletManager, baseObject)
+        public BulletBase(IBulletManager myBulletManager, string BulletLabel, BaseObject targetObject, BaseObject createObject)
+            : base(myBulletManager, targetObject, createObject)
         {
             this.BulletLabel = BulletLabel;
+            Camp = createObject.Camp;
             bulletData = ConfigCache.GetBulletData(BulletLabel);
             bulletLogic = ConfigCache.GetBulletLogic(BulletLabel);
             bulletCollide = ConfigCache.GetBulletCollide(bulletData.CollideId);
@@ -135,14 +136,14 @@ namespace Remnant_Afterglow
             BulletNode = (Node2D)ResourceLoader.Load<PackedScene>(bulletData.ScenePath).Instantiate(); // 加载子弹场景
             BulletNode.ZIndex = 10;//祝福注释-之后得改，子弹绘图层
             
-            Area2D CollisionArea = BulletNode.GetNode<Area2D>("Area2D");
-            CollisionArea.CollisionMask = Common.CalculateMaskSum(bulletCollide.CollisionLayerList);
-            CollisionArea.CollisionLayer = Common.CalculateMaskSum(bulletCollide.CollisionLayerList);
-            CollisionArea.Monitoring = true;//不检测进入和离开区域，节省性能
-            CollisionArea.InputPickable = true;//节省性能
-            CollisionArea.AreaEntered += Area2DAreaEntered;
-            CollisionArea.AddToGroup("bullet");//祝福注释-测试1111111
-            //BulletNode.AddChild(CollisionArea);
+            Area2D Area = BulletNode.GetNode<Area2D>("Area2D");//祝福注释-碰撞体需要设置
+            Area.CollisionMask = Common.CalculateMaskSum(bulletCollide.CollisionLayerList);
+            Area.CollisionLayer = Common.CalculateMaskSum(bulletCollide.CollisionLayerList);
+            Area.Monitoring = true;//不检测进入和离开区域，节省性能
+            Area.InputPickable = true;//节省性能
+            Area.AreaEntered += Area2DAreaEntered;
+            Area.AddToGroup(MapGroup.BulletGroup);
+            Area.AddToGroup(""+Camp);
             ParentNode.AddChild(BulletNode); // 将子弹节点添加到父节点下
             Used = true; // 标记子弹为使用状态
         }

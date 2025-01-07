@@ -1,0 +1,37 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "EditImageSetId": 1,
+        "EditSetName": "图集1",
+        "MaterialIdList": [
+            2,
+            3,
+            6
+        ]
+    },
+    {
+        "KEY_INDEX": "2",
+        "EditImageSetId": 2,
+        "EditSetName": "图集2",
+        "MaterialIdList": [
+            4,
+            5
+        ]
+    },
+    {
+        "KEY_INDEX": "3",
+        "EditImageSetId": 3,
+        "EditSetName": "图集3",
+        "MaterialIdList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "4",
+        "EditImageSetId": 4,
+        "EditSetName": "图集4",
+        "MaterialIdList": [
+            7
+        ]
+    }
+]

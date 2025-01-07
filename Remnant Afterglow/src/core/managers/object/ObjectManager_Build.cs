@@ -27,8 +27,16 @@ namespace Remnant_Afterglow
             buildBase.Position = Pos;
             buildBase.ZIndex = 9;//祝福注释-这里地图层要改,先用着
             buildDict[buildBase.Logotype] = buildBase;
+            buildBase.MobKilled +=(BaseObject killObject,BaseObject casterObject) => BuildKilledAfter(killObject,casterObject);
             MapCopy.Instance.BuildNode.AddChild(buildBase);
             return buildBase;
+        }
+
+        //建筑死亡后处理
+        private void BuildKilledAfter(BaseObject killObject,BaseObject casterObject)
+        {
+
+            killObject.QueueFree();//此时才清空
         }
     }
 }

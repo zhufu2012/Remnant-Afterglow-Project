@@ -43,17 +43,19 @@ namespace Remnant_Afterglow
             LoadAnimaExplode();
             LoadSequenceMapBase();
             LoadSpeciallyEffect();
+            LoadMapFixedSet();
+            LoadMapFixedMaterial();
+            LoadGenerateFixedMap();
+            LoadMapPassType();
+            LoadMapEdge();
             LoadMapMassif();
             LoadMapImageLayer();
             LoadMapPhysicsLayer();
             LoadMapNavigate();
             LoadMapMaterial();
-            LoadGenerateFixedMap();
             LoadGenerateBottomMap();
             LoadMapExtraDraw();
             LoadGenerateBigStruct();
-            LoadMapPassType();
-            LoadMapEdge();
             LoadBigMapMaterial();
             LoadBigMapBase();
             LoadBigMapBigCell();
@@ -98,7 +100,7 @@ namespace Remnant_Afterglow
             LoadAttributeData();
             LoadAttrModifier();
             LoadMapBuildLable();
-            LoadMapBuildList();
+            LoadMapBuildItem();
             LoadBuildRule();
             LoadCampBase();
             LoadGameDiffBase();
@@ -2117,6 +2119,338 @@ namespace Remnant_Afterglow
             return list;
         }
         #endregion
+        #region 固定地图配置
+        /// <summary>
+        /// 固定地图图集 配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MapFixedSet> MapFixedSet_Cache = new Dictionary<string, MapFixedSet>();
+        /// <summary>
+        /// 提前加载所有固定地图图集 配置缓存
+        /// </summary>
+        public static void LoadMapFixedSet()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapFixedSet);
+            foreach (var val in cfg_dict)
+            {
+                MapFixedSet data = new MapFixedSet(val.Value);
+                data.InitData2();
+                MapFixedSet_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的固定地图图集 基础配置缓存
+        /// </summary>
+        public static MapFixedSet GetMapFixedSet(string cfgId)
+        {
+            if (!MapFixedSet_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapFixedSet(cfgId);
+                    data.InitData2();
+                    MapFixedSet_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedSet配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MapFixedSet GetMapFixedSet(int cfgId)
+        {
+            if (!MapFixedSet_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapFixedSet(cfgId);
+                    data.InitData2();
+                    MapFixedSet_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedSet配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有固定地图图集 数据
+        /// </summary>
+        public static List<MapFixedSet> GetAllMapFixedSet()
+        {
+            List<MapFixedSet> list = new List<MapFixedSet>();
+            foreach (var val in MapFixedSet_Cache)
+            {
+                list.Add(val.Value);
+            }
+            return list;
+        }
+        /// <summary>
+        /// 固定地图用材料配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MapFixedMaterial> MapFixedMaterial_Cache = new Dictionary<string, MapFixedMaterial>();
+        /// <summary>
+        /// 提前加载所有固定地图用材料配置缓存
+        /// </summary>
+        public static void LoadMapFixedMaterial()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapFixedMaterial);
+            foreach (var val in cfg_dict)
+            {
+                MapFixedMaterial data = new MapFixedMaterial(val.Value);
+                data.InitData2();
+                MapFixedMaterial_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的固定地图用材料基础配置缓存
+        /// </summary>
+        public static MapFixedMaterial GetMapFixedMaterial(string cfgId)
+        {
+            if (!MapFixedMaterial_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapFixedMaterial(cfgId);
+                    data.InitData2();
+                    MapFixedMaterial_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MapFixedMaterial GetMapFixedMaterial(int cfgId)
+        {
+            if (!MapFixedMaterial_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapFixedMaterial(cfgId);
+                    data.InitData2();
+                    MapFixedMaterial_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有固定地图用材料数据
+        /// </summary>
+        public static List<MapFixedMaterial> GetAllMapFixedMaterial()
+        {
+            List<MapFixedMaterial> list = new List<MapFixedMaterial>();
+            foreach (var val in MapFixedMaterial_Cache)
+            {
+                list.Add(val.Value);
+            }
+            return list;
+        }
+        /// <summary>
+        /// 固定地图配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, GenerateFixedMap> GenerateFixedMap_Cache = new Dictionary<string, GenerateFixedMap>();
+        /// <summary>
+        /// 提前加载所有固定地图配置配置缓存
+        /// </summary>
+        public static void LoadGenerateFixedMap()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateFixedMap);
+            foreach (var val in cfg_dict)
+            {
+                GenerateFixedMap data = new GenerateFixedMap(val.Value);
+                data.InitData2();
+                GenerateFixedMap_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的固定地图配置基础配置缓存
+        /// </summary>
+        public static GenerateFixedMap GetGenerateFixedMap(string cfgId)
+        {
+            if (!GenerateFixedMap_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new GenerateFixedMap(cfgId);
+                    data.InitData2();
+                    GenerateFixedMap_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static GenerateFixedMap GetGenerateFixedMap(int cfgId)
+        {
+            if (!GenerateFixedMap_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new GenerateFixedMap(cfgId);
+                    data.InitData2();
+                    GenerateFixedMap_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有固定地图配置数据
+        /// </summary>
+        public static List<GenerateFixedMap> GetAllGenerateFixedMap()
+        {
+            List<GenerateFixedMap> list = new List<GenerateFixedMap>();
+            foreach (var val in GenerateFixedMap_Cache)
+            {
+                list.Add(val.Value);
+            }
+            return list;
+        }
+        /// <summary>
+        /// 地图可通过类型配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MapPassType> MapPassType_Cache = new Dictionary<string, MapPassType>();
+        /// <summary>
+        /// 提前加载所有地图可通过类型配置缓存
+        /// </summary>
+        public static void LoadMapPassType()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapPassType);
+            foreach (var val in cfg_dict)
+            {
+                MapPassType data = new MapPassType(val.Value);
+                data.InitData2();
+                MapPassType_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的地图可通过类型基础配置缓存
+        /// </summary>
+        public static MapPassType GetMapPassType(string cfgId)
+        {
+            if (!MapPassType_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapPassType(cfgId);
+                    data.InitData2();
+                    MapPassType_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapPassType配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MapPassType GetMapPassType(int cfgId)
+        {
+            if (!MapPassType_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapPassType(cfgId);
+                    data.InitData2();
+                    MapPassType_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapPassType配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有地图可通过类型数据
+        /// </summary>
+        public static List<MapPassType> GetAllMapPassType()
+        {
+            List<MapPassType> list = new List<MapPassType>();
+            foreach (var val in MapPassType_Cache)
+            {
+                list.Add(val.Value);
+            }
+            return list;
+        }
+        /// <summary>
+        /// 地图边缘连接配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MapEdge> MapEdge_Cache = new Dictionary<string, MapEdge>();
+        /// <summary>
+        /// 提前加载所有地图边缘连接配置配置缓存
+        /// </summary>
+        public static void LoadMapEdge()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapEdge);
+            foreach (var val in cfg_dict)
+            {
+                MapEdge data = new MapEdge(val.Value);
+                data.InitData2();
+                MapEdge_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的地图边缘连接配置基础配置缓存
+        /// </summary>
+        public static MapEdge GetMapEdge(string cfgId)
+        {
+            if (!MapEdge_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapEdge(cfgId);
+                    data.InitData2();
+                    MapEdge_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapEdge配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MapEdge GetMapEdge(int cfgId)
+        {
+            if (!MapEdge_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapEdge(cfgId);
+                    data.InitData2();
+                    MapEdge_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapEdge配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有地图边缘连接配置数据
+        /// </summary>
+        public static List<MapEdge> GetAllMapEdge()
+        {
+            List<MapEdge> list = new List<MapEdge>();
+            foreach (var val in MapEdge_Cache)
+            {
+                list.Add(val.Value);
+            }
+            return list;
+        }
+        #endregion
         #region 图块相关
         /// <summary>
         /// 地图资源图集配置缓存
@@ -2387,11 +2721,11 @@ namespace Remnant_Afterglow
         #endregion
         #region 地图生成
         /// <summary>
-        /// 生成地图用材料配置缓存
+        /// 随机生成地图用材料配置缓存
         /// </summary>
         private static readonly Dictionary<string, MapMaterial> MapMaterial_Cache = new Dictionary<string, MapMaterial>();
         /// <summary>
-        /// 提前加载所有生成地图用材料配置缓存
+        /// 提前加载所有随机生成地图用材料配置缓存
         /// </summary>
         public static void LoadMapMaterial()
         {
@@ -2404,7 +2738,7 @@ namespace Remnant_Afterglow
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的生成地图用材料基础配置缓存
+        /// 加载或获取已缓存的随机生成地图用材料基础配置缓存
         /// </summary>
         public static MapMaterial GetMapMaterial(string cfgId)
         {
@@ -2441,78 +2775,12 @@ namespace Remnant_Afterglow
             return data;
         }
         /// <summary>
-        /// 获取加载的所有生成地图用材料数据
+        /// 获取加载的所有随机生成地图用材料数据
         /// </summary>
         public static List<MapMaterial> GetAllMapMaterial()
         {
             List<MapMaterial> list = new List<MapMaterial>();
             foreach (var val in MapMaterial_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 固定地图配置配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, GenerateFixedMap> GenerateFixedMap_Cache = new Dictionary<string, GenerateFixedMap>();
-        /// <summary>
-        /// 提前加载所有固定地图配置配置缓存
-        /// </summary>
-        public static void LoadGenerateFixedMap()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateFixedMap);
-            foreach (var val in cfg_dict)
-            {
-                GenerateFixedMap data = new GenerateFixedMap(val.Value);
-                data.InitData2();
-                GenerateFixedMap_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的固定地图配置基础配置缓存
-        /// </summary>
-        public static GenerateFixedMap GetGenerateFixedMap(string cfgId)
-        {
-            if (!GenerateFixedMap_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new GenerateFixedMap(cfgId);
-                    data.InitData2();
-                    GenerateFixedMap_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("地图生成.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static GenerateFixedMap GetGenerateFixedMap(int cfgId)
-        {
-            if (!GenerateFixedMap_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new GenerateFixedMap(cfgId);
-                    data.InitData2();
-                    GenerateFixedMap_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("地图生成.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有固定地图配置数据
-        /// </summary>
-        public static List<GenerateFixedMap> GetAllGenerateFixedMap()
-        {
-            List<GenerateFixedMap> list = new List<GenerateFixedMap>();
-            foreach (var val in GenerateFixedMap_Cache)
             {
                 list.Add(val.Value);
             }
@@ -2711,138 +2979,6 @@ namespace Remnant_Afterglow
         {
             List<GenerateBigStruct> list = new List<GenerateBigStruct>();
             foreach (var val in GenerateBigStruct_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 地图可通过类型配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, MapPassType> MapPassType_Cache = new Dictionary<string, MapPassType>();
-        /// <summary>
-        /// 提前加载所有地图可通过类型配置缓存
-        /// </summary>
-        public static void LoadMapPassType()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapPassType);
-            foreach (var val in cfg_dict)
-            {
-                MapPassType data = new MapPassType(val.Value);
-                data.InitData2();
-                MapPassType_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的地图可通过类型基础配置缓存
-        /// </summary>
-        public static MapPassType GetMapPassType(string cfgId)
-        {
-            if (!MapPassType_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapPassType(cfgId);
-                    data.InitData2();
-                    MapPassType_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("地图生成.xlsx表中的 cfg_MapPassType配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static MapPassType GetMapPassType(int cfgId)
-        {
-            if (!MapPassType_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapPassType(cfgId);
-                    data.InitData2();
-                    MapPassType_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("地图生成.xlsx表中的 cfg_MapPassType配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有地图可通过类型数据
-        /// </summary>
-        public static List<MapPassType> GetAllMapPassType()
-        {
-            List<MapPassType> list = new List<MapPassType>();
-            foreach (var val in MapPassType_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 地图边缘连接配置配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, MapEdge> MapEdge_Cache = new Dictionary<string, MapEdge>();
-        /// <summary>
-        /// 提前加载所有地图边缘连接配置配置缓存
-        /// </summary>
-        public static void LoadMapEdge()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapEdge);
-            foreach (var val in cfg_dict)
-            {
-                MapEdge data = new MapEdge(val.Value);
-                data.InitData2();
-                MapEdge_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的地图边缘连接配置基础配置缓存
-        /// </summary>
-        public static MapEdge GetMapEdge(string cfgId)
-        {
-            if (!MapEdge_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapEdge(cfgId);
-                    data.InitData2();
-                    MapEdge_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("地图生成.xlsx表中的 cfg_MapEdge配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static MapEdge GetMapEdge(int cfgId)
-        {
-            if (!MapEdge_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapEdge(cfgId);
-                    data.InitData2();
-                    MapEdge_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("地图生成.xlsx表中的 cfg_MapEdge配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有地图边缘连接配置数据
-        /// </summary>
-        public static List<MapEdge> GetAllMapEdge()
-        {
-            List<MapEdge> list = new List<MapEdge>();
-            foreach (var val in MapEdge_Cache)
             {
                 list.Add(val.Value);
             }
@@ -5791,66 +5927,66 @@ namespace Remnant_Afterglow
             return list;
         }
         /// <summary>
-        /// 建造子列表配置缓存
+        /// 建造项数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, MapBuildList> MapBuildList_Cache = new Dictionary<string, MapBuildList>();
+        private static readonly Dictionary<string, MapBuildItem> MapBuildItem_Cache = new Dictionary<string, MapBuildItem>();
         /// <summary>
-        /// 提前加载所有建造子列表配置缓存
+        /// 提前加载所有建造项数据配置缓存
         /// </summary>
-        public static void LoadMapBuildList()
+        public static void LoadMapBuildItem()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapBuildList);
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapBuildItem);
             foreach (var val in cfg_dict)
             {
-                MapBuildList data = new MapBuildList(val.Value);
+                MapBuildItem data = new MapBuildItem(val.Value);
                 data.InitData2();
-                MapBuildList_Cache.Add(val.Key, data);
+                MapBuildItem_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的建造子列表基础配置缓存
+        /// 加载或获取已缓存的建造项数据基础配置缓存
         /// </summary>
-        public static MapBuildList GetMapBuildList(string cfgId)
+        public static MapBuildItem GetMapBuildItem(string cfgId)
         {
-            if (!MapBuildList_Cache.TryGetValue(cfgId, out var data))
+            if (!MapBuildItem_Cache.TryGetValue(cfgId, out var data))
             {
                 try
                 {
-                    data = new MapBuildList(cfgId);
+                    data = new MapBuildItem(cfgId);
                     data.InitData2();
-                    MapBuildList_Cache.Add(cfgId, data);
+                    MapBuildItem_Cache.Add(cfgId, data);
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_MapBuildList配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_MapBuildItem配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
-        public static MapBuildList GetMapBuildList(int cfgId)
+        public static MapBuildItem GetMapBuildItem(int cfgId)
         {
-            if (!MapBuildList_Cache.TryGetValue("" + cfgId, out var data))
+            if (!MapBuildItem_Cache.TryGetValue("" + cfgId, out var data))
             {
                 try
                 {
-                    data = new MapBuildList(cfgId);
+                    data = new MapBuildItem(cfgId);
                     data.InitData2();
-                    MapBuildList_Cache.Add("" + cfgId, data);
+                    MapBuildItem_Cache.Add("" + cfgId, data);
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_MapBuildList配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_MapBuildItem配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有建造子列表数据
+        /// 获取加载的所有建造项数据数据
         /// </summary>
-        public static List<MapBuildList> GetAllMapBuildList()
+        public static List<MapBuildItem> GetAllMapBuildItem()
         {
-            List<MapBuildList> list = new List<MapBuildList>();
-            foreach (var val in MapBuildList_Cache)
+            List<MapBuildItem> list = new List<MapBuildItem>();
+            foreach (var val in MapBuildItem_Cache)
             {
                 list.Add(val.Value);
             }
@@ -6368,17 +6504,19 @@ namespace Remnant_Afterglow
             AnimaExplode_Cache.Clear();
             SequenceMapBase_Cache.Clear();
             SpeciallyEffect_Cache.Clear();
+            MapFixedSet_Cache.Clear();
+            MapFixedMaterial_Cache.Clear();
+            GenerateFixedMap_Cache.Clear();
+            MapPassType_Cache.Clear();
+            MapEdge_Cache.Clear();
             MapMassif_Cache.Clear();
             MapImageLayer_Cache.Clear();
             MapPhysicsLayer_Cache.Clear();
             MapNavigate_Cache.Clear();
             MapMaterial_Cache.Clear();
-            GenerateFixedMap_Cache.Clear();
             GenerateBottomMap_Cache.Clear();
             MapExtraDraw_Cache.Clear();
             GenerateBigStruct_Cache.Clear();
-            MapPassType_Cache.Clear();
-            MapEdge_Cache.Clear();
             BigMapMaterial_Cache.Clear();
             BigMapBase_Cache.Clear();
             BigMapBigCell_Cache.Clear();
@@ -6423,7 +6561,7 @@ namespace Remnant_Afterglow
             AttributeData_Cache.Clear();
             AttrModifier_Cache.Clear();
             MapBuildLable_Cache.Clear();
-            MapBuildList_Cache.Clear();
+            MapBuildItem_Cache.Clear();
             BuildRule_Cache.Clear();
             CampBase_Cache.Clear();
             GameDiffBase_Cache.Clear();

@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://e3smuylngipo"]
+
+[ext_resource type="Script" path="res://src/core/game/mapLogic/operation/MapOpManager.cs" id="1_uiong"]
+[ext_resource type="Texture2D" uid="uid://dgwuwto1gc5pw" path="res://icon.svg" id="2_qqvxw"]
+[ext_resource type="Texture2D" uid="uid://dtowx50k8t5e4" path="res://ui/View/资源列表-主要显示窗口.png" id="3_cb6gu"]
+
+[node name="MapOpManager" type="CanvasLayer"]
+script = ExtResource("1_uiong")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Map_Setting_1" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("2_qqvxw")
+expand_mode = 1
+
+[node name="Map_PlayerNameList" type="ScrollContainer" parent="Control"]
+layout_mode = 1
+offset_left = -1.0
+offset_top = 118.0
+offset_right = 119.0
+offset_bottom = 238.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Map_PlayerNameList"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Map_ItemView_Img_3" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_top = 836.0
+offset_right = 77.0
+offset_bottom = 914.0
+texture = ExtResource("2_qqvxw")
+expand_mode = 1
+
+[node name="Map_ItemView_Img_4" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 1003.0
+offset_right = 243.0
+offset_bottom = 1080.0
+texture = ExtResource("2_qqvxw")
+expand_mode = 1
+
+[node name="Map_ItemView_Img_5" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_top = 914.0
+offset_right = 165.0
+offset_bottom = 1080.0
+texture = ExtResource("2_qqvxw")
+expand_mode = 1
+
+[node name="Map_Resources_1" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 7.0
+offset_right = 1622.0
+offset_bottom = 122.0
+texture = ExtResource("3_cb6gu")
+expand_mode = 1

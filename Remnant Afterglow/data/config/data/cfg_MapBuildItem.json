@@ -1,0 +1,26 @@
+[
+    {
+        "KEY_INDEX": "5_1",
+        "BuildLableId": 5,
+        "BuildItemId": "1",
+        "ObjectId": 2001,
+        "ShowCondition": [],
+        "LablePng": "./data/config/images/ID_216C9AC289C04598AEF6653A324D1F99.png"
+    },
+    {
+        "KEY_INDEX": "5_2",
+        "BuildLableId": 5,
+        "BuildItemId": "2",
+        "ObjectId": 2002,
+        "ShowCondition": [],
+        "LablePng": "./data/config/images/ID_94C07D55217F41E2AEF254DC03BF1903.png"
+    },
+    {
+        "KEY_INDEX": "5_3",
+        "BuildLableId": 5,
+        "BuildItemId": "3",
+        "ObjectId": 2003,
+        "ShowCondition": [],
+        "LablePng": "./data/config/images/ID_40AF941EE7F74302BCA0EE0DF67C8151.png"
+    }
+]

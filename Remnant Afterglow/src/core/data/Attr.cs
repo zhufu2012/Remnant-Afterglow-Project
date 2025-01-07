@@ -45,12 +45,16 @@ namespace Remnant_Afterglow
         /// </summary>
         public static string Attr_40 = "40";
         /// <summary>
-        /// 属性id 41  实体 旋转速度
+        /// 属性id 41  实体 移动加速度
         /// </summary>
         public static string Attr_41 = "41";
+        /// <summary>
+        /// 属性id 42  实体 旋转速度
+        /// </summary>
+        public static string Attr_42 = "42";
 
         /// <summary>
-        /// 属性id 51  实体 炮塔旋转速度上限
+        /// 属性id 51  实体 炮塔旋转速度
         /// </summary>
         public static string Attr_51 = "51";
         /// <summary>
@@ -61,15 +65,15 @@ namespace Remnant_Afterglow
 
         #region 建造相关
         /// <summary>
-        /// 属性id 10  实体 建造时间
+        /// 属性id 101  实体 建造时间
         /// </summary>
         public static string Attr_101 = "101";
         /// <summary>
-        /// 属性id 10  实体 重建时间
+        /// 属性id 102  实体 重建时间
         /// </summary>
         public static string Attr_102 = "102";
         /// <summary>
-        /// 属性id 10  实体 升级时间
+        /// 属性id 103  实体 升级时间
         /// </summary>
         public static string Attr_103 = "103";
         /// <summary>

@@ -19,21 +19,33 @@ namespace Remnant_Afterglow
     //-祝福注释-似乎还有问题需要完善
     public partial class WaveBrushSystem : GameModel
     {
-        //关卡刷怪配置
+        /// <summary>
+        /// 关卡刷怪配置
+        /// </summary>
         public CopyBrush cfgData;
 
-        //副本刷新状态
+        /// <summary>
+        /// 副本刷新状态
+        /// </summary>
         public BrushState brushState;
 
-        //当前地图时间 单位秒
+        /// <summary>
+        /// 当前地图时间 单位秒
+        /// </summary>
         public double nowTime = 0;
-        //当前地图帧数 单位帧
+        /// <summary>
+        /// 当前地图帧数 单位帧
+        /// </summary>
         public double frameNumber = 0;
 
-        //当前波数，0表示未开始刷新
+        /// <summary>
+        /// 当前波数，0表示未开始刷新
+        /// </summary>
         public int NowWave = 0;
 
-        //刷新点列表
+        /// <summary>
+        /// 刷新点列表
+        /// </summary>
         public Dictionary<int, BrushPoint> brushPointDict = new Dictionary<int, BrushPoint>();
 
         /// <summary>
@@ -72,7 +84,9 @@ namespace Remnant_Afterglow
         /// </summary>
         public bool is_after_time = false;
 
-        //当前波数刷完了
+        /// <summary>
+        /// 当前波数刷完了
+        /// </summary>
         public bool is_now_end = false;
         /// <summary>
         /// 是否全部已经刷怪完了
@@ -97,7 +111,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public MapCopy mainCopy;
 
-        public WaveBrushSystem(int ChapterId, int CopyId)
+        public WaveBrushSystem(Node2D LineShowNode, int ChapterId, int CopyId) : base(LineShowNode)
         {
             this.ChapterId = ChapterId;
             this.CopyId = CopyId;
@@ -147,7 +161,7 @@ namespace Remnant_Afterglow
                 {
                     case 1://矩形刷新 (Widht,Height)
                         Line2D line = new Line2D();
-                        line.AddToGroup(MapCamp.LineGroupName_1);
+                        line.AddToGroup(MapGroup.LineGroupName_1);
                         line.ZIndex = 3;//祝福注释-这里要看看
                         List<Vector2I> vector_list = PolygonDict[brushId];
                         line.Closed = true;//如果为 true 并且折线有超过2个点，则最后一个点和第一个点将通过线段连接
@@ -156,7 +170,7 @@ namespace Remnant_Afterglow
                             line.AddPoint(vec);
                         }
                         line.Visible = brushCfg.BrushShowType;//是否显示刷新点边界
-                        AddChild(line);
+                        ShowNode.AddChild(line);
                         break;
                     case 2://表示圆形刷新
                         break;
@@ -234,16 +248,13 @@ namespace Remnant_Afterglow
             if (NowWave > 0 && NowWave <= cfgData.AllWave && is_all_end == false)//波数大于0并且 当前波数小于等于配置总波数
             {
                 flush_time += delta;//刷新间隔增加
-
-
-
-
-                if (is_after_time)//是否在刷新间隔中,是刷新间隔就继续增加
+                if (flush_time >= BrushSpaceList[NowWave])//刷新间隔时长达到
                 {
-                    if (flush_time >= BrushSpaceList[NowWave])//刷新间隔时长达到
-                        is_after_time = false;
-                    else
-                        return dict;
+                    is_after_time = false;
+                }
+                else
+                {
+                    is_after_time = true;
                 }
                 if (is_after_time == false)//不在刷新间隔就直接刷新怪物，并且进入刷新间隔
                 {

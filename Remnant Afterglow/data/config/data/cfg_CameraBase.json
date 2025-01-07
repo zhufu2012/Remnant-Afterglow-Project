@@ -44,7 +44,7 @@
             324.0
         ],
         "IsMove": true,
-        "MoveSpeed": 1000,
+        "MoveSpeed": 2000,
         "StartZoom": [
             1.0,
             1.0

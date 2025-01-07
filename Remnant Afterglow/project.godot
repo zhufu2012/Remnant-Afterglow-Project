@@ -16,7 +16,7 @@ config/name_localized={
 }
 run/main_scene="res://src/core/ui/MainView.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://失落核心2.png"
 
 [autoload]
 

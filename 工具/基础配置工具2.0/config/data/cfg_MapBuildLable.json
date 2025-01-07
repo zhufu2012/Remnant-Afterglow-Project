@@ -2,31 +2,31 @@
     {
         "KEY_INDEX": "1",
         "BuildLableId": 1,
-        "LableName": "",
+        "LableName": "开采",
         "LablePng": "./data/config/images/ID_59465D3B3717405FB20D241F7CFFC4C9.png"
     },
     {
         "KEY_INDEX": "2",
         "BuildLableId": 2,
-        "LableName": "",
+        "LableName": "防御",
         "LablePng": "./data/config/images/ID_5D4FD0E852C14E7D83AE943516AB0EB3.png"
     },
     {
         "KEY_INDEX": "3",
         "BuildLableId": 3,
-        "LableName": "",
+        "LableName": "支援",
         "LablePng": "./data/config/images/ID_0639D8380C414212979CD3E7DC9D60F0.png"
     },
     {
         "KEY_INDEX": "4",
         "BuildLableId": 4,
-        "LableName": "",
+        "LableName": "科技",
         "LablePng": "./data/config/images/ID_0A524891827A4B2C82BE392962C31AED.png"
     },
     {
         "KEY_INDEX": "5",
         "BuildLableId": 5,
-        "LableName": "",
+        "LableName": "武器",
         "LablePng": "./data/config/images/ID_C6FB81221F8045A583BD9F30371A94B5.png"
     }
 ]

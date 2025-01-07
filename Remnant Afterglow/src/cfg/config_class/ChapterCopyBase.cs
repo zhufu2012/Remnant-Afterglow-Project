@@ -23,8 +23,8 @@ namespace Remnant_Afterglow
         public int CopyUiId { get; set; }
         /// <summary>        
         /// 关卡类型
-        ///1 常规刷怪关
-        ///2 点击奖励关
+        ///0 常规刷怪关
+        ///1 点击奖励关
         /// </summary>
         public int CopyType { get; set; }
         /// <summary>        

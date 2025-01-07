@@ -497,6 +497,74 @@
             }
         },
         {
+            "file_name": "cfg_MapFixedSet",
+            "file_path": "./data/config/data/cfg_MapFixedSet.json",
+            "xlsx_dec": "固定地图图集 ",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "EditImageSetId": "int",
+                "EditSetName": "string",
+                "MaterialIdList": "List<int>"
+            }
+        },
+        {
+            "file_name": "cfg_MapFixedMaterial",
+            "file_path": "./data/config/data/cfg_MapFixedMaterial.json",
+            "xlsx_dec": "固定地图用材料",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "MaterialId": "int",
+                "MaterialName": "string",
+                "PassTypeId": "int",
+                "ImageSetId": "int",
+                "ImageSetIndex": "int",
+                "CollisionPolygon": "List<List<int>>",
+                "IsEdge": "bool",
+                "PreviewColor": "Color",
+                "Parame": "float"
+            }
+        },
+        {
+            "file_name": "cfg_GenerateFixedMap",
+            "file_path": "./data/config/data/cfg_GenerateFixedMap.json",
+            "xlsx_dec": "固定地图配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "MapId": "int",
+                "MapName": "string",
+                "MapDescribe": "string",
+                "MapPath": "string"
+            }
+        },
+        {
+            "file_name": "cfg_MapPassType",
+            "file_path": "./data/config/data/cfg_MapPassType.json",
+            "xlsx_dec": "地图可通过类型",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "PassTypeId": "int",
+                "IsPass": "bool",
+                "ExamineType": "int",
+                "PassCost": "int",
+                "Type": "int",
+                "PassSpeedParm": "float",
+                "BuildInfluence": "string",
+                "UnitInfluence": "string"
+            }
+        },
+        {
+            "file_name": "cfg_MapEdge",
+            "file_path": "./data/config/data/cfg_MapEdge.json",
+            "xlsx_dec": "地图边缘连接配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "MaterialId": "int",
+                "EdgeId": "int",
+                "ImageSetId": "int",
+                "ImageSetIndex": "int"
+            }
+        },
+        {
             "file_name": "cfg_MapImageSet",
             "file_path": "./data/config/data/cfg_MapImageSet.json",
             "xlsx_dec": "地图图像集",
@@ -565,7 +633,7 @@
         {
             "file_name": "cfg_MapMaterial",
             "file_path": "./data/config/data/cfg_MapMaterial.json",
-            "xlsx_dec": "生成地图用材料",
+            "xlsx_dec": "随机生成地图用材料",
             "key_list": {
                 "KEY_INDEX": "string",
                 "MaterialId": "int",
@@ -578,18 +646,6 @@
                 "IsEdge": "bool",
                 "PreviewColor": "Color",
                 "Parame": "float"
-            }
-        },
-        {
-            "file_name": "cfg_GenerateFixedMap",
-            "file_path": "./data/config/data/cfg_GenerateFixedMap.json",
-            "xlsx_dec": "固定地图配置",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "MapId": "int",
-                "MapName": "string",
-                "MapDescribe": "string",
-                "MapPath": "string"
             }
         },
         {
@@ -667,34 +723,6 @@
                 "SeedTypeId": "int",
                 "MaterialIdList": "List<List<int>>",
                 "BigStructIdList": "List<int>"
-            }
-        },
-        {
-            "file_name": "cfg_MapPassType",
-            "file_path": "./data/config/data/cfg_MapPassType.json",
-            "xlsx_dec": "地图可通过类型",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "PassTypeId": "int",
-                "IsPass": "bool",
-                "ExamineType": "int",
-                "PassCost": "int",
-                "Type": "int",
-                "PassSpeedParm": "float",
-                "BuildInfluence": "string",
-                "UnitInfluence": "string"
-            }
-        },
-        {
-            "file_name": "cfg_MapEdge",
-            "file_path": "./data/config/data/cfg_MapEdge.json",
-            "xlsx_dec": "地图边缘连接配置",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "MaterialId": "int",
-                "EdgeId": "int",
-                "ImageSetId": "int",
-                "ImageSetIndex": "int"
             }
         },
         {
@@ -886,6 +914,7 @@
                 "WaveWay": "int",
                 "WaveDes": "string",
                 "WaveData": "List<List<int>>",
+                "WaveData2": "List<List<int>>",
                 "WaveRandData": "List<List<int>>",
                 "WaveTime": "int"
             }
@@ -1316,15 +1345,15 @@
             }
         },
         {
-            "file_name": "cfg_MapBuildList",
-            "file_path": "./data/config/data/cfg_MapBuildList.json",
-            "xlsx_dec": "建造子列表",
+            "file_name": "cfg_MapBuildItem",
+            "file_path": "./data/config/data/cfg_MapBuildItem.json",
+            "xlsx_dec": "建造项数据",
             "key_list": {
                 "KEY_INDEX": "string",
                 "BuildLableId": "int",
-                "BuildListId": "string",
-                "Type": "int",
-                "Id": "int",
+                "BuildItemId": "string",
+                "ObjectId": "int",
+                "ShowCondition": "List<List<int>>",
                 "LablePng": "Texture2D"
             }
         },
@@ -1397,7 +1426,6 @@
                 "MoneyId": "int",
                 "MoneyType": "int",
                 "MoneyName": "string",
-                "MoneyDescribe": "string",
                 "NowValue": "float",
                 "Max": "float",
                 "Min": "float",

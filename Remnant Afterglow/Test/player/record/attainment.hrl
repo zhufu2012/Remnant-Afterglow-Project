@@ -1,0 +1,415 @@
+%%%-------------------------------------------------------------------
+%%% @author wangqing
+%%% @copyright (C) 2018, Double Game
+%%% @doc	任务成就
+%%% @end
+%%% Created : 2018-09-19 15:00
+%%%-------------------------------------------------------------------
+-ifndef(attainment_hrl).
+-define(attainment_hrl, 1).
+
+-define(Attainments_Type_AttPoint, 101).          		%% 成就点[成就点的数量] ------
+-define(Attainments_Type_Level, 102).             		%% 玩家等级[人物的等级] --------
+-define(Attainments_Type_WingLv, 103).            		%% 翅膀等级[数量,翅膀的等级]
+-define(Attainments_Type_WingStar, 104).          		%% 翅膀升星[数量,翅膀的星级]
+-define(Attainments_Type_WingFeather, 105).       		%% 翅膀羽化[数量,翅膀的羽化等级] TODO 废弃
+-define(Attainments_Type_WingSublimate, 106).     		%% 翅膀炼魂[数量,翅膀的炼魂等级] TODO 废弃
+-define(Attainments_Type_YilingPill, 107).    		   	%% 翼灵嗑丹[数量,翅膀的嗑丹类型（丹药道具ID）] TODO 废弃
+-define(Attainments_Type_YilingLv, 108).          		%% 翼灵等级[翼灵的等级]
+-define(Attainments_Type_FWingLv, 109).           		%% 飞翼升级[飞翼的等级] TODO 废弃
+-define(Attainments_Type_WingCount, 110).  	     		%% 翅膀数量[数量,品质]
+-define(Attainments_Type_CareerLv, 111).				%% 转职次数(转职等级)[转职次数] --------
+-define(Attainments_Type_MountLv, 112).					%% 坐骑等级[数量,坐骑的等级] TODO 废弃
+-define(Attainments_Type_MountStar, 113).				%% 坐骑升星[数量,坐骑的星级]
+-define(Attainments_Type_MountFeather, 114).			%% 坐骑羽化[数量,坐骑的羽化等级] TODO 废弃
+-define(Attainments_Type_MountSublimate, 115).			%% 坐骑炼魂[数量,坐骑的炼魂等级] TODO 废弃
+-define(Attainments_Type_MountPill, 116).				%% 坐骑磕丹[数量,坐骑的嗑丹类型（丹药道具ID）] TODO 废弃
+-define(Attainments_Type_MountSoulLv, 117).				%% 兽灵等级[兽灵的等级]
+-define(Attainments_Type_MountCount, 118).				%% 坐骑数量[数量]
+-define(Attainments_Type_PetLv, 119).					%% 宠物等级[数量,宠物的等级]
+-define(Attainments_Type_PetStar, 120).					%% 宠物星级[数量,宠物的星级]
+-define(Attainments_Type_PetFeather, 121).				%% 宠物羽化[数量,宠物的羽化等级] TODO 废弃
+-define(Attainments_Type_PetSublimate, 122).			%% 宠物炼魂[数量,宠物的炼魂等级] TODO 废弃
+-define(Attainments_Type_PetPill, 123).					%% 宠物磕丹[数量,宠物的嗑丹类型（丹药道具ID）] TODO 废弃
+-define(Attainments_Type_PetSoulLv, 124).				%% 魔灵等级[魔灵的等级] TODO 废弃
+-define(Attainments_Type_PetCount, 125).				%% 宠物数量[数量] TODO 废弃
+-define(Attainments_Type_EqIntensify, 126).				%% 装备强化[数量,强化等级]
+-define(Attainments_Type_EqAdd, 127).					%% 装备追加[数量,追加等级]
+-define(Attainments_Type_EqRefine, 128).				%% 装备洗练[洗练属性的条数,洗练属性的品质] TODO 废弃
+-define(Attainments_Type_EqGem, 129).					%% 装备宝石[数量,宝石等级] TODO 废弃
+-define(Attainments_Type_GemRefine, 130).				%% 宝石精炼[部位数量,宝石精炼等级] TODO 废弃
+-define(Attainments_Type_EqSuit, 131).					%% 装备套装[套装件数,装备阶数,套装攻防类型（1,攻击类 2 防御类）,套装级别（1普通，2完美）]
+-define(Attainments_Type_EqBase1, 132).					%% 装备基础(固定件数,品质，星级)[件数,装备的品质,装备的星级] TODO 废弃
+-define(Attainments_Type_EqBase2, 133).					%% 装备基础(固定件数,部位)[件数,装备的部位（默认）] TODO 废弃
+-define(Attainments_Type_HolyLv, 134).					%% 圣物等级[数量,圣物的等级]
+-define(Attainments_Type_HolyStar, 135).				%% 圣物星级[数量,圣物的星级] TODO 废弃
+-define(Attainments_Type_HolyRefine, 136).				%% 圣物精炼[数量,圣物的精炼等级] TODO 废弃
+-define(Attainments_Type_HolyPill, 137).				%% 圣物磕丹[数量] TODO 废弃
+-define(Attainments_Type_HolyCount, 138).				%% 圣物数量[数量]
+-define(Attainments_Type_HolySoulLv, 139).				%% 圣灵等级[数量,圣灵的等级] TODO 废弃
+-define(Attainments_Type_GDMainCount, 140).				%% 主战龙神数量[数量] TODO 废弃
+-define(Attainments_Type_GDMainLv, 141).				%% 主战龙神阶数[数量,主战龙神的等级] TODO 废弃
+-define(Attainments_Type_GDMainStar, 142).				%% 主战龙神星级[数量,主战龙神的星级] TODO 废弃
+-define(Attainments_Type_GDElfCount, 143).				%% 精灵龙神数量[数量] TODO 废弃
+-define(Attainments_Type_GDElfLv, 144).					%% 精灵龙神阶数[数量,精灵龙神的等级] TODO 废弃
+-define(Attainments_Type_GDElfStar, 145).				%% 精灵龙神星级[数量,精灵龙神的星级] TODO 废弃
+-define(Attainments_Type_GDWeaponCount, 146).			%% 天神武器数量[数量]
+-define(Attainments_Type_GDWeaponLv, 147).				%% 龙神武器等级(觉醒)[数量,龙神武器的等级] TODO 废弃
+-define(Attainments_Type_GDConsCount, 148).				%% 龙神秘典数量[数量] TODO 废弃
+-define(Attainments_Type_GDConsLv, 149).				%% 龙神秘典等级(觉醒)[数量,龙神秘典的等级] TODO 废弃
+-define(Attainments_Type_RuneCount, 150).				%% 镶嵌龙印数量[数量,品质] TODO 废弃
+-define(Attainments_Type_RuneIntLv, 151).				%% 龙印强化等级[数量,龙印等级] TODO 废弃
+-define(Attainments_Type_RuneSyn, 152).					%% 龙印合成[数量,品质] TODO 废弃
+-define(Attainments_Type_RuneUp, 153).					%% 龙印晋升[数量,品质] TODO 废弃
+-define(Attainments_Type_SoulCount, 154).				%% 聚魂数量[数量,品质] TODO 废弃
+-define(Attainments_Type_SoulIntLv, 155).				%% 聚魂强化等级[数量,聚魂等级] TODO 废弃
+-define(Attainments_Type_SoulSyn, 156).					%% 聚魂合成[数量,品质] TODO 废弃
+-define(Attainments_Type_SoulUp, 157).					%% 聚魂晋升[数量,品质] TODO 废弃
+-define(Attainments_Type_Card1, 158).					%% 图鉴相关1(数量，星级，品质)[图鉴的激活数量,图鉴的星级,图鉴的品质] TODO 废弃
+-define(Attainments_Type_Card2, 159).					%% 图鉴相关2(数量，品质)[图鉴的数量,图鉴的品质] TODO 废弃
+-define(Attainments_Type_Card3, 160).					%% 图鉴相关3(数量)[图鉴的数量,图鉴的星级] TODO 废弃
+-define(Attainments_Type_RingCount, 161).				%% 信物数量[信物激活数量]
+-define(Attainments_Type_RingLv, 162).					%% 信物等级[数量,信物的等级]
+-define(Attainments_Type_RingRefine, 163).				%% 信物洗练[数量,信物的洗练等级]
+-define(Attainments_Type_AstroEqCount, 164).			%% 神祇装备数量[数量,品质] TODO 废弃
+-define(Attainments_Type_AstroEqInt, 165).				%% 神祇装备强化[数量,神祇的装备强化等级] TODO 废弃
+-define(Attainments_Type_AstroCount, 166).				%% 激活神器数量[神祇的激活数量] TODO 废弃
+-define(Attainments_Type_DungeonStoryChapter, 167).		%% 剧情本章节[次数,副本ID,星级]
+-define(Attainments_Type_PagodaLv, 168).				%% 龙神塔层数[通关最高层数] TODO 废弃
+-define(Attainments_Type_DungeonPetCount, 169).			%% 通关宠物副本次数[次数,副本ID,星级] TODO 废弃
+-define(Attainments_Type_DungeonMountCount, 170).		%% 通关坐骑副本次数[次数,副本ID,星级]
+-define(Attainments_Type_DungeonWingCount, 171).		%% 通关翅膀副本次数[次数,副本ID,星级] TODO 废弃
+-define(Attainments_Type_DungeonGDCount, 172).			%% 通关龙神副本次数[次数,副本ID,星级] TODO 废弃
+-define(Attainments_Type_DungeonHolyCount, 173).		%% 通关圣物副本次数[次数,副本ID,星级] TODO 废弃
+-define(Attainments_Type_DungeonGDConsCount, 174).		%% 通关龙神秘典副本次数[次数,副本ID,星级] TODO 废弃
+-define(Attainments_Type_DungeonPreDepositsCount, 175).	%% 通关矮人宝藏副本次数[次数,副本ID,星级] TODO 废弃
+-define(Attainments_Type_DungeonDepositsCount, 176).	%% 通关精灵宝库副本次数[次数,副本ID] TODO 废弃
+-define(Attainments_Type_ArenaWinCount, 177).			%% 竞技场胜利次数[竞技场胜利次数]
+-define(Attainments_Type_ArenaTop, 178).				%% 竞技场排名[固定次数,竞技场最高排名] TODO 废弃
+-define(Attainments_Type_DungeonExcellenceChapter, 179).%% 精英本章节[副本ID,次数]
+-define(Attainments_Type_DungeonDragonConsum, 180).		%% 通关龙王宝库[副本ID,次数,星级]
+-define(Attainments_Type_WalkDemonTower, 181).			%% 埋骨之地建塔[塔的数量,塔的类型] TODO 废弃
+-define(Attainments_Type_WalkDemonBossCount, 182).		%% 埋骨之地召唤boss[召唤boss数量] TODO 废弃
+-define(Attainments_Type_WalkDemonClearStar, 183).		%% 埋骨之地通关星级[通关星级]	% TODO 废弃
+-define(Attainments_Type_BattleFieldKill, 184).			%% 永恒战场击杀[永恒战场累计击杀] TODO 废弃
+-define(Attainments_Type_XORoomRightCount, 185).		%% 斯芬克斯房间答题正确次数[XO房间累计答题正确次数]
+-define(Attainments_Type_Arena1v1WinCount, 186).		%% 1V1竞技胜利次数[1V1竞技胜利次数]
+-define(Attainments_Type_MeleeKill, 187).				%% 牛怪迷宫中累计击杀XX玩家[魔龙洞窟累计击杀] TODO 废弃
+-define(Attainments_Type_AshuraKill, 188).				%% 雷霆要塞中累计击杀XX玩家[血色争霸累计击杀] TODO 废弃
+-define(Attainments_Type_AshuraTop, 189).				%% 血色争霸排名[固定次数,名次] TODO 废弃
+-define(Attainments_Type_ConvoyCount, 190).				%% 押镖次数[护送魔晶成功次数]  TODO 废弃
+-define(Attainments_Type_RobCount, 191).				%% 劫镖次数[劫镖次数]  TODO 废弃
+-define(Attainments_Type_GuildDefDamageTop, 192).		%% 守卫战盟伤害排行[固定次数,伤害排行]  TODO 废弃
+-define(Attainments_Type_GuildTaskCount, 193).			%% 战盟任务数量[数量]  TODO 废弃
+-define(Attainments_Type_GuildRedPacketCount, 194).		%% 战盟红包[累计发送系统奖励的战盟红包]  TODO 废弃
+-define(Attainments_Type_PVPKill, 195).					%% PVP击杀一名玩家[在任意场景击杀玩家次数] TODO 废弃
+-define(Attainments_Type_PVPKillRed, 196).				%% PVP击杀一名红名玩家[在任意场景击杀红名玩家次数]  TODO 废弃
+-define(Attainments_Type_PVPKilled, 197).				%% PVP被杀[角色死亡次数] TODO 废弃
+-define(Attainments_Type_GoldGetCount, 198).			%% 累计获得金币数量[累计获得金币数量]
+-define(Attainments_Type_SignCount, 199).				%% 签到次数[累计签到次数]
+-define(Attainments_Type_BagExtCell, 200).				%% 额外开启的背包格子数量[额外开启背包格子数量]
+-define(Attainments_Type_StorageExtCell, 201).			%% 额外开启的仓库格子数量[额外开启仓库格子数量]	% TODO 废弃
+-define(Attainments_Type_MonsterKillCount, 202).		%% 杀怪数量[累计杀怪（不低于自身70级）的数量] TODO 废弃
+-define(Attainments_Type_BountyTaskCount, 203).			%% 赏金任务数量[数量]
+-define(Attainments_Type_LordRingEqCount, 204).			%% 魔戒[当前穿戴件数]
+-define(Attainments_Type_HonorLv, 205).					%% 头衔[头衔等级(等级对应的名称)]
+-define(Attainments_Type_FriendsCount, 206).			%% 好友[数量,亲密度]
+-define(Attainments_Type_DemonSquare, 207).				%% 恶魔广场[完成次数]
+-define(Attainments_Type_DungeonYanmoCount, 209).		%% 守护世界树[完成次数]
+-define(Attainments_Type_DungeonYanmoTop, 210).			%% 炎魔试炼[固定次数,最高名次] TODO 废弃
+-define(Attainments_Type_DemonsInvasionBoss, 211).		%% 死亡地狱[击杀boss数]
+-define(Attainments_Type_PersonalBoss, 212).			%% 个人Boss[完成次数]
+-define(Attainments_Type_DemonsLairBoss, 213).			%% 死亡地狱[击杀boss数]
+-define(Attainments_Type_CursePlaceBoss, 214).			%% 诅咒禁地[击杀boss数]
+-define(Attainments_Type_ShenmoBoss, 215).				%% 神魔战场[击杀boss数] TODO 废弃
+-define(Attainments_Type_ShenmoClusterBoss, 216).		%% 神魔战场(联服)[击杀boss数] TODO 废弃
+-define(Attainments_Type_WorldBossKill, 217).			%% 世界boss[击杀boss数]
+-define(Attainments_Type_WorldBossJoin, 218).			%% 世界boss[参与数] TODO 废弃
+-define(Attainments_Type_DailyTaskActivity, 219).		%% 日常[天数,活跃度]
+-define(Attainments_Type_ProphecyCompleteID, 220).		%% 完成神谕X次 [固定次数,完成预言之书ID(ID对应的名称)]
+-define(Attainments_Type_AlchemyLv, 221).				%% 吞噬到达XX级[吞噬等级]
+-define(Attainments_Type_PetEqCount, 222).				%% 魔宠装备[魔宠装备件数,0白1蓝2紫3橙4红5粉6神-1任意品质] TODO 废弃
+-define(Attainments_Type_MountEqCount, 223).			%% 坐骑装备[坐骑装备件数,0白1蓝2紫3橙4红5粉6神-1任意品质]
+-define(Attainments_Type_WingEqCount, 224).				%% 翅膀装备[翅膀装备件数,0白1蓝2紫3橙4红5粉6神-1任意品质]
+-define(Attainments_Type_JoinGuild, 225).				%% 加入战盟[固定填写次数] TODO 废弃
+-define(Attainments_Type_Fight1v1, 226).				%% 王者1v1段位[段位] TODO 废弃
+-define(Attainments_Type_Fight2v2, 227).				%% 2v2段位[段位]	% TODO 废弃
+-define(Attainments_Type_Fight3v3, 228).				%% 3v3段位[段位]	% TODO 废弃
+-define(Attainments_Type_SkillLv, 229).					%% 技能等级[数量,等级]
+-define(Attainments_Type_DemonsInvClusterBoss, 230).    %% 恶魔入侵(联服)[击杀boss数] TODO 废弃
+-define(Attainments_Type_GodLevel, 231).                %% 神位等级[等级] TODO 废弃
+-define(Attainments_Type_HolyRuinsBoss, 232).		    %% 神魔战场(4、5层)[击杀boss数] TODO 废弃
+
+
+%% TODO D3新增
+-define(Attainments_Type_Reincarnation,301).		%%转生次数
+-define(Attainments_Type_BlueDiamondCount,302).		  %%累计获得钻石数量
+-define(Attainments_Type_GreenDiamondCount,303).		%%累计获得绿钻数量
+-define(Attainments_Type_GreenAndBlueReincarnation,304).		%%累计获得钻石和绿钻数量
+-define(Attainments_Type_VipLv,305).						%%VIP达到XX级
+-define(Attainments_Type_OnlineMinute,306).		%累计在线分钟
+-define(Attainments_Type_SkillBreachLv,307).		%%XX个技能突破达到XX级
+-define(Attainments_Type_SkillawakenLvCount,308).		%%XX个技能觉醒达到XX级
+-define(Attainments_Type_ActivationSkill,309).		%%激活奥义*XXX技能
+-define(Attainments_Type_ActivationSkillLv,310).		%%奥义XXX技能升级到XX级
+-define(Attainments_Type_SkillReset,311).  %%重置技能X次
+-define(Attainments_Type_GodGifts,312).  %%激活XX品质的神的馈赠XX个
+-define(Attainments_Type_ModifyNameCount,313).  %%修改角色名字XX次
+-define(Attainments_Type_ModifySexCount,314).  %%修改性别XX次
+-define(Attainments_Type_Fashion,315).  %%激活一套XXX时装
+-define(Attainments_Type_Dyeing,316).  %%对主角进行XX次染色
+-define(Attainments_Type_MakeUp,317).  %%对主角进行XX次化妆
+-define(Attainments_Type_HeadCount,318).  %%激活XX个头像
+-define(Attainments_Type_HeadStarCount,319).  %%XX个头像升星到X星
+-define(Attainments_Type_HeadBoxCount,320).  %%激活XX个头像框
+-define(Attainments_Type_HeadBoxStarCount,321).  %%XX个头像框升星到X星
+-define(Attainments_Type_ChatBubbleCount,322).  %%激活XX个聊天气泡
+-define(Attainments_Type_ChatBubbleStarCount,323).  %%XX个聊天气泡升星到X星
+-define(Attainments_Type_UnlockDevour,324).  %%解锁吞噬特权
+-define(Attainments_Type_MarketBuyItem,325).  %%神秘集市中购买道具XXX次
+-define(Attainments_Type_StarryFeastCount,326).  %%参加XX次星空盛宴
+-define(Attainments_Type_TransactionBuyItem,327).  %%交易行中购买道具XX次
+-define(Attainments_Type_BuyWarToken,328).  %%在X赛季中，购买征战令牌
+-define(Attainments_Type_BuyCertificateHonor,329).  %%在X赛季中，购买荣誉证书
+-define(Attainments_Type_BuyPassCheckCount,330).  %%购买日常通行证XX次
+-define(Attainments_Type_BuyMonthlyCard,331).  %%购买月卡特权
+-define(Attainments_Type_BuyLifetimeCard,332).  %%购买XX终身卡
+-define(Attainments_Type_BuyFund,333).  %%购买XX基金
+-define(Attainments_Type_BuyMonthly,334).  %%购买XX月理财
+-define(Attainments_Type_BuyWarOrder,335).  %%购买XX战令
+-define(Attainments_Type_SSRHeroCount,336).  %%激活X个Y品质的英雄
+-define(Attainments_Type_SPHeroCount,337).  %%激活X个英雄
+-define(Attainments_Type_PetRingCount,338).  %%装配X件X品质的英雄戒指
+-define(Attainments_Type_PetBlessEQCount,339).  %%装配X件X品质的英雄装备
+-define(Attainments_Type_PetAssistCount,340).  %%X个英雄助战
+-define(Attainments_Type_PetResonanceCount,341).  %%X个英雄共鸣圣树
+-define(Attainments_Type_WingUpCount,342).  %%X个翅膀装备升级到XX级
+-define(Attainments_Type_WingReinCount,343).  %%X翅膀转生
+-define(Attainments_Type_MountEqLvCount,344).  %%X个坐骑装备升级到XX级
+-define(Attainments_Type_MountReinCount,345).  %%X坐骑转生
+-define(Attainments_Type_SacredObjectAwakenCount,346).  %%X个圣物觉醒到X
+-define(Attainments_Type_SacredObjectGrade,347).  %%X个圣物升品到X（SSR/SP/UR）
+-define(Attainments_Type_SacredObjectCount,348).  %%装配X个X品质圣印
+-define(Attainments_Type_SacredObjectLvCount,349).  %%装配X个X品质圣印升级到X级
+-define(Attainments_Type_MaxCombinationSkillsCount,350).  %%激活X个最高组合技能
+-define(Attainments_Type_GodStatueCount,351).  %%激活X个神像
+-define(Attainments_Type_GodStatueLvCount,352).  %%X个神像强化到X阶
+-define(Attainments_Type_GodStatueStarCount,353).  %%X个神像升星到X星
+-define(Attainments_Type_GodStatueWingQuCount,354).  %%装配X个X品质的神像翅膀
+-define(Attainments_Type_GodStatueGodEqCount,355).  %%穿戴X件天神装备
+-define(Attainments_Type_GuardCount,356).  %%激活X个守护
+-define(Attainments_Type_GuardLvCount,357).  %%X个守护进行X次进阶
+-define(Attainments_Type_GuardQuCount,358).  %%X个守护进行X次觉醒
+-define(Attainments_Type_GemstoneCount,359).  %%镶嵌X个X级的X宝石（普通、红、绿、黄）
+-define(Attainments_Type_CoreGemstoneCount,360). %% TODO 不做该枚举 %%镶嵌X个X级的核心X宝石（普通、红、绿、黄）
+-define(Attainments_Type_HighGemstoneCount,361).  %%镶嵌X个X级的X曜石（普通、红、绿、黄）
+-define(Attainments_Type_WearEqLvQuStarCount1,362).  %%穿戴X件X阶X品质X星及以上的装备（分装备和饰品）
+-define(Attainments_Type_WearEqLvQuStarCount2,363).  %%穿戴X件X阶X品质X星及以上的装备（分装备和饰品）
+-define(Attainments_Type_EquipQuCardCount,364).  %%装配XX张XX品质及以上的卡片
+-define(Attainments_Type_SynthesisCardCount,365).  %%进行X次合成卡片
+-define(Attainments_Type_RecastCardCount,366).  %%进行X次重铸卡片
+-define(Attainments_Type_DivineOrnamentCount,367).  %%激活X个X阶的神饰
+-define(Attainments_Type_DivineOrnamentStar,368).  %%任意X阶的神饰卓越激活X次
+-define(Attainments_Type_DivineOrnamentLv,369).  %%任意X阶的神饰卓越晋升X次
+-define(Attainments_Type_BlessEqLvCount1,370).  %%穿戴X件X阶祝福装备（攻击和防御装备）
+-define(Attainments_Type_BlessEqLvCount2,371).  %%穿戴X件X阶祝福装备（饰品）
+-define(Attainments_Type_RingStarCount,372).  %%XX魔戒升星到X星
+-define(Attainments_Type_CollectionLvQuStarCount1,373).  %%收藏X件X阶   X品质X星及以上的装备（分装备和饰品）
+-define(Attainments_Type_CollectionLvQuStarCount2,374).  %%收藏X件X阶   X品质X星及以上的装备（分装备和饰品）
+-define(Attainments_Type_EqRegenerateLvCount1,375).  %%X件X阶装备（分攻击/防御/饰品）再生等级达到X级以上
+-define(Attainments_Type_EqRegenerateLvCount2,376).  %%X件X阶装备（分攻击/防御/饰品）再生等级达到X级以上
+-define(Attainments_Type_EqRegenerateLvCount3,377).  %%X件X阶装备（分攻击/防御/饰品）再生等级达到X级以上
+-define(Attainments_Type_Titan,378).  %%激活第X赛季的泰坦
+-define(Attainments_Type_EquipQuTitanEqCount,379).  %%装配X个X赛季X品质以上的泰坦装备
+-define(Attainments_Type_TitanStar,380).  %%将X赛季的泰坦升星到X星
+-define(Attainments_Type_GodStoneLvCount,381).  %%将X赛季的X个神石升级到X级
+-define(Attainments_Type_DivineTroopCount,382).  %%激活X件神兵
+-define(Attainments_Type_DivineTroopsCount,383).  %%激活X套神兵
+-define(Attainments_Type_DivineTroopLv,384).  %%将任意神兵升阶到X阶
+-define(Attainments_Type_DivineTroopStar,385).  %%将任意神兵升星到X星
+-define(Attainments_Type_QiLingLv,386).  %%器灵升级到X级
+-define(Attainments_Type_QuGoldContract,387).  %%同时助战X个XX品质的黄金契约
+-define(Attainments_Type_GoldContractLv,388).  %%任意黄金契约装备强化到X级
+-define(Attainments_Type_GoldContractQu,389).  %%装配X个XX品质的黄金契约装备
+-define(Attainments_Type_AssistWarCount,390).  %%开启X个助阵位
+-define(Attainments_Type_GoldMysteryKillCount,391).  %%黄金秘境击杀X只boss
+-define(Attainments_Type_GoldMysteryCommonChestCount,392).  %%黄金秘境中采集普通宝箱XX次
+-define(Attainments_Type_GoldMysteryHighChestCount,393).  %%黄金秘境中采集高级宝箱XX次
+-define(Attainments_Type_GoldMysteryCount,394).  %%黄金秘境中采集XX次
+-define(Attainments_Type_DarkCount,395).  %%黑暗深渊击杀X只boss
+-define(Attainments_Type_AssistKillCount,396).  %%协助玩家XX次
+-define(Attainments_Type_AssistKillCountEd,397).  %%被协助XX次
+-define(Attainments_Type_PetPagodaCount,398).  %%英雄塔通关X层
+-define(Attainments_Type_WingCopyCount,399).  %%通关XX次翅膀副本
+-define(Attainments_Type_SkillChallengeStar3Count,400).  %%3星通关XX技能挑战副本
+-define(Attainments_Type_BraveManCount,401).  %%击杀XX只勇者试炼中的小怪
+-define(Attainments_PetCallCount,402).  %%累计XX次英雄召唤
+-define(Attainments_Type_PetDestinyCallCount,403).  %%累计XX次命运召唤
+-define(Attainments_Type_EqTreasureHuntCount,404).  %%累计装备寻宝XX次
+-define(Attainments_Type_CardTreasureHuntCount,405).  %%累计卡片寻宝XX次
+-define(Attainments_Type_MeleeCount,406).  %%参加牛怪迷宫XX次
+-define(Attainments_Type_AshuraCount,407).  %%参加雷霆要塞XX次
+-define(Attainments_Type_GuildHegemonyCount,408).  %%参加公会争霸XX次
+-define(Attainments_Type_BonfireCount,409).  %%参加篝火BOSSX次
+-define(Attainments_Type_BossBonfireCount,410).  %%参加boss篝火X次
+-define(Attainments_Type_XoRoomCount,411).  %%参加斯芬克斯房间XX次
+-define(Attainments_Type_GuildHegemonyKill,412).  %%公会争霸中累计击杀XX玩家
+-define(Attainments_Type_AshuraLiveCount,413).  %%雷霆要塞中幸存X次
+-define(Attainments_Type_AshuraLv1Count,414).  %%雷霆要塞中获得第1名X次
+-define(Attainments_Type_MeleeLv1Count,415).  %%牛怪迷宫中积分第1名X次
+-define(Attainments_Type_GuardWorldLv1Count,416).  %%守卫世界树中公会第1名X次
+-define(Attainments_Type_XORoomStakeCount,417).  %%斯芬克斯房间押注XX次
+-define(Attainments_Type_BountyTaskStarCount,418).  %%完成XX次X星赏金任务
+-define(Attainments_Type_ExpeditionCountCity0,419).  %%在X赛季中，远征中参加远征猎魔XX次
+-define(Attainments_Type_ExpeditionCountCity1,420).  %%在X赛季中，远征中攻下领地XX次
+-define(Attainments_Type_ExpeditionCountCity2,421).  %%在X赛季中，远征中攻下要塞XX次
+-define(Attainments_Type_ExpeditionCountCity3,422).  %%在X赛季中，远征中攻下堡垒XX次
+-define(Attainments_Type_ExpeditionCountCity4,423).  %%在X赛季中，远征中攻下城墙XX次
+-define(Attainments_Type_ExpeditionCountCity5,424).  %%在X赛季中，远征中攻下黑暗王城XX次
+-define(Attainments_Type_ExpeditionCountCity6,425).  %%在X赛季中，远征中挑战玩家X次
+-define(Attainments_Type_ExpeditionCountCity7,426).  %%在X赛季中，远征中获得遗迹宝箱X个
+-define(Attainments_Type_ExpeditionCountCity8,427).  %%在X赛季中，强征XX次
+-define(Attainments_Type_ExpeditionCountCity9,428).  %%在X赛季中，爵位达到XX
+-define(Attainments_Type_FastCrusadeCount,429).  %%快速讨伐XX次
+-define(Attainments_Type_MoppingUpCount,430).  %%主线副本通关或者扫荡XXXX次
+-define(Attainments_Type_GuildShipCount,431).  %%公会商船XXX次
+-define(Attainments_Type_RedGuildShipCount,432).  %%护送红色品质商船XXXX次
+-define(Attainments_Type_VolleyGuildShipCount,433).  %%拦截商船XXX次
+-define(Attainments_Type_TakeGuildShipCount,434).  %%夺回自己和公会玩家商船XX次
+-define(Attainments_Type_ArenaRankCount,435).  %%竞技场排名
+-define(Attainments_Type_Fight1V1WinCount,436).  %%在X赛季中，在王者1v1中胜利X次
+-define(Attainments_Type_Fight1V1Lv,437).  %%在X赛季中，在王者1v1中达到XX段位
+-define(Attainments_Type_Fight1V1Finals,438).  %%在X赛季中，在王者1v1中进入决赛
+-define(Attainments_Type_Fight1V1Rank,439).  %%在X赛季中，在王者1v1决赛中获得X名
+-define(Attainments_Type_KillPlayer,440).  %%在任意场景击杀XX名玩家
+-define(Attainments_Type_PVPKillCount,441).  %%PVP中角色被击杀X次
+-define(Attainments_Type_1v1TrophyCount,442).  %%激活X个1v1奖杯
+-define(Attainments_Type_1v1TrophyQu,443).  %%任意1v1奖杯提升到X品质
+-define(Attainments_Type_1v1TrophyLv,444).  %%任意1v1奖杯升级到X级
+-define(Attainments_Type_1v1TrophyQuCount,445).  %%X个1v1奖杯提升到X品质
+-define(Attainments_Type_1v1TrophyLvCount,446).  %%X个1v1奖杯升级到X级
+-define(Attainments_Type_GeneralDonationCount,447).  %%公会普通捐献XX次
+-define(Attainments_Type_HighDonationCount,448).  %%公会高级捐献XX次
+-define(Attainments_Type_GuildWishesCount,449).  %%发起公会许愿XX次
+-define(Attainments_Type_ReceiveGiftsCount,450).  %%收到许愿礼物多少XX次
+-define(Attainments_Type_GiveEnduranceCount1,451).  %%普通赠送好友体力XX次
+-define(Attainments_Type_GiveEnduranceCount2,452).  %%高级赠送好友体力XX次
+-define(Attainments_Type_ReceivedEnduranceCount1,453).  %%收到好友普通体力赠送XX次
+-define(Attainments_Type_ReceivedEnduranceCount2,454).  %%收到好友高级体力赠送XX次
+-define(Attainments_Type_ChestDiamondsCount,455).  %%公会宝箱累计获得XXX钻石
+-define(Attainments_Type_AuctionCount,456).  %%公会拍卖累计获得XXX件拍品
+-define(Attainments_Type_GainRing,457).		%%获得XX魔戒(1麻痹戒指，2治疗戒指，3复活戒指，4护身戒指)
+-define(Attainments_Type_RingStar,458).		%%XX魔戒升星到X星
+-define(Attainments_Type_WingAllCount,459).		%%翅膀总数量
+-define(Attainments_Type_MountAllCount,460).		%%坐骑总数量
+-define(Attainments_Type_PantheonBp1Buy, 461).		%% 购买X次黄金秘宝1
+-define(Attainments_Type_PantheonBp2Buy, 462).		%% 购买X次黄金秘宝2
+-define(Attainments_Type_King1v1Bp1Buy, 463).		%% 购买X次王者1v1战令1
+-define(Attainments_Type_King1v1Bp2Buy, 464).		%% 购买X次王者1v1战令2
+-define(Attainments_Type_BattleFieldJoin, 465).				%% 参与波塞冬宝藏X次
+-define(Attainments_Type_BattleFieldPlayerKill, 466).		%% 波塞冬宝藏玩法中，击杀玩家X次
+-define(Attainments_Type_BattleFieldBossKill, 467).			%% 波塞冬宝藏玩法中，击杀BOSSX次
+-define(Attainments_Type_BattleFieldCollectDiamond, 468).	%% 波塞冬宝藏玩法中，采集钻石宝箱X次
+-define(Attainments_Type_BattleFieldCollectGold, 469).		%% 波塞冬宝藏玩法中，采集黄金宝箱X次
+-define(Attainments_Type_BattleFieldCollectSilver, 470).	%% 波塞冬宝藏玩法中，采集白银宝箱X次
+-define(Attainments_Type_BattleFieldCollectCopper, 471).	%% 波塞冬宝藏玩法中，采集青铜宝箱X次
+
+-define(Attainments_Type_BoneYardJoin, 472).        %% 通关亡灵墓道X关
+-define(Attainments_Type_BoneYardMonsterKill, 473).    %%累计击杀亡灵墓道小怪X只
+-define(Attainments_Type_BoneYardEliteBossKill, 474).    %%累计击杀亡灵墓道精英怪和BOSSX只(不含召唤BOSS)
+-define(Attainments_Type_BoneYardCallBossKill, 475).    %%累计击杀亡灵墓道召唤BOSSX只
+-define(Attainments_Type_Relic_Illusion_Qu,476).		%% 激活X个Y品质的幻化圣物
+-define(Attainments_Type_Relic_Illusion_Star,477).		%% X个幻化圣物升星到X星
+-define(Attainments_Type_Relic_Illusion_ReinCount,478).		%% X个幻化圣物转生
+
+-define(Attainments_Type_FaZhen_Char_Num, 479).        %%获得X个Y品质及以上法阵
+-define(Attainments_Type_FaZhenRune_One_Attr, 480).    %%获得X个Y品质及以上单属性符文
+-define(Attainments_Type_FaZhenRune_Two_Attr, 481).        %%获得X个Y品质及以上不同的双属性符文
+-define(Attainments_Type_FaZhenRune_Three_Attr, 482).        %%获得X个Y品质及以上三属性符文
+-define(Attainments_Type_FaZhenRune_Attr, 483).        %%获得X个Y品质及以上不同的符文晋升
+-define(Attainments_Type_FaZhenRune_Star_Num, 484).        %%X个符文同时升至Y星
+-define(Attainments_Type_FaZhen_Star_Num, 485).        %%X个法阵同时升至Y星
+-define(Attainments_Type_RuneXunBao_Count, 486).        %%符文寻宝X次
+-define(Attainments_Type_ReinBp1Buy, 487).            %% 购买X次转生证书1
+-define(Attainments_Type_ReinBp2Buy, 488).            %% 购买X次转生证书2
+
+-define(Attainments_Type_AbyssBpBuy1, 489).            %% 购买X次进阶深渊秘宝
+-define(Attainments_Type_AbyssBpBuy2, 490).            %% 购买X次至尊深渊秘宝
+-define(Attainments_Type_PetCityBpBuy1, 491).          %% 购买X次进阶家园通行证
+-define(Attainments_Type_PetCityBpBuy2, 492).          %% 购买X次至尊家园通行证
+-define(Attainments_Type_SoulStoneXunBao_Count, 493).  %%魂石寻宝X次
+-define(Attainments_Type_PetEq_SoulStone_Lv_Num, 494). %%镶嵌X个Y级魂石
+-define(Attainments_Type_ShouLingEq_Star_Num, 495).    %%穿戴X件Y星的坐骑装备
+-define(Attainments_Type_SealProve_Lv, 496).           %%封印之证达到X级
+
+-define(Attainments_Type_EliteDungeonBpBuy1, 497).      %% 购买精英副本BP1精英证书
+-define(Attainments_Type_EliteDungeonBpBuy2, 498).      %% 购买精英副本BP2专家证书
+-define(Attainments_Type_EliteDungeonBpBuy3, 499).      %% 购买精英副本BP3大师证书
+-define(Attainments_Type_EliteDungeonBpBuy4, 500).      %% 购买精英副本BP4宗师证书
+
+-define(Attainments_Type_GuildWarFlagCount, 501).           %% 联服公会战占领旗帜数量
+-define(Attainments_Type_GuildWarPlayerKillCount, 502).     %% 联服公会战杀敌数量
+-define(Attainments_Type_GuildWarBossKillCount, 503).       %% 联服公会战杀boss数量
+-define(Attainments_Type_GuildWarPersonalScoreCount, 504).  %% 联服公会战个人积分总数
+-define(Attainments_Type_GuildWarScoreRank, 505).           %% 联服公会战个人积分排名最高名次
+-define(Attainments_Type_GuildWarJoinCount, 506).           %% 联服公会战参赛次数
+-define(Attainments_Type_GuildWarWinCount, 507).            %% 联服公会战胜利次数
+-define(Attainments_Type_GuildWarQuarterCount, 508).        %% 联服公会战进入8强次数
+-define(Attainments_Type_GuildWarSemiCount, 509).           %% 联服公会战进入4强次数
+-define(Attainments_Type_GuildWarRank2Count, 510).          %% 联服公会战亚军次数
+-define(Attainments_Type_GuildWarRank1Count, 511).          %% 联服公会战冠军次数
+-define(Attainments_Type_LavaRankTimes, 512).               %% 熔岩角斗场排名次数
+-define(Attainments_Type_LavaDungeonPassTimes, 513).        %% 熔岩角斗场通关次数
+-define(Attainments_Type_SacredEqCount, 514).                %% 穿戴多少件A阶B品质C星级的英雄圣装
+-define(Attainments_Type_WeddingTimes, 515).                %% 完成Y婚礼X次
+-define(Attainments_Type_WeddingCardTimes, 516).            %% 购买伴侣理财次数
+-define(Attainments_Type_HolyShieldStage, 517).             %% 圣盾升阶
+-define(Attainments_Type_HolyShieldBp, 518).                %% 圣盾BP
+-define(Attainments_Type_PetIllusionRefineNum, 519).                %% X个英雄幻化同时达到Y段  参数1 幻化个数  参
+-define(Attainments_Type_AltarHeroCount, 520).               %% 圣坛援战英雄上阵X个
+-define(Attainments_Type_AltarStoneLvTotal, 521).            %% 圣坛阵石总等级达到X级
+-define(Attainments_Type_BlzJoinTimes, 522).                %% 寒风森林参与X次
+-define(Attainments_Type_BlzLayer, 523).                    %% 寒风森林层数达到X层
+-define(Attainments_Type_BlzBigBossKill, 524).              %% 寒风森林大BOSS击杀数
+-define(Attainments_Type_BlzBossKill, 525).                 %% 寒风森林BOSS击杀数（含大BOSS）
+-define(Attainments_Type_HolyShieldLevel, 527).             %% 圣盾升级
+-define(Attainments_Type_HolyShieldSkill, 528).             %% 圣盾技能
+-define(Attainments_Type_ManorWarJoin, 529).                %% 龙城争霸参与X次
+-define(Attainments_Type_ManorWarRank, 530).                %% 龙城争霸结算排名X次Y排名以上
+-define(Attainments_Type_ShengWenXunBao_Count, 531).        %% 累计神纹寻宝XX次
+-define(Attainments_Type_ShengWen_EqStageCount, 532).        %% 镶嵌X部位神纹都达到Y阶 参数1：部位数量  参数2：阶数
+-define(Attainments_Type_ShengWen_EqQuCount, 533).          %% 镶嵌X部位神纹都达到Y品质 参数1：部位数量  参数2：品质
+-define(Attainments_Type_ShengWenAllLv, 534).                %% 神纹中强化总等级达到X级 参数1：全12部位强化等级总和
+-define(Attainments_Type_ShengWenAllPoint, 535).                %% 神纹法则总值达到X 参数1：法则总值
+-define(Attainments_Type_ElementContinentTotem, 536).                %% 元素大陆中首次占领积分达到X的图腾；参数1=对应图腾的积分
+
+-define(Attainments_Type_ShengJiaBpBuy, 537).                %% 购买神甲xx秘宝（进阶或至尊）；参数1=1（表示达成购买）、参数2=1青铜秘宝 2白银秘宝 3黄金秘宝 参数3 1 进阶 2至尊
+-define(Attainments_Type_ShengJiaActive, 538).                %%激活X阶神甲；参数1=阶数
+-define(Attainments_Type_ShengJiaEqGem, 539).                %%镶嵌X个Y级的Z宝石 参数1 =数量 参数2=等级  参数3=1生命元素、2火元素3水元素、4风元素、5 土元素、6万种都包含
+-define(Attainments_Type_ShengJiaEqGem2, 540).                %%镶嵌X个Y级的Z曜石 参数1 =数量 参数2=等级  参数3=1生命元素、2火元素3水元素、4风元素、5 土元素、6万种都包含
+-define(Attainments_Type_ShengJiaSkillAllLv, 541).            %%神甲技能总共X级 参数1=等级
+-define(Attainments_Type_ShengJiaActiveSkill, 542).                %%在神之灵中激活X技能 参数1 =天赋序号 参数2=天赋等级
+-define(Attainments_Type_TeamEqPassNum, 543).           %%3星通关X次XX等级的组队装备本；参数1=通关次数、参数2=XX等级装备副本
+-define(Attainments_Type_TeamCouplePassNum, 544).        %%通关X次情侣组队本；参数1=通关次数
+-define(Attainments_Type_ActiveRingNum, 545).            %%激活X个信物；参数1=信物数量
+-define(Attainments_Type_ActiveRingAllLv, 546).                %%信物总等级达到{0}级；参数1=等级
+-define(Attainments_Type_ActiveRingStar, 547).                 %%X个信物达到X星级；参数1=信物数量、参数2=星级
+-define(Attainments_Type_UnknownCount, 548).                 %%累计XX次未知召唤
+
+-define(Attainments_Type_MountBreakAllCount, 549).			%%共X个Y阶坐骑
+-define(Attainments_Type_WingBreakAllCount, 550).			%%共X个Y阶翅膀
+-define(Attainments_Type_GDWeaponStar, 551).			%%X件天神武器升星到XX星；参数1=件数、参数2=星级、参数3=0、参数4=0、参数5=0
+-record(attain_complete, {
+	id = 0,			% 成就id
+	is_get = 0		% 是否已领奖
+}).
+
+-record(attain_progress, {
+	id = 0,				% 成就id
+	progress = 0,		% 进度
+	today_progress = 0	% 当天完成进度
+}).
+
+-define(AttainmentsReplaceValue, [?Attainments_Type_ElementContinentTotem]).
+
+-endif.

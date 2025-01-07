@@ -119,6 +119,19 @@
     {
         "KEY_INDEX": "41",
         "AttributeId": 41,
+        "ShowName": "移动加速度",
+        "AttributeDescribe": "实体自身的移动加速度",
+        "ShowType": 0,
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "42",
+        "AttributeId": 42,
         "ShowName": "旋转速度",
         "AttributeDescribe": "实体自身的旋转速度",
         "ShowType": 0,
@@ -132,8 +145,8 @@
     {
         "KEY_INDEX": "51",
         "AttributeId": 51,
-        "ShowName": "炮塔旋转速度上限",
-        "AttributeDescribe": "每秒最多转弯多少度，填度数，360度是一圈，填个360就是每秒转一圈",
+        "ShowName": "炮塔旋转速度",
+        "AttributeDescribe": "每秒转弯多少度，填度数，360度是一圈，填个360就是每秒转一圈",
         "ShowType": 0,
         "ShowColor": [
             0,
@@ -563,58 +576,6 @@
         "AttributeId": 507,
         "ShowName": "重建提升",
         "AttributeDescribe": "在工作范围内给其他建筑减少一定比例的建筑重建时间",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "601",
-        "AttributeId": 601,
-        "ShowName": "燃烧耐性",
-        "AttributeDescribe": "燃烧值超过燃烧耐性时开始燃烧",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "602",
-        "AttributeId": 602,
-        "ShowName": "燃烧值",
-        "AttributeDescribe": "",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "603",
-        "AttributeId": 603,
-        "ShowName": "冰冻耐性",
-        "AttributeDescribe": "冰冻值超过冰冻耐性时开始冰冻",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "604",
-        "AttributeId": 604,
-        "ShowName": "冰冻值",
-        "AttributeDescribe": "",
         "ShowType": 0,
         "ShowColor": [
             0,

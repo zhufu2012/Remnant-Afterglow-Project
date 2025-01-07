@@ -8,18 +8,18 @@
             0
         ],
         "LengWidth": [
-            50,
-            126
+            36,
+            116
         ],
-        "MaxIndex": 1,
+        "MaxIndex": 24,
         "Size": [
-            1,
-            1
+            6,
+            4
         ],
         "DurationMs": 20,
-        "FrameCount": 3,
+        "FrameCount": 20,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_B1E5BBB75DF144E6BCE87AD7FFB08D41.png"
+        "Picture": "./data/config/images/ID_0E8DF86F638645E79A50B03937E8FCF4.png"
     }
 ]

@@ -1,6 +1,8 @@
 ﻿namespace Remnant_Afterglow_EditMap
 {
-    //副本地图层次数据
+    /// <summary>
+    /// 副本地图层次数据
+    /// </summary>
     public class TileMapLayerData
     {
         /// <summary>

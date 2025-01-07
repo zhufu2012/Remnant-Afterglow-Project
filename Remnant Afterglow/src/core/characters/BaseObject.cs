@@ -81,10 +81,6 @@ namespace Remnant_Afterglow
         public BaseObjectType object_type;
 
         /// <summary>
-        /// 阵营子名称
-        /// </summary>
-        public string CampSubName;
-        /// <summary>
         /// 当前物体显示的精灵图像, 节点名称必须叫 "AnimatedSprite2D", 类型为 AnimatedSprite2D
         /// </summary>
         public AnimatedSprite2D AnimatedSprite = new AnimatedSprite2D();
@@ -104,13 +100,22 @@ namespace Remnant_Afterglow
             Camp = baseData.CampId;
             InitAttr(ObjectId);//初始化属性
             InitBuff(ObjectId);//初始化Buff
-
         }
 
         public override void _Ready()
         {
+            InitView();
             InitObjectMove();//初始化移动相关模块
             InitMove();//初始化移动
+        }
+
+        /// <summary>
+        /// 初始化显示的界面
+        /// </summary>
+        /// <param name="delta"></param>
+        public virtual void InitView()
+        {
+            AddToGroup(""+Camp);//添加分组数据到节点
         }
 
         /// <summary>
@@ -145,7 +150,7 @@ namespace Remnant_Afterglow
         protected virtual void PhysicsProcess(double delta)
         {
             if (baseData.IsMove)//能移动
-                DoMove();
+                DoMove(delta);
         }
 
         /// <summary>

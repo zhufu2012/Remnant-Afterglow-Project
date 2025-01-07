@@ -40,7 +40,7 @@ namespace Remnant_Afterglow
             unitDict[unitBase.Logotype] = unitBase;
             MapCopy.Instance.UnitNode.AddChild(unitBase);
 
-            Vector2 Target = new Vector2(400, 160);
+            Vector2I Target = new Vector2I(30, 38);
             unitBase.SetMovementTarget(Target);//祝福注释-测试用-要去掉
             Sprite2D ss = new Sprite2D();
             ss.Position = Target;
@@ -48,5 +48,17 @@ namespace Remnant_Afterglow
             MapCopy.Instance.AddChild(ss);
             return unitBase;
         }
+
+        /// <summary>
+        /// 单位死亡后处理
+        /// </summary>
+        /// <param name="casterObject"></param>
+        private void UnitKilledAfter(BaseObject casterObject)
+        {
+
+
+            casterObject.QueueFree();
+        }
+
     }
 }
