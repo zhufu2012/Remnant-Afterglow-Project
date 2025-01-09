@@ -11,6 +11,17 @@ namespace Remnant_Afterglow
         //各动画的图片中心
         public Dictionary<string, Vector2> AnimationCenterPos = new Dictionary<string, Vector2>();
         /// <summary>
+        /// 播放动画,并且设置动画的位置，确保动画的中心在实体上
+        /// </summary>
+        /// <param name="AnimaName">1 默认动画...</param>
+        public void PlayAnima(string AnimaName)
+        {
+            if(AnimatedSprite.SpriteFrames.HasAnimation(AnimaName))
+                AnimatedSprite.Play(AnimaName);
+            else
+                AnimatedSprite.Play(AnimatorNames.Default);
+        }
+        /// <summary>
         /// 单位动画
         /// </summary>
         /// <param name="CfgData"></param>
@@ -61,19 +72,6 @@ namespace Remnant_Afterglow
             }
 
             return AnimatedSprite;
-        }
-
-
-        /// <summary>
-        /// 播放动画,并且设置动画的位置，确保动画的中心在实体上
-        /// </summary>
-        /// <param name="AnimaName">1 默认动画...</param>
-        public void PlayAnima(string AnimaName)
-        {
-            if(AnimatedSprite.SpriteFrames.HasAnimation(AnimaName))
-                AnimatedSprite.Play(AnimaName);
-            else
-                AnimatedSprite.Play(AnimatorNames.Default);
         }
 
 

@@ -156,6 +156,11 @@ namespace Remnant_Afterglow
         public const string Config_AnimaWeapon = "cfg_AnimaWeapon";
 
         /// <summary>
+        /// 无人机动画
+        /// </summary>
+        public const string Config_AnimaWorker = "cfg_AnimaWorker";
+
+        /// <summary>
         /// 子弹动画
         /// </summary>
         public const string Config_AnimaBullet = "cfg_AnimaBullet";

@@ -1,4 +1,5 @@
 using Godot;
+using Remnant_Afterglow;
 using System;
 namespace Remnant_Afterglow_EditMap
 {
@@ -29,10 +30,9 @@ namespace Remnant_Afterglow_EditMap
         public void EditMap()
         {
             int mapType = 1;
-            MapDrawData = new MapDrawData();
+            MapDrawData mapDrawData = new MapDrawData();
             string Path = "";
-            SceneManager.PutParam("MapType", );//地图类型
-            SceneManager.PutParam("MapData", MapDrawData);//地图数据
+            SceneManager.PutParam("MapType", mapType);//地图类型
             SceneManager.PutParam("MapDataPath", Path);//地图数据路径
             SceneManager.ChangeSceneName("EditMapView", this);//跳转地图编辑器界面
         }

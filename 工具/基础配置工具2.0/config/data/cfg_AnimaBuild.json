@@ -16,10 +16,16 @@
             4,
             1
         ],
-        "DurationMs": 20,
-        "FrameCount": 3,
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png"
+        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png",
+        "FlipH": true,
+        "FlipV": true
     }
 ]

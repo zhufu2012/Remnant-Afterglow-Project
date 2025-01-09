@@ -1,4 +1,5 @@
 using Godot;
+using Remnant_Afterglow;
 using System;
 namespace Remnant_Afterglow_EditMap
 {

@@ -5,7 +5,7 @@ using System;
 namespace Remnant_Afterglow
 {
 
-    //所有mod数据，不只包含作者的mod.info文件
+    //单个mod的所有数据，不只包含作者的mod.info文件
     public class ModAllInfo
     {
         /// <summary>

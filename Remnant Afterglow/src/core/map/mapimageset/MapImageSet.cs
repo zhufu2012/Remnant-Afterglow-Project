@@ -103,40 +103,42 @@ namespace Remnant_Afterglow
 
                 tileSet.AddSource(source, MapImageSetId);//加入资源
 
-                int index = 1;
-                int cellsize = MapConstant.TileCellSize;//格子长宽
-                for (var i = 0; i < size.X; i++)
-                {
-                    for (var j = 0; j < size.Y; j++)
-                    {
-                        if (Type == 1)
-                        {
-                            Vector2I pos = new Vector2I(i, j);
-                            List<Dictionary<string, object>> MaterialList = ConfigLoadSystem.QueryCfgAllLine(ConfigConstant.Config_MapMaterial,
-                            new Dictionary<string, object>
-                            {
-                                 { "ImageSetId" , MapImageSetId },
-                                 { "ImageSetIndex" , index}
-                            });
-                            foreach (var info in MaterialList)
-                            {
-                                int MaterialId = (int)info["MaterialId"];
-                                int newAlternativeTileId = source.CreateAlternativeTile(pos);//新增备选图块
-                                MapMaterialDict[MaterialId] = newAlternativeTileId;
-                                TileData tileData = source.GetTileData(pos, newAlternativeTileId);//对应单个图块数据
-                                List<List<int>> CollisionPolygon = (List<List<int>>)info["CollisionPolygon"];//碰撞多边形数据
-                                for (int key = 0; key < CollisionPolygon.Count; key++)//像tileData中加碰撞多边形
-                                {
-                                    int physicsLayer = CollisionPolygon[key][0];//物理层
-                                    Vector2[] Vector2List = ListCommon.ConvertToVector2Array(CollisionPolygon[key], 1);
-                                    tileData.AddCollisionPolygon(physicsLayer);
-                                    tileData.SetCollisionPolygonPoints(physicsLayer, 0, Vector2List);
-                                }
-                            }
-                        }
-                        index++;
-                    }
-                }
+
+
+//                int index = 1;
+//                int cellsize = MapConstant.TileCellSize;//格子长宽
+//                for (var i = 0; i < size.X; i++)
+//                {
+//                    for (var j = 0; j < size.Y; j++)
+//                    {
+//                        if (Type == 1)
+//                        {
+//                            Vector2I pos = new Vector2I(i, j);
+//                            List<Dictionary<string, object>> MaterialList = ConfigLoadSystem.QueryCfgAllLine(ConfigConstant.Config_MapMaterial,
+//                            new Dictionary<string, object>
+//                            {
+//                                 { "ImageSetId" , MapImageSetId },
+//                                 { "ImageSetIndex" , index}
+//                            });
+//                            foreach (var info in MaterialList)
+//                            {
+//                                int MaterialId = (int)info["MaterialId"];
+//                                int newAlternativeTileId = source.CreateAlternativeTile(pos);//新增备选图块
+//                                MapMaterialDict[MaterialId] = newAlternativeTileId;
+//                                TileData tileData = source.GetTileData(pos, newAlternativeTileId);//对应单个图块数据
+//                                List<List<int>> CollisionPolygon = (List<List<int>>)info["CollisionPolygon"];//碰撞多边形数据
+//                                for (int key = 0; key < CollisionPolygon.Count; key++)//像tileData中加碰撞多边形
+//                                {
+//                                    int physicsLayer = CollisionPolygon[key][0];//物理层
+//                                    Vector2[] Vector2List = ListCommon.ConvertToVector2Array(CollisionPolygon[key], 1);
+//                                    tileData.AddCollisionPolygon(physicsLayer);
+//                                    tileData.SetCollisionPolygonPoints(physicsLayer, 0, Vector2List);
+//                                }
+//                            }
+//                        }
+//                        index++;
+//                    }
+//                }
                 MapSetDataDict[(int)kvp["MapImageSetId"]] = new ImageSetData(kvp,Width,Height);
                 MapSetDict[(int)kvp["MapImageSetId"]] = source;
             }

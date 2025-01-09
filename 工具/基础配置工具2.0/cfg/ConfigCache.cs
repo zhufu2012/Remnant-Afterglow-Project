@@ -39,6 +39,7 @@ namespace Remnant_Afterglow
             LoadAnimaTower();
             LoadAnimaBuild();
             LoadAnimaWeapon();
+            LoadAnimaWorker();
             LoadAnimaBullet();
             LoadAnimaExplode();
             LoadSequenceMapBase();
@@ -1845,6 +1846,72 @@ namespace Remnant_Afterglow
         {
             List<AnimaWeapon> list = new List<AnimaWeapon>();
             foreach (var val in AnimaWeapon_Cache)
+            {
+                list.Add(val.Value);
+            }
+            return list;
+        }
+        /// <summary>
+        /// 无人机动画配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AnimaWorker> AnimaWorker_Cache = new Dictionary<string, AnimaWorker>();
+        /// <summary>
+        /// 提前加载所有无人机动画配置缓存
+        /// </summary>
+        public static void LoadAnimaWorker()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaWorker);
+            foreach (var val in cfg_dict)
+            {
+                AnimaWorker data = new AnimaWorker(val.Value);
+                data.InitData2();
+                AnimaWorker_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的无人机动画基础配置缓存
+        /// </summary>
+        public static AnimaWorker GetAnimaWorker(string cfgId)
+        {
+            if (!AnimaWorker_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaWorker(cfgId);
+                    data.InitData2();
+                    AnimaWorker_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaWorker配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AnimaWorker GetAnimaWorker(int cfgId)
+        {
+            if (!AnimaWorker_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaWorker(cfgId);
+                    data.InitData2();
+                    AnimaWorker_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaWorker配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有无人机动画数据
+        /// </summary>
+        public static List<AnimaWorker> GetAllAnimaWorker()
+        {
+            List<AnimaWorker> list = new List<AnimaWorker>();
+            foreach (var val in AnimaWorker_Cache)
             {
                 list.Add(val.Value);
             }
@@ -6500,6 +6567,7 @@ namespace Remnant_Afterglow
             AnimaTower_Cache.Clear();
             AnimaBuild_Cache.Clear();
             AnimaWeapon_Cache.Clear();
+            AnimaWorker_Cache.Clear();
             AnimaBullet_Cache.Clear();
             AnimaExplode_Cache.Clear();
             SequenceMapBase_Cache.Clear();

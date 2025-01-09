@@ -26,6 +26,11 @@ namespace Remnant_Afterglow
         {
             new LoadMapConfig();
         }
+        //清理数据
+        public static void ClearData()
+        {
+            Instance = null;
+        }
 
         /// <summary>
         /// 获取由该对象生成的Godot.TileSet对象

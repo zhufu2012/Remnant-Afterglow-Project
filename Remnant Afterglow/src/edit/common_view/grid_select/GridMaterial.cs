@@ -1,3 +1,7 @@
+using Godot;
+using Remnant_Afterglow;
+using System;
+
 namespace Remnant_Afterglow_EditMap
 {
 	public partial class GridMaterial : Button
@@ -18,5 +22,12 @@ namespace Remnant_Afterglow_EditMap
             Flat = true;
             FocusEntered += OnFocusEntered;
         }
-	}
+
+        //获得焦点时，
+        public void OnFocusEntered()
+        {
+            //设置 材料格子的各项参数
+
+        }
+    }
 }

@@ -17,11 +17,12 @@ namespace Remnant_Afterglow_EditMap
 		Dictionary<int,ImageSetData>  imageSetDataDict = new Dictionary<int,ImageSetData>();
 
         GridContainer gridContainer;
-		//地图类型
+		///地图类型
 		public int Type;
+        //当前选择的材料数据
+        public MapFixedMaterial select;
 
-        public int select_id = 0;
-        pubic MapFixedMaterial katerial
+		public MapFixedMaterial material;
 		public GridSelectCon()
 		{
 		}
@@ -46,6 +47,7 @@ namespace Remnant_Afterglow_EditMap
 				            break;
 				        case 2://大地图
 				            imageSetDataDict[setId] = LoadMapConfig.Instance.mapSet2.MapSetDataDict[setId];
+							break;
 				        default:
 				            break;
 				    }
@@ -68,10 +70,9 @@ namespace Remnant_Afterglow_EditMap
                 grid.Flat = true;
                 grid.FocusEntered += ()=>
                 {
-                    select_id = item;
-
+                    select = mapFixed;
                 };
-                gridContainer.AddChild(button);
+                gridContainer.AddChild(grid);
 			}
         }
 
@@ -81,5 +82,12 @@ namespace Remnant_Afterglow_EditMap
             //设置 材料格子的各项参数
 
 		}
+
+        //返回当前选择的材料
+        public MapFixedMaterial GetSelectMaterial()
+        {
+            return select;
+        }
+
 	}
 }

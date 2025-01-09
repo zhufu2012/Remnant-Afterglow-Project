@@ -1,5 +1,6 @@
 using Godot;
 using Remnant_Afterglow;
+using System.Collections.Generic;
 
 namespace Remnant_Afterglow_EditMap
 {
@@ -31,6 +32,10 @@ namespace Remnant_Afterglow_EditMap
         /// </summary>
         public string nowPath;
         /// <summary>
+        /// 当前的地图数据的文件名称
+        /// </summary>
+        public string mapName;
+        /// <summary>
         /// 当前使用的地图数据
         /// </summary>
         public MapDrawData nowMapData;
@@ -41,9 +46,12 @@ namespace Remnant_Afterglow_EditMap
         public override void _Ready()
         {
             mapType = (int)SceneManager.GetParam("MapType");
-            nowMapData = (MapDrawData)SceneManager.GetParam("MapData");
             nowPath = (string)SceneManager.GetParam("MapDataPath");
+            mapName = (string)SceneManager.GetParam("MapName");
             SceneManager.DataClear();//清空数据
+            //祝福注释-这里通过路径获取地图数据
+            nowMapData = MapDrawData.GetMapDrawData(nowPath,mapName);
+
             layerData = nowMapData.layerData;
 
             LoadMapConfig.InitData();
@@ -51,6 +59,7 @@ namespace Remnant_Afterglow_EditMap
 
             InitMapCfg();
             InitView();
+            InitDrawMap();//初始化绘制地图
         }
 
         /// <summary>
@@ -70,6 +79,32 @@ namespace Remnant_Afterglow_EditMap
             ReturnButton.ButtonDown += ReturnView;
         }
 
+        public void InitDrawMap()
+        {
+            foreach (var Layer in layerData)//添加层
+            {
+                tileMap.AddLayer(Layer.Key);
+            }
+
+            foreach (var Layer in layerData)
+            {
+                int layer = Layer.Key;//当前层
+                Cell[,] map = Layer.Value;//本层的结构
+                for (int i = 0; i < map.GetLength(0); i++)
+                {
+                    for (int j = 0; j < map.GetLength(1); j++)
+                    {
+                        //对应层，位置，图像集id,图像集上位置
+                        tileMap.SetCell(layer, new Vector2I(i, j), map[i, j].MapImageId, map[i, j].ImagePos);
+                    }
+                }
+            }
+        }
+
+        public override void _ExitTree()
+        {
+            LoadMapConfig.ClearData();
+        }
 
         /// <summary>
         /// 返回上一个界面
@@ -82,8 +117,14 @@ namespace Remnant_Afterglow_EditMap
         //保存当前地图
         public void SaveMap()
         {
-            nowMapData.SaveMapData(layerData);
+            nowMapData.SetMapData(layerData);//设置地图图块数据
+
+            nowMapData.SaveData(nowPath,mapName);
         }
+
+
+
+
 
 
         #region 暂时没用的变量

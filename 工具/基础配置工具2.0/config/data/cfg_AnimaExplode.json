@@ -12,14 +12,17 @@
             126
         ],
         "MaxIndex": 1,
-        "Size": [
-            1,
-            1
+        "Offset": [
+            0,
+            0
         ],
-        "DurationMs": 20,
-        "FrameCount": 3,
+        "RelativeList": [],
+        "FrameSpeed": 1,
+        "PlaySpeed": 3,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_B1E5BBB75DF144E6BCE87AD7FFB08D41.png"
+        "Picture": "./data/config/images/ID_B1E5BBB75DF144E6BCE87AD7FFB08D41.png",
+        "FlipH": true,
+        "FlipV": true
     }
 ]

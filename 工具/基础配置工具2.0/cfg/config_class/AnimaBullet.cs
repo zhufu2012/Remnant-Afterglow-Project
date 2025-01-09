@@ -15,7 +15,8 @@ namespace Remnant_Afterglow
         /// <summary>        
         /// 帧动画类型
         ///1 默认动画
-        ///
+        ///6 子弹命中
+        ///7 子弹消失
         /// </summary>
         public int AnimaType { get; set; }
         /// <summary>        
@@ -40,14 +41,17 @@ namespace Remnant_Afterglow
         /// </summary>
         public Vector2I Size { get; set; }
         /// <summary>        
-        /// 持续时间,
-        ///单位毫秒
+        /// 
         /// </summary>
-        public int DurationMs { get; set; }
+        public Vector2 Offset { get; set; }
         /// <summary>        
-        /// 帧数
+        /// 
         /// </summary>
-        public int FrameCount { get; set; }
+        public List<List<int>> RelativeList { get; set; }
+        /// <summary>        
+        /// 
+        /// </summary>
+        public int FrameSpeed { get; set; }
         /// <summary>        
         /// 是否自动播放
         /// </summary>
@@ -60,6 +64,14 @@ namespace Remnant_Afterglow
         /// 帧图
         /// </summary>
         public Texture2D Picture { get; set; }
+        /// <summary>        
+        /// 
+        /// </summary>
+        public bool FlipH { get; set; }
+        /// <summary>        
+        /// 
+        /// </summary>
+        public bool FlipV { get; set; }
 
         public AnimaBullet(int id)
         {
@@ -70,11 +82,14 @@ namespace Remnant_Afterglow
 			LengWidth = (Vector2I)dict["LengWidth"];
 			MaxIndex = (int)dict["MaxIndex"];
 			Size = (Vector2I)dict["Size"];
-			DurationMs = (int)dict["DurationMs"];
-			FrameCount = (int)dict["FrameCount"];
+			Offset = (Vector2)dict["Offset"];
+			RelativeList = (List<List<int>>)dict["RelativeList"];
+			FrameSpeed = (int)dict["FrameSpeed"];
 			IsAutoplay = (bool)dict["IsAutoplay"];
 			IsLoop = (bool)dict["IsLoop"];
 			Picture = (Texture2D)dict["Picture"];
+			FlipH = (bool)dict["FlipH"];
+			FlipV = (bool)dict["FlipV"];
 			InitData();
         }
 
@@ -88,11 +103,14 @@ namespace Remnant_Afterglow
 			LengWidth = (Vector2I)dict["LengWidth"];
 			MaxIndex = (int)dict["MaxIndex"];
 			Size = (Vector2I)dict["Size"];
-			DurationMs = (int)dict["DurationMs"];
-			FrameCount = (int)dict["FrameCount"];
+			Offset = (Vector2)dict["Offset"];
+			RelativeList = (List<List<int>>)dict["RelativeList"];
+			FrameSpeed = (int)dict["FrameSpeed"];
 			IsAutoplay = (bool)dict["IsAutoplay"];
 			IsLoop = (bool)dict["IsLoop"];
 			Picture = (Texture2D)dict["Picture"];
+			FlipH = (bool)dict["FlipH"];
+			FlipV = (bool)dict["FlipV"];
 			InitData();
         }
 
@@ -104,11 +122,14 @@ namespace Remnant_Afterglow
 			LengWidth = (Vector2I)dict["LengWidth"];
 			MaxIndex = (int)dict["MaxIndex"];
 			Size = (Vector2I)dict["Size"];
-			DurationMs = (int)dict["DurationMs"];
-			FrameCount = (int)dict["FrameCount"];
+			Offset = (Vector2)dict["Offset"];
+			RelativeList = (List<List<int>>)dict["RelativeList"];
+			FrameSpeed = (int)dict["FrameSpeed"];
 			IsAutoplay = (bool)dict["IsAutoplay"];
 			IsLoop = (bool)dict["IsLoop"];
 			Picture = (Texture2D)dict["Picture"];
+			FlipH = (bool)dict["FlipH"];
+			FlipV = (bool)dict["FlipV"];
 			InitData();
         }
         #endregion

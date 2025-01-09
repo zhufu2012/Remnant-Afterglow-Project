@@ -13,12 +13,17 @@ namespace Remnant_Afterglow_EditMap
         /// 地图类型 1是作战地图 2 是大地图
         /// </summary>
         public int Type = 1;
-
+        public TabContainer tabContainer;
         /// <summary>
         /// 地图材料列表
         /// </summary>
         public List<MapFixedSet> DataList;
-        public Dictionary<int, GridSelectCon> layerItemDict = new Dictionary<int, GridSelectCon>();
+
+        /// <summary>
+        /// 图集字典  图集id,单图集控件
+        /// </summary>
+        public Dictionary<int, GridSelectCon> gridConDict = new Dictionary<int, GridSelectCon>();
+        //构造函数
         public GridSelectPanel()
         {
             DataList = ConfigCache.GetAllMapFixedSet();
@@ -35,8 +40,6 @@ namespace Remnant_Afterglow_EditMap
             DataList = ConfigCache.GetAllMapFixedSet();
         }
 
-
-        public TabContainer tabContainer;
         public override void _Ready()
         {
             tabContainer = GetNode<TabContainer>("TabContainer");
@@ -45,18 +48,21 @@ namespace Remnant_Afterglow_EditMap
                 GridSelectCon control = (GridSelectCon)GD.Load<PackedScene>("res://src/edit/common_view/grid_select/GridSelectCon.tscn").Instantiate();
                 control.InitData(item,Type);
                 tabContainer.AddChild(control);
-                gridConList.Add(control);
+                gridConDict[item.EditImageSetId] = control;
             }
         }
 
-        //返还当前选择的分页
+        //返还当前选择的分页控件
         public GridSelectCon GetSelectCon()
         {
+            return GetCurrentTabControl();
         }
 
-        //返还当前选择的材料
-        public GridSelectCon GetSelectCon()
+        //返回当前选择的材料
+        public MapFixedMaterial GetSelectMaterial()
         {
+            GridSelectCon con = GetCurrentTabControl();
+            return con.GetSelectMaterial();
         }
     }
 }

@@ -371,11 +371,14 @@
                 "LengWidth": "Vector2I",
                 "MaxIndex": "int",
                 "Size": "Vector2I",
-                "DurationMs": "int",
-                "FrameCount": "int",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<int>>",
+                "SpeedScale": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
-                "Picture": "Texture2D"
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
             }
         },
         {
@@ -390,11 +393,14 @@
                 "LengWidth": "Vector2I",
                 "MaxIndex": "int",
                 "Size": "Vector2I",
-                "DurationMs": "int",
-                "FrameCount": "int",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<int>>",
+                "SpeedScale": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
-                "Picture": "Texture2D"
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
             }
         },
         {
@@ -409,11 +415,14 @@
                 "LengWidth": "Vector2I",
                 "MaxIndex": "int",
                 "Size": "Vector2I",
-                "DurationMs": "int",
-                "FrameCount": "int",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<int>>",
+                "SpeedScale": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
-                "Picture": "Texture2D"
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
             }
         },
         {
@@ -428,11 +437,36 @@
                 "LengWidth": "Vector2I",
                 "MaxIndex": "int",
                 "Size": "Vector2I",
-                "DurationMs": "int",
-                "FrameCount": "int",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<int>>",
+                "SpeedScale": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
-                "Picture": "Texture2D"
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
+            }
+        },
+        {
+            "file_name": "cfg_AnimaWorker",
+            "file_path": "./data/config/data/cfg_AnimaWorker.json",
+            "xlsx_dec": "无人机动画",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ObjectId": "int",
+                "AnimaType": "int",
+                "Coords": "Vector2I",
+                "LengWidth": "Vector2I",
+                "MaxIndex": "int",
+                "Size": "Vector2I",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<int>>",
+                "FrameSpeed": "int",
+                "IsAutoplay": "bool",
+                "IsLoop": "bool",
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
             }
         },
         {
@@ -447,11 +481,14 @@
                 "LengWidth": "Vector2I",
                 "MaxIndex": "int",
                 "Size": "Vector2I",
-                "DurationMs": "int",
-                "FrameCount": "int",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<int>>",
+                "FrameSpeed": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
-                "Picture": "Texture2D"
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
             }
         },
         {
@@ -465,12 +502,15 @@
                 "Coords": "Vector2I",
                 "LengWidth": "Vector2I",
                 "MaxIndex": "int",
-                "Size": "Vector2I",
-                "DurationMs": "int",
-                "FrameCount": "int",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<int>>",
+                "FrameSpeed": "int",
+                "PlaySpeed": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
-                "Picture": "Texture2D"
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
             }
         },
         {

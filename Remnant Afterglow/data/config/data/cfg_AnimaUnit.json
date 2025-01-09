@@ -16,11 +16,17 @@
             4,
             1
         ],
-        "DurationMs": 20,
-        "FrameCount": 3,
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png"
+        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png",
+        "FlipH": true,
+        "FlipV": true
     },
     {
         "KEY_INDEX": "1001_2",
@@ -39,11 +45,17 @@
             4,
             1
         ],
-        "DurationMs": 20,
-        "FrameCount": 3,
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
         "IsAutoplay": false,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png"
+        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png",
+        "FlipH": true,
+        "FlipV": true
     },
     {
         "KEY_INDEX": "1003_1",
@@ -62,11 +74,17 @@
             4,
             1
         ],
-        "DurationMs": 16,
-        "FrameCount": 3,
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png"
+        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png",
+        "FlipH": true,
+        "FlipV": true
     },
     {
         "KEY_INDEX": "1003_2",
@@ -85,11 +103,17 @@
             4,
             1
         ],
-        "DurationMs": 16,
-        "FrameCount": 3,
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png"
+        "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png",
+        "FlipH": true,
+        "FlipV": true
     },
     {
         "KEY_INDEX": "1009_1",
@@ -108,11 +132,17 @@
             4,
             1
         ],
-        "DurationMs": 20,
-        "FrameCount": 3,
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_B967F5BF18684EFFA6C6E0F02372A10A.png"
+        "Picture": "./data/config/images/ID_B967F5BF18684EFFA6C6E0F02372A10A.png",
+        "FlipH": true,
+        "FlipV": true
     },
     {
         "KEY_INDEX": "1009_1",
@@ -131,10 +161,16 @@
             4,
             1
         ],
-        "DurationMs": 20,
-        "FrameCount": 3,
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_B967F5BF18684EFFA6C6E0F02372A10A.png"
+        "Picture": "./data/config/images/ID_B967F5BF18684EFFA6C6E0F02372A10A.png",
+        "FlipH": true,
+        "FlipV": true
     }
 ]

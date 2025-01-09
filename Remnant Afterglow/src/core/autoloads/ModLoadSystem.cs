@@ -127,15 +127,15 @@ namespace Remnant_Afterglow
                 ModAllInfo modInfo = info.Value;
                 if (modInfo.modInfo.HasPck)//有无pck文件
                 {
-                    foreach (string pck_str in modInfo.modInfo.PckList)
+                    foreach (string pck_str in modInfo.modInfo.PckList)//祝福注释-加载mod数据 pck
                     {
                         string infopath = PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER) + info.Key + PathConstant.GetPathUser(PathConstant.MOD_LIST_Dll_USER) + pck_str;
 
                     }
                 }
-                if (modInfo.modInfo.HasCsharp)
+                if (modInfo.modInfo.HasCsharp)//有无c#
                 {
-                    foreach (string dll_str in modInfo.modInfo.DllList)
+                    foreach (string dll_str in modInfo.modInfo.DllList)//祝福注释-加载mod数据  c#
                     {
                         string infopath = PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER) + info.Key + PathConstant.GetPathUser(PathConstant.MOD_LIST_Dll_USER) + dll_str;
 

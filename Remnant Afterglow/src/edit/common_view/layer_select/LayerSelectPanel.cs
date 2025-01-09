@@ -1,5 +1,7 @@
 using Godot;
+using Remnant_Afterglow;
 using System;
+using System.Collections.Generic;
 namespace Remnant_Afterglow_EditMap
 {
     public partial class LayerSelectPanel : Control
@@ -25,11 +27,12 @@ namespace Remnant_Afterglow_EditMap
         {
             scroll = GetNode<ScrollContainer>("ScrollContainer");
             vbox = GetNode<VBoxContainer>("ScrollContainer/VBoxContainer");
-            foreach(var cfgData in list)
+            foreach(var cfgData in layerCfgDataDict)
             {
                 LayerItem item = (LayerItem)GD.Load<PackedScene>("res://src/edit/common_view/layer_select/LayerItem.tscn").Instantiate();
-                item.InitData(cfgData);
+                item.InitData(cfgData.Value);
                 vbox.AddChild(item);
+                layerItemDict[cfgData.Key] = item;
             }
         }
 

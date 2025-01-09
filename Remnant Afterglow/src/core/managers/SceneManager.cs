@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using GameLog;
 
 namespace Remnant_Afterglow
 {
@@ -31,7 +32,7 @@ namespace Remnant_Afterglow
             { "CreateArchiveView","res://src/core/ui/view/archive_view/CreateArchiveView.tscn" },//创建存档界面
 
 
-            { "EditMapCreateView","res://src/edit/EditMapCreateView.tscn" }//地图创建和管理页面
+            { "EditMapCreateView","res://src/edit/EditMapCreateView.tscn" },//地图创建和管理页面
             { "EditMapView","res://src/edit/edit_map/EditMapView.tscn" }//地图编辑器界面
         };
 

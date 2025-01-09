@@ -12,7 +12,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public int MaterialId { get; set; }
         /// <summary>        
-        /// 边缘连接类型
+        /// 边缘类型
         ///0    0000  四周无本材料
         ///1    0001  下端有
         ///2    0010  左端有

@@ -102,7 +102,7 @@ namespace Remnant_Afterglow
             Image image = texture.GetImage();
             var subTextures = new Dictionary<Vector2I, Texture2D>();
             // 获取原始图片的尺寸
-            Vector2I originalSize = texture.GetSize();
+            var originalSize = texture.GetSize();
             // 计算在水平和垂直方向上可拆分的小图片数量
             Vector2I size = new Vector2I((int)(originalSize.X / ImageSize.X), (int)(originalSize.Y / ImageSize.Y));
 

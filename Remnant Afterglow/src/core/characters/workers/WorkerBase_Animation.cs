@@ -9,6 +9,17 @@ namespace Remnant_Afterglow
     public partial class WorkerBase
     {
         /// <summary>
+        /// 播放动画,并且设置动画的位置，确保动画的中心在实体上
+        /// </summary>
+        /// <param name="AnimaName">1 默认动画...</param>
+        public void PlayAnima(string AnimaName)
+        {
+            if(AnimatedSprite.SpriteFrames.HasAnimation(AnimaName))
+                AnimatedSprite.Play(AnimaName);
+            else
+                AnimatedSprite.Play(AnimatorNames.Default);
+        }
+        /// <summary>
         /// 单位动画
         /// </summary>
         /// <param name="CfgData"></param>
@@ -22,20 +33,20 @@ namespace Remnant_Afterglow
             string AutoName = "1";
             foreach (int AnimaType in AnimaTypeList)
             {
-                AnimaUnit animaUnit = ConfigCache.GetAnimaUnit(CfgData.ObjectId + "_" + AnimaType);
-                Image image = animaUnit.Picture.GetImage();
+                AnimaWorker animaWorker = ConfigCache.GetAnimaWorker(CfgData.ObjectId + "_" + AnimaType);
+                Image image = animaWorker.Picture.GetImage();
                 string AnimaName = "" + AnimaType;
                 spriteFrames.AddAnimation(AnimaName);
                 int Index = 1;
-                for (int i = 1; i <= animaUnit.Size.X; i++)
+                for (int i = 1; i <= animaWorker.Size.X; i++)
                 {
-                    for (int j = 1; j <= animaUnit.Size.Y; j++)
+                    for (int j = 1; j <= animaWorker.Size.Y; j++)
                     {
-                        if (Index <= animaUnit.MaxIndex)
+                        if (Index <= animaWorker.MaxIndex)
                         {
-                            Rect2I rect2 = new Rect2I(new Vector2I((i - 1) * animaUnit.LengWidth.X, (j - 1) * animaUnit.LengWidth.Y), animaUnit.LengWidth);
+                            Rect2I rect2 = new Rect2I(new Vector2I((i - 1) * animaWorker.LengWidth.X, (j - 1) * animaWorker.LengWidth.Y), animaWorker.LengWidth);
                             Texture2D texture2D = ImageTexture.CreateFromImage(image.GetRegion(rect2));
-                            spriteFrames.AddFrame(AnimaName, texture2D, animaUnit.DurationMs / 1000);
+                            spriteFrames.AddFrame(AnimaName, texture2D, animaWorker.DurationMs / 1000);
                         }
                         else
                         {
@@ -44,9 +55,9 @@ namespace Remnant_Afterglow
                         Index++;
                     }
                 }
-                if (animaUnit.IsLoop)
+                if (animaWorker.IsLoop)
                     LoopName = AnimaName;
-                if (animaUnit.IsAutoplay)
+                if (animaWorker.IsAutoplay)
                     AutoName = AnimaName;
             }
             if (AnimaTypeList.Count > 0)

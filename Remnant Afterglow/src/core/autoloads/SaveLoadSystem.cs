@@ -56,7 +56,6 @@ namespace Remnant_Afterglow
         {
             IsSave = true;
             NowSaveFile = saveFile;//设置当前选中存档
-
             NowSaveData = GetData<SaveData>(NowSaveFile.file_name);//读取存档数据
         }
         /// <summary>
@@ -82,7 +81,7 @@ namespace Remnant_Afterglow
             // 读取存档文件夹中 的所有存档的文件夹下UI界面数据
             List<string> file_dir_list = FolderUtils.GetDirectoriesInFolder(directory_path);
             string ui_file_name = PathConstant.GetPathUser(PathConstant.SAVE_LOAD_VIEW_UI);
-            foreach (string file_dir in file_dir_list)
+            foreach (string file_dir in file_dir_list)//文件夹路径，文件名称
             {
                 // 使用自定义的文件读取方法
                 SaveFile saveFile = FileUtils.ReadObjectSmart<SaveFile>(file_dir, ui_file_name);

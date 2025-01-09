@@ -1,40 +1,72 @@
+using Godot;
 using Remnant_Afterglow;
+using System;
 using System.Collections.Generic;
 
 namespace Remnant_Afterglow_EditMap
 {
-    
-    public class UserMapImageData
-    {
-        //拥有的图层id列表
-        public List<int> User_MapLayerIdList;
-        //使用的资源块id列表
-        public List<int> User_MapMassifIdList;
-        //使用的地块材料id列表
-        public List<int> User_MapMaterialIdList;
-
-    }
-
-    //地图绘制数据，一个地图的数据
+    /// <summary>
+    /// 地图绘制数据，一个地图的数据
+    /// </summary>
     public class MapDrawData
     {
-        //当前加载的mod列表，如果要编辑这个地图文件，尽量要求当前加载的动过地图的mod列表一样,版本等也一样，不同要警告！
+        /// <summary>
+        /// 当前加载的mod列表，如果要编辑这个地图文件，尽量要求当前加载的动过地图的mod列表一样,版本等也一样，不同要警告！
+        /// </summary>
         public List<ModInfo> loadModList = new List<ModInfo>();
 
-        //地图使用资源数据
-        public UserMapImageData UserMapData;
+        /// <summary>
+        /// 当前加载的mod字典，如果要编辑这个地图文件，尽量要求当前加载的动过地图的mod列表一样,版本等也一样，不同要警告！
+        /// </summary>
+        public Dictionary<string, ModAllInfo> load_mod_list = new Dictionary<string, ModAllInfo>();
 
-        //地图宽度
+        /// <summary>
+        /// 地图宽度
+        /// </summary>
         public int Width = 0;
-        //地图高度
+        /// <summary>
+        /// 地图高度
+        /// </summary>
         public int Height = 0;
-        //地图各层数据
+        /// <summary>
+        /// 地图各层数据
+        /// </summary>
         public Dictionary<int, Cell[,]> layerData = new Dictionary<int, Cell[,]>();
 
-        //保存地图数据
-        public SaveMapData(Dictionary<int, Cell[,]> layerData)
+        public MapDrawData(int Width,int Height)
+        {
+            this.Width = Width;
+            this.Height = Height;
+        }
+
+
+
+        /// <summary>
+        /// 设置地图数据
+        /// </summary>
+        /// <param name="layerData"></param>
+        public void SetMapData(Dictionary<int, Cell[,]> layerData)
         {
             this.layerData = layerData;
+            this.loadModList = ModLoadSystem.load_mod_list;
+        }
+
+        /// <summary>
+        /// 保存地图数据
+        /// </summary>
+        public bool SaveData(string path,string name)
+        {
+            FileUtils.WriteObjectSmartParam(path + name + PathConstant.GetPathUser(EditConstant.Map_Path), this);
+        }
+
+        /// <summary>
+        /// 根据地图文件路径，获取对应的地图数据-没查到返还null
+        /// </summary>
+        /// <returns></returns>
+        public static MapDrawData GetMapDrawData(string mapPath,string name)
+        {
+            MapDrawData mapDrawData = FileUtils.ReadObjectSmart<SaveFile>(mapPath, name);
+            return mapDrawData;
         }
 
 

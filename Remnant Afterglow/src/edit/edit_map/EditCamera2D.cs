@@ -8,8 +8,6 @@ namespace Remnant_Afterglow_EditMap
         //按键-按键盘
         [Export] private bool is_key = true;
 
-       
-
         //滚轮-通过鼠标滚轮放大/缩小
         [Export] private bool is_wheel = true;
         //最小缩小限制
@@ -47,7 +45,6 @@ namespace Remnant_Afterglow_EditMap
 
         public override void _PhysicsProcess(double delta)
         {
-
             if (is_key)//按InputMap（ui_left/top/right/bottom）中定义的键移动相机。
             {
                 if (key[0])
@@ -74,7 +71,6 @@ namespace Remnant_Afterglow_EditMap
             base._UnhandledInput(@event);
             if (@event is InputEventMouseButton mouseButton)
             {
-
                 if (is_wheel)
                 {
                     if (mouseButton.ButtonIndex == MouseButton.WheelDown &&
@@ -82,32 +78,16 @@ namespace Remnant_Afterglow_EditMap
                         camera_zoom.Y - camera_zoom_speed.Y > zoom_min_limit)
                     {
                         camera_zoom -= camera_zoom_speed;
-
-                        //SetZoom(camera_zoom);//祝福注释
+                        SetZoom(camera_zoom);//祝福注释
                     }
                     Zoom = camera_zoom;
                     if (mouseButton.ButtonIndex == MouseButton.WheelUp &&
                         camera_zoom.X + camera_zoom_speed.X < zoom_max_limit &&
                         camera_zoom.Y + camera_zoom_speed.Y < zoom_max_limit)
                     {
-
                         camera_zoom += camera_zoom_speed;
-                        //SetZoom(camera_zoom);
-
+                        SetZoom(camera_zoom);
                     }
-                    /*
-                    if (mouseButton.ButtonIndex == MouseButton.WheelDown &&
-                        camera_zoom.X - camera_zoom_speed.X < zoom_min_limit &&
-                        camera_zoom.Y - camera_zoom_speed.Y < zoom_min_limit)
-                    {
-
-                        camera_zoom -= camera_zoom_speed;
-                        //SetZoom(camera_zoom);
-
-                    }*/
-
-                    //zoom_max_limit
-
                     Zoom = camera_zoom;
                 }
             }
