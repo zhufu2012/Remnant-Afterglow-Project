@@ -8,7 +8,9 @@ namespace Remnant_Afterglow
     {
         //边缘连接数据<材料id,<边缘类型,类>>
         public Dictionary<int, Dictionary<int,MapEdge>> edgeDict = new Dictionary<int, Dictionary<int,MapEdge>>();
+        //宽度
         int Width;
+        //高度
         int Height;
 
         public MapEdgeUtil(int Width,int Height)

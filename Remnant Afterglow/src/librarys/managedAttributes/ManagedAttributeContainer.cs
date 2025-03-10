@@ -5,12 +5,15 @@ using Godot.Community.ControlBinding.Collections; // 导入Godot社区Control Bi
 using Godot.Community.ControlBinding;   // 导入Godot社区Control Binding命名空间
 using Godot.Community.ControlBinding.EventArgs;
 using GameLog;
+using Remnant_Afterglow;
 
 namespace Godot.Community.ManagedAttributes
-{ // 定义命名空间
+{
 
-    // ManagedAttributeContainer类，实现IObservableList接口，用于管理一组ManagedAttribute实例
-    //一个实体拥有一个这样的属性组
+    /// <summary>
+    /// ManagedAttributeContainer类，实现IObservableList接口，用于管理一组ManagedAttribute实例
+    /// 一个实体拥有一个这样的属性组
+    /// </summary>
     public class ManagedAttributeContainer : IObservableList
     {
 
@@ -54,16 +57,74 @@ namespace Godot.Community.ManagedAttributes
 
 
         /// <summary>
+        /// 按优先级顺序应用伤害
+        /// </summary>
+        /// <param name="damage1">实弹伤害</param>
+        /// <param name="damage2">激光伤害</param>
+        /// <param name="damage3">爆炸伤害</param>
+        /// <param name="damage4">元素伤害</param>
+        /// <param name="effect"></param>
+        public void ApplyDamage(float damage1, float damage2, float damage3, float damage4)
+        {
+            // 获取所有需要参与伤害处理的属性（按优先级降序排列）
+            var damageHandlers = Attributes.Values
+                .Where(a => a is FloatManagedAttribute && a.Priority > 0)
+                .Cast<FloatManagedAttribute>()
+                .OrderByDescending(a => a.Priority)
+                .ToList();
+            var fun = (float damage, DemageType type) =>
+            {
+                ///是否击穿
+                bool IsPuncture = false;
+                float damagep = damage;
+                foreach (var handler in damageHandlers)
+                {
+                    if (damagep <= 0) break;
+                    // 处理伤害并返回剩余伤害值
+                    damagep = handler.TakeDamage(type, damagep);
+                }
+                return IsPuncture;
+            };
+            if (damage4 > 0)
+                fun(damage4, DemageType.Element);//元素伤害-穿透伤害
+            if (Attributes.TryGetValue(Attr.Attr_003, out var attribute))
+            {
+                FloatManagedAttribute shield = (FloatManagedAttribute)attribute;
+                if (!shield.Used ||shield.CurrentValue <= shield.MinValue)//护盾被击穿
+                {
+                    shield.Used = false;//护盾就暂时不使用了
+                    fun(damage3, DemageType.Explosion);//结构伤害
+                    fun(damage2, DemageType.Laser);//装甲伤害
+                }
+                else
+                {
+                    fun(damage1, DemageType.LiveAmmunition);//护盾伤害
+                }
+            }
+            else
+            {
+                fun(damage3, DemageType.Explosion);//结构伤害
+                fun(damage2, DemageType.Laser);//装甲伤害
+            }
+        }
+
+        /// <summary>
+        /// 是否已死亡
+        /// </summary>
+        /// <returns></returns>
+        public bool IsDead()
+        {
+            return this[Attr.Attr_001].GetRaw<float>(AttributeValueType.Value) <= 0;
+        }
+
+        /// <summary>
         /// 添加方法，用于向容器中添加一个属性实例
         /// </summary>
         /// <param name="attr"></param>
         /// <returns></returns>
         public bool Add(IManagedAttribute attr)
         {
-            if (Attributes.ContainsKey(attr.GetName()))
-            {
-                return false; // 如果存在，则不允许添加
-            }
+            attr.container = this;
             Attributes[attr.GetName()] = attr;
             OnObservableListChanged(new ObservableListChangedEventArgs()
             {
@@ -147,7 +208,7 @@ namespace Godot.Community.ManagedAttributes
         {
             if (other == null)
             {
-                Log.Error("错误！存在空的属性模板不能为空!");
+                Log.Error("错误！存在空的属性模板,不能为空!");
             }
             else
             {
@@ -197,7 +258,6 @@ namespace Godot.Community.ManagedAttributes
         /// <param name="attribute"></param>
         private void OnAttributeUpdated(IManagedAttribute attribute)
         {
-
             AttributeUpdated?.Invoke(attribute); // 调用AttributeUpdated事件，传入更新的属性实例
         }
 
@@ -210,7 +270,8 @@ namespace Godot.Community.ManagedAttributes
         {
             foreach (var attr in Attributes.Values)
             {
-                attr.Update(tick); // 更新每个属性的内部状态
+                if (attr.Used)
+                    attr.Update(tick); // 更新每个属性的内部状态
             }
         }
 
@@ -220,11 +281,11 @@ namespace Godot.Community.ManagedAttributes
         /// <returns></returns>
         public string Serialize()
         {
-
-
             return JsonConvert.SerializeObject(Attributes, Formatting.Indented, new JsonSerializerSettings()
             {
-                TypeNameHandling = TypeNameHandling.Objects // 设置序列化选项，保留类型信息
+                TypeNameHandling = TypeNameHandling.Objects, // 设置序列化选项，保留类型信息
+                ReferenceLoopHandling = ReferenceLoopHandling.Serialize,
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects
             });
         }
 

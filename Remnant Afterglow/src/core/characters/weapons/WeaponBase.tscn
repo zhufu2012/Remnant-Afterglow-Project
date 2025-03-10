@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyvnbqdrp1gdg"]
+
+[ext_resource type="Script" path="res://src/core/characters/weapons/WeaponBase.cs" id="1_1tqd3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cugj0"]
+
+[node name="WeaponBase" type="Node2D"]
+script = ExtResource("1_1tqd3")
+
+[node name="AttackRange" type="Area2D" parent="."]
+collision_layer = 0
+monitorable = false
+
+[node name="AttackShape" type="CollisionShape2D" parent="AttackRange"]
+shape = SubResource("CircleShape2D_cugj0")

@@ -5,19 +5,16 @@
         "CopyId": 1,
         "CopyType": 0,
         "AllWave": 2,
-        "BrushSpace": 0,
+        "PrepareTime": 10,
+        "BrushSpace": 30,
         "BrushSpaceList": [
             [
-                1,
-                0
-            ],
-            [
                 2,
-                5
+                10
             ]
         ],
         "BrushIdList": [
-            1
+            4
         ]
     }
 ]

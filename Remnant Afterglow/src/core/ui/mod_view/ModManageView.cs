@@ -131,7 +131,7 @@ namespace Remnant_Afterglow
             foreach (var item in ModLoadSystem.all_mod_list)
             {
                 ModAllInfo modInfo = item.Value;
-                if (!ModLoadSystem.load_mod_list.ContainsValue(modInfo))//在需要加载的mod列表中没有
+                if (!ModLoadSystem.loadModDict.ContainsValue(modInfo))//在需要加载的mod列表中没有
                 {
                     SingleMod singleMod = (SingleMod)GD.Load<PackedScene>("res://src/core/ui/mod_view/SingleMod.tscn").Instantiate();
                     singleMod.InitData(modInfo, false);

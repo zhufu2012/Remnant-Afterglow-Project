@@ -9,7 +9,7 @@
         "WallThickness": 1,
         "DefaultNodeId": 2,
         "WallMaterialId": 1,
-        "IsUseNoiseEdit": true,
+        "IsUseNoiseEdit": false,
         "SeedTypeId": 2,
         "IsDensityContrary": true,
         "Density": 200000,

@@ -1,7 +1,7 @@
 [
     {
         "KEY_INDEX": "4001_1",
-        "ObjectId": 4001,
+        "WeaponId": 4001,
         "AnimaType": 1,
         "Coords": [
             0,
@@ -29,37 +29,8 @@
         "FlipV": true
     },
     {
-        "KEY_INDEX": "4002_2",
-        "ObjectId": 4002,
-        "AnimaType": 2,
-        "Coords": [
-            0,
-            0
-        ],
-        "LengWidth": [
-            36,
-            116
-        ],
-        "MaxIndex": 12,
-        "Size": [
-            12,
-            1
-        ],
-        "Offset": [
-            0,
-            0
-        ],
-        "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": false,
-        "IsLoop": false,
-        "Picture": "./data/config/images/ID_34DE48E543EE4C9AA1105D48FE110B1C.png",
-        "FlipH": true,
-        "FlipV": true
-    },
-    {
         "KEY_INDEX": "4003_3",
-        "ObjectId": 4003,
+        "WeaponId": 4003,
         "AnimaType": 3,
         "Coords": [
             0,
@@ -88,7 +59,7 @@
     },
     {
         "KEY_INDEX": "4004_4",
-        "ObjectId": 4004,
+        "WeaponId": 4004,
         "AnimaType": 4,
         "Coords": [
             0,
@@ -112,6 +83,296 @@
         "IsAutoplay": true,
         "IsLoop": true,
         "Picture": "./data/config/images/ID_180A1A64A691431C977DEE2E74F5A8A7.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "4005_1",
+        "WeaponId": 4005,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            92,
+            150
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_9124E4D0DF134B80B13362422C801492.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "4006_3",
+        "WeaponId": 4006,
+        "AnimaType": 3,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            92,
+            150
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_9124E4D0DF134B80B13362422C801492.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "4007_4",
+        "WeaponId": 4007,
+        "AnimaType": 4,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            92,
+            150
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_9124E4D0DF134B80B13362422C801492.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "1001_1",
+        "WeaponId": 1001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            18,
+            62
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_C2923B1264F94CAFB84089AA2A4ED65B.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100001_1",
+        "WeaponId": 100001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            36,
+            116
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_31DFA73456E24538B012C1A413189B55.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101001_1",
+        "WeaponId": 101001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            58,
+            84
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_05FBD9B3867B4F6699B1995FF1D36E0C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100901_1",
+        "WeaponId": 100901,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            42,
+            102
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            6,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_05AA549F3ECF4BA5BE1FF4FC2FC7E87F.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100501_1",
+        "WeaponId": 100501,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            52,
+            140
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            5,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_40811A8000854DB7B7BFFB9B27EFF2FC.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100301_1",
+        "WeaponId": 100301,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            52,
+            152
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            5,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_D701C71A38904E61BF087F5CAB0711C4.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "201_1",
+        "WeaponId": 201,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_9FC21DEA9DAD4D6CA596FC8D7B7D37B0.png",
         "FlipH": true,
         "FlipV": true
     }

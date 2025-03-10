@@ -8,7 +8,7 @@
         /// <summary>
         /// 出生点绘制Line组名称
         /// </summary>
-        public static string LineGroupName_1 = "1";
+        public static string LineGroupName_1 = "line_1";
 
         /// <summary>
         /// 单位

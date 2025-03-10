@@ -5,72 +5,10 @@ using System.Collections.Generic;
 namespace Remnant_Afterglow
 {
     /// <summary>
-    /// 游戏阶段类-用于管理游戏阶段
-    /// -所有新游戏模式都需要继承该 游戏阶段类
-    /// </summary>
-    public class MapGameStage
-    {
-        /// <summary>
-        /// 所有阶段列表
-        /// </summary>
-        public List<int> AllStateList;
-        /// <summary>
-        /// 游戏当前阶段
-        /// </summary>
-        public int NowGameState;
-
-        /// <summary>
-        /// 结束阶段
-        /// </summary>
-        public int EndGameState;
-        /// <summary>
-        /// 构造函数
-        /// </summary>
-        /// <param name="AllStateList"></param>
-        /// <param name="NowGameState"></param>
-        public MapGameStage(List<int> AllStateList, int NowGameState)
-        {
-            this.NowGameState = NowGameState;
-            this.AllStateList = AllStateList;
-        }
-        /// <summary>
-        /// 获取当前游戏阶段
-        /// </summary>
-        /// <returns></returns>
-        public int GetNowGameState()
-        {
-            return NowGameState;
-        }
-        /// <summary>
-        /// 每帧更新阶段数据
-        /// </summary>
-        public void StageUpdate()
-        {
-
-
-        }
-    }
-
-    /// <summary>
-    /// 关卡模式
-    /// </summary>
-    public enum MapGameModel
-    {
-        WaveBrush = 0, //波数刷新模式
-    }
-    /// <summary>
     /// 地图内逻辑
     /// </summary>
-    public partial class MapLogic : Node
+    public partial class MapLogic : Node2D
     {
-        /// <summary>
-        /// 出生点放置节点
-        /// </summary>
-        public Node2D LineShowNode = new Node2D();
-        /// <summary>
-        /// 当前游戏状态
-        /// </summary>
-        public MapGameStage stage;
         /// <summary>
         /// 当前关卡模式
         /// </summary>
@@ -82,21 +20,38 @@ namespace Remnant_Afterglow
         public GameModel gameModel;
 
         /// <summary>
+        /// 章节数据
+        /// </summary>
+        public ChapterBase chapter;
+        /// <summary>
+        /// 战役关卡数据
+        /// </summary>
+        public ChapterCopyBase chapterCopy;
+        /// <summary>
+        /// 单例模式
+        /// </summary>
+        public static MapLogic Instance;
+        /// <summary>
         /// 初始化 关卡逻辑
         /// </summary>
         /// <param name="mapGameModel"></param>
         public MapLogic(MapGameModel mapGameModel, int ChapterId, int CopyId)
         {
+            Instance = this;
             this.mapGameModel = mapGameModel;
+            chapter = ConfigCache.GetChapterBase(ChapterId);
+            chapterCopy = ConfigCache.GetChapterCopyBase(ChapterId + "_" + CopyId);
             switch (mapGameModel)//根据模式的不同，初始化不同数据
             {
                 case MapGameModel.WaveBrush://波数刷怪
-                    gameModel = new WaveBrushSystem(LineShowNode, ChapterId, CopyId);
+                    gameModel = new BrushSystem(chapter, chapterCopy);
                     break;
             }
+            CreateBagData();//准备作战地图 的背包资源数据
+            AddChild(gameModel);
         }
 
-
+        #region 关卡逻辑开始
         /// <summary>
         /// 关卡逻辑开始
         /// 1.准备地图内 资源
@@ -105,25 +60,30 @@ namespace Remnant_Afterglow
         /// </summary>
         public virtual void LogicStart()
         {
+            MapOpView.Instance.SetCurrencyView();//设置货币数量
+            
             switch (mapGameModel)
             {
                 case MapGameModel.WaveBrush://波数刷怪
                     gameModel.StartModel();
                     break;
             }
-            AddChild(LineShowNode);
         }
 
         /// <summary>
-        /// 关卡逻辑结束
-        /// 1.提示获得什么道具等，或者解锁什么功能，解锁什么成就，解锁什么科技
-        /// 2.返回主菜单
+        /// 准备背包数据
         /// </summary>
-        public virtual void LogicEnd()
+        public void CreateBagData()
         {
-
-            gameModel.EndModel();//关卡具体逻辑 结束
+            List<MoneyBase> moneyBaseList = ConfigCache.GetAllMoneyBase();//货币初始化
+            BagSystem.Instance.MapCurrencyClear();
+            foreach (MoneyBase moneyBase in moneyBaseList)
+            {
+                BagSystem.Instance.CreateMapCurrency(moneyBase);
+            }
         }
+        #endregion
+
 
 
         /// <summary>
@@ -133,16 +93,48 @@ namespace Remnant_Afterglow
         public virtual void MapLogicUpdate(double delta)
         {
             gameModel.PostUpdate(delta);//执行模式的PostUpdate逻辑
+            if(gameModel.IsEnd)//如果刷怪已经结束
+            {
+                if(gameModel.IsCopyEnd())
+                {
+                    LogicEnd();
+                    Log.Print("关卡结束了");
+                    SceneManager.PutParam("chapter_id", chapter.ChapterId);
+                    SceneManager.ChangeSceneName("BigMapCopy", this);
+                }
+            }
         }
 
-        //每波开始时
+        /// <summary>
+        /// 关卡逻辑结束
+        /// 1.提示获得什么道具等，或者解锁什么功能，解锁什么成就，解锁什么科技
+        /// 2.返回主菜单
+        /// </summary>
+        public virtual void LogicEnd()
+        {
+            gameModel.EndModel();//关卡具体逻辑 结束
+        }
+
+        /// <summary>
+        /// 每波开始时
+        /// </summary>
         public virtual void WaveStart()
         {
         }
 
-        //检查游戏状态,每帧检查一次，
+        /// <summary>
+        /// 检查游戏状态,每帧检查一次，
+        /// </summary>
         public virtual void checkGameState()
         {
+        }
+
+        /// <summary>
+        /// 重置重生周期
+        /// </summary>
+        public virtual void RegenerationCycle()
+        {
+            Log.Print("重置重生周期");
         }
 
 

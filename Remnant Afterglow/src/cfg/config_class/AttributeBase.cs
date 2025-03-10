@@ -21,12 +21,6 @@ namespace Remnant_Afterglow
         /// </summary>
         public string AttributeDescribe { get; set; }
         /// <summary>        
-        /// 属性显示类型
-        ///0 属性不显示
-        ///1 属性条
-        /// </summary>
-        public int ShowType { get; set; }
-        /// <summary>        
         /// 属性显示颜色
         /// </summary>
         public Color ShowColor { get; set; }
@@ -44,7 +38,6 @@ namespace Remnant_Afterglow
 			AttributeId = (int)dict["AttributeId"];
 			ShowName = (string)dict["ShowName"];
 			AttributeDescribe = (string)dict["AttributeDescribe"];
-			ShowType = (int)dict["ShowType"];
 			ShowColor = (Color)dict["ShowColor"];
 			DependencyIdList = (List<int>)dict["DependencyIdList"];
 			InitData();
@@ -57,7 +50,6 @@ namespace Remnant_Afterglow
 			AttributeId = (int)dict["AttributeId"];
 			ShowName = (string)dict["ShowName"];
 			AttributeDescribe = (string)dict["AttributeDescribe"];
-			ShowType = (int)dict["ShowType"];
 			ShowColor = (Color)dict["ShowColor"];
 			DependencyIdList = (List<int>)dict["DependencyIdList"];
 			InitData();
@@ -68,7 +60,6 @@ namespace Remnant_Afterglow
 			AttributeId = (int)dict["AttributeId"];
 			ShowName = (string)dict["ShowName"];
 			AttributeDescribe = (string)dict["AttributeDescribe"];
-			ShowType = (int)dict["ShowType"];
 			ShowColor = (Color)dict["ShowColor"];
 			DependencyIdList = (List<int>)dict["DependencyIdList"];
 			InitData();

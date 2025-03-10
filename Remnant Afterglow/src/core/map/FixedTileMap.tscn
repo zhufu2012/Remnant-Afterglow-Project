@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cliketrhctb6f"]
+
+[ext_resource type="Script" path="res://src/core/map/FixedTileMap.cs" id="1_q6w2a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uy8i"]
+
+[node name="FixedTileMap" type="TileMap"]
+format = 2
+script = ExtResource("1_q6w2a")
+NoBuildShowColor = Color(1, 0.219608, 0.211765, 0.501961)
+LineColor = Color(0.117647, 1, 0.396078, 0.67451)
+NoBuildLineColor = Color(0.776471, 0.286275, 0.14902, 1)
+
+[node name="建造预览" type="Sprite2D" parent="."]
+z_index = 100
+
+[node name="边框线" type="Line2D" parent="建造预览"]
+closed = true
+width = 2.0
+
+[node name="占地区域" type="Area2D" parent="建造预览"]
+collision_layer = 0
+collision_mask = 4286578688
+
+[node name="形状" type="CollisionShape2D" parent="建造预览/占地区域"]
+shape = SubResource("RectangleShape2D_3uy8i")

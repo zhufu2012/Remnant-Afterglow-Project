@@ -13,19 +13,31 @@ namespace Remnant_Afterglow
         public int MapImageId;//图像集序号，MapImageSet中CfgDataList的序号
         public int MapImageIndex;//图集内序号
         public Vector2I ImagePos;//瓦片在图集中的位置
+        public Cell()
+        {
+            index = 0;
+        }
+
         public Cell(int x, int y, int index, int PassTypeId, int MapImageId, int MapImageIndex)
         {
             this.x = x;
             this.y = y;
-            if(index ==0)
-            {
-                Log.Print(x,y,index);
-            }
             this.index = index;
             this.PassTypeId = PassTypeId;
             this.MapImageId = MapImageId;
             this.MapImageIndex = MapImageIndex;
             ImagePos = LoadTileSetConfig.GetImageIndex_TO_Vector2(MapImageId, MapImageIndex);
+        }
+
+        public Cell(int x, int y, int index, int PassTypeId, int MapImageId, int MapImageIndex,Vector2I ImagePos)
+        {
+            this.x = x;
+            this.y = y;
+            this.index = index;
+            this.PassTypeId = PassTypeId;
+            this.MapImageId = MapImageId;
+            this.MapImageIndex = MapImageIndex;
+            this.ImagePos = ImagePos;
         }
 
         /// <summary>
@@ -66,9 +78,9 @@ namespace Remnant_Afterglow
         /// 获取地图材料
         /// </summary>
         /// <returns></returns>
-        public MapMaterial GetMapMaterial()
+        public MapFixedMaterial GetMapFixedMaterial()
         {
-            return ConfigCache.GetMapMaterial(index);
+            return ConfigCache.GetMapFixedMaterial(index);
         }
 
         public override string ToString()
@@ -78,8 +90,11 @@ namespace Remnant_Afterglow
 
         public override bool Equals(object obj)
         {
-            Cell other = (Cell)obj;
-            return other.x == x && other.y == y && other.index == index;
+            if (obj is Cell other)
+            {
+                 return other.x == x && other.y == y && other.index == index;
+            }
+            return false;
         }
     }
 }

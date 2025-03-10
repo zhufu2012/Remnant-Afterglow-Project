@@ -258,12 +258,21 @@ public static class MathHelper
     /// <returns >以弧度表示的新角度。</returns >
     public static float WrapAngle(float angle)
     {
-        if (angle > -3.1415927410125732 && angle <= 3.1415927410125732)
-            return angle;
-        angle %= 6.2831855f;
-        if (angle <= -3.1415927410125732)
-            return angle + 6.2831855f;
-        return angle > 3.1415927410125732 ? angle - 6.2831855f : angle;
+        const float PI = 3.1415926535897932f;
+        const float TWO_PI = 2 * PI;
+        // 对360度(2π)取模运算
+        angle %= TWO_PI;
+        // 如果角度小于-PI，则加上2π调整到[-PI, PI]范围内
+        if (angle <= -PI)
+        {
+            angle += TWO_PI;
+        }
+        // 如果角度大于PI，则减去2π调整到[-PI, PI]范围内
+        else if (angle > PI)
+        {
+            angle -= TWO_PI;
+        }
+        return angle;
     }
 
     /// <summary>Determines if value is powered by two.</summary>

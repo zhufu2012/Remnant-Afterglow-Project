@@ -1,11 +1,11 @@
 [
     {
-        "KEY_INDEX": "2",
-        "MaterialId": 2,
-        "MaterialName": "墙壁",
-        "PassTypeId": 3,
-        "ImageSetId": 1,
-        "ImageSetIndex": 13,
+        "KEY_INDEX": "1",
+        "MaterialId": 1,
+        "MaterialName": "地面",
+        "PassTypeId": 1,
+        "ImageSetId": 8,
+        "ImageSetIndex": 1,
         "CollisionPolygon": [
             [
                 0,
@@ -28,12 +28,12 @@
         "Parame": 1.0
     },
     {
-        "KEY_INDEX": "3",
-        "MaterialId": 3,
-        "MaterialName": "水流",
+        "KEY_INDEX": "2",
+        "MaterialId": 2,
+        "MaterialName": "墙壁",
         "PassTypeId": 2,
-        "ImageSetId": 1,
-        "ImageSetIndex": 19,
+        "ImageSetId": 8,
+        "ImageSetIndex": 2,
         "CollisionPolygon": [],
         "IsEdge": false,
         "PreviewColor": [
@@ -44,12 +44,12 @@
         "Parame": 1.0
     },
     {
-        "KEY_INDEX": "6",
-        "MaterialId": 6,
+        "KEY_INDEX": "3",
+        "MaterialId": 3,
         "MaterialName": "悬崖",
         "PassTypeId": 3,
-        "ImageSetId": 1,
-        "ImageSetIndex": 13,
+        "ImageSetId": 8,
+        "ImageSetIndex": 3,
         "CollisionPolygon": [],
         "IsEdge": false,
         "PreviewColor": [
@@ -62,10 +62,10 @@
     {
         "KEY_INDEX": "4",
         "MaterialId": 4,
-        "MaterialName": "数字2",
-        "PassTypeId": 1,
-        "ImageSetId": 2,
-        "ImageSetIndex": 21,
+        "MaterialName": "不可建造地面",
+        "PassTypeId": 4,
+        "ImageSetId": 8,
+        "ImageSetIndex": 4,
         "CollisionPolygon": [],
         "IsEdge": false,
         "PreviewColor": [
@@ -78,10 +78,10 @@
     {
         "KEY_INDEX": "5",
         "MaterialId": 5,
-        "MaterialName": "数字3",
-        "PassTypeId": 1,
-        "ImageSetId": 2,
-        "ImageSetIndex": 22,
+        "MaterialName": "沼泽",
+        "PassTypeId": 5,
+        "ImageSetId": 8,
+        "ImageSetIndex": 5,
         "CollisionPolygon": [],
         "IsEdge": false,
         "PreviewColor": [
@@ -92,12 +92,12 @@
         "Parame": 1.0
     },
     {
-        "KEY_INDEX": "1",
-        "MaterialId": 1,
-        "MaterialName": "空地",
-        "PassTypeId": 1,
-        "ImageSetId": 6,
-        "ImageSetIndex": 1,
+        "KEY_INDEX": "6",
+        "MaterialId": 6,
+        "MaterialName": "熔岩",
+        "PassTypeId": 6,
+        "ImageSetId": 8,
+        "ImageSetIndex": 6,
         "CollisionPolygon": [],
         "IsEdge": false,
         "PreviewColor": [
@@ -108,11 +108,103 @@
         "Parame": 1.0
     },
     {
-        "KEY_INDEX": "7",
-        "MaterialId": 7,
-        "MaterialName": "深层工厂地板",
+        "KEY_INDEX": "100",
+        "MaterialId": 100,
+        "MaterialName": "边缘",
+        "PassTypeId": 7,
+        "ImageSetId": 8,
+        "ImageSetIndex": 7,
+        "CollisionPolygon": [
+            [
+                0,
+                -10,
+                -10,
+                10,
+                -10,
+                10,
+                10,
+                -10,
+                10
+            ]
+        ],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "50",
+        "MaterialId": 50,
+        "MaterialName": "废料资源地块",
         "PassTypeId": 1,
-        "ImageSetId": 7,
+        "ImageSetId": 8,
+        "ImageSetIndex": 9,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "51",
+        "MaterialId": 51,
+        "MaterialName": "万能齿轮资源地块",
+        "PassTypeId": 1,
+        "ImageSetId": 8,
+        "ImageSetIndex": 10,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "52",
+        "MaterialId": 52,
+        "MaterialName": "怨灵水晶资源地块",
+        "PassTypeId": 1,
+        "ImageSetId": 8,
+        "ImageSetIndex": 11,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "53",
+        "MaterialId": 53,
+        "MaterialName": "次元溶剂资源地块",
+        "PassTypeId": 1,
+        "ImageSetId": 8,
+        "ImageSetIndex": 12,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "54",
+        "MaterialId": 54,
+        "MaterialName": "地面道路",
+        "PassTypeId": 8,
+        "ImageSetId": 8,
         "ImageSetIndex": 1,
         "CollisionPolygon": [
             [
@@ -127,6 +219,2886 @@
                 10
             ]
         ],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "101",
+        "MaterialId": 101,
+        "MaterialName": "警戒线左上",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 1,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "102",
+        "MaterialId": 102,
+        "MaterialName": "警戒线上",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 2,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "103",
+        "MaterialId": 103,
+        "MaterialName": "警戒线右上",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 3,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "104",
+        "MaterialId": 104,
+        "MaterialName": "处理器墙壁左上",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 4,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "105",
+        "MaterialId": 105,
+        "MaterialName": "处理器墙壁上",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 5,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "106",
+        "MaterialId": 106,
+        "MaterialName": "处理器墙壁右上",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 6,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "107",
+        "MaterialId": 107,
+        "MaterialName": "外墙左上",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 7,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "108",
+        "MaterialId": 108,
+        "MaterialName": "外墙上",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 8,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "109",
+        "MaterialId": 109,
+        "MaterialName": "外墙右上",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 9,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "110",
+        "MaterialId": 110,
+        "MaterialName": "警戒线左",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 10,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "111",
+        "MaterialId": 111,
+        "MaterialName": "警戒线中",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 11,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "112",
+        "MaterialId": 112,
+        "MaterialName": "警戒线右",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 12,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "113",
+        "MaterialId": 113,
+        "MaterialName": "处理器墙壁左",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 13,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "114",
+        "MaterialId": 114,
+        "MaterialName": "处理器墙壁中",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 14,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "115",
+        "MaterialId": 115,
+        "MaterialName": "处理器墙壁右",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 15,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "116",
+        "MaterialId": 116,
+        "MaterialName": "外墙左",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 16,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "117",
+        "MaterialId": 117,
+        "MaterialName": "外墙中",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 17,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "118",
+        "MaterialId": 118,
+        "MaterialName": "外墙右",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 18,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "119",
+        "MaterialId": 119,
+        "MaterialName": "警戒线左下",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 19,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "120",
+        "MaterialId": 120,
+        "MaterialName": "警戒线中下",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 20,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "121",
+        "MaterialId": 121,
+        "MaterialName": "警戒线右下",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 21,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "122",
+        "MaterialId": 122,
+        "MaterialName": "处理器墙壁左下",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 22,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "123",
+        "MaterialId": 123,
+        "MaterialName": "处理器墙壁下",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 23,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "124",
+        "MaterialId": 124,
+        "MaterialName": "处理器墙壁右下",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 24,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "125",
+        "MaterialId": 125,
+        "MaterialName": "外墙左下",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 25,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "126",
+        "MaterialId": 126,
+        "MaterialName": "外墙下",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 26,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "127",
+        "MaterialId": 127,
+        "MaterialName": "外墙右下",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 27,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "128",
+        "MaterialId": 128,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 28,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "129",
+        "MaterialId": 129,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 29,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "130",
+        "MaterialId": 130,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 30,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "131",
+        "MaterialId": 131,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 31,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "132",
+        "MaterialId": 132,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 32,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "133",
+        "MaterialId": 133,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 33,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "134",
+        "MaterialId": 134,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 34,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "135",
+        "MaterialId": 135,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 35,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "136",
+        "MaterialId": 136,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 36,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "137",
+        "MaterialId": 137,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 37,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "138",
+        "MaterialId": 138,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 38,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "139",
+        "MaterialId": 139,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 39,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "140",
+        "MaterialId": 140,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 40,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "141",
+        "MaterialId": 141,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 41,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "142",
+        "MaterialId": 142,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 42,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "143",
+        "MaterialId": 143,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 43,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "144",
+        "MaterialId": 144,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 44,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "145",
+        "MaterialId": 145,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 45,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "146",
+        "MaterialId": 146,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 46,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "147",
+        "MaterialId": 147,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 47,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "148",
+        "MaterialId": 148,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 48,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "149",
+        "MaterialId": 149,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 49,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "150",
+        "MaterialId": 150,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 50,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "151",
+        "MaterialId": 151,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 51,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "152",
+        "MaterialId": 152,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 52,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "153",
+        "MaterialId": 153,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 53,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "154",
+        "MaterialId": 154,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 54,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "155",
+        "MaterialId": 155,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 55,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "156",
+        "MaterialId": 156,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 56,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "157",
+        "MaterialId": 157,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 57,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "158",
+        "MaterialId": 158,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 58,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "159",
+        "MaterialId": 159,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 59,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "160",
+        "MaterialId": 160,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 60,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "161",
+        "MaterialId": 161,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 61,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "162",
+        "MaterialId": 162,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 62,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "163",
+        "MaterialId": 163,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 63,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "164",
+        "MaterialId": 164,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 64,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "165",
+        "MaterialId": 165,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 65,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "166",
+        "MaterialId": 166,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 66,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "167",
+        "MaterialId": 167,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 67,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "168",
+        "MaterialId": 168,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 68,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "169",
+        "MaterialId": 169,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 69,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "170",
+        "MaterialId": 170,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 70,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "171",
+        "MaterialId": 171,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 71,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "172",
+        "MaterialId": 172,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 72,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "173",
+        "MaterialId": 173,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 73,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "174",
+        "MaterialId": 174,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 74,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "175",
+        "MaterialId": 175,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 75,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "176",
+        "MaterialId": 176,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 76,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "177",
+        "MaterialId": 177,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 77,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "178",
+        "MaterialId": 178,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 78,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "179",
+        "MaterialId": 179,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 79,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "180",
+        "MaterialId": 180,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 80,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "181",
+        "MaterialId": 181,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 81,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "182",
+        "MaterialId": 182,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 82,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "183",
+        "MaterialId": 183,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 83,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "184",
+        "MaterialId": 184,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 84,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "185",
+        "MaterialId": 185,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 85,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "186",
+        "MaterialId": 186,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 86,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "187",
+        "MaterialId": 187,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 87,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "188",
+        "MaterialId": 188,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 88,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "189",
+        "MaterialId": 189,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 89,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "190",
+        "MaterialId": 190,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 90,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "191",
+        "MaterialId": 191,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 91,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "192",
+        "MaterialId": 192,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 92,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "193",
+        "MaterialId": 193,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 93,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "194",
+        "MaterialId": 194,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 94,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "195",
+        "MaterialId": 195,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 95,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "196",
+        "MaterialId": 196,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 96,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "197",
+        "MaterialId": 197,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 97,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "198",
+        "MaterialId": 198,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 98,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "199",
+        "MaterialId": 199,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 99,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "200",
+        "MaterialId": 200,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 100,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "201",
+        "MaterialId": 201,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 101,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "202",
+        "MaterialId": 202,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 102,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "203",
+        "MaterialId": 203,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 103,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "204",
+        "MaterialId": 204,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 104,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "205",
+        "MaterialId": 205,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 105,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "206",
+        "MaterialId": 206,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 106,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "207",
+        "MaterialId": 207,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 107,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "208",
+        "MaterialId": 208,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 108,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "209",
+        "MaterialId": 209,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 109,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "210",
+        "MaterialId": 210,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 110,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "211",
+        "MaterialId": 211,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 111,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "212",
+        "MaterialId": 212,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 112,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "213",
+        "MaterialId": 213,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 113,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "214",
+        "MaterialId": 214,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 114,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "215",
+        "MaterialId": 215,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 115,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "216",
+        "MaterialId": 216,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 116,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "217",
+        "MaterialId": 217,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 117,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "218",
+        "MaterialId": 218,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 118,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "219",
+        "MaterialId": 219,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 119,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "220",
+        "MaterialId": 220,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 120,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "221",
+        "MaterialId": 221,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 121,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "222",
+        "MaterialId": 222,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 122,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "223",
+        "MaterialId": 223,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 123,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "224",
+        "MaterialId": 224,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 124,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "225",
+        "MaterialId": 225,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 125,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "226",
+        "MaterialId": 226,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 126,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "227",
+        "MaterialId": 227,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 127,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "228",
+        "MaterialId": 228,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 128,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "229",
+        "MaterialId": 229,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 129,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "230",
+        "MaterialId": 230,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 130,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "231",
+        "MaterialId": 231,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 131,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "232",
+        "MaterialId": 232,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 9,
+        "ImageSetIndex": 132,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "233",
+        "MaterialId": 233,
+        "MaterialName": "万能齿轮",
+        "PassTypeId": 0,
+        "ImageSetId": 11,
+        "ImageSetIndex": 1,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "234",
+        "MaterialId": 234,
+        "MaterialName": "怨灵水晶资",
+        "PassTypeId": 0,
+        "ImageSetId": 11,
+        "ImageSetIndex": 2,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "235",
+        "MaterialId": 235,
+        "MaterialName": "次元溶剂",
+        "PassTypeId": 0,
+        "ImageSetId": 11,
+        "ImageSetIndex": 3,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "236",
+        "MaterialId": 236,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 12,
+        "ImageSetIndex": 1,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "237",
+        "MaterialId": 237,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 12,
+        "ImageSetIndex": 2,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "238",
+        "MaterialId": 238,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 12,
+        "ImageSetIndex": 3,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "239",
+        "MaterialId": 239,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 12,
+        "ImageSetIndex": 4,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "240",
+        "MaterialId": 240,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 12,
+        "ImageSetIndex": 5,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "241",
+        "MaterialId": 241,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 12,
+        "ImageSetIndex": 6,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "242",
+        "MaterialId": 242,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 12,
+        "ImageSetIndex": 7,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "243",
+        "MaterialId": 243,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 12,
+        "ImageSetIndex": 8,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "244",
+        "MaterialId": 244,
+        "MaterialName": "1",
+        "PassTypeId": 0,
+        "ImageSetId": 12,
+        "ImageSetIndex": 9,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10001",
+        "MaterialId": 10001,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 1,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10002",
+        "MaterialId": 10002,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 2,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10003",
+        "MaterialId": 10003,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 3,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10004",
+        "MaterialId": 10004,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 4,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10005",
+        "MaterialId": 10005,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 5,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10006",
+        "MaterialId": 10006,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 6,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10007",
+        "MaterialId": 10007,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 7,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10008",
+        "MaterialId": 10008,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 8,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10009",
+        "MaterialId": 10009,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 9,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10010",
+        "MaterialId": 10010,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 10,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10011",
+        "MaterialId": 10011,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 11,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10012",
+        "MaterialId": 10012,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 12,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10013",
+        "MaterialId": 10013,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 13,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10014",
+        "MaterialId": 10014,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 14,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10015",
+        "MaterialId": 10015,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 15,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10016",
+        "MaterialId": 10016,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 16,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10017",
+        "MaterialId": 10017,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 17,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10018",
+        "MaterialId": 10018,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 18,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10019",
+        "MaterialId": 10019,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 19,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10020",
+        "MaterialId": 10020,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 20,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10021",
+        "MaterialId": 10021,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 21,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10022",
+        "MaterialId": 10022,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 22,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10023",
+        "MaterialId": 10023,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 23,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10024",
+        "MaterialId": 10024,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 24,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10025",
+        "MaterialId": 10025,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 25,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10026",
+        "MaterialId": 10026,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 26,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10027",
+        "MaterialId": 10027,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 27,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10028",
+        "MaterialId": 10028,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 28,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10029",
+        "MaterialId": 10029,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 29,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10030",
+        "MaterialId": 10030,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 30,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10031",
+        "MaterialId": 10031,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 31,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10032",
+        "MaterialId": 10032,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 32,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10033",
+        "MaterialId": 10033,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 33,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10034",
+        "MaterialId": 10034,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 34,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10035",
+        "MaterialId": 10035,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 35,
+        "CollisionPolygon": [],
+        "IsEdge": false,
+        "PreviewColor": [
+            0,
+            0,
+            0
+        ],
+        "Parame": 1.0
+    },
+    {
+        "KEY_INDEX": "10036",
+        "MaterialId": 10036,
+        "MaterialName": "阴影",
+        "PassTypeId": 0,
+        "ImageSetId": 10,
+        "ImageSetIndex": 36,
+        "CollisionPolygon": [],
         "IsEdge": false,
         "PreviewColor": [
             0,

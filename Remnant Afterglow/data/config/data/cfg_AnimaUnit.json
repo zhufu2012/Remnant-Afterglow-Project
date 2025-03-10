@@ -116,16 +116,16 @@
         "FlipV": true
     },
     {
-        "KEY_INDEX": "1009_1",
-        "ObjectId": 1009,
+        "KEY_INDEX": "1002_1",
+        "ObjectId": 1002,
         "AnimaType": 1,
         "Coords": [
             0,
             0
         ],
         "LengWidth": [
-            63,
-            62
+            62,
+            63
         ],
         "MaxIndex": 4,
         "Size": [
@@ -145,16 +145,16 @@
         "FlipV": true
     },
     {
-        "KEY_INDEX": "1009_1",
-        "ObjectId": 1009,
-        "AnimaType": 1,
+        "KEY_INDEX": "1002_2",
+        "ObjectId": 1002,
+        "AnimaType": 2,
         "Coords": [
             0,
             0
         ],
         "LengWidth": [
-            63,
-            62
+            62,
+            63
         ],
         "MaxIndex": 4,
         "Size": [
@@ -170,6 +170,151 @@
         "IsAutoplay": true,
         "IsLoop": true,
         "Picture": "./data/config/images/ID_B967F5BF18684EFFA6C6E0F02372A10A.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "700001_1",
+        "ObjectId": 700001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            24,
+            32
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_68032C65704D406A8DD6E0D7D04AEEA5.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "700002_1",
+        "ObjectId": 700002,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            20,
+            20
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_73396B96EFFE49AA9EFD8BCB69C2B9D8.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "700003_1",
+        "ObjectId": 700003,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            22,
+            28
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_0E110603796D46C38494B28A4D571C62.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "700004_1",
+        "ObjectId": 700004,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            20,
+            26
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_F74820F460FF443097C161127F585EF3.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "700005_1",
+        "ObjectId": 700005,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            24,
+            32
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_5700143AD5AB49B58DFC7EE8DDA80D8A.png",
         "FlipH": true,
         "FlipV": true
     }

@@ -21,17 +21,18 @@ namespace Remnant_Afterglow
         /// </summary>
         public int Quantity = 1;
 
-        public ItemBase()
+        public ItemBase(int ItemId,int Quantity)
         {
             Id = IdGenerator.Generate(IdConstant.ID_TYPE_ITEM);
-        }
-
-        public ItemBase(int ItemId, int num)
-        {
             this.ItemId = ItemId;
-            Quantity = num;
+            this.Quantity = Quantity;
         }
 
+        /// <summary>
+        /// 创建存档时给的默认道具数量
+        /// </summary>
+        /// <param name="CfgId"></param>
+        /// <returns></returns>
         public static ItemBase CreateFromId(int CfgId)
         {
             ItemData cfgData = ConfigCache.GetItemData(CfgId);

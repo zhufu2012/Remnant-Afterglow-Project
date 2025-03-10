@@ -10,36 +10,45 @@ namespace Remnant_Afterglow
     [Serializable]
     public partial class SaveData
     {
-        //最后保存时，游戏的版本
-        public  int version;
+        /// <summary>
+        /// 最后保存时，游戏的版本
+        /// </summary>
+        public int version;
 
 
         /// <summary>
         /// 开局选择的章节
         /// </summary>
-        public  int ChapterId;
+        public int ChapterId;
         /// <summary>
         /// 已占领关卡 <章节id,关卡id>
         /// </summary>
-        public  Dictionary<int, List<int>> CaptureCopyDict = new Dictionary<int, List<int>>();
+        public Dictionary<int, List<int>> CaptureCopyDict = new Dictionary<int, List<int>>();
         /// <summary>
         /// 已解锁可挑战关卡 <章节id,关卡id>
         /// </summary>
-        public  Dictionary<int, List<int>> UnlockChallengeCopyDict = new Dictionary<int, List<int>>();
+        public Dictionary<int, List<int>> UnlockChallengeCopyDict = new Dictionary<int, List<int>>();
 
         /// <summary>
         /// 已解锁的科技id列表，默认解锁的也会记录
         /// </summary>
-        public  List<int> ScienceIdList = new List<int>();
+        public List<int> ScienceIdList = new List<int>();
         /// <summary>
         /// 背包系统数据
         /// </summary>
-        public  BagSystem bagSystem = new BagSystem();
+        public BagSystem bagSystem = new BagSystem();
 
         /// <summary>
         /// 创建存档时运行
         /// </summary>
         public SaveData()
+        {
+        }
+
+        /// <summary>
+        /// 创建存档后的，数据初始化
+        /// </summary>
+        public void CreateInitData()
         {
             version = GameConstant.game_version;//设置存档 版本
             InitScienceData();//初始化科技相关数据
@@ -79,13 +88,14 @@ namespace Remnant_Afterglow
             List<ItemData> itemDataList = ConfigCache.GetAllItemData();//道具初始化
             foreach (ItemData itemData in itemDataList)
             {
-                bagSystem.AddItemToBag(itemData.BagId, itemData.ItemId, itemData.InitNum);
+                if (itemData.InitNum > 0)
+                    bagSystem.AddItemToBag(itemData);
             }
 
             List<MoneyBase> moneyBaseList = ConfigCache.GetAllMoneyBase();//货币初始化
             foreach (MoneyBase moneyBase in moneyBaseList)
             {
-                bagSystem.CreateCurrency(moneyBase);
+                bagSystem.CreateBigMapCurrency(moneyBase);
             }
         }
 

@@ -9,6 +9,7 @@ namespace Remnant_Afterglow
         #region 参数及初始化
         /// <summary>        
         /// 固定地图编辑用图集id
+        ///逻辑图集id默认为1
         /// </summary>
         public int EditImageSetId { get; set; }
         /// <summary>        
@@ -16,7 +17,14 @@ namespace Remnant_Afterglow
         /// </summary>
         public string EditSetName { get; set; }
         /// <summary>        
+        /// 所在图层
+        ///具体看 图层相关.xlsx的
+        ///cfg_MapImageLayer_图像层配置表
+        /// </summary>
+        public int ImageLayer { get; set; }
+        /// <summary>        
         /// 固定地图材料id列表
+        ///cfg_MapFixedMaterial_固定地图用材料
         /// </summary>
         public List<int> MaterialIdList { get; set; }
 
@@ -25,6 +33,7 @@ namespace Remnant_Afterglow
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_MapFixedSet, id);//public const string Config_MapFixedSet = "cfg_MapFixedSet"; 
 			EditImageSetId = (int)dict["EditImageSetId"];
 			EditSetName = (string)dict["EditSetName"];
+			ImageLayer = (int)dict["ImageLayer"];
 			MaterialIdList = (List<int>)dict["MaterialIdList"];
 			InitData();
         }
@@ -35,6 +44,7 @@ namespace Remnant_Afterglow
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_MapFixedSet, cfg_id);//public const string Config_MapFixedSet = "cfg_MapFixedSet"; 
 			EditImageSetId = (int)dict["EditImageSetId"];
 			EditSetName = (string)dict["EditSetName"];
+			ImageLayer = (int)dict["ImageLayer"];
 			MaterialIdList = (List<int>)dict["MaterialIdList"];
 			InitData();
         }
@@ -43,6 +53,7 @@ namespace Remnant_Afterglow
         {
 			EditImageSetId = (int)dict["EditImageSetId"];
 			EditSetName = (string)dict["EditSetName"];
+			ImageLayer = (int)dict["ImageLayer"];
 			MaterialIdList = (List<int>)dict["MaterialIdList"];
 			InitData();
         }

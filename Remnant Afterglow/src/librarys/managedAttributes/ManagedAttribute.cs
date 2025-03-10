@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using Godot.Community.ControlBinding;
+using GameLog;
 
 namespace Godot.Community.ManagedAttributes;
 
@@ -12,6 +13,16 @@ public abstract class ManagedAttribute<T> : ObservableObject, IManagedAttribute
     public event IManagedAttribute.AttributeUpdatedHandler AttributeUpdated;
 
     protected List<ManagedAttributeModifier> modifiers = new();
+    /// <summary>
+    /// 优先级
+    /// </summary>
+    public int Priority { get; set; } = 0;
+    public bool Used { get; set; } = true;
+
+    /// <summary>
+    /// 自身属性库的引用
+    /// </summary>
+    public ManagedAttributeContainer container { get; set; }
     /// <summary>
     /// 修改值，会触发改变值事件
     /// </summary>

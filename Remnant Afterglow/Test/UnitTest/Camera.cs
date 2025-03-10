@@ -38,13 +38,12 @@ namespace Project_Core_Test
         //按以下键移动相机：左、上、右、下。
         private bool[] key = new bool[4] { false, false, false, false };
 
-        private Godot.Label frame_number_label;
+        private Label frame_number_label;
         public override void _Ready()
         {
-            frame_number_label = GetNode<Godot.Label>("Camera2D/CanvasLayer/Label");
+            frame_number_label = GetNode<Label>("Label");
             //祝福注释
             camera_zoom = Zoom;
-            base._Ready();
         }
 
         public override void _PhysicsProcess(double delta)

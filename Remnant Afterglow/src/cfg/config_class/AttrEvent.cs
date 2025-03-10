@@ -26,7 +26,6 @@ namespace Remnant_Afterglow
         ///3 触发其他事件 
         ///10 播放音效事件 播放音效
         ///11 播放动画事件 播放动画
-        ///12 播放脚本动画
         /// </summary>
         public int EventType { get; set; }
         /// <summary>        

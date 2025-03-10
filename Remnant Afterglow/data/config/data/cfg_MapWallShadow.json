@@ -1,0 +1,114 @@
+[
+    {
+        "KEY_INDEX": "2_0",
+        "MaterialId": 2,
+        "EdgeId": 0,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_1",
+        "MaterialId": 2,
+        "EdgeId": 1,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_2",
+        "MaterialId": 2,
+        "EdgeId": 2,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_3",
+        "MaterialId": 2,
+        "EdgeId": 3,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_4",
+        "MaterialId": 2,
+        "EdgeId": 4,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_5",
+        "MaterialId": 2,
+        "EdgeId": 5,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_6",
+        "MaterialId": 2,
+        "EdgeId": 6,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_7",
+        "MaterialId": 2,
+        "EdgeId": 7,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_8",
+        "MaterialId": 2,
+        "EdgeId": 8,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_9",
+        "MaterialId": 2,
+        "EdgeId": 9,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_10",
+        "MaterialId": 2,
+        "EdgeId": 10,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_11",
+        "MaterialId": 2,
+        "EdgeId": 11,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_12",
+        "MaterialId": 2,
+        "EdgeId": 12,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_13",
+        "MaterialId": 2,
+        "EdgeId": 13,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_14",
+        "MaterialId": 2,
+        "EdgeId": 14,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    },
+    {
+        "KEY_INDEX": "2_15",
+        "MaterialId": 2,
+        "EdgeId": 15,
+        "ImageSetId": 1,
+        "ImageSetIndex": 13
+    }
+]

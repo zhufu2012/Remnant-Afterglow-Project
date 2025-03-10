@@ -128,11 +128,6 @@ namespace Remnant_Afterglow
         /// 相机基本数据
         /// </summary>
         public const string Config_CameraBase = "cfg_CameraBase";
-
-        /// <summary>
-        /// 相机组件表
-        /// </summary>
-        public const string Config_CameraAssemblyBase = "cfg_CameraAssemblyBase";
         #endregion
         #region 帧动画
         /// <summary>
@@ -141,14 +136,14 @@ namespace Remnant_Afterglow
         public const string Config_AnimaUnit = "cfg_AnimaUnit";
 
         /// <summary>
-        /// 炮塔动画
-        /// </summary>
-        public const string Config_AnimaTower = "cfg_AnimaTower";
-
-        /// <summary>
         /// 建筑动画
         /// </summary>
         public const string Config_AnimaBuild = "cfg_AnimaBuild";
+
+        /// <summary>
+        /// 炮塔动画
+        /// </summary>
+        public const string Config_AnimaTower = "cfg_AnimaTower";
 
         /// <summary>
         /// 武器动画
@@ -184,6 +179,11 @@ namespace Remnant_Afterglow
         #endregion
         #region 固定地图配置
         /// <summary>
+        /// 固定地图配置
+        /// </summary>
+        public const string Config_GenerateFixedMap = "cfg_GenerateFixedMap";
+
+        /// <summary>
         /// 固定地图图集 
         /// </summary>
         public const string Config_MapFixedSet = "cfg_MapFixedSet";
@@ -194,11 +194,6 @@ namespace Remnant_Afterglow
         public const string Config_MapFixedMaterial = "cfg_MapFixedMaterial";
 
         /// <summary>
-        /// 固定地图配置
-        /// </summary>
-        public const string Config_GenerateFixedMap = "cfg_GenerateFixedMap";
-
-        /// <summary>
         /// 地图可通过类型
         /// </summary>
         public const string Config_MapPassType = "cfg_MapPassType";
@@ -207,6 +202,11 @@ namespace Remnant_Afterglow
         /// 地图边缘连接配置
         /// </summary>
         public const string Config_MapEdge = "cfg_MapEdge";
+
+        /// <summary>
+        /// 地图墙壁阴影配置
+        /// </summary>
+        public const string Config_MapWallShadow = "cfg_MapWallShadow";
         #endregion
         #region 图块相关
         /// <summary>
@@ -287,28 +287,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public const string Config_BigMapEvent = "cfg_BigMapEvent";
         #endregion
-        #region 单位组配置
-        /// <summary>
-        /// 单位组类型
-        /// </summary>
-        public const string Config_UnitGroupType = "cfg_UnitGroupType";
-
-        /// <summary>
-        /// 单位组配置
-        /// </summary>
-        public const string Config_UnitGroupData = "cfg_UnitGroupData";
-        #endregion
-        #region 战役副本相关
-        /// <summary>
-        /// 战役基础数据
-        /// </summary>
-        public const string Config_ChapterBase = "cfg_ChapterBase";
-
-        /// <summary>
-        /// 战役关卡基础数据
-        /// </summary>
-        public const string Config_ChapterCopyBase = "cfg_ChapterCopyBase";
-
+        #region 刷怪配置
         /// <summary>
         /// 战役关卡刷怪数据
         /// </summary>
@@ -323,6 +302,32 @@ namespace Remnant_Afterglow
         /// 波数配置
         /// </summary>
         public const string Config_WaveBase = "cfg_WaveBase";
+
+        /// <summary>
+        /// 单位组配置
+        /// </summary>
+        public const string Config_UnitGroupData = "cfg_UnitGroupData";
+
+        /// <summary>
+        /// 单位组类型
+        /// </summary>
+        public const string Config_UnitGroupType = "cfg_UnitGroupType";
+        #endregion
+        #region 战役副本相关
+        /// <summary>
+        /// 战役基础数据
+        /// </summary>
+        public const string Config_ChapterBase = "cfg_ChapterBase";
+
+        /// <summary>
+        /// 战役关卡基础数据
+        /// </summary>
+        public const string Config_ChapterCopyBase = "cfg_ChapterCopyBase";
+
+        /// <summary>
+        /// 关卡建造限制
+        /// </summary>
+        public const string Config_CopyBuildLimit = "cfg_CopyBuildLimit";
 
         /// <summary>
         /// 章节关卡UI数据
@@ -427,15 +432,10 @@ namespace Remnant_Afterglow
         /// 实体表
         /// </summary>
         public const string Config_BaseObjectData = "cfg_BaseObjectData";
-
-        /// <summary>
-        /// 实体武器表
-        /// </summary>
-        public const string Config_BaseObjectWeapon = "cfg_BaseObjectWeapon";
         #endregion
         #region 建筑配置
         /// <summary>
-        /// 建筑数据
+        /// 建筑及炮塔数据
         /// </summary>
         public const string Config_BuildData = "cfg_BuildData";
         #endregion
@@ -455,12 +455,6 @@ namespace Remnant_Afterglow
         /// 武器数据2
         /// </summary>
         public const string Config_WeaponData2 = "cfg_WeaponData2";
-        #endregion
-        #region 炮塔配置
-        /// <summary>
-        /// 炮塔基础表
-        /// </summary>
-        public const string Config_TowerData = "cfg_TowerData";
         #endregion
         #region 属性基础表
         /// <summary>
@@ -522,23 +516,21 @@ namespace Remnant_Afterglow
         /// </summary>
         public const string Config_GameDiffBase = "cfg_GameDiffBase";
         #endregion
-        #region 背包相关
+        #region 背包 道具 及货币相关配置
         /// <summary>
-        /// 
+        /// 背包配置
         /// </summary>
         public const string Config_BagData = "cfg_bagData";
-        #endregion
-        #region 货币相关
+
         /// <summary>
-        /// 货币界面显示配置
-        /// </summary>
-        public const string Config_MoneyBase = "cfg_MoneyBase";
-        #endregion
-        #region 道具相关
-        /// <summary>
-        /// 道具基础数据
+        /// 道具配置
         /// </summary>
         public const string Config_ItemData = "cfg_itemData";
+
+        /// <summary>
+        /// 货币配置
+        /// </summary>
+        public const string Config_MoneyBase = "cfg_MoneyBase";
         #endregion
         #region 错误码
         /// <summary>

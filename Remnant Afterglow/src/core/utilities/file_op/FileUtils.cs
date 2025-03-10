@@ -11,10 +11,14 @@ namespace Remnant_Afterglow
 {
     public static class FileUtils
     {
-        // 用户数据路径
+        /// <summary>
+        /// 用户数据路径
+        /// </summary>
         private static string _userDataPath = PathConstant.GetPathUser(PathConstant.SAVE_LOAD_PATH_USER);
 
-        // 保存数据的目录
+        /// <summary>
+        /// 保存数据的目录
+        /// </summary>
         public static string SaveDataDirectory => _userDataPath;
 
         /// <summary>
@@ -118,6 +122,17 @@ namespace Remnant_Afterglow
         public static void WriteObjectSmartParam(string directoryPath, object data)
         {
             string str = SaveExtension.SerializeObject(data);
+            WriteAllText(directoryPath, str);
+        }
+
+        /// <summary>
+        /// 将对象序列化并写入文件,紧密。
+        /// </summary>
+        /// <param name="directoryPath">目录路径</param>
+        /// <param name="data">要写入的对象</param>
+        public static void WriteObjectSmartParam2(string directoryPath, object data)
+        {
+            string str = SaveExtension.SerializeObject2(data);
             WriteAllText(directoryPath, str);
         }
 

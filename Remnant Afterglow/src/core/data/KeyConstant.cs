@@ -3,7 +3,9 @@ using Godot;
 
 namespace Remnant_Afterglow
 {
-    //按键数据
+    /// <summary>
+    /// 按键数据
+    /// </summary>
     public static class KeyConstant
     {
         //w 键  向上

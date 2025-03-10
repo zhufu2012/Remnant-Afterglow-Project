@@ -1,8 +1,26 @@
 [
     {
-        "KEY_INDEX": "0",
-        "NavigateLayerId": 0,
+        "KEY_INDEX": "1",
+        "NavigateLayerId": 1,
         "LayerName": "地图导航层",
+        "LayerShowDes": ""
+    },
+    {
+        "KEY_INDEX": "2",
+        "NavigateLayerId": 2,
+        "LayerName": "爬行地图导航层",
+        "LayerShowDes": ""
+    },
+    {
+        "KEY_INDEX": "3",
+        "NavigateLayerId": 3,
+        "LayerName": "悬浮地图导航层",
+        "LayerShowDes": ""
+    },
+    {
+        "KEY_INDEX": "4",
+        "NavigateLayerId": 4,
+        "LayerName": "飞行单位地图导航层",
         "LayerShowDes": ""
     }
 ]

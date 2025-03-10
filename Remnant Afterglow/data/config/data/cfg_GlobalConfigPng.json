@@ -1,5 +1,35 @@
 [
     {
+        "KEY_INDEX": "Resources_Number1",
+        "Configid": "Resources_Number1",
+        "ConfigName": "万能齿轮资源数字",
+        "ConfigValue": "./data/config/images/ID_EDD99AE1E03F4BDDADBD56C804EA6E97.png"
+    },
+    {
+        "KEY_INDEX": "Resources_Number2",
+        "Configid": "Resources_Number2",
+        "ConfigName": "怨灵水晶资源数字",
+        "ConfigValue": "./data/config/images/ID_23720DD6DD8649E09DF76A0518AA4163.png"
+    },
+    {
+        "KEY_INDEX": "Resources_Number3",
+        "Configid": "Resources_Number3",
+        "ConfigName": "次元岛溶剂资源数字",
+        "ConfigValue": "./data/config/images/ID_B791A72C9877435B8B9092C2C355186E.png"
+    },
+    {
+        "KEY_INDEX": "Resources_Number4",
+        "Configid": "Resources_Number4",
+        "ConfigName": "波次数字",
+        "ConfigValue": "./data/config/images/ID_17A23CF48FB64182B264AA2E9980E7C6.png"
+    },
+    {
+        "KEY_INDEX": "SubBuild_1",
+        "Configid": "SubBuild_1",
+        "ConfigName": "建造次级列表",
+        "ConfigValue": "./data/config/images/ID_45435AA83B814BDBAB77E0A67AB8F43C.png"
+    },
+    {
         "KEY_INDEX": "Map_BuildView_Operate_1",
         "Configid": "Map_BuildView_Operate_1",
         "ConfigName": "拆除回收1",

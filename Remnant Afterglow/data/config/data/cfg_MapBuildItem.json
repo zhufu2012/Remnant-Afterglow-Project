@@ -1,26 +1,114 @@
 [
     {
-        "KEY_INDEX": "5_1",
-        "BuildLableId": 5,
-        "BuildItemId": "1",
-        "ObjectId": 2001,
-        "ShowCondition": [],
-        "LablePng": "./data/config/images/ID_216C9AC289C04598AEF6653A324D1F99.png"
+        "KEY_INDEX": "101",
+        "BuildItemId": 101,
+        "BuildLableId": 1,
+        "ObjectId": 101,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_DD7A77264C354830AA2CAF9635F1ABB5.png"
     },
     {
-        "KEY_INDEX": "5_2",
-        "BuildLableId": 5,
-        "BuildItemId": "2",
-        "ObjectId": 2002,
-        "ShowCondition": [],
-        "LablePng": "./data/config/images/ID_94C07D55217F41E2AEF254DC03BF1903.png"
+        "KEY_INDEX": "201",
+        "BuildItemId": 201,
+        "BuildLableId": 1,
+        "ObjectId": 201,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_CB7DB99F213843098DC98B48E6549399.png"
     },
     {
-        "KEY_INDEX": "5_3",
-        "BuildLableId": 5,
-        "BuildItemId": "3",
-        "ObjectId": 2003,
-        "ShowCondition": [],
-        "LablePng": "./data/config/images/ID_40AF941EE7F74302BCA0EE0DF67C8151.png"
+        "KEY_INDEX": "301",
+        "BuildItemId": 301,
+        "BuildLableId": 1,
+        "ObjectId": 301,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_DC657BE3EF0F48C599F4E73846794D6C.png"
+    },
+    {
+        "KEY_INDEX": "401",
+        "BuildItemId": 401,
+        "BuildLableId": 1,
+        "ObjectId": 401,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_E4234769D65744BC868595C020686574.png"
+    },
+    {
+        "KEY_INDEX": "501",
+        "BuildItemId": 501,
+        "BuildLableId": 1,
+        "ObjectId": 501,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_172B2CC31B11492395770D6F2C7D2C13.png"
+    },
+    {
+        "KEY_INDEX": "100001",
+        "BuildItemId": 100001,
+        "BuildLableId": 2,
+        "ObjectId": 100001,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_44F8007616934A468E84143AC6102B1E.png"
+    },
+    {
+        "KEY_INDEX": "100501",
+        "BuildItemId": 100501,
+        "BuildLableId": 2,
+        "ObjectId": 100501,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_5052504BEF804D2A92F31853AF402A65.png"
+    },
+    {
+        "KEY_INDEX": "100901",
+        "BuildItemId": 100901,
+        "BuildLableId": 2,
+        "ObjectId": 100901,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_DA0804D428C54A17841CD70B09B83BF4.png"
+    },
+    {
+        "KEY_INDEX": "101001",
+        "BuildItemId": 101001,
+        "BuildLableId": 2,
+        "ObjectId": 101001,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_F0E8B596D0DB49BF91B9CD2BA30D2066.png"
+    },
+    {
+        "KEY_INDEX": "101101",
+        "BuildItemId": 101101,
+        "BuildLableId": 2,
+        "ObjectId": 101101,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_2891628B4ED24A70861239584F7E6D34.png"
+    },
+    {
+        "KEY_INDEX": "101201",
+        "BuildItemId": 101201,
+        "BuildLableId": 2,
+        "ObjectId": 101201,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_014164D4FD4B43B18212B117593F2ABB.png"
+    },
+    {
+        "KEY_INDEX": "200001",
+        "BuildItemId": 200001,
+        "BuildLableId": 3,
+        "ObjectId": 200001,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_B8624452D1D348159CEBE0DBB5AA3A01.png"
+    },
+    {
+        "KEY_INDEX": "300001",
+        "BuildItemId": 300001,
+        "BuildLableId": 4,
+        "ObjectId": 300001,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_58F4354A17C645B8B2A28EE1D9CE8D35.png"
+    },
+    {
+        "KEY_INDEX": "300201",
+        "BuildItemId": 300201,
+        "BuildLableId": 4,
+        "ObjectId": 300201,
+        "IsNeedScience": false,
+        "LablePng": "./data/config/images/ID_9A93E3C46F41412AB0D4E893DC8D978B.png"
     }
 ]

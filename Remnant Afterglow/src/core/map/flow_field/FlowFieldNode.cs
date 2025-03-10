@@ -45,10 +45,11 @@ namespace Remnant_Afterglow
         /// 是否可以通行
         /// </summary>
         public bool isWalkable;
+
+        public int tempCost;
         /// <summary>
         /// 其上占据的实体-默认为地板
         /// </summary>
-        public BaseObjectType objectType = BaseObjectType.BaseFloor;
         public FlowFieldNode(int x, int y,int MaterialId, int PassTypeId, int cost, bool isWalkable)
         {
             this.x = x;
@@ -57,7 +58,8 @@ namespace Remnant_Afterglow
             this.PassTypeId = PassTypeId;
             this.isWalkable = isWalkable;
             this.cost = isWalkable ? cost : int.MaxValue;
-            this.pass_cost = cost;
+            tempCost = isWalkable ? cost : int.MaxValue;
+            pass_cost = cost;
             fCost = int.MaxValue;
         }
 

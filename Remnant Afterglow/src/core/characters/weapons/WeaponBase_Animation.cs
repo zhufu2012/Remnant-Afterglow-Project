@@ -6,7 +6,7 @@ namespace Remnant_Afterglow
     /// <summary>
     /// 单位动画-用补间动画做
     /// </summary>
-    public partial class WeaponBase
+    public partial class WeaponBase : Node2D, IWeapon
     {
         /// <summary>
         /// 远程武器动画
@@ -22,7 +22,7 @@ namespace Remnant_Afterglow
             string AutoName = "1";
             foreach (int AnimaType in AnimaTypeList)
             {
-                AnimaWeapon animaUnit = ConfigCache.GetAnimaWeapon(CfgData.ObjectId + "_" + AnimaType);
+                AnimaWeapon animaUnit = ConfigCache.GetAnimaWeapon(CfgData.WeaponId + "_" + AnimaType);
                 Image image = animaUnit.Picture.GetImage();
                 string AnimaName = "" + AnimaType;
                 spriteFrames.AddAnimation(AnimaName);
@@ -35,7 +35,7 @@ namespace Remnant_Afterglow
                         {
                             Rect2I rect2 = new Rect2I(new Vector2I((i - 1) * animaUnit.LengWidth.X, (j - 1) * animaUnit.LengWidth.Y), animaUnit.LengWidth);
                             Texture2D texture2D = ImageTexture.CreateFromImage(image.GetRegion(rect2));
-                            spriteFrames.AddFrame(AnimaName, texture2D, animaUnit.DurationMs / 1000);
+                            spriteFrames.AddFrame(AnimaName, texture2D, AnimationCommon.FindSecondItemIfFirstIsOne(animaUnit.RelativeList, Index));
                         }
                         else
                         {

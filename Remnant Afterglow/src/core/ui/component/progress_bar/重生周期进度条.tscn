@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://6lpjn4xji1ku"]
+
+[ext_resource type="Texture2D" uid="uid://cs5w8n8wx47vo" path="res://assets/作战界面素材/重生周期.png" id="1_svuka"]
+[ext_resource type="Texture2D" uid="uid://do3rk5cog4wei" path="res://assets/作战界面素材/重生周期图标.png" id="2_qnxuc"]
+[ext_resource type="Script" path="res://src/core/ui/component/progress_bar/重生周期进度条.cs" id="3_e7sw6"]
+[ext_resource type="Texture2D" uid="uid://0x6vwg2h2yll" path="res://assets/作战界面素材/周期生效效果.png" id="4_reghm"]
+
+[node name="重生周期进度条" type="TextureProgressBar"]
+texture_filter = 1
+offset_right = 12.0
+offset_bottom = 58.0
+max_value = 300.0
+value = 1.0
+fill_mode = 3
+texture_under = ExtResource("1_svuka")
+texture_progress = ExtResource("2_qnxuc")
+texture_progress_offset = Vector2(0, 5)
+script = ExtResource("3_e7sw6")
+AnimaFrame = 6
+
+[node name="周期生效效果" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7.5, 27.5)
+texture = ExtResource("4_reghm")
+hframes = 4

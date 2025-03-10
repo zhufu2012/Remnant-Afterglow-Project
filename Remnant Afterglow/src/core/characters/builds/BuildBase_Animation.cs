@@ -35,7 +35,7 @@ namespace Remnant_Afterglow
                         {
                             Rect2I rect2 = new Rect2I(new Vector2I((i - 1) * animaUnit.LengWidth.X, (j - 1) * animaUnit.LengWidth.Y), animaUnit.LengWidth);
                             Texture2D texture2D = ImageTexture.CreateFromImage(image.GetRegion(rect2));
-                            spriteFrames.AddFrame(AnimaName, texture2D, animaUnit.DurationMs / 1000);
+                            spriteFrames.AddFrame(AnimaName, texture2D, AnimationCommon.FindSecondItemIfFirstIsOne(animaUnit.RelativeList, Index));
                         }
                         else
                         {

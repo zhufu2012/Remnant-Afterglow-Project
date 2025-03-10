@@ -3,14 +3,6 @@ namespace Remnant_Afterglow_EditMap
     public enum MouseButtonType
     {
         /// <summary>
-        /// 无状态
-        /// </summary>
-        None,
-        /// <summary>
-        /// 拖拽模式
-        /// </summary>
-        Drag,
-        /// <summary>
         /// 笔
         /// </summary>
         Pen,
@@ -19,8 +11,12 @@ namespace Remnant_Afterglow_EditMap
         /// </summary>
         Area,
         /// <summary>
-        /// 编辑工具模式
+        /// 笔刷
         /// </summary>
-        Edit,
+        Brush,
+        /// <summary>
+        /// 导入地图
+        /// </summary>
+        ImportMap
     }
 }

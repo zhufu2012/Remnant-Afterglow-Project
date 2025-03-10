@@ -26,7 +26,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public List<int> CollisionLayerList { get; set; }
         /// <summary>        
-        /// 
+        /// 碰撞器检测哪些层的碰撞器
+        ///具体请按照
+        ///cfg_MapPhysicsLayer_物理层配置id填写
+        ///
         /// </summary>
         public List<int> MaskLayerList { get; set; }
         /// <summary>        

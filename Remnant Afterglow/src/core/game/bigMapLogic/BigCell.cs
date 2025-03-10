@@ -109,7 +109,9 @@ namespace Remnant_Afterglow
                         {
                             SceneManager.PutParam("ChapterId", chapterCopy.ChapterId);//章节
                             SceneManager.PutParam("CopyId", chapterCopy.CopyId);//关卡
-                            SceneManager.ChangeSceneName("MapCopy", this);
+                            //SceneManager.ChangeSceneName("MapCopy", this);
+                            SceneManager.ChangeScenePath("MapCopy", SceneTransitionType.BattleMap, this);//祝福注释-暂时不用
+                            //SceneManager.ChangeScenePath("MapCopy", SceneTransitionType.None, this);
                         }
                         else
                         {

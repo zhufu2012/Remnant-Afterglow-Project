@@ -1,43 +1,207 @@
-
 using GameLog;
-using Godot.Community.ManagedAttributes;
+using Godot;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace Remnant_Afterglow
 {
-    //管理各背包中的道具和货币的系统
-    //存在多个不同的背包，每个背包可以保存不同类型的道具，
-    //货币另行存储
+    /// <summary>
+    /// 管理各背包中的道具和货币的系统
+    /// 存在多个不同的背包，每个背包可以保存不同类型的道具
+    /// </summary>
     public class BagSystem
     {
-        //字典用来存储所有背包，键是背包ID
-        private Dictionary<int, BagBase> Bags = new Dictionary<int, BagBase>();
-        /// <summary>
-        /// 属性容器-这里用于存储货币信息，货币名称是货币id
-        /// </summary>
-        public ManagedAttributeContainer Currency = new ManagedAttributeContainer();
 
-
-
+        public static BagSystem Instance;
         public BagSystem()
         {
+            Instance = this;
+        }
+
+        #region 货币
+        /// <summary>
+        /// 大地图-货币数据<货币id,当前值>.存档需要有这个数据
+        /// </summary>
+        public Dictionary<int, int> CurrencyBigMap = new Dictionary<int, int>();
+        /// <summary>
+        /// 作战地图-货币数据<货币id,当前值>，存档暂时不需要这个数据-祝福注释
+        /// </summary>
+        [JsonIgnore]
+        public Dictionary<int, int> CurrencyMap = new Dictionary<int, int>();
+        /// <summary>
+        /// 创建存档时的货币处理
+        /// </summary>
+        public void CreateBigMapCurrency(MoneyBase moneyBase)
+        {
+            switch (moneyBase.MoneyType)
+            {
+                case 1://大地图,存档创建时准备
+                    CurrencyBigMap[moneyBase.MoneyId] = moneyBase.NowValue;
+                    break;
+                case 2://作战地图
+                    //CurrencyMap[moneyBase.MoneyId] = moneyBase.NowValue;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void MapCurrencyClear()
+        {
+            CurrencyMap.Clear();
+        }
+
+        /// <summary>
+        /// 创建地图货币
+        /// </summary>
+        /// <param name="moneyBase"></param>
+        public void CreateMapCurrency(MoneyBase moneyBase)
+        {
+            switch (moneyBase.MoneyType)
+            {
+                case 1://大地图,存档创建时准备
+                    //CurrencyBigMap[moneyBase.MoneyId] = moneyBase.NowValue;
+                    break;
+                case 2://作战地图
+                    CurrencyMap[moneyBase.MoneyId] = moneyBase.NowValue;
+                    break;
+                default:
+                    break;
+            }
         }
 
 
+        /// <summary>
+        /// 添加货币，如果没有该货币就加上该货币id
+        /// </summary>
+        /// <param name="currId">货币id</param>
+        /// <param name="AddValue">添加的数量</param>
+        /// <returns></returns>
+        public bool AddCurrency(int currId, int AddValue)
+        {
+            MoneyBase moneyBase = ConfigCache.GetMoneyBase(currId);
+            if (moneyBase != null)
+            {
+                switch (moneyBase.MoneyType)
+                {
+                    case 1://大地图
+                        if (CurrencyBigMap.ContainsKey(currId))
+                            CurrencyBigMap[currId] = Mathf.Min(CurrencyBigMap[currId] + AddValue, moneyBase.Max);
+                        else
+                            CurrencyBigMap[currId] = Mathf.Min(AddValue, moneyBase.Max);
+                        return true;
+                    case 2://作战地图
+                        if (CurrencyMap.ContainsKey(currId))
+                            CurrencyMap[currId] = Mathf.Min(CurrencyMap[currId] + AddValue, moneyBase.Max);
+                        else
+                            CurrencyMap[currId] = Mathf.Min(AddValue, moneyBase.Max); ;
+                        return true;
+                    default:
+                        break;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// 建造 建筑时，消耗资源
+        /// </summary>
+        /// <returns></returns>
+        public bool RemoveBuildPrice(BuildData buildData, bool IsRemove)
+        {
+            List<List<int>> Price = buildData.Price;//建造价格
+            bool IsCanBuild = true;
+            foreach (List<int> item in Price)
+            {
+                int currId = item[0];//货币id
+                int num = item[1];//货币数量
+                MoneyBase moneyBase = ConfigCache.GetMoneyBase(currId);
+                if (moneyBase != null)
+                {
+                    switch (moneyBase.MoneyType)
+                    {
+                        case 1://大地图
+                            if (CurrencyBigMap.ContainsKey(currId))
+                                if (CurrencyBigMap[currId] < num)
+                                    IsCanBuild = false;
+                            break;
+                        case 2://作战地图
+                            if (CurrencyMap.ContainsKey(currId))
+                                if (CurrencyMap[currId] < num)
+                                    IsCanBuild = false;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                    IsCanBuild = false;
+            }
+            if (IsCanBuild && IsRemove)//资源足够并且要消耗货币
+            {
+                foreach (List<int> item in Price)
+                {
+                    AddCurrency(item[0], -item[1]);//货币id,货币数量
+                }
+                return true;
+            }
+            return IsCanBuild;
+        }
+
+
+
+        /// <summary>
+        /// 获取货币数量
+        /// </summary>
+        /// <returns></returns>
+        public int GetCurrency(int currId)
+        {
+            MoneyBase moneyBase = ConfigCache.GetMoneyBase(currId);
+            if (moneyBase != null)
+            {
+                switch (moneyBase.MoneyType)
+                {
+                    case 1://大地图,存档创建时准备
+                        if (CurrencyBigMap.ContainsKey(currId))
+                        {
+                            return CurrencyBigMap[currId];
+                        }
+                        break;
+                    case 2://作战地图
+                        if (CurrencyMap.ContainsKey(currId))
+                        {
+                            return CurrencyMap[currId];
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return 0;
+        }
+        #endregion
+
+        #region 背包
+        /// <summary>
+        /// 字典用来存储所有背包，键是背包ID
+        /// </summary>
+        public Dictionary<int, BagBase> bagDict = new Dictionary<int, BagBase>();
         /// <summary>
         /// 添加一个新的背包
         /// </summary>
         /// <param name="bag"></param>
         /// <exception cref="ArgumentException"></exception>
-        public void AddBag(BagData bag)
+        public bool AddBag(BagData bag)
         {
-            if (!Bags.ContainsKey(bag.BagId))
+            if (!bagDict.ContainsKey(bag.BagId))
             {
-                Bags.Add(bag.BagId, new BagBase(bag));
+                bagDict[bag.BagId] = new BagBase(bag.BagId);
+                return true;
             }
             else
             {
-                Log.Error("具有相同ID的背包已经存在！");
+                Log.Error("具有相同ID的背包已经存在！背包id:" + bag.BagId);
+                return false;
             }
         }
 
@@ -48,9 +212,9 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public BagBase GetBag(int bagId)
         {
-            if (Bags.ContainsKey(bagId))
+            if (bagDict.ContainsKey(bagId))
             {
-                return Bags[bagId];
+                return bagDict[bagId];
             }
             else
             {
@@ -60,151 +224,36 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 添加物品到指定的背包
+        /// 添加itemId道具，Num个，
         /// </summary>
-        /// <param name="bagId"></param>
-        /// <param name="rowIndex"></param>
-        /// <param name="columnIndex"></param>
-        /// <param name="item"></param>
         /// <returns></returns>
-        public bool AddItemToBag(int bagId, int rowIndex, int columnIndex, ItemBase item)
+        public bool AddItemToBag(int itemId, int Num)
         {
-            if (Bags.ContainsKey(bagId))
+            ItemData itemData = ConfigCache.GetItemData(itemId);
+            BagBase bagBase = GetBag(itemData.BagId);
+            if (bagBase != null)
             {
-                return Bags[bagId].AddItem(rowIndex, columnIndex, item);
+                bagBase.AddItem(new ItemBase(itemId, Num));
+                return true;
             }
             return false;
         }
 
         /// <summary>
-        /// 添加指定数量的道具到指定的背包
+        /// 添加ItemData 的初始化道具，存档创建时使用的
         /// </summary>
-        /// <param name="bagId">背包ID</param>
-        /// <param name="itemId">道具ID</param>
-        /// <param name="quantity">要添加的数量</param>
-        /// <returns>是否成功添加道具</returns>
-        public bool AddItemToBag(int bagId, int itemId, int quantity)
-        {
-            if (Bags.ContainsKey(bagId))
-            {
-                // 假设ItemBase有一个静态方法CreateFromId可以用来根据道具ID创建ItemBase实例
-                ItemBase item = ItemBase.CreateFromId(itemId);
-                if (item == null)
-                {
-                    Log.Error("无效的道具ID！");
-                    return false;
-                }
-                var position = BagBase.FindFreePosition(Bags[bagId]);//查找到空闲位置
-                if (position.HasValue)
-                {
-                    // 如果找到了空闲位置，则添加物品
-                    if (!Bags[bagId].AddItem(position.Value.Key, position.Value.Value, item))
-                    {
-                        Log.Error($"错误！无法添加{quantity}个道具{item.ToString}到背包!");
-                        return false; // 如果不能添加所有请求的数量，则返回失败
-                    }
-                }
-                else
-                {
-                    Log.Error("错误！背包已满，无法添加更多道具！");
-                    return false; // 背包已满
-                }
-                return true; // 成功添加了所有道具
-            }
-            else
-            {
-                Log.Error("错误！未找到具有给定ID的背包。");
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// 从指定的背包移除物品
-        /// </summary>
-        /// <param name="bagId">背包id</param>
-        /// <param name="rowIndex">横轴</param>
-        /// <param name="columnIndex">纵轴</param>
-        /// <param name="quantityToRemove"></param>
         /// <returns></returns>
-        public bool RemoveItemFromBag(int bagId, int rowIndex, int columnIndex, int quantityToRemove)
+        public bool AddItemToBag(ItemData itemData)
         {
-            if (Bags.ContainsKey(bagId))
+            BagBase bagBase = GetBag(itemData.BagId);
+            if (bagBase != null)
             {
-                return Bags[bagId].RemoveItem(rowIndex, columnIndex, quantityToRemove);
+                bagBase.AddItem(new ItemBase(itemData.ItemId, itemData.InitNum));
+                return true;
             }
             return false;
         }
 
-        /// <summary>
-        /// 创建一种货币
-        /// </summary>
-        /// <param name="moneyBase"></param>
-        public void CreateCurrency(MoneyBase moneyBase)
-        {
-            if (Currency["" + moneyBase.MoneyId] == null)
-            {
-                Currency.Add(moneyBase.GetAttribute());
-            }
-            else
-            {
-                Log.Error("错误！已存在对应货币!");
-            }
-        }
-        /// <summary>
-        /// 添加货币
-        /// </summary>
-        /// <param name="currencyType"></param>
-        /// <param name="amount"></param>
-        public void AddCurrency(string currencyId, int amount, AttributeValueType Type)
-        {
-            if (Currency[currencyId] == null)
-            {
-                MoneyBase moneyBase = ConfigCache.GetMoneyBase(currencyId);
-                Currency.Add(moneyBase.GetAttribute());
-            }
-            else
-            {
-                Currency[currencyId].Add(amount, Type);
-            }
-        }
-
-        /// <summary>
-        /// 获取货币数量
-        /// </summary>
-        /// <param name="currencyId"></param>
-        /// <param name="Type"></param>
-        /// <returns></returns>
-        public object GetCurrencyAmount(string currencyId, AttributeValueType Type)
-        {
-            if (Currency[currencyId] != null)
-            {
-                return Currency[currencyId].GetObj(Type);
-            }
-            else
-            {
-                return 0; // 或者抛出异常，取决于您的需求
-            }
-        }
-
-        /// <summary>
-        /// 从系统中移除货币
-        /// </summary>
-        /// <param name="currencyId"></param>
-        /// <param name="amount"></param>
-        /// <param name="Type"></param>
-        /// <returns></returns>
-        public bool RemoveCurrency(string currencyId, float amount, AttributeValueType Type)
-        {
-            if (Currency[currencyId] != null)
-            {
-                float nowValue = (float)Currency[currencyId].GetObj(Type);
-                if (nowValue >= amount)
-                {
-                    Currency[currencyId].Add(amount, Type);
-                    return true;
-                }
-            }
-            return false;
-        }
+        #endregion
     }
 }

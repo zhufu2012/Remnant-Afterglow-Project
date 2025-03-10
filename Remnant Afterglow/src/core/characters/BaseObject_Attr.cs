@@ -1,5 +1,4 @@
-﻿
-using GameLog;
+﻿using GameLog;
 using Godot;
 using Godot.Community.ManagedAttributes;
 using System.Collections.Generic;
@@ -40,7 +39,11 @@ namespace Remnant_Afterglow
                 AttributeTemplate template = ConfigCache.GetAttributeTemplate(TempLateId);
                 attributeContainer.Merge(template.GetAttrCon(), template.IsCover);
             }
-
+            List<AttributeData> attrList =  ConfigCache.GetAttrList(objectId);
+            foreach (AttributeData attr in attrList)
+            {
+                attributeContainer.Add(attr.GetAttr());
+            }
             foreach (var attr in attributeContainer.Attributes)
             {
                 int AttributeId = int.Parse(attr.Key);

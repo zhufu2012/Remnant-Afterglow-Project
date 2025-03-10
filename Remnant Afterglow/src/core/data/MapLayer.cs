@@ -5,9 +5,28 @@
     /// </summary>
     public static class MapLayer
     {
+        #region
+        /// <summary>
+        /// 建筑占地层
+        /// </summary>
+        public const int Layer_BuildArea = 24;
+        /// <summary>
+        /// 炮塔占地
+        /// </summary>
+        public const int Layer_TowerArea = 25;
+        /// <summary>
+        /// 单位占地
+        /// </summary>
+        public const int Layer_UnitArea = 26;
+        /// <summary>
+        /// 无人机占地
+        /// </summary>
+        public const int Layer_WorkerArea = 27;
+        #endregion
 
 
-        #region 地板部分
+
+        #region 地板部分-不使用了
         /// <summary>
         /// 地下层-背景
         /// </summary>

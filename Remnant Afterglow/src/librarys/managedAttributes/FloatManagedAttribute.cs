@@ -1,10 +1,14 @@
 using System;                       // 引入System命名空间，用于基本类型和异常
-using Newtonsoft.Json;              // 引入Newtonsoft.Json命名空间，用于JSON序列化和反序列化
+using GameLog;
+using Newtonsoft.Json;
+using Remnant_Afterglow;
 
 namespace Godot.Community.ManagedAttributes
-{ // 定义命名空间
+{
 
-    // FloatManagedAttribute类，继承自ManagedAttribute基类，用于管理浮点数类型的属性
+    /// <summary>
+    /// FloatManagedAttribute类，继承自ManagedAttribute基类，用于管理浮点数类型的属性
+    /// </summary>
     public class FloatManagedAttribute : ManagedAttribute<float>
     {
 
@@ -72,17 +76,7 @@ namespace Godot.Community.ManagedAttributes
         {
 
         }
-        /// <summary>
-        /// 默认构造函数，初始化当前值为0，最小值为float.MinValue，最大值为float.MaxValue
-        /// </summary>
-        /// <param name="name"></param>
-        public FloatManagedAttribute(string name)
-        {
-            Name = name;
-            CurrentValue = 0; // 初始化当前值为0
-            MinValue = float.MinValue; // 设置最小值为浮点数的最小值
-            MaxValue = float.MaxValue; // 设置最大值为浮点数的最大值
-        }
+
 
         /// <summary>
         /// 构造函数，初始化当前值，最小值为float.MinValue，最大值为float.MaxValue
@@ -95,21 +89,6 @@ namespace Godot.Community.ManagedAttributes
             CurrentValue = val; // 设置当前值
             MinValue = float.MinValue; // 设置最小值为浮点数的最小值
             MaxValue = float.MaxValue; // 设置最大值为浮点数的最大值
-        }
-
-        /// <summary>
-        /// 构造函数，初始化当前值，最小值和最大值
-        /// </summary>
-        /// <param name="name">属性名称</param>
-        /// <param name="val">属性当前值</param>
-        /// <param name="min">最小值</param>
-        /// <param name="max">最大值</param>
-        public FloatManagedAttribute(int attr_id, float val, float min, float max)
-        {
-            Name = "" + attr_id;
-            CurrentValue = val; // 设置当前值
-            MinValue = min; // 设置最小值
-            MaxValue = max; // 设置最大值
         }
 
 
@@ -129,6 +108,121 @@ namespace Godot.Community.ManagedAttributes
             MaxValue = max; // 设置最大值
             RegenValue = Regen;//设置再生值
         }
+
+        /// <summary>
+        /// 构造函数，初始化当前值，最小值和最大值
+        /// </summary>
+        /// <param name="name">属性名称</param>
+        /// <param name="val">属性当前值</param>
+        /// <param name="min">最小值</param>
+        /// <param name="max">最大值</param>
+        /// <param name="Regen">再生值</param>
+        public FloatManagedAttribute(int attr_id, float val, float min, float max, float Regen,int Priority)
+        {
+            Name = "" + attr_id;
+            CurrentValue = val; // 设置当前值
+            MinValue = min; // 设置最小值
+            MaxValue = max; // 设置最大值
+            RegenValue = Regen;//设置再生值
+            this.Priority = Priority;
+        }
+
+
+        /// <summary>
+        /// 添加伤害处理方法
+        /// </summary>
+        /// <param name="damage">总伤害值</param>
+        /// <returns></returns>
+        public float TakeDamage(DemageType type, float damage)
+        {
+            switch (type)
+            {
+                case DemageType.None:
+                    float actualDamage = Math.Min(CurrentValue, damage);
+                    CurrentValue -= actualDamage;
+                    return damage - actualDamage;
+                case DemageType.LiveAmmunition://护盾
+                    switch (Name)
+                    {
+                        case Attr.Attr_010://护盾抗性
+                            return damage * (1-currentValue);
+                        case Attr.Attr_003://护盾
+                            return CalcDamage(damage);
+                        default:
+                            return damage;
+                    }
+                case DemageType.Laser://装甲
+                    switch (Name)
+                    {
+                        case Attr.Attr_011://装甲抗性
+                            return damage * (1-currentValue);
+                        case Attr.Attr_002://装甲血量
+                            return CalcDamage(damage);
+                        default:
+                            return damage;
+                    }
+                case DemageType.Explosion://结构伤害，有装甲免伤
+                    switch (Name)
+                    {
+                        case Attr.Attr_012://结构抗性
+                            return damage * (1-currentValue);
+                        case Attr.Attr_002://装甲值
+                            return CalcArmour(damage);
+                        case Attr.Attr_001://结构值
+                            return CalcDamage(damage);
+                        default:
+                            return damage;
+                    }
+                case DemageType.Element://元素
+                    switch (Name)
+                    {
+                        case Attr.Attr_013://穿透抗性
+                            return damage * (1-currentValue);
+                        case Attr.Attr_001://结构值
+                            return CalcDamage(damage);
+                        default:
+                            return damage;
+                    }
+                default:
+                    return damage;
+            }
+        }
+
+        /// <summary>
+        /// 按照系数计算伤害
+        /// </summary>
+        public float CalcDamage(float allDamage)
+        {
+            float damageReduced = Math.Min(CurrentValue, allDamage);
+            SetValue(CurrentValue - damageReduced, true);
+            return allDamage - damageReduced;
+        }
+
+        /// <summary>
+        /// 计算装甲,装甲血量除以装甲血量比例，就是装甲值，伤害需要减去装甲值才是剩余伤害
+        /// </summary>
+        /// <returns></returns>
+        public float CalcArmour(float allDamage)
+        {
+            FloatManagedAttribute floatManaged = (FloatManagedAttribute)container[Attr.Attr_006];//装甲血量比例 
+            if(floatManaged != null)//存在装甲血量比例 
+            {
+                float curr = floatManaged.currentValue;//装甲血量比例
+                if (curr > 0)//没有装甲血量比例
+                {
+                    if(CurrentValue>0)//装甲血量大于0
+                    {
+                        return allDamage - Math.Min(allDamage, CurrentValue / curr);
+                    }
+                    else
+                        return allDamage;
+                }
+                return allDamage;
+            }
+            return allDamage;
+        }
+
+
 
         /// <summary>
         /// 将对象转换为浮点数的方法
@@ -172,9 +266,9 @@ namespace Godot.Community.ManagedAttributes
             var numVal = ObjectToFloat(val); // 将传入的对象转换为浮点数
             float retValue = valType switch
             { // 根据属性类型设置值
-                AttributeValueType.Min => SetMinValue(numVal,true),
-                AttributeValueType.Value => SetValue(numVal,true),
-                AttributeValueType.Max => SetMaxValue(numVal,true),
+                AttributeValueType.Min => SetMinValue(numVal, true),
+                AttributeValueType.Value => SetValue(numVal, true),
+                AttributeValueType.Max => SetMaxValue(numVal, true),
                 AttributeValueType.Regen => SetRegenValue(numVal),
                 _ => throw new ArgumentOutOfRangeException(nameof(valType), valType, null),
             };
@@ -266,9 +360,9 @@ namespace Godot.Community.ManagedAttributes
             var numVal = ObjectToFloat(val); // 将传入的对象转换为浮点数
             float retValue = valType switch
             { // 根据属性类型增加值
-                AttributeValueType.Min => SetMinValue(MinValue + numVal,true),
-                AttributeValueType.Value => SetValue(CurrentValue + numVal,true),
-                AttributeValueType.Max => SetMaxValue(MaxValue + numVal,true),
+                AttributeValueType.Min => SetMinValue(MinValue + numVal, true),
+                AttributeValueType.Value => SetValue(CurrentValue + numVal, true),
+                AttributeValueType.Max => SetMaxValue(MaxValue + numVal, true),
                 AttributeValueType.Regen => SetRegenValue(RegenValue + numVal),
                 _ => throw new ArgumentOutOfRangeException(nameof(valType), valType, null),
             };

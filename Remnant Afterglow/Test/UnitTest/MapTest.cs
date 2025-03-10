@@ -63,15 +63,16 @@ namespace Project_Core_Test
             TowerListNode = GetNode<Node2D>("TowerList");
 
             //对应地图配置
-            Dictionary<string, object> map_keydict = ConfigLoadSystem.GetCfgIndex("cfg_MapBrushMonster", "0_1");
+           /** Dictionary<string, object> map_keydict = ConfigLoadSystem.GetCfgIndex("cfg_MapBrushMonster", "0_1");
             List<int> BrushId_List = (List<int>)map_keydict["BrushId_List"];
             foreach (int BrushId in BrushId_List)
             {
                 BrushPointList.Add(new BrushPoint(BrushId));
             }
+            **/
             //Log.PrintList(BrushPointList);
             //对象池
-            if (is_pool)// 是否初始化敌人对象池
+            if (false)// 是否初始化敌人对象池
             {
                 Dictionary<int, int> enemy_dict = EnemyLists();
                 Dictionary<int, List<Units>> enemyScenes = new Dictionary<int, List<Units>>();

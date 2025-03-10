@@ -1,5 +1,6 @@
 using GameLog;
 using Godot;
+using Godot.Collections;
 using Godot.Community.ManagedAttributes;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,32 +27,138 @@ namespace Remnant_Afterglow
     /// </summary>
     public partial class BaseObject : CharacterBody2D, IPoolItem
     {
-        [Signal]//实体死亡事件
-        public delegate void MobKilledEventHandler(BaseObject killObject,BaseObject casterObject);
 
-        [Signal]//实体受损事件
-        public delegate void HarmedEventHandler(BaseObject killObject,BaseObject casterObject);
-
-        //实体死亡-Buff给与者，或者子弹创建者导致的死亡
-        public void ObjectKilled(BaseObject casterObject)
+        protected override void Dispose(bool disposing)
         {
-            EmitSignal(SignalName.MobKilled,this,casterObject);//实体死亡信号
+            if (disposing)
+            {
+                MobKilled -= ObjectManager.KilledAfter;
+                Harmed -= ObjectManager.HarmedAfter;
+            }
+            base.Dispose(disposing);
+        }
+        /// <summary>
+        /// 实体死亡事件
+        /// </summary>
+        /// <param name="killObject"></param>
+        /// <param name="casterObject"></param>
+        [Signal]
+        public delegate void MobKilledEventHandler(BaseObject killObject, BaseObject casterObject, BulletNode bulletNode);
+
+        /// <summary>
+        /// 实体受损事件
+        /// </summary>
+        /// <param name="killObject"></param>
+        /// <param name="casterObject"></param>
+        [Signal]
+        public delegate void HarmedEventHandler(BaseObject killObject, BaseObject casterObject, BulletNode bulletNode);
+
+        /// <summary>
+        /// 实体死亡-Buff给与者，或者子弹创建者导致的死亡
+        /// </summary>
+        /// <param name="casterObject"></param>
+        public void ObjectKilled(BaseObject casterObject, BulletNode bulletNode)
+        {
+            EmitSignal(SignalName.MobKilled, this, casterObject, bulletNode);//实体死亡信号
         }
 
-        //实体受伤特殊属性被改变-Buff给与者，或者子弹创建者导致的伤害，属性id，伤害大小
-        public void ObjectHarmed(BaseObject casterObject)
+        /// <summary>
+        /// 实体受伤特殊属性被改变-Buff给与者，或者子弹创建者导致的伤害，属性id，伤害大小
+        /// </summary>
+        /// <param name="casterObject"></param>
+        public void ObjectHarmed(BaseObject casterObject, BulletNode bulletNode)
         {
-            EmitSignal(SignalName.Harmed,this,casterObject);//实体死亡信号
+            EmitSignal(SignalName.Harmed, this, casterObject, bulletNode);//实体死亡信号
         }
 
-        //有其他区域进入单位身体区域
+        /// <summary>
+        /// 有其他区域进入单位身体区域
+        /// </summary>
+        /// <param name="area"></param>
         public void Area2DEntered(Area2D area)
         {
-            if(area.IsInGroup(MapGroup.BulletGroup))//检查-是子弹
+            AreaEnter(area);
+        }
+
+        public virtual void AreaEnter(Area2D area)
+        {
+            if (IsDestroyed)//死亡就不继续了
+                return;
+            if (!area.IsInGroup("" + Camp))
             {
-                //检查阵营
+                if (area.IsInGroup(MapGroup.BulletGroup))
+                {
+                    EnergyBullet bullet = area.GetParentOrNull<EnergyBullet>();
+                    BulletLogic bulletLogic = bullet.bulletLogic;
+                    //子弹造成伤害
+                    attributeContainer.ApplyDamage(bulletLogic.ShieldHarm, bulletLogic.ArmourHarm, bulletLogic.StructureHarm, bulletLogic.ElementHarm);
+
+                    //# AttrHarm	#LaserHarm	#ExplosionHarm	#ElementHarm
+                    //ObjectHarmed(bullet.bulletBase.createObject, bullet);//造成伤害
+
+                    bullet.bulletBase.Used = false;//准备移除子弹
+                    if (attributeContainer.IsDead())
+                    {
+                        IsDestroyed = true; // 已经被摧毁
+                        DieEvent();
+                        //ObjectKilled(bullet.bulletBase.createObject, bullet);//死亡事件
+                    }
+
+                }
             }
         }
+
+
+        /// <summary>
+        /// 有其他区域退出单位身体区域
+        /// </summary>
+        /// <param name="area"></param>
+        public void Area2DExited(Area2D area)
+        {
+            AreaExited(area);
+        }
+
+        public virtual void AreaExited(Area2D area)
+        {
+
+        }
+
+
+        /// <summary>
+        /// 实体死亡事件
+        /// </summary>
+        public void DieEvent()
+        {
+            switch (object_type)
+            {
+                case BaseObjectType.BaseBuild://建筑
+                    ObjectManager.Instance.buildDict.Remove(Logotype);
+                    if (this is BuildBase buildBase)
+                    {
+                        ObjectManager.Instance.ReMoveObject(this, buildBase.buildData);
+                        FlowFieldSystem.Instance.CreateBaseObject(this, buildBase.buildData, true);
+                    }
+                    break;
+                case BaseObjectType.BaseTower://炮塔
+                    ObjectManager.Instance.towerDict.Remove(Logotype);
+                    if (this is TowerBase towerBase)
+                    {
+                        ObjectManager.Instance.ReMoveObject(this, towerBase.buildData);
+                        FlowFieldSystem.Instance.CreateBaseObject(this, towerBase.buildData, true);
+                    }
+                    break;
+                case BaseObjectType.BaseUnit://单位
+                    ObjectManager.Instance.unitDict.Remove(Logotype);
+                    break;
+                case BaseObjectType.BaseWorker://单位
+                    ObjectManager.Instance.workerDict.Remove(Logotype);
+                    break;
+                default:
+                    break;
+            }
+            QueueFree();
+        }
+
 
         /// <summary>
         /// 运行事件
@@ -64,7 +171,7 @@ namespace Remnant_Afterglow
         /// </param>
         public void RunAttrEvent(int event_id, int type, int keyId)
         {
-            AttrEvent unitAttrEvent = ConfigCache.GetAttrEvent(event_id);
+            AttrEvent unitAttrEvent = ConfigCache.GetAttrEvent(event_id);//事件配置
             switch (unitAttrEvent.EventType)
             {
                 case 1://输出事件数据
@@ -110,11 +217,17 @@ namespace Remnant_Afterglow
                 List<int> AttrEventIdList = info.Value.AddEventIdList;//添加属性后运行
                 foreach (int EventId in AttrEventIdList)
                 {
-                    RunAttrEvent(EventId,1,0);
+                    RunAttrEvent(EventId, 1, 0);
                 }
             }
         }
 
+        /// <summary>
+        /// Buff添加后 按顺序触发Buff开局事件-祝福注释-没完成
+        /// </summary>
+        public void StartRunBuffEvent(BuffData buffData)
+        {
+        }
         /// <summary>
         /// 实体创建后 按顺序触发各Buff的开局事件
         /// </summary>

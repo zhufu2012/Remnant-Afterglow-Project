@@ -27,14 +27,9 @@ namespace Remnant_Afterglow
         /// 地图大小
         /// </summary>
         public Vector2 Size;
-        /// <summary>
-        /// 随机数生成器
-        /// </summary>
-        public FastNoiseLite noise;
-        public BigMapDraw(int ChapterId, Vector2 Size, FastNoiseLite noise)
+        public BigMapDraw(int ChapterId, Vector2 Size)
         {
             this.ChapterId = ChapterId;
-            this.noise = noise;
             this.Size = Size;
         }
 
@@ -67,7 +62,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public void InitMap()
         {
-            layer_dict = bigMapGenerate.GenerateMap(noise, Size);
+            layer_dict = bigMapGenerate.GenerateMap(Size);
             foreach (var Layer in layer_dict)
             {
                 Hex[,] map = Layer.Value;//每层

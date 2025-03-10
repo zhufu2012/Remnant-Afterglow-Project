@@ -1,7 +1,7 @@
 [
     {
         "KEY_INDEX": "4001",
-        "ObjectId": 4001,
+        "WeaponId": 4001,
         "Name": "测试武器1",
         "Describe": "测试武器1-测试",
         "Type": 1,
@@ -11,6 +11,108 @@
             100,
             100,
             100
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "1001",
+        "WeaponId": 1001,
+        "Name": "测试武器1",
+        "Describe": "测试武器1-测试",
+        "Type": 1,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            100,
+            100,
+            100
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100001",
+        "WeaponId": 100001,
+        "Name": "射击塔LV1",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "101001",
+        "WeaponId": 101001,
+        "Name": "射空塔",
+        "Describe": "",
+        "Type": 2,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100901",
+        "WeaponId": 100901,
+        "Name": "迫击炮塔",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100501",
+        "WeaponId": 100501,
+        "Name": "光子塔",
+        "Describe": "",
+        "Type": 2,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100301",
+        "WeaponId": 100301,
+        "Name": "机枪塔",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
         ],
         "AnimaTypeList": [
             1

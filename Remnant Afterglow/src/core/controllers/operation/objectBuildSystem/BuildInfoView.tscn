@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1ys4itu4jwnt"]
+
+[ext_resource type="Texture2D" uid="uid://dxo1d6hbxjh36" path="res://assets/作战界面素材/建筑信息栏.png" id="1_qtu4m"]
+[ext_resource type="PackedScene" uid="uid://bnv4033sd7m5" path="res://src/core/ui/component/image_num/ImageNum.tscn" id="2_7fopi"]
+[ext_resource type="Script" path="res://src/core/controllers/operation/objectBuildSystem/BuildInfoView.cs" id="2_wvru1"]
+
+[node name="BuildInfoView" type="TextureRect"]
+texture_filter = 1
+offset_right = 84.0
+offset_bottom = 149.0
+texture = ExtResource("1_qtu4m")
+script = ExtResource("2_wvru1")
+
+[node name="建筑名称" type="RichTextLabel" parent="."]
+self_modulate = Color(0.227451, 1, 1, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 182.0
+offset_bottom = 26.0
+scale = Vector2(0.4, 0.4)
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "建筑名称"
+
+[node name="齿轮数量" parent="." instance=ExtResource("2_7fopi")]
+offset_left = 3.0
+offset_top = 20.0
+offset_right = 3.0
+offset_bottom = 20.0
+digit = 9
+ShowNum = 111111111
+SelfScale = Vector2(0.4, 0.4)
+
+[node name="水晶数量" parent="." instance=ExtResource("2_7fopi")]
+offset_left = 3.0
+offset_top = 26.0
+offset_right = 3.0
+offset_bottom = 26.0
+digit = 9
+ShowNum = 111111111
+type = 1
+SelfScale = Vector2(0.4, 0.4)
+
+[node name="溶剂数量" parent="." instance=ExtResource("2_7fopi")]
+offset_left = 3.0
+offset_top = 32.0
+offset_right = 3.0
+offset_bottom = 32.0
+digit = 9
+ShowNum = 0
+type = 2
+SelfScale = Vector2(0.4, 0.4)
+
+[node name="文本" type="RichTextLabel" parent="."]
+self_modulate = Color(0.227451, 1, 1, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 40.0
+offset_right = 184.0
+offset_bottom = 290.0
+scale = Vector2(0.4, 0.4)
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "建筑描述"

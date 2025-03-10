@@ -23,7 +23,10 @@ namespace Remnant_Afterglow
         {
         }
 
-
+        /// <summary>
+        /// 碰撞形状
+        /// </summary>
+        /// <returns></returns>
         public CollisionShape2D GetCollisionShape2D()
         {
             CollisionShape2D Collision = new CollisionShape2D();

@@ -1,0 +1,152 @@
+[gd_scene load_steps=9 format=3 uid="uid://vjwpqis5qiav"]
+
+[ext_resource type="Script" path="res://src/core/controllers/operation/objectBuildSystem/SubBuildList.cs" id="1_fdew0"]
+[ext_resource type="Texture2D" uid="uid://gcvdw0ux4m1w" path="res://assets/作战界面素材/换列.png" id="2_3yslc"]
+[ext_resource type="Texture2D" uid="uid://c2rqpsinlmvfk" path="res://assets/作战界面素材/建造次级列表1.png" id="3_ceprl"]
+[ext_resource type="Texture2D" uid="uid://5pv271rohm6k" path="res://assets/作战界面素材/建筑次级列表高亮.png" id="4_s4vhd"]
+
+[sub_resource type="Animation" id="Animation_etig0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 54)]
+}
+
+[sub_resource type="Animation" id="Animation_p75jh"]
+resource_name = "关闭"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.217638, 0.116629),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 105)]
+}
+
+[sub_resource type="Animation" id="Animation_wmfv5"]
+resource_name = "打开"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.138696, 1),
+"update": 0,
+"values": [Vector2(0, 56), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8pvlw"]
+_data = {
+"RESET": SubResource("Animation_etig0"),
+"关闭": SubResource("Animation_p75jh"),
+"打开": SubResource("Animation_wmfv5")
+}
+
+[node name="SubBuildList" type="Node2D"]
+z_index = -1
+script = ExtResource("1_fdew0")
+PngZIndex = 0
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, 54)
+
+[node name="上一页" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_left = -19.0
+offset_top = 4.0
+offset_right = -6.0
+offset_bottom = 26.0
+texture_normal = ExtResource("2_3yslc")
+
+[node name="下一页" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_left = 260.0
+offset_top = 4.0
+offset_right = 273.0
+offset_bottom = 26.0
+texture_normal = ExtResource("2_3yslc")
+flip_h = true
+
+[node name="TextureButton0" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_right = 30.0
+offset_bottom = 30.0
+texture_normal = ExtResource("3_ceprl")
+
+[node name="TextureButton1" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_left = 32.0
+offset_right = 62.0
+offset_bottom = 30.0
+texture_normal = ExtResource("3_ceprl")
+
+[node name="TextureButton2" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_left = 64.0
+offset_right = 94.0
+offset_bottom = 30.0
+texture_normal = ExtResource("3_ceprl")
+
+[node name="TextureButton3" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_left = 96.0
+offset_right = 126.0
+offset_bottom = 30.0
+texture_normal = ExtResource("3_ceprl")
+
+[node name="TextureButton4" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_left = 128.0
+offset_right = 158.0
+offset_bottom = 30.0
+texture_normal = ExtResource("3_ceprl")
+
+[node name="TextureButton5" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_left = 160.0
+offset_right = 190.0
+offset_bottom = 30.0
+texture_normal = ExtResource("3_ceprl")
+
+[node name="TextureButton6" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_left = 192.0
+offset_right = 222.0
+offset_bottom = 30.0
+texture_normal = ExtResource("3_ceprl")
+
+[node name="TextureButton7" type="TextureButton" parent="Node2D"]
+texture_filter = 1
+offset_left = 224.0
+offset_right = 254.0
+offset_bottom = 30.0
+texture_normal = ExtResource("3_ceprl")
+
+[node name="次级列表高亮" type="TextureRect" parent="Node2D"]
+visible = false
+texture_filter = 1
+offset_right = 30.0
+offset_bottom = 30.0
+texture = ExtResource("4_s4vhd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8pvlw")
+}

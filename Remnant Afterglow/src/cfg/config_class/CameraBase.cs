@@ -13,12 +13,6 @@ namespace Remnant_Afterglow
         /// </summary>
         public int CameraId { get; set; }
         /// <summary>        
-        /// 相机组件id列表
-        ///一些相机配件，如显示帧数
-        ///噪声编辑器等
-        /// </summary>
-        public List<int> AssemblyIdList { get; set; }
-        /// <summary>        
         /// 相机初始位置
         ///(X,Y)
         /// </summary>
@@ -84,7 +78,6 @@ namespace Remnant_Afterglow
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_CameraBase, id);//public const string Config_CameraBase = "cfg_CameraBase"; 
 			CameraId = (int)dict["CameraId"];
-			AssemblyIdList = (List<int>)dict["AssemblyIdList"];
 			StartPos = (Vector2)dict["StartPos"];
 			IsMove = (bool)dict["IsMove"];
 			MoveSpeed = (int)dict["MoveSpeed"];
@@ -107,7 +100,6 @@ namespace Remnant_Afterglow
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_CameraBase, cfg_id);//public const string Config_CameraBase = "cfg_CameraBase"; 
 			CameraId = (int)dict["CameraId"];
-			AssemblyIdList = (List<int>)dict["AssemblyIdList"];
 			StartPos = (Vector2)dict["StartPos"];
 			IsMove = (bool)dict["IsMove"];
 			MoveSpeed = (int)dict["MoveSpeed"];
@@ -128,7 +120,6 @@ namespace Remnant_Afterglow
         public CameraBase(Dictionary<string, object> dict)
         {
 			CameraId = (int)dict["CameraId"];
-			AssemblyIdList = (List<int>)dict["AssemblyIdList"];
 			StartPos = (Vector2)dict["StartPos"];
 			IsMove = (bool)dict["IsMove"];
 			MoveSpeed = (int)dict["MoveSpeed"];

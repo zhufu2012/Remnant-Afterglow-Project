@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc2skb2fnpy5t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cqudv"]
+radius = 18.868
+
+[node name="区域碰撞测试" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_cqudv")

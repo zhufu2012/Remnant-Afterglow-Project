@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://tjsaytgotk7h"]
+
+[ext_resource type="Script" path="res://src/edit/edit_map/tileMap/EditTileMap.cs" id="1_tr7v0"]
+
+[sub_resource type="TileSet" id="TileSet_euyru"]
+tile_size = Vector2i(20, 20)
+
+[node name="EditTileMap" type="TileMap"]
+tile_set = SubResource("TileSet_euyru")
+format = 2
+script = ExtResource("1_tr7v0")

@@ -14,16 +14,15 @@ namespace Remnant_Afterglow
         public Dictionary<string, WorkerBase> workerDict = new Dictionary<string, WorkerBase>();
 
         /// <summary>
-        /// 创建一个建筑
+        /// 创建一个无人机
         /// </summary>
         /// <param name="ObjectId">实体id</param>
         /// <param name="Pos">创建位置</param>
         /// <returns></returns>
         public WorkerBase CreateWorker(int ObjectId, Vector2 Pos)
         {
-            WorkerBase workerBase = new WorkerBase(ObjectId);
-            //检查对应位置是否可以创建建筑
-
+            WorkerBase workerBase = GD.Load<PackedScene>("res://src/core/characters/workers/WorkerBase.tscn").Instantiate<WorkerBase>();
+            workerBase.InitData(ObjectId);
             workerBase.Position = Pos;
             workerBase.ZIndex = 9;//祝福注释-这里地图层要改,先用着
             workerDict[workerBase.Logotype] = workerBase;

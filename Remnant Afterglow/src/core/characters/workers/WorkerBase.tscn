@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7kvujstwij2t"]
+
+[ext_resource type="Script" path="res://src/core/characters/workers/WorkerBase.cs" id="1_n2sln"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_76pko"]
+radius = 15.2971
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cugj0"]
+radius = 52.0865
+
+[node name="WorkerBase" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_n2sln")
+
+[node name="碰撞体" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_76pko")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AttackedRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackedRange"]
+shape = SubResource("CircleShape2D_cugj0")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.00599163, 0.0766406, 3.00817e-09, 1)
+
+[node name="navigation_timer" type="Timer" parent="."]
+autostart = true

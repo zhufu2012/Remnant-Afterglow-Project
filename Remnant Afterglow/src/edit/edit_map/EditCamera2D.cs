@@ -1,28 +1,31 @@
+using GameLog;
 using Godot;
 
 namespace Remnant_Afterglow_EditMap
 {
+    /// <summary>
+    /// 编辑器相机
+    /// </summary>
     public partial class EditCamera2D : Camera2D
     {
-
         //按键-按键盘
         [Export] private bool is_key = true;
 
         //滚轮-通过鼠标滚轮放大/缩小
         [Export] private bool is_wheel = true;
         //最小缩小限制
-        [Export] private float zoom_min_limit = 2f;
+        [Export] private float zoom_min_limit = 0.1f;
 
-        //最小限制
-        [Export] private float zoom_max_limit = 0.5f;
+        //最大限制
+        [Export] private float zoom_max_limit = 4f;
 
         //初始缩放值
         public Vector2 camera_zoom;
-        [Export] public Vector2 camera_zoom_speed = new Vector2(0.1f, 0.1f);
+        [Export] public Vector2 camera_zoom_speed = new Vector2(0.02f, 0.02f);
 
 
         //相机速度（像素/秒）。
-        [Export] private int camera_speed = 450;
+        [Export] private int camera_speed = 800;
         //值，表示鼠标必须离窗口边缘（以像素为单位）有多近，移动视图。
         [Export] private int camera_margin = 50;
 
@@ -38,7 +41,6 @@ namespace Remnant_Afterglow_EditMap
 
         public override void _Ready()
         {
-            //祝福注释
             camera_zoom = Zoom;
             base._Ready();
         }
@@ -58,35 +60,46 @@ namespace Remnant_Afterglow_EditMap
             }
            
             //更新相机的位置。
-            Position += camera_movement * Zoom;
+            Position += camera_movement;
             //将相机移动设置为零，更新旧的鼠标位置。
             camera_movement = new Vector2(0, 0);
             _prev_mouse_pos = GetLocalMousePosition();
             base._Process(delta);
         }
-
+        
 
         public override void _UnhandledInput(InputEvent @event)
         {
             base._UnhandledInput(@event);
+            if (@event.IsAction(EditConstant.Input_Key_CtrlBrush1,true))
+            {
+                EditMapView.Instance.toolContainer.SubBrushSize(1);
+                return;
+            }
+            if (@event.IsAction(EditConstant.Input_Key_CtrlBrush2,true))
+            {
+                EditMapView.Instance.toolContainer.AddBrushSize(1);
+                return;
+            }
             if (@event is InputEventMouseButton mouseButton)
             {
-                if (is_wheel)
+                var mouse = GetViewport().GetMousePosition();
+                if (is_wheel&&mouse.X < 1420)
                 {
                     if (mouseButton.ButtonIndex == MouseButton.WheelDown &&
                         camera_zoom.X - camera_zoom_speed.X > zoom_min_limit &&
                         camera_zoom.Y - camera_zoom_speed.Y > zoom_min_limit)
                     {
                         camera_zoom -= camera_zoom_speed;
-                        SetZoom(camera_zoom);//祝福注释
+                        //SetZoom(camera_zoom);//祝福注释
+                        
                     }
-                    Zoom = camera_zoom;
                     if (mouseButton.ButtonIndex == MouseButton.WheelUp &&
                         camera_zoom.X + camera_zoom_speed.X < zoom_max_limit &&
                         camera_zoom.Y + camera_zoom_speed.Y < zoom_max_limit)
                     {
                         camera_zoom += camera_zoom_speed;
-                        SetZoom(camera_zoom);
+                        //SetZoom(camera_zoom);
                     }
                     Zoom = camera_zoom;
                 }

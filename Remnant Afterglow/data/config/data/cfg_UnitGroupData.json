@@ -2,117 +2,90 @@
     {
         "KEY_INDEX": "1",
         "GroupId": 1,
-        "GroupType": 1,
         "Name": "小规模敌军1",
         "Describe": "测试小组1",
         "ShowDescribe": "测试小组1接近战场",
-        "CaptainId": 1,
-        "TempLateList": [
+        "UnitList": [
             [
+                1001,
+                4
+            ],
+            [
+                1002,
                 1
-            ],
-            [
-                1
-            ],
-            [
-                1
-            ],
-            [
-                2
-            ],
-            [
-                2
             ]
+        ],
+        "CountInterval": [
+            2,
+            2
         ]
     },
     {
         "KEY_INDEX": "2",
         "GroupId": 2,
-        "GroupType": 1,
         "Name": "小规模敌军2",
         "Describe": "测试小组2",
         "ShowDescribe": "测试小组2接近战场",
-        "CaptainId": 2,
-        "TempLateList": [
+        "UnitList": [
             [
+                1001,
                 1
-            ],
-            [
-                1
-            ],
-            [
-                2
-            ],
-            [
-                2
-            ],
-            [
-                2
             ]
+        ],
+        "CountInterval": [
+            2,
+            2
         ]
     },
     {
         "KEY_INDEX": "3",
         "GroupId": 3,
-        "GroupType": 2,
         "Name": "中等规模敌军1",
         "Describe": "测试小组3",
         "ShowDescribe": "测试小组3接近战场",
-        "CaptainId": 1,
-        "TempLateList": [
-            [
-                1
-            ],
-            [
-                1
-            ],
-            [
-                1
-            ],
-            [
-                2
-            ],
-            [
-                2
-            ],
-            [
-                2
-            ]
-        ]
+        "UnitList": [],
+        "CountInterval": []
     },
     {
         "KEY_INDEX": "4",
         "GroupId": 4,
-        "GroupType": 3,
         "Name": "大批敌军1",
         "Describe": "测试小组4",
         "ShowDescribe": "测试小组4接近战场",
-        "CaptainId": 2,
-        "TempLateList": [
+        "UnitList": [],
+        "CountInterval": []
+    },
+    {
+        "KEY_INDEX": "666",
+        "GroupId": 666,
+        "Name": "小规模敌军1",
+        "Describe": "测试小组1",
+        "ShowDescribe": "测试小组1接近战场",
+        "UnitList": [
             [
+                700001,
                 1
             ],
             [
+                700002,
                 1
             ],
             [
+                700003,
                 1
             ],
             [
-                2
+                700004,
+                1
             ],
             [
-                2
-            ],
-            [
-                2
-            ],
-            [
-                2
-            ],
-            [
-                2
+                700005,
+                1
             ]
+        ],
+        "CountInterval": [
+            1,
+            1
         ]
     }
 ]

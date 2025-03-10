@@ -2,8 +2,8 @@
     {
         "KEY_INDEX": "1",
         "MapId": 1,
-        "MapName": "测试固定地图",
-        "MapDescribe": "",
-        "MapPath": ""
+        "Name": "教程",
+        "MapDescribe": "测试的第一个地图",
+        "MapName": "教程0-1.map"
     }
 ]

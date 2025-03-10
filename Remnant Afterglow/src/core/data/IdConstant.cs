@@ -25,15 +25,11 @@ namespace Remnant_Afterglow
         /// 建筑唯一id 实体
         /// </summary>
         public const int ID_TYPE_BUILD = 3;
-        /// <summary>
-        /// 武器唯一id 实体
-        /// </summary>
-        public const int ID_TYPE_WEAPON = 4;
 
         /// <summary>
         /// 无人机唯一id 实体
         /// </summary>
-        public const int ID_TYPE_WORKER = 5;
+        public const int ID_TYPE_WORKER = 4;
 
         /// <summary>
         /// 道具唯一id

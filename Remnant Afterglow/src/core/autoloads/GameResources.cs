@@ -58,8 +58,8 @@ namespace Remnant_Afterglow
 		{
 			Utils.InitRandom();//随机数初始化
 			GameManager.GameDifficulty = () => 1.0f;// 设置游戏难度（暂时固定为1.0）
-			LoadMapConfig.InitData();
-
+			LoadMapConfig.InitData();//加载地图的图块数据
+			ImgNumber.InitData();
 
 			gameParam = SaveLoadSystem.GetParam<SaveGameParam>();
 			if (gameParam == null)

@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://x3i1jtt4jbo0"]
+
+[ext_resource type="Texture2D" uid="uid://cdq54geg2pmxe" path="res://地图六边形次要关卡选框1223.png" id="1_4mdbc"]
+
+[sub_resource type="Animation" id="Animation_g8dpf"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/地图六边形次要关卡选框1223:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(514, 266), Vector2(11, 111)]
+}
+
+[sub_resource type="Animation" id="Animation_ceuek"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/地图六边形次要关卡选框1223:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(514, 266), Vector2(222, 222)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7bi2p"]
+_data = {
+"RESET": SubResource("Animation_g8dpf"),
+"new_animation": SubResource("Animation_ceuek")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7bi2p")
+}
+autoplay = "RESET"
+
+[node name="地图六边形次要关卡选框1223" type="Sprite2D" parent="AnimatedSprite2D"]
+position = Vector2(514, 266)
+texture = ExtResource("1_4mdbc")
+
+[node name="ItemList" type="ItemList" parent="AnimatedSprite2D"]
+offset_left = 590.0
+offset_top = 618.0
+offset_right = 781.0
+offset_bottom = 745.0

@@ -13,7 +13,7 @@ namespace Remnant_Afterglow
         /// </summary>
         /// <param name="CfgData"></param>
         /// <returns></returns>
-        public AnimatedSprite2D GetTowerFrame(TowerData CfgData)
+        public AnimatedSprite2D GetTowerFrame(BuildData CfgData)
         {
             AnimatedSprite2D AnimatedSprite = new AnimatedSprite2D();
             SpriteFrames spriteFrames = new SpriteFrames();
@@ -35,7 +35,7 @@ namespace Remnant_Afterglow
                         {
                             Rect2I rect2 = new Rect2I(new Vector2I((i - 1) * animaUnit.LengWidth.X, (j - 1) * animaUnit.LengWidth.Y), animaUnit.LengWidth);
                             Texture2D texture2D = ImageTexture.CreateFromImage(image.GetRegion(rect2));
-                            spriteFrames.AddFrame(AnimaName, texture2D, animaUnit.DurationMs / 1000);
+                            spriteFrames.AddFrame(AnimaName, texture2D, AnimationCommon.FindSecondItemIfFirstIsOne(animaUnit.RelativeList, Index));
                         }
                         else
                         {
@@ -59,30 +59,6 @@ namespace Remnant_Afterglow
             }
             return AnimatedSprite;
         }
-
-
-        /// <summary>
-        /// 初始化远程武器数据
-        /// </summary>
-        /// <returns></returns>
-        public void InitWeaponData()
-        {
-            foreach (List<int> var in CfgData.WeaponList)
-            {
-                WeaponBase weapon = new WeaponBase(var[0]);
-                WeaponList.Add(weapon);//祝福注释-这里位置等参数要改
-            }
-        }
-
-
-
-
-
-
-
-
-
-
 
     }
 }

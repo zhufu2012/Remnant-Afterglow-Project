@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BulletMLLib.SharedProject.Nodes;
 using BulletMLLib.SharedProject.Tasks;
+using GameLog;
 using Godot;
 using Remnant_Afterglow;
 
@@ -116,7 +117,7 @@ public abstract class Bullet : IBullet
     /// </summary>
     public Vector2 InitialVelocity { get; } = Vector2.Zero;
 
-    #endregion //属性
+    #endregion 
     /// <summary>
     /// 创建子弹者
     /// </summary>
@@ -287,13 +288,17 @@ public abstract class Bullet : IBullet
     {
         // 获取玩家位置以便瞄准那个家伙
         Debug.Assert(null != MyBulletManager);
-        var shipPos = targetObject.GlobalPosition;//祝福注释-看全局对不对
+        if (targetObject != null && !targetObject.IsDestroyed && !targetObject.IsQueuedForDeletion())
+        {
+            var shipPos = targetObject.GlobalPosition;
 
-        // 获取我们的位置
-        var pos = new Vector2(X, Y);
+            // 获取我们的位置
+            var pos = new Vector2(X, Y);
 
-        // 获取指向他的角度
-        return (shipPos - pos).Angle();
+            // 获取指向他的角度
+            return (shipPos - pos).Angle();
+        }
+        return Direction;
     }
 
     /// <summary>

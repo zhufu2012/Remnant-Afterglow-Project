@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnv4033sd7m5"]
+
+[ext_resource type="Script" path="res://src/core/ui/component/image_num/ImageNum.cs" id="1_yb0sn"]
+
+[node name="ImageNum" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yb0sn")
+ShowNum = 111

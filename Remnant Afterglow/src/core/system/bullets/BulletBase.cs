@@ -23,27 +23,13 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 子弹的实际显示节点，用于在屏幕上渲染子弹。
         /// </summary>
-        public Node2D BulletNode { get; set; }
+        public BulletNode BulletNode { get; set; }
 
-        /// <summary>
-        /// 阵营组参数
-        /// </summary>
-        public int Camp;
 
-        #region 子弹配置数据
         /// <summary>
         /// 子弹基础的数据
         /// </summary>
         public BulletData bulletData;
-        /// <summary>
-        /// 子弹逻辑数据
-        /// </summary>
-        public BulletLogic bulletLogic;
-        /// <summary>
-        /// 子弹碰撞数据
-        /// </summary>
-        public BulletCollide bulletCollide;
-        #endregion
         /// <summary>
         /// 构造函数，初始化Mover实例，并设置其管理器。
         /// </summary>
@@ -52,12 +38,29 @@ namespace Remnant_Afterglow
             : base(myBulletManager, targetObject, createObject)
         {
             this.BulletLabel = BulletLabel;
-            Camp = createObject.Camp;
             bulletData = ConfigCache.GetBulletData(BulletLabel);
-            bulletLogic = ConfigCache.GetBulletLogic(BulletLabel);
-            bulletCollide = ConfigCache.GetBulletCollide(bulletData.CollideId);
+            ParentNode = MapCopy.Instance.BulletNode; // 设置父节点为游戏的主要实例
+            BulletNode = (BulletNode)ResourceLoader.Load<PackedScene>(bulletData.ScenePath).Instantiate(); // 加载子弹场景
+            BulletNode.InitData(this,createObject.Camp,BulletLabel);
         }
+        /// <summary>
+        /// 初始化子弹，创建并添加到场景中。
+        /// </summary>
+        public void Init()//祝福注释-这里的子弹场景之后必须用对象池
+        {
+            //ParentNode = MapCopy.Instance.UnitNode; // 设置父节点为游戏的主要实例-祝福注释-用相同节点测试-测试进出检测问题
+            BulletNode.ZIndex = bulletData.ZIndex;
+            Area2D Area = BulletNode.GetNode<Area2D>("Area2D");//祝福注释-碰撞体需要设置
+            Area.CollisionMask = Common.CalculateMaskSum(BulletNode.bulletCollide.CollisionLayerList);
+            Area.CollisionLayer = Common.CalculateMaskSum(BulletNode.bulletCollide.CollisionLayerList);
+            Area.AddToGroup(MapGroup.BulletGroup);
+            Area.AddToGroup("" + BulletNode.Camp);
+            Sprite2D sprite = BulletNode.GetNode<Sprite2D>("Sprite2D");
+            sprite.Texture = bulletData.BulletPng;
 
+            ParentNode.AddChild(BulletNode); // 将子弹节点添加到父节点下
+            Used = true; // 标记子弹为使用状态
+        }
 
 
         /// <summary>
@@ -65,10 +68,9 @@ namespace Remnant_Afterglow
         /// </summary>
         public override void PostUpdate()
         {
-            if (CurrFlyDistance >= bulletLogic.MaxDistance)// 检查子弹是否超出最大飞行距离
+            if (CurrFlyDistance >= BulletNode.bulletLogic.MaxDistance)// 检查子弹是否超出最大飞行距离
             {
                 Used = false;//将子弹标记为未使用
-
             }
         }
 
@@ -123,33 +125,6 @@ namespace Remnant_Afterglow
                 //根据子弹是否使用来控制其可见性
                 BulletNode.Visible = value;
             }
-        }
-
-
-        /// <summary>
-        /// 初始化子弹，创建并添加到场景中。
-        /// </summary>
-        public void Init()//祝福注释-这里的子弹场景之后必须用对象池
-        {
-            ParentNode = MapCopy.Instance.BulletNode; // 设置父节点为游戏的主要实例
-            //ParentNode = MapCopy.Instance.UnitNode; // 设置父节点为游戏的主要实例-祝福注释-用相同节点测试-测试进出检测问题
-            BulletNode = (Node2D)ResourceLoader.Load<PackedScene>(bulletData.ScenePath).Instantiate(); // 加载子弹场景
-            BulletNode.ZIndex = 10;//祝福注释-之后得改，子弹绘图层
-            
-            Area2D Area = BulletNode.GetNode<Area2D>("Area2D");//祝福注释-碰撞体需要设置
-            Area.CollisionMask = Common.CalculateMaskSum(bulletCollide.CollisionLayerList);
-            Area.CollisionLayer = Common.CalculateMaskSum(bulletCollide.CollisionLayerList);
-            Area.Monitoring = true;//不检测进入和离开区域，节省性能
-            Area.InputPickable = true;//节省性能
-            Area.AreaEntered += Area2DAreaEntered;
-            Area.AddToGroup(MapGroup.BulletGroup);
-            Area.AddToGroup(""+Camp);
-            ParentNode.AddChild(BulletNode); // 将子弹节点添加到父节点下
-            Used = true; // 标记子弹为使用状态
-        }
-
-        public void Area2DAreaEntered(Area2D area)
-        {
         }
     }
 }

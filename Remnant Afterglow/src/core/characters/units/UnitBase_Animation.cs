@@ -8,8 +8,6 @@ namespace Remnant_Afterglow
     /// </summary>
     public partial class UnitBase : BaseObject, IUnit
     {
-        //各动画的图片中心
-        public Dictionary<string, Vector2> AnimationCenterPos = new Dictionary<string, Vector2>();
         /// <summary>
         /// 播放动画,并且设置动画的位置，确保动画的中心在实体上
         /// </summary>
@@ -19,7 +17,7 @@ namespace Remnant_Afterglow
             if(AnimatedSprite.SpriteFrames.HasAnimation(AnimaName))
                 AnimatedSprite.Play(AnimaName);
             else
-                AnimatedSprite.Play(AnimatorNames.Default);
+                AnimatedSprite.Play(ObjectStateNames.Default);
         }
         /// <summary>
         /// 单位动画
@@ -48,7 +46,7 @@ namespace Remnant_Afterglow
                         {
                             Rect2I rect2 = new Rect2I(new Vector2I((i - 1) * animaUnit.LengWidth.X, (j - 1) * animaUnit.LengWidth.Y), animaUnit.LengWidth);
                             Texture2D texture2D = ImageTexture.CreateFromImage(image.GetRegion(rect2));
-                            spriteFrames.AddFrame(AnimaName, texture2D, animaUnit.DurationMs / 1000);
+                            spriteFrames.AddFrame(AnimaName, texture2D, AnimationCommon.FindSecondItemIfFirstIsOne(animaUnit.RelativeList,Index));
                         }
                         else
                         {
@@ -70,10 +68,8 @@ namespace Remnant_Afterglow
                 AnimatedSprite.Animation = LoopName;
                 AnimatedSprite.Autoplay = AutoName;
             }
-
             return AnimatedSprite;
         }
-
 
     }
 }

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cupk46217nntf"]
+
+[ext_resource type="Script" path="res://src/core/game/bigMapLogic/BigMapCamera.cs" id="1_2jsrw"]
+
+[node name="BigMapCamera" type="Camera2D"]
+script = ExtResource("1_2jsrw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="frame_number_label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0

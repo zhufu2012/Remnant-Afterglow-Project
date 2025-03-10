@@ -27,10 +27,7 @@ namespace Remnant_Afterglow
         /// 地图可使用的最大序号
         /// </summary>
         public int ImageSetMaxId;
-        /// <summary>
-        /// 图像集绘制层数 在哪层绘制
-        /// </summary>
-        public int ImageSetLayer;
+
         /// <summary>
         /// 地图图像集大小
         /// </summary>
@@ -38,14 +35,13 @@ namespace Remnant_Afterglow
 
         public Dictionary<Vector2I, Texture2D> textureList = new Dictionary<Vector2I, Texture2D>();
         //Width 和Height 是切分图片的指定大小
-        public ImageSetData(Dictionary<string, Object> dict,int Width, int Height)
+        public ImageSetData(Dictionary<string, Object> dict, int Width, int Height)
         {
             MapImageSetId = (int)dict["MapImageSetId"];
             MapImageSetName = (string)dict["MapImageSetName"];
             ImageSetDescribe = (string)dict["ImageSetDescribe"];
             ImageSetType = (int)dict["ImageSetType"];
             ImageSetMaxId = (int)dict["ImageSetMaxId"];
-            ImageSetLayer = (int)dict["ImageSetLayer"];
             MapImageSize = (Vector2I)dict["MapImageSize"];
             Texture2D texture = (Texture2D)dict["MapImageSet"];
             textureList = Common.SplitTexture2(texture, new Vector2I(Width, Height));
@@ -71,8 +67,11 @@ namespace Remnant_Afterglow
         /// 保存地图生成材料id 对应的备选id
         /// <地图材料id,其备选id>
         /// </summary>
-        public Dictionary<int, int> MapMaterialDict = new Dictionary<int, int>();
-
+        public static Dictionary<Vector2, int> MapMaterialDict = new Dictionary<Vector2, int>();
+        /// <summary>
+        /// 逻辑层有哪些材料id
+        /// </summary>
+        public static List<int> LogicMaterialList = new List<int>();
         /// <summary>
         /// 加载图块数据
         /// </summary>
@@ -102,47 +101,72 @@ namespace Remnant_Afterglow
                 }
 
                 tileSet.AddSource(source, MapImageSetId);//加入资源
-
-
-
-//                int index = 1;
-//                int cellsize = MapConstant.TileCellSize;//格子长宽
-//                for (var i = 0; i < size.X; i++)
-//                {
-//                    for (var j = 0; j < size.Y; j++)
-//                    {
-//                        if (Type == 1)
-//                        {
-//                            Vector2I pos = new Vector2I(i, j);
-//                            List<Dictionary<string, object>> MaterialList = ConfigLoadSystem.QueryCfgAllLine(ConfigConstant.Config_MapMaterial,
-//                            new Dictionary<string, object>
-//                            {
-//                                 { "ImageSetId" , MapImageSetId },
-//                                 { "ImageSetIndex" , index}
-//                            });
-//                            foreach (var info in MaterialList)
-//                            {
-//                                int MaterialId = (int)info["MaterialId"];
-//                                int newAlternativeTileId = source.CreateAlternativeTile(pos);//新增备选图块
-//                                MapMaterialDict[MaterialId] = newAlternativeTileId;
-//                                TileData tileData = source.GetTileData(pos, newAlternativeTileId);//对应单个图块数据
-//                                List<List<int>> CollisionPolygon = (List<List<int>>)info["CollisionPolygon"];//碰撞多边形数据
-//                                for (int key = 0; key < CollisionPolygon.Count; key++)//像tileData中加碰撞多边形
-//                                {
-//                                    int physicsLayer = CollisionPolygon[key][0];//物理层
-//                                    Vector2[] Vector2List = ListCommon.ConvertToVector2Array(CollisionPolygon[key], 1);
-//                                    tileData.AddCollisionPolygon(physicsLayer);
-//                                    tileData.SetCollisionPolygonPoints(physicsLayer, 0, Vector2List);
-//                                }
-//                            }
-//                        }
-//                        index++;
-//                    }
-//                }
-                MapSetDataDict[(int)kvp["MapImageSetId"]] = new ImageSetData(kvp,Width,Height);
+                MapSetDataDict[(int)kvp["MapImageSetId"]] =  new ImageSetData(kvp, Width, Height);
                 MapSetDict[(int)kvp["MapImageSetId"]] = source;
             }
-        }
+            if (Type == 1)//作战地图
+            {
+                MapFixedSet mapFixed = ConfigCache.GetMapFixedSet(1);//逻辑图层
+                LogicMaterialList = mapFixed.MaterialIdList;
+            }
+                /**
+                if (Type == 1)//作战地图
+                {
+                    NavigationRegion2D region2D = MapCopy.Instance.fixedTileMap.region2D;
+
+
+                    List<MapNavigate> NavigateLayerList = ConfigCache.GetAllMapNavigate();
+                    MapFixedSet mapFixed = ConfigCache.GetMapFixedSet(1);//逻辑图层
+                    LogicMaterialList = mapFixed.MaterialIdList;
+                    foreach (int id in mapFixed.MaterialIdList)
+                    {
+                        MapFixedMaterial item = ConfigCache.GetMapFixedMaterial(id);
+                        MapPassType mapPass = ConfigCache.GetMapPassType(item.PassTypeId);
+                        Vector2I size= (Vector2I)ConfigLoadSystem.GetCfgValue(ConfigConstant.Config_MapImageSet,""+item.ImageSetId,"MapImageSize");
+                        int y = (item.ImageSetIndex - 1) / size.X;
+                        Vector2I pos = new Vector2I(item.ImageSetIndex - y * size.X - 1, y);
+                        TileSetAtlasSource temp_source = MapSetDict[item.ImageSetId];
+
+                        List<MapNavigate> mapNavigates = NavigateLayerList.FindAll((MapNavigate t) => { return !mapPass.NoPassList.Contains(t.NavigateLayerId); }) ;
+                        TileData tileData = temp_source.GetTileData(pos, 0);
+                        foreach (MapNavigate navigate in mapNavigates)
+                        {
+                            if(navigate.NavigateLayerId==0)
+                            {
+                                //int newAlternativeTileId = temp_source.CreateAlternativeTile(pos);//新增备选图块
+                                //MapMaterialDict[new Vector2(1,item.MaterialId)] = newAlternativeTileId;
+                                tileData.AddCollisionPolygon(navigate.NavigateLayerId);
+                                NavigationPolygon navigation = new NavigationPolygon();
+                                var vertices = new Vector2[] {
+                                    new Vector2(20, 20),
+                                    new Vector2(-20, 20),
+                                    new Vector2(-20, -20),
+                                    new Vector2(20, -20) 
+                                };
+                                navigation.Vertices = vertices;
+                                var polygons = new int[] {0,1,2,3};
+                                navigation.AddPolygon(polygons);
+                                var boundingOutline = new Vector2[] {
+                                     new Vector2(-20, -20),
+                                     new Vector2(20, -20),
+                                     new Vector2(20, 20),
+                                     new Vector2(-20, 20)
+                                };
+                                navigation.AddOutline(vertices);
+                                navigation.AgentRadius = 0f;
+
+                               
+                                //navigation.MakePolygonsFromOutlines();
+
+                                //NavigationServer2D.BakeFromSourceGeometryData(navigation, new NavigationMeshSourceGeometryData2D());
+
+                                tileData.SetNavigationPolygon(navigate.NavigateLayerId, navigation);
+                            }
+                        }
+                    }
+                }**/
+            }
+
 
 
         public int[] GetIntArray(int Num)

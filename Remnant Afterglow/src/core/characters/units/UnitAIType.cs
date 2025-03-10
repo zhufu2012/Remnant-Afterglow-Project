@@ -3,11 +3,23 @@ namespace Remnant_Afterglow
     /// <summary>
     /// AI类型
     /// </summary>
-    public enum UnitAIType
+    public static class UnitAIType
     {
-        ArmyAI,//陆军AI
-        AirForceAI,//空军AI
-        RangeArmyAI,//范围陆军AI，类似野怪
-        RangeAirForceAI//范围空军AI,类似野怪
+        /// <summary>
+        /// 陆军AI 导航层1
+        /// </summary>
+        public const int ArmyAI = 0;
+        /// <summary>
+        /// 爬行单位 导航层1 2
+        /// </summary>
+        public const int CrawlAI = 1;
+        /// <summary>
+        /// 悬浮单位 导航层1 3
+        /// </summary>
+        public const int SuspendAI = 2;
+        /// <summary>
+        /// 飞行单位 导航层1-4
+        /// </summary>
+        public const int FlyAI = 3;
     }
 }

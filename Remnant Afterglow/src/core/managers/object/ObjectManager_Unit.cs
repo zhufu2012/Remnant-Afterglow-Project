@@ -22,7 +22,7 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public UnitBase CreateMapUnit(int ObjectId, Vector2I MapPos)
         {
-            Vector2 Pos = MapPos * MapConstant.TileCellSize - new Vector2I(MapConstant.TileCellSize / 2, MapConstant.TileCellSize / 2);
+            Vector2 Pos = MapPos * MapConstant.TileCellSize + MapConstant.TileCellSizeVector2I / 2;
             return CreateUnit(ObjectId, Pos);
         }
 
@@ -34,31 +34,21 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public UnitBase CreateUnit(int ObjectId, Vector2 Pos)
         {
-            UnitBase unitBase = new UnitBase(ObjectId);
+            UnitBase unitBase = (UnitBase)GD.Load<PackedScene>("res://src/core/characters/units/UnitBase.tscn").Instantiate();
             unitBase.Position = Pos;
+            unitBase.InitData(ObjectId);
             unitBase.ZIndex = 9;//祝福注释-这里地图层要改,先用着
             unitDict[unitBase.Logotype] = unitBase;
             MapCopy.Instance.UnitNode.AddChild(unitBase);
 
-            Vector2I Target = new Vector2I(30, 38);
+            Vector2I Target = new Vector2I(28, 36);
             unitBase.SetMovementTarget(Target);//祝福注释-测试用-要去掉
-            Sprite2D ss = new Sprite2D();
-            ss.Position = Target;
-            ss.Texture = GD.Load<Texture2D>("res://Test/UnitTest/士兵装饰.png");
-            MapCopy.Instance.AddChild(ss);
+            unitBase.MobKilled += (BaseObject killObject, BaseObject casterObject, BulletNode bulletNode) =>
+KilledAfter(killObject, casterObject,bulletNode);
             return unitBase;
         }
 
-        /// <summary>
-        /// 单位死亡后处理
-        /// </summary>
-        /// <param name="casterObject"></param>
-        private void UnitKilledAfter(BaseObject casterObject)
-        {
 
-
-            casterObject.QueueFree();
-        }
 
     }
 }

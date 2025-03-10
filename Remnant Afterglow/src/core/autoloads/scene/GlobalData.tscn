@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dair3js6rpagg"]
-
-[ext_resource type="Script" path="res://src/core/autoloads/GlobalData.cs" id="1_g5xn2"]
-
-[node name="GlobalData" type="Node"]
-script = ExtResource("1_g5xn2")

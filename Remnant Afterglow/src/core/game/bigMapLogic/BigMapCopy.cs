@@ -30,7 +30,7 @@ namespace Remnant_Afterglow
 		/// <summary>
 		/// 相机系统
 		/// </summary>
-		public GameCamera gameCamera;
+		public BigMapCamera gameCamera;
 
 
 		#endregion
@@ -59,8 +59,6 @@ namespace Remnant_Afterglow
 		public BigMapCopy()
 		{
 			Instance = this;
-			//SceneManager.PutParam("ChapterId", 1);//章节
-			//SceneManager.PutParam("CopyId", 1);//关卡
 		}
 
 		public override void _Ready()
@@ -86,8 +84,9 @@ namespace Remnant_Afterglow
 				ChapterCopyBase chapterCopy = ConfigCache.GetChapterCopyBase("" + ChapterId + "_" + (int)list[i]["CopyId"]);
 				copyBaseDict[chapterCopy.Pos] = chapterCopy;
 			}
-			gameCamera = new GameCamera(chapterBase.CameraId);//初始化游戏相机
-			AddChild(gameCamera);
+			gameCamera = GetNode<BigMapCamera>("gameCamera");//初始化游戏相机
+			gameCamera.InitData(chapterBase.CameraId);
+            MapOpManager.Instance.SetOpView(OpViewType.BigMap_OpView);
 		}
 
 		/// <summary>
@@ -95,7 +94,7 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public void InitMapCfg()
 		{
-			bigMapDraw = new BigMapDraw(ChapterId, gameCamera.canvasLayer.Size, gameCamera.canvasLayer.noise);
+			bigMapDraw = new BigMapDraw(ChapterId, new Vector2(0,0));
 			AddChild(bigMapDraw);
 		}
 

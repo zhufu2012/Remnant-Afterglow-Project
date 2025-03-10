@@ -109,7 +109,7 @@ public class ChangeDirectionTask : BulletMLTask
 
     public override ERunStatus Run(Bullet bullet)
     {
-        //change the direction of the bullet by the correct amount
+        //将项目子弹的方向改变正确的量
         bullet.Direction += GetDirection(bullet);
 
         //decrement the amount if time left to run and return End when this task is finished

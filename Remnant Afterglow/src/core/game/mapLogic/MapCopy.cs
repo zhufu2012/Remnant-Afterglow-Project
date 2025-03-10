@@ -1,5 +1,6 @@
 using GameLog;
 using Godot;
+using System;
 using System.Collections.Generic;
 
 namespace Remnant_Afterglow
@@ -42,22 +43,20 @@ namespace Remnant_Afterglow
 		/// <summary>
 		/// 相机
 		/// </summary>
-		public GameCamera gameCamera;
+		public MapCamera gameCamera;
 		#endregion
 
 		#region 地图生成
 		/// <summary>
 		/// 地图绘制节点
 		/// </summary>
-		public MapDraw mapDraw;
-		/// <summary>
-		/// 导航区域根节点
-		/// </summary>
-		public Node2D NavigationRoot;
+		public FixedTileMap fixedTileMap;
 		#endregion
 
 		#region 关卡各系统
-		//地图基础逻辑-包含刷怪系统
+		/// <summary>
+		/// 地图基础逻辑-包含刷怪系统
+		/// </summary>
 		public MapLogic mapLogic;
 
 		/// <summary>
@@ -68,11 +67,6 @@ namespace Remnant_Afterglow
 		/// 单位管理器
 		/// </summary>
 		public ObjectManager objectManager;
-
-		/// <summary>
-		/// 操作界面
-		/// </summary>
-		public MapOpManager mapOpManager;
 
 		public FlowFieldSystem flowFieldSystem;
 		public FlowFieldDrawer flowFieldDrawer;
@@ -111,8 +105,6 @@ namespace Remnant_Afterglow
 
 		public MapCopy()
 		{
-			//SceneManager.PutParam("ChapterId", 1);//章节
-			//SceneManager.PutParam("CopyId", 1);//关卡
 			Instance = this;
 		}
 
@@ -122,67 +114,59 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public void InitData()
 		{
-			mapOpManager = GD.Load<PackedScene>("res://src/core/game/mapLogic/operation/MapOpManager.tscn").Instantiate<MapOpManager>();
-
 			ChapterId = (int)SceneManager.GetParam("ChapterId");
 			CopyId = (int)SceneManager.GetParam("CopyId");
+			SceneManager.DataClear();
 			copyData = new ChapterCopyBase(ChapterId, CopyId);
 
-			SceneManager.DataClear();
 			DrawNode = GetNode<Node2D>("DrawList");
 			UnitNode = GetNode<Node2D>("UnitList");
 			TowerNode = GetNode<Node2D>("TowerList");
 			BuildNode = GetNode<Node2D>("BuildList");
 			WorkerNode = GetNode<Node2D>("WorkerList");
-			NavigationRoot = GetNode<Node2D>("NavigationRoot");
 			BulletNode = GetNode<Node2D>("BulletList");
+			gameCamera = GetNode<MapCamera>("gameCamera");
+			gameCamera.InitData(copyData.CameraId);//游戏相机
 
 			bulletManager = new BulletManager();// 初始化子弹管理器
-			objectManager = new ObjectManager();// 初始化单位管理器
-			gameCamera = new GameCamera(copyData.GenerateMapId);//游戏相机
-			Log.Print(copyData.CopyType);
 			mapLogic = new MapLogic((MapGameModel)copyData.CopyType, ChapterId, CopyId);//游戏逻辑构造
-			AddChild(gameCamera);
-			AddChild(mapOpManager);//添加操作界面
 			AddChild(mapLogic);//游戏模式逻辑
+			MapOpManager.Instance.SetOpView(OpViewType.Map_OpView);
+		}
+
+		/// <summary>
+		/// 地图绘制资源配置初始化
+		/// </summary>
+		public void InitMapCfg()
+		{
+			fixedTileMap = GetNode<FixedTileMap>("FixedTileMap");
+			fixedTileMap.InitData(copyData.GenerateMapId);
+				//new FixedTileMap(copyData.GenerateMapId);
+			fixedTileMap.Name = "fixedTileMap";
+			flowFieldSystem = new FlowFieldSystem(fixedTileMap.Width, fixedTileMap.Height, fixedTileMap.layerData[MapConstant.MapLogicLayer]);//流场导航系统
+			objectManager = new ObjectManager(fixedTileMap.Width, fixedTileMap.Height,fixedTileMap.layerData[MapConstant.MapLogicLayer]);// 初始化单位管理器
+			if(IsShowFlow)//是否显示流场
+			{
+				flowFieldDrawer = new FlowFieldDrawer();//流场绘制显示
+				flowFieldDrawer.ZIndex = 100;
+				flowFieldDrawer.Name = "flowFieldDrawer";
+				AddChild(flowFieldDrawer);
+			}
 		}
 
 		public override void _Ready()
 		{
 			InitData();
 			InitMapCfg();
-
-			mapLogic.LogicStart();//地图逻辑-关卡逻辑开始
-		}
-
-		/// <summary>
-		/// 获取可攻击目标的位置--祝福注释
-		/// </summary>
-		/// <returns></returns>
-		private Vector2 GetPlayerPosition()
-		{
-			// 如果玩家实例存在，返回其位置；否则返回默认位置
-			return new Vector2(0, 0);
-		}
-
-		TowerBase tower;
-		/// <summary>
-		/// 地图绘制资源配置初始化
-		/// </summary>
-		public void InitMapCfg()
-		{
-			mapDraw = new MapDraw(ChapterId, CopyId, gameCamera.canvasLayer.Size, gameCamera.canvasLayer.noise);
-			AddChild(mapDraw);
-			flowFieldSystem = new FlowFieldSystem(mapDraw.mapGenerate.Width, mapDraw.mapGenerate.Height, mapDraw.layer_dict[1]);//流场导航系统
-			flowFieldDrawer = new FlowFieldDrawer();
-			flowFieldDrawer.ZIndex = 100;
-			AddChild(flowFieldDrawer);
-
-
-			tower = new TowerBase(2001);
-			TowerNode.AddChild(tower);//祝福注释-这里测试刷新炮塔
-			//创建子弹
-			bulletManager.CreateTopBullet("add2way", new Vector2(300, 300), 0, tower, tower);
+			for (int i = 18; i < 19; i++)
+			{
+				for (int j = 5; j < 6; j++)
+				{
+					Random random = new Random();
+					//int unitId = random.NextDouble() >= 0.1 ? 1001 : 1002;
+					ObjectManager.Instance.CreateMapUnit(1001, new Vector2I(i, j));
+				}
+			}
 		}
 		#endregion
 
@@ -204,20 +188,6 @@ namespace Remnant_Afterglow
 			mapLogic.MapLogicUpdate(delta);//地图逻辑更新
 		}
 
-		public override void _UnhandledInput(InputEvent @event)
-		{
-			if (@event is InputEventMouse mouseEvent)
-			{
-				// 检查是否是鼠标左键按下
-				if (mouseEvent is InputEventMouseButton mb && mb.ButtonIndex == MouseButton.Left && mb.Pressed)
-				{
-
-					bulletManager.CreateTopBullet("add2way", ToGlobal(GetViewport().GetMousePosition()), 0, tower, tower);
-
-				}
-			}
-
-		}
 
 
 
@@ -228,7 +198,7 @@ namespace Remnant_Afterglow
 		/// <returns></returns>
 		public static Vector2I GetWorldPos(Vector2 GlobalPosition)
 		{
-			return Instance.mapDraw.LocalToMap(GlobalPosition);
+			return Instance.fixedTileMap.LocalToMap(GlobalPosition);
 		}
 
 		/// <summary>
@@ -238,7 +208,7 @@ namespace Remnant_Afterglow
 		/// <returns></returns>
 		public static Vector2 GetCellCenter(Vector2I cellPos)
 		{
-			return Instance.mapDraw.MapToLocal(cellPos);
+			return Instance.fixedTileMap.MapToLocal(cellPos);
 		}
 	}
 }

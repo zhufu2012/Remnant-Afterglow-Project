@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Godot;
 namespace Remnant_Afterglow
 {
     /// <summary>
@@ -12,11 +13,6 @@ namespace Remnant_Afterglow
         ///也是子弹脚本中子弹label的名称
         /// </summary>
         public string BulletLabel { get; set; }
-        /// <summary>        
-        /// 动画类型列表
-        ///cfg_AnimaExplode_子弹动画id列表
-        /// </summary>
-        public List<int> AnimaTypeList { get; set; }
         /// <summary>        
         /// 子弹场景类型id：
         ///能量子弹：1
@@ -40,16 +36,31 @@ namespace Remnant_Afterglow
         ///不写表示无音效
         /// </summary>
         public string SoundId { get; set; }
+        /// <summary>        
+        /// 子弹图层
+        /// </summary>
+        public int ZIndex { get; set; }
+        /// <summary>        
+        /// 子弹图
+        /// </summary>
+        public Texture2D BulletPng { get; set; }
+        /// <summary>        
+        /// 动画类型列表
+        ///cfg_AnimaExplode_子弹动画id列表
+        /// </summary>
+        public List<int> AnimaTypeList { get; set; }
 
         public BulletData(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_BulletData, id);//public const string Config_BulletData = "cfg_BulletData"; 
 			BulletLabel = (string)dict["BulletLabel"];
-			AnimaTypeList = (List<int>)dict["AnimaTypeList"];
 			SceneType = (int)dict["SceneType"];
 			Logic = (string)dict["Logic"];
 			CollideId = (int)dict["CollideId"];
 			SoundId = (string)dict["SoundId"];
+			ZIndex = (int)dict["ZIndex"];
+			BulletPng = (Texture2D)dict["BulletPng"];
+			AnimaTypeList = (List<int>)dict["AnimaTypeList"];
 			InitData();
         }
 
@@ -58,22 +69,26 @@ namespace Remnant_Afterglow
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_BulletData, cfg_id);//public const string Config_BulletData = "cfg_BulletData"; 
 			BulletLabel = (string)dict["BulletLabel"];
-			AnimaTypeList = (List<int>)dict["AnimaTypeList"];
 			SceneType = (int)dict["SceneType"];
 			Logic = (string)dict["Logic"];
 			CollideId = (int)dict["CollideId"];
 			SoundId = (string)dict["SoundId"];
+			ZIndex = (int)dict["ZIndex"];
+			BulletPng = (Texture2D)dict["BulletPng"];
+			AnimaTypeList = (List<int>)dict["AnimaTypeList"];
 			InitData();
         }
 
         public BulletData(Dictionary<string, object> dict)
         {
 			BulletLabel = (string)dict["BulletLabel"];
-			AnimaTypeList = (List<int>)dict["AnimaTypeList"];
 			SceneType = (int)dict["SceneType"];
 			Logic = (string)dict["Logic"];
 			CollideId = (int)dict["CollideId"];
 			SoundId = (string)dict["SoundId"];
+			ZIndex = (int)dict["ZIndex"];
+			BulletPng = (Texture2D)dict["BulletPng"];
+			AnimaTypeList = (List<int>)dict["AnimaTypeList"];
 			InitData();
         }
         #endregion

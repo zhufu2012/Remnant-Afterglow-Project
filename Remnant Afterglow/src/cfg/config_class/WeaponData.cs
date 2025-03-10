@@ -11,7 +11,7 @@ namespace Remnant_Afterglow
         /// <summary>        
         /// 实体id
         /// </summary>
-        public int ObjectId { get; set; }
+        public int WeaponId { get; set; }
         /// <summary>        
         /// 武器名称
         /// </summary>
@@ -51,7 +51,7 @@ namespace Remnant_Afterglow
         public WeaponData(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_WeaponData, id);//public const string Config_WeaponData = "cfg_WeaponData"; 
-			ObjectId = (int)dict["ObjectId"];
+			WeaponId = (int)dict["WeaponId"];
 			Name = (string)dict["Name"];
 			Describe = (string)dict["Describe"];
 			Type = (int)dict["Type"];
@@ -66,7 +66,7 @@ namespace Remnant_Afterglow
         public WeaponData(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_WeaponData, cfg_id);//public const string Config_WeaponData = "cfg_WeaponData"; 
-			ObjectId = (int)dict["ObjectId"];
+			WeaponId = (int)dict["WeaponId"];
 			Name = (string)dict["Name"];
 			Describe = (string)dict["Describe"];
 			Type = (int)dict["Type"];
@@ -79,7 +79,7 @@ namespace Remnant_Afterglow
 
         public WeaponData(Dictionary<string, object> dict)
         {
-			ObjectId = (int)dict["ObjectId"];
+			WeaponId = (int)dict["WeaponId"];
 			Name = (string)dict["Name"];
 			Describe = (string)dict["Describe"];
 			Type = (int)dict["Type"];

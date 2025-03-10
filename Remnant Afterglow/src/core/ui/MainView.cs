@@ -5,24 +5,23 @@ namespace Remnant_Afterglow
 {
 	public partial class MainView : Control
 	{
-		public Button but_continue_game;//继续游戏
 		public Button but_start_game;   //开始游戏
 		public Button but_multi_player; //多人游戏
+		public Button but_map_edit;     //地图编辑器
+		public Button but_archival;     //档案库
 		public Button but_model;    //模组
+
 		public Button but_setting;  //设置
 		public Button but_quit; //退出
+
 		public Button but_achievement;  //成就
 		public Button but_thank;    //致谢
 		public Button but_language; //语言
 
-
-		public Sprite2D title_gear1;
-		public Sprite2D title_gear2;
-		public Sprite2D title_gear3;
-
-		///齿轮速度
-		[Export]
-		public float TurnSpeed = 1;
+		/// <summary>
+		/// 操作界面
+		/// </summary>
+		public MapOpManager mapOpManager;
 
 		public override void _Ready()
 		{
@@ -31,54 +30,52 @@ namespace Remnant_Afterglow
 
 		public void InitView()
 		{
-			but_continue_game = GetNode<Button>("view/but_continue_game");
 			but_start_game = GetNode<Button>("view/but_start_game");
 			but_multi_player = GetNode<Button>("view/but_multi_player");
+			but_map_edit = GetNode<Button>("view/but_map_edit");
+			but_archival = GetNode<Button>("view/but_archival");
+
 			but_model = GetNode<Button>("view/but_model");
 			but_setting = GetNode<Button>("view/but_setting");
 			but_quit = GetNode<Button>("view/but_quit");
 			but_achievement = GetNode<Button>("view/but_achievement");
 			but_thank = GetNode<Button>("view/but_thank");
-			but_language = GetNode<Button>("view/but_language");
 
-
-			title_gear1 = GetNode<Sprite2D>("title/title_gear/title_gear1");
-			title_gear2 = GetNode<Sprite2D>("title/title_gear/title_gear2");
-			title_gear3 = GetNode<Sprite2D>("title/title_gear/title_gear3");
-
-			but_continue_game.ButtonDown += ContinueGame;
 			but_start_game.ButtonDown += StartGame;
 			but_multi_player.ButtonDown += MultiPlayer;
+			but_map_edit.ButtonDown += MapEdit;
+			but_archival.ButtonDown += ArchivalView;
+
 			but_model.ButtonDown += Model;
 			but_setting.ButtonDown += SetUp;
 			but_quit.ButtonDown += Quit;
 			but_achievement.ButtonDown += Achievement;
 			but_thank.ButtonDown += Thank;
-			but_language.ButtonDown += Language;
-
-			InitUpdateLog();
 		}
 
 
 		public override void _Process(double delta)
 		{
-			//齿轮运动
-			title_gear1.RotationDegrees += TurnSpeed;
-			title_gear2.RotationDegrees += TurnSpeed;
-			title_gear3.RotationDegrees += TurnSpeed;
 			base._Process(delta);
 		}
 
 
 
 		/// <summary>
-		/// 继续游戏
+		/// 地图编辑器
 		/// </summary>
-		public void ContinueGame()
+		public void MapEdit()
 		{
-			Log.Print("继续游戏");
-			// GetTree().ChangeSceneToFile("res://src/core/map/BigMapView.tscn");
-			SceneManager.ChangeSceneName("BigMapCopy", this);
+			Log.Print("地图编辑器");
+			SceneManager.ChangeSceneName("EditMapCreateView", this);
+		}
+
+		/// <summary>
+		/// 档案库
+		/// </summary>
+		public void ArchivalView()
+		{
+			Log.Print("档案库");
 		}
 
 		/// <summary>
@@ -86,6 +83,7 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public void StartGame()
 		{
+			AddOpView();
 			Log.Print("开始游戏");
 			SceneManager.ChangeSceneName("SaveLoadView", this);
 			//GetTree().ChangeSceneToFile("res://src/core/ui/view/archive_view/SaveLoadView.tscn");
@@ -96,6 +94,7 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public void MultiPlayer()
 		{
+			AddOpView();
 			Log.Print("多人游戏");
 		}
 
@@ -141,12 +140,12 @@ namespace Remnant_Afterglow
 		}
 
 		/// <summary>
-		/// 语言
+		/// 添加操作界面-游戏开始添加
 		/// </summary>
-		public void Language()
+		public void AddOpView()
 		{
-			Log.Print("语言");
+			mapOpManager = GD.Load<PackedScene>("res://src/core/controllers/operation/MapOpManager.tscn").Instantiate<MapOpManager>();
+			GetTree().Root.AddChild(mapOpManager);//添加操作界面
 		}
-
 	}
 }

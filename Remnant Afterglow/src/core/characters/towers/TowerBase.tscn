@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdj7jim6kcisn"]
+
+[ext_resource type="Script" path="res://src/core/characters/towers/TowerBase.cs" id="1_k0xxs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_118bb"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukc02"]
+
+[node name="TowerBase" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_k0xxs")
+
+[node name="碰撞体" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_118bb")
+
+[node name="占地" type="Area2D" parent="."]
+
+[node name="占地形状" type="CollisionShape2D" parent="占地"]
+shape = SubResource("RectangleShape2D_ukc02")

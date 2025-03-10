@@ -33,17 +33,15 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 组件父节点
         /// </summary>
-        public CameraAssembly canvasLayer;
+        //public CameraAssembly canvasLayer;
 
         public GameCamera2()
         {
             cfgData = new CameraBase(ConfigCache.GetGlobal_Int("MapDefineCameraId"));//地图默认相机id
-            canvasLayer = new CameraAssembly(cfgData.AssemblyIdList);
         }
         public GameCamera2(int id)
         {
             cfgData = new CameraBase(id);
-            canvasLayer = new CameraAssembly(cfgData.AssemblyIdList);
         }
 
 

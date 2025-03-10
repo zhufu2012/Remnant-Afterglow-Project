@@ -17,9 +17,27 @@ namespace Remnant_Afterglow
         /// </summary>
         public string BulletName { get; set; }
         /// <summary>        
-        /// 子弹属性伤害
+        /// 对护盾伤害
         /// </summary>
-        public List<List<float>> AttrHarm { get; set; }
+        public int ShieldHarm { get; set; }
+        /// <summary>        
+        /// 对装甲伤害
+        /// </summary>
+        public int ArmourHarm { get; set; }
+        /// <summary>        
+        /// 对结构伤害
+        ///
+        /// </summary>
+        public int StructureHarm { get; set; }
+        /// <summary>        
+        /// 穿透伤害
+        ///直接对结构造成杀伤
+        /// </summary>
+        public int ElementHarm { get; set; }
+        /// <summary>        
+        /// 击中运行事件id列表
+        /// </summary>
+        public List<int> HitEvent { get; set; }
         /// <summary>        
         /// 子弹最大存在时间，
         ///单位：秒
@@ -31,11 +49,11 @@ namespace Remnant_Afterglow
         /// </summary>
         public float MaxDistance { get; set; }
         /// <summary>        
-        /// 反弹次数区间
+        /// 反弹次数
         /// </summary>
         public float BounceCount { get; set; }
         /// <summary>        
-        /// 子弹穿透次数区间
+        /// 子弹穿透次数
         /// </summary>
         public float Penetration { get; set; }
 
@@ -44,7 +62,11 @@ namespace Remnant_Afterglow
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_BulletLogic, id);//public const string Config_BulletLogic = "cfg_BulletLogic"; 
 			BulletLabel = (string)dict["BulletLabel"];
 			BulletName = (string)dict["BulletName"];
-			AttrHarm = (List<List<float>>)dict["AttrHarm"];
+			ShieldHarm = (int)dict["ShieldHarm"];
+			ArmourHarm = (int)dict["ArmourHarm"];
+			StructureHarm = (int)dict["StructureHarm"];
+			ElementHarm = (int)dict["ElementHarm"];
+			HitEvent = (List<int>)dict["HitEvent"];
 			MaxLifeTime = (float)dict["MaxLifeTime"];
 			MaxDistance = (float)dict["MaxDistance"];
 			BounceCount = (float)dict["BounceCount"];
@@ -58,7 +80,11 @@ namespace Remnant_Afterglow
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_BulletLogic, cfg_id);//public const string Config_BulletLogic = "cfg_BulletLogic"; 
 			BulletLabel = (string)dict["BulletLabel"];
 			BulletName = (string)dict["BulletName"];
-			AttrHarm = (List<List<float>>)dict["AttrHarm"];
+			ShieldHarm = (int)dict["ShieldHarm"];
+			ArmourHarm = (int)dict["ArmourHarm"];
+			StructureHarm = (int)dict["StructureHarm"];
+			ElementHarm = (int)dict["ElementHarm"];
+			HitEvent = (List<int>)dict["HitEvent"];
 			MaxLifeTime = (float)dict["MaxLifeTime"];
 			MaxDistance = (float)dict["MaxDistance"];
 			BounceCount = (float)dict["BounceCount"];
@@ -70,7 +96,11 @@ namespace Remnant_Afterglow
         {
 			BulletLabel = (string)dict["BulletLabel"];
 			BulletName = (string)dict["BulletName"];
-			AttrHarm = (List<List<float>>)dict["AttrHarm"];
+			ShieldHarm = (int)dict["ShieldHarm"];
+			ArmourHarm = (int)dict["ArmourHarm"];
+			StructureHarm = (int)dict["StructureHarm"];
+			ElementHarm = (int)dict["ElementHarm"];
+			HitEvent = (List<int>)dict["HitEvent"];
 			MaxLifeTime = (float)dict["MaxLifeTime"];
 			MaxDistance = (float)dict["MaxDistance"];
 			BounceCount = (float)dict["BounceCount"];

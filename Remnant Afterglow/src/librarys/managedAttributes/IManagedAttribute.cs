@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Godot.Community.ManagedAttributes
 {
     /// <summary>
@@ -14,6 +9,19 @@ namespace Godot.Community.ManagedAttributes
         delegate void AttributeUpdatedHandler(IManagedAttribute attribute);
         event AttributeUpdatedHandler AttributeUpdated;
 
+        /// <summary>
+        /// 伤害优先级，大于0的部分，才属于血量类型的，
+        /// </summary>
+        public int Priority { get; set; }
+
+        /// <summary>
+        /// 是否更新该属性,默认为true
+        /// </summary>
+        public bool Used{ get; set; }
+        /// <summary>
+        /// 自身属性库的引用
+        /// </summary>
+        public ManagedAttributeContainer container { get; set; }
         public object GetObj(AttributeValueType valType = AttributeValueType.Value);
         public T Get<T>(AttributeValueType valType = AttributeValueType.Value);
         public T GetRaw<T>(AttributeValueType valType = AttributeValueType.Value);

@@ -1,326 +1,339 @@
 
 using GameLog;
 using Godot;
+using System;
 using System.Collections.Generic;
 
 namespace Remnant_Afterglow
 {
-    //刷新状态
-    public enum BrushState
-    {
-        BeforeBrush,    //开始刷新前
-        StartBrushWave, //第一波开始刷新
-        StartBrushing,  //第一波刷新完后的间隔
-        BrushWave,      //非第一波的其他波数刷新
-        Brushing       //非第一波的其他波数刷新后间隔
-    }
 
-    //波数刷怪 模式
-    //-祝福注释-似乎还有问题需要完善
-    public partial class WaveBrushSystem : GameModel
+    /// <summary>
+    /// 常规游戏模式
+    /// </summary>
+    public partial class BrushSystem : GameModel
     {
+        #region
         /// <summary>
-        /// 关卡刷怪配置
+        /// 章节数据
         /// </summary>
-        public CopyBrush cfgData;
+        public ChapterBase chapter;
+        /// <summary>
+        /// 关卡数据
+        /// </summary>
+        public ChapterCopyBase chapterCopy;
+        #endregion
+
+        #region 刷怪点
+        /// <summary>
+        /// 当前波数
+        /// </summary>
+        public int NowWave = 0;
+
 
         /// <summary>
-        /// 副本刷新状态
+        /// 是否显示刷怪点的边缘
         /// </summary>
-        public BrushState brushState;
+        public bool IsBrushShowType = true;
 
         /// <summary>
         /// 当前地图时间 单位秒
         /// </summary>
-        public double nowTime = 0;
+        public double NowTime = 0;
         /// <summary>
-        /// 当前地图帧数 单位帧
+        /// 刷怪点 放置的 父节点
         /// </summary>
-        public double frameNumber = 0;
+        public Node2D LineShowNode = new Node2D();
+        /// <summary>
+        /// 关卡刷怪数据
+        /// </summary>
+        public CopyBrush copyBrush;
+        /// <summary>
+        /// 关卡 各刷怪点数据字典 <刷怪点id，刷怪点数据>
+        /// </summary>
+        public Dictionary<int, BrushPoint> BrushDict = new Dictionary<int, BrushPoint>();
 
         /// <summary>
-        /// 当前波数，0表示未开始刷新
+        /// 关卡 各刷怪点类字典 <刷怪点id，刷怪点类数据>
         /// </summary>
-        public int NowWave = 0;
+        public Dictionary<int, CopyBrushData> BrushDataDict = new Dictionary<int, CopyBrushData>();
+        /// <summary>
+        /// 各刷怪点开始位置<刷怪点id,区域>
+        /// </summary>
+        public Dictionary<int, Rect2I> BrushPosDict = new Dictionary<int, Rect2I>();
 
         /// <summary>
-        /// 刷新点列表
+        /// <刷怪点，要刷的怪>
         /// </summary>
-        public Dictionary<int, BrushPoint> brushPointDict = new Dictionary<int, BrushPoint>();
+        Dictionary<int, List<int>> NowWaveBrushDict = new Dictionary<int, List<int>>();
 
         /// <summary>
-        /// 刷新点波数刷新数据<刷新点id,波数数据列表>
+        /// 波次间隔时间<波次，间隔时间>，不包含没有的数据，没有的用BrushSpace
         /// </summary>
-        public Dictionary<int, CopyBrushData> brushDataDict = new Dictionary<int, CopyBrushData>();
+        Dictionary<int, int> BrushSpaceTimeDict = new Dictionary<int, int>();
+        #endregion
+
 
         /// <summary>
-        /// 第一次刷怪
+        /// 刷怪状态，逻辑开始是准备阶段
         /// </summary>
-        public int FirstWaveTime = 0;
-        /// <summary>
-        /// 刷新间隔列表 <波数x,第x波刷新前间隔秒数>
-        /// </summary>
-        public Dictionary<int, int> BrushSpaceList = new Dictionary<int, int>();
+        public BrushState brushState = BrushState.Prepare;
 
-        /// <summary>
-        /// 各刷新点实际位置-真实位置
-        /// </summary>
-        public Dictionary<int, Vector2I> BrushPosDict = new Dictionary<int, Vector2I>();
-        /// <summary>
-        /// 各刷新点形状数据-真实位置
-        /// </summary>
-        public Dictionary<int, List<Vector2I>> PolygonDict = new Dictionary<int, List<Vector2I>>();
-        /// <summary>
-        /// 各刷新点形状数据-点位置
-        /// </summary>
-        public Dictionary<int, List<Vector2I>> PolygonDict2 = new Dictionary<int, List<Vector2I>>();
 
-        /// <summary>
-        /// 是否开始刷新刷怪
-        /// </summary>
-        public bool is_start_brush = false;
-        /// <summary>
-        /// 是否在刷怪间隔中
-        /// </summary>
-        public bool is_after_time = false;
 
-        /// <summary>
-        /// 当前波数刷完了
-        /// </summary>
-        public bool is_now_end = false;
-        /// <summary>
-        /// 是否全部已经刷怪完了
-        /// </summary>
-        public bool is_all_end = false;
-
-        /// <summary>
-        /// 刷新间隔
-        /// </summary>
-        public double flush_time = 0;
-
-        /// <summary>
-        /// 章节id
-        /// </summary>
-        public int ChapterId;
-        /// <summary>
-        /// 关卡id
-        /// </summary>
-        public int CopyId;
-        /// <summary>
-        /// 副本节点
-        /// </summary>
-        public MapCopy mainCopy;
-
-        public WaveBrushSystem(Node2D LineShowNode, int ChapterId, int CopyId) : base(LineShowNode)
+        public BrushSystem(ChapterBase chapter, ChapterCopyBase chapterCopy)
         {
-            this.ChapterId = ChapterId;
-            this.CopyId = CopyId;
-            cfgData = new CopyBrush(ChapterId, CopyId);
-            CreateInitData();//创建时初始化数据
+            this.chapterCopy = chapterCopy;
+            this.chapter = chapter;
+            copyBrush = ConfigCache.GetCopyBrush(chapter.ChapterId + "_" + chapterCopy.CopyId);
+            foreach (int i in copyBrush.BrushIdList)
+            {
+                BrushPoint point = ConfigCache.GetBrushPoint(i);
+                BrushDict[i] = point;
+                List<Vector2I> posList = point.BrushPosList;
+                BrushPosDict[i] = new Rect2I(posList[0], posList[1]);
+                BrushDataDict[i] = new CopyBrushData(i, point, posList[0], posList[1]);
+            }
+            foreach (var info in copyBrush.BrushSpaceList)
+            {
+                BrushSpaceTimeDict[info[0]] = info[1];
+            }
+
         }
-
-
         /// <summary>
-        /// 创建时初始化数据
-        /// </summary>
-        public void CreateInitData()
-        {
-            List<int> BrushIdList = cfgData.BrushIdList;
-            for (int i = 0; i < BrushIdList.Count; i++)
-            {
-                brushPointDict[BrushIdList[i]] = new BrushPoint(BrushIdList[i]);
-                brushDataDict[BrushIdList[i]] = new CopyBrushData(BrushIdList[i]);
-            }
-            List<List<int>> space_list = cfgData.BrushSpaceList;//波数,间隔
-            for (int i = 0; i < space_list.Count; i++)
-            {
-                BrushSpaceList[space_list[i][0]] = space_list[i][1];
-            }
-            for (int i = 1; i <= cfgData.AllWave; i++)
-            {
-                if (!BrushSpaceList.ContainsKey(i))
-                {
-                    BrushSpaceList[i] = cfgData.BrushSpace;
-                }
-            }
-            if (BrushSpaceList.Count > 0)
-                FirstWaveTime = BrushSpaceList[1];//初始化第一波刷新前 间隔时间
-        }
-
-
-        /// <summary>
-        /// 初始化绘制地图刷新点
+        /// 初始化数据
         /// </summary>
         public override void InitData()
         {
-            List<int> brushIdList = cfgData.BrushIdList;
-            foreach (int brushId in brushIdList)
+            base.InitData();
+        }
+
+        /// <summary>
+        /// 开始准备刷怪
+        /// </summary>
+        public override void StartModel()
+        {
+            base.StartModel();
+            MapOpView.Instance.SetAllWave(copyBrush.AllWave);//设置总波数
+            Log.Print("开始状态");
+            AddLineShow();
+        }
+
+        /// <summary>
+        /// 刷怪点区域显示
+        /// </summary>
+        public void AddLineShow()
+        {
+            LineShowNode.Name = "LineShowNode";
+            AddChild(LineShowNode);
+            foreach (var point in BrushPosDict)
             {
-                BrushPoint brushCfg = GetBrushPoint(brushId);//刷新点配置
-                switch (brushCfg.ShapeType)
-                {
-                    case 1://矩形刷新 (Widht,Height)
-                        Line2D line = new Line2D();
-                        line.AddToGroup(MapGroup.LineGroupName_1);
-                        line.ZIndex = 3;//祝福注释-这里要看看
-                        List<Vector2I> vector_list = PolygonDict[brushId];
-                        line.Closed = true;//如果为 true 并且折线有超过2个点，则最后一个点和第一个点将通过线段连接
-                        foreach (Vector2 vec in vector_list)
-                        {
-                            line.AddPoint(vec);
-                        }
-                        line.Visible = brushCfg.BrushShowType;//是否显示刷新点边界
-                        ShowNode.AddChild(line);
-                        break;
-                    case 2://表示圆形刷新
-                        break;
-                    default:
-                        break;
-                }
+                Line2D line = new Line2D();
+                line.AddToGroup(MapGroup.LineGroupName_1);
+                line.ZIndex = 50;//祝福注释-暂时
+                Vector2 p1 = point.Value.Position * MapConstant.TileCellSize;
+                Vector2 p2 = point.Value.End * MapConstant.TileCellSize;
+                line.AddPoint(p1);
+                line.AddPoint(new Vector2(p2.X, p1.Y));
+                line.AddPoint(p2);
+                line.AddPoint(new Vector2(p1.X, p2.Y));
+                line.Closed = true;
+                line.Visible = IsBrushShowType;
+                LineShowNode.AddChild(line);
             }
         }
+
         /// <summary>
-        /// 每帧刷新
+        /// 当前波数是否数据已经处理了
         /// </summary>
-        /// <param name="delta"></param>
+        public bool IsNowWave = false;
+        /// <summary>
+        /// 下一个波数开始刷怪的时间
+        /// </summary>
+        public double NextTime = 0;
+        /// <summary>
+        /// 这一波上次刷怪的时间（防止一波全部直接刷出来导致相互碰撞卡出地图）
+        /// </summary>
+        public double WaveFlushTime = 0;
+        /// <summary>
+        /// 刷新点刷新间隔
+        /// </summary>
+        public double FlushSpace = 2;
+
         public override void PostUpdate(double delta)
         {
-            nowTime += delta;//时间计数
-            frameNumber += 1;//帧数计数
-            //刷怪列表，<刷新点,<<怪物id,阵营>,数量>>
-            Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> dict = CheckRefreshEnemies(delta);//
-            foreach (var info in dict)//<刷新点,<<怪物id,阵营>,数量>>
+            base.PostUpdate(delta);
+            if (!IsStart)//没开启逻辑就不运行之后的
+                return;
+            if (IsEnd)
+                return;
+            NowTime += delta;//时间计数
+            MapOpView.Instance.SetNowWave(NowWave);//设置当前波数
+            switch (brushState)
             {
-                BrushPoint pointData = info.Key;//刷新点配置
-                foreach (var unit_info in info.Value)//<<怪物id,阵营>,数量>
-                {
-                    for (int i = 0; i < unit_info.Value; i++)//
+                case BrushState.Prepare://准备阶段
+                    if (NowTime >= copyBrush.PrepareTime)//当前地图时间 大于 准备时间了
                     {
-                        //创建一个单位
-                        ObjectManager.Instance.CreateMapUnit(unit_info.Key.Key, new Vector2I(9, 9));
+                        brushState = BrushState.BrushWave;//开始刷怪
+                        Log.Print("开始刷怪!" + NowWave + "  " + NowTime);
+                        IsNowWave = false;
+                        NowWave = 1;//波数修改为1
                     }
-                }
-            }
-        }
-
-
-        ///////////////////////////////////////////////////////////////函数/////////////////////////////////////////////////
-        /// <summary>
-        /// 返回对应的刷新点配置数据
-        /// </summary>
-        /// <param name="BrushId"></param>
-        /// <returns></returns>
-        public BrushPoint GetBrushPoint(int BrushId)
-        {
-            return brushPointDict[BrushId];
-        }
-
-        //检查刷怪
-        public Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> CheckRefreshEnemies(double delta)
-        {
-            //刷怪列表，<刷新点id,<<怪物id,阵营>,数量>>
-            Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> dict = new Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>>();
-            if (is_start_brush)//已经开始刷怪
-            {
-                dict = RefreshEnemies(delta);
-            }
-            else
-            {
-                if (nowTime >= FirstWaveTime)//开始刷怪
-                {
-                    is_start_brush = true;
-                    NowWave = 1;
-                    dict = RefreshEnemies(delta);
-                }
-            }
-            return dict;
-        }
-
-        /// <summary>
-        /// 刷新怪物
-        /// </summary>
-        /// <param name="delta"></param>
-        /// <returns><刷新点id,<<怪物id,阵营id>,数量>></returns>
-        public Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> RefreshEnemies(double delta)
-        {
-            //<刷新点id,<<怪物id,阵营id>,数量>>
-            Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>> dict = new Dictionary<BrushPoint, Dictionary<KeyValuePair<int, int>, int>>();
-            if (NowWave > 0 && NowWave <= cfgData.AllWave && is_all_end == false)//波数大于0并且 当前波数小于等于配置总波数
-            {
-                flush_time += delta;//刷新间隔增加
-                if (flush_time >= BrushSpaceList[NowWave])//刷新间隔时长达到
-                {
-                    is_after_time = false;
-                }
-                else
-                {
-                    is_after_time = true;
-                }
-                if (is_after_time == false)//不在刷新间隔就直接刷新怪物，并且进入刷新间隔
-                {
-                    foreach (int BrushId in cfgData.BrushIdList)//遍历刷新点
-                    {
-                        BrushPoint pointData = ConfigCache.GetBrushPoint(BrushId);
-                        if (!brushDataDict[BrushId].CheckAllWaveFlush())//该刷新点所有波数未刷新完
-                        {
-                            dict[pointData] = brushDataDict[BrushId].CalcWaveUnit(NowWave, nowTime, frameNumber);
-                        }
-                        else
-                        {
-                            brushDataDict[BrushId].is_flush_acc = true;
-                        }
-                    }
-                    if (CheckAllBrushFlush(NowWave))//当前波数都刷新完了，进入新的一波
-                    {
-                        is_after_time = true;
-                        flush_time = 0;
-                        NowWave += 1;
-                    }
-                }
-                else
-                {
-                    return dict;
-                }
-            }
-            else
-            {
-
-            }
-            return dict;
-        }
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        //检查所有刷新点该波是否都刷新完了
-        public bool CheckAllBrushFlush(int waveId)
-        {
-            bool is_end = true;
-            foreach (int BrushId in cfgData.BrushIdList)//遍历刷新点
-            {
-                if (!brushDataDict[BrushId].is_flush_acc)
-                {
-                    is_end = false;
                     break;
+                case BrushState.BrushWave://开始刷怪
+                    if (IsNowWave)
+                    {
+                        if ((WaveFlushTime == 0 || NowTime >= WaveFlushTime))
+                        {
+                            BrushWave();
+                            Log.Print("刷怪1!" + NowWave + "  " + NowTime);
+                        }
+                    }
+                    else
+                    {
+                        StartWaveData();//处理数据并刷新波次怪物
+                        Log.Print("刷怪2!" + NowWave + "  " + NowTime);
+                    }
+                    break;
+                case BrushState.Brushing://刷怪完成后到下一波的间隔
+                    if (NowTime >= NextTime)//当前时间大于等于的下一波的开启时间
+                    {
+                        NowWave += 1;
+                        IsNowWave = false;
+                        brushState = BrushState.BrushWave;//开始刷怪
+                    }
+                    break;
+                case BrushState.EndBrush://结束刷怪
+                    Log.Print("波次结束了，全部刷完了," + NowWave + "  " + NowTime);
+                    IsEnd = true;
+                    break;
+                default: break;
+            }
+
+        }
+
+
+
+
+        /// <summary>
+        /// 处理该波数据
+        /// </summary>
+        /// <param name="wave">要刷的波</param>
+        public void StartWaveData()
+        {
+            NowWaveBrushDict.Clear();//清理之前刷新的怪物
+            foreach (var data in BrushDataDict)
+            {
+                List<List<int>> list = data.Value.GetWaveBrushList(NowWave);
+                List<int> allUnitList = new List<int>();
+                foreach (List<int> info in list)
+                {
+                    int GroupId = info[0];//单位组id
+                    int Count = info[1];//刷新次数
+                    UnitGroupData unitGroup = ConfigCache.GetUnitGroupData(GroupId);
+                    List<int> unitList = GenerateUnits(unitGroup.UnitList, Count);
+                    allUnitList.AddRange(unitList);
+                }
+                NowWaveBrushDict[data.Key] = allUnitList;
+            }
+            IsNowWave = true;//设置为已处理数据
+            BrushWave();
+        }
+        /// <summary>
+        /// 刷新当前波
+        /// </summary>
+        public void BrushWave()
+        {
+            WaveFlushTime = NowTime + FlushSpace;//刷新时 ，上一波时间修改
+            bool IsAllFlush = true;//当前波是否全部刷新完成
+            foreach (var brush in NowWaveBrushDict)
+            {
+                int BrushId = brush.Key;//刷怪点id
+                List<int> allUnitList = brush.Value;//这一波要刷新的所有单位
+                if (allUnitList.Count > 0)//还有需要刷新的单位
+                {
+                    CopyBrushData data = BrushDataDict[BrushId];
+                    int count = Mathf.Min(allUnitList.Count, data.points.Count);//要刷新的量
+                    List<Vector2I> points = data.points;//刷新坐标
+                    for (int i = count - 1; i >= 0; i--)
+                    {
+                        int UnitId = allUnitList[i];
+                        ObjectManager.Instance.CreateMapUnit(UnitId, points[i]);
+                        allUnitList.RemoveAt(i); // 使用 RemoveAt 确保正确移除
+                    }
+                    if (allUnitList.Count > 0)//还有需要刷新的单位
+                    { 
+                        IsAllFlush = false;
+                    }
                 }
             }
-            return is_end;
-        }
-
-        //检查所有刷新点是否都刷新完了
-        public bool CheckAllBrushFlush2(int waveId)
-        {
-            bool is_end = true;
-            foreach (int BrushId in cfgData.BrushIdList)//遍历刷新点
+            if (IsAllFlush)//当前波 全部刷新完成
             {
-                if (!brushDataDict[BrushId].is_flush_acc)
-                    is_end = false;
-                break;
+                if (NowWave <= copyBrush.AllWave - 1)//非结束波次
+                {
+                    brushState = BrushState.Brushing;//刷怪完成后到下一波的间隔
+                    WaveFlushTime = 0;
+                    if (BrushSpaceTimeDict.ContainsKey(NowWave))//设置下一波开始时间
+                        NextTime = NowTime + BrushSpaceTimeDict[NowWave];
+                    else
+                        NextTime = NowTime + copyBrush.BrushSpace;
+                }
+                else
+                {
+                    brushState = BrushState.EndBrush;//波次结束
+                }
             }
-            return is_end;
         }
 
 
+        /// <summary>
+        /// 结束
+        /// </summary>
+        public override void EndModel()
+        {
+            base.EndModel();
+        }
 
+        /// <summary>
+        /// 根据给定概率生成单位ID列表
+        /// </summary>
+        /// <param name="probabilityList"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        public List<int> GenerateUnits(List<List<int>> probabilityList, int count)
+        {
+            List<Tuple<int, int>> cumulative = new List<Tuple<int, int>>();
+            int sum = 0;
+
+            foreach (var item in probabilityList)
+            {
+                if (item.Count < 2)
+                    continue; // 跳过无效项
+                int x = item[0];
+                int y = item[1];
+
+                if (y <= 0)
+                    continue; // 忽略非正概率项
+                sum += y;
+                cumulative.Add(Tuple.Create(sum, x));
+            }
+            if (sum <= 0 || count <= 0)
+                return new List<int>();
+            Random rand = new Random();
+            List<int> result = new List<int>();
+            for (int i = 0; i < count; i++)
+            {
+                double randomValue = rand.NextDouble() * sum;
+                foreach (var tuple in cumulative)
+                {
+                    if (randomValue < tuple.Item1)
+                    {
+                        result.Add(tuple.Item2);
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
 
     }
 }

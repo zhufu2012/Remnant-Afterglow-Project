@@ -12,7 +12,7 @@ public class FireTask : BulletMLTask
     #region Members
 
     /// <summary>
-    /// The direction that this task will fire a bullet.
+    /// 此任务将发射子弹的方向。
     /// </summary>
     /// <value>The fire direction.</value>
     public float FireDirection { get; private set; }

@@ -11,6 +11,7 @@ namespace Remnant_Afterglow
         /// 相机界面中，常规按钮的大小
         /// </summary>
         public static Vector2 Camera_Button_Size = new Vector2(300, 75);
+        
 
         #endregion
 

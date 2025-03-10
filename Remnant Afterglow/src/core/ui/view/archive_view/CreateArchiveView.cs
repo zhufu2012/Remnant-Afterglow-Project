@@ -93,7 +93,7 @@ namespace Remnant_Afterglow
         public void ReturnPreView()
         {
             Log.Print("返回上一个界面");
-            GetTree().ChangeSceneToFile("res://scenes/ui/view/archive_view/SaveLoadView.tscn");
+            SceneManager.ChangeSceneName("SaveLoadView", this);
         }
         /// <summary>
         /// 创建存档
@@ -101,17 +101,16 @@ namespace Remnant_Afterglow
         public void CreateArchive()
         {
             Log.Print("创建存档");
-            string saveload_name = SaveLoadName.Text;
             int select_camp = opt_but_select_camp.GetSelectedId();
             int select_battle = opt_but_select_battle.GetSelectedId();
             int select_diff = opt_but_select_diff.GetSelectedId();
             if (select_camp != -1 && select_battle != -1 && select_diff != -1)
             {
-                GameError error = SaveLoadSystem.CreateSaveData(SaveLoadName.Text, select_camp, select_battle, select_diff);//创建存档
-                if (error.error == 0)
+                SaveFile saveFile = SaveLoadSystem.CreateSaveData(SaveLoadName.Text, select_camp, select_battle, select_diff);//创建存档
+                if (saveFile != null)
                 {
+                    SaveLoadSystem.SetNowSave(saveFile);//设置当前存档
                     SceneManager.PutParam("chapter_id", select_battle);
-                    //GetTree().ChangeSceneToPacked(Common.GetPackedScene(bigMapDraw));
                     SceneManager.ChangeSceneName("BigMapCopy", this);
                 }
                 else

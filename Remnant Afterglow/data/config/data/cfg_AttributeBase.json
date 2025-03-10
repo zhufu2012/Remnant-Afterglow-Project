@@ -4,7 +4,6 @@
         "AttributeId": 1,
         "ShowName": "结构值",
         "AttributeDescribe": "（血没了就死了）",
-        "ShowType": 0,
         "ShowColor": [
             0,
             0,
@@ -15,9 +14,8 @@
     {
         "KEY_INDEX": "2",
         "AttributeId": 2,
-        "ShowName": "装甲值",
-        "AttributeDescribe": "打在结构上的伤害会先减去装甲值的数值，最少造成1点伤害",
-        "ShowType": 0,
+        "ShowName": "装甲血量",
+        "AttributeDescribe": "受到装甲伤害时减少，等比与装甲值",
         "ShowColor": [
             0,
             0,
@@ -28,35 +26,8 @@
     {
         "KEY_INDEX": "3",
         "AttributeId": 3,
-        "ShowName": "最低受到伤害",
-        "AttributeDescribe": "默认1",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "4",
-        "AttributeId": 4,
-        "ShowName": "装甲血量",
-        "AttributeDescribe": "受到装甲伤害时减少，等比与装甲值",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "5",
-        "AttributeId": 5,
-        "ShowName": "装甲血量比例",
-        "AttributeDescribe": "装甲血量*装甲值=装甲血量比例，这是个固定值，不会改变，只要单位有装甲值，默认10点",
-        "ShowType": 0,
+        "ShowName": "护盾",
+        "AttributeDescribe": "一个可以自然恢复的数值，优先与结构承受伤害，归零时添加护盾过载条，护盾可以承受超额伤害，即使当前的伤害远超护盾的数值，也将完全低效本次伤害",
         "ShowColor": [
             0,
             0,
@@ -67,9 +38,8 @@
     {
         "KEY_INDEX": "6",
         "AttributeId": 6,
-        "ShowName": "护盾",
-        "AttributeDescribe": "一个可以自然恢复的数值，优先与结构承受伤害，归零时添加护盾过载条，护盾可以承受超额伤害，即使当前的伤害远超护盾的数值，也将完全低效本次伤害",
-        "ShowType": 0,
+        "ShowName": "装甲血量比例",
+        "AttributeDescribe": "装甲血量/装甲血量比例 = 装甲值，这是个固定值，不会改变，只要单位有装甲值，默认10点",
         "ShowColor": [
             0,
             0,
@@ -82,7 +52,6 @@
         "AttributeId": 7,
         "ShowName": "护盾结晶",
         "AttributeDescribe": "该数值将护盾平均分为几份，默认1，就是一份，每一节的护盾都可以承受一次过载伤害，如1000点伤害打在护盾上，这个护盾的护盾每节是100点，那么这发伤害就只有100点（相当于每一段都有护盾的特性），一千点血的护盾举例2就是两节，每节500，3就是3节，每节333，多1血，4就是4节，每节250",
-        "ShowType": 0,
         "ShowColor": [
             0,
             0,
@@ -95,7 +64,54 @@
         "AttributeId": 8,
         "ShowName": "护盾过载恢复",
         "AttributeDescribe": "护盾被清零后重新转载的时间，随时间流逝减少，减少到0时将会重启整个护盾，其中包含所有护盾节",
-        "ShowType": 0,
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "10",
+        "AttributeId": 10,
+        "ShowName": "实弹抗性",
+        "AttributeDescribe": "对实弹伤害的抗性，实弹伤害乘以这个抗性",
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "11",
+        "AttributeId": 11,
+        "ShowName": "激光抗性",
+        "AttributeDescribe": "对激光伤害的抗性，激光伤害乘以这个抗性",
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "12",
+        "AttributeId": 12,
+        "ShowName": "爆炸抗性",
+        "AttributeDescribe": "对爆炸伤害的抗性，爆炸伤害乘以这个抗性",
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "13",
+        "AttributeId": 13,
+        "ShowName": "元素抗性",
+        "AttributeDescribe": "对元素伤害的抗性，元素伤害乘以这个抗性",
         "ShowColor": [
             0,
             0,
@@ -107,8 +123,7 @@
         "KEY_INDEX": "40",
         "AttributeId": 40,
         "ShowName": "移动速度",
-        "AttributeDescribe": "实体自身的移动速度",
-        "ShowType": 0,
+        "AttributeDescribe": "实体自身的移动速度（每秒）",
         "ShowColor": [
             0,
             0,
@@ -120,8 +135,7 @@
         "KEY_INDEX": "41",
         "AttributeId": 41,
         "ShowName": "移动加速度",
-        "AttributeDescribe": "实体自身的移动加速度",
-        "ShowType": 0,
+        "AttributeDescribe": "实体自身的移动加速度（每秒）",
         "ShowColor": [
             0,
             0,
@@ -133,8 +147,7 @@
         "KEY_INDEX": "42",
         "AttributeId": 42,
         "ShowName": "旋转速度",
-        "AttributeDescribe": "实体自身的旋转速度",
-        "ShowType": 0,
+        "AttributeDescribe": "实体自身的旋转速度（每秒）",
         "ShowColor": [
             0,
             0,
@@ -147,7 +160,6 @@
         "AttributeId": 51,
         "ShowName": "炮塔旋转速度",
         "AttributeDescribe": "每秒转弯多少度，填度数，360度是一圈，填个360就是每秒转一圈",
-        "ShowType": 0,
         "ShowColor": [
             0,
             0,
@@ -160,7 +172,6 @@
         "AttributeId": 52,
         "ShowName": "炮塔旋转加速度",
         "AttributeDescribe": "每秒加速度，比如填个60，就是6秒钟后到达每秒一圈的速度",
-        "ShowType": 0,
         "ShowColor": [
             0,
             0,
@@ -173,7 +184,6 @@
         "AttributeId": 101,
         "ShowName": "建造时间",
         "AttributeDescribe": "帧数，建筑从蓝图变成实体的时间，建造时间随时间减少，减少到0后建筑就可以开始工作了，蓝图逐渐从通明变成不透明",
-        "ShowType": 0,
         "ShowColor": [
             0,
             0,
@@ -186,7 +196,6 @@
         "AttributeId": 102,
         "ShowName": "重建时间",
         "AttributeDescribe": "帧数，可以重建的建筑血量低于10时埋入地下，重建时间随时间减少，减少到0后建筑检测范围300距离内是否存在敌人，如果不存在敌人，就重建完成，血量回满，开始工作",
-        "ShowType": 0,
         "ShowColor": [
             0,
             0,
@@ -199,7 +208,6 @@
         "AttributeId": 103,
         "ShowName": "升级时间",
         "AttributeDescribe": "建筑停止工作，开始升级，升级时间减少到0时，建筑将会变成更高级的建筑，开始工作",
-        "ShowType": 0,
         "ShowColor": [
             0,
             0,
@@ -212,20 +220,6 @@
         "AttributeId": 104,
         "ShowName": "存活时间",
         "AttributeDescribe": "每秒减少，时间到了就消失，一般用于有存在时间的道具、敌人残骸、敌人部署的炮塔等",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "201",
-        "AttributeId": 201,
-        "ShowName": "资源数量",
-        "AttributeDescribe": "用于资源地块、残骸。采集建筑从资源地块中能够获取的所有资源",
-        "ShowType": 0,
         "ShowColor": [
             0,
             0,
@@ -236,9 +230,8 @@
     {
         "KEY_INDEX": "202",
         "AttributeId": 202,
-        "ShowName": "资源开采效率",
-        "AttributeDescribe": "每秒钟可以从资源地块中获取多少资源",
-        "ShowType": 0,
+        "ShowName": "资源开采效率-万能齿轮",
+        "AttributeDescribe": "每秒钟可以从资源地块中获取多少万能齿轮",
         "ShowColor": [
             0,
             0,
@@ -249,9 +242,8 @@
     {
         "KEY_INDEX": "203",
         "AttributeId": 203,
-        "ShowName": "资源拆解效率",
-        "AttributeDescribe": "激光开采类建筑（如收解台），开采，回收周围资源地块，残骸的效率，每秒中可以获取多少资源",
-        "ShowType": 0,
+        "ShowName": "资源开采效率-怨灵水晶",
+        "AttributeDescribe": "每秒钟可以从资源地块中获取多少怨灵水晶",
         "ShowColor": [
             0,
             0,
@@ -262,9 +254,8 @@
     {
         "KEY_INDEX": "204",
         "AttributeId": 204,
-        "ShowName": "拆解范围",
-        "AttributeDescribe": "和最远射程相同功能，最远可以拆解到多少距离的残骸或者资源，但作用于回收和拆解资源",
-        "ShowType": 0,
+        "ShowName": "资源开采效率-次元岛溶剂",
+        "AttributeDescribe": "每秒钟可以从资源地块中获取多少次元岛溶剂",
         "ShowColor": [
             0,
             0,
@@ -273,11 +264,10 @@
         "DependencyIdList": []
     },
     {
-        "KEY_INDEX": "301",
-        "AttributeId": 301,
-        "ShowName": "基础伤害",
-        "AttributeDescribe": "先打盾，后打结构",
-        "ShowType": 0,
+        "KEY_INDEX": "210",
+        "AttributeId": 210,
+        "ShowName": "资源数量-万能齿轮",
+        "AttributeDescribe": "用于残骸",
         "ShowColor": [
             0,
             0,
@@ -286,11 +276,10 @@
         "DependencyIdList": []
     },
     {
-        "KEY_INDEX": "302",
-        "AttributeId": 302,
-        "ShowName": "护盾伤害",
-        "AttributeDescribe": "只能对护盾造成伤害",
-        "ShowType": 0,
+        "KEY_INDEX": "211",
+        "AttributeId": 211,
+        "ShowName": "资源数量-怨灵水晶",
+        "AttributeDescribe": "用于残骸",
         "ShowColor": [
             0,
             0,
@@ -299,11 +288,10 @@
         "DependencyIdList": []
     },
     {
-        "KEY_INDEX": "303",
-        "AttributeId": 303,
-        "ShowName": "装甲伤害",
-        "AttributeDescribe": "只能对装甲血量造成伤害",
-        "ShowType": 0,
+        "KEY_INDEX": "212",
+        "AttributeId": 212,
+        "ShowName": "资源数量-次元岛溶剂",
+        "AttributeDescribe": "用于残骸",
         "ShowColor": [
             0,
             0,
@@ -312,11 +300,10 @@
         "DependencyIdList": []
     },
     {
-        "KEY_INDEX": "304",
-        "AttributeId": 304,
-        "ShowName": "攻击速度",
-        "AttributeDescribe": "（单位每秒）每秒发射X枚射弹",
-        "ShowType": 0,
+        "KEY_INDEX": "213",
+        "AttributeId": 213,
+        "ShowName": "资源拆解效率-万能齿轮",
+        "AttributeDescribe": "激光开采类建筑（如收解台），开采，回收周围资源地块，残骸的效率，每秒中可以获取多少资源",
         "ShowColor": [
             0,
             0,
@@ -325,258 +312,10 @@
         "DependencyIdList": []
     },
     {
-        "KEY_INDEX": "305",
-        "AttributeId": 305,
-        "ShowName": "预热时间",
-        "AttributeDescribe": "攻击速度到越热攻速上限的时间，期间攻速逐渐加快，如果武器停止攻击，预热时间逐渐恢复。如果武器开始换弹，重置预热时间",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "306",
-        "AttributeId": 306,
-        "ShowName": "预热攻速上限",
-        "AttributeDescribe": "（单位每秒）每秒发射X枚射弹",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "307",
-        "AttributeId": 307,
-        "ShowName": "弹药量",
-        "AttributeDescribe": "容量，子弹打完进入换弹时间",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "308",
-        "AttributeId": 308,
-        "ShowName": "持续供弹",
-        "AttributeDescribe": "持续供弹，每秒钟装入X发弹药",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "309",
-        "AttributeId": 309,
-        "ShowName": "换弹时间",
-        "AttributeDescribe": "需要多少秒换弹完成，换弹时间减少到0时，添加等同于弹药量的弹药",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "310",
-        "AttributeId": 310,
-        "ShowName": "充能时间",
-        "AttributeDescribe": "开火前时的充能时间，充能时间减少到0时开火",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "311",
-        "AttributeId": 311,
-        "ShowName": "最远射程",
-        "AttributeDescribe": "炮塔的攻击范围，大于最大范围或小于最小范围，炮塔不瞄准，切换目标",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "312",
-        "AttributeId": 312,
-        "ShowName": "可攻击角度",
-        "AttributeDescribe": "炮塔的最大可攻击角度，前方做切线，左右个180度，在可攻击角度外则不会开火需要去转动炮台。默认值为5度（算角度的话前方10度）",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "313",
-        "AttributeId": 313,
-        "ShowName": "开火间隔乘数",
-        "AttributeDescribe": "默认1，是个成倍，用于加成计算，提高炮塔的攻击速度",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "314",
-        "AttributeId": 314,
-        "ShowName": "开火伤害乘数",
-        "AttributeDescribe": "默认1，是个成倍，用于加成计算，提高炮塔的伤害",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "401",
-        "AttributeId": 401,
-        "ShowName": "生产单位建造时间",
-        "AttributeDescribe": "单个单位生产的时间，时间为0是生产一个单位",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "402",
-        "AttributeId": 402,
-        "ShowName": "生产单位上限",
-        "AttributeDescribe": "单位到上限了就不在进行生产了",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "403",
-        "AttributeId": 403,
-        "ShowName": "陷阱攻击耐久",
-        "AttributeDescribe": "有些陷阱攻击一定次数后会自毁",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "501",
-        "AttributeId": 501,
-        "ShowName": "工作范围",
-        "AttributeDescribe": "效果的覆盖范围",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "502",
-        "AttributeId": 502,
-        "ShowName": "结构修复",
-        "AttributeDescribe": "只回复受损的结构值直到达到上限",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "503",
-        "AttributeId": 503,
-        "ShowName": "护盾修复",
-        "AttributeDescribe": "只回复受损的护盾值直到达到上限",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "504",
-        "AttributeId": 504,
-        "ShowName": "装甲修复",
-        "AttributeDescribe": "只回复受损的装甲血量值直到达到上限",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "505",
-        "AttributeId": 505,
-        "ShowName": "伤害提升",
-        "AttributeDescribe": "在工作范围内给其他建筑增加一定比例的伤害",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "506",
-        "AttributeId": 506,
-        "ShowName": "攻速提升",
-        "AttributeDescribe": "在工作范围内给其他建筑增加一定比例的攻击速度",
-        "ShowType": 0,
-        "ShowColor": [
-            0,
-            0,
-            0
-        ],
-        "DependencyIdList": []
-    },
-    {
-        "KEY_INDEX": "507",
-        "AttributeId": 507,
-        "ShowName": "重建提升",
-        "AttributeDescribe": "在工作范围内给其他建筑减少一定比例的建筑重建时间",
-        "ShowType": 0,
+        "KEY_INDEX": "214",
+        "AttributeId": 214,
+        "ShowName": "资源拆解效率-怨灵水晶",
+        "AttributeDescribe": "激光开采类建筑（如收解台），开采，回收周围资源地块，残骸的效率，每秒中可以获取多少资源",
         "ShowColor": [
             0,
             0,

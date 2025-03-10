@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace Remnant_Afterglow
 {
+    /// <summary>
+    /// 随机地图的
+    /// </summary>
     public partial class MapDraw : TileMap
     {
         /// <summary>

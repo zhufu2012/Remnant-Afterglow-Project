@@ -86,7 +86,7 @@ namespace Remnant_Afterglow
                     case BuffMutilAddType.multipleLayer://增加Buff层数
                         previous.ModifyLayer(Layer);
                         break;
-                    case BuffMutilAddType.multipleLayerAndResetTime:
+                    case BuffMutilAddType.multipleLayerAndResetTime://增加Buff层数且重置Buff时间
                         previous.ResetTimer();
                         previous.ModifyLayer(Layer);
                         //forOnBuffStart += previous.OnBuffStart;
@@ -109,6 +109,7 @@ namespace Remnant_Afterglow
                     }
                     buffs[buffId] = newBuff;
                     forOnBuffStart += newBuff.OnBuffStart;
+                    TargetObject.StartRunBuffEvent(newBuff.buffData);//添加buff后，运行的开局事件
                 }
                 else//buff不能添加
                 {

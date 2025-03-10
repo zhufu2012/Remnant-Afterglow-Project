@@ -1,40 +1,11 @@
 [
     {
-        "KEY_INDEX": "1",
-        "MapImageSetId": 1,
-        "MapImageSetName": "地图地块图像集",
-        "ImageSetDescribe": "第一层的图像集",
-        "ImageSetType": 1,
-        "ImageSetMaxId": 36,
-        "ImageSetLayer": 1,
-        "MapImageSize": [
-            6,
-            6
-        ],
-        "MapImageSet": "./data/config/images/ID_5A24066537DA464E9986295F2B4A5A74.png"
-    },
-    {
-        "KEY_INDEX": "2",
-        "MapImageSetId": 2,
-        "MapImageSetName": "资源图像集",
-        "ImageSetDescribe": "第二层的图像集",
-        "ImageSetType": 1,
-        "ImageSetMaxId": 32,
-        "ImageSetLayer": 2,
-        "MapImageSize": [
-            4,
-            8
-        ],
-        "MapImageSet": "./data/config/images/ID_EFB1EB7036594BD4AB9B7CBA32809B1B.png"
-    },
-    {
         "KEY_INDEX": "3",
         "MapImageSetId": 3,
         "MapImageSetName": "六边形地块图像集",
         "ImageSetDescribe": "大地图的图像集",
         "ImageSetType": 2,
         "ImageSetMaxId": 2,
-        "ImageSetLayer": 1,
         "MapImageSize": [
             2,
             1
@@ -48,7 +19,6 @@
         "ImageSetDescribe": "大地图的图像集2",
         "ImageSetType": 2,
         "ImageSetMaxId": 2,
-        "ImageSetLayer": 1,
         "MapImageSize": [
             2,
             1
@@ -56,45 +26,68 @@
         "MapImageSet": "./data/config/images/ID_1B8D765690364953B9DD0A5FB0ECF439.png"
     },
     {
-        "KEY_INDEX": "5",
-        "MapImageSetId": 5,
-        "MapImageSetName": "沙漠地块",
-        "ImageSetDescribe": "沙漠第一层的图像集",
+        "KEY_INDEX": "8",
+        "MapImageSetId": 8,
+        "MapImageSetName": "逻辑地块",
+        "ImageSetDescribe": "用来编辑地块属性",
         "ImageSetType": 1,
-        "ImageSetMaxId": 50,
-        "ImageSetLayer": 1,
+        "ImageSetMaxId": 16,
         "MapImageSize": [
-            10,
-            5
+            4,
+            4
         ],
-        "MapImageSet": "./data/config/images/ID_788E732D8C794339B84E4666740DF142.png"
+        "MapImageSet": "./data/config/images/ID_73C1BF64C0CB42D5B607FE41763EC19F.png"
     },
     {
-        "KEY_INDEX": "6",
-        "MapImageSetId": 6,
+        "KEY_INDEX": "9",
+        "MapImageSetId": 9,
         "MapImageSetName": "工厂地板",
-        "ImageSetDescribe": "工厂第一层的图像集",
+        "ImageSetDescribe": "工厂区的地块",
         "ImageSetType": 1,
-        "ImageSetMaxId": 1,
-        "ImageSetLayer": 1,
+        "ImageSetMaxId": 132,
         "MapImageSize": [
-            1,
-            1
+            11,
+            12
         ],
-        "MapImageSet": "./data/config/images/ID_764A8BE326274A46B0D383B40B10E88E.png"
+        "MapImageSet": "./data/config/images/ID_8662436A7853464180835C6C73ADBE05.png"
     },
     {
-        "KEY_INDEX": "7",
-        "MapImageSetId": 7,
-        "MapImageSetName": "深层工厂地板",
-        "ImageSetDescribe": "工厂第二层的图像集",
+        "KEY_INDEX": "10",
+        "MapImageSetId": 10,
+        "MapImageSetName": "阴影",
+        "ImageSetDescribe": "阴影",
         "ImageSetType": 1,
-        "ImageSetMaxId": 1,
-        "ImageSetLayer": 1,
+        "ImageSetMaxId": 36,
         "MapImageSize": [
-            1,
+            6,
+            6
+        ],
+        "MapImageSet": "./data/config/images/ID_84301341FFD14661A4D82C751D758559.png"
+    },
+    {
+        "KEY_INDEX": "11",
+        "MapImageSetId": 11,
+        "MapImageSetName": "资源地块",
+        "ImageSetDescribe": "资源地块",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 3,
+        "MapImageSize": [
+            3,
             1
         ],
-        "MapImageSet": "./data/config/images/ID_E53FDC4CF002421FBAD532A993EF844A.png"
+        "MapImageSet": "./data/config/images/ID_97B8105DCDB8455182755E90D354E158.png"
+    },
+    {
+        "KEY_INDEX": "12",
+        "MapImageSetId": 12,
+        "MapImageSetName": "沙漠地板",
+        "ImageSetDescribe": "沙漠地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 9,
+        "MapImageSize": [
+            3,
+            3
+        ],
+        "MapImageSet": "./data/config/images/ID_2C6F5277AF184A408A5C536CE7FFDA94.png"
     }
 ]

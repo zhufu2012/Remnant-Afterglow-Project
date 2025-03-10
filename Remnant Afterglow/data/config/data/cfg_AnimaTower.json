@@ -1,7 +1,7 @@
 [
     {
-        "KEY_INDEX": "2001_1",
-        "ObjectId": 2001,
+        "KEY_INDEX": "100001_1",
+        "ObjectId": 100001,
         "AnimaType": 1,
         "Coords": [
             0,
@@ -24,7 +24,819 @@
         "SpeedScale": 1,
         "IsAutoplay": true,
         "IsLoop": true,
-        "Picture": "./data/config/images/ID_7A31AC34455C42919D1E16DA522A1360.png",
+        "Picture": "./data/config/images/ID_BEBA6E998600412490ED72130D4B65C3.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100002_1",
+        "ObjectId": 100002,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_DE6E0C34ED9441279630B1657D8B552D.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100003_1",
+        "ObjectId": 100003,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450101_1",
+        "ObjectId": 450101,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450102_1",
+        "ObjectId": 450102,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_02B46886133B4720AC873E7ED4924F3B.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450103_1",
+        "ObjectId": 450103,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_FA2D31673C634BB78E48C3E3B4AC0738.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450104_1",
+        "ObjectId": 450104,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_427E7661D0EA4E048599710A386D6E9D.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450105_1",
+        "ObjectId": 450105,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_5EEEB453049940DEBE73420F1EF0A8EC.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450106_1",
+        "ObjectId": 450106,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_0F4174FFEF3E4C7BAFE8AB4778111C89.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450201_1",
+        "ObjectId": 450201,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_3E72E9DFEEA14803B8AED009C53CB2A5.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450202_1",
+        "ObjectId": 450202,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_313259228B634A45A49E32D36E6E3980.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450203_1",
+        "ObjectId": 450203,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_3E72E9DFEEA14803B8AED009C53CB2A5.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450204_1",
+        "ObjectId": 450204,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_A7F743AFE2FD46EAA09FF7404F510486.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450205_1",
+        "ObjectId": 450205,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_3E72E9DFEEA14803B8AED009C53CB2A5.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450206_1",
+        "ObjectId": 450206,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_1650E3A3D5A54E14A24702D844F4E9B6.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450301_1",
+        "ObjectId": 450301,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_117E4FFD1E004BD08DBB6DF4DC2B8780.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450302_1",
+        "ObjectId": 450302,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_5EBA871BBDB145CCB718AFBCD11E29DD.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450303_1",
+        "ObjectId": 450303,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_117E4FFD1E004BD08DBB6DF4DC2B8780.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450304_1",
+        "ObjectId": 450304,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_C22345BBE7494B58836CA07CC6F588D1.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450305_1",
+        "ObjectId": 450305,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_117E4FFD1E004BD08DBB6DF4DC2B8780.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450306_1",
+        "ObjectId": 450306,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_C8F1E574379A4424AEAA3E3B19B99209.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450401_1",
+        "ObjectId": 450401,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_0ADD07DFF37D4438BA2984CC6B50DED7.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450501_1",
+        "ObjectId": 450501,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_A4461C8310624320BF13983C26F8BCE0.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "450601_1",
+        "ObjectId": 450601,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_2553E170C9E346DF8AE9B4CE86029BF4.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100001_1",
+        "ObjectId": 100001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100301_1",
+        "ObjectId": 100301,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100501_1",
+        "ObjectId": 100501,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101001_1",
+        "ObjectId": 101001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100901_1",
+        "ObjectId": 100901,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedScale": 1,
+        "IsAutoplay": true,
+        "IsLoop": true,
+        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
         "FlipH": true,
         "FlipV": true
     }

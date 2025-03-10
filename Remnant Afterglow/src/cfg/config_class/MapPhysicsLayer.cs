@@ -10,6 +10,9 @@ namespace Remnant_Afterglow
         /// <summary>        
         /// 物理层id
         ///取值1-32
+        ///
+        ///24及以上为建造系统使用的特殊层（不导出）
+        ///拥有24及以上层的建筑或单位在地图上某位置时，对应位置不可建造
         /// </summary>
         public int PhysicsLayerId { get; set; }
         /// <summary>        

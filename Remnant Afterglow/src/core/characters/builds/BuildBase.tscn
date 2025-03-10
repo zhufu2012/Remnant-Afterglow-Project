@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://tkl23cncryl3"]
+
+[ext_resource type="Script" path="res://src/core/characters/builds/BuildBase.cs" id="1_h36km"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_76pko"]
+radius = 67.15
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cugj0"]
+
+[node name="BuildBase" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_h36km")
+
+[node name="碰撞体" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_76pko")
+
+[node name="占地" type="Area2D" parent="."]
+
+[node name="占地形状" type="CollisionShape2D" parent="占地"]
+shape = SubResource("CircleShape2D_cugj0")

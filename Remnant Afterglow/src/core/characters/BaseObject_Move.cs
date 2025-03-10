@@ -13,25 +13,21 @@ namespace Remnant_Afterglow
     public partial class BaseObject : CharacterBody2D, IPoolItem
     {
 
+        /// <summary>
+        /// 分离列表
+        /// </summary>
+        private List<BaseObject> EnteredBaseObjectList_Separation = new List<BaseObject>();
+
 
         /// <summary>
-        /// 区域节点
-        /// </summary>
-        public Area2D area2D;
-        /// <summary>
-        /// 当前实体碰撞器节点, 节点名称必须叫 "Collision", 类型为 CollisionShape2D
-        /// </summary>
-        public CollisionShape2D Collision { get; set; }
-
-        /// <summary>
-        /// 实体中心全局位置，武器计算射程时使用这个点
+        /// 实体中心全局位置，
         /// </summary>
         public Vector2 centerPos;
 
         /// <summary>
-        /// 实体中心位置，所在地图位置
+        /// 实体中心位置，所在地图格子位置
         /// </summary>
-        public Vector2I mapPos;//祝福注释-这个位置需要确定
+        public Vector2I mapPos;
         /// <summary>
         /// 实体占据的位置列表
         /// </summary>
@@ -42,7 +38,6 @@ namespace Remnant_Afterglow
         /// </summary>
         public void InitObjectMove()
         {
-            InitCollision();//初始化碰撞
         }
 
         /// <summary>
@@ -50,29 +45,47 @@ namespace Remnant_Afterglow
         /// </summary>
         public virtual void InitMove()
         {
-            mapPos = MapCopy.GetWorldPos(GlobalPosition);
+            mapPos = MapCopy.GetWorldPos(GlobalPosition);//所在地图格子坐标
         }
 
+
+        #region 单位分离
         /// <summary>
-        /// 初始化碰撞节点
+        /// 实体当前速度大小
         /// </summary>
-        protected virtual void InitCollision()
+        public float theSpeed;
+        /// <summary>
+        /// 实体临时速度大小
+        /// </summary>
+        private float temp_speed;
+        /// <summary>
+        /// 实体当前方向
+        /// </summary>
+        public Vector2 theDirection = new Vector2(0, 0);
+        public float separation = 0.5f;
+        /// <summary>
+        /// 分离函数
+        /// </summary>
+        private void UpdateSeparation()
         {
-            Collision = baseData.GetCollisionShape2D();
-            AddChild(Collision);
-
-            area2D = GD.Load<PackedScene>("res://src/core/characters/Area.tscn").Instantiate<Area2D>();
-            //area2D.ProcessMode = ProcessModeEnum.Always;
-            area2D.CollisionMask = Common.CalculateMaskSum(baseData.MaskLayerList);
-            area2D.CollisionLayer = Common.CalculateMaskSum(baseData.CollisionLayerList);
-            //CollisionShape2D Collision2 = baseData.GetCollisionShape2D();
-            //area2D.AddChild(Collision2);
-            //area2D.AddToGroup("1");
-
-
-            area2D.AreaEntered += Area2DEntered;
-            AddChild(area2D);
+            Vector2 steer = new Vector2(0, 0);
+            foreach (BaseObject theBoid in EnteredBaseObjectList_Separation)
+            {
+                Vector2 d = Position - theBoid.Position;
+                if (d == new Vector2(0, 0))
+                {
+                    Random random = new Random();
+                    steer += random.NextDouble() > 0.5 ? new Vector2(1, 1) : new Vector2(-1, -1);
+                }
+                else
+                {
+                    steer += d.Normalized() / theBoid.Position.DirectionTo(Position).Length();
+                }
+            }
+            theDirection = steer;
+            theSpeed = GetMaxSpeed() / separation;
         }
+        #endregion
 
         /// <summary>
         /// 执行移动操作
@@ -80,15 +93,6 @@ namespace Remnant_Afterglow
         public virtual void DoMove(double delta) { }
 
 
-
-        /// <summary>
-        /// 获取实体的当前移动速度
-        /// </summary>
-        /// <returns></returns>
-        public float GetSpeed()
-        {
-            return GetAttrValue(Attr.Attr_40, AttributeValueType.Value);
-        }
 
         /// <summary>
         /// 获取实体的最大移动速度
@@ -113,7 +117,7 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public float GetRotateSpeed()
         {
-            return GetAttrValue(Attr.Attr_42, AttributeValueType.Value);
+            return GetAttrValue(Attr.Attr_42, AttributeValueType.Max);
         }
 
     }

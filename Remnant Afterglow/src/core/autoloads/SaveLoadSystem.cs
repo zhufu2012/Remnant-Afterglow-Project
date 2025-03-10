@@ -42,7 +42,7 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 当前使用的存档
         /// </summary>
-        public static SaveData NowSaveData = new SaveData();
+        public static SaveData NowSaveData;
 
         public SaveLoadSystem()
         {
@@ -57,6 +57,10 @@ namespace Remnant_Afterglow
             IsSave = true;
             NowSaveFile = saveFile;//设置当前选中存档
             NowSaveData = GetData<SaveData>(NowSaveFile.file_name);//读取存档数据
+            if (NowSaveData == null)
+            {
+                Log.Error("存档读取错误！" + NowSaveFile.file_name);
+            }
         }
         /// <summary>
         /// 清理当前存档
@@ -105,13 +109,13 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 创建一个存档
         /// </summary>
-        public static GameError CreateSaveData(string save_name, int camp_id, int chapter_id, int diff_id)//祝福注释-创建存档
+        public static SaveFile CreateSaveData(string save_name, int camp_id, int chapter_id, int diff_id)//祝福注释-创建存档
         {
             string save_path = directory_path + save_name;
             if (FolderUtils.DirectoryExists(save_path))
             {
 
-                return new GameError(1001);//创建失败，已经存在该名称的存档
+                return null;//创建失败，已经存在该名称的存档
             }
             else
             {
@@ -119,10 +123,11 @@ namespace Remnant_Afterglow
                 CampBase campbase = ConfigCache.GetCampBase(camp_id);
                 SaveFile saveFile = new SaveFile(save_name, Common.GetS(), camp_id, chapter_id, diff_id);
                 SaveData saveData = new SaveData();
-                SaveFile<SaveFile>(save_name, PathConstant.GetPathUser(PathConstant.SAVE_LOAD_VIEW_UI), saveFile);//保存存档界面数据
-                SaveData<SaveData>(save_name, saveData);//保存存档本身
+                saveData.CreateInitData();
+                SaveFile(save_name, PathConstant.GetPathUser(PathConstant.SAVE_LOAD_VIEW_UI), saveFile);//保存存档界面数据
+                SaveData(save_name, saveData);//保存存档本身
                 AfreshLoadAllSaveFile();
-                return new GameError(0);//正常
+                return saveFile;//正常
             }
 
         }

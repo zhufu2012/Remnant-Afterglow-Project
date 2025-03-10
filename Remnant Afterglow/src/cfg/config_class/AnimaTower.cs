@@ -15,6 +15,7 @@ namespace Remnant_Afterglow
         public int ObjectId { get; set; }
         /// <summary>        
         /// 帧动画类型
+        ///0 建造时动画
         ///1 默认动画
         ///3 攻击动画
         ///4 装填动画
@@ -42,15 +43,22 @@ namespace Remnant_Afterglow
         /// </summary>
         public Vector2I Size { get; set; }
         /// <summary>        
-        /// 
+        /// 播放时，偏移中心的值
+        ///（横,竖）
         /// </summary>
         public Vector2 Offset { get; set; }
         /// <summary>        
-        /// 
+        /// 各帧相对持续时间
+        ///各帧默认为1
+        ///持续时间为1的帧的显示长度是持续时间为2的帧的两倍
+        ///例子:(1,2)|(3,1)
+        ///表示第一帧相对持续时间为2
+        ///表示第三帧相对持续时间为1
         /// </summary>
-        public List<List<int>> RelativeList { get; set; }
+        public List<List<float>> RelativeList { get; set; }
         /// <summary>        
-        /// 
+        /// 设置动画播放倍数
+        ///2表示两倍播放，0.5表示半速播放
         /// </summary>
         public int SpeedScale { get; set; }
         /// <summary>        
@@ -66,11 +74,13 @@ namespace Remnant_Afterglow
         /// </summary>
         public Texture2D Picture { get; set; }
         /// <summary>        
-        /// 
+        /// 不水平翻转
+        ///不填默认为True
         /// </summary>
         public bool FlipH { get; set; }
         /// <summary>        
-        /// 
+        /// 不垂直翻转
+        ///不填默认为True
         /// </summary>
         public bool FlipV { get; set; }
 
@@ -84,7 +94,7 @@ namespace Remnant_Afterglow
 			MaxIndex = (int)dict["MaxIndex"];
 			Size = (Vector2I)dict["Size"];
 			Offset = (Vector2)dict["Offset"];
-			RelativeList = (List<List<int>>)dict["RelativeList"];
+			RelativeList = (List<List<float>>)dict["RelativeList"];
 			SpeedScale = (int)dict["SpeedScale"];
 			IsAutoplay = (bool)dict["IsAutoplay"];
 			IsLoop = (bool)dict["IsLoop"];
@@ -105,7 +115,7 @@ namespace Remnant_Afterglow
 			MaxIndex = (int)dict["MaxIndex"];
 			Size = (Vector2I)dict["Size"];
 			Offset = (Vector2)dict["Offset"];
-			RelativeList = (List<List<int>>)dict["RelativeList"];
+			RelativeList = (List<List<float>>)dict["RelativeList"];
 			SpeedScale = (int)dict["SpeedScale"];
 			IsAutoplay = (bool)dict["IsAutoplay"];
 			IsLoop = (bool)dict["IsLoop"];
@@ -124,7 +134,7 @@ namespace Remnant_Afterglow
 			MaxIndex = (int)dict["MaxIndex"];
 			Size = (Vector2I)dict["Size"];
 			Offset = (Vector2)dict["Offset"];
-			RelativeList = (List<List<int>>)dict["RelativeList"];
+			RelativeList = (List<List<float>>)dict["RelativeList"];
 			SpeedScale = (int)dict["SpeedScale"];
 			IsAutoplay = (bool)dict["IsAutoplay"];
 			IsLoop = (bool)dict["IsLoop"];

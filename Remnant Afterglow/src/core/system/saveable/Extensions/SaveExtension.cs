@@ -8,7 +8,7 @@ namespace Remnant_Afterglow;
 public static class SaveExtension
 {
     public static readonly JsonSerializerSettings Settings = CreateSettings();
-
+    public static readonly JsonSerializerSettings Settings2 = CreateSettings2();
     internal static JsonSerializerSettings CreateSettings()
     {
         var settings = new JsonSerializerSettings
@@ -47,10 +47,57 @@ public static class SaveExtension
         settings.Converters.Add(new SignalConverter());
         settings.Converters.Add(new SceneTreeConverter());
         settings.Converters.Add(new GodotObjectConverter());
-
+        settings.Converters.Add(new CellConverter());
+        settings.Converters.Add(new Vector3IListConverter());
         return settings;
     }
 
+    /// <summary>
+    /// 紧密存储
+    /// </summary>
+    /// <returns></returns>
+    internal static JsonSerializerSettings CreateSettings2()
+    {
+        var settings = new JsonSerializerSettings
+        {
+            Formatting = Formatting.None,
+            Culture = System.Globalization.CultureInfo.InvariantCulture,
+        };
+
+        settings.Converters.Add(new AttributeConverter());
+
+        // Core converters
+        settings.Converters.Add(new NodeSaveConverter());
+        settings.Converters.Add(new TreeSaveConverter());
+
+        // Godot converters
+        settings.Converters.Add(new Vector2Converter());
+        settings.Converters.Add(new Vector2IConverter());
+        settings.Converters.Add(new Vector3Converter());
+        settings.Converters.Add(new Vector3IConverter());
+        settings.Converters.Add(new Vector4Converter());
+        settings.Converters.Add(new Vector4IConverter());
+        settings.Converters.Add(new QuaternionConverter());
+        settings.Converters.Add(new Rect2Converter());
+        settings.Converters.Add(new Rect2IConverter());
+        settings.Converters.Add(new BasisConverter());
+        settings.Converters.Add(new Transform2DConverter());
+        settings.Converters.Add(new Transform3DConverter());
+        settings.Converters.Add(new ProjectionConverter());
+        settings.Converters.Add(new PlaneConverter());
+        settings.Converters.Add(new AabbConverter());
+        settings.Converters.Add(new RidConverter());
+        settings.Converters.Add(new ColorConverter());
+        settings.Converters.Add(new NodePathConverter());
+        settings.Converters.Add(new StringNameConverter());
+        settings.Converters.Add(new CallableConverter());
+        settings.Converters.Add(new SignalConverter());
+        settings.Converters.Add(new SceneTreeConverter());
+        settings.Converters.Add(new GodotObjectConverter());
+        settings.Converters.Add(new CellConverter());
+        settings.Converters.Add(new Vector3IListConverter());
+        return settings;
+    }
     /// <summary>
     /// Serializes an object to a JSON string
     /// </summary>
@@ -59,6 +106,16 @@ public static class SaveExtension
     public static string SerializeObject(object? value)
     {
         return JsonConvert.SerializeObject(value, Settings);
+    }
+
+    /// <summary>
+    /// Serializes an object to a JSON string
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public static string SerializeObject2(object? value)
+    {
+        return JsonConvert.SerializeObject(value, Settings2);
     }
 
     /// <summary>

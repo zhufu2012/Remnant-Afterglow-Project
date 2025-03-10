@@ -32,7 +32,14 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public FloatManagedAttribute GetAttr()
         {
-            return new FloatManagedAttribute(AttributeId, StartValue, Min, Max, Regen);
+            if(Attr.PriorityDict.ContainsKey(AttributeId))
+            {
+                return new FloatManagedAttribute(AttributeId, StartValue, Min, Max, Regen, Attr.PriorityDict[AttributeId]);
+            }
+            else
+            {
+                return new FloatManagedAttribute(AttributeId, StartValue, Min, Max, Regen);
+            }
         }
 
     }

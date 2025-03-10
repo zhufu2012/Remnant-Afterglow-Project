@@ -10,6 +10,7 @@ namespace Remnant_Afterglow
         #region 参数及初始化
         /// <summary>        
         /// 地图生成用材料id
+        ///不能为0
         /// </summary>
         public int MaterialId { get; set; }
         /// <summary>        

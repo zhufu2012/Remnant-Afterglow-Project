@@ -2,6 +2,7 @@ using System;
 using System.Xml;
 using System.Xml.Schema;
 using BulletMLLib.SharedProject.Nodes;
+using GameLog;
 
 namespace BulletMLLib.SharedProject
 {
@@ -73,7 +74,7 @@ namespace BulletMLLib.SharedProject
                 };
                 settings.ValidationEventHandler += MyValidationEventHandler;
 #endif
-
+                Log.Error(xmlFileName);
                 // 使用 XmlReader 读取 XML 文件
                 using (var reader = XmlReader.Create(xmlFileName, settings))
                 {

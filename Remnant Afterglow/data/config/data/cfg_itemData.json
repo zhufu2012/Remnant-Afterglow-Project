@@ -4,8 +4,8 @@
         "ItemId": 1,
         "ItemName": "测试道具",
         "ItemDesc": "测试道具",
-        "InitNum": 10,
+        "ItemType": 1,
         "BagId": 1,
-        "ItemType": 1
+        "InitNum": 10
     }
 ]

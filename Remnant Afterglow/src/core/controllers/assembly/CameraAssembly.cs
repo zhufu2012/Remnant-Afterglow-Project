@@ -2,7 +2,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-
+/**
 namespace Remnant_Afterglow
 {
     /// <summary>
@@ -166,3 +166,4 @@ namespace Remnant_Afterglow
 
     }
 }
+**/

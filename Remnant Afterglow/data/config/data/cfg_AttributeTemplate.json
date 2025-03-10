@@ -14,17 +14,59 @@
         "ObjectId": -2
     },
     {
-        "KEY_INDEX": "3",
-        "TempLateId": 3,
-        "TempLateName": "建筑基础属性模板",
+        "KEY_INDEX": "5",
+        "TempLateId": 5,
+        "TempLateName": "基础抗性",
         "IsCover": true,
-        "ObjectId": -3
+        "ObjectId": -5
     },
     {
-        "KEY_INDEX": "4",
-        "TempLateId": 4,
-        "TempLateName": "武器基础属性模板",
+        "KEY_INDEX": "7",
+        "TempLateId": 7,
+        "TempLateName": "纸甲",
         "IsCover": true,
-        "ObjectId": -4
+        "ObjectId": -7
+    },
+    {
+        "KEY_INDEX": "8",
+        "TempLateId": 8,
+        "TempLateName": "轻甲",
+        "IsCover": true,
+        "ObjectId": -8
+    },
+    {
+        "KEY_INDEX": "9",
+        "TempLateId": 9,
+        "TempLateName": "中甲",
+        "IsCover": true,
+        "ObjectId": -9
+    },
+    {
+        "KEY_INDEX": "10",
+        "TempLateId": 10,
+        "TempLateName": "重甲",
+        "IsCover": true,
+        "ObjectId": -10
+    },
+    {
+        "KEY_INDEX": "11",
+        "TempLateId": 11,
+        "TempLateName": "超重甲",
+        "IsCover": true,
+        "ObjectId": -11
+    },
+    {
+        "KEY_INDEX": "12",
+        "TempLateId": 12,
+        "TempLateName": "城甲",
+        "IsCover": true,
+        "ObjectId": -12
+    },
+    {
+        "KEY_INDEX": "13",
+        "TempLateId": 13,
+        "TempLateName": "移动速度基础模板",
+        "IsCover": true,
+        "ObjectId": -13
     }
 ]

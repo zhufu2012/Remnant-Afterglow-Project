@@ -18,8 +18,7 @@ namespace Remnant_Afterglow
         ///1 单位
         ///2 炮塔
         ///3 建筑
-        ///4 子弹
-        ///5 武器
+        ///4 无人机
         ///
         /// </summary>
         public int ObjectType { get; set; }
@@ -29,15 +28,26 @@ namespace Remnant_Afterglow
         /// </summary>
         public int CampId { get; set; }
         /// <summary>        
-        /// 
+        /// 属性模板id列表
+        ///属性是cfg_AttributeTemplate_属性模板表与cfg_AttributeData_实体属性表覆盖的结果
         /// </summary>
         public List<int> TempLateList { get; set; }
         /// <summary>        
-        /// 
+        /// 默认Buff标签Id列表
+        ///buff标签用于管理实体可以添加哪些Buff,
+        ///禁止添加哪些Buff
+        ///注意！默认在实体上的tag没法移除
+        ///具体请看：
+        ///buff配置.xlsx-cfg_BuffTag_buff标签数据
+        ///可通过属性事件修改
         /// </summary>
         public HashSet<int> BuffTagIdList { get; set; }
         /// <summary>        
-        /// 
+        /// 默认Buff Id列表
+        ///buff用于实体可以影响许多属性和效果,一种buff只能存在一个
+        ///具体请看：
+        ///buff配置.xlsx-cfg_BuffData_buff基础数据
+        ///可通过属性事件修改
         /// </summary>
         public HashSet<int> BuffIdList { get; set; }
         /// <summary>        
@@ -50,6 +60,17 @@ namespace Remnant_Afterglow
         ///即是否可碰撞
         /// </summary>
         public bool IsCollide { get; set; }
+        /// <summary>        
+        /// 需要显示的属性条
+        ///
+        ///cfg_AttributeBase_属性表id
+        /// </summary>
+        public List<int> AttributeBarList { get; set; }
+        /// <summary>        
+        /// 体积系数，
+        ///用于属性条大小的计算
+        /// </summary>
+        public float Volume { get; set; }
         /// <summary>        
         /// 碰撞器所在层数（可多写）
         ///(1-32)
@@ -76,8 +97,6 @@ namespace Remnant_Afterglow
         ///1 2D胶囊形状
         ///2 2D矩形
         ///3 2D圆形
-        ///4 2D线段形状 
-        ///5 2D多线段形状.描述多边形
         /// </summary>
         public int ShapeType { get; set; }
         /// <summary>        
@@ -86,11 +105,8 @@ namespace Remnant_Afterglow
         ///1 2D胶囊形状 （高度,半径）
         ///2 2D矩形，一个(X,Y)表示矩形的长宽
         ///3 2D圆形，(半径r)
-        ///4 2D线段形状,两个点，第一起点，第二终点
-        ///5 2D多线段形状.描述多边形
-        ///描述一个多边形的所有顶点
         /// </summary>
-        public List<List<float>> ShapePointList { get; set; }
+        public List<int> ShapePointList { get; set; }
         /// <summary>        
         /// 碰撞器旋转角度
         ///单位为度数
@@ -115,11 +131,13 @@ namespace Remnant_Afterglow
 			BuffIdList = (HashSet<int>)dict["BuffIdList"];
 			IsMove = (bool)dict["IsMove"];
 			IsCollide = (bool)dict["IsCollide"];
+			AttributeBarList = (List<int>)dict["AttributeBarList"];
+			Volume = (float)dict["Volume"];
 			CollisionLayerList = (List<int>)dict["CollisionLayerList"];
 			MaskLayerList = (List<int>)dict["MaskLayerList"];
 			CollidePos = (Vector2)dict["CollidePos"];
 			ShapeType = (int)dict["ShapeType"];
-			ShapePointList = (List<List<float>>)dict["ShapePointList"];
+			ShapePointList = (List<int>)dict["ShapePointList"];
 			CollideRotate = (float)dict["CollideRotate"];
 			SafeMargin = (float)dict["SafeMargin"];
 			InitData();
@@ -137,11 +155,13 @@ namespace Remnant_Afterglow
 			BuffIdList = (HashSet<int>)dict["BuffIdList"];
 			IsMove = (bool)dict["IsMove"];
 			IsCollide = (bool)dict["IsCollide"];
+			AttributeBarList = (List<int>)dict["AttributeBarList"];
+			Volume = (float)dict["Volume"];
 			CollisionLayerList = (List<int>)dict["CollisionLayerList"];
 			MaskLayerList = (List<int>)dict["MaskLayerList"];
 			CollidePos = (Vector2)dict["CollidePos"];
 			ShapeType = (int)dict["ShapeType"];
-			ShapePointList = (List<List<float>>)dict["ShapePointList"];
+			ShapePointList = (List<int>)dict["ShapePointList"];
 			CollideRotate = (float)dict["CollideRotate"];
 			SafeMargin = (float)dict["SafeMargin"];
 			InitData();
@@ -157,11 +177,13 @@ namespace Remnant_Afterglow
 			BuffIdList = (HashSet<int>)dict["BuffIdList"];
 			IsMove = (bool)dict["IsMove"];
 			IsCollide = (bool)dict["IsCollide"];
+			AttributeBarList = (List<int>)dict["AttributeBarList"];
+			Volume = (float)dict["Volume"];
 			CollisionLayerList = (List<int>)dict["CollisionLayerList"];
 			MaskLayerList = (List<int>)dict["MaskLayerList"];
 			CollidePos = (Vector2)dict["CollidePos"];
 			ShapeType = (int)dict["ShapeType"];
-			ShapePointList = (List<List<float>>)dict["ShapePointList"];
+			ShapePointList = (List<int>)dict["ShapePointList"];
 			CollideRotate = (float)dict["CollideRotate"];
 			SafeMargin = (float)dict["SafeMargin"];
 			InitData();

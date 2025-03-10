@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Godot;
 namespace Remnant_Afterglow
 {
     /// <summary>
@@ -10,10 +11,20 @@ namespace Remnant_Afterglow
         /// <summary>        
         /// 实体id
         /// </summary>
-        public int ObjectId { get; set; }
+        public int WeaponId { get; set; }
+        /// <summary>        
+        /// 武器是否始终指向敌人
+        /// </summary>
+        public bool MountLookTarget { get; set; }
+        /// <summary>        
+        /// 武器子弹id
+        ///如果没配就不发射子弹
+        ///cfg_BulletData_子弹基础数据表id
+        /// </summary>
+        public string BulletId { get; set; }
         /// <summary>        
         /// 武器射程
-        ///单位（1/20格）
+        ///像素
         /// </summary>
         public float Range { get; set; }
         /// <summary>        
@@ -34,7 +45,7 @@ namespace Remnant_Afterglow
         ///子弹生成的位置列表
         ///(偏移中心坐标x,偏移中心坐标y)单位像素
         /// </summary>
-        public List<List<float>> FirePointList { get; set; }
+        public List<Vector2> FirePointList { get; set; }
         /// <summary>        
         /// 武器每个开火点单次发射数
         ///
@@ -68,11 +79,13 @@ namespace Remnant_Afterglow
         public WeaponData2(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_WeaponData2, id);//public const string Config_WeaponData2 = "cfg_WeaponData2"; 
-			ObjectId = (int)dict["ObjectId"];
+			WeaponId = (int)dict["WeaponId"];
+			MountLookTarget = (bool)dict["MountLookTarget"];
+			BulletId = (string)dict["BulletId"];
 			Range = (float)dict["Range"];
 			LaunchTotal = (int)dict["LaunchTotal"];
 			EmissionInterval = (int)dict["EmissionInterval"];
-			FirePointList = (List<List<float>>)dict["FirePointList"];
+			FirePointList = (List<Vector2>)dict["FirePointList"];
 			EmissionNum = (int)dict["EmissionNum"];
 			CoolTime = (int)dict["CoolTime"];
 			StartAngle = (float)dict["StartAngle"];
@@ -85,11 +98,13 @@ namespace Remnant_Afterglow
         public WeaponData2(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_WeaponData2, cfg_id);//public const string Config_WeaponData2 = "cfg_WeaponData2"; 
-			ObjectId = (int)dict["ObjectId"];
+			WeaponId = (int)dict["WeaponId"];
+			MountLookTarget = (bool)dict["MountLookTarget"];
+			BulletId = (string)dict["BulletId"];
 			Range = (float)dict["Range"];
 			LaunchTotal = (int)dict["LaunchTotal"];
 			EmissionInterval = (int)dict["EmissionInterval"];
-			FirePointList = (List<List<float>>)dict["FirePointList"];
+			FirePointList = (List<Vector2>)dict["FirePointList"];
 			EmissionNum = (int)dict["EmissionNum"];
 			CoolTime = (int)dict["CoolTime"];
 			StartAngle = (float)dict["StartAngle"];
@@ -100,11 +115,13 @@ namespace Remnant_Afterglow
 
         public WeaponData2(Dictionary<string, object> dict)
         {
-			ObjectId = (int)dict["ObjectId"];
+			WeaponId = (int)dict["WeaponId"];
+			MountLookTarget = (bool)dict["MountLookTarget"];
+			BulletId = (string)dict["BulletId"];
 			Range = (float)dict["Range"];
 			LaunchTotal = (int)dict["LaunchTotal"];
 			EmissionInterval = (int)dict["EmissionInterval"];
-			FirePointList = (List<List<float>>)dict["FirePointList"];
+			FirePointList = (List<Vector2>)dict["FirePointList"];
 			EmissionNum = (int)dict["EmissionNum"];
 			CoolTime = (int)dict["CoolTime"];
 			StartAngle = (float)dict["StartAngle"];

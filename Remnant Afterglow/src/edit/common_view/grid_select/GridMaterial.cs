@@ -4,6 +4,9 @@ using System;
 
 namespace Remnant_Afterglow_EditMap
 {
+	/// <summary>
+	/// 格子材料按钮
+	/// </summary>
 	public partial class GridMaterial : Button
 	{
 	    //地图类型

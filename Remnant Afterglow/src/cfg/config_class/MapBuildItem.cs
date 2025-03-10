@@ -9,22 +9,22 @@ namespace Remnant_Afterglow
     {
         #region 参数及初始化
         /// <summary>        
+        /// 建造项id
+        /// </summary>
+        public int BuildItemId { get; set; }
+        /// <summary>        
         /// 建造列表标签id
         /// </summary>
         public int BuildLableId { get; set; }
-        /// <summary>        
-        /// 建造项id
-        /// </summary>
-        public string BuildItemId { get; set; }
         /// <summary>        
         /// 建造的实体id
         /// </summary>
         public int ObjectId { get; set; }
         /// <summary>        
-        /// 显示条件
+        /// 是否需要科技解锁
         ///
         /// </summary>
-        public List<List<int>> ShowCondition { get; set; }
+        public bool IsNeedScience { get; set; }
         /// <summary>        
         /// 子列表图标
         /// </summary>
@@ -33,10 +33,10 @@ namespace Remnant_Afterglow
         public MapBuildItem(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_MapBuildItem, id);//public const string Config_MapBuildItem = "cfg_MapBuildItem"; 
+			BuildItemId = (int)dict["BuildItemId"];
 			BuildLableId = (int)dict["BuildLableId"];
-			BuildItemId = (string)dict["BuildItemId"];
 			ObjectId = (int)dict["ObjectId"];
-			ShowCondition = (List<List<int>>)dict["ShowCondition"];
+			IsNeedScience = (bool)dict["IsNeedScience"];
 			LablePng = (Texture2D)dict["LablePng"];
 			InitData();
         }
@@ -45,20 +45,20 @@ namespace Remnant_Afterglow
         public MapBuildItem(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_MapBuildItem, cfg_id);//public const string Config_MapBuildItem = "cfg_MapBuildItem"; 
+			BuildItemId = (int)dict["BuildItemId"];
 			BuildLableId = (int)dict["BuildLableId"];
-			BuildItemId = (string)dict["BuildItemId"];
 			ObjectId = (int)dict["ObjectId"];
-			ShowCondition = (List<List<int>>)dict["ShowCondition"];
+			IsNeedScience = (bool)dict["IsNeedScience"];
 			LablePng = (Texture2D)dict["LablePng"];
 			InitData();
         }
 
         public MapBuildItem(Dictionary<string, object> dict)
         {
+			BuildItemId = (int)dict["BuildItemId"];
 			BuildLableId = (int)dict["BuildLableId"];
-			BuildItemId = (string)dict["BuildItemId"];
 			ObjectId = (int)dict["ObjectId"];
-			ShowCondition = (List<List<int>>)dict["ShowCondition"];
+			IsNeedScience = (bool)dict["IsNeedScience"];
 			LablePng = (Texture2D)dict["LablePng"];
 			InitData();
         }

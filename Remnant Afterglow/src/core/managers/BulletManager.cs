@@ -123,7 +123,7 @@ namespace Remnant_Afterglow
         {
             return new Vector2(0, 0); // 返回玩家的位置-祝福注释
         }
-
+        /***
 
         /// <summary>
         /// 创建一个新的顶级子弹，常用函数
@@ -135,11 +135,13 @@ namespace Remnant_Afterglow
         /// <returns>新创建的顶级子弹。</returns>
         public BulletBase CreateTopBullet(string BulletLabel, Vector2 Pos, float Direction, BaseObject targetObject, BaseObject createObject)
         {
-            BulletBase topLevelBullet = (BulletBase)CreateTopBullet(BulletLabel, targetObject, createObject);
-            topLevelBullet.Position = Pos;
-            topLevelBullet.Direction = Direction;
+            BulletBase topLevelBullet = (BulletBase)CreateTopBullet(BulletLabel, Pos,  Direction, targetObject, createObject);
+            //topLevelBullet.BulletNode.Rotation  = Direction;
+            //topLevelBullet.Position = Pos;
+            //topLevelBullet.Direction = Direction;
             return topLevelBullet;
-        }
+        }**/
+
 
         /// <summary>
         /// 移除指定的子弹。
@@ -176,14 +178,15 @@ namespace Remnant_Afterglow
         /// 创建一个新的顶级子弹。
         /// </summary>
         /// <returns>新创建的顶级子弹。</returns>
-        public IBullet CreateTopBullet(string BulletLabel, BaseObject targetObject, BaseObject createObject)
+        public IBullet CreateTopBullet(string BulletLabel,Vector2 Pos, float Direction, BaseObject targetObject, BaseObject createObject)
         {
             var bullet = new BulletBase(this, BulletLabel, targetObject, createObject) // 创建一个新的Mover实例
             {
                 TimeSpeed = timeSpeed, // 设置时间速度
-                Scale = scale // 设置缩放比例
+                Scale = scale, // 设置缩放比例
+                Position = Pos,
+                Direction = Direction,
             };
-
             // 初始化子弹，存储在列表中，并返回
             bullet.Init();
             bullet.InitTopNode(PatternDict[BulletLabel].RootNode, targetObject, createObject);//设置子弹模式
@@ -191,7 +194,24 @@ namespace Remnant_Afterglow
             topBulletList.Add(bullet);
             return bullet;
         }
+        /// <summary>
+        /// 创建一个新的顶级子弹。
+        /// </summary>
+        /// <returns>新创建的顶级子弹。</returns>
+        public IBullet CreateTopBullet(string BulletLabel,  BaseObject targetObject, BaseObject createObject)
+        {
+            var bullet = new BulletBase(this, BulletLabel, targetObject, createObject) // 创建一个新的Mover实例
+            {
+                TimeSpeed = timeSpeed, // 设置时间速度
+                Scale = scale // 设置缩放比例
+            };
+            // 初始化子弹，存储在列表中，并返回
+            bullet.Init();
+            bullet.InitTopNode(PatternDict[BulletLabel].RootNode, targetObject, createObject);//设置子弹模式
 
+            topBulletList.Add(bullet);
+            return bullet;
+        }
 
         /// <summary>
         /// 获取当前等级。

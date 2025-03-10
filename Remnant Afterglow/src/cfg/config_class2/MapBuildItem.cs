@@ -18,5 +18,14 @@ namespace Remnant_Afterglow
         public void InitData2()
         {
         }
+
+        /// <summary>
+        /// 获取建筑数据
+        /// </summary>
+        /// <returns></returns>
+        public BuildData GetBuildData()
+        {
+            return ConfigCache.GetBuildData(ObjectId);
+        }
     }
 }

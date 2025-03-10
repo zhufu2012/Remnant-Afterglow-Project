@@ -24,7 +24,10 @@ namespace GameLog
             }
         }
 
-        //输出数据
+        /// <summary>
+        /// 输出数据
+        /// </summary>
+        /// <param name="What"></param>
         public static void Print(params object[] What)
         {
             GD.Print(What);

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Test/Navigation/NavigationMap.cs" id="1_5iio1"]
 [ext_resource type="Texture2D" uid="uid://djyore8d5ovbo" path="res://Test/Navigation/dirt2lava_ridge.png" id="2_o6qg1"]
 [ext_resource type="Texture2D" uid="uid://biqinjnocc27x" path="res://Test/Navigation/dirt2dirt_ridge.png" id="3_g6gnp"]
-[ext_resource type="Texture2D" uid="uid://mtmvb3djccco" path="res://Test/Navigation/地块临时素材.png" id="4_4mixf"]
+[ext_resource type="Texture2D" uid="uid://mtmvb3djccco" path="res://Test/地图测试/地块临时素材.png" id="4_4mixf"]
 [ext_resource type="PackedScene" uid="uid://hvcmlb7jta5r" path="res://Test/Navigation/Camera2D.tscn" id="4_ms2pf"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_mudlt"]

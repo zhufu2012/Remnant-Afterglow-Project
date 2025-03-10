@@ -1,5 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfwjrn18ufkrm"]
 
+[ext_resource type="Script" path="res://src/edit/common_view/layer_select/LayerItem.cs" id="1_fp6r5"]
+
 [node name="LayerItem" type="Control"]
 custom_minimum_size = Vector2(500, 30)
 layout_mode = 3
@@ -10,6 +12,7 @@ offset_right = -1420.0
 offset_bottom = -1050.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fp6r5")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -21,5 +24,12 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_right = 40.0
+offset_right = 277.0
 offset_bottom = 23.0
+
+[node name="CheckButton" type="CheckButton" parent="Panel"]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 2.0
+offset_right = 333.0
+offset_bottom = 26.0

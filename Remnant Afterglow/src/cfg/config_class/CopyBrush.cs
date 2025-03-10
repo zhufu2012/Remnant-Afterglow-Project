@@ -28,14 +28,20 @@ namespace Remnant_Afterglow
         /// </summary>
         public int AllWave { get; set; }
         /// <summary>        
-        /// 刷怪默认时间
-        ///（秒）
+        /// 关卡准备时间(秒)
+        ///准备时间内不会刷新怪物
+        ///
+        /// </summary>
+        public int PrepareTime { get; set; }
+        /// <summary>        
+        /// 波次默认刷怪完之后的间隔时间(秒)
         /// </summary>
         public int BrushSpace { get; set; }
         /// <summary>        
-        /// 刷新前间隔时间列表
+        /// 波次间隔时间列表
         ///(1,10) 表示第一波10秒后刷新
-        ///不写默认为BrushSpace的秒数
+        ///没有配某波就默认为BrushSpace的时间
+        ///
         ///(波数，第一波间隔)|(波数，第二波间隔) 
         ///
         /// </summary>
@@ -53,6 +59,7 @@ namespace Remnant_Afterglow
 			CopyId = (int)dict["CopyId"];
 			CopyType = (int)dict["CopyType"];
 			AllWave = (int)dict["AllWave"];
+			PrepareTime = (int)dict["PrepareTime"];
 			BrushSpace = (int)dict["BrushSpace"];
 			BrushSpaceList = (List<List<int>>)dict["BrushSpaceList"];
 			BrushIdList = (List<int>)dict["BrushIdList"];
@@ -67,6 +74,7 @@ namespace Remnant_Afterglow
 			CopyId = (int)dict["CopyId"];
 			CopyType = (int)dict["CopyType"];
 			AllWave = (int)dict["AllWave"];
+			PrepareTime = (int)dict["PrepareTime"];
 			BrushSpace = (int)dict["BrushSpace"];
 			BrushSpaceList = (List<List<int>>)dict["BrushSpaceList"];
 			BrushIdList = (List<int>)dict["BrushIdList"];
@@ -79,6 +87,7 @@ namespace Remnant_Afterglow
 			CopyId = (int)dict["CopyId"];
 			CopyType = (int)dict["CopyType"];
 			AllWave = (int)dict["AllWave"];
+			PrepareTime = (int)dict["PrepareTime"];
 			BrushSpace = (int)dict["BrushSpace"];
 			BrushSpaceList = (List<List<int>>)dict["BrushSpaceList"];
 			BrushIdList = (List<int>)dict["BrushIdList"];

@@ -30,6 +30,7 @@
     <PackageReference Include="Steamworks.NET" Version="2024.8.0" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="src\core\controllers\operation\bigmapop\" />
     <Folder Include="src\core\steam\" />
     <Folder Include="src\core\system\BuffSystem\BuffData\" />
     <Folder Include="src\core\system\BuffSystem\BuffTag\" />

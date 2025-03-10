@@ -165,8 +165,9 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public static int GetType(string id)
         {
-            int typeID = (int)(Convert.ToInt64(id) & 0x7E0000000000);
-            return typeID >> 41;
+            long idLong = Convert.ToInt64(id);
+            // 提取类型信息，右移41位后获取低6位
+            return (int)((idLong >> 41) & 63);
         }
 
         /// <summary>
@@ -177,9 +178,9 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         private static long makeObjectID(int type, long IdMax)
         {
-            return ((type & 63) << 41) | (IdMax & 0x1FFFFFFFFFF);
+            // 类型信息放在高6位 (41-46位)，ID最大值放在低21位 (0-20位)
+            return ((long)(type & 63) << 41) | (IdMax & 0x1FFFFFFFFFF);
         }
-
 
         /// <summary>
         /// 保存id使用数据

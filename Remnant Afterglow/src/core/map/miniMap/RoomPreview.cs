@@ -66,7 +66,7 @@ namespace Remnant_Afterglow
                 foreach (Vector2I vect in tempArray)
                 {
                     Cell cell = layer_dict[layerId][vect.X, vect.Y];
-                    MapMaterial material = ConfigCache.GetMapMaterial(cell.index);
+                    MapFixedMaterial material = ConfigCache.GetMapFixedMaterial(cell.index);
                     colorArray[vect.X][vect.Y] = material.PreviewColor;
                 }
             }

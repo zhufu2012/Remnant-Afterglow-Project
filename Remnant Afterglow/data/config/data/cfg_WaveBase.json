@@ -4,45 +4,78 @@
         "BrushId": 1,
         "WaveId": 1,
         "WaveName": "第一波",
-        "WaveType": 1,
-        "WaveWay": 1,
-        "WaveDes": "直接全部刷新",
-        "WaveData": [
+        "WaveUnitGroup": [
             [
                 1,
-                1001,
-                1,
-                1
+                2
+            ],
+            [
+                2,
+                4
             ]
-        ],
-        "WaveData2": [],
-        "WaveRandData": [],
-        "WaveTime": 120
+        ]
     },
     {
         "KEY_INDEX": "1_2",
         "BrushId": 1,
         "WaveId": 2,
         "WaveName": "第二波",
-        "WaveType": 1,
-        "WaveWay": 2,
-        "WaveDes": "间隔刷新",
-        "WaveData": [
+        "WaveUnitGroup": [
             [
-                1,
-                1001,
                 1,
                 1
             ],
             [
                 2,
-                1001,
-                1,
-                2
+                1
             ]
-        ],
-        "WaveData2": [],
-        "WaveRandData": [],
-        "WaveTime": 60
+        ]
+    },
+    {
+        "KEY_INDEX": "2_1",
+        "BrushId": 2,
+        "WaveId": 1,
+        "WaveName": "第一波",
+        "WaveUnitGroup": []
+    },
+    {
+        "KEY_INDEX": "2_2",
+        "BrushId": 2,
+        "WaveId": 2,
+        "WaveName": "第二波",
+        "WaveUnitGroup": [
+            [
+                1,
+                1
+            ],
+            [
+                2,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "4_1",
+        "BrushId": 4,
+        "WaveId": 1,
+        "WaveName": "第一波",
+        "WaveUnitGroup": [
+            [
+                666,
+                50
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "4_2",
+        "BrushId": 4,
+        "WaveId": 2,
+        "WaveName": "第二波",
+        "WaveUnitGroup": [
+            [
+                666,
+                50
+            ]
+        ]
     }
 ]

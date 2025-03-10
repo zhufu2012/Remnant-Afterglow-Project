@@ -12,6 +12,11 @@ namespace Remnant_Afterglow
         {
         }
 
+        public override void _PhysicsProcess(double delta)
+        {
+            QueueRedraw();
+        }
+
         public override void _Draw()
         {
             DrawFlowFieldArrows();

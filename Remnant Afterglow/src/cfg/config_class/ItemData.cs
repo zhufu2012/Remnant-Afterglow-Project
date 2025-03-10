@@ -20,17 +20,18 @@ namespace Remnant_Afterglow
         /// </summary>
         public string ItemDesc { get; set; }
         /// <summary>        
-        /// 创建存档时给与数量
+        /// 道具类型
         /// </summary>
-        public int InitNum { get; set; }
+        public int ItemType { get; set; }
         /// <summary>        
         /// 所在背包id
         /// </summary>
         public int BagId { get; set; }
         /// <summary>        
-        /// 道具宏观类型
+        /// 创建存档时给与的数量
+        ///为0表示创建存档时不给道具
         /// </summary>
-        public int ItemType { get; set; }
+        public int InitNum { get; set; }
 
         public ItemData(int id)
         {
@@ -38,9 +39,9 @@ namespace Remnant_Afterglow
 			ItemId = (int)dict["ItemId"];
 			ItemName = (string)dict["ItemName"];
 			ItemDesc = (string)dict["ItemDesc"];
-			InitNum = (int)dict["InitNum"];
-			BagId = (int)dict["BagId"];
 			ItemType = (int)dict["ItemType"];
+			BagId = (int)dict["BagId"];
+			InitNum = (int)dict["InitNum"];
 			InitData();
         }
 
@@ -51,9 +52,9 @@ namespace Remnant_Afterglow
 			ItemId = (int)dict["ItemId"];
 			ItemName = (string)dict["ItemName"];
 			ItemDesc = (string)dict["ItemDesc"];
-			InitNum = (int)dict["InitNum"];
-			BagId = (int)dict["BagId"];
 			ItemType = (int)dict["ItemType"];
+			BagId = (int)dict["BagId"];
+			InitNum = (int)dict["InitNum"];
 			InitData();
         }
 
@@ -62,9 +63,9 @@ namespace Remnant_Afterglow
 			ItemId = (int)dict["ItemId"];
 			ItemName = (string)dict["ItemName"];
 			ItemDesc = (string)dict["ItemDesc"];
-			InitNum = (int)dict["InitNum"];
-			BagId = (int)dict["BagId"];
 			ItemType = (int)dict["ItemType"];
+			BagId = (int)dict["BagId"];
+			InitNum = (int)dict["InitNum"];
 			InitData();
         }
         #endregion

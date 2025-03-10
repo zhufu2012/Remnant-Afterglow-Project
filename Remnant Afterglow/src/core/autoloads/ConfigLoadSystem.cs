@@ -122,7 +122,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public void LoadModBaseConfigData()
         {
-            foreach (var k in ModLoadSystem.load_mod_list)
+            foreach (var k in ModLoadSystem.loadModDict)
             {
                 string path = PathConstant.GetPathUser(PathConstant.MOD_LOAD_PATH_USER) + k.Key + PathConstant.GetPathUser(PathConstant.MOD_LIST_CONFIG_FileName_USER);
                 string jsonText = File.ReadAllText(path);
@@ -277,6 +277,46 @@ namespace Remnant_Afterglow
             }
             return resultList;
         }
+
+        /// <summary>
+        /// 查询所有不满足条件的行的数据
+        /// </summary>
+        /// <param name="fileName">表名</param>
+        /// <param name="key_dict">键与值的对应关系</param>
+        /// <returns>不满足条件的所有行数据</returns>
+        public static List<Dictionary<string, object>> QueryCfgAllNonMatchingLines(string fileName, Dictionary<string, object> key_dict)
+        {
+            List<Dictionary<string, object>> resultList = new List<Dictionary<string, object>>();
+
+            if (config_dict.ContainsKey(fileName)) // 存在该表
+            {
+                // 多行-键值对
+                List<Dictionary<string, object>> allRows = config_dict[fileName].Values.ToList();
+
+                foreach (var row in allRows)
+                {
+                    bool match = false;
+
+                    foreach (var (Key, Value) in key_dict)
+                    {
+                        if (row.TryGetValue(Key, out var key_value) && key_value.Equals(Value))
+                        {
+                            match = true;
+                            break; // 一旦发现匹配的键值对，立即退出内层循环
+                        }
+                    }
+
+                    if (!match)
+                    {
+                        resultList.Add(row); // 如果没有任何键值对匹配，则添加到结果列表
+                    }
+                }
+            }
+
+            return resultList;
+        }
+
+
 
         /// <summary>
         /// 将数据按照对应类型转换

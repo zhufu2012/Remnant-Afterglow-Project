@@ -25,21 +25,14 @@ namespace Remnant_Afterglow
         [Export]
         public Vector2 ShadowOffset { get; set; } = new Vector2(0, 2);
 
-        public WorkerBase(int ObjectId) : base(ObjectId)
+        public override void InitData(int ObjectId)
         {
+            base.InitData(ObjectId);
             object_type = BaseObjectType.BaseWorker;
-            InitData();//初始化配置
-            InitChild();//初始化节点数据
-        }
-
-        /// <summary>
-        /// 根据实体id和阵营数据初始化配置数据
-        /// </summary>
-        public void InitData()
-        {
             CfgData = ConfigCache.GetWorkerData("" + ObjectId);
             Logotype = IdGenerator.Generate(IdConstant.ID_TYPE_WORKER);
             PoolId = (int)BaseObjectType.BaseUnit + "_" + ObjectId;
+            InitChild();//初始化节点数据
         }
         /// <summary>
         /// 初始化节点数据
@@ -53,30 +46,42 @@ namespace Remnant_Afterglow
         public override void InitView()
         {
             base.InitView();
-            AddToGroup(MapGroup.WorkerGroup);
+            Collision = GetNode<CollisionShape2D>("碰撞体");
+            if (baseData.IsCollide)
+            {
+                switch (baseData.ShapeType)
+                {
+                    case 1: //1 2D胶囊形状
+                        CapsuleShape2D capShape = new CapsuleShape2D();
+                        capShape.Height = baseData.ShapePointList[0];
+                        capShape.Radius = baseData.ShapePointList[1];
+                        Collision.Shape = capShape;
+                        break;
+                    case 2: //2 2D矩形
+                        RectangleShape2D rectShape = new RectangleShape2D();
+                        rectShape.Size = new Vector2(baseData.ShapePointList[0], baseData.ShapePointList[1]);
+                        Collision.Shape = rectShape;
+                        break;
+                    case 3: //3 2D圆形
+                        CircleShape2D cirShape = new CircleShape2D();
+                        cirShape.Radius = baseData.ShapePointList[0];
+                        Collision.Shape = cirShape;
+                        break;
+                    default:
+                        break;
+                }
+                Collision.Position = baseData.CollidePos;
+                Collision.RotationDegrees = baseData.CollideRotate;
+            }
+            CollisionMask = Common.CalculateMaskSum(baseData.MaskLayerList);
+            CollisionLayer = Common.CalculateMaskSum(baseData.CollisionLayerList);
+            area2D = GetNode<Area2D>("AttackedRange");
+            area2D.AreaEntered += Area2DEntered;
+            area2D.AreaExited += Area2DExited;
+            area2D.AddToGroup("" + Camp);//添加分组数据到节点
+            area2D.AddToGroup(MapGroup.WorkerGroup);
+
         }
-        #endregion
-
-        #region 单位属性
-        //移动速度
-        public float speed = 5f;
-        // 当前位置
-        public  Vector2 nowPosition;
-        // 移动目标位置
-        public Vector2I targetPosition;
-        #endregion
-
-        #region 单位组数据
-        //单位是否在单位组中
-        public bool IsGroup = false;
-        /// <summary>
-        /// 单位当前目标位置
-        /// </summary>
-        public Vector2 movePos;
-        /// <summary>
-        /// 单位组内类型
-        /// </summary>
-        public GroupUnitType groupType;
         #endregion
 
 

@@ -34,14 +34,12 @@ namespace Remnant_Afterglow
         public Hex defaultHex;//空地
 
         #region 生成地图
-        public Dictionary<int, Hex[,]> GenerateMap(FastNoiseLite noise, Vector2 Size)
+        public Dictionary<int, Hex[,]> GenerateMap(Vector2 Size)
         {
             map = new Hex[cfgData.Width, cfgData.Height];//初始化底层地块地图
             mapLayer.Clear();//装饰层清理
-            if (cfgData.IsUseNoiseEdit)//使用噪声编辑器的噪声数据
-                RandomMap(noise, Size);//填充地块地图
-            else
-                RandomMap(Seed.noise.noise, new Vector2(Seed.noise.x, Seed.noise.y));//填充地块地图
+            Seed = new MapSeedType(cfgData.SeedTypeId);
+            RandomMap(Seed.noise.noise, new Vector2(Seed.noise.x, Seed.noise.y));//填充地块地图
             SmoothMap();
             CreatFixedtCell();
 

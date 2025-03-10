@@ -1,14 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://ce4sp4877gh4m"]
+[gd_scene load_steps=6 format=3 uid="uid://ce4sp4877gh4m"]
 
 [ext_resource type="Script" path="res://src/core/ui/MainView.cs" id="1_b6lpm"]
-[ext_resource type="Texture2D" uid="uid://ddg8tp5vypovu" path="res://ui/View/标题/大标题.png" id="1_iygap"]
-[ext_resource type="Texture2D" uid="uid://bpb5144jv5a63" path="res://ui/View/标题/大齿轮1.png" id="2_swf2m"]
-[ext_resource type="Texture2D" uid="uid://dlu2t34icu2ts" path="res://ui/View/标题/大齿轮2.png" id="4_6x5k6"]
-[ext_resource type="Texture2D" uid="uid://bcbgma0ryokdc" path="res://ui/View/标题/大齿轮.png" id="5_y5dsj"]
-[ext_resource type="Texture2D" uid="uid://bb5j8v4l5raa4" path="res://scripts/ui/Main/窗口10.png" id="6_pin26"]
-[ext_resource type="Texture2D" uid="uid://bnelioqvpenfl" path="res://scripts/ui/Main/窗口 (5).png" id="7_hig3k"]
-[ext_resource type="Texture2D" uid="uid://fwqi2xddfhp0" path="res://scripts/ui/Main/中国国旗.png" id="8_1p417"]
-[ext_resource type="Texture2D" uid="uid://cqcq8thtragqi" path="res://scripts/ui/Main/窗口 (3).png" id="9_fr0lu"]
+[ext_resource type="Texture2D" uid="uid://4wghnhxnwuc2" path="res://src/core/ui/窗口 (9).png" id="2_pj31c"]
+[ext_resource type="Texture2D" uid="uid://7v3pbssycejo" path="res://src/core/ui/窗口 (10).png" id="3_ed1pb"]
+[ext_resource type="Texture2D" uid="uid://h2uwol5hhg18" path="res://src/core/ui/大标题4.png" id="4_gtqln"]
+[ext_resource type="Texture2D" uid="uid://7ag5hxura87b" path="res://src/core/ui/大标题2.png" id="5_q0bby"]
 
 [node name="MainView" type="Control"]
 layout_mode = 3
@@ -16,57 +12,15 @@ anchors_preset = 0
 scale = Vector2(1.667, 1.667)
 script = ExtResource("1_b6lpm")
 
-[node name="title" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 21.0
-offset_top = 30.0
-offset_right = 521.0
-offset_bottom = 530.0
-scale = Vector2(0.49, 0.49)
-
-[node name="big_title" type="Sprite2D" parent="title"]
-z_index = 1
-position = Vector2(575, 152)
-texture = ExtResource("1_iygap")
-
-[node name="title_gear" type="Control" parent="title"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="title_gear1" type="Sprite2D" parent="title/title_gear"]
-light_mask = 2
-z_index = -1
-position = Vector2(567.5, 150.5)
-texture = ExtResource("2_swf2m")
-
-[node name="title_gear2" type="Sprite2D" parent="title/title_gear"]
-light_mask = 2
-position = Vector2(570.5, 147.5)
-texture = ExtResource("4_6x5k6")
-
-[node name="title_gear3" type="Sprite2D" parent="title/title_gear"]
-light_mask = 512
-z_index = -1
-position = Vector2(572.5, 145.5)
-texture = ExtResource("5_y5dsj")
-
 [node name="version" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1008.0
-offset_top = 24.0
-offset_right = 1128.0
-offset_bottom = 48.0
-text = "游戏版本v0.01"
+offset_left = 1023.4
+offset_top = 5.9988
+offset_right = 1143.4
+offset_bottom = 29.9988
+text = "版本v0.02"
 horizontal_alignment = 1
 clip_text = true
-
-[node name="background" type="Sprite2D" parent="."]
-z_index = -10
-position = Vector2(576, 324)
-scale = Vector2(0.72, 0.648)
-texture = ExtResource("6_pin26")
 
 [node name="view" type="Control" parent="."]
 layout_mode = 3
@@ -76,412 +30,150 @@ offset_top = 265.0
 offset_right = -76.0
 offset_bottom = 265.0
 
-[node name="but_continue_game" type="Button" parent="view"]
-layout_mode = 0
-offset_left = 115.0
-offset_top = -49.0
-offset_right = 219.0
-offset_bottom = -17.0
-text = "继续游戏"
-
-[node name="窗口(5)" type="Sprite2D" parent="view/but_continue_game"]
-z_index = -1
-position = Vector2(52, 16)
-scale = Vector2(0.265, 0.18)
-texture = ExtResource("7_hig3k")
-
 [node name="but_start_game" type="Button" parent="view"]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 23.0
-offset_right = 220.0
-offset_bottom = 55.0
+offset_left = 126.39
+offset_top = -88.0354
+offset_right = 230.39
+offset_bottom = -56.0354
 text = "开始游戏"
 
 [node name="窗口(5)" type="Sprite2D" parent="view/but_start_game"]
 z_index = -1
-position = Vector2(52, 16)
-scale = Vector2(0.265, 0.18)
-texture = ExtResource("7_hig3k")
+position = Vector2(33.4182, 20.7527)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_pj31c")
 
 [node name="but_multi_player" type="Button" parent="view"]
+modulate = Color(0.489622, 0.489622, 0.489622, 1)
 layout_mode = 0
-offset_left = 116.0
-offset_top = 95.0
-offset_right = 220.0
-offset_bottom = 127.0
+offset_left = 127.59
+offset_top = -23.8482
+offset_right = 231.59
+offset_bottom = 8.15179
 action_mode = 0
 text = "多人游戏
 "
 
-[node name="窗口(5)5" type="Sprite2D" parent="view/but_multi_player"]
+[node name="窗口(5)5" type="Sprite2D" parent="view"]
 z_index = -1
-position = Vector2(52, 16)
-scale = Vector2(0.265, 0.18)
-texture = ExtResource("7_hig3k")
+position = Vector2(159.808, -2.55316)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_pj31c")
+
+[node name="but_map_edit" type="Button" parent="view"]
+layout_mode = 0
+offset_left = 126.99
+offset_top = 42.7384
+offset_right = 230.99
+offset_bottom = 74.7387
+action_mode = 0
+text = "地图编辑器"
+
+[node name="窗口(5)6" type="Sprite2D" parent="view/but_map_edit"]
+z_index = -1
+position = Vector2(33.0102, 20.7526)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_pj31c")
+
+[node name="but_archival" type="Button" parent="view"]
+layout_mode = 0
+offset_left = 126.99
+offset_top = 108.725
+offset_right = 230.99
+offset_bottom = 142.725
+action_mode = 0
+text = "档案库"
+
+[node name="设置" type="Sprite2D" parent="view/but_archival"]
+z_index = -1
+position = Vector2(32.4103, 21.9527)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_pj31c")
 
 [node name="but_model" type="Button" parent="view"]
+modulate = Color(0.489622, 0.489622, 0.489622, 1)
 layout_mode = 0
-offset_left = 116.0
-offset_top = 167.0
-offset_right = 220.0
-offset_bottom = 201.0
+offset_left = 127.59
+offset_top = 174.712
+offset_right = 231.59
+offset_bottom = 208.712
 action_mode = 0
 text = "模组"
 
-[node name="设置" type="Sprite2D" parent="view/but_model"]
+[node name="设置2" type="Sprite2D" parent="view"]
 z_index = -1
-position = Vector2(52, 16)
-scale = Vector2(0.265, 0.18)
-texture = ExtResource("7_hig3k")
+position = Vector2(159.808, 196.665)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_pj31c")
 
 [node name="but_setting" type="Button" parent="view"]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 239.0
-offset_right = 220.0
-offset_bottom = 271.0
+offset_left = 127.59
+offset_top = 241.299
+offset_right = 231.59
+offset_bottom = 273.299
 action_mode = 0
 text = "设置"
 
 [node name="窗口(5)3" type="Sprite2D" parent="view/but_setting"]
 z_index = -1
-position = Vector2(52, 16)
-scale = Vector2(0.265, 0.18)
-texture = ExtResource("7_hig3k")
+position = Vector2(32.2184, 20.7526)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_pj31c")
 
 [node name="but_quit" type="Button" parent="view"]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 311.0
-offset_right = 220.0
-offset_bottom = 343.0
+offset_left = 126.99
+offset_top = 306.086
+offset_right = 230.99
+offset_bottom = 338.086
 action_mode = 0
 text = "退出"
 
 [node name="窗口(5)2" type="Sprite2D" parent="view/but_quit"]
 z_index = -1
-position = Vector2(52, 16)
-scale = Vector2(0.265, 0.18)
-texture = ExtResource("7_hig3k")
+position = Vector2(32.8183, 21.3528)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_pj31c")
 
 [node name="but_achievement" type="Button" parent="view"]
 layout_mode = 0
-offset_left = 905.0
-offset_top = 322.0
-offset_right = 1009.0
-offset_bottom = 354.0
+offset_left = 979.419
+offset_top = 310.285
+offset_right = 1083.42
+offset_bottom = 342.285
 action_mode = 0
 text = "成就"
 
 [node name="窗口(5)2" type="Sprite2D" parent="view/but_achievement"]
 z_index = -1
-position = Vector2(52, 16)
-scale = Vector2(0.265, 0.18)
-texture = ExtResource("7_hig3k")
+position = Vector2(51.4001, 34.5963)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_ed1pb")
 
 [node name="but_thank" type="Button" parent="view"]
 layout_mode = 0
-offset_left = 1023.0
-offset_top = 322.0
-offset_right = 1127.0
-offset_bottom = 354.0
+offset_left = 1107.79
+offset_top = 310.285
+offset_right = 1211.79
+offset_bottom = 342.285
 action_mode = 0
 text = "致谢"
 
 [node name="窗口(5)2" type="Sprite2D" parent="view/but_thank"]
 z_index = -1
-position = Vector2(52, 16)
-scale = Vector2(0.265, 0.18)
-texture = ExtResource("7_hig3k")
+position = Vector2(52.0002, 34.5963)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_ed1pb")
 
-[node name="but_language" type="Button" parent="view"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 1139.0
-offset_top = 317.0
-offset_right = 1199.0
-offset_bottom = 357.0
-action_mode = 0
+[node name="大标题4" type="Sprite2D" parent="."]
+z_index = -50
+position = Vector2(576.485, 323.935)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_gtqln")
 
-[node name="中国国旗" type="Sprite2D" parent="view/but_language"]
-z_index = -2
-position = Vector2(30, 20)
-texture = ExtResource("8_1p417")
-
-[node name="窗口(3)" type="Sprite2D" parent="view/but_language"]
-position = Vector2(30, 20)
-scale = Vector2(0.31, 0.22)
-texture = ExtResource("9_fr0lu")
-
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 884.0
-offset_top = 48.0
-offset_right = 884.0
-offset_bottom = 48.0
-scale = Vector2(0.5, 0.5)
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
-layout_mode = 0
-offset_left = 96.0
-offset_top = -2.0
-offset_right = 490.0
-offset_bottom = 598.0
-follow_focus = true
-vertical_scroll_mode = 2
-
-[node name="updatelog" type="RichTextLabel" parent="Panel/ScrollContainer"]
-custom_minimum_size = Vector2(390, 9999)
-layout_mode = 2
-text = "更新日志
-旧日余晖更新日志
-2024.3.4
-旧日余晖Remnant Afterglow游戏项目成立
-该游戏项目的前身为铁锈战争的旧日余晖mod
-写了
-2024.3.5
-更新了拉伦凯斯进攻方的冲锋轮，撞击轮单位的贴图
-2024.3.6
-更新了游戏主界面图标，但感觉还不太行，打算重新设计
-2024.3.9
-更新了永恒秩序的射线炮塔和炮塔地基，画了些按钮
-重新绘制了资源图标，万能齿轮和怨灵水晶
-2024.3.10
-更新了鼠标的贴图
-资源回收站图标
-2024.3.12
-更新了很多的窗口贴图
-2024.3.13
-更新了很多的窗口贴图
-2024.3.14
-更新了进度条贴图
-2024.3.16
-更新了部分单位设计和建筑设计，确定了游戏发生前的时间线
-2024.3.19
-更新了地块贴图
-2024.3.20
-更新了激光炮塔的贴图
-2024.3.21
-打算做一个敌对单位数量的显示器，显示在玩家的核心面板上
-2024.3.22
-更新了废料，磁轨炮塔，窗口贴图
-侦查精灵贴图
-2024.3.23
-更新了废料熔炼站，窗口贴图
-2024.3.24-周日
-更新了搬运无人机，搬运无人机平台贴图，添加了废料熔炼站效果贴图
-铁锈版更新了运输机制和废料熔炼站的废料回收机制，更新了b站两条介绍动态视频BV1ZK421Y7Ej    BV19r421t7L6
-2024.3.25
-更新了挖掘钻机站，废料地块贴图
-完善了资源运输系统的完整逻辑，挖掘钻机站挖掘地块资源，地块资源也会随钻机的开采被挖掘殆尽，完美实现了游戏中想要表达的效果，重写了搬运无人机的运行判断，提高了其运载量和搬运逻辑，现在可以更加有效的搬运资源，后续还需要添加拆解无人机所生产的打包废料功能，然后完善其两个收集逻辑并合并运行
-修改了废料熔炼站的运行机制，减少了代码运行的成本，减少了无用判断
-修改了部分的建筑设定，矿机在资源地块上默认产出废料，地块收入来源于地块所提供的资源，当任何资源的地块枯竭后矿机将会只产出废料这一种资源。，也就是默认产出，当废料熔炼站的废料超过1000后，将不会产出，搬运无人机会优先搬运这些已经达到上限的废料熔炼站
-这个修改让玩家前期需要寻找和保护现成的万能齿轮资源地块，因为玩家前期需要大量的万能齿轮作为发展的需求，如果收集废料在通过熔炼站生产，需要消耗更多的资源，同是产能也会被怨灵水晶分担导致万能齿轮的产能只有在万能齿轮资源地块上的50%，效率更是达不到40%
-玩家的核心附近也必定刷新一块面积较大的万能齿轮资源地块，怨灵水晶和巨大矿脉将会刷新在地图的边缘，如果玩家想要收集这些资源，就需要扩大自己的防御面积，让玩家时刻保持在一个富贵险中求的状态，大大增加游戏的难度和可玩性
-更新了b站一条介绍动态视频   资源运输系统介绍  BV1v2421P7iP
-2024.3.26
-更新了辉煌神殿-核心，墙壁的贴图和铁锈版代码
-建筑在未完成时只拥有20%的血量.
-修改了废料熔炼站和挖掘钻机站的卸载位置
-2024.3.27
-重置了射线炮塔的贴图和开火效果
-修改了部分的平衡
-当前的目标会有50多个炮塔，30多个其他塔，50~70种敌人，10张地图，每张地图三种难度，3~6个月完工
-新增功能，范围显示圈-可用于显示特殊建筑的功能范围，比如布局节点的建造范围和部署范围，维修工程塔的维修范围，部分武器的特殊攻击范围等，可以在核心中设置每一个范围显示器的透明度
-调整建造逻辑，将所有布局节点和核心的建造面板整合到统一单位“建造器”中使用，该建造器可通过点击地图中任意空白区域打开，以此大大降低了玩家后期寻找布局节点和核心的问题，也因此新增了建造规划，建筑蓝图只能设置在布局节点的功能范围内
-修改了一代的建筑自毁功能，调整为现在的建筑回收，需要支付一笔回收费用即可100%回收建造该建筑的资源，因此建造成本越高的建筑，回收的性价比越高，如各类型高级炮塔，但如果是陷阱或者城墙等低价格的建筑，回收的性价比非常低
-更新了布局节点的贴图和建筑
-整理了铁锈版的文件路径
-2024.3.28
-关于地图难度和敌对怪物组的一些想法
-目前的设计中每一张地图有一个拥有一个难度等级标准，在地图内还存在的5个难度等级和一个自定义难度等级，在游戏版中，可以在地图的选择界面中调整，在铁锈版中，玩家需要进入地图后来选择游戏难度，二代不存在极强防御塔，重在多种防御塔的组合搭配来针对某些单位与阵营，因此，更高难度模式下，会怪物组中会刷新更高难度的怪物。
-铁锈版的刷怪机制为地图边际根据地图配置刷新标准敌对单位，其中不包含难度单位，在每个刷怪点还有一个难度刷怪器，会刷出难度单位组，单位组会根据目前的难度设置调整刷怪的数量和强度。
-关于拉伦凯斯进攻方的射击，绝大多数远程单位都拥有弹药限制，在远程武器弹药耗尽后，他们会切换武器进入近战攻击模式，这一设计可以让敌方远程单位的火力更加猛烈的同时免受过于赖皮的远程火力压制
-
-更新了多玩家分基地，修改部分贴花贴图
-2024.3.29
-更新了敌人的装甲血量机制，晚上做装甲的标签数据，
-优化了一代的单位寻路问题，提出了二合一综合方案，通过调整单位的寻路逻辑和聚团问题，大幅度减少了系统预算负担，减少了一代卡兵的问题
-2024.3.30
-再次优化了部分寻路逻辑，重写了部分炮塔设计
-关于铁锈版地图限制建筑设计，限制玩家在一张地图中建造某种建筑，比如在前期的关卡设计中，禁止后期的高强度炮塔，则在地图文件中放置一个限制建造的单位，这个单位在刷新出来后会添加一个限制的全局标签，建造器检测到时将会不显示该建筑的建造列表
-之前说过打算做个敌人显示器，在敌人显示器中将会介绍所有敌人的数据并且列出可以针对此类单位的炮塔与建筑
-制作了一个炮塔数据计算器，可以完整详细的计算炮塔参数，用于后期炮塔制作
-完善调整了所有设计炮塔，现在共有20多种基础炮塔和他们的升级项
-绘制了速射射线炮塔，镇压射线塔的贴图，铁锈版中制作了完整的炮塔效果
-修正的装甲血量的计算问题，现在而已正确的计算单位的装甲值数据和受创数据
-单位模板的制作，后续属性套模板就行了
-2024.3.31
-继续完善寻路，继续完善装甲计算
-更新了装甲的自动标签计算系统，后续无论是炮塔还是单位，都拥有自己的优先攻击目标
-新增敌方单位-机炮扫荡者
-调整了速射射线炮塔，镇压射线塔的数据
-2024.4.2
-继续完善寻路，继续完善装甲计算，继续完善建筑数据表格，修改其中部分错误计算逻辑
-将压制塔的基础装甲值下调至90点，装甲血量从12700提升至12870
-新增规避式绕行寻路，建立在基础的寻路上，近战单位会绕行远程单位进攻
-重新调整了装甲值在50，100，150分界点的装甲标签计算，现在0~49为轻甲，50~99为中甲，100~149为重甲，150以上为超重甲
-新增敌方单位撞击轮，冲锋轮，激光拆迁者
-2024.4.5
-关于装甲维修的效果设计，当单位有装甲修复液时，会在原本的装甲条上显示一个绿色的有很多加号的条，透明度随装甲修复液数量提升而提升，体积越大的单位装甲修复速度越快，修复条的透明度提高需要拥有更多的修复液
-更新了单位贴花，装甲容量条，装甲值数据显示
-功能介绍：装甲值的容量条和数据值显示，单位和建筑的装甲值损失的越多，显示的数字颜色越深，提醒玩家需要在周围建造更多的修甲设备
-单位和建筑受到装甲伤害后，会损失装甲值，当修甲单位存在于周围时，建筑将会不断的恢复装甲生命来重建装甲，当单位持续攻击一个已经完全损坏装甲的建筑或者单位时，该单位周围哪怕存在修甲单位也无法回复护甲生命
-当装甲生命正在被修复时，将会呈现绿色，颜色浓度将会随着装甲修复液的消耗而改变，灰色为已有的装甲血量
-2024.4.6
-调整了部分单位和建筑的装甲UI显示位置
-修改了运输无人机的移动速度，最大速度从4上调至15，移动加速度上调一倍，现在的移动速度更快了
-更新了6种资源地块
-完善了单位移动路径
-2024.4.7
-修改了输无人机的移动速度，取消了移动后滑动，现在无人机将会飞的更快，出略计算，一架无人机可以运输4个矿机与2个熔炼站往返
-增强了辉煌神殿的修复速度，缩短了建造范围
-更新高级布局节点
-二级武器建筑地盘修改
-2024.4.13
-新增炮塔：迫击炮塔
-修改单位寻路
-2024.4.15
-画了敌方单位设计--完成20%
-2024.4.18
-画了些敌方单位
-2024.4.19
-更新单位：突击兵，携带一把离子炮的小型进攻单位
-2024.4.21
-更新单位：好战者，携带一门电锯和盾牌攻击敌人，拥有较高的装甲值
-绘制了很多的贴图
-修改建筑：城墙
-2024.4.22
-更新单位：火炮手，攻击者
-2024.4.23
-更新单位：岗位，盾卫
-修改UI：装甲显示
-给支援单位制作了专门的寻路机制
-2024.4.24
-更新单位：阻尼防御者
-关于地图的单位刷新，与第一代不同，单位将会根据地图设置的基础难度，来决定刷怪的概率，每一种敌方单位包含3个不同的变体，更具不同的难度，决定刷新变体的概率，
-在地图文件中会制作包含这些单位的刷新单位，在诞生时根据游戏难度刷新单位
-新增建筑：加固城墙
-2024.5.2
-更新炮塔，射击塔，破壳射线塔
-更新建筑代码：散弹塔
-2024.5.3
-整理了所有文件的位置，整合了部分代码，方便后续模块化修改
-重新整理所有炮塔，建筑内容
-更新建筑，升级节点
-2024.5.4
-重写敌方单位寻路，之前的好是好，太占用性能了
-提高部分建筑的动作触发速度，增加逻辑运行的效率，挖掘站，熔炼站，无人机，整体上减少了建筑发呆的时间
-添加了难度选择模块，和敌方单位组模块，用于后续地图中难度的设置，目前敌方单位的生成是需要位置的，这可能导致大规模单位刷新时无法有效的产生单位，具体还得看后续效果和实际游戏体验。
-将敌方单位的阵营归类为敌对中立（-2）
-2024.5.5
-完成地图设计前预设，通过主基地可以选择关卡难度
-关于关卡设计，由于单位的移动速度与一代不同，并且在二代中，玩家初始将会拥有一定的防御能力，不过需要玩家通过建造器来修建，因此玩家拥有更多的准备时间，所以敌方单位的登场时间将会被提前，同时敌方单位的刷新点在二代中不一定位于地图的边缘，也可能位于地图当中的其他位置。
-更新建筑代码：加农炮塔，电磁加农炮塔，破甲加农炮塔，蓄能融热塔
-2024.5.6
-关于装饰
-所有的单位和建筑都拥有多套皮肤装饰，会在诞生时随机装配，单位的属性不会变化，装饰的变化不会很大，会保持可以区分的特点，如果觉得该装饰会影响你的判断，可以在游戏开始时前30秒内关闭
-敌方外形设计，重工业，齿轮，活动机械部件，机械，金属外观，红色漆，发动机，排气阀门，履带，爬行爪，机械腿，重复堆叠（如多个喷气管）
-我方外观设计，宗教建筑
-2024.5.7
-更新了光子塔贴图
-新的想法：爆破钻机站，可以将挖掘钻机站升级为爆破钻机站，一但升级将无法撤回，持续破坏性的开采资源点，每秒获取80点资源，直到周围的资源点被破坏，但周围不存在资源点后，该建筑才能被回收
-资源点拥有5000点破坏储备，10000点的常规储备，两个储备不通用，破坏储备耗尽后会被建筑回收，常规储备耗尽后可以
-2024.5.8
-更新建筑代码：枪灵塔，瓦解塔
-更新了建筑：蓄能融热塔
-重新修改了运输无人机的移动逻辑，优化了建筑资源之间的废料运输逻辑，准备减少挖掘建筑的资源获取速度，增加资源点的资源数量
-新的想法：资源仓库，由废料熔炼站升级而来，提高全局资源的储存上限，因为当资源枯竭后，废料熔炼站的需求就会下降66%，那么对于的废料熔炼站就可以改装成为仓库来继续发挥价值
-2024.5.11
-设置了资源上限，初始为万能齿轮3000，怨灵水晶1000。
-调整了资源建筑的产能
-挖掘钻机每秒产出12点废料，6点齿轮，1点水晶，资源耗尽后4点废料，需要地块拥有对应的资源
-废料熔炼站每秒消耗22点废料，生产9点齿轮+0.4点水晶
-更新了所有2级防御塔，部分塔的代码和贴图还未绘制
-2024.5.12
-新增单位：拆解无人机
-新增残骸：小型残骸
-新增功能：开局建造器，游戏开始后30秒地图中的建筑将会快速的被建造
-修改了敌方单位的巡逻逻辑
-在没有选择难度时，会高亮核心建筑引导玩家选择难度
-2024.5.13
-更改了装甲UI的显示，现在修改为数据显示，包含了护盾，装甲，装甲血量，下方为血量，修改了装甲修复时的贴图
-新增所有辅助类建筑
-更新建筑代码：工程塔
-后续需要调整整体的伤害机制，让护盾不在收到装甲值影响，因此单独的调整出护盾这个数据而不是使用铁锈原版的护盾
-修改了UI的显示，将建筑的废料显示修改为了堆砌起来的砖块，（包含）无人机运输的时候也会在下方显示下挂的砖块数量，无人机现在将会显示需要前往的目标路径，运输无人机橙色，拆解无人机红色
-将不同单位和建筑大小的UI显示做了区分，现在UI将会显示在单位和建筑的边缘
-修复了建造器的指示UI会在连续建造时显示在建造的建筑上的问题
-重做护盾机制
-护盾被摧毁后会过载2秒，在此期间，护盾仍然恢复，但不承受伤害，添加了过载的视觉效果
-完成目前所有敌方单位的贴UI和机制设计
-灵感：护盾清零时会释放一个冲击波
-更新单位：刺击者，士兵，猎犬，好战者精锐
-更新建筑：工程塔，修甲工程塔，高级修甲工程塔
-
-需要做得内容
-给所有需要显示UI的单位加上体积数据   addResources:贴花体积计算=1
-将所有的参与伤害和运行的建筑的计算改为  加入核心
-装甲血量=-2000,装甲血量上限=-2000,护盾上限=-2000,等效装甲生命比值=-200
-明天做我方建筑的的机制和贴图
-每个单位做俩难度变体就可以出第一张地图了
-2024.5.15
-所有建筑的UI做完了，不过贴图还没有画完
-明天画贴图和在更新4个敌方单位
-2024.5.16
-绘制贴图-射空塔，加农炮塔，散弹塔，贯穿炮塔
-修复了城墙重叠建造的问题
-修改了敌方支援单位的寻路逻辑，现在会主动寻找附近的敌方单位进行跟随
-2024.5.17
-更新机制：搬运无人机现在会在周围存在空的废料熔炼站时紧急搬运废料
-修改了刷新单位的数量，平衡了难度设置
-需要做的事，
-1.平衡建筑的数据和价值，
-增加初始库存容量和每个材料储存站上限为万能齿轮1750,怨灵水晶500
-设置了资源上限，初始为万能齿轮5000，怨灵水晶1000。
-调整了无人机的范围距离，增加了无人机平台的建造规则，现在需要距离一段距离才可以建造零一座无人机平台，无人机的移动速度上限从5调整为7，移动速度从0.1调整为0.2和巡逻逻辑调整，现在点击无人机平台可以看到不同无人机的飞行范围
-待办事项：敌方传送点装置没画
-待办事项：轨道支援--火炮支援和脉冲支援
-给每个游戏难度设置了不同的初始资源
-2024.5.18
-修复了计时器显示在玩家界面的问题
-修复了修复了无人机难以选中的问题
-增加挖掘钻机站直接获取万能齿轮的效率，从每秒6点提升为8点
-修复了傻逼卢克造成的多人联机直接失败问题
-完善部分二级建筑血量和属性
-下调了无人机平台的价格，建造限制从距离500距离不可放置增加到750距离，减少了无人机平台的密度，现在可以选择初始无人机的种类，缩小了搬运无人机的工作范围从1000调整为500，拆解无人机的工作范围从1500调整为1250
-残骸现在可以同时被5架无人机回收
-更新建筑：加固工程塔，高级加固工程塔，修复工程塔，高级修复工程塔
-所有的升级现在将会显示建筑本身
-更新了地图文件
-取消主基地的无人机，增加地图开局的无人机平台
-现在无人机平台在建造完成后会高亮来提示玩家选择免费无人机
-修复了无人机的寻路问题
-完全重做了无人机的巡逻逻辑和相关建筑的资源需求分级，现在的无人机将会优先运输资源给于资源稀缺的建筑
-修改了材料储存站和升级节点的价格，水晶需求下调
-修复了拆解无人机的寻路问题
-2024.5.19
-新增贴图：闪耀塔
-新增敌人：喷火者，旋翼，侦测者
-打算弄一个第一次攻击可以往前移动一段距离的敌人  翻越者
-优化了大量生成单位带来的瞬间卡顿问题
-增强了散弹塔的击退能力
-修复空中敌方单位不受到属性伤害的问题
-制作游戏大标题
-修复了拆解无人机的寻路问题
-新增道具：水晶地雷
-2024.5.20
-将水晶地雷的生产时间调整为40秒1个
-修复了水晶地雷无法对有护盾的单位造成穿透伤害的问题
-增强了水晶地雷的属性效果，现在被击中的敌人将会持续3秒钟护盾过载
-调整炮塔的属性
-调整所有炮塔升级的价格
-上调所有空军敌方单位的数据
-更新单位：大型旋翼
-调整贴图文件
-调整射线系塔的单发伤害比
-更新游戏胜利后主基地会释放毁灭协议摧毁所有敌人
-新增道具：轨道炮
-"
-autowrap_mode = 1
+[node name="大标题2" type="Sprite2D" parent="."]
+position = Vector2(127.175, 77.3845)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_q0bby")

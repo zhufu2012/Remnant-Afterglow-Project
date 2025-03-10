@@ -1,44 +1,36 @@
-using System;
 using Godot;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 
-namespace Remnant_Afterglow;
-
-public class Vector3IConverter : JsonConverter<Vector3I>
+namespace Remnant_Afterglow
 {
-    public override Vector3I ReadJson(JsonReader reader, Type objectType, Vector3I existingValue, bool hasExistingValue, JsonSerializer serializer)
+    public class Vector3IConverter : JsonConverter<Vector3I>
     {
-        if (reader.TokenType != JsonToken.StartObject)
-            throw new JsonSerializationException();
+        public override Vector3I ReadJson(JsonReader reader, Type objectType, Vector3I existingValue, bool hasExistingValue, JsonSerializer serializer)
+        {
+            if (reader.TokenType != JsonToken.StartObject)
+                throw new JsonSerializationException("Unexpected token when deserializing object: Expected StartObject.");
 
-        reader.Read(); // Read start object
+            JObject jObject = JObject.Load(reader);
 
-        reader.Read(); // Read property's name
-        var x = serializer.Deserialize<int>(reader);
-        reader.Read(); // Read property's value
+            var x = jObject.Value<int>("x");
+            var y = jObject.Value<int>("y");
+            var z = jObject.Value<int>("z");
 
-        reader.Read(); // Read property's name
-        var y = serializer.Deserialize<int>(reader);
-        reader.Read(); // Read property's value
+            return new Vector3I(x, y, z);
+        }
 
-        reader.Read(); // Read property's name
-        var z = serializer.Deserialize<int>(reader);
-        reader.Read(); // Read property's value
-
-        reader.Read(); // Read end object
-
-        return new Vector3I(x, y, z);
-    }
-
-    public override void WriteJson(JsonWriter writer, Vector3I value, JsonSerializer serializer)
-    {
-        writer.WriteStartObject();
-        writer.WritePropertyName("x");
-        writer.WriteValue(value.X);
-        writer.WritePropertyName("y");
-        writer.WriteValue(value.Y);
-        writer.WritePropertyName("z");
-        writer.WriteValue(value.Z);
-        writer.WriteEndObject();
+        public override void WriteJson(JsonWriter writer, Vector3I value, JsonSerializer serializer)
+        {
+            writer.WriteStartObject();
+            writer.WritePropertyName("x");
+            writer.WriteValue(value.X);
+            writer.WritePropertyName("y");
+            writer.WriteValue(value.Y);
+            writer.WritePropertyName("z");
+            writer.WriteValue(value.Z);
+            writer.WriteEndObject();
+        }
     }
 }

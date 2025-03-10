@@ -13,7 +13,7 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 组件父节点
         /// </summary>
-        public CameraAssembly canvasLayer;
+        //public CameraAssembly canvasLayer;
 
 
         /// <summary>
@@ -100,12 +100,10 @@ namespace Remnant_Afterglow
         public GameCamera()
         {
             cfgData = new CameraBase(ConfigCache.GetGlobal_Int("MapDefineCameraId"));//地图默认相机id
-            canvasLayer = new CameraAssembly(cfgData.AssemblyIdList);
         }
         public GameCamera(int id)
         {
             cfgData = new CameraBase(id);
-            canvasLayer = new CameraAssembly(cfgData.AssemblyIdList);
         }
 
         public void InitData()
@@ -128,7 +126,7 @@ namespace Remnant_Afterglow
 
         public void InitView()
         {
-            AddChild(canvasLayer);
+            //AddChild(canvasLayer);
 
             panel.SetAnchorsPreset(Control.LayoutPreset.FullRect);
             panel.Size = new Vector2(GameConstant.WindowSizeX, GameConstant.WindowSizeY);
@@ -202,16 +200,16 @@ namespace Remnant_Afterglow
                 key[3] = false;
             if (@event.IsActionPressed(KeyConstant.Input_Key_ESC))
             {
-                if (canvasLayer.Visible)
-                {
-                    canvasLayer.Visible = false;
-                    canvasLayer2.Visible = true;
-                }
-                else
-                {
-                    canvasLayer.Visible = true;
-                    canvasLayer2.Visible = false;
-                }
+               // if (canvasLayer.Visible)
+                //{
+               //     canvasLayer.Visible = false;
+               //     canvasLayer2.Visible = true;
+               // }
+                //else
+               // {
+               //     canvasLayer.Visible = true;
+               //     canvasLayer2.Visible = false;
+               // }
             }
             base._UnhandledInput(@event);
         }

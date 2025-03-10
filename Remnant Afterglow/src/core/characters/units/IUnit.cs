@@ -5,10 +5,6 @@ namespace Remnant_Afterglow
     /// </summary>
     public interface IUnit
     {
-        /// <summary>
-        /// 单位AI类型
-        /// </summary>
-        public UnitAIType AiType { get; set; }
 
     }
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+
+<bulletml type="horizontal"
+          xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+
+<action label="top">
+  <fire>
+   <direction>$rand*360</direction>
+   <bulletRef label="hmgLsr"/>
+  </fire>
+</action>
+
+<bullet label="hmgLsr">
+<speed>2</speed>
+<action>
+<changeSpeed>
+ <speed>1</speed>
+ <term>30</term>
+</changeSpeed>
+<wait>10</wait>
+<changeSpeed>
+ <speed>5</speed>
+ <term>100</term>
+</changeSpeed>
+</action>
+<action>
+<repeat><times>12</times>
+<action>
+ <changeDirection>
+  <direction type="aim">0</direction>
+  <term>45-$rank*30</term>
+ </changeDirection>
+ <wait>5</wait>
+</action>
+</repeat>
+</action>
+</bullet>
+
+</bulletml>

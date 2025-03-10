@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbqssr7t207o0"]
+
+[ext_resource type="Texture2D" uid="uid://yhw2tsqpt83p" path="res://assets/作战界面素材/结构值背景.png" id="1_5suer"]
+[ext_resource type="Script" path="res://src/core/ui/component/fight_view/AttributeBar.cs" id="1_61yq3"]
+[ext_resource type="Texture2D" uid="uid://3cknce6hcltf" path="res://assets/作战界面素材/结构值.png" id="2_go53l"]
+
+[node name="AttributeBar" type="TextureProgressBar"]
+texture_filter = 1
+offset_right = 36.0
+offset_bottom = 3.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_5suer")
+texture_progress = ExtResource("2_go53l")
+tint_progress = Color(0, 1, 0, 1)
+script = ExtResource("1_61yq3")

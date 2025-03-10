@@ -128,6 +128,7 @@ namespace Remnant_Afterglow
                         camera_zoom.Y - camera_zoom_speed.Y >= zoom_min_limit)
                     {
                         camera_zoom -= camera_zoom_speed;
+                        //Zoom = camera_zoom;
                     }
 
                     if (mouseButton.ButtonIndex == MouseButton.WheelUp &&
@@ -135,6 +136,7 @@ namespace Remnant_Afterglow
                         camera_zoom.Y + camera_zoom_speed.Y <= zoom_max_limit)
                     {
                         camera_zoom += camera_zoom_speed;
+                        //Zoom = camera_zoom;
                         //SetZoom(camera_zoom);
 
                     }

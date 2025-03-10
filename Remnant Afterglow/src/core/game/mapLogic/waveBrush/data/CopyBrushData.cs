@@ -1,4 +1,4 @@
-﻿
+
 using GameLog;
 using Godot;
 using System.Collections.Generic;
@@ -6,81 +6,82 @@ using System.Linq;
 
 namespace Remnant_Afterglow
 {
+    /// <summary>
+    /// 刷怪点数据类
+    /// </summary>
     public class CopyBrushData
     {
-        //================================刷新点数据========================//
         /// <summary>
-        /// 刷新点数据
+		/// 刷新点id
+		/// </summary>
+        public int BrushId = 0;
+        /// <summary>
+        /// 刷怪点数据
         /// </summary>
         public BrushPoint cfgData;
-        //刷新点id
-        public int BrushId = 0;
-
-        //<波数,波数数据>
-        public Dictionary<int, WaveData> waveDataDict = new Dictionary<int, WaveData>();
-        //================================刷新点数据========================//
 
         /// <summary>
-        /// 所有波数是否刷新完毕
+        /// <波数,波数数据>
         /// </summary>
-        public bool is_flush_acc = false;
-
-        public CopyBrushData(int BrushId)
+        public Dictionary<int, WaveData> waveDataDict = new Dictionary<int, WaveData>();
+        /// <summary>
+        /// 坐标列表
+        /// </summary>
+        public List<Vector2I> points = new List<Vector2I>();
+        public CopyBrushData(int BrushId, BrushPoint cfgData, Vector2I start, Vector2I end)
         {
             this.BrushId = BrushId;
-            cfgData = ConfigCache.GetBrushPoint(BrushId);
+            this.cfgData = cfgData;
             foreach (int waveId in cfgData.WaveIdList)//遍历刷新点的波数
             {
-                Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_WaveBase, BrushId, waveId);
-                if (dict != null)
-                    waveDataDict[waveId] = new WaveData(dict);
+                WaveBase waveBase = ConfigCache.GetWaveBase(cfgData.BrushId + "_" + waveId);
+                if (waveBase != null)
+                    waveDataDict[waveId] = new WaveData(waveBase);
+            }
+
+            // 确保坐标范围正确
+            int minX = start.X;
+            int maxX = start.X + end.X;
+            int minY = start.Y;
+            int maxY = start.Y + end.Y;
+            // 遍历所有整数坐标点
+            for (int x = minX; x <= maxX; x++)
+            {
+                for (int y = minY; y <= maxY; y++)
+                {
+                    points.Add(new Vector2I(x, y));
+                }
             }
         }
 
+
         /// <summary>
-        /// 检查该刷新点所有波次是否都刷新完
+        /// 获取某一波要刷的怪物列表
+        /// </summary>
+        public List<List<int>> GetWaveBrushList(int wave)
+        {
+            if (waveDataDict.ContainsKey(wave))//有该波数据
+            {
+                return waveDataDict[wave].GetWaveData();
+            }
+            return new List<List<int>>();
+        }
+
+
+        /// <summary>
+        /// 检查所有波次是否刷新完成
         /// </summary>
         /// <returns></returns>
         public bool CheckAllWaveFlush()
         {
-            bool return_value = false;
             foreach (var info in waveDataDict)
             {
-                if (waveDataDict[info.Key].is_flush_acc)
+                if (!info.Value.is_flush_acc)
                 {
-                    return_value = true;
-                    break;
+                    return false;
                 }
             }
-            is_flush_acc = return_value;
-            return return_value;
-        }
-
-        /// <summary>
-        /// 计算该刷新点，对应波次计算刷新波数组的怪物
-        /// </summary>
-        /// <returns><<怪物id,阵营id>,数量></returns>
-        public Dictionary<KeyValuePair<int, int>, int> CalcWaveUnit(int waveId, double nowTime,double frameNumber)
-        {
-            if (waveDataDict.ContainsKey(waveId))
-            {
-                WaveData waveData = waveDataDict[waveId];
-                if (!waveData.is_flush_acc)//没刷新完
-                {
-                    return waveData.GetUnitDict(nowTime,frameNumber);
-                }
-                else
-                {
-                    is_flush_acc = true;
-                    return new Dictionary<KeyValuePair<int, int>, int>();
-                }
-            }
-            else
-            {
-                is_flush_acc = true;
-                return new Dictionary<KeyValuePair<int, int>, int>();
-            }
-
+            return false;
         }
 
     }

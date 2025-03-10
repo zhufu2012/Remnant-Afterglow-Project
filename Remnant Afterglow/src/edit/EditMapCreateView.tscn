@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cimgpq4sv75aa"]
+[gd_scene load_steps=3 format=3 uid="uid://cimgpq4sv75aa"]
 
 [ext_resource type="Script" path="res://src/edit/EditMapCreateView.cs" id="1_msc83"]
+[ext_resource type="Texture2D" uid="uid://h2uwol5hhg18" path="res://src/core/ui/大标题4.png" id="2_wum50"]
 
 [node name="EditMapCreateView" type="Control"]
 layout_mode = 3
@@ -11,8 +12,194 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_msc83")
 
-[node name="ReturnButton" type="Button" parent="."]
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReturnButton" type="Button" parent="Panel"]
 layout_mode = 0
 offset_right = 181.0
 offset_bottom = 74.0
 text = "返回上一个界面"
+
+[node name="CreateMapBut" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 190.0
+offset_right = 1010.0
+offset_bottom = 273.0
+text = "创建地图"
+
+[node name="EditMapBut" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 336.0
+offset_right = 1010.0
+offset_bottom = 419.0
+disabled = true
+text = "编辑地图"
+
+[node name="MapItemList" type="ItemList" parent="Panel"]
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 154.0
+offset_right = 1726.0
+offset_bottom = 481.0
+
+[node name="EditMapName" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 168.0
+offset_right = 638.0
+offset_bottom = 238.0
+placeholder_text = "地图名称"
+context_menu_enabled = false
+
+[node name="EditMapWidth" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 282.0
+offset_right = 636.0
+offset_bottom = 352.0
+placeholder_text = "地图横轴"
+context_menu_enabled = false
+
+[node name="EditMapHeight" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 398.0
+offset_right = 636.0
+offset_bottom = 468.0
+placeholder_text = "地图纵轴"
+context_menu_enabled = false
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreateMapBut" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 190.0
+offset_right = 1010.0
+offset_bottom = 273.0
+text = "创建地图模板"
+
+[node name="MapItemList" type="ItemList" parent="Panel2"]
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 154.0
+offset_right = 1726.0
+offset_bottom = 481.0
+
+[node name="EditMapName" type="LineEdit" parent="Panel2"]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 168.0
+offset_right = 638.0
+offset_bottom = 238.0
+placeholder_text = "地图名称"
+context_menu_enabled = false
+
+[node name="EditMapWidth" type="LineEdit" parent="Panel2"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 282.0
+offset_right = 636.0
+offset_bottom = 352.0
+placeholder_text = "地图横轴"
+context_menu_enabled = false
+
+[node name="EditMapHeight" type="LineEdit" parent="Panel2"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 398.0
+offset_right = 636.0
+offset_bottom = 468.0
+placeholder_text = "地图纵轴"
+context_menu_enabled = false
+
+[node name="EditMapBut" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 336.0
+offset_right = 1010.0
+offset_bottom = 419.0
+disabled = true
+text = "编辑地图模板"
+
+[node name="Panel3" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreateMapBut" type="Button" parent="Panel3"]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 190.0
+offset_right = 1010.0
+offset_bottom = 273.0
+text = "创建地图"
+
+[node name="MapItemList" type="ItemList" parent="Panel3"]
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 154.0
+offset_right = 1726.0
+offset_bottom = 481.0
+
+[node name="EditMapName" type="LineEdit" parent="Panel3"]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 168.0
+offset_right = 638.0
+offset_bottom = 238.0
+placeholder_text = "地图名称"
+context_menu_enabled = false
+
+[node name="EditMapWidth" type="LineEdit" parent="Panel3"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 282.0
+offset_right = 636.0
+offset_bottom = 352.0
+placeholder_text = "地图横轴"
+context_menu_enabled = false
+
+[node name="EditMapHeight" type="LineEdit" parent="Panel3"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 398.0
+offset_right = 636.0
+offset_bottom = 468.0
+placeholder_text = "地图纵轴"
+context_menu_enabled = false
+
+[node name="EditMapBut" type="Button" parent="Panel3"]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 336.0
+offset_right = 1010.0
+offset_bottom = 419.0
+disabled = true
+text = "编辑地图"
+
+[node name="大标题4" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(961, 540)
+texture = ExtResource("2_wum50")

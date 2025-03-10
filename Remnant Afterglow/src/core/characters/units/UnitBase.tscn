@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://carq3in3odwpf"]
+
+[ext_resource type="Script" path="res://src/core/characters/units/UnitBase.cs" id="1_uxpro"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4u32g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cka5d"]
+
+[node name="UnitBase" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_uxpro")
+
+[node name="碰撞体" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4u32g")
+
+[node name="占地" type="Area2D" parent="."]
+
+[node name="占地形状" type="CollisionShape2D" parent="占地"]
+shape = SubResource("CapsuleShape2D_cka5d")

@@ -34,7 +34,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public List<List<int>> UnlockCurrList { get; set; }
         /// <summary>        
-        /// 解锁建筑id列表
+        /// 解锁建筑项id列表
         ///cfg_MapBuildList_建造子列表id
         /// </summary>
         public List<int> MapBuildIDList { get; set; }

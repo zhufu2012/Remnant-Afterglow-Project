@@ -52,11 +52,11 @@ namespace Remnant_Afterglow
                 {
                     tileSet.AddPhysicsLayer(PhysicsLayer.PhysicsLayerId);
                 }
-                List<MapNavigate> NavigateLayerList = ConfigCache.GetAllMapNavigate();
-                foreach (MapNavigate NavigateLayer in NavigateLayerList)//设置导航层
-                {
-                    tileSet.AddNavigationLayer(NavigateLayer.NavigateLayerId);
-                }
+                //List<MapNavigate> NavigateLayerList = ConfigCache.GetAllMapNavigate();
+                //foreach (MapNavigate NavigateLayer in NavigateLayerList)//设置导航层
+                //{
+                //    tileSet.AddNavigationLayer(NavigateLayer.NavigateLayerId);
+                //}
                 mapImageSet = new MapImageSet(tileSet, Type, MapConstant.TileCellSize, MapConstant.TileCellSize);//给格子加备选格子，以及加上碰撞层
             }
             if (Type == 2)//六边形大地图

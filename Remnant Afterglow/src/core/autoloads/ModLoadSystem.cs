@@ -52,7 +52,7 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 需要加载的模组的模组信息mod.info-mod_list.json这个文件
         /// </summary>
-        public static Dictionary<string, ModAllInfo> load_mod_list = new Dictionary<string, ModAllInfo>();
+        public static Dictionary<string, ModAllInfo> loadModDict = new Dictionary<string, ModAllInfo>();
 
         /// <summary>
         /// 所有模组的模组信息mod.info
@@ -106,7 +106,7 @@ namespace Remnant_Afterglow
                     ModInfo modinfo = ReadModInfo(infopath);
                     ModAllInfo modAllInfo = new ModAllInfo(modinfo, k.Key);
                     if (modinfo != null)
-                        load_mod_list[k.Key] = modAllInfo;
+                        loadModDict[k.Key] = modAllInfo;
                 }
             }
             else//不存在modlist文件，就创建一个,并写入基础数据
@@ -122,7 +122,7 @@ namespace Remnant_Afterglow
         public void ReadModDll()
         {
 
-            foreach (var info in load_mod_list)
+            foreach (var info in loadModDict)
             {
                 ModAllInfo modInfo = info.Value;
                 if (modInfo.modInfo.HasPck)//有无pck文件

@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://0o11jkpjrxv"]
+[gd_scene load_steps=9 format=3 uid="uid://0o11jkpjrxv"]
 
 [ext_resource type="Script" path="res://src/edit/edit_map/EditMapView.cs" id="1_ynj5o"]
+[ext_resource type="PackedScene" uid="uid://tjsaytgotk7h" path="res://src/edit/edit_map/tileMap/EditTileMap.tscn" id="2_32kvr"]
 [ext_resource type="PackedScene" uid="uid://idu7fgf7xoq0" path="res://src/edit/common_view/grid_select/GridSelectPanel.tscn" id="2_aee5m"]
 [ext_resource type="PackedScene" uid="uid://b7n1248vrbcli" path="res://src/edit/common_view/layer_select/LayerSelectPanel.tscn" id="3_460tr"]
+[ext_resource type="PackedScene" uid="uid://dotgc0a843cxq" path="res://src/edit/edit_map/MapHelpControl.tscn" id="3_uiuoe"]
 [ext_resource type="Script" path="res://src/edit/edit_map/EditCamera2D.cs" id="4_4wtmk"]
-
-[sub_resource type="TileSet" id="TileSet_sjdkv"]
-tile_size = Vector2i(20, 20)
+[ext_resource type="PackedScene" uid="uid://fyrhpybvnipl" path="res://src/edit/common_view/tool/ToolContainer.tscn" id="7_wskmt"]
+[ext_resource type="PackedScene" uid="uid://b2ua6jf72qvwe" path="res://src/edit/common_view/temp_select/TempSelectPanel.tscn" id="8_8qmkr"]
 
 [node name="EditMapView" type="Control"]
 layout_mode = 3
@@ -15,23 +16,57 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_ynj5o")
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_sjdkv")
-format = 2
+[node name="EditTileMap" parent="." instance=ExtResource("2_32kvr")]
+position = Vector2(960, 540)
+
+[node name="MapHelpControl" parent="EditTileMap" instance=ExtResource("3_uiuoe")]
+y_sort_enabled = true
+offset_right = 1000.0
+offset_bottom = 1000.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3, 3)
+position = Vector2(960, 540)
 script = ExtResource("4_4wtmk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+layer = 0
 
 [node name="ReturnButton" type="Button" parent="Camera2D/CanvasLayer"]
 offset_right = 181.0
-offset_bottom = 74.0
+offset_bottom = 75.0
+mouse_filter = 1
 text = "返回上一个界面"
 
+[node name="SaveButton" type="Button" parent="Camera2D/CanvasLayer"]
+offset_top = 1001.0
+offset_right = 181.0
+offset_bottom = 1076.0
+text = "保存地图"
+
 [node name="GridSelectPanel" parent="Camera2D/CanvasLayer" instance=ExtResource("2_aee5m")]
+offset_left = 1420.0
+offset_top = 310.0
+offset_right = 0.0
+offset_bottom = -160.0
 
 [node name="LayerSelectPane" parent="Camera2D/CanvasLayer" instance=ExtResource("3_460tr")]
+
+[node name="ToolContainer" parent="Camera2D/CanvasLayer" instance=ExtResource("7_wskmt")]
+offset_left = 243.0
+offset_top = 4.0
+offset_right = 1260.0
+offset_bottom = 34.0
+
+[node name="TempSelectPanel" parent="Camera2D/CanvasLayer" instance=ExtResource("8_8qmkr")]
+offset_left = 243.0
+offset_top = 34.0
+offset_right = 243.0
+offset_bottom = 34.0
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

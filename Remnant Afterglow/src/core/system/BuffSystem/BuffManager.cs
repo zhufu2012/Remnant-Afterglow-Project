@@ -19,6 +19,7 @@ namespace Remnant_Afterglow
             Instance = this;
         }
 
+        //获取对应buffId的克隆
         public IBuff GetBuff(int buffId)
         {
             if (buffDict.ContainsKey(buffId))

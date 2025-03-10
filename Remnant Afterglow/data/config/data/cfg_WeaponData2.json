@@ -1,24 +1,182 @@
 [
     {
         "KEY_INDEX": "4001",
-        "ObjectId": 4001,
-        "Range": 40.0,
+        "WeaponId": 4001,
+        "MountLookTarget": true,
+        "BulletId": "fastBullet",
+        "Range": 400.0,
         "LaunchTotal": 10,
-        "EmissionInterval": 1,
+        "EmissionInterval": 60,
         "FirePointList": [
             [
-                40.0,
-                40.0
-            ],
-            [
-                41.0,
-                40.0
+                0.0,
+                10.0
             ]
         ],
-        "EmissionNum": 5,
-        "CoolTime": 120,
+        "EmissionNum": 1,
+        "CoolTime": 240,
         "StartAngle": 0.0,
         "RotationSpeed": 90.0,
         "CurrScatteringRange": 2.0
+    },
+    {
+        "KEY_INDEX": "1001",
+        "WeaponId": 1001,
+        "MountLookTarget": true,
+        "BulletId": "fastBullet",
+        "Range": 400.0,
+        "LaunchTotal": 10,
+        "EmissionInterval": 60,
+        "FirePointList": [
+            [
+                0.0,
+                10.0
+            ]
+        ],
+        "EmissionNum": 1,
+        "CoolTime": 240,
+        "StartAngle": 0.0,
+        "RotationSpeed": 90.0,
+        "CurrScatteringRange": 2.0
+    },
+    {
+        "KEY_INDEX": "100001",
+        "WeaponId": 100001,
+        "MountLookTarget": true,
+        "BulletId": "fastBullet",
+        "Range": 400.0,
+        "LaunchTotal": 40,
+        "EmissionInterval": 15,
+        "FirePointList": [
+            [
+                50.0,
+                0.0
+            ]
+        ],
+        "EmissionNum": 1,
+        "CoolTime": 133,
+        "StartAngle": 0.0,
+        "RotationSpeed": 120.0,
+        "CurrScatteringRange": 0.0
+    },
+    {
+        "KEY_INDEX": "100002",
+        "WeaponId": 100002,
+        "MountLookTarget": true,
+        "BulletId": "fastBullet",
+        "Range": 500.0,
+        "LaunchTotal": 40,
+        "EmissionInterval": 6,
+        "FirePointList": [
+            [
+                50.0,
+                0.0
+            ]
+        ],
+        "EmissionNum": 1,
+        "CoolTime": 60,
+        "StartAngle": 0.0,
+        "RotationSpeed": 120.0,
+        "CurrScatteringRange": 0.0
+    },
+    {
+        "KEY_INDEX": "100003",
+        "WeaponId": 100003,
+        "MountLookTarget": true,
+        "BulletId": "fastBullet",
+        "Range": 550.0,
+        "LaunchTotal": 50,
+        "EmissionInterval": 6,
+        "FirePointList": [
+            [
+                50.0,
+                0.0
+            ]
+        ],
+        "EmissionNum": 1,
+        "CoolTime": 60,
+        "StartAngle": 0.0,
+        "RotationSpeed": 120.0,
+        "CurrScatteringRange": 0.0
+    },
+    {
+        "KEY_INDEX": "101001",
+        "WeaponId": 101001,
+        "MountLookTarget": true,
+        "BulletId": "fastBullet",
+        "Range": 500.0,
+        "LaunchTotal": 50,
+        "EmissionInterval": 6,
+        "FirePointList": [
+            [
+                50.0,
+                0.0
+            ]
+        ],
+        "EmissionNum": 1,
+        "CoolTime": 60,
+        "StartAngle": 0.0,
+        "RotationSpeed": 120.0,
+        "CurrScatteringRange": 0.0
+    },
+    {
+        "KEY_INDEX": "100901",
+        "WeaponId": 100901,
+        "MountLookTarget": true,
+        "BulletId": "fastBullet",
+        "Range": 1000.0,
+        "LaunchTotal": 50,
+        "EmissionInterval": 6,
+        "FirePointList": [
+            [
+                50.0,
+                0.0
+            ]
+        ],
+        "EmissionNum": 1,
+        "CoolTime": 60,
+        "StartAngle": 0.0,
+        "RotationSpeed": 120.0,
+        "CurrScatteringRange": 0.0
+    },
+    {
+        "KEY_INDEX": "100501",
+        "WeaponId": 100501,
+        "MountLookTarget": true,
+        "BulletId": "fastBullet",
+        "Range": 400.0,
+        "LaunchTotal": 50,
+        "EmissionInterval": 6,
+        "FirePointList": [
+            [
+                50.0,
+                0.0
+            ]
+        ],
+        "EmissionNum": 1,
+        "CoolTime": 60,
+        "StartAngle": 0.0,
+        "RotationSpeed": 120.0,
+        "CurrScatteringRange": 0.0
+    },
+    {
+        "KEY_INDEX": "100301",
+        "WeaponId": 100301,
+        "MountLookTarget": true,
+        "BulletId": "fastBullet",
+        "Range": 400.0,
+        "LaunchTotal": 50,
+        "EmissionInterval": 6,
+        "FirePointList": [
+            [
+                50.0,
+                0.0
+            ]
+        ],
+        "EmissionNum": 1,
+        "CoolTime": 60,
+        "StartAngle": 0.0,
+        "RotationSpeed": 120.0,
+        "CurrScatteringRange": 0.0
     }
 ]

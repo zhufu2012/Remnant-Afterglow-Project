@@ -298,5 +298,81 @@
         "mod_path": "./mods/test_mod2/"
       }
     ]
+  },
+  {
+    "group_name": "生产",
+    "mod_num": 3,
+    "mod_time": 0,
+    "modAllInfoList": [
+      {
+        "modInfo": {
+          "PckList": [],
+          "DllList": [],
+          "ImgList": [],
+          "Name": "测试模组1",
+          "DisplayName": "测试模组1",
+          "Author": "这里是作者名称",
+          "Icon": "icon.png",
+          "Description": "这是对科技树的分支拓展，拓展了两个分支,\r\n\t模组1-拓展科技页-建筑\r\n\t模组1-拓展科技页-炮塔\r\n",
+          "InfoUrl": "https://github.com/zhufu2012",
+          "Version": "模组版本",
+          "MinGameVersion": "最低游戏版本",
+          "MaxGameVersion": "最高游戏版本",
+          "HasExcel": true,
+          "HasPck": true,
+          "HasCsharp": true,
+          "DependenciesList": [],
+          "RequiresRestart": false
+        },
+        "file_name": "test_mod",
+        "mod_path": "./mods/test_mod/"
+      },
+      {
+        "modInfo": {
+          "PckList": [],
+          "DllList": [],
+          "ImgList": [],
+          "Name": "测试模组2",
+          "DisplayName": "测试模组2",
+          "Author": "这里是作者名称",
+          "Icon": "icon.png",
+          "Description": "对测试模组1的 科技拓展分支1进行 科技拓展",
+          "InfoUrl": "https://github.com/zhufu2012",
+          "Version": "模组版本",
+          "MinGameVersion": "最低游戏版本",
+          "MaxGameVersion": "最高游戏版本",
+          "HasExcel": true,
+          "HasPck": true,
+          "HasCsharp": true,
+          "DependenciesList": [],
+          "RequiresRestart": false
+        },
+        "file_name": "test_mod2",
+        "mod_path": "./mods/test_mod2/"
+      },
+      {
+        "modInfo": {
+          "PckList": [],
+          "DllList": [],
+          "ImgList": [],
+          "Name": "测试模组3",
+          "DisplayName": "显示名称",
+          "Author": "这里是作者名称",
+          "Icon": "icon.png",
+          "Description": "对测试模组1的科技分支2的科技1修改",
+          "InfoUrl": "https://github.com/zhufu2012",
+          "Version": "模组版本",
+          "MinGameVersion": "最低游戏版本",
+          "MaxGameVersion": "最高游戏版本",
+          "HasExcel": true,
+          "HasPck": true,
+          "HasCsharp": true,
+          "DependenciesList": [],
+          "RequiresRestart": false
+        },
+        "file_name": "test_mod3",
+        "mod_path": "./mods/test_mod3/"
+      }
+    ]
   }
 ]

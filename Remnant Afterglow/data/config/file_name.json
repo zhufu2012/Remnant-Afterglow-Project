@@ -320,7 +320,6 @@
             "key_list": {
                 "KEY_INDEX": "string",
                 "CameraId": "int",
-                "AssemblyIdList": "List<int>",
                 "StartPos": "Vector2",
                 "IsMove": "bool",
                 "MoveSpeed": "int",
@@ -338,28 +337,6 @@
             }
         },
         {
-            "file_name": "cfg_CameraAssemblyBase",
-            "file_path": "./data/config/data/cfg_CameraAssemblyBase.json",
-            "xlsx_dec": "相机组件表",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "AssemblyId": "int",
-                "Type1": "int",
-                "Type2": "int",
-                "Param1": "int",
-                "Param2": "int",
-                "ParamStr1": "string",
-                "ParamPosLIst": "int",
-                "ParamPng1": "Texture2D",
-                "ParamPng2": "Texture2D",
-                "ParamPng3": "Texture2D",
-                "ParamPng4": "Texture2D",
-                "IsDefineShow": "bool",
-                "Size": "Vector2",
-                "Pos": "Vector2"
-            }
-        },
-        {
             "file_name": "cfg_AnimaUnit",
             "file_path": "./data/config/data/cfg_AnimaUnit.json",
             "xlsx_dec": "单位帧动画配置",
@@ -372,29 +349,7 @@
                 "MaxIndex": "int",
                 "Size": "Vector2I",
                 "Offset": "Vector2",
-                "RelativeList": "List<List<int>>",
-                "SpeedScale": "int",
-                "IsAutoplay": "bool",
-                "IsLoop": "bool",
-                "Picture": "Texture2D",
-                "FlipH": "bool",
-                "FlipV": "bool"
-            }
-        },
-        {
-            "file_name": "cfg_AnimaTower",
-            "file_path": "./data/config/data/cfg_AnimaTower.json",
-            "xlsx_dec": "炮塔动画",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "ObjectId": "int",
-                "AnimaType": "int",
-                "Coords": "Vector2I",
-                "LengWidth": "Vector2I",
-                "MaxIndex": "int",
-                "Size": "Vector2I",
-                "Offset": "Vector2",
-                "RelativeList": "List<List<int>>",
+                "RelativeList": "List<List<float>>",
                 "SpeedScale": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
@@ -416,7 +371,29 @@
                 "MaxIndex": "int",
                 "Size": "Vector2I",
                 "Offset": "Vector2",
-                "RelativeList": "List<List<int>>",
+                "RelativeList": "List<List<float>>",
+                "SpeedScale": "int",
+                "IsAutoplay": "bool",
+                "IsLoop": "bool",
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
+            }
+        },
+        {
+            "file_name": "cfg_AnimaTower",
+            "file_path": "./data/config/data/cfg_AnimaTower.json",
+            "xlsx_dec": "炮塔动画",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ObjectId": "int",
+                "AnimaType": "int",
+                "Coords": "Vector2I",
+                "LengWidth": "Vector2I",
+                "MaxIndex": "int",
+                "Size": "Vector2I",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<float>>",
                 "SpeedScale": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
@@ -431,14 +408,14 @@
             "xlsx_dec": "武器动画",
             "key_list": {
                 "KEY_INDEX": "string",
-                "ObjectId": "int",
+                "WeaponId": "int",
                 "AnimaType": "int",
                 "Coords": "Vector2I",
                 "LengWidth": "Vector2I",
                 "MaxIndex": "int",
                 "Size": "Vector2I",
                 "Offset": "Vector2",
-                "RelativeList": "List<List<int>>",
+                "RelativeList": "List<List<float>>",
                 "SpeedScale": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
@@ -460,7 +437,7 @@
                 "MaxIndex": "int",
                 "Size": "Vector2I",
                 "Offset": "Vector2",
-                "RelativeList": "List<List<int>>",
+                "RelativeList": "List<List<float>>",
                 "FrameSpeed": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
@@ -482,7 +459,7 @@
                 "MaxIndex": "int",
                 "Size": "Vector2I",
                 "Offset": "Vector2",
-                "RelativeList": "List<List<int>>",
+                "RelativeList": "List<List<float>>",
                 "FrameSpeed": "int",
                 "IsAutoplay": "bool",
                 "IsLoop": "bool",
@@ -503,7 +480,7 @@
                 "LengWidth": "Vector2I",
                 "MaxIndex": "int",
                 "Offset": "Vector2",
-                "RelativeList": "List<List<int>>",
+                "RelativeList": "List<List<float>>",
                 "FrameSpeed": "int",
                 "PlaySpeed": "int",
                 "IsAutoplay": "bool",
@@ -537,6 +514,18 @@
             }
         },
         {
+            "file_name": "cfg_GenerateFixedMap",
+            "file_path": "./data/config/data/cfg_GenerateFixedMap.json",
+            "xlsx_dec": "固定地图配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "MapId": "int",
+                "Name": "string",
+                "MapDescribe": "string",
+                "MapName": "string"
+            }
+        },
+        {
             "file_name": "cfg_MapFixedSet",
             "file_path": "./data/config/data/cfg_MapFixedSet.json",
             "xlsx_dec": "固定地图图集 ",
@@ -544,6 +533,7 @@
                 "KEY_INDEX": "string",
                 "EditImageSetId": "int",
                 "EditSetName": "string",
+                "ImageLayer": "int",
                 "MaterialIdList": "List<int>"
             }
         },
@@ -565,27 +555,17 @@
             }
         },
         {
-            "file_name": "cfg_GenerateFixedMap",
-            "file_path": "./data/config/data/cfg_GenerateFixedMap.json",
-            "xlsx_dec": "固定地图配置",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "MapId": "int",
-                "MapName": "string",
-                "MapDescribe": "string",
-                "MapPath": "string"
-            }
-        },
-        {
             "file_name": "cfg_MapPassType",
             "file_path": "./data/config/data/cfg_MapPassType.json",
             "xlsx_dec": "地图可通过类型",
             "key_list": {
                 "KEY_INDEX": "string",
                 "PassTypeId": "int",
+                "IsBuild": "bool",
                 "IsPass": "bool",
                 "ExamineType": "int",
                 "PassCost": "int",
+                "PassCostAdd": "int",
                 "Type": "int",
                 "PassSpeedParm": "float",
                 "BuildInfluence": "string",
@@ -605,6 +585,18 @@
             }
         },
         {
+            "file_name": "cfg_MapWallShadow",
+            "file_path": "./data/config/data/cfg_MapWallShadow.json",
+            "xlsx_dec": "地图墙壁阴影配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "MaterialId": "int",
+                "EdgeId": "int",
+                "ImageSetId": "int",
+                "ImageSetIndex": "int"
+            }
+        },
+        {
             "file_name": "cfg_MapImageSet",
             "file_path": "./data/config/data/cfg_MapImageSet.json",
             "xlsx_dec": "地图图像集",
@@ -615,7 +607,6 @@
                 "ImageSetDescribe": "string",
                 "ImageSetType": "int",
                 "ImageSetMaxId": "int",
-                "ImageSetLayer": "int",
                 "MapImageSize": "Vector2I",
                 "MapImageSet": "Texture2D"
             }
@@ -850,15 +841,42 @@
             }
         },
         {
-            "file_name": "cfg_UnitGroupType",
-            "file_path": "./data/config/data/cfg_UnitGroupType.json",
-            "xlsx_dec": "单位组类型",
+            "file_name": "cfg_CopyBrush",
+            "file_path": "./data/config/data/cfg_CopyBrush.json",
+            "xlsx_dec": "战役关卡刷怪数据",
             "key_list": {
                 "KEY_INDEX": "string",
-                "GroupTypeId": "int",
-                "ShowName": "string",
-                "Name": "string",
-                "PromptPng": "Texture2D"
+                "ChapterId": "int",
+                "CopyId": "int",
+                "CopyType": "int",
+                "AllWave": "int",
+                "PrepareTime": "int",
+                "BrushSpace": "int",
+                "BrushSpaceList": "List<List<int>>",
+                "BrushIdList": "List<int>"
+            }
+        },
+        {
+            "file_name": "cfg_BrushPoint",
+            "file_path": "./data/config/data/cfg_BrushPoint.json",
+            "xlsx_dec": "刷怪点数据",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "BrushId": "int",
+                "BrushPosList": "List<Vector2I>",
+                "WaveIdList": "List<int>"
+            }
+        },
+        {
+            "file_name": "cfg_WaveBase",
+            "file_path": "./data/config/data/cfg_WaveBase.json",
+            "xlsx_dec": "波数配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "BrushId": "int",
+                "WaveId": "int",
+                "WaveName": "string",
+                "WaveUnitGroup": "List<List<int>>"
             }
         },
         {
@@ -868,12 +886,23 @@
             "key_list": {
                 "KEY_INDEX": "string",
                 "GroupId": "int",
-                "GroupType": "int",
                 "Name": "string",
                 "Describe": "string",
                 "ShowDescribe": "string",
-                "CaptainId": "int",
-                "TempLateList": "List<List<int>>"
+                "UnitList": "List<List<int>>",
+                "CountInterval": "List<int>"
+            }
+        },
+        {
+            "file_name": "cfg_UnitGroupType",
+            "file_path": "./data/config/data/cfg_UnitGroupType.json",
+            "xlsx_dec": "单位组类型",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "GroupTypeId": "int",
+                "ShowName": "string",
+                "Name": "string",
+                "PromptPng": "Texture2D"
             }
         },
         {
@@ -913,50 +942,16 @@
             }
         },
         {
-            "file_name": "cfg_CopyBrush",
-            "file_path": "./data/config/data/cfg_CopyBrush.json",
-            "xlsx_dec": "战役关卡刷怪数据",
+            "file_name": "cfg_CopyBuildLimit",
+            "file_path": "./data/config/data/cfg_CopyBuildLimit.json",
+            "xlsx_dec": "关卡建造限制",
             "key_list": {
                 "KEY_INDEX": "string",
                 "ChapterId": "int",
                 "CopyId": "int",
-                "CopyType": "int",
-                "AllWave": "int",
-                "BrushSpace": "int",
-                "BrushSpaceList": "List<List<int>>",
-                "BrushIdList": "List<int>"
-            }
-        },
-        {
-            "file_name": "cfg_BrushPoint",
-            "file_path": "./data/config/data/cfg_BrushPoint.json",
-            "xlsx_dec": "刷怪点数据",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "BrushId": "int",
-                "BrushShowType": "bool",
-                "BrushPos": "Vector2I",
-                "WaveIdList": "List<int>",
-                "ShapeType": "int",
-                "ShapeParame": "List<List<int>>"
-            }
-        },
-        {
-            "file_name": "cfg_WaveBase",
-            "file_path": "./data/config/data/cfg_WaveBase.json",
-            "xlsx_dec": "波数配置",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "BrushId": "int",
-                "WaveId": "int",
-                "WaveName": "string",
-                "WaveType": "int",
-                "WaveWay": "int",
-                "WaveDes": "string",
-                "WaveData": "List<List<int>>",
-                "WaveData2": "List<List<int>>",
-                "WaveRandData": "List<List<int>>",
-                "WaveTime": "int"
+                "LimitLv": "int",
+                "IsChallenge": "bool",
+                "LimitBuildItemIdList": "List<int>"
             }
         },
         {
@@ -1043,11 +1038,13 @@
             "key_list": {
                 "KEY_INDEX": "string",
                 "BulletLabel": "string",
-                "AnimaTypeList": "List<int>",
                 "SceneType": "int",
                 "Logic": "string",
                 "CollideId": "int",
-                "SoundId": "string"
+                "SoundId": "string",
+                "ZIndex": "int",
+                "BulletPng": "Texture2D",
+                "AnimaTypeList": "List<int>"
             }
         },
         {
@@ -1058,7 +1055,11 @@
                 "KEY_INDEX": "string",
                 "BulletLabel": "string",
                 "BulletName": "string",
-                "AttrHarm": "List<List<float>>",
+                "ShieldHarm": "int",
+                "ArmourHarm": "int",
+                "StructureHarm": "int",
+                "ElementHarm": "int",
+                "HitEvent": "List<int>",
                 "MaxLifeTime": "float",
                 "MaxDistance": "float",
                 "BounceCount": "float",
@@ -1133,7 +1134,11 @@
             "key_list": {
                 "KEY_INDEX": "string",
                 "ObjectId": "int",
-                "Type": "int",
+                "UnitAIType": "int",
+                "WeaponList": "List<List<int>>",
+                "AttackIsMove": "bool",
+                "ForceAttackRange": "float",
+                "PathfindingDis": "float",
                 "IsRotateWeapon": "bool",
                 "ImmuneList": "List<int>"
             }
@@ -1199,39 +1204,36 @@
                 "BuffIdList": "HashSet<int>",
                 "IsMove": "bool",
                 "IsCollide": "bool",
+                "AttributeBarList": "List<int>",
+                "Volume": "float",
                 "CollisionLayerList": "List<int>",
                 "MaskLayerList": "List<int>",
                 "CollidePos": "Vector2",
                 "ShapeType": "int",
-                "ShapePointList": "List<List<float>>",
+                "ShapePointList": "List<int>",
                 "CollideRotate": "float",
                 "SafeMargin": "float"
             }
         },
         {
-            "file_name": "cfg_BaseObjectWeapon",
-            "file_path": "./data/config/data/cfg_BaseObjectWeapon.json",
-            "xlsx_dec": "实体武器表",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "ObjectId": "int",
-                "WeaponNum": "int",
-                "CampId": "List<List<int>>"
-            }
-        },
-        {
             "file_name": "cfg_BuildData",
             "file_path": "./data/config/data/cfg_BuildData.json",
-            "xlsx_dec": "建筑数据",
+            "xlsx_dec": "建筑及炮塔数据",
             "key_list": {
                 "KEY_INDEX": "string",
                 "ObjectId": "int",
                 "BuildingName": "string",
+                "Describe": "string",
+                "Type": "int",
                 "DefaultCamp": "int",
+                "Price": "List<List<int>>",
+                "WeekLength": "int",
+                "WeekResources": "List<List<int>>",
                 "BuildingSize": "int",
                 "BuildingRules": "List<int>",
                 "BuildProgress": "int",
-                "AnimaTypeList": "List<int>"
+                "AnimaTypeList": "List<int>",
+                "WeaponList": "List<List<int>>"
             }
         },
         {
@@ -1253,7 +1255,7 @@
             "xlsx_dec": "武器数据1",
             "key_list": {
                 "KEY_INDEX": "string",
-                "ObjectId": "int",
+                "WeaponId": "int",
                 "Name": "string",
                 "Describe": "string",
                 "Type": "int",
@@ -1269,31 +1271,18 @@
             "xlsx_dec": "武器数据2",
             "key_list": {
                 "KEY_INDEX": "string",
-                "ObjectId": "int",
+                "WeaponId": "int",
+                "MountLookTarget": "bool",
+                "BulletId": "string",
                 "Range": "float",
                 "LaunchTotal": "int",
                 "EmissionInterval": "int",
-                "FirePointList": "List<List<float>>",
+                "FirePointList": "List<Vector2>",
                 "EmissionNum": "int",
                 "CoolTime": "int",
                 "StartAngle": "float",
                 "RotationSpeed": "float",
                 "CurrScatteringRange": "float"
-            }
-        },
-        {
-            "file_name": "cfg_TowerData",
-            "file_path": "./data/config/data/cfg_TowerData.json",
-            "xlsx_dec": "炮塔基础表",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "ObjectId": "int",
-                "TowerName": "string",
-                "TowerSize": "Vector2I",
-                "BuildingRules": "List<int>",
-                "BuildProgress": "int",
-                "WeaponList": "List<List<int>>",
-                "AnimaTypeList": "List<int>"
             }
         },
         {
@@ -1305,7 +1294,6 @@
                 "AttributeId": "int",
                 "ShowName": "string",
                 "AttributeDescribe": "string",
-                "ShowType": "int",
                 "ShowColor": "Color",
                 "DependencyIdList": "List<int>"
             }
@@ -1390,10 +1378,10 @@
             "xlsx_dec": "建造项数据",
             "key_list": {
                 "KEY_INDEX": "string",
+                "BuildItemId": "int",
                 "BuildLableId": "int",
-                "BuildItemId": "string",
                 "ObjectId": "int",
-                "ShowCondition": "List<List<int>>",
+                "IsNeedScience": "bool",
                 "LablePng": "Texture2D"
             }
         },
@@ -1446,47 +1434,42 @@
         {
             "file_name": "cfg_bagData",
             "file_path": "./data/config/data/cfg_bagData.json",
-            "xlsx_dec": "游戏难度相关",
+            "xlsx_dec": "背包配置",
             "key_list": {
                 "KEY_INDEX": "string",
                 "BagId": "int",
                 "BagName": "string",
                 "BagDesc": "string",
-                "BagType": "int",
-                "Crosswise": "int",
-                "Vertical": "int"
-            }
-        },
-        {
-            "file_name": "cfg_MoneyBase",
-            "file_path": "./data/config/data/cfg_MoneyBase.json",
-            "xlsx_dec": "货币界面显示配置",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "MoneyId": "int",
-                "MoneyType": "int",
-                "MoneyName": "string",
-                "NowValue": "float",
-                "Max": "float",
-                "Min": "float",
-                "Regen": "float",
-                "RegenFps": "float",
-                "MoneyImg": "Texture2D",
-                "MoneyImgShow": "Texture2D"
+                "BagType": "int"
             }
         },
         {
             "file_name": "cfg_itemData",
             "file_path": "./data/config/data/cfg_itemData.json",
-            "xlsx_dec": "道具基础数据",
+            "xlsx_dec": "道具配置",
             "key_list": {
                 "KEY_INDEX": "string",
                 "ItemId": "int",
                 "ItemName": "string",
                 "ItemDesc": "string",
-                "InitNum": "int",
+                "ItemType": "int",
                 "BagId": "int",
-                "ItemType": "int"
+                "InitNum": "int"
+            }
+        },
+        {
+            "file_name": "cfg_MoneyBase",
+            "file_path": "./data/config/data/cfg_MoneyBase.json",
+            "xlsx_dec": "货币配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "MoneyId": "int",
+                "MoneyName": "string",
+                "MoneyType": "int",
+                "NowValue": "int",
+                "Max": "int",
+                "MoneyImg": "Texture2D",
+                "MoneyImgShow": "Texture2D"
             }
         },
         {

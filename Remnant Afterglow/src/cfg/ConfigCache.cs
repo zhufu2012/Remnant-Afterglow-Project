@@ -34,21 +34,21 @@ namespace Remnant_Afterglow
             LoadGlobalConfigList();
             LoadFunctionTemplate();
             LoadCameraBase();
-            LoadCameraAssemblyBase();
             LoadAnimaUnit();
-            LoadAnimaTower();
             LoadAnimaBuild();
+            LoadAnimaTower();
             LoadAnimaWeapon();
             LoadAnimaWorker();
             LoadAnimaBullet();
             LoadAnimaExplode();
             LoadSequenceMapBase();
             LoadSpeciallyEffect();
+            LoadGenerateFixedMap();
             LoadMapFixedSet();
             LoadMapFixedMaterial();
-            LoadGenerateFixedMap();
             LoadMapPassType();
             LoadMapEdge();
+            LoadMapWallShadow();
             LoadMapMassif();
             LoadMapImageLayer();
             LoadMapPhysicsLayer();
@@ -62,13 +62,14 @@ namespace Remnant_Afterglow
             LoadBigMapBigCell();
             LoadBigMapCellLogic();
             LoadBigMapEvent();
-            LoadUnitGroupType();
-            LoadUnitGroupData();
-            LoadChapterBase();
-            LoadChapterCopyBase();
             LoadCopyBrush();
             LoadBrushPoint();
             LoadWaveBase();
+            LoadUnitGroupData();
+            LoadUnitGroupType();
+            LoadChapterBase();
+            LoadChapterCopyBase();
+            LoadCopyBuildLimit();
             LoadChapterCopyUI();
             LoadBackgroundMusic();
             LoadSoundEffect();
@@ -88,12 +89,10 @@ namespace Remnant_Afterglow
             LoadObjectBottomBar();
             LoadObjectSideBar();
             LoadBaseObjectData();
-            LoadBaseObjectWeapon();
             LoadBuildData();
             LoadWorkerData();
             LoadWeaponData();
             LoadWeaponData2();
-            LoadTowerData();
             LoadAttributeBase();
             LoadAttrCalculate();
             LoadAttrDependency();
@@ -106,10 +105,11 @@ namespace Remnant_Afterglow
             LoadCampBase();
             LoadGameDiffBase();
             LoadBagData();
-            LoadMoneyBase();
             LoadItemData();
+            LoadMoneyBase();
             LoadErrorBase();
         }
+
 
 
         #region buff配置
@@ -172,12 +172,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BuffTag> GetAllBuffTag()
         {
-            List<BuffTag> list = new List<BuffTag>();
-            foreach (var val in BuffTag_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BuffTag>(BuffTag_Cache.Values);
         }
         /// <summary>
         /// buff基础数据配置缓存
@@ -238,14 +233,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BuffData> GetAllBuffData()
         {
-            List<BuffData> list = new List<BuffData>();
-            foreach (var val in BuffData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BuffData>(BuffData_Cache.Values);
         }
         #endregion
+
         #region Ui界面配置
         /// <summary>
         /// 界面基础配置配置缓存
@@ -306,14 +297,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ViewBase> GetAllViewBase()
         {
-            List<ViewBase> list = new List<ViewBase>();
-            foreach (var val in ViewBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ViewBase>(ViewBase_Cache.Values);
         }
         #endregion
+
         #region 主界面更新日志
         /// <summary>
         /// 更新日志配置缓存
@@ -374,14 +361,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<UpdateLog> GetAllUpdateLog()
         {
-            List<UpdateLog> list = new List<UpdateLog>();
-            foreach (var val in UpdateLog_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<UpdateLog>(UpdateLog_Cache.Values);
         }
         #endregion
+
         #region 数据库界面及成就相关配置
         /// <summary>
         /// 数据库成就分页配置缓存
@@ -442,12 +425,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttainmentPage> GetAllAttainmentPage()
         {
-            List<AttainmentPage> list = new List<AttainmentPage>();
-            foreach (var val in AttainmentPage_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttainmentPage>(AttainmentPage_Cache.Values);
         }
         /// <summary>
         /// 数据库成就相关配置配置缓存
@@ -508,14 +486,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttainmentBase> GetAllAttainmentBase()
         {
-            List<AttainmentBase> list = new List<AttainmentBase>();
-            foreach (var val in AttainmentBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttainmentBase>(AttainmentBase_Cache.Values);
         }
         #endregion
+
         #region 科技树解锁界面相关配置
         /// <summary>
         /// 科技范围配置配置缓存
@@ -576,12 +550,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ScienceRange> GetAllScienceRange()
         {
-            List<ScienceRange> list = new List<ScienceRange>();
-            foreach (var val in ScienceRange_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ScienceRange>(ScienceRange_Cache.Values);
         }
         /// <summary>
         /// 科技基础显示配置配置缓存
@@ -642,12 +611,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ScienceBase> GetAllScienceBase()
         {
-            List<ScienceBase> list = new List<ScienceBase>();
-            foreach (var val in ScienceBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ScienceBase>(ScienceBase_Cache.Values);
         }
         /// <summary>
         /// 科技激活相关数据配置缓存
@@ -708,14 +672,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ScienceData> GetAllScienceData()
         {
-            List<ScienceData> list = new List<ScienceData>();
-            foreach (var val in ScienceData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ScienceData>(ScienceData_Cache.Values);
         }
         #endregion
+
         #region 配置界面相关
         /// <summary>
         /// 道具配置界面数据配置缓存
@@ -776,12 +736,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ItemDeployData> GetAllItemDeployData()
         {
-            List<ItemDeployData> list = new List<ItemDeployData>();
-            foreach (var val in ItemDeployData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ItemDeployData>(ItemDeployData_Cache.Values);
         }
         /// <summary>
         /// 核心插件配置数据配置缓存
@@ -842,12 +797,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<CorePlugDeployData> GetAllCorePlugDeployData()
         {
-            List<CorePlugDeployData> list = new List<CorePlugDeployData>();
-            foreach (var val in CorePlugDeployData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<CorePlugDeployData>(CorePlugDeployData_Cache.Values);
         }
         /// <summary>
         /// 科技配置数据配置缓存
@@ -908,14 +858,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ScienceDeployData> GetAllScienceDeployData()
         {
-            List<ScienceDeployData> list = new List<ScienceDeployData>();
-            foreach (var val in ScienceDeployData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ScienceDeployData>(ScienceDeployData_Cache.Values);
         }
         #endregion
+
         #region 配置特殊功能表
         /// <summary>
         /// 配置覆盖关系表配置缓存
@@ -976,12 +922,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ConfigCover> GetAllConfigCover()
         {
-            List<ConfigCover> list = new List<ConfigCover>();
-            foreach (var val in ConfigCover_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ConfigCover>(ConfigCover_Cache.Values);
         }
         /// <summary>
         /// 配置调用关系表配置缓存
@@ -1042,14 +983,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ConfigCall> GetAllConfigCall()
         {
-            List<ConfigCall> list = new List<ConfigCall>();
-            foreach (var val in ConfigCall_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ConfigCall>(ConfigCall_Cache.Values);
         }
         #endregion
+
         #region 默认配置表
         /// <summary>
         /// 全局配置Int数据配置缓存
@@ -1110,12 +1047,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigInt> GetAllGlobalConfigInt()
         {
-            List<GlobalConfigInt> list = new List<GlobalConfigInt>();
-            foreach (var val in GlobalConfigInt_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigInt>(GlobalConfigInt_Cache.Values);
         }
         /// <summary>
         /// Png散图配置缓存
@@ -1176,12 +1108,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigPng> GetAllGlobalConfigPng()
         {
-            List<GlobalConfigPng> list = new List<GlobalConfigPng>();
-            foreach (var val in GlobalConfigPng_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigPng>(GlobalConfigPng_Cache.Values);
         }
         /// <summary>
         /// Str数据配置缓存
@@ -1242,12 +1169,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigStr> GetAllGlobalConfigStr()
         {
-            List<GlobalConfigStr> list = new List<GlobalConfigStr>();
-            foreach (var val in GlobalConfigStr_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigStr>(GlobalConfigStr_Cache.Values);
         }
         /// <summary>
         /// float数据配置缓存
@@ -1308,12 +1230,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigFloat> GetAllGlobalConfigFloat()
         {
-            List<GlobalConfigFloat> list = new List<GlobalConfigFloat>();
-            foreach (var val in GlobalConfigFloat_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigFloat>(GlobalConfigFloat_Cache.Values);
         }
         /// <summary>
         /// List数据配置缓存
@@ -1374,14 +1291,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigList> GetAllGlobalConfigList()
         {
-            List<GlobalConfigList> list = new List<GlobalConfigList>();
-            foreach (var val in GlobalConfigList_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigList>(GlobalConfigList_Cache.Values);
         }
         #endregion
+
         #region 函数模板
         /// <summary>
         /// 函数模板配置缓存
@@ -1442,16 +1355,13 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<FunctionTemplate> GetAllFunctionTemplate()
         {
-            List<FunctionTemplate> list = new List<FunctionTemplate>();
-            foreach (var val in FunctionTemplate_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<FunctionTemplate>(FunctionTemplate_Cache.Values);
         }
         #endregion
+
         #region 噪声
         #endregion
+
         #region 相机
         /// <summary>
         /// 相机基本数据配置缓存
@@ -1512,80 +1422,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<CameraBase> GetAllCameraBase()
         {
-            List<CameraBase> list = new List<CameraBase>();
-            foreach (var val in CameraBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 相机组件表配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, CameraAssemblyBase> CameraAssemblyBase_Cache = new Dictionary<string, CameraAssemblyBase>();
-        /// <summary>
-        /// 提前加载所有相机组件表配置缓存
-        /// </summary>
-        public static void LoadCameraAssemblyBase()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_CameraAssemblyBase);
-            foreach (var val in cfg_dict)
-            {
-                CameraAssemblyBase data = new CameraAssemblyBase(val.Value);
-                data.InitData2();
-                CameraAssemblyBase_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的相机组件表基础配置缓存
-        /// </summary>
-        public static CameraAssemblyBase GetCameraAssemblyBase(string cfgId)
-        {
-            if (!CameraAssemblyBase_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new CameraAssemblyBase(cfgId);
-                    data.InitData2();
-                    CameraAssemblyBase_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("相机.xlsx表中的 cfg_CameraAssemblyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static CameraAssemblyBase GetCameraAssemblyBase(int cfgId)
-        {
-            if (!CameraAssemblyBase_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new CameraAssemblyBase(cfgId);
-                    data.InitData2();
-                    CameraAssemblyBase_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("相机.xlsx表中的 cfg_CameraAssemblyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有相机组件表数据
-        /// </summary>
-        public static List<CameraAssemblyBase> GetAllCameraAssemblyBase()
-        {
-            List<CameraAssemblyBase> list = new List<CameraAssemblyBase>();
-            foreach (var val in CameraAssemblyBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<CameraBase>(CameraBase_Cache.Values);
         }
         #endregion
+
         #region 帧动画
         /// <summary>
         /// 单位帧动画配置配置缓存
@@ -1646,78 +1486,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaUnit> GetAllAnimaUnit()
         {
-            List<AnimaUnit> list = new List<AnimaUnit>();
-            foreach (var val in AnimaUnit_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 炮塔动画配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, AnimaTower> AnimaTower_Cache = new Dictionary<string, AnimaTower>();
-        /// <summary>
-        /// 提前加载所有炮塔动画配置缓存
-        /// </summary>
-        public static void LoadAnimaTower()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaTower);
-            foreach (var val in cfg_dict)
-            {
-                AnimaTower data = new AnimaTower(val.Value);
-                data.InitData2();
-                AnimaTower_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的炮塔动画基础配置缓存
-        /// </summary>
-        public static AnimaTower GetAnimaTower(string cfgId)
-        {
-            if (!AnimaTower_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new AnimaTower(cfgId);
-                    data.InitData2();
-                    AnimaTower_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaTower配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static AnimaTower GetAnimaTower(int cfgId)
-        {
-            if (!AnimaTower_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new AnimaTower(cfgId);
-                    data.InitData2();
-                    AnimaTower_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaTower配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有炮塔动画数据
-        /// </summary>
-        public static List<AnimaTower> GetAllAnimaTower()
-        {
-            List<AnimaTower> list = new List<AnimaTower>();
-            foreach (var val in AnimaTower_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AnimaUnit>(AnimaUnit_Cache.Values);
         }
         /// <summary>
         /// 建筑动画配置缓存
@@ -1778,12 +1547,68 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaBuild> GetAllAnimaBuild()
         {
-            List<AnimaBuild> list = new List<AnimaBuild>();
-            foreach (var val in AnimaBuild_Cache)
+            return new List<AnimaBuild>(AnimaBuild_Cache.Values);
+        }
+        /// <summary>
+        /// 炮塔动画配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AnimaTower> AnimaTower_Cache = new Dictionary<string, AnimaTower>();
+        /// <summary>
+        /// 提前加载所有炮塔动画配置缓存
+        /// </summary>
+        public static void LoadAnimaTower()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaTower);
+            foreach (var val in cfg_dict)
             {
-                list.Add(val.Value);
+                AnimaTower data = new AnimaTower(val.Value);
+                data.InitData2();
+                AnimaTower_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的炮塔动画基础配置缓存
+        /// </summary>
+        public static AnimaTower GetAnimaTower(string cfgId)
+        {
+            if (!AnimaTower_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaTower(cfgId);
+                    data.InitData2();
+                    AnimaTower_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaTower配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AnimaTower GetAnimaTower(int cfgId)
+        {
+            if (!AnimaTower_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaTower(cfgId);
+                    data.InitData2();
+                    AnimaTower_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaTower配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有炮塔动画数据
+        /// </summary>
+        public static List<AnimaTower> GetAllAnimaTower()
+        {
+            return new List<AnimaTower>(AnimaTower_Cache.Values);
         }
         /// <summary>
         /// 武器动画配置缓存
@@ -1844,12 +1669,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaWeapon> GetAllAnimaWeapon()
         {
-            List<AnimaWeapon> list = new List<AnimaWeapon>();
-            foreach (var val in AnimaWeapon_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AnimaWeapon>(AnimaWeapon_Cache.Values);
         }
         /// <summary>
         /// 无人机动画配置缓存
@@ -1910,12 +1730,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaWorker> GetAllAnimaWorker()
         {
-            List<AnimaWorker> list = new List<AnimaWorker>();
-            foreach (var val in AnimaWorker_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AnimaWorker>(AnimaWorker_Cache.Values);
         }
         /// <summary>
         /// 子弹动画配置缓存
@@ -1976,12 +1791,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaBullet> GetAllAnimaBullet()
         {
-            List<AnimaBullet> list = new List<AnimaBullet>();
-            foreach (var val in AnimaBullet_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AnimaBullet>(AnimaBullet_Cache.Values);
         }
         /// <summary>
         /// 爆炸动画配置缓存
@@ -2042,14 +1852,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaExplode> GetAllAnimaExplode()
         {
-            List<AnimaExplode> list = new List<AnimaExplode>();
-            foreach (var val in AnimaExplode_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AnimaExplode>(AnimaExplode_Cache.Values);
         }
         #endregion
+
         #region 序列图
         /// <summary>
         /// 序列图配置配置缓存
@@ -2110,14 +1916,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<SequenceMapBase> GetAllSequenceMapBase()
         {
-            List<SequenceMapBase> list = new List<SequenceMapBase>();
-            foreach (var val in SequenceMapBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<SequenceMapBase>(SequenceMapBase_Cache.Values);
         }
         #endregion
+
         #region 特效
         /// <summary>
         /// 特效配置配置缓存
@@ -2178,15 +1980,72 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<SpeciallyEffect> GetAllSpeciallyEffect()
         {
-            List<SpeciallyEffect> list = new List<SpeciallyEffect>();
-            foreach (var val in SpeciallyEffect_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<SpeciallyEffect>(SpeciallyEffect_Cache.Values);
         }
         #endregion
+
         #region 固定地图配置
+        /// <summary>
+        /// 固定地图配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, GenerateFixedMap> GenerateFixedMap_Cache = new Dictionary<string, GenerateFixedMap>();
+        /// <summary>
+        /// 提前加载所有固定地图配置配置缓存
+        /// </summary>
+        public static void LoadGenerateFixedMap()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateFixedMap);
+            foreach (var val in cfg_dict)
+            {
+                GenerateFixedMap data = new GenerateFixedMap(val.Value);
+                data.InitData2();
+                GenerateFixedMap_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的固定地图配置基础配置缓存
+        /// </summary>
+        public static GenerateFixedMap GetGenerateFixedMap(string cfgId)
+        {
+            if (!GenerateFixedMap_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new GenerateFixedMap(cfgId);
+                    data.InitData2();
+                    GenerateFixedMap_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static GenerateFixedMap GetGenerateFixedMap(int cfgId)
+        {
+            if (!GenerateFixedMap_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new GenerateFixedMap(cfgId);
+                    data.InitData2();
+                    GenerateFixedMap_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有固定地图配置数据
+        /// </summary>
+        public static List<GenerateFixedMap> GetAllGenerateFixedMap()
+        {
+            return new List<GenerateFixedMap>(GenerateFixedMap_Cache.Values);
+        }
         /// <summary>
         /// 固定地图图集 配置缓存
         /// </summary>
@@ -2246,12 +2105,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapFixedSet> GetAllMapFixedSet()
         {
-            List<MapFixedSet> list = new List<MapFixedSet>();
-            foreach (var val in MapFixedSet_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapFixedSet>(MapFixedSet_Cache.Values);
         }
         /// <summary>
         /// 固定地图用材料配置缓存
@@ -2312,78 +2166,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapFixedMaterial> GetAllMapFixedMaterial()
         {
-            List<MapFixedMaterial> list = new List<MapFixedMaterial>();
-            foreach (var val in MapFixedMaterial_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 固定地图配置配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, GenerateFixedMap> GenerateFixedMap_Cache = new Dictionary<string, GenerateFixedMap>();
-        /// <summary>
-        /// 提前加载所有固定地图配置配置缓存
-        /// </summary>
-        public static void LoadGenerateFixedMap()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateFixedMap);
-            foreach (var val in cfg_dict)
-            {
-                GenerateFixedMap data = new GenerateFixedMap(val.Value);
-                data.InitData2();
-                GenerateFixedMap_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的固定地图配置基础配置缓存
-        /// </summary>
-        public static GenerateFixedMap GetGenerateFixedMap(string cfgId)
-        {
-            if (!GenerateFixedMap_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new GenerateFixedMap(cfgId);
-                    data.InitData2();
-                    GenerateFixedMap_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static GenerateFixedMap GetGenerateFixedMap(int cfgId)
-        {
-            if (!GenerateFixedMap_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new GenerateFixedMap(cfgId);
-                    data.InitData2();
-                    GenerateFixedMap_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有固定地图配置数据
-        /// </summary>
-        public static List<GenerateFixedMap> GetAllGenerateFixedMap()
-        {
-            List<GenerateFixedMap> list = new List<GenerateFixedMap>();
-            foreach (var val in GenerateFixedMap_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapFixedMaterial>(MapFixedMaterial_Cache.Values);
         }
         /// <summary>
         /// 地图可通过类型配置缓存
@@ -2444,12 +2227,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapPassType> GetAllMapPassType()
         {
-            List<MapPassType> list = new List<MapPassType>();
-            foreach (var val in MapPassType_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapPassType>(MapPassType_Cache.Values);
         }
         /// <summary>
         /// 地图边缘连接配置配置缓存
@@ -2510,14 +2288,71 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapEdge> GetAllMapEdge()
         {
-            List<MapEdge> list = new List<MapEdge>();
-            foreach (var val in MapEdge_Cache)
+            return new List<MapEdge>(MapEdge_Cache.Values);
+        }
+        /// <summary>
+        /// 地图墙壁阴影配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MapWallShadow> MapWallShadow_Cache = new Dictionary<string, MapWallShadow>();
+        /// <summary>
+        /// 提前加载所有地图墙壁阴影配置配置缓存
+        /// </summary>
+        public static void LoadMapWallShadow()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapWallShadow);
+            foreach (var val in cfg_dict)
             {
-                list.Add(val.Value);
+                MapWallShadow data = new MapWallShadow(val.Value);
+                data.InitData2();
+                MapWallShadow_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的地图墙壁阴影配置基础配置缓存
+        /// </summary>
+        public static MapWallShadow GetMapWallShadow(string cfgId)
+        {
+            if (!MapWallShadow_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapWallShadow(cfgId);
+                    data.InitData2();
+                    MapWallShadow_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapWallShadow配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MapWallShadow GetMapWallShadow(int cfgId)
+        {
+            if (!MapWallShadow_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapWallShadow(cfgId);
+                    data.InitData2();
+                    MapWallShadow_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapWallShadow配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有地图墙壁阴影配置数据
+        /// </summary>
+        public static List<MapWallShadow> GetAllMapWallShadow()
+        {
+            return new List<MapWallShadow>(MapWallShadow_Cache.Values);
         }
         #endregion
+
         #region 图块相关
         /// <summary>
         /// 地图资源图集配置缓存
@@ -2578,14 +2413,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapMassif> GetAllMapMassif()
         {
-            List<MapMassif> list = new List<MapMassif>();
-            foreach (var val in MapMassif_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapMassif>(MapMassif_Cache.Values);
         }
         #endregion
+
         #region 图层相关
         /// <summary>
         /// 图像层配置配置缓存
@@ -2646,12 +2477,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapImageLayer> GetAllMapImageLayer()
         {
-            List<MapImageLayer> list = new List<MapImageLayer>();
-            foreach (var val in MapImageLayer_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapImageLayer>(MapImageLayer_Cache.Values);
         }
         /// <summary>
         /// 物理层配置配置缓存
@@ -2712,12 +2538,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapPhysicsLayer> GetAllMapPhysicsLayer()
         {
-            List<MapPhysicsLayer> list = new List<MapPhysicsLayer>();
-            foreach (var val in MapPhysicsLayer_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapPhysicsLayer>(MapPhysicsLayer_Cache.Values);
         }
         /// <summary>
         /// 地图导航层配置缓存
@@ -2778,14 +2599,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapNavigate> GetAllMapNavigate()
         {
-            List<MapNavigate> list = new List<MapNavigate>();
-            foreach (var val in MapNavigate_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapNavigate>(MapNavigate_Cache.Values);
         }
         #endregion
+
         #region 地图生成
         /// <summary>
         /// 随机生成地图用材料配置缓存
@@ -2846,12 +2663,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapMaterial> GetAllMapMaterial()
         {
-            List<MapMaterial> list = new List<MapMaterial>();
-            foreach (var val in MapMaterial_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapMaterial>(MapMaterial_Cache.Values);
         }
         /// <summary>
         /// 随机生成地图方式配置缓存
@@ -2912,12 +2724,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GenerateBottomMap> GetAllGenerateBottomMap()
         {
-            List<GenerateBottomMap> list = new List<GenerateBottomMap>();
-            foreach (var val in GenerateBottomMap_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GenerateBottomMap>(GenerateBottomMap_Cache.Values);
         }
         /// <summary>
         /// 地图额外绘制表配置缓存
@@ -2978,12 +2785,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapExtraDraw> GetAllMapExtraDraw()
         {
-            List<MapExtraDraw> list = new List<MapExtraDraw>();
-            foreach (var val in MapExtraDraw_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapExtraDraw>(MapExtraDraw_Cache.Values);
         }
         /// <summary>
         /// 地图大型结构配置缓存
@@ -3044,14 +2846,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GenerateBigStruct> GetAllGenerateBigStruct()
         {
-            List<GenerateBigStruct> list = new List<GenerateBigStruct>();
-            foreach (var val in GenerateBigStruct_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GenerateBigStruct>(GenerateBigStruct_Cache.Values);
         }
         #endregion
+
         #region 大地图生成
         /// <summary>
         /// 大地图节点配置缓存
@@ -3112,12 +2910,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BigMapMaterial> GetAllBigMapMaterial()
         {
-            List<BigMapMaterial> list = new List<BigMapMaterial>();
-            foreach (var val in BigMapMaterial_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BigMapMaterial>(BigMapMaterial_Cache.Values);
         }
         /// <summary>
         /// 生成大地图配置缓存
@@ -3178,12 +2971,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BigMapBase> GetAllBigMapBase()
         {
-            List<BigMapBase> list = new List<BigMapBase>();
-            foreach (var val in BigMapBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BigMapBase>(BigMapBase_Cache.Values);
         }
         /// <summary>
         /// 大地图大结构配置缓存
@@ -3244,12 +3032,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BigMapBigCell> GetAllBigMapBigCell()
         {
-            List<BigMapBigCell> list = new List<BigMapBigCell>();
-            foreach (var val in BigMapBigCell_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BigMapBigCell>(BigMapBigCell_Cache.Values);
         }
         /// <summary>
         /// 节点绘制逻辑配置缓存
@@ -3310,12 +3093,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BigMapCellLogic> GetAllBigMapCellLogic()
         {
-            List<BigMapCellLogic> list = new List<BigMapCellLogic>();
-            foreach (var val in BigMapCellLogic_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BigMapCellLogic>(BigMapCellLogic_Cache.Values);
         }
         /// <summary>
         /// 大地图节点事件配置缓存
@@ -3376,80 +3154,193 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BigMapEvent> GetAllBigMapEvent()
         {
-            List<BigMapEvent> list = new List<BigMapEvent>();
-            foreach (var val in BigMapEvent_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BigMapEvent>(BigMapEvent_Cache.Values);
         }
         #endregion
-        #region 单位组配置
+
+        #region 刷怪配置
         /// <summary>
-        /// 单位组类型配置缓存
+        /// 战役关卡刷怪数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, UnitGroupType> UnitGroupType_Cache = new Dictionary<string, UnitGroupType>();
+        private static readonly Dictionary<string, CopyBrush> CopyBrush_Cache = new Dictionary<string, CopyBrush>();
         /// <summary>
-        /// 提前加载所有单位组类型配置缓存
+        /// 提前加载所有战役关卡刷怪数据配置缓存
         /// </summary>
-        public static void LoadUnitGroupType()
+        public static void LoadCopyBrush()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitGroupType);
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_CopyBrush);
             foreach (var val in cfg_dict)
             {
-                UnitGroupType data = new UnitGroupType(val.Value);
+                CopyBrush data = new CopyBrush(val.Value);
                 data.InitData2();
-                UnitGroupType_Cache.Add(val.Key, data);
+                CopyBrush_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的单位组类型基础配置缓存
+        /// 加载或获取已缓存的战役关卡刷怪数据基础配置缓存
         /// </summary>
-        public static UnitGroupType GetUnitGroupType(string cfgId)
+        public static CopyBrush GetCopyBrush(string cfgId)
         {
-            if (!UnitGroupType_Cache.TryGetValue(cfgId, out var data))
+            if (!CopyBrush_Cache.TryGetValue(cfgId, out var data))
             {
                 try
                 {
-                    data = new UnitGroupType(cfgId);
+                    data = new CopyBrush(cfgId);
                     data.InitData2();
-                    UnitGroupType_Cache.Add(cfgId, data);
+                    CopyBrush_Cache.Add(cfgId, data);
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("单位组配置.xlsx表中的 cfg_UnitGroupType配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_CopyBrush配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
-        public static UnitGroupType GetUnitGroupType(int cfgId)
+        public static CopyBrush GetCopyBrush(int cfgId)
         {
-            if (!UnitGroupType_Cache.TryGetValue("" + cfgId, out var data))
+            if (!CopyBrush_Cache.TryGetValue("" + cfgId, out var data))
             {
                 try
                 {
-                    data = new UnitGroupType(cfgId);
+                    data = new CopyBrush(cfgId);
                     data.InitData2();
-                    UnitGroupType_Cache.Add("" + cfgId, data);
+                    CopyBrush_Cache.Add("" + cfgId, data);
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("单位组配置.xlsx表中的 cfg_UnitGroupType配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_CopyBrush配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有单位组类型数据
+        /// 获取加载的所有战役关卡刷怪数据数据
         /// </summary>
-        public static List<UnitGroupType> GetAllUnitGroupType()
+        public static List<CopyBrush> GetAllCopyBrush()
         {
-            List<UnitGroupType> list = new List<UnitGroupType>();
-            foreach (var val in UnitGroupType_Cache)
+            return new List<CopyBrush>(CopyBrush_Cache.Values);
+        }
+        /// <summary>
+        /// 刷怪点数据配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, BrushPoint> BrushPoint_Cache = new Dictionary<string, BrushPoint>();
+        /// <summary>
+        /// 提前加载所有刷怪点数据配置缓存
+        /// </summary>
+        public static void LoadBrushPoint()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BrushPoint);
+            foreach (var val in cfg_dict)
             {
-                list.Add(val.Value);
+                BrushPoint data = new BrushPoint(val.Value);
+                data.InitData2();
+                BrushPoint_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的刷怪点数据基础配置缓存
+        /// </summary>
+        public static BrushPoint GetBrushPoint(string cfgId)
+        {
+            if (!BrushPoint_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new BrushPoint(cfgId);
+                    data.InitData2();
+                    BrushPoint_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_BrushPoint配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static BrushPoint GetBrushPoint(int cfgId)
+        {
+            if (!BrushPoint_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new BrushPoint(cfgId);
+                    data.InitData2();
+                    BrushPoint_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_BrushPoint配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有刷怪点数据数据
+        /// </summary>
+        public static List<BrushPoint> GetAllBrushPoint()
+        {
+            return new List<BrushPoint>(BrushPoint_Cache.Values);
+        }
+        /// <summary>
+        /// 波数配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, WaveBase> WaveBase_Cache = new Dictionary<string, WaveBase>();
+        /// <summary>
+        /// 提前加载所有波数配置配置缓存
+        /// </summary>
+        public static void LoadWaveBase()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_WaveBase);
+            foreach (var val in cfg_dict)
+            {
+                WaveBase data = new WaveBase(val.Value);
+                data.InitData2();
+                WaveBase_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的波数配置基础配置缓存
+        /// </summary>
+        public static WaveBase GetWaveBase(string cfgId)
+        {
+            if (!WaveBase_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new WaveBase(cfgId);
+                    data.InitData2();
+                    WaveBase_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_WaveBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static WaveBase GetWaveBase(int cfgId)
+        {
+            if (!WaveBase_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new WaveBase(cfgId);
+                    data.InitData2();
+                    WaveBase_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_WaveBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有波数配置数据
+        /// </summary>
+        public static List<WaveBase> GetAllWaveBase()
+        {
+            return new List<WaveBase>(WaveBase_Cache.Values);
         }
         /// <summary>
         /// 单位组配置配置缓存
@@ -3483,7 +3374,7 @@ namespace Remnant_Afterglow
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("单位组配置.xlsx表中的 cfg_UnitGroupData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_UnitGroupData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -3500,7 +3391,7 @@ namespace Remnant_Afterglow
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("单位组配置.xlsx表中的 cfg_UnitGroupData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_UnitGroupData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -3510,14 +3401,71 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<UnitGroupData> GetAllUnitGroupData()
         {
-            List<UnitGroupData> list = new List<UnitGroupData>();
-            foreach (var val in UnitGroupData_Cache)
+            return new List<UnitGroupData>(UnitGroupData_Cache.Values);
+        }
+        /// <summary>
+        /// 单位组类型配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, UnitGroupType> UnitGroupType_Cache = new Dictionary<string, UnitGroupType>();
+        /// <summary>
+        /// 提前加载所有单位组类型配置缓存
+        /// </summary>
+        public static void LoadUnitGroupType()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitGroupType);
+            foreach (var val in cfg_dict)
             {
-                list.Add(val.Value);
+                UnitGroupType data = new UnitGroupType(val.Value);
+                data.InitData2();
+                UnitGroupType_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的单位组类型基础配置缓存
+        /// </summary>
+        public static UnitGroupType GetUnitGroupType(string cfgId)
+        {
+            if (!UnitGroupType_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new UnitGroupType(cfgId);
+                    data.InitData2();
+                    UnitGroupType_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_UnitGroupType配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static UnitGroupType GetUnitGroupType(int cfgId)
+        {
+            if (!UnitGroupType_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new UnitGroupType(cfgId);
+                    data.InitData2();
+                    UnitGroupType_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_UnitGroupType配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有单位组类型数据
+        /// </summary>
+        public static List<UnitGroupType> GetAllUnitGroupType()
+        {
+            return new List<UnitGroupType>(UnitGroupType_Cache.Values);
         }
         #endregion
+
         #region 战役副本相关
         /// <summary>
         /// 战役基础数据配置缓存
@@ -3578,12 +3526,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ChapterBase> GetAllChapterBase()
         {
-            List<ChapterBase> list = new List<ChapterBase>();
-            foreach (var val in ChapterBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ChapterBase>(ChapterBase_Cache.Values);
         }
         /// <summary>
         /// 战役关卡基础数据配置缓存
@@ -3644,210 +3587,68 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ChapterCopyBase> GetAllChapterCopyBase()
         {
-            List<ChapterCopyBase> list = new List<ChapterCopyBase>();
-            foreach (var val in ChapterCopyBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ChapterCopyBase>(ChapterCopyBase_Cache.Values);
         }
         /// <summary>
-        /// 战役关卡刷怪数据配置缓存
+        /// 关卡建造限制配置缓存
         /// </summary>
-        private static readonly Dictionary<string, CopyBrush> CopyBrush_Cache = new Dictionary<string, CopyBrush>();
+        private static readonly Dictionary<string, CopyBuildLimit> CopyBuildLimit_Cache = new Dictionary<string, CopyBuildLimit>();
         /// <summary>
-        /// 提前加载所有战役关卡刷怪数据配置缓存
+        /// 提前加载所有关卡建造限制配置缓存
         /// </summary>
-        public static void LoadCopyBrush()
+        public static void LoadCopyBuildLimit()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_CopyBrush);
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_CopyBuildLimit);
             foreach (var val in cfg_dict)
             {
-                CopyBrush data = new CopyBrush(val.Value);
+                CopyBuildLimit data = new CopyBuildLimit(val.Value);
                 data.InitData2();
-                CopyBrush_Cache.Add(val.Key, data);
+                CopyBuildLimit_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的战役关卡刷怪数据基础配置缓存
+        /// 加载或获取已缓存的关卡建造限制基础配置缓存
         /// </summary>
-        public static CopyBrush GetCopyBrush(string cfgId)
+        public static CopyBuildLimit GetCopyBuildLimit(string cfgId)
         {
-            if (!CopyBrush_Cache.TryGetValue(cfgId, out var data))
+            if (!CopyBuildLimit_Cache.TryGetValue(cfgId, out var data))
             {
                 try
                 {
-                    data = new CopyBrush(cfgId);
+                    data = new CopyBuildLimit(cfgId);
                     data.InitData2();
-                    CopyBrush_Cache.Add(cfgId, data);
+                    CopyBuildLimit_Cache.Add(cfgId, data);
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_CopyBrush配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_CopyBuildLimit配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
-        public static CopyBrush GetCopyBrush(int cfgId)
+        public static CopyBuildLimit GetCopyBuildLimit(int cfgId)
         {
-            if (!CopyBrush_Cache.TryGetValue("" + cfgId, out var data))
+            if (!CopyBuildLimit_Cache.TryGetValue("" + cfgId, out var data))
             {
                 try
                 {
-                    data = new CopyBrush(cfgId);
+                    data = new CopyBuildLimit(cfgId);
                     data.InitData2();
-                    CopyBrush_Cache.Add("" + cfgId, data);
+                    CopyBuildLimit_Cache.Add("" + cfgId, data);
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_CopyBrush配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有战役关卡刷怪数据数据
-        /// </summary>
-        public static List<CopyBrush> GetAllCopyBrush()
-        {
-            List<CopyBrush> list = new List<CopyBrush>();
-            foreach (var val in CopyBrush_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 刷怪点数据配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, BrushPoint> BrushPoint_Cache = new Dictionary<string, BrushPoint>();
-        /// <summary>
-        /// 提前加载所有刷怪点数据配置缓存
-        /// </summary>
-        public static void LoadBrushPoint()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BrushPoint);
-            foreach (var val in cfg_dict)
-            {
-                BrushPoint data = new BrushPoint(val.Value);
-                data.InitData2();
-                BrushPoint_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的刷怪点数据基础配置缓存
-        /// </summary>
-        public static BrushPoint GetBrushPoint(string cfgId)
-        {
-            if (!BrushPoint_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new BrushPoint(cfgId);
-                    data.InitData2();
-                    BrushPoint_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_BrushPoint配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static BrushPoint GetBrushPoint(int cfgId)
-        {
-            if (!BrushPoint_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new BrushPoint(cfgId);
-                    data.InitData2();
-                    BrushPoint_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_BrushPoint配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_CopyBuildLimit配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有刷怪点数据数据
+        /// 获取加载的所有关卡建造限制数据
         /// </summary>
-        public static List<BrushPoint> GetAllBrushPoint()
+        public static List<CopyBuildLimit> GetAllCopyBuildLimit()
         {
-            List<BrushPoint> list = new List<BrushPoint>();
-            foreach (var val in BrushPoint_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 波数配置配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, WaveBase> WaveBase_Cache = new Dictionary<string, WaveBase>();
-        /// <summary>
-        /// 提前加载所有波数配置配置缓存
-        /// </summary>
-        public static void LoadWaveBase()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_WaveBase);
-            foreach (var val in cfg_dict)
-            {
-                WaveBase data = new WaveBase(val.Value);
-                data.InitData2();
-                WaveBase_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的波数配置基础配置缓存
-        /// </summary>
-        public static WaveBase GetWaveBase(string cfgId)
-        {
-            if (!WaveBase_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new WaveBase(cfgId);
-                    data.InitData2();
-                    WaveBase_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_WaveBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static WaveBase GetWaveBase(int cfgId)
-        {
-            if (!WaveBase_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new WaveBase(cfgId);
-                    data.InitData2();
-                    WaveBase_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_WaveBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有波数配置数据
-        /// </summary>
-        public static List<WaveBase> GetAllWaveBase()
-        {
-            List<WaveBase> list = new List<WaveBase>();
-            foreach (var val in WaveBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<CopyBuildLimit>(CopyBuildLimit_Cache.Values);
         }
         /// <summary>
         /// 章节关卡UI数据配置缓存
@@ -3908,14 +3709,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ChapterCopyUI> GetAllChapterCopyUI()
         {
-            List<ChapterCopyUI> list = new List<ChapterCopyUI>();
-            foreach (var val in ChapterCopyUI_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ChapterCopyUI>(ChapterCopyUI_Cache.Values);
         }
         #endregion
+
         #region 音乐配置
         /// <summary>
         /// 背景音乐配置缓存
@@ -3976,14 +3773,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BackgroundMusic> GetAllBackgroundMusic()
         {
-            List<BackgroundMusic> list = new List<BackgroundMusic>();
-            foreach (var val in BackgroundMusic_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BackgroundMusic>(BackgroundMusic_Cache.Values);
         }
         #endregion
+
         #region 音效配置
         /// <summary>
         /// 音效配置配置缓存
@@ -4044,14 +3837,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<SoundEffect> GetAllSoundEffect()
         {
-            List<SoundEffect> list = new List<SoundEffect>();
-            foreach (var val in SoundEffect_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<SoundEffect>(SoundEffect_Cache.Values);
         }
         #endregion
+
         #region 子弹脚本配置
         /// <summary>
         /// 子弹脚本配置配置缓存
@@ -4112,12 +3901,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BulletScript> GetAllBulletScript()
         {
-            List<BulletScript> list = new List<BulletScript>();
-            foreach (var val in BulletScript_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BulletScript>(BulletScript_Cache.Values);
         }
         /// <summary>
         /// 子弹脚本行为配置缓存
@@ -4178,12 +3962,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BulletAction> GetAllBulletAction()
         {
-            List<BulletAction> list = new List<BulletAction>();
-            foreach (var val in BulletAction_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BulletAction>(BulletAction_Cache.Values);
         }
         /// <summary>
         /// 子弹脚本开火行为配置缓存
@@ -4244,14 +4023,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BulletFire> GetAllBulletFire()
         {
-            List<BulletFire> list = new List<BulletFire>();
-            foreach (var val in BulletFire_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BulletFire>(BulletFire_Cache.Values);
         }
         #endregion
+
         #region 子弹配置
         /// <summary>
         /// 子弹场景数据配置缓存
@@ -4312,12 +4087,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BulletScene> GetAllBulletScene()
         {
-            List<BulletScene> list = new List<BulletScene>();
-            foreach (var val in BulletScene_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BulletScene>(BulletScene_Cache.Values);
         }
         /// <summary>
         /// 子弹基础数据表配置缓存
@@ -4378,12 +4148,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BulletData> GetAllBulletData()
         {
-            List<BulletData> list = new List<BulletData>();
-            foreach (var val in BulletData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BulletData>(BulletData_Cache.Values);
         }
         /// <summary>
         /// 子弹逻辑数据表配置缓存
@@ -4444,12 +4209,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BulletLogic> GetAllBulletLogic()
         {
-            List<BulletLogic> list = new List<BulletLogic>();
-            foreach (var val in BulletLogic_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BulletLogic>(BulletLogic_Cache.Values);
         }
         /// <summary>
         /// 子弹碰撞数据配置缓存
@@ -4510,14 +4270,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BulletCollide> GetAllBulletCollide()
         {
-            List<BulletCollide> list = new List<BulletCollide>();
-            foreach (var val in BulletCollide_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BulletCollide>(BulletCollide_Cache.Values);
         }
         #endregion
+
         #region 爆炸配置
         /// <summary>
         /// 爆炸基础数据配置缓存
@@ -4578,12 +4334,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ExplodeData> GetAllExplodeData()
         {
-            List<ExplodeData> list = new List<ExplodeData>();
-            foreach (var val in ExplodeData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ExplodeData>(ExplodeData_Cache.Values);
         }
         /// <summary>
         /// 爆炸伤害数据配置缓存
@@ -4644,14 +4395,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ExplodeHarm> GetAllExplodeHarm()
         {
-            List<ExplodeHarm> list = new List<ExplodeHarm>();
-            foreach (var val in ExplodeHarm_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ExplodeHarm>(ExplodeHarm_Cache.Values);
         }
         #endregion
+
         #region 单位配置
         /// <summary>
         /// 单位基础表配置缓存
@@ -4712,12 +4459,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<UnitData> GetAllUnitData()
         {
-            List<UnitData> list = new List<UnitData>();
-            foreach (var val in UnitData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<UnitData>(UnitData_Cache.Values);
         }
         /// <summary>
         /// 单位逻辑表配置缓存
@@ -4778,14 +4520,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<UnitLogic> GetAllUnitLogic()
         {
-            List<UnitLogic> list = new List<UnitLogic>();
-            foreach (var val in UnitLogic_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<UnitLogic>(UnitLogic_Cache.Values);
         }
         #endregion
+
         #region 实体事件配置
         /// <summary>
         /// 属性事件配置缓存
@@ -4846,14 +4584,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttrEvent> GetAllAttrEvent()
         {
-            List<AttrEvent> list = new List<AttrEvent>();
-            foreach (var val in AttrEvent_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttrEvent>(AttrEvent_Cache.Values);
         }
         #endregion
+
         #region 实体显示相关配置
         /// <summary>
         /// 实体显示方式表配置缓存
@@ -4914,12 +4648,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BaseObjectShow> GetAllBaseObjectShow()
         {
-            List<BaseObjectShow> list = new List<BaseObjectShow>();
-            foreach (var val in BaseObjectShow_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BaseObjectShow>(BaseObjectShow_Cache.Values);
         }
         /// <summary>
         /// 底部栏配置缓存
@@ -4980,12 +4709,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ObjectBottomBar> GetAllObjectBottomBar()
         {
-            List<ObjectBottomBar> list = new List<ObjectBottomBar>();
-            foreach (var val in ObjectBottomBar_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ObjectBottomBar>(ObjectBottomBar_Cache.Values);
         }
         /// <summary>
         /// 侧边栏配置缓存
@@ -5046,14 +4770,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ObjectSideBar> GetAllObjectSideBar()
         {
-            List<ObjectSideBar> list = new List<ObjectSideBar>();
-            foreach (var val in ObjectSideBar_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ObjectSideBar>(ObjectSideBar_Cache.Values);
         }
         #endregion
+
         #region 实体相关配置
         /// <summary>
         /// 实体表配置缓存
@@ -5114,87 +4834,17 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BaseObjectData> GetAllBaseObjectData()
         {
-            List<BaseObjectData> list = new List<BaseObjectData>();
-            foreach (var val in BaseObjectData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 实体武器表配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, BaseObjectWeapon> BaseObjectWeapon_Cache = new Dictionary<string, BaseObjectWeapon>();
-        /// <summary>
-        /// 提前加载所有实体武器表配置缓存
-        /// </summary>
-        public static void LoadBaseObjectWeapon()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BaseObjectWeapon);
-            foreach (var val in cfg_dict)
-            {
-                BaseObjectWeapon data = new BaseObjectWeapon(val.Value);
-                data.InitData2();
-                BaseObjectWeapon_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的实体武器表基础配置缓存
-        /// </summary>
-        public static BaseObjectWeapon GetBaseObjectWeapon(string cfgId)
-        {
-            if (!BaseObjectWeapon_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new BaseObjectWeapon(cfgId);
-                    data.InitData2();
-                    BaseObjectWeapon_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("实体相关配置.xlsx表中的 cfg_BaseObjectWeapon配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static BaseObjectWeapon GetBaseObjectWeapon(int cfgId)
-        {
-            if (!BaseObjectWeapon_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new BaseObjectWeapon(cfgId);
-                    data.InitData2();
-                    BaseObjectWeapon_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("实体相关配置.xlsx表中的 cfg_BaseObjectWeapon配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有实体武器表数据
-        /// </summary>
-        public static List<BaseObjectWeapon> GetAllBaseObjectWeapon()
-        {
-            List<BaseObjectWeapon> list = new List<BaseObjectWeapon>();
-            foreach (var val in BaseObjectWeapon_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BaseObjectData>(BaseObjectData_Cache.Values);
         }
         #endregion
+
         #region 建筑配置
         /// <summary>
-        /// 建筑数据配置缓存
+        /// 建筑及炮塔数据配置缓存
         /// </summary>
         private static readonly Dictionary<string, BuildData> BuildData_Cache = new Dictionary<string, BuildData>();
         /// <summary>
-        /// 提前加载所有建筑数据配置缓存
+        /// 提前加载所有建筑及炮塔数据配置缓存
         /// </summary>
         public static void LoadBuildData()
         {
@@ -5207,7 +4857,7 @@ namespace Remnant_Afterglow
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的建筑数据基础配置缓存
+        /// 加载或获取已缓存的建筑及炮塔数据基础配置缓存
         /// </summary>
         public static BuildData GetBuildData(string cfgId)
         {
@@ -5244,18 +4894,14 @@ namespace Remnant_Afterglow
             return data;
         }
         /// <summary>
-        /// 获取加载的所有建筑数据数据
+        /// 获取加载的所有建筑及炮塔数据数据
         /// </summary>
         public static List<BuildData> GetAllBuildData()
         {
-            List<BuildData> list = new List<BuildData>();
-            foreach (var val in BuildData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BuildData>(BuildData_Cache.Values);
         }
         #endregion
+
         #region 无人机配置
         /// <summary>
         /// 无人机基础表配置缓存
@@ -5316,14 +4962,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<WorkerData> GetAllWorkerData()
         {
-            List<WorkerData> list = new List<WorkerData>();
-            foreach (var val in WorkerData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<WorkerData>(WorkerData_Cache.Values);
         }
         #endregion
+
         #region 武器配置
         /// <summary>
         /// 武器数据1配置缓存
@@ -5384,12 +5026,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<WeaponData> GetAllWeaponData()
         {
-            List<WeaponData> list = new List<WeaponData>();
-            foreach (var val in WeaponData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<WeaponData>(WeaponData_Cache.Values);
         }
         /// <summary>
         /// 武器数据2配置缓存
@@ -5450,82 +5087,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<WeaponData2> GetAllWeaponData2()
         {
-            List<WeaponData2> list = new List<WeaponData2>();
-            foreach (var val in WeaponData2_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<WeaponData2>(WeaponData2_Cache.Values);
         }
         #endregion
-        #region 炮塔配置
-        /// <summary>
-        /// 炮塔基础表配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, TowerData> TowerData_Cache = new Dictionary<string, TowerData>();
-        /// <summary>
-        /// 提前加载所有炮塔基础表配置缓存
-        /// </summary>
-        public static void LoadTowerData()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_TowerData);
-            foreach (var val in cfg_dict)
-            {
-                TowerData data = new TowerData(val.Value);
-                data.InitData2();
-                TowerData_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的炮塔基础表基础配置缓存
-        /// </summary>
-        public static TowerData GetTowerData(string cfgId)
-        {
-            if (!TowerData_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new TowerData(cfgId);
-                    data.InitData2();
-                    TowerData_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("炮塔配置.xlsx表中的 cfg_TowerData配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static TowerData GetTowerData(int cfgId)
-        {
-            if (!TowerData_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new TowerData(cfgId);
-                    data.InitData2();
-                    TowerData_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("炮塔配置.xlsx表中的 cfg_TowerData配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有炮塔基础表数据
-        /// </summary>
-        public static List<TowerData> GetAllTowerData()
-        {
-            List<TowerData> list = new List<TowerData>();
-            foreach (var val in TowerData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        #endregion
+
         #region 属性基础表
         /// <summary>
         /// 属性表配置缓存
@@ -5586,12 +5151,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttributeBase> GetAllAttributeBase()
         {
-            List<AttributeBase> list = new List<AttributeBase>();
-            foreach (var val in AttributeBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttributeBase>(AttributeBase_Cache.Values);
         }
         /// <summary>
         /// 属性计算表配置缓存
@@ -5652,12 +5212,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttrCalculate> GetAllAttrCalculate()
         {
-            List<AttrCalculate> list = new List<AttrCalculate>();
-            foreach (var val in AttrCalculate_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttrCalculate>(AttrCalculate_Cache.Values);
         }
         /// <summary>
         /// 属性依赖表配置缓存
@@ -5718,14 +5273,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttrDependency> GetAllAttrDependency()
         {
-            List<AttrDependency> list = new List<AttrDependency>();
-            foreach (var val in AttrDependency_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttrDependency>(AttrDependency_Cache.Values);
         }
         #endregion
+
         #region 属性配置
         /// <summary>
         /// 属性模板表配置缓存
@@ -5786,12 +5337,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttributeTemplate> GetAllAttributeTemplate()
         {
-            List<AttributeTemplate> list = new List<AttributeTemplate>();
-            foreach (var val in AttributeTemplate_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttributeTemplate>(AttributeTemplate_Cache.Values);
         }
         /// <summary>
         /// 实体属性表配置缓存
@@ -5852,12 +5398,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttributeData> GetAllAttributeData()
         {
-            List<AttributeData> list = new List<AttributeData>();
-            foreach (var val in AttributeData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttributeData>(AttributeData_Cache.Values);
         }
         /// <summary>
         /// 属性修饰器配置缓存
@@ -5918,14 +5459,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttrModifier> GetAllAttrModifier()
         {
-            List<AttrModifier> list = new List<AttrModifier>();
-            foreach (var val in AttrModifier_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttrModifier>(AttrModifier_Cache.Values);
         }
         #endregion
+
         #region 建造列表相关配置
         /// <summary>
         /// 建造列表标签配置缓存
@@ -5986,12 +5523,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapBuildLable> GetAllMapBuildLable()
         {
-            List<MapBuildLable> list = new List<MapBuildLable>();
-            foreach (var val in MapBuildLable_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapBuildLable>(MapBuildLable_Cache.Values);
         }
         /// <summary>
         /// 建造项数据配置缓存
@@ -6052,12 +5584,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapBuildItem> GetAllMapBuildItem()
         {
-            List<MapBuildItem> list = new List<MapBuildItem>();
-            foreach (var val in MapBuildItem_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapBuildItem>(MapBuildItem_Cache.Values);
         }
         /// <summary>
         /// 建造规则配置缓存
@@ -6118,14 +5645,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BuildRule> GetAllBuildRule()
         {
-            List<BuildRule> list = new List<BuildRule>();
-            foreach (var val in BuildRule_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BuildRule>(BuildRule_Cache.Values);
         }
         #endregion
+
         #region 阵营相关
         /// <summary>
         /// 阵营基础数据配置缓存
@@ -6186,14 +5709,10 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<CampBase> GetAllCampBase()
         {
-            List<CampBase> list = new List<CampBase>();
-            foreach (var val in CampBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<CampBase>(CampBase_Cache.Values);
         }
         #endregion
+
         #region 难度相关
         /// <summary>
         /// 游戏难度相关配置缓存
@@ -6254,21 +5773,17 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GameDiffBase> GetAllGameDiffBase()
         {
-            List<GameDiffBase> list = new List<GameDiffBase>();
-            foreach (var val in GameDiffBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GameDiffBase>(GameDiffBase_Cache.Values);
         }
         #endregion
-        #region 背包相关
+
+        #region 背包 道具 及货币相关配置
         /// <summary>
-        /// 配置缓存
+        /// 背包配置配置缓存
         /// </summary>
         private static readonly Dictionary<string, BagData> BagData_Cache = new Dictionary<string, BagData>();
         /// <summary>
-        /// 提前加载所有配置缓存
+        /// 提前加载所有背包配置配置缓存
         /// </summary>
         public static void LoadBagData()
         {
@@ -6281,7 +5796,7 @@ namespace Remnant_Afterglow
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的基础配置缓存
+        /// 加载或获取已缓存的背包配置基础配置缓存
         /// </summary>
         public static BagData GetBagData(string cfgId)
         {
@@ -6295,7 +5810,7 @@ namespace Remnant_Afterglow
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("背包相关.xlsx表中的 cfg_bagData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_bagData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -6312,99 +5827,24 @@ namespace Remnant_Afterglow
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("背包相关.xlsx表中的 cfg_bagData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_bagData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有数据
+        /// 获取加载的所有背包配置数据
         /// </summary>
         public static List<BagData> GetAllBagData()
         {
-            List<BagData> list = new List<BagData>();
-            foreach (var val in BagData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        #endregion
-        #region 货币相关
-        /// <summary>
-        /// 货币界面显示配置配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, MoneyBase> MoneyBase_Cache = new Dictionary<string, MoneyBase>();
-        /// <summary>
-        /// 提前加载所有货币界面显示配置配置缓存
-        /// </summary>
-        public static void LoadMoneyBase()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MoneyBase);
-            foreach (var val in cfg_dict)
-            {
-                MoneyBase data = new MoneyBase(val.Value);
-                data.InitData2();
-                MoneyBase_Cache.Add(val.Key, data);
-            }
+            return new List<BagData>(BagData_Cache.Values);
         }
         /// <summary>
-        /// 加载或获取已缓存的货币界面显示配置基础配置缓存
-        /// </summary>
-        public static MoneyBase GetMoneyBase(string cfgId)
-        {
-            if (!MoneyBase_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new MoneyBase(cfgId);
-                    data.InitData2();
-                    MoneyBase_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("货币相关.xlsx表中的 cfg_MoneyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static MoneyBase GetMoneyBase(int cfgId)
-        {
-            if (!MoneyBase_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new MoneyBase(cfgId);
-                    data.InitData2();
-                    MoneyBase_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("货币相关.xlsx表中的 cfg_MoneyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有货币界面显示配置数据
-        /// </summary>
-        public static List<MoneyBase> GetAllMoneyBase()
-        {
-            List<MoneyBase> list = new List<MoneyBase>();
-            foreach (var val in MoneyBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        #endregion
-        #region 道具相关
-        /// <summary>
-        /// 道具基础数据配置缓存
+        /// 道具配置配置缓存
         /// </summary>
         private static readonly Dictionary<string, ItemData> ItemData_Cache = new Dictionary<string, ItemData>();
         /// <summary>
-        /// 提前加载所有道具基础数据配置缓存
+        /// 提前加载所有道具配置配置缓存
         /// </summary>
         public static void LoadItemData()
         {
@@ -6417,7 +5857,7 @@ namespace Remnant_Afterglow
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的道具基础数据基础配置缓存
+        /// 加载或获取已缓存的道具配置基础配置缓存
         /// </summary>
         public static ItemData GetItemData(string cfgId)
         {
@@ -6431,7 +5871,7 @@ namespace Remnant_Afterglow
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("道具相关.xlsx表中的 cfg_itemData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_itemData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -6448,24 +5888,81 @@ namespace Remnant_Afterglow
                 }
                 catch (Exception e)
                 {
-                    Log.PrintConfigError("道具相关.xlsx表中的 cfg_itemData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_itemData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有道具基础数据数据
+        /// 获取加载的所有道具配置数据
         /// </summary>
         public static List<ItemData> GetAllItemData()
         {
-            List<ItemData> list = new List<ItemData>();
-            foreach (var val in ItemData_Cache)
+            return new List<ItemData>(ItemData_Cache.Values);
+        }
+        /// <summary>
+        /// 货币配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MoneyBase> MoneyBase_Cache = new Dictionary<string, MoneyBase>();
+        /// <summary>
+        /// 提前加载所有货币配置配置缓存
+        /// </summary>
+        public static void LoadMoneyBase()
+        {
+            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MoneyBase);
+            foreach (var val in cfg_dict)
             {
-                list.Add(val.Value);
+                MoneyBase data = new MoneyBase(val.Value);
+                data.InitData2();
+                MoneyBase_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的货币配置基础配置缓存
+        /// </summary>
+        public static MoneyBase GetMoneyBase(string cfgId)
+        {
+            if (!MoneyBase_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MoneyBase(cfgId);
+                    data.InitData2();
+                    MoneyBase_Cache.Add(cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_MoneyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MoneyBase GetMoneyBase(int cfgId)
+        {
+            if (!MoneyBase_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MoneyBase(cfgId);
+                    data.InitData2();
+                    MoneyBase_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception e)
+                {
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_MoneyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有货币配置数据
+        /// </summary>
+        public static List<MoneyBase> GetAllMoneyBase()
+        {
+            return new List<MoneyBase>(MoneyBase_Cache.Values);
         }
         #endregion
+
         #region 错误码
         /// <summary>
         /// 错误码配置缓存
@@ -6526,12 +6023,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ErrorBase> GetAllErrorBase()
         {
-            List<ErrorBase> list = new List<ErrorBase>();
-            foreach (var val in ErrorBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ErrorBase>(ErrorBase_Cache.Values);
         }
         #endregion
 
@@ -6562,21 +6054,21 @@ namespace Remnant_Afterglow
             GlobalConfigList_Cache.Clear();
             FunctionTemplate_Cache.Clear();
             CameraBase_Cache.Clear();
-            CameraAssemblyBase_Cache.Clear();
             AnimaUnit_Cache.Clear();
-            AnimaTower_Cache.Clear();
             AnimaBuild_Cache.Clear();
+            AnimaTower_Cache.Clear();
             AnimaWeapon_Cache.Clear();
             AnimaWorker_Cache.Clear();
             AnimaBullet_Cache.Clear();
             AnimaExplode_Cache.Clear();
             SequenceMapBase_Cache.Clear();
             SpeciallyEffect_Cache.Clear();
+            GenerateFixedMap_Cache.Clear();
             MapFixedSet_Cache.Clear();
             MapFixedMaterial_Cache.Clear();
-            GenerateFixedMap_Cache.Clear();
             MapPassType_Cache.Clear();
             MapEdge_Cache.Clear();
+            MapWallShadow_Cache.Clear();
             MapMassif_Cache.Clear();
             MapImageLayer_Cache.Clear();
             MapPhysicsLayer_Cache.Clear();
@@ -6590,13 +6082,14 @@ namespace Remnant_Afterglow
             BigMapBigCell_Cache.Clear();
             BigMapCellLogic_Cache.Clear();
             BigMapEvent_Cache.Clear();
-            UnitGroupType_Cache.Clear();
-            UnitGroupData_Cache.Clear();
-            ChapterBase_Cache.Clear();
-            ChapterCopyBase_Cache.Clear();
             CopyBrush_Cache.Clear();
             BrushPoint_Cache.Clear();
             WaveBase_Cache.Clear();
+            UnitGroupData_Cache.Clear();
+            UnitGroupType_Cache.Clear();
+            ChapterBase_Cache.Clear();
+            ChapterCopyBase_Cache.Clear();
+            CopyBuildLimit_Cache.Clear();
             ChapterCopyUI_Cache.Clear();
             BackgroundMusic_Cache.Clear();
             SoundEffect_Cache.Clear();
@@ -6616,12 +6109,10 @@ namespace Remnant_Afterglow
             ObjectBottomBar_Cache.Clear();
             ObjectSideBar_Cache.Clear();
             BaseObjectData_Cache.Clear();
-            BaseObjectWeapon_Cache.Clear();
             BuildData_Cache.Clear();
             WorkerData_Cache.Clear();
             WeaponData_Cache.Clear();
             WeaponData2_Cache.Clear();
-            TowerData_Cache.Clear();
             AttributeBase_Cache.Clear();
             AttrCalculate_Cache.Clear();
             AttrDependency_Cache.Clear();
@@ -6634,8 +6125,8 @@ namespace Remnant_Afterglow
             CampBase_Cache.Clear();
             GameDiffBase_Cache.Clear();
             BagData_Cache.Clear();
-            MoneyBase_Cache.Clear();
             ItemData_Cache.Clear();
+            MoneyBase_Cache.Clear();
             ErrorBase_Cache.Clear();
         }
 

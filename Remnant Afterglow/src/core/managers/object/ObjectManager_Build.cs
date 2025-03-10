@@ -19,24 +19,22 @@ namespace Remnant_Afterglow
         /// <param name="ObjectId">实体id</param>
         /// <param name="Pos">创建位置</param>
         /// <returns></returns>
-        public BuildBase CreateBuild(int ObjectId, Vector2 Pos)
+        public BuildBase CreateMapBuild(int ObjectId, Vector2I MapPos)
         {
-            BuildBase buildBase = new BuildBase(ObjectId);
+            BuildBase buildBase = GD.Load<PackedScene>("res://src/core/characters/builds/BuildBase.tscn").Instantiate<BuildBase>();
+            buildBase.InitData(ObjectId);
             //检查对应位置是否可以创建建筑
-
-            buildBase.Position = Pos;
+            buildBase.mapPos = MapPos;
+            buildBase.Position = MapCopy.Instance.fixedTileMap.GetBuildPos(buildBase.buildData.BuildingSize, MapPos);
             buildBase.ZIndex = 9;//祝福注释-这里地图层要改,先用着
             buildDict[buildBase.Logotype] = buildBase;
-            buildBase.MobKilled +=(BaseObject killObject,BaseObject casterObject) => BuildKilledAfter(killObject,casterObject);
             MapCopy.Instance.BuildNode.AddChild(buildBase);
+            CreateObject(buildBase, buildBase.buildData);
+            FlowFieldSystem.Instance.CreateBaseObject(buildBase, buildBase.buildData, false);
+            buildBase.MobKilled += (BaseObject killObject, BaseObject casterObject, BulletNode bulletNode) =>
+KilledAfter(killObject, casterObject, bulletNode);
             return buildBase;
         }
 
-        //建筑死亡后处理
-        private void BuildKilledAfter(BaseObject killObject,BaseObject casterObject)
-        {
-
-            killObject.QueueFree();//此时才清空
-        }
     }
 }

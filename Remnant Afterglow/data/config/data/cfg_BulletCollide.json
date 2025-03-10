@@ -4,7 +4,7 @@
         "CollideId": 1,
         "IsCollide": true,
         "CollisionLayerList": [
-            1
+            6
         ],
         "MaskLayerList": [],
         "CollidePos": [

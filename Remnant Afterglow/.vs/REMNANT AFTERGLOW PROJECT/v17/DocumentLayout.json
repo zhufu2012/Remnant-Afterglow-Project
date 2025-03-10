@@ -3,48 +3,12 @@
   "WorkspaceRootPath": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\edit\\common_view\\layer_select\\layerselectpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\edit\\common_view\\layer_select\\layerselectpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\characters\\units\\unitbase_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\characters\\units\\unitbase_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\edit\\common_view\\layer_select\\layeritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\edit\\common_view\\layer_select\\layeritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\edit\\edit_map\\editmapview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\edit\\edit_map\\editmapview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\edit\\editmapcreateview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\edit\\editmapcreateview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\edit\\common_view\\grid_select\\gridselectcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\edit\\common_view\\grid_select\\gridselectcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\utilities\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\utilities\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\edit\\common_view\\grid_select\\gridselectpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\edit\\common_view\\grid_select\\gridselectpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\map\\mapimageset\\loadmapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\map\\mapimageset\\loadmapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\map\\mapimageset\\mapimageset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\map\\mapimageset\\mapimageset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\map\\mapimageset\\loadtilesetconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\map\\mapimageset\\loadtilesetconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|e:\\remnant afterglow project\\remnant afterglow\\src\\core\\game\\maplogic\\wavebrush\\brushsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{770EAE29-28EC-489F-8A63-9D276AF89CDE}|Remnant Afterglow Project.csproj|solutionrelative:src\\core\\game\\maplogic\\wavebrush\\brushsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,144 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LayerSelectPanel.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\layer_select\\LayerSelectPanel.cs",
-              "RelativeDocumentMoniker": "src\\edit\\common_view\\layer_select\\LayerSelectPanel.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\layer_select\\LayerSelectPanel.cs",
-              "RelativeToolTip": "src\\edit\\common_view\\layer_select\\LayerSelectPanel.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAkwCAAAAArAAAA",
+              "Title": "UnitBase_Move.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\units\\UnitBase_Move.cs",
+              "RelativeDocumentMoniker": "src\\core\\characters\\units\\UnitBase_Move.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\characters\\units\\UnitBase_Move.cs",
+              "RelativeToolTip": "src\\core\\characters\\units\\UnitBase_Move.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAmwDwAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T18:18:44.239Z",
+              "WhenOpened": "2025-03-09T07:23:20.451Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LayerItem.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\layer_select\\LayerItem.cs",
-              "RelativeDocumentMoniker": "src\\edit\\common_view\\layer_select\\LayerItem.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\layer_select\\LayerItem.cs",
-              "RelativeToolTip": "src\\edit\\common_view\\layer_select\\LayerItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Title": "BrushSystem.cs",
+              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\game\\mapLogic\\waveBrush\\BrushSystem.cs",
+              "RelativeDocumentMoniker": "src\\core\\game\\mapLogic\\waveBrush\\BrushSystem.cs",
+              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\game\\mapLogic\\waveBrush\\BrushSystem.cs",
+              "RelativeToolTip": "src\\core\\game\\mapLogic\\waveBrush\\BrushSystem.cs",
+              "ViewState": "AQIAAJ8AAAAAAAAAAAAswJ8AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T18:18:35.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SceneManager.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\managers\\SceneManager.cs",
-              "RelativeDocumentMoniker": "src\\core\\managers\\SceneManager.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\managers\\SceneManager.cs",
-              "RelativeToolTip": "src\\core\\managers\\SceneManager.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAnwFoAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T18:14:19.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoadMapConfig.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\LoadMapConfig.cs",
-              "RelativeDocumentMoniker": "src\\core\\map\\mapimageset\\LoadMapConfig.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\LoadMapConfig.cs",
-              "RelativeToolTip": "src\\core\\map\\mapimageset\\LoadMapConfig.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAqwEcAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:29:55.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GridSelectPanel.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\grid_select\\GridSelectPanel.cs",
-              "RelativeDocumentMoniker": "src\\edit\\common_view\\grid_select\\GridSelectPanel.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\grid_select\\GridSelectPanel.cs",
-              "RelativeToolTip": "src\\edit\\common_view\\grid_select\\GridSelectPanel.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAADwv0YAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T15:07:32.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GridSelectCon.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\grid_select\\GridSelectCon.cs",
-              "RelativeDocumentMoniker": "src\\edit\\common_view\\grid_select\\GridSelectCon.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\common_view\\grid_select\\GridSelectCon.cs",
-              "RelativeToolTip": "src\\edit\\common_view\\grid_select\\GridSelectCon.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAhwEsAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T15:47:27.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditMapView.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\edit_map\\EditMapView.cs",
-              "RelativeDocumentMoniker": "src\\edit\\edit_map\\EditMapView.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\edit_map\\EditMapView.cs",
-              "RelativeToolTip": "src\\edit\\edit_map\\EditMapView.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T15:00:08.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EditMapCreateView.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\EditMapCreateView.cs",
-              "RelativeDocumentMoniker": "src\\edit\\EditMapCreateView.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\edit\\EditMapCreateView.cs",
-              "RelativeToolTip": "src\\edit\\EditMapCreateView.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAhwCQAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T15:06:28.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoadTileSetConfig.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\LoadTileSetConfig.cs",
-              "RelativeDocumentMoniker": "src\\core\\map\\mapimageset\\LoadTileSetConfig.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\LoadTileSetConfig.cs",
-              "RelativeToolTip": "src\\core\\map\\mapimageset\\LoadTileSetConfig.cs",
-              "ViewState": "AQIAAHkAAAAAAAAAAAAAAIIAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T17:00:36.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Common.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\utilities\\Common.cs",
-              "RelativeDocumentMoniker": "src\\core\\utilities\\Common.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\utilities\\Common.cs",
-              "RelativeToolTip": "src\\core\\utilities\\Common.cs",
-              "ViewState": "AQIAAGQAAAAAAAAAAAAtwGcAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:48:20.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MapImageSet.cs",
-              "DocumentMoniker": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\MapImageSet.cs",
-              "RelativeDocumentMoniker": "src\\core\\map\\mapimageset\\MapImageSet.cs",
-              "ToolTip": "E:\\Remnant Afterglow Project\\Remnant Afterglow\\src\\core\\map\\mapimageset\\MapImageSet.cs",
-              "RelativeToolTip": "src\\core\\map\\mapimageset\\MapImageSet.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAArwDIAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:48:05.076Z",
+              "WhenOpened": "2025-03-09T07:17:12.077Z",
               "EditorCaption": ""
             }
           ]

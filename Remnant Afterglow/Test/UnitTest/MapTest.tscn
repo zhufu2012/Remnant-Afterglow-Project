@@ -94,7 +94,6 @@ de = 180
 position = Vector2(-16, 464)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 script = ExtResource("2_qif2l")
 zoom_min_limit = 0.5
 zoom_max_limit = 2.0

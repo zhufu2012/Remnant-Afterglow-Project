@@ -10,19 +10,26 @@ namespace Remnant_Afterglow_EditMap
 		/// <summary>
 		/// 地图配置
 		/// </summary>
-		MapFixedSet cfgData;
-		//材料数据字典<固定材料id,地图材料配置>
+		public MapFixedSet cfgData;
+
+		///材料数据字典<固定材料id,地图材料配置>
         Dictionary<int,MapFixedMaterial>  mapFixedMaterialDict = new Dictionary<int,MapFixedMaterial>();
-		//图集数据<地图编辑器图集id，>
+		///图集数据<地图编辑器图集id，>
 		Dictionary<int,ImageSetData>  imageSetDataDict = new Dictionary<int,ImageSetData>();
 
         GridContainer gridContainer;
 		///地图类型
 		public int Type;
-        //当前选择的材料数据
+        /// <summary>
+		/// 当前选择的材料数据
+		/// </summary>
         public MapFixedMaterial select;
+        /// <summary>
+		/// 当前选择的材料图
+		/// </summary>
+        public Texture2D img;
 
-		public MapFixedMaterial material;
+        public MapFixedMaterial material;
 		public GridSelectCon()
 		{
 		}
@@ -59,7 +66,17 @@ namespace Remnant_Afterglow_EditMap
 		public override void _Ready()
 		{
 			gridContainer = GetNode<GridContainer>("ScrollContainer/VBoxContainer/GridContainer");
-			gridContainer.Columns = 20;//祝福注释-一行20个，暂时
+			switch(Type)
+            				    {
+            				        case 1://作战地图
+            				            gridContainer.Columns = EditConstant.MapGridSelectPanel_ItemNum;
+            				            break;
+            				        case 2://大地图
+            				            gridContainer.Columns = EditConstant.BigMapGridSelectPanel_ItemNum;
+            							break;
+            				        default:
+            				            break;
+            				    }
 			foreach(var item in mapFixedMaterialDict)
 			{
 			    MapFixedMaterial mapFixed = item.Value;
@@ -71,23 +88,34 @@ namespace Remnant_Afterglow_EditMap
                 grid.FocusEntered += ()=>
                 {
                     select = mapFixed;
+                    img = imageSetDataDict[mapFixed.ImageSetId].textureList[ve];
+					EditMapView.Instance.gridSelectPanel.UpdataMaterial();//更新材料格子数据
+					
+					EditMapView.Instance.nowMapData.NowLayer = cfgData.ImageLayer;
+					EditMapView.Instance.tileMap.SetCurrLayer( cfgData.ImageLayer);
                 };
                 gridContainer.AddChild(grid);
 			}
         }
 
-	    //获得焦点时，
-		public void OnFocusEntered()
-		{
-            //设置 材料格子的各项参数
 
-		}
-
-        //返回当前选择的材料
+        /// <summary>
+		/// 返回当前选择的材料
+		/// </summary>
+		/// <returns></returns>
         public MapFixedMaterial GetSelectMaterial()
         {
             return select;
         }
 
-	}
+
+        /// <summary>
+		/// 返回当前选择的材料图
+		/// </summary>
+		/// <returns></returns>
+        public Texture2D GetSelectTexture2D()
+        {
+            return img;
+        }
+    }
 }

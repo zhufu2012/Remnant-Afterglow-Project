@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Godot.Community.ManagedAttributes
+﻿namespace Godot.Community.ManagedAttributes
 {
     /// <summary>
     /// 属性值类型

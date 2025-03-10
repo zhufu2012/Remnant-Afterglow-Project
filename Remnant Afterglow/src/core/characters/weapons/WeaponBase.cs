@@ -6,11 +6,12 @@ using System.Collections.Generic;
 namespace Remnant_Afterglow
 {
     /// <summary>
-    /// 武器，有实体，需要实现IWeapon接口
+    /// 武器，需要实现IWeapon接口
     /// </summary>
-    public partial class WeaponBase : BaseObject, IWeapon
+    public partial class WeaponBase : Node2D, IWeapon
     {
         #region IWeapon
+        public int weaponId { get; set; }
         #endregion
 
         /// <summary>
@@ -42,26 +43,21 @@ namespace Remnant_Afterglow
         /// 是否自动播放 SpriteFrames 的动画
         /// </summary>
         public bool IsAutoPlaySpriteFrames { get; set; } = true;
+        /// <summary>
+        /// 当前物体显示的精灵图像, 节点名称必须叫 "AnimatedSprite2D", 类型为 AnimatedSprite2D
+        /// </summary>
+        public AnimatedSprite2D AnimatedSprite = new AnimatedSprite2D();
 
 
         #region 初始化
-        public WeaponBase(int object_id) : base(object_id)
+        public void InitData(BaseObject baseObject,int weaponId) 
         {
-            object_type = BaseObjectType.BaseUnit;
-            InitData();//初始化配置
+            this.baseObject = baseObject;
+            this.weaponId = weaponId;
+            CfgData = ConfigCache.GetWeaponData(weaponId);
+            CfgData2 = ConfigCache.GetWeaponData2(weaponId);
             InitChild();//初始化节点数据
-        }
-
-
-        /// <summary>
-        /// 根据配置id和阵营数据初始化配置数据
-        /// </summary>
-        /// <param name="cfg_id"></param>
-        /// <param name="camp"></param>
-        public void InitData()
-        {
-            CfgData = ConfigCache.GetWeaponData(ObjectId);
-            CfgData2 = ConfigCache.GetWeaponData2(ObjectId);
+            InitWeaponAttack();
         }
 
         /// <summary>
@@ -69,17 +65,15 @@ namespace Remnant_Afterglow
         /// </summary>
         public void InitChild()
         {
+            SelfModulate = new Color(0,0,0,0);
             AnimatedSprite = GetWeaponFrame(CfgData);
             AddChild(AnimatedSprite);
-            rangeArea = new Area2D();//攻击范围
-            rangeArea.AreaEntered += Area2DEntered;
-            rangeArea.AreaExited += Area2DExited;
-        }
-
-        public override void InitView()
-        {
-            base.InitView();
-            AddToGroup(MapGroup.WeaponGroup);
+            AttackRange = GetNode<Area2D>("AttackRange");//攻击范围
+            AttackShape = GetNode<CollisionShape2D>("AttackRange/AttackShape");
+            CircleShape2D circle = (CircleShape2D)AttackShape.Shape;
+            circle.Radius = CfgData2.Range;
+            AttackRange.AreaEntered += Area2DEntered;
+            AttackRange.AreaExited += Area2DExited;
         }
         #endregion
 
@@ -90,10 +84,19 @@ namespace Remnant_Afterglow
                 DrawCircle(Vector2.Zero, CfgData2.Range, CfgData.RangeColor);
         }
 
-        public override void Update(double delta)
+        public override void _PhysicsProcess(double delta)
         {
-            base.Update(delta);
-            Update_Attack();
+            if(state != WeaponState.Building)//非建造状态
+            {
+                CheckTarget();//检查目标是否有效果
+                UpdateRotation(delta);//每帧旋转角度
+                Update_Attack();//攻击流程代码
+                                // 在状态为 Ready 且有目标时触发攻击
+                if (state == WeaponState.Ready && targetObject != null)
+                {
+                    Attack();
+                }
+            }
         }
 
 
