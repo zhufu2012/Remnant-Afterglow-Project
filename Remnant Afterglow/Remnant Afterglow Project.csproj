@@ -1,40 +1,44 @@
-<Project Sdk="Godot.NET.Sdk/4.2.2">
+<Project Sdk="Godot.NET.Sdk/4.4.1">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net7.0</TargetFramework>
-    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'ios' ">net8.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>Remnant_Afterglow</RootNamespace>
     <LangVersion>12.0</LangVersion>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="CSharp\**" />
     <Compile Remove="src\core\autoloads\cache\**" />
     <Compile Remove="src\core\map\navigation\**" />
+    <Compile Remove="src\core\ui\component\button\**" />
     <Compile Remove="temp\**" />
     <Compile Remove="Test\Type\**" />
     <EmbeddedResource Remove="CSharp\**" />
     <EmbeddedResource Remove="src\core\autoloads\cache\**" />
     <EmbeddedResource Remove="src\core\map\navigation\**" />
+    <EmbeddedResource Remove="src\core\ui\component\button\**" />
     <EmbeddedResource Remove="temp\**" />
     <EmbeddedResource Remove="Test\Type\**" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Arch" Version="2.0.0" />
+    <PackageReference Include="Arch.Persistence" Version="2.0.0" />
+    <PackageReference Include="Arch.System" Version="1.1.0" />
     <PackageReference Include="Equationator" Version="1.0.4" />
     <PackageReference Include="Godot.Community.ControlBinding" Version="0.3.2" />
     <PackageReference Include="Lib.Harmony.Thin" Version="2.3.3" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.10.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.10.0" />
-    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Steamworks.NET" Version="2024.8.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\core\controllers\operation\bigmapop\" />
+    <Folder Include="src\core\game\sceneLogic\subscene\" />
     <Folder Include="src\core\steam\" />
     <Folder Include="src\core\system\BuffSystem\BuffData\" />
     <Folder Include="src\core\system\BuffSystem\BuffTag\" />
-    <Folder Include="src\core\ui\component\button\" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />

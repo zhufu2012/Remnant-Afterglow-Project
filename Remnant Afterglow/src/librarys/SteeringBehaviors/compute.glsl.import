@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://b76jyaw2gqiyc"
+path="res://.godot/imported/compute.glsl-9d9ec1bdd90776c6e7c45507c75c4b71.res"
+
+[deps]
+
+source_file="res://src/librarys/SteeringBehaviors/compute.glsl"
+dest_files=["res://.godot/imported/compute.glsl-9d9ec1bdd90776c6e7c45507c75c4b71.res"]
+
+[params]
+

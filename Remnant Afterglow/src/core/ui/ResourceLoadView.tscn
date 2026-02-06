@@ -1,0 +1,189 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddykw8p37n7ft"]
+
+[ext_resource type="Script" uid="uid://ddjafrocycnk4" path="res://src/core/ui/ResourceLoadView.cs" id="1_g0fx3"]
+[ext_resource type="Texture2D" uid="uid://kyxevqj8f2hx" path="res://assets/作战界面素材/设置背景.png" id="2_6jseu"]
+
+[sub_resource type="Animation" id="Animation_4ixyy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/设置背景5:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.261799]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/设置背景8:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/设置背景7:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/设置背景6:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_0cqk3"]
+resource_name = "齿轮转动"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/设置背景5:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.14159]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/设置背景8:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/设置背景7:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.14159]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/设置背景6:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.14159]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_htthr"]
+_data = {
+&"RESET": SubResource("Animation_4ixyy"),
+&"齿轮转动": SubResource("Animation_0cqk3")
+}
+
+[node name="ResourceLoadView" type="Control" node_paths=PackedStringArray("progressBar", "label")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_g0fx3")
+progressBar = NodePath("ProgressBar")
+label = NodePath("Label")
+await = 4
+task_await = 20
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -744.0
+offset_top = -58.5
+offset_right = 744.0
+offset_bottom = 58.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 202.0
+offset_right = 1016.0
+offset_bottom = 333.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_htthr")
+}
+autoplay = "齿轮转动"
+
+[node name="设置背景5" type="Sprite2D" parent="AnimationPlayer"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(69, 1004)
+rotation = -0.261799
+scale = Vector2(2, 2)
+texture = ExtResource("2_6jseu")
+
+[node name="设置背景6" type="Sprite2D" parent="AnimationPlayer"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(115, 1075)
+scale = Vector2(2, 2)
+texture = ExtResource("2_6jseu")
+
+[node name="设置背景7" type="Sprite2D" parent="AnimationPlayer"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(-5, 946)
+scale = Vector2(3, 3)
+texture = ExtResource("2_6jseu")
+
+[node name="设置背景8" type="Sprite2D" parent="AnimationPlayer"]
+z_index = -20
+texture_filter = 1
+position = Vector2(-13, 1090)
+scale = Vector2(4, 4)
+texture = ExtResource("2_6jseu")

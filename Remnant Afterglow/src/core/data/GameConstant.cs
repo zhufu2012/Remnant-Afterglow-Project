@@ -31,6 +31,6 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 作战地图使用的货币id
         /// </summary>
-        public static List<int> PriceIdList = [2, 3, 4];
+        public static List<int> PriceIdList = [1, 2, 3];
     }
 }

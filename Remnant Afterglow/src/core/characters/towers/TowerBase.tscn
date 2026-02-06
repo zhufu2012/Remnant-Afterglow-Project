@@ -1,20 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdj7jim6kcisn"]
+[gd_scene load_steps=3 format=3 uid="uid://bdj7jim6kcisn"]
 
-[ext_resource type="Script" path="res://src/core/characters/towers/TowerBase.cs" id="1_k0xxs"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_118bb"]
-size = Vector2(40, 40)
+[ext_resource type="Script" uid="uid://dd8pge6xky2d7" path="res://src/core/characters/towers/TowerBase.cs" id="1_k0xxs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ukc02"]
+resource_local_to_scene = true
 
-[node name="TowerBase" type="CharacterBody2D"]
-motion_mode = 1
+[node name="占地" type="Area2D" node_paths=PackedStringArray("AnimatedSprite", "area2DShape")]
+collision_layer = 0
+input_pickable = false
 script = ExtResource("1_k0xxs")
+AnimatedSprite = NodePath("AnimatedSprite")
+area2DShape = NodePath("占地形状")
 
-[node name="碰撞体" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_118bb")
-
-[node name="占地" type="Area2D" parent="."]
-
-[node name="占地形状" type="CollisionShape2D" parent="占地"]
+[node name="占地形状" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ukc02")
+debug_color = Color(0.565895, 0.557714, 0, 0.42)
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]

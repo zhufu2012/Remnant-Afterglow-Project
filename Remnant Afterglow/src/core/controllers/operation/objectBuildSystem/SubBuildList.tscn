@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://vjwpqis5qiav"]
+[gd_scene load_steps=11 format=3 uid="uid://vjwpqis5qiav"]
 
-[ext_resource type="Script" path="res://src/core/controllers/operation/objectBuildSystem/SubBuildList.cs" id="1_fdew0"]
-[ext_resource type="Texture2D" uid="uid://gcvdw0ux4m1w" path="res://assets/作战界面素材/换列.png" id="2_3yslc"]
+[ext_resource type="Script" uid="uid://bpbckwugw4v4j" path="res://src/core/controllers/operation/objectBuildSystem/SubBuildList.cs" id="1_fdew0"]
+[ext_resource type="Texture2D" uid="uid://dsyj1iuh2x3m0" path="res://assets/作战界面素材/换列1.png" id="2_b7ihn"]
 [ext_resource type="Texture2D" uid="uid://c2rqpsinlmvfk" path="res://assets/作战界面素材/建造次级列表1.png" id="3_ceprl"]
-[ext_resource type="Texture2D" uid="uid://5pv271rohm6k" path="res://assets/作战界面素材/建筑次级列表高亮.png" id="4_s4vhd"]
+[ext_resource type="Texture2D" uid="uid://dtm12e5y8s7sj" path="res://assets/作战界面素材/换列2.png" id="3_edcrg"]
+[ext_resource type="Texture2D" uid="uid://bq8t1v7epuc4j" path="res://assets/作战界面素材/次级列表晶体管高亮.png" id="4_plddj"]
+[ext_resource type="Texture2D" uid="uid://boy7f8c8paoks" path="res://assets/作战界面素材/列表背景4.png" id="6_0ofhs"]
 
 [sub_resource type="Animation" id="Animation_etig0"]
 length = 0.001
@@ -54,13 +56,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8pvlw"]
 _data = {
-"RESET": SubResource("Animation_etig0"),
-"关闭": SubResource("Animation_p75jh"),
-"打开": SubResource("Animation_wmfv5")
+&"RESET": SubResource("Animation_etig0"),
+&"关闭": SubResource("Animation_p75jh"),
+&"打开": SubResource("Animation_wmfv5")
 }
 
-[node name="SubBuildList" type="Node2D"]
+[node name="SubBuildList" type="Control"]
 z_index = -1
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_fdew0")
 PngZIndex = 0
 
@@ -69,84 +73,118 @@ position = Vector2(0, 54)
 
 [node name="上一页" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_left = -19.0
-offset_top = 4.0
-offset_right = -6.0
-offset_bottom = 26.0
-texture_normal = ExtResource("2_3yslc")
+offset_left = -161.0
+offset_top = -40.0
+offset_right = -143.0
+offset_bottom = -11.0
+action_mode = 0
+texture_normal = ExtResource("2_b7ihn")
+texture_pressed = ExtResource("3_edcrg")
 
 [node name="下一页" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_left = 260.0
-offset_top = 4.0
-offset_right = 273.0
-offset_bottom = 26.0
-texture_normal = ExtResource("2_3yslc")
+offset_left = 129.0
+offset_top = -40.0
+offset_right = 147.0
+offset_bottom = -11.0
+action_mode = 0
+texture_normal = ExtResource("2_b7ihn")
+texture_pressed = ExtResource("3_edcrg")
 flip_h = true
 
 [node name="TextureButton0" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_right = 30.0
-offset_bottom = 30.0
+offset_left = -143.0
+offset_top = -46.0
+offset_right = -109.0
+offset_bottom = -5.0
 texture_normal = ExtResource("3_ceprl")
 
 [node name="TextureButton1" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_left = 32.0
-offset_right = 62.0
-offset_bottom = 30.0
+offset_left = -109.0
+offset_top = -46.0
+offset_right = -75.0
+offset_bottom = -5.0
 texture_normal = ExtResource("3_ceprl")
 
 [node name="TextureButton2" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_left = 64.0
-offset_right = 94.0
-offset_bottom = 30.0
+offset_left = -75.0
+offset_top = -46.0
+offset_right = -41.0
+offset_bottom = -5.0
 texture_normal = ExtResource("3_ceprl")
 
 [node name="TextureButton3" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_left = 96.0
-offset_right = 126.0
-offset_bottom = 30.0
+offset_left = -41.0
+offset_top = -46.0
+offset_right = -7.0
+offset_bottom = -5.0
 texture_normal = ExtResource("3_ceprl")
 
 [node name="TextureButton4" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_left = 128.0
-offset_right = 158.0
-offset_bottom = 30.0
+offset_left = -7.0
+offset_top = -46.0
+offset_right = 27.0
+offset_bottom = -5.0
 texture_normal = ExtResource("3_ceprl")
 
 [node name="TextureButton5" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_left = 160.0
-offset_right = 190.0
-offset_bottom = 30.0
+offset_left = 27.0
+offset_top = -46.0
+offset_right = 61.0
+offset_bottom = -5.0
 texture_normal = ExtResource("3_ceprl")
 
 [node name="TextureButton6" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_left = 192.0
-offset_right = 222.0
-offset_bottom = 30.0
+offset_left = 61.0
+offset_top = -46.0
+offset_right = 95.0
+offset_bottom = -5.0
 texture_normal = ExtResource("3_ceprl")
 
 [node name="TextureButton7" type="TextureButton" parent="Node2D"]
 texture_filter = 1
-offset_left = 224.0
-offset_right = 254.0
-offset_bottom = 30.0
+offset_left = 95.0
+offset_top = -46.0
+offset_right = 129.0
+offset_bottom = -5.0
 texture_normal = ExtResource("3_ceprl")
 
 [node name="次级列表高亮" type="TextureRect" parent="Node2D"]
-visible = false
 texture_filter = 1
-offset_right = 30.0
-offset_bottom = 30.0
-texture = ExtResource("4_s4vhd")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -46.0
+offset_right = -109.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_plddj")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D"]
+z_index = -3
+offset_left = -150.0
+offset_top = -21.0
+offset_right = 136.0
+offset_bottom = 31.0
+texture = ExtResource("6_0ofhs")
+region_rect = Rect2(0, 0, 84, 50)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 36
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_8pvlw")
+&"": SubResource("AnimationLibrary_8pvlw")
 }

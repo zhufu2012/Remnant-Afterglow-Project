@@ -7,15 +7,24 @@ namespace Remnant_Afterglow
     public partial class GlobalConfigStr
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 全局配置id
         /// </summary>
-        public string Configid { get; set; }
-        /// <summary>        
+        public string ConfigId { get; set; }
+        /// <summary>
         /// 全局配置名称
         /// </summary>
         public string ConfigName { get; set; }
-        /// <summary>        
+        /// <summary>
+        /// 
+        ///设置-特殊参数中是否显示
+        /// </summary>
+        public bool ShopSetting { get; set; }
+        /// <summary>
+        /// 设置-特殊参数中是否可以修改
+        /// </summary>
+        public bool IsModif { get; set; }
+        /// <summary>
         /// 全局配置值
         /// </summary>
         public string ConfigValue { get; set; }
@@ -23,8 +32,10 @@ namespace Remnant_Afterglow
         public GlobalConfigStr(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_GlobalConfigStr, id);//public const string Config_GlobalConfigStr = "cfg_GlobalConfigStr"; 
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
+			ShopSetting = (bool)dict["ShopSetting"];
+			IsModif = (bool)dict["IsModif"];
 			ConfigValue = (string)dict["ConfigValue"];
 			InitData();
         }
@@ -33,16 +44,20 @@ namespace Remnant_Afterglow
         public GlobalConfigStr(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_GlobalConfigStr, cfg_id);//public const string Config_GlobalConfigStr = "cfg_GlobalConfigStr"; 
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
+			ShopSetting = (bool)dict["ShopSetting"];
+			IsModif = (bool)dict["IsModif"];
 			ConfigValue = (string)dict["ConfigValue"];
 			InitData();
         }
 
         public GlobalConfigStr(Dictionary<string, object> dict)
         {
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
+			ShopSetting = (bool)dict["ShopSetting"];
+			IsModif = (bool)dict["IsModif"];
 			ConfigValue = (string)dict["ConfigValue"];
 			InitData();
         }

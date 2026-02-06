@@ -7,7 +7,7 @@ public enum ENodeType
     /// </summary>
     none,
     /// <summary>
-    /// 瞄准
+    /// 瞄准当前实体
     /// </summary>
     aim,
     /// <summary>

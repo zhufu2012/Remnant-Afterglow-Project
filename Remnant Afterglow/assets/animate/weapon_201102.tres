@@ -1,0 +1,24 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3]
+
+[sub_resource type="Image" id="Image_rja10"]
+data = {
+"data": PackedByteArray(20, 20, 20, 5),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 1
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_yqjbk"]
+image = SubResource("Image_rja10")
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("ImageTexture_yqjbk")
+}],
+"loop": true,
+"name": &"1",
+"speed": 1.0
+}]

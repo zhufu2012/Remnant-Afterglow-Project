@@ -8,46 +8,45 @@ namespace BulletMLLib.SharedProject.Nodes;
 
 /// <summary>
 /// 这是BulletML文档中的单个节点 解析的代码
-/// Used as the base node for all the other node types.
+/// 用作所有其他节点类型的基节点。
 /// </summary>
 public class BulletMLNode
 {
     /// <summary>
-    /// The XML node name of this item
+    /// 此项的XML节点名称
     /// </summary>
     public ENodeName Name { get; }
 
     /// <summary>
-    /// Gets or sets the type of the node.
-    /// This is virtual so sub-classes can override it and validate on their own.
+    /// 获取或设置节点的类型。
+    /// 这是virtual的，因此子类可以覆盖它并进行自己的验证。
     /// </summary>
-    /// <value>The type of the node.</value>
+    /// <value>节点的类型。</value>
     public virtual ENodeType NodeType { get; protected set; } = ENodeType.none;
 
     /// <summary>
-    /// The label of this node
-    /// This can be used by other nodes to reference this node
+    /// 这是节点标签
     /// </summary>
     public string Label { get; private set; } = Guid.NewGuid().ToString();
 
     /// <summary>
-    /// An equation used to get a value of this node.
+    /// 用于获取此节点值的方程。
     /// </summary>
-    /// <value>The node value.</value>
+    /// <value>节点值。</value>
     private readonly BulletMLEquation NodeEquation = new();
 
     /// <summary>
-    /// A list of all the child nodes for this dude
+    /// 此节点的所有子节点列表
     /// </summary>
     public List<BulletMLNode> ChildNodes { get; }
 
     /// <summary>
-    /// pointer to the parent node of this dude
+    /// 指向此节点的父节点
     /// </summary>
     protected BulletMLNode Parent { get; private set; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BulletMLNode"/> class.
+    /// 初始化 <see cref="BulletMLNode"/> 类的新实例。
     /// </summary>
     public BulletMLNode(ENodeName nodeType)
     {
@@ -57,13 +56,13 @@ public class BulletMLNode
     }
 
     /// <summary>
-    /// Convert a string to it's ENodeType enum equivalent
+    /// 将字符串转换为其ENodeType枚举等价物
     /// </summary>
-    /// <returns>ENodeType: the nuem value of that string</returns>
-    /// <param name="str">The string to convert to an enum</param>
+    /// <returns>ENodeType: 该字符串的枚举值</returns>
+    /// <param name="str">要转换为枚举的字符串</param>
     public static ENodeType StringToType(string str)
     {
-        //make sure there is something there
+        //确保有内容
         if (string.IsNullOrEmpty(str))
         {
             return ENodeType.none;
@@ -73,58 +72,58 @@ public class BulletMLNode
     }
 
     /// <summary>
-    /// Convert a string to it's ENodeName enum equivalent
+    /// 将字符串转换为其ENodeName枚举等价物
     /// </summary>
-    /// <returns>ENodeName: the enum value of that string</returns>
-    /// <param name="str">The string to convert to an enum</param>
+    /// <returns>ENodeName: 该字符串的枚举值</returns>
+    /// <param name="str">要转换为枚举的字符串</param>
     private static ENodeName StringToName(string str)
     {
         return (ENodeName)Enum.Parse(typeof(ENodeName), str);
     }
 
     /// <summary>
-    /// Gets the root node.
+    /// 获取根节点。
     /// </summary>
-    /// <returns>The root node.</returns>
+    /// <returns>根节点。</returns>
     public BulletMLNode GetRootNode()
     {
-        //recurse up until we get to the root node
+        //递归向上直到获取到根节点
         return null != Parent ? Parent.GetRootNode() : this;
     }
 
     /// <summary>
-    /// Find a node of a specific type and label
-    /// Recurse into the xml tree until we find it!
+    /// 查找特定类型和标签的节点
+    /// 在XML树中递归查找！
     /// </summary>
-    /// <returns>The label node.</returns>
-    /// <param name="label">Label of the node we are looking for</param>
-    /// <param name="name">name of the node we are looking for</param>
+    /// <returns>标签节点。</returns>
+    /// <param name="label">我们要查找的节点的标签</param>
+    /// <param name="name">我们要查找的节点的名称</param>
     public BulletMLNode FindLabelNode(string label, ENodeName name)
     {
-        //this uses breadth first search, since labelled nodes are usually top level
+        //使用广度优先搜索，因为标记的节点通常是顶级的
 
-        //Check if any of our child nodes match the request
+        //检查我们的任何子节点是否匹配请求
         foreach (var t in ChildNodes.Where(t => name == t.Name && (label == t.Label)))
         {
             return t;
         }
 
-        //recurse into the child nodes and see if we find any matches
+        //递归到子节点中查看是否找到任何匹配项
         return ChildNodes
             .Select(t => t.FindLabelNode(label, name))
             .FirstOrDefault(foundNode => null != foundNode);
 
-        //didnt find a BulletMLNode with that name :(
+        //未找到具有该名称的BulletMLNode :(
     }
 
     /// <summary>
-    /// Find a parent node of the specified node type
+    /// 查找指定节点类型的父节点
     /// </summary>
-    /// <returns>The first parent node of that type, null if none found</returns>
-    /// <param name="nodeType">Node type to find.</param>
+    /// <returns>该类型的第一个父节点，如果未找到则返回null</returns>
+    /// <param name="nodeType">要查找的节点类型。</param>
     public BulletMLNode FindParentNode(ENodeName nodeType)
     {
-        //first check if we have a parent node
+        //首先检查我们是否有父节点
         if (null == Parent)
         {
             return null;
@@ -132,20 +131,20 @@ public class BulletMLNode
 
         return nodeType == Parent.Name
             ?
-            //Our parent matches the query, return it!
+            //我们的父节点匹配查询，返回它！
             Parent
             :
-            //recurse into parent nodes to check grandparents, etc.
+            //递归到父节点中检查祖父节点等。
             Parent.FindParentNode(nodeType);
     }
 
     /// <summary>
-    /// Gets the value of a specific type of child node for a task
+    /// 获取任务的特定类型子节点的值
     /// </summary>
-    /// <returns>The child value. return 0.0 if no node found</returns>
-    /// <param name="name">type of child node we want.</param>
-    /// <param name="task">Task to get a value for</param>
-    /// <param name="bullet">The bullet.</param>
+    /// <returns>子节点的值。如果未找到节点则返回0.0</returns>
+    /// <param name="name">我们想要的子节点类型。</param>
+    /// <param name="task">获取值的任务</param>
+    /// <param name="bullet">子弹。</param>
     public float GetChildValue(ENodeName name, BulletMLTask task, Bullet bullet) =>
     (
         from tree in ChildNodes
@@ -154,43 +153,43 @@ public class BulletMLNode
     ).FirstOrDefault();
 
     /// <summary>
-    /// Get a direct child node of a specific type.  Does not recurse!
+    /// 获取特定类型的直接子节点。不递归！
     /// </summary>
-    /// <returns>The child.</returns>
-    /// <param name="name">type of node we want. null if not found</param>
+    /// <returns>子节点。如果未找到则返回null</returns>
+    /// <param name="name">我们想要的节点类型</param>
     public BulletMLNode GetChild(ENodeName name) =>
         ChildNodes.FirstOrDefault(node => node.Name == name);
 
     /// <summary>
-    /// Gets the value of this node for a specific instance of a task.
+    /// 获取此节点在任务特定实例中的值。
     /// </summary>
-    /// <returns>The value.</returns>
-    /// <param name="task">Task.</param>
-    /// <param name="bullet">The bullet to get the value for</param>
+    /// <returns>值。</returns>
+    /// <param name="task">任务。</param>
+    /// <param name="bullet">获取值的子弹</param>
     public float GetValue(BulletMLTask task, Bullet bullet)
     {
-        //send to the equation for an answer
+        //发送到方程以获得答案
         return (float)NodeEquation.Solve(task.GetParamValue, bullet.MyBulletManager.Tier);
     }
 
     /// <summary>
-    /// Parse the specified bulletNodeElement.
-    /// Read all the data from the xml node into this dude.
+    /// 解析指定的bulletNodeElement。
+    /// 将所有数据从xml节点读入此节点。
     /// </summary>
-    /// <param name="bulletNodeElement">Bullet node element.</param>
+    /// <param name="bulletNodeElement">子弹节点元素。</param>
     /// <param name="parentNode"></param>
     public void Parse(XmlNode bulletNodeElement, BulletMLNode parentNode)
     {
-        // Handle null argument.
+        // 处理null参数。
         if (null == bulletNodeElement)
         {
             throw new ArgumentNullException(nameof(bulletNodeElement));
         }
 
-        //grab the parent node
+        //获取父节点
         Parent = parentNode;
 
-        //Parse all our attributes
+        //解析所有属性
         XmlNamedNodeMap mapAttributes = bulletNodeElement.Attributes;
         for (var i = 0; i < mapAttributes!.Count; i++)
         {
@@ -199,10 +198,10 @@ public class BulletMLNode
 
             switch (strName)
             {
-                //skip the type attribute in top level nodes
+                //跳过顶级节点中的类型属性
                 case "type" when ENodeName.bulletml == Name:
                     continue;
-                //get the bullet node type
+                //获取子弹节点类型
                 case "type":
                     NodeType = StringToType(strValue);
                     break;
@@ -212,7 +211,7 @@ public class BulletMLNode
             }
         }
 
-        //parse all the child nodes
+        //解析所有子节点
         if (!bulletNodeElement.HasChildNodes)
             return;
 
@@ -226,7 +225,7 @@ public class BulletMLNode
             {
                 //如果子节点是文本节点，就把它解析成这个
                 case XmlNodeType.Text:
-                    //Get the text of the child xml node, but store it in THIS bullet node
+                    //获取子xml节点的文本，但将其存储在此子弹节点中
                     NodeEquation.Parse(childNode.Value);
                     continue;
                 case XmlNodeType.Comment:
@@ -244,13 +243,13 @@ public class BulletMLNode
     }
 
     /// <summary>
-    /// Validates the node.
-    /// Overloaded in child classes to validate that each type of node follows the correct business logic.
-    /// This checks stuff that isn't validated by the XML validation
+    /// 验证节点。
+    /// 在子类中重载以验证每种类型的节点是否遵循正确的业务逻辑。
+    /// 这检查XML验证未验证的内容
     /// </summary>
     public virtual void ValidateNode()
     {
-        //validate all the child nodes
+        //验证所有子节点
         foreach (var childNode in ChildNodes)
         {
             childNode.ValidateNode();

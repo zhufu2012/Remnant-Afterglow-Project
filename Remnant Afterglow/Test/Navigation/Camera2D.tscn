@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://hvcmlb7jta5r"]
 
-[ext_resource type="Script" path="res://Test/Navigation/NavigationCamera.cs" id="1_wvutl"]
+[ext_resource type="Script" uid="uid://m2101gi5if4i" path="res://Test/Navigation/NavigationCamera.cs" id="1_wvutl"]
 
 [node name="Camera2d" type="Camera2D"]
 script = ExtResource("1_wvutl")

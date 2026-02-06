@@ -7,15 +7,15 @@ namespace Remnant_Afterglow
     public partial class GlobalConfigList
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 全局配置id
         /// </summary>
-        public string Configid { get; set; }
-        /// <summary>        
+        public string ConfigId { get; set; }
+        /// <summary>
         /// 全局配置名称
         /// </summary>
         public string ConfigName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 全局配置值
         /// </summary>
         public List<int> ConfigValue { get; set; }
@@ -23,7 +23,7 @@ namespace Remnant_Afterglow
         public GlobalConfigList(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_GlobalConfigList, id);//public const string Config_GlobalConfigList = "cfg_GlobalConfigList"; 
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
 			ConfigValue = (List<int>)dict["ConfigValue"];
 			InitData();
@@ -33,7 +33,7 @@ namespace Remnant_Afterglow
         public GlobalConfigList(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_GlobalConfigList, cfg_id);//public const string Config_GlobalConfigList = "cfg_GlobalConfigList"; 
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
 			ConfigValue = (List<int>)dict["ConfigValue"];
 			InitData();
@@ -41,7 +41,7 @@ namespace Remnant_Afterglow
 
         public GlobalConfigList(Dictionary<string, object> dict)
         {
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
 			ConfigValue = (List<int>)dict["ConfigValue"];
 			InitData();

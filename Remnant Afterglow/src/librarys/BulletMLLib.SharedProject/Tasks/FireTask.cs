@@ -5,80 +5,80 @@ using BulletMLLib.SharedProject.Nodes;
 namespace BulletMLLib.SharedProject.Tasks;
 
 /// <summary>
-/// A task to shoot a bullet
+/// 发射子弹的任务
 /// </summary>
 public class FireTask : BulletMLTask
 {
-    #region Members
+    #region 成员变量
 
     /// <summary>
     /// 此任务将发射子弹的方向。
     /// </summary>
-    /// <value>The fire direction.</value>
+    /// <value>发射方向。</value>
     public float FireDirection { get; private set; }
 
     /// <summary>
-    /// The speed that this task will fire a bullet.
+    /// 此任务将发射子弹的速度。
     /// </summary>
-    /// <value>The fire speed.</value>
+    /// <value>发射速度。</value>
     public float FireSpeed { get; private set; }
 
     /// <summary>
-    /// The number of times init has been called on this task
+    /// 此任务已初始化的次数
     /// </summary>
-    /// <value>The number times initialized.</value>
+    /// <value>初始化次数。</value>
     public int NumTimesInitialized { get; private set; }
 
     /// <summary>
-    /// Flag used to tell if this is the first time this task has been run
-    /// Used to determine if we should use the "initial" or "sequence" nodes to set bullets.
+    /// 标志位，用于判断是否是此任务第一次运行
+    /// 用于确定我们是否应该使用"initial"或"sequence"节点来设置子弹。
     /// </summary>
-    /// <value><c>true</c> if initial run; otherwise, <c>false</c>.</value>
+    /// <value><c>true</c> 如果是初次运行; 否则, <c>false</c>。</value>
     public bool InitialRun
     {
         get { return NumTimesInitialized <= 0; }
     }
 
     /// <summary>
-    /// If this fire node shoots from a bullet ref node, this will be a task created for it.
-    /// This is needed so the params of the bullet ref can be set correctly.
+    /// 如果此发射节点从子弹引用节点发射，这将是一个为其创建的任务。
+    /// 这是必需的，以便正确设置子弹引用的参数。
     /// </summary>
-    /// <value>The bullet reference task.</value>
+    /// <value>子弹引用任务。</value>
     public BulletMLTask BulletRefTask { get; private set; }
 
     /// <summary>
-    /// The node we are going to use to set the direction of any bullets shot with this task
+    /// 我们将用来设置用此任务发射的任何子弹方向的节点
     /// </summary>
-    /// <value>The dir node.</value>
+    /// <value>方向节点。</value>
     public SetDirectionTask InitialDirectionTask { get; private set; }
 
     /// <summary>
-    /// The node we are going to use to set the speed of any bullets shot with this task
+    /// 我们将用来设置用此任务发射的任何子弹速度的节点
     /// </summary>
-    /// <value>The speed node.</value>
+    /// <value>速度节点。</value>
     public SetSpeedTask InitialSpeedTask { get; private set; }
 
     /// <summary>
-    /// If there is a sequence direction node used to increment the direction of each successive bullet that is fired
+    /// 如果有序列方向节点用于递增每个连续发射子弹的方向
     /// </summary>
-    /// <value>The sequence direction node.</value>
+    /// <value>序列方向节点。</value>
     public SetDirectionTask SequenceDirectionTask { get; private set; }
 
     /// <summary>
-    /// If there is a sequence direction node used to increment the direction of each successive bullet that is fired
+    /// 如果有序列速度节点用于递增每个连续发射子弹的速度
     /// </summary>
-    /// <value>The sequence direction node.</value>
+    /// <value>序列速度节点。</value>
     public SetSpeedTask SequenceSpeedTask { get; private set; }
 
-    #endregion //Members
+    #endregion //成员变量
 
-    #region Methods
+    #region 方法
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="FireTask"/> class.
+    /// 初始化 <see cref="FireTask"/> 类的新实例。
     /// </summary>
-    /// <param name="node">Node.</param>
-    /// <param name="owner">Owner.</param>
+    /// <param name="node">节点。</param>
+    /// <param name="owner">所有者。</param>
     public FireTask(FireNode node, BulletMLTask owner)
         : base(node, owner)
     {
@@ -89,14 +89,14 @@ public class FireTask : BulletMLTask
     }
 
     /// <summary>
-    /// Parse a specified node and bullet into this task
+    /// 将指定的节点和子弹解析到此任务中
     /// </summary>
-    /// <param name="bullet">the bullet this dude is controlling</param>
+    /// <param name="bullet">此任务控制的子弹</param>
     public override void ParseTasks(Bullet bullet)
     {
         if (null == bullet)
         {
-            throw new NullReferenceException("bullet argument cannot be null");
+            throw new NullReferenceException("子弹参数不能为空");
         }
 
         foreach (var childNode in Node.ChildNodes)
@@ -104,20 +104,20 @@ public class FireTask : BulletMLTask
             ParseChildNode(childNode, bullet);
         }
 
-        //Setup all the direction nodes
+        //设置所有方向节点
         GetDirectionTasks(this);
         GetDirectionTasks(BulletRefTask);
 
-        //setup all the speed nodes
+        //设置所有速度节点
         GetSpeedNodes(this);
         GetSpeedNodes(BulletRefTask);
     }
 
     /// <summary>
-    /// Parse a specified node and bullet into this task
+    /// 将指定的节点和子弹解析到此任务中
     /// </summary>
-    /// <param name="childNode">the node for this dude</param>
-    /// <param name="bullet">the bullet this dude is controlling</param>
+    /// <param name="childNode">此任务的节点</param>
+    /// <param name="bullet">此任务控制的子弹</param>
     protected override void ParseChildNode(BulletMLNode childNode, Bullet bullet)
     {
         Debug.Assert(null != childNode);
@@ -128,11 +128,11 @@ public class FireTask : BulletMLTask
             case ENodeName.bulletRef:
 
                 {
-                    //Create a task for the bullet ref
+                    //为子弹引用创建任务
                     if (childNode is BulletRefNode refNode)
                         BulletRefTask = new(refNode.ReferencedBulletNode, this);
 
-                    //populate the params of the bullet ref
+                    //填充子弹引用的参数
                     foreach (var node in childNode.ChildNodes)
                     {
                         BulletRefTask.ParamList.Add(node.GetValue(this, bullet));
@@ -146,7 +146,7 @@ public class FireTask : BulletMLTask
             case ENodeName.bullet:
 
                 {
-                    //Create a task for the bullet ref
+                    //为子弹引用创建任务
                     BulletRefTask = new(childNode, this);
                     BulletRefTask.ParseTasks(bullet);
                     ChildTasks.Add(BulletRefTask);
@@ -156,7 +156,7 @@ public class FireTask : BulletMLTask
             default:
 
                 {
-                    //run the node through the base class if we don't want it
+                    //如果我们不需要这个节点，就通过基类运行它
                     base.ParseChildNode(childNode, bullet);
                 }
                 break;
@@ -164,92 +164,92 @@ public class FireTask : BulletMLTask
     }
 
     /// <summary>
-    /// This gets called when nested repeat nodes get initialized.
+    /// 当嵌套的重复节点被初始化时调用此方法。
     /// </summary>
-    /// <param name="bullet">Bullet.</param>
+    /// <param name="bullet">子弹。</param>
     protected override void HardReset(Bullet bullet)
     {
-        //This is the whole point of the hard reset, so the sequence nodes get reset.
+        //这就是硬重置的要点，所以序列节点会被重置。
         NumTimesInitialized = 0;
 
         base.HardReset(bullet);
     }
 
     /// <summary>
-    /// this sets up the task to be run.
+    /// 设置任务准备运行。
     /// </summary>
-    /// <param name="bullet">Bullet.</param>
+    /// <param name="bullet">子弹。</param>
     protected override void SetupTask(Bullet bullet)
     {
-        //get the direction to shoot the bullet
+        //获取发射子弹的方向
 
-        //is this the first time it has ran?  If there isn't a sequence node, we don't care!
+        //这是第一次运行吗？如果没有序列节点，我们不关心！
         if (InitialRun || null == SequenceDirectionTask)
         {
-            //do we have an initial direction node?
+            //我们有初始方向节点吗？
             if (null != InitialDirectionTask)
             {
-                //Set the fire direction to the "initial" value
+                //将发射方向设置为"初始"值
                 var newBulletDirection =
                     InitialDirectionTask.GetNodeValue(bullet) * (float)Math.PI / 180.0f;
                 FireDirection = InitialDirectionTask.Node.NodeType switch
                 {
                     ENodeType.absolute
                         =>
-                        //the new bullet points right at a particular direction
+                        //新子弹直接指向特定方向
                         newBulletDirection,
                     ENodeType.relative
                         =>
-                        //the new bullet direction will be relative to the old bullet
+                        //新子弹方向将相对于旧子弹
                         newBulletDirection + bullet.Direction,
-                    _ => newBulletDirection + bullet.GetAimDir()
+                    _ =>  bullet.GetAimDir()
                 };
             }
             else
             {
-                //There isn't an initial direction task, so aim the bullet at the player
+                //没有初始方向任务，所以让子弹瞄准玩家
                 FireDirection = bullet.GetAimDir();
             }
         }
         else
         {
-            //else if there is a sequence node, add the value to the "shoot direction"
+            //否则如果有序列节点，将值添加到"射击方向"
             FireDirection +=
                 SequenceDirectionTask.GetNodeValue(bullet) * (float)Math.PI / 180.0f;
         }
 
-        //Set the speed to shoot the bullet
+        //设置发射子弹的速度
 
-        //is this the first time it has ran?  If there isn't a sequence node, we don't care!
+        //这是第一次运行吗？如果没有序列节点，我们不关心！
         if (InitialRun || (null == SequenceSpeedTask))
         {
-            //do we have an initial speed node?
+            //我们有初始速度节点吗？
             if (null != InitialSpeedTask)
             {
-                //set the shoot speed to the "initial" value.
+                //将射击速度设置为"初始"值。
                 var newBulletSpeed = InitialSpeedTask.GetNodeValue(bullet);
                 FireSpeed = InitialSpeedTask.Node.NodeType switch
                 {
                     ENodeType.relative
                         =>
-                        //the new bullet speed will be relative to the old bullet
+                        //新子弹速度将相对于旧子弹
                         newBulletSpeed + bullet.Speed,
                     _ => newBulletSpeed
                 };
             }
             else
             {
-                //there is no initial speed task, use the old dude's speed
+                //没有初始速度任务，使用旧子弹的速度
                 FireSpeed = bullet.Speed;
             }
         }
         else
         {
-            //else if there is a sequence node, add the value to the "shoot direction"
+            //否则如果有序列节点，将值添加到"射击方向"
             FireSpeed += SequenceSpeedTask.GetNodeValue(bullet);
         }
 
-        //make sure the direction is between 0 and 359
+        //确保方向在0到359之间
         while (FireDirection > Math.PI)
         {
             FireDirection -= (2.0f * (float)Math.PI);
@@ -259,20 +259,20 @@ public class FireTask : BulletMLTask
             FireDirection += (2.0f * (float)Math.PI);
         }
 
-        //make sure we don't overwrite the initial values if we aren't supposed to
+        //确保我们不会覆盖不应该覆盖的初始值
         NumTimesInitialized++;
     }
 
     /// <summary>
-    /// 针对项目符号运行此任务和所有子任务
-    /// This is called once a frame during runtime.
+    /// 针对子弹运行此任务和所有子任务
+    /// 在运行时每帧调用一次。
     /// </summary>
-    /// <returns>ERunStatus: whether this task is done, paused, or still running</returns>
-    /// <param name="bullet">The bullet to update this task against.</param>
+    /// <returns>ERunStatus: 此任务是已完成、暂停还是仍在运行</returns>
+    /// <param name="bullet">要针对其更新此任务的子弹。</param>
     public override ERunStatus Run(Bullet bullet)
     {
         //创建新子弹
-        var newBullet = bullet.MyBulletManager.CreateBullet(bullet.BulletLabel, bullet.targetObject, bullet.createObject);
+        var newBullet = bullet.MyBulletManager.CreateBullet(bullet, bullet.targetObject, bullet.createObject);
 
         if (newBullet == null)
         {
@@ -280,22 +280,22 @@ public class FireTask : BulletMLTask
             return ERunStatus.End;
         }
 
-        //set the location of the new bullet
+        //设置新子弹的位置
         newBullet.X = bullet.X;
         newBullet.Y = bullet.Y;
 
-        //set the direction of the new bullet
+        //设置新子弹的方向
         newBullet.Direction = FireDirection;
 
-        //set the speed of the new bullet
+        //设置新子弹的速度
         newBullet.Speed = FireSpeed;
 
-        //initialize the bullet with the bullet node stored in the Fire node
+        //使用存储在Fire节点中的子弹节点初始化子弹
         var myFireNode = Node as FireNode;
         Debug.Assert(null != myFireNode);
         newBullet.InitNode(myFireNode.BulletDescriptionNode, bullet.targetObject, bullet.createObject);
 
-        //set the owner of all the top level tasks for the new bullet to this dude
+        //将新子弹的所有顶级任务的所有者设置为此任务
         foreach (var task in newBullet.Tasks)
         {
             task.Owner = this;
@@ -306,50 +306,50 @@ public class FireTask : BulletMLTask
     }
 
     /// <summary>
-    /// Given a node, pull the direction nodes out from underneath it and store them if necessary
+    /// 给定一个节点，从中提取方向节点并在必要时存储它们
     /// </summary>
-    /// <param name="taskToCheck">task to check if has a child direction node.</param>
+    /// <param name="taskToCheck">要检查是否具有子方向节点的任务。</param>
     private void GetDirectionTasks(BulletMLTask taskToCheck)
     {
-        //检查有没有方向节点
+        //检查是否有方向节点
         if (taskToCheck?.Node.GetChild(ENodeName.direction) is not DirectionNode dirNode)
             return;
 
-        //check if it is a sequence type of node
+        //检查它是否是序列类型的节点
         if (ENodeType.sequence == dirNode.NodeType)
         {
-            //do we need a sequence node?
+            //我们需要序列节点吗？
             SequenceDirectionTask ??= new(dirNode, taskToCheck);
         }
         else
         {
-            //else do we need an initial node?
+            //否则我们需要初始节点吗？
             InitialDirectionTask ??= new(dirNode, taskToCheck);
         }
     }
 
     /// <summary>
-    /// Given a node, pull the speed nodes out from underneath it and store them if necessary
+    /// 给定一个节点，从中提取速度节点并在必要时存储它们
     /// </summary>
-    /// <param name="taskToCheck">Node to check.</param>
+    /// <param name="taskToCheck">要检查的节点。</param>
     private void GetSpeedNodes(BulletMLTask taskToCheck)
     {
-        //check if the dude has a speed node
+        //检查这个家伙是否有速度节点
         if (taskToCheck?.Node.GetChild(ENodeName.speed) is not SpeedNode spdNode)
             return;
 
-        //check if it is a sequence type of node
+        //检查它是否是序列类型的节点
         if (ENodeType.sequence == spdNode.NodeType)
         {
-            //do we need a sequence node?
+            //我们需要序列节点吗？
             SequenceSpeedTask ??= new(spdNode, taskToCheck);
         }
         else
         {
-            //else do we need an initial node?
+            //否则我们需要初始节点吗？
             InitialSpeedTask ??= new(spdNode, taskToCheck);
         }
     }
 
-    #endregion //Methods
+    #endregion //方法
 }

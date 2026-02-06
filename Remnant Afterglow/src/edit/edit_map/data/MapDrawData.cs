@@ -12,12 +12,14 @@ namespace Remnant_Afterglow_EditMap
     /// </summary>
     public class CellData
     {
-        public int p1;//材料序号 MaterialId
+        /// <summary>
+        /// 材料序号 MaterialId
+        /// </summary>
+        public int p1;
         /// <summary>
         /// <x,y,层id>
         /// </summary>
         public List<List<int>> p6 = new List<List<int>>();
-
         public CellData(int p1)
         {
             this.p1 = p1;
@@ -26,14 +28,41 @@ namespace Remnant_Afterglow_EditMap
         {
             p6.Add(v);
         }
-
         public override bool Equals(object obj)
         {
             if (obj is CellData other)
             {
-                return other.p1 == p1 ;
+                return other.p1 == p1;
             }
             return false;
+        }
+    }
+
+    /// <summary>
+    /// 实体压缩数据
+    /// </summary>
+    public class EntityData
+    {
+        /// <summary>
+        /// 实体id
+        /// </summary>
+        public int ob_id;
+        /// <summary>
+        /// 数据列表 Camp,PosX,PosY
+        /// </summary>
+        public List<List<int>> PosL = new List<List<int>>();
+        public EntityData(int ob_id)
+        {
+            this.ob_id = ob_id;
+        }
+        public void AddEntity(int Camp, Vector2I Pos)
+        {
+            PosL.Add(new List<int>() { Camp, Pos.X, Pos.Y });
+        }
+
+        public void Remove(int index)
+        {
+            PosL.RemoveAt(index);
         }
     }
     /// <summary>
@@ -54,10 +83,11 @@ namespace Remnant_Afterglow_EditMap
         /// </summary>
         public int Height = 0;
         /// <summary>
-        /// 地图各层数据
+        /// 地图各层数据-解压
         /// </summary>
         [JsonIgnore]
         public Dictionary<int, Cell[,]> layerData = new Dictionary<int, Cell[,]>();
+
         /// <summary>
         /// 当前加载的mod列表，如果要编辑这个地图文件，尽量要求当前加载的动过地图的mod列表一样,版本等也一样，不同要警告！
         /// </summary>
@@ -65,7 +95,12 @@ namespace Remnant_Afterglow_EditMap
         /// <summary>
         /// <材料序号，格子压缩数据>
         /// </summary>
-        public Dictionary<int,CellData> dataDict = new Dictionary<int, CellData> ();
+        public Dictionary<int, CellData> dataDict = new Dictionary<int, CellData>();
+
+        /// <summary>
+        /// <实体id, 实体数据>
+        /// </summary>
+        public Dictionary<int, EntityData> entityDict = new Dictionary<int, EntityData>();
         #region 编辑器数据
 
         /// <summary>
@@ -78,8 +113,7 @@ namespace Remnant_Afterglow_EditMap
         public List<int> NowShowLayer = new List<int>();
 
         #endregion
-
-        public MapDrawData(string mapName,int Width, int Height)
+        public MapDrawData(string mapName, int Width, int Height)
         {
             this.mapName = mapName;
             this.Width = Width;
@@ -97,40 +131,41 @@ namespace Remnant_Afterglow_EditMap
         /// </summary>
         public void Decompression()
         {
-            //foreach (var info in  ConfigCache.GetAllMapImageLayer())//添加各层
-            //{
-            //    layerData[info.ImageLayerId] = new Cell[Width,Height];
-            //}
-
+            layerData.Clear();
             foreach (var info in dataDict)
             {
                 CellData celldata = info.Value;
-                int p1 = celldata.p1;//材料序号 MaterialId
-                MapFixedMaterial mat = ConfigCache.GetMapFixedMaterial(p1); 
-                int p2= mat.PassTypeId;//可通过类型
-                int p3= mat.ImageSetId;//图像集序号，MapImageSet中CfgDataList的序号
+                int p1 = celldata.p1;//材料配置
+                MapFixedMaterial mat = ConfigCache.GetMapFixedMaterial(p1);
+                int p2 = mat.PassTypeId;//可通过类型
+                int p3 = mat.ImageSetId;//图像集序号，MapImageSet中CfgDataList的序号
                 int index = mat.ImageSetIndex;//所在图集序号
-                Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_MapImageSet,""+mat.ImageSetId);
-                if(dict != null)
+                Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_MapImageSet, mat.ImageSetId);
+                if (dict != null)
                 {
-                   
-                    int max_index = (int)dict["ImageSetMaxId"];
+                    int max_index = (int)dict["ImageSetMaxId"];//
                     Vector2I Pos = new Vector2I(-1, -1);//瓦片在图集中的位置
-                    if (max_index >=index)//超过最大可使用序列
+                    if (max_index >= index)//在最大可使用序列内
                     {
-                         Vector2I size = (Vector2I)dict["MapImageSize"];
+                        Vector2I size = (Vector2I)dict["MapImageSize"];
                         int y = (index - 1) / size.X;
                         Pos = new Vector2I(index - y * size.X - 1, y);
                     }
+                    else
+                    {
+                        int setId = (int)dict["MapImageSetId"];
+                        Log.Error("材料id:" + p1 + "的使用序列，超出图集" + setId + " 的最大使用序列,请检查材料数据是否正确！");
+                        continue;
+                    }
                     foreach (List<int> item in celldata.p6)
                     {
-                        if(layerData.ContainsKey(item[2]))//存在对应层数据
+                        if (layerData.ContainsKey(item[2]))//存在对应层数据
                         {
                             layerData[item[2]][item[0], item[1]] = new Cell(item[0], item[1], p1, p2, p3, index, Pos);
                         }
                         else//不存在就先创建
                         {
-                            layerData[item[2]] = new Cell[Width,Height];
+                            layerData[item[2]] = new Cell[Width, Height];
                             layerData[item[2]][item[0], item[1]] = new Cell(item[0], item[1], p1, p2, p3, index, Pos);
                         }
                     }
@@ -166,14 +201,14 @@ namespace Remnant_Afterglow_EditMap
             }
         }
 
-
         /// <summary>
         /// 设置地图数据
         /// </summary>
         /// <param name="layerData"></param>
-        public void SetMapData(Dictionary<int, Cell[,]> layerData)
+        public void SetMapData(Dictionary<int, Cell[,]> layerData, Dictionary<int, EntityData> entityDict)
         {
             this.layerData = layerData;
+            this.entityDict = entityDict;
             loadModDict = ModLoadSystem.loadModDict;
         }
 
@@ -193,7 +228,7 @@ namespace Remnant_Afterglow_EditMap
             try
             {
                 Compress();//数据压缩
-                FileUtils.WriteObjectSmartParam2(path + name, this);
+                FileUtils.WriteObjectSmartParam(path + name, this);
                 return true;
             }
             catch (Exception e)
@@ -235,7 +270,7 @@ namespace Remnant_Afterglow_EditMap
         public static MapDrawData GetMapDrawData(string mapPath, string name)
         {
             MapDrawData mapDrawData = FileUtils.ReadObjectSmart<MapDrawData>(mapPath, name);
-            mapDrawData.Decompression();
+            mapDrawData.Decompression();//地图文件解压
             return mapDrawData;
         }
     }

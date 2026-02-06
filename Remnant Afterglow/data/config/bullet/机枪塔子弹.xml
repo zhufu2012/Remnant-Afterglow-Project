@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+
+<!-- 定义 BulletML 文档类型和命名空间 -->
+<bulletml type="horizontal"
+          xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+
+  <!-- 定义一个名为 "top" 的 action（动作） -->
+  <action label="top">
+    <!-- 发射子弹 -->
+    <fire>
+      <!-- 设置子弹的发射方向为随机角度（0到360度之间） -->
+  <direction>$rand*1 -0.5</direction>
+      <!-- 引用名为 "fastBullet" 的子弹模板 -->
+      <bulletRef label="fastBullet"/>
+    </fire>
+  </action>
+
+  <!-- 定义一个名为 "fastBullet" 的子弹 -->
+  <bullet label="fastBullet">
+    <!-- 设置子弹的初始速度为 3 -->
+    <speed>25 + $rand*5 </speed>
+  </bullet>
+
+</bulletml>

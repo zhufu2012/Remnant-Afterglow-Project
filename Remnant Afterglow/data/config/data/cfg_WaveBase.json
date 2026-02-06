@@ -6,12 +6,12 @@
         "WaveName": "第一波",
         "WaveUnitGroup": [
             [
-                1,
-                2
+                9002,
+                1
             ],
             [
-                2,
-                4
+                9001,
+                1
             ]
         ]
     },
@@ -22,11 +22,19 @@
         "WaveName": "第二波",
         "WaveUnitGroup": [
             [
-                1,
+                7001,
                 1
             ],
             [
-                2,
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
                 1
             ]
         ]
@@ -43,16 +51,21 @@
         "BrushId": 2,
         "WaveId": 2,
         "WaveName": "第二波",
-        "WaveUnitGroup": [
-            [
-                1,
-                1
-            ],
-            [
-                2,
-                1
-            ]
-        ]
+        "WaveUnitGroup": []
+    },
+    {
+        "KEY_INDEX": "3_1",
+        "BrushId": 3,
+        "WaveId": 1,
+        "WaveName": "第一波",
+        "WaveUnitGroup": []
+    },
+    {
+        "KEY_INDEX": "3_2",
+        "BrushId": 3,
+        "WaveId": 2,
+        "WaveName": "第二波",
+        "WaveUnitGroup": []
     },
     {
         "KEY_INDEX": "4_1",
@@ -61,8 +74,8 @@
         "WaveName": "第一波",
         "WaveUnitGroup": [
             [
-                666,
-                50
+                8001,
+                1
             ]
         ]
     },
@@ -73,8 +86,2140 @@
         "WaveName": "第二波",
         "WaveUnitGroup": [
             [
-                666,
+                8001,
+                2
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_1",
+        "BrushId": 5,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                1
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_2",
+        "BrushId": 5,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                1
+            ],
+            [
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_3",
+        "BrushId": 5,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                1
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_4",
+        "BrushId": 5,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                1
+            ],
+            [
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_5",
+        "BrushId": 5,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                1
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_6",
+        "BrushId": 5,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                1
+            ],
+            [
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_7",
+        "BrushId": 5,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                1
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_8",
+        "BrushId": 5,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                1
+            ],
+            [
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_9",
+        "BrushId": 5,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                1
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_10",
+        "BrushId": 5,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                1
+            ],
+            [
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_11",
+        "BrushId": 5,
+        "WaveId": 11,
+        "WaveName": "第11波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                1
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "5_12",
+        "BrushId": 5,
+        "WaveId": 12,
+        "WaveName": "第12波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                1
+            ],
+            [
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "6_7",
+        "BrushId": 6,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                1
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "6_8",
+        "BrushId": 6,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                1
+            ],
+            [
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "6_9",
+        "BrushId": 6,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                1
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "6_10",
+        "BrushId": 6,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                1
+            ],
+            [
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "6_11",
+        "BrushId": 6,
+        "WaveId": 11,
+        "WaveName": "第11波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                1
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "6_12",
+        "BrushId": 6,
+        "WaveId": 12,
+        "WaveName": "第12波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                1
+            ],
+            [
+                7002,
+                1
+            ],
+            [
+                8001,
+                1
+            ],
+            [
+                8002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10001_1",
+        "BrushId": 10001,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                9002,
+                40
+            ],
+            [
+                9001,
+                40
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10001_2",
+        "BrushId": 10001,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                7001,
+                100
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10001_3",
+        "BrushId": 10001,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                8001,
+                100
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10001_4",
+        "BrushId": 10001,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                8002,
+                100
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10101_1",
+        "BrushId": 10101,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                8007,
+                2
+            ],
+            [
+                10001,
+                1
+            ],
+            [
+                10003,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10101_2",
+        "BrushId": 10101,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                11
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10101_3",
+        "BrushId": 10101,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                12
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10101_4",
+        "BrushId": 10101,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                13
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10101_5",
+        "BrushId": 10101,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10101_6",
+        "BrushId": 10101,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10101_7",
+        "BrushId": 10101,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10101_8",
+        "BrushId": 10101,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10102_1",
+        "BrushId": 10102,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10102_2",
+        "BrushId": 10102,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                11
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10102_3",
+        "BrushId": 10102,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                12
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10102_4",
+        "BrushId": 10102,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                13
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10102_5",
+        "BrushId": 10102,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10102_6",
+        "BrushId": 10102,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10102_7",
+        "BrushId": 10102,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10102_8",
+        "BrushId": 10102,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_1",
+        "BrushId": 10201,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_2",
+        "BrushId": 10201,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_3",
+        "BrushId": 10201,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                20
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_4",
+        "BrushId": 10201,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                25
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_5",
+        "BrushId": 10201,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                30
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_6",
+        "BrushId": 10201,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                35
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_7",
+        "BrushId": 10201,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                40
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_8",
+        "BrushId": 10201,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
                 50
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_9",
+        "BrushId": 10201,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                60
+            ],
+            [
+                9001,
+                2
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10201_10",
+        "BrushId": 10201,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                70
+            ],
+            [
+                9001,
+                3
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10202_4",
+        "BrushId": 10202,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10202_5",
+        "BrushId": 10202,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10202_6",
+        "BrushId": 10202,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                20
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10202_7",
+        "BrushId": 10202,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                25
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10202_8",
+        "BrushId": 10202,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                30
+            ],
+            [
+                9001,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10202_9",
+        "BrushId": 10202,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                40
+            ],
+            [
+                9001,
+                2
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10202_10",
+        "BrushId": 10202,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                50
+            ],
+            [
+                9001,
+                3
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10203_8",
+        "BrushId": 10203,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                50
+            ],
+            [
+                9002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10203_9",
+        "BrushId": 10203,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                50
+            ],
+            [
+                9002,
+                3
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10203_10",
+        "BrushId": 10203,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                50
+            ],
+            [
+                9002,
+                5
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10204_8",
+        "BrushId": 10204,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                50
+            ],
+            [
+                9002,
+                1
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10204_9",
+        "BrushId": 10204,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                50
+            ],
+            [
+                9002,
+                3
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10204_10",
+        "BrushId": 10204,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                50
+            ],
+            [
+                9002,
+                5
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_1",
+        "BrushId": 10301,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                7009,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_2",
+        "BrushId": 10301,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                11
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_3",
+        "BrushId": 10301,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                12
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_4",
+        "BrushId": 10301,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                13
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_5",
+        "BrushId": 10301,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_6",
+        "BrushId": 10301,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_7",
+        "BrushId": 10301,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_8",
+        "BrushId": 10301,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_9",
+        "BrushId": 10301,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10301_10",
+        "BrushId": 10301,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_1",
+        "BrushId": 10302,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                7010,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_2",
+        "BrushId": 10302,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                11
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_3",
+        "BrushId": 10302,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                12
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_4",
+        "BrushId": 10302,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                13
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_5",
+        "BrushId": 10302,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_6",
+        "BrushId": 10302,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_7",
+        "BrushId": 10302,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_8",
+        "BrushId": 10302,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_9",
+        "BrushId": 10302,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10302_10",
+        "BrushId": 10302,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_1",
+        "BrushId": 10401,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_2",
+        "BrushId": 10401,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                11
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_3",
+        "BrushId": 10401,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                12
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_4",
+        "BrushId": 10401,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                13
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_5",
+        "BrushId": 10401,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_6",
+        "BrushId": 10401,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_7",
+        "BrushId": 10401,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_8",
+        "BrushId": 10401,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_9",
+        "BrushId": 10401,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10401_10",
+        "BrushId": 10401,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10402_6",
+        "BrushId": 10402,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10402_7",
+        "BrushId": 10402,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10402_8",
+        "BrushId": 10402,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10402_9",
+        "BrushId": 10402,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10402_10",
+        "BrushId": 10402,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10402_11",
+        "BrushId": 10402,
+        "WaveId": 11,
+        "WaveName": "第11波",
+        "WaveUnitGroup": [
+            [
+                1,
+                20
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_1",
+        "BrushId": 10403,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_2",
+        "BrushId": 10403,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                11
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_3",
+        "BrushId": 10403,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                12
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_4",
+        "BrushId": 10403,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                13
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_5",
+        "BrushId": 10403,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_6",
+        "BrushId": 10403,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_7",
+        "BrushId": 10403,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_8",
+        "BrushId": 10403,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_9",
+        "BrushId": 10403,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10403_10",
+        "BrushId": 10403,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10501_5",
+        "BrushId": 10501,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10501_6",
+        "BrushId": 10501,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10501_7",
+        "BrushId": 10501,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10501_8",
+        "BrushId": 10501,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10501_9",
+        "BrushId": 10501,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10501_10",
+        "BrushId": 10501,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10501_11",
+        "BrushId": 10501,
+        "WaveId": 11,
+        "WaveName": "第11波",
+        "WaveUnitGroup": [
+            [
+                1,
+                20
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_1",
+        "BrushId": 10502,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                2,
+                100
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_2",
+        "BrushId": 10502,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_3",
+        "BrushId": 10502,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_4",
+        "BrushId": 10502,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_5",
+        "BrushId": 10502,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_6",
+        "BrushId": 10502,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_7",
+        "BrushId": 10502,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_8",
+        "BrushId": 10502,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_9",
+        "BrushId": 10502,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_10",
+        "BrushId": 10502,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10502_11",
+        "BrushId": 10502,
+        "WaveId": 11,
+        "WaveName": "第11波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ],
+            [
+                2,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10503_9",
+        "BrushId": 10503,
+        "WaveId": 9,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10503_9",
+        "BrushId": 10503,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10503_10",
+        "BrushId": 10503,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10503_11",
+        "BrushId": 10503,
+        "WaveId": 11,
+        "WaveName": "第11波",
+        "WaveUnitGroup": [
+            [
+                1,
+                20
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10601_6",
+        "BrushId": 10601,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10601_7",
+        "BrushId": 10601,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10601_8",
+        "BrushId": 10601,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10601_9",
+        "BrushId": 10601,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10601_10",
+        "BrushId": 10601,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10601_11",
+        "BrushId": 10601,
+        "WaveId": 11,
+        "WaveName": "第11波",
+        "WaveUnitGroup": [
+            [
+                1,
+                20
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_1",
+        "BrushId": 10602,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_2",
+        "BrushId": 10602,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                11
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_3",
+        "BrushId": 10602,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                12
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_4",
+        "BrushId": 10602,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                13
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_5",
+        "BrushId": 10602,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_6",
+        "BrushId": 10602,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_7",
+        "BrushId": 10602,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_8",
+        "BrushId": 10602,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_9",
+        "BrushId": 10602,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_10",
+        "BrushId": 10602,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10602_11",
+        "BrushId": 10602,
+        "WaveId": 11,
+        "WaveName": "第11波",
+        "WaveUnitGroup": [
+            [
+                1,
+                20
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_1",
+        "BrushId": 10603,
+        "WaveId": 1,
+        "WaveName": "第1波",
+        "WaveUnitGroup": [
+            [
+                1,
+                10
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_2",
+        "BrushId": 10603,
+        "WaveId": 2,
+        "WaveName": "第2波",
+        "WaveUnitGroup": [
+            [
+                1,
+                11
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_3",
+        "BrushId": 10603,
+        "WaveId": 3,
+        "WaveName": "第3波",
+        "WaveUnitGroup": [
+            [
+                1,
+                12
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_4",
+        "BrushId": 10603,
+        "WaveId": 4,
+        "WaveName": "第4波",
+        "WaveUnitGroup": [
+            [
+                1,
+                13
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_5",
+        "BrushId": 10603,
+        "WaveId": 5,
+        "WaveName": "第5波",
+        "WaveUnitGroup": [
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_6",
+        "BrushId": 10603,
+        "WaveId": 6,
+        "WaveName": "第6波",
+        "WaveUnitGroup": [
+            [
+                1,
+                15
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_7",
+        "BrushId": 10603,
+        "WaveId": 7,
+        "WaveName": "第7波",
+        "WaveUnitGroup": [
+            [
+                1,
+                16
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_8",
+        "BrushId": 10603,
+        "WaveId": 8,
+        "WaveName": "第8波",
+        "WaveUnitGroup": [
+            [
+                1,
+                17
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_9",
+        "BrushId": 10603,
+        "WaveId": 9,
+        "WaveName": "第9波",
+        "WaveUnitGroup": [
+            [
+                1,
+                18
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_10",
+        "BrushId": 10603,
+        "WaveId": 10,
+        "WaveName": "第10波",
+        "WaveUnitGroup": [
+            [
+                1,
+                19
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "10603_11",
+        "BrushId": 10603,
+        "WaveId": 11,
+        "WaveName": "第11波",
+        "WaveUnitGroup": [
+            [
+                1,
+                20
             ]
         ]
     }

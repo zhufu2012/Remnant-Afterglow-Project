@@ -1,11 +1,11 @@
 using System;
 using Godot;
-using Godot.Community.ManagedAttributes;
+using ManagedAttributes;
 using Newtonsoft.Json;
 
 namespace Remnant_Afterglow;
 
-public class AttributeConverter : JsonConverter<ManagedAttributeContainer>
+public class AttributeConverter : JsonConverter<ManagAttrCon>
 {
     /// <summary>
     /// 反序列化
@@ -17,7 +17,7 @@ public class AttributeConverter : JsonConverter<ManagedAttributeContainer>
     /// <param name="serializer"></param>
     /// <returns></returns>
     /// <exception cref="JsonSerializationException"></exception>
-    public override ManagedAttributeContainer ReadJson(JsonReader reader, Type objectType, ManagedAttributeContainer existingValue, bool hasExistingValue, JsonSerializer serializer)
+    public override ManagAttrCon ReadJson(JsonReader reader, Type objectType, ManagAttrCon existingValue, bool hasExistingValue, JsonSerializer serializer)
     {
         if (reader.TokenType != JsonToken.StartObject)
             throw new JsonSerializationException();
@@ -25,7 +25,7 @@ public class AttributeConverter : JsonConverter<ManagedAttributeContainer>
         reader.Read(); // Read start object
 
         reader.Read(); // Read property's name
-        ManagedAttributeContainer Currency = new ManagedAttributeContainer();
+        ManagAttrCon Currency = new ManagAttrCon();
         Currency.Deserialize((string)reader.Value);
 
         reader.Read(); // Read end object
@@ -39,10 +39,10 @@ public class AttributeConverter : JsonConverter<ManagedAttributeContainer>
     /// <param name="writer"></param>
     /// <param name="value"></param>
     /// <param name="serializer"></param>
-    public override void WriteJson(JsonWriter writer, ManagedAttributeContainer value, JsonSerializer serializer)
+    public override void WriteJson(JsonWriter writer, ManagAttrCon value, JsonSerializer serializer)
     {
         writer.WriteStartObject();
-        writer.WritePropertyName("ManagedAttributeContainer");
+        writer.WritePropertyName("ManagAttrCon");
         writer.WriteValue(value.Serialize());
         writer.WriteEndObject();
     }

@@ -1,0 +1,125 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi77mpecg3v74"]
+
+[ext_resource type="Script" uid="uid://dlru03mmajch8" path="res://src/core/ui/component/item_library/ItemLibrary.cs" id="1_5xqy1"]
+[ext_resource type="Texture2D" uid="uid://djh5efuy1q037" path="res://assets/（关卡选择界面-结算界面）素材/通用窗口2.png" id="1_m44nb"]
+
+[node name="ItemLibrary" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1580.0
+offset_bottom = -830.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5xqy1")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 5
+
+[node name="Item1" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item1"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item2" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item2"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item3" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item3"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item4" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item4"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item5" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item5"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item6" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item6"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item7" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item7"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item8" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item8"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item9" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item9"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item10" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item10"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item11" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item11"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")
+
+[node name="Item12" type="PanelContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/VBoxContainer/GridContainer/Item12"]
+layout_mode = 2
+texture = ExtResource("1_m44nb")

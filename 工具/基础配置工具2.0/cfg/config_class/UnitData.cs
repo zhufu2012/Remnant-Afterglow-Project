@@ -8,28 +8,45 @@ namespace Remnant_Afterglow
     public partial class UnitData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 实体id
         /// </summary>
         public int ObjectId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单位名称
         /// </summary>
         public string UnitName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 动画类型列表
         ///注意默认移动方向是向上
         ///
         /// </summary>
         public List<int> AnimaTypeList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 阴影图像
         /// </summary>
         public Texture2D ShadowSprite { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 阴影偏移
         /// </summary>
         public Vector2 ShadowOffset { get; set; }
+        /// <summary>
+        /// 是否有武器机壳
+        /// </summary>
+        public bool IsChassis { get; set; }
+        /// <summary>
+        /// 武器机壳是否
+        ///跟随锁定目标旋转
+        /// </summary>
+        public bool IsRotate { get; set; }
+        /// <summary>
+        /// 武器机壳旋转速度
+        /// </summary>
+        public int RotationSpeed { get; set; }
+        /// <summary>
+        /// 武器机壳图片
+        /// </summary>
+        public Texture2D ChassisImg { get; set; }
 
         public UnitData(int id)
         {
@@ -39,6 +56,10 @@ namespace Remnant_Afterglow
 			AnimaTypeList = (List<int>)dict["AnimaTypeList"];
 			ShadowSprite = (Texture2D)dict["ShadowSprite"];
 			ShadowOffset = (Vector2)dict["ShadowOffset"];
+			IsChassis = (bool)dict["IsChassis"];
+			IsRotate = (bool)dict["IsRotate"];
+			RotationSpeed = (int)dict["RotationSpeed"];
+			ChassisImg = (Texture2D)dict["ChassisImg"];
 			InitData();
         }
 
@@ -51,6 +72,10 @@ namespace Remnant_Afterglow
 			AnimaTypeList = (List<int>)dict["AnimaTypeList"];
 			ShadowSprite = (Texture2D)dict["ShadowSprite"];
 			ShadowOffset = (Vector2)dict["ShadowOffset"];
+			IsChassis = (bool)dict["IsChassis"];
+			IsRotate = (bool)dict["IsRotate"];
+			RotationSpeed = (int)dict["RotationSpeed"];
+			ChassisImg = (Texture2D)dict["ChassisImg"];
 			InitData();
         }
 
@@ -61,6 +86,10 @@ namespace Remnant_Afterglow
 			AnimaTypeList = (List<int>)dict["AnimaTypeList"];
 			ShadowSprite = (Texture2D)dict["ShadowSprite"];
 			ShadowOffset = (Vector2)dict["ShadowOffset"];
+			IsChassis = (bool)dict["IsChassis"];
+			IsRotate = (bool)dict["IsRotate"];
+			RotationSpeed = (int)dict["RotationSpeed"];
+			ChassisImg = (Texture2D)dict["ChassisImg"];
 			InitData();
         }
         #endregion

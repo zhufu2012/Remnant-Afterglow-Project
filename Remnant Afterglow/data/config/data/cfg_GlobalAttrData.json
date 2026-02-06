@@ -1,0 +1,26 @@
+[
+    {
+        "KEY_INDEX": "1_1",
+        "TempLateId": 1,
+        "GlobalAttributeId": 1,
+        "StartValue": 0.0,
+        "Max": 1000000000.0,
+        "Min": 0.0,
+        "Regen": 1.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "TempLateId": 1,
+        "GlobalAttributeId": 2,
+        "StartValue": 0.0,
+        "Max": 1000000000.0,
+        "Min": 0.0,
+        "Regen": 0.0,
+        "AddEventIdList": [],
+        "RemoveEventIdList": [],
+        "AttrEventIdList": []
+    }
+]

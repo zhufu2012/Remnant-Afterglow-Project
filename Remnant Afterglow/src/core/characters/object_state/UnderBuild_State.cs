@@ -1,12 +1,9 @@
-﻿
-
-using GameLog;
-using Godot;
+﻿using Godot;
 
 namespace Remnant_Afterglow
 {
     /// <summary>
-    /// 建造中
+    /// 建造中状态
     /// </summary>
     public class UnderBuild_State : IState
     {
@@ -42,35 +39,78 @@ namespace Remnant_Afterglow
         {
             this.stateMachine = stateMachine;
         }
+
+        /// <summary>
+        /// 进入该状态
+        /// </summary>
+        /// <param name="stateMachine"></param>
         public void Enter(StateMachine stateMachine)
         {
             this.stateMachine = stateMachine;
-            if (stateMachine.baseObject.AnimatedSprite.SpriteFrames.HasAnimation(ObjectStateNames.UnderBuild))
-            {//有建造动画
-                stateMachine.baseObject.PlayAnima(ObjectStateNames.UnderBuild);//播放动画
-                IsPlayBlue = false;
-            }
-            else//没有建造动画
+            switch (stateMachine.baseObject.object_type)
             {
-                BuildData buildData = null;
-                switch (stateMachine.baseObject.object_type)
-                {
-                    case BaseObjectType.BaseTower:
-                        TowerBase towerBase = (TowerBase)stateMachine.baseObject;
-                        buildData = towerBase.buildData;
-                        MaxProgress = buildData.BuildProgress;
-                        break;
-                    case BaseObjectType.BaseBuild:
-                        BuildBase buildBase = (BuildBase)stateMachine.baseObject;
-                        buildData = buildBase.buildData;
-                        MaxProgress = buildData.BuildProgress;
-                        break;
-                    default:
-                        break;
-                }
-                IsPlayBlue = true;
-                OneProgress = (EndAlpha - StartAlpha) / MaxProgress;
-                stateMachine.baseObject.SetNodeColor(new Color(1, 1, 1, StartAlpha));
+                case BaseObjectType.BaseUnit:
+                    break;
+                case BaseObjectType.BaseTower://炮塔
+                    TowerBase tower = stateMachine.baseObject as TowerBase;
+                    if (tower.AnimatedSprite.SpriteFrames.HasAnimation(ObjectStateNames.UnderBuild))
+                    {
+                        tower.PlayAnima(ObjectStateNames.UnderBuild);//播放动画
+                        IsPlayBlue = false;
+                    }
+                    else//没有建造动画
+                    {
+                        switch (stateMachine.baseObject.object_type)
+                        {
+                            case BaseObjectType.BaseTower:
+                                TowerBase towerBase = (TowerBase)stateMachine.baseObject;
+                                MaxProgress = towerBase.buildData.BuildProgress;
+                                break;
+                            case BaseObjectType.BaseBuild:
+                                BuildBase buildBase = (BuildBase)stateMachine.baseObject;
+                                MaxProgress = buildBase.buildData.BuildProgress;
+                                break;
+                            default:
+                                break;
+                        }
+                        IsPlayBlue = true;
+                        OneProgress = (EndAlpha - StartAlpha) / MaxProgress;
+                        stateMachine.baseObject.SetNodeColor(new Color(1, 1, 1, StartAlpha));
+                    }
+                    break;
+                case BaseObjectType.BaseBuild://建筑
+                    BuildBase build = stateMachine.baseObject as BuildBase;
+                    if (build.AnimatedSprite.SpriteFrames.HasAnimation(ObjectStateNames.UnderBuild))
+                    {
+                        build.PlayAnima(ObjectStateNames.UnderBuild);//播放动画
+                        IsPlayBlue = false;
+                    }
+                    else//没有建造动画
+                    {
+                        switch (stateMachine.baseObject.object_type)
+                        {
+                            case BaseObjectType.BaseTower:
+                                TowerBase towerBase = (TowerBase)stateMachine.baseObject;
+                                MaxProgress = towerBase.buildData.BuildProgress;
+                                break;
+                            case BaseObjectType.BaseBuild:
+                                BuildBase buildBase = (BuildBase)stateMachine.baseObject;
+                                MaxProgress = buildBase.buildData.BuildProgress;
+                                break;
+                            default:
+                                break;
+                        }
+                        IsPlayBlue = true;
+                        OneProgress = (EndAlpha - StartAlpha) / MaxProgress;
+                        stateMachine.baseObject.SetNodeColor(new Color(1, 1, 1, StartAlpha));
+                    }
+                    break;
+                case BaseObjectType.BaseWorker:
+                    break;
+                case BaseObjectType.BaseWeapon:
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -94,7 +134,7 @@ namespace Remnant_Afterglow
                 {
                     case BaseObjectType.BaseTower:
                         TowerBase towerBase = (TowerBase)stateMachine.baseObject;
-                        foreach(var info in towerBase.WeaponList)
+                        foreach (var info in towerBase.WeaponList)
                         {
                             info.InitWeaponState();
                         }

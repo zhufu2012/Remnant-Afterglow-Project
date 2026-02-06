@@ -21,6 +21,11 @@ namespace Remnant_Afterglow
         /// </summary>
         public int ChapterId;
         /// <summary>
+        /// 所在章节的玩家阵营
+        /// </summary>
+        public int Camp;
+
+        /// <summary>
         /// 已占领关卡 <章节id,关卡id>
         /// </summary>
         public Dictionary<int, List<int>> CaptureCopyDict = new Dictionary<int, List<int>>();
@@ -46,11 +51,13 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 创建存档后的，数据初始化
+        /// 创建存档时，数据初始化
         /// </summary>
-        public void CreateInitData()
+        public void CreateInitData(SaveFile saveFile)
         {
             version = GameConstant.game_version;//设置存档 版本
+            ChapterId = saveFile.chapter_id;
+            Camp = saveFile.camp_id;
             InitScienceData();//初始化科技相关数据
             InitBagSystemData();//初始化背包相关数据
             InitAttainmentData();//初始化成就数据

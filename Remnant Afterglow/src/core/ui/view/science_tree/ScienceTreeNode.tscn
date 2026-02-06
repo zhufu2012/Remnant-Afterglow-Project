@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdgxs82rf4ht7"]
+
+[ext_resource type="Script" uid="uid://c6iijitjouny4" path="res://src/core/ui/view/science_tree/ScienceTreeNode.cs" id="1_jir10"]
+
+[node name="TreeNode" type="Control" node_paths=PackedStringArray("panel", "button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jir10")
+panel = NodePath("Panel")
+button = NodePath("Panel/Button")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 35.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 35.0
+
+[node name="该场景是科技树中的科技节点" type="Label" parent="."]
+layout_mode = 0
+offset_left = -49.3497
+offset_top = 5.94574
+offset_right = -9.34967
+offset_bottom = 22.1957

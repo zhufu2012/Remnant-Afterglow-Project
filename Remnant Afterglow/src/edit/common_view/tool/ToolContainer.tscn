@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://fyrhpybvnipl"]
 
-[ext_resource type="Script" path="res://src/edit/common_view/tool/ToolContainer.cs" id="1_d7dhd"]
+[ext_resource type="Script" uid="uid://dy8lssmp7l3ss" path="res://src/edit/common_view/tool/ToolContainer.cs" id="1_d7dhd"]
 [ext_resource type="Texture2D" uid="uid://ftrwlywfu835" path="res://src/edit/common_view/tool/圆.png" id="2_v8kk6"]
 [ext_resource type="Texture2D" uid="uid://b5fvlgyv5msux" path="res://src/edit/common_view/tool/正方形.png" id="3_4t7us"]
 
 [node name="ToolContainer" type="GridContainer"]
+texture_filter = 1
 offset_right = 1180.0
 offset_bottom = 30.0
 mouse_filter = 0

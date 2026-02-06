@@ -29,7 +29,7 @@ namespace Remnant_Afterglow
 	/// <summary>
 	/// 建筑列表
 	/// </summary>
-	public partial class SubBuildList : Node2D
+	public partial class SubBuildList : Control
 	{
 		AnimationPlayer animationPlayer;
 		TextureButton button1;
@@ -48,7 +48,7 @@ namespace Remnant_Afterglow
 		/// </summary>
 		[Export] public int PngZIndex = 1000;
 		[Export] public int space = 4;
-		[Export] public Vector2 DefineXY = new Vector2(0, 0);
+		[Export] public Vector2 DefineXY = new Vector2(20, 20);
 
 		/// <summary>
 		/// 章节id
@@ -80,7 +80,7 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public bool IsAnima = false;
 		/// <summary>
-		/// 当前动画状态-false是关闭,true是开启
+		/// 当前动画状态-false是关闭,true是开启  默认是关闭状态
 		/// </summary>
 		public bool AnimaType = false;
 		/// <summary>
@@ -114,7 +114,6 @@ namespace Remnant_Afterglow
 			button1.ButtonDown += Button1_ButtonDown;
 			button2 = GetNode<TextureButton>("Node2D/下一页");
 			button2.ButtonDown += Button2_ButtonDown;
-			node2D = GetNode<Node2D>("Node2D");
 			highLight = GetNode<TextureRect>("Node2D/次级列表高亮");
 
 			for (int i = 0; i < ItemCount; i++)
@@ -142,7 +141,7 @@ namespace Remnant_Afterglow
 			copyBuildLimit = ConfigCache.GetCopyBuildLimit(ChapterId + "_" + CopyId);
 			//<标签id,建筑项列表>
 			Dictionary<int, List<MapBuildItem>> buildDict = new Dictionary<int, List<MapBuildItem>>();
-			if (copyBuildLimit.IsChallenge)//是挑战关卡
+			if (copyBuildLimit != null && copyBuildLimit.IsChallenge)//是挑战关卡
 			{
 				foreach (int itemId in copyBuildLimit.LimitBuildItemIdList)
 				{
@@ -241,31 +240,34 @@ namespace Remnant_Afterglow
 			if (animName == "打开")
 				AnimaType = true;
 			else
+			{
 				AnimaType = false;
+			}
 		}
 
 		/// <summary>
 		/// 设置子列表是否开启
 		/// </summary>
 		/// <param name="IsStart">开启还是关闭</param>
-		/// <param name="type">标签类型</param>
+		/// <param name="label_type">标签类型</param>
 		public void SetView(bool IsStart, SubBuildListType label_type)
 		{
-			if (this.type != SubBuildListType.NoSelect)
+			if (type != SubBuildListType.NoSelect)
 			{
 				if (AnimaType)//动画是开着的状态并且 旧状态和新状态不同
 				{
-					if (this.type != label_type)//直接切换图片
+					if (type != label_type)//不是当前状态-直接切换图片
 					{
-						this.type = label_type;
+						type = label_type;
 						SetPageView(1);
 						SetHighLight(-1);
 					}
 					else//是当前状态,就运行-关闭或开启动画
 					{
-						this.type = label_type;
 						if (IsStart)
+						{
 							animationPlayer.Play("打开");
+						}
 						else
 						{
 							animationPlayer.Play("关闭");
@@ -298,10 +300,6 @@ namespace Remnant_Afterglow
 		}
 
 
-		public override void _PhysicsProcess(double delta)
-		{
-		}
-
 		/// <summary>
 		/// 设置一页的数据，先清空再设置
 		/// </summary>
@@ -325,6 +323,7 @@ namespace Remnant_Afterglow
 		{
 			if (SelectIndex >= 0)
 			{
+				if (type == SubBuildListType.NoSelect) return;
 				this.SelectIndex = SelectIndex;//当前选中
 				List<MapBuildItem> itemList = PageBuildDict[(int)type][NowPage];
 				if (itemList.Count > SelectIndex)
@@ -338,7 +337,7 @@ namespace Remnant_Afterglow
 			}
 			else
 			{
-				this.SelectIndex = -1;
+				this.SelectIndex = 0;
 				SelectItem = null;
 				highLight.Visible = false;
 				MapOpView.Instance.buildOpList.buildInfoView.SetView(SelectItem);
@@ -361,7 +360,7 @@ namespace Remnant_Afterglow
 						TextureButton sprite2D = new TextureButton();
 						sprite2D.MouseFilter = Control.MouseFilterEnum.Pass;
 						sprite2D.TextureNormal = itemList[i].LablePng;
-						sprite2D.Position = DefineXY;
+						sprite2D.Position = new Vector2(DefineXY.X - 0, DefineXY.Y + 1);
 						sprite2D.TextureFilter = TextureFilterEnum.Nearest;
 						sprite2D.ZIndex = PngZIndex;
 						sprite2D.Scale = new Vector2(1f, 1f);

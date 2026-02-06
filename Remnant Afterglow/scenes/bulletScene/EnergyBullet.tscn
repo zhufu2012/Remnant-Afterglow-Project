@@ -1,19 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2ctelseeywgk"]
 
-[ext_resource type="Script" path="res://src/core/system/bullets/sub_bullets/EnergyBullet.cs" id="1_fhxqi"]
+[ext_resource type="Script" uid="uid://5rtecr5qq4x0" path="res://src/core/system/bullets/sub_bullets/EnergyBullet.cs" id="1_fhxqi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fmss8"]
+radius = 3.0
 
-[node name="EnergyBullet" type="Node2D"]
-script = ExtResource("1_fhxqi")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D"]
 collision_layer = 32
 collision_mask = 0
 input_pickable = false
 monitoring = false
+script = ExtResource("1_fhxqi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fmss8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

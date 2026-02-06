@@ -7,22 +7,22 @@ namespace Remnant_Afterglow
     public partial class WaveBase
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 刷怪点id
         /// </summary>
         public int BrushId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 波次Id
         ///（波数从1开始，一直
         ///到各刷新点中存在的
         ///最大波数为止）
         /// </summary>
         public int WaveId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 波次名称
         /// </summary>
         public string WaveName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 刷新单位组
         ///(单位组id1,刷新次数1)|(单位组id2,刷新次数2)
         /// </summary>

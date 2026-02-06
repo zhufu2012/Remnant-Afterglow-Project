@@ -9,10 +9,7 @@ namespace Remnant_Afterglow
     /// </summary>
     public class AnimationCommon
     {
-
-
-
-
+        ///各帧相对持续时间
         public static float FindSecondItemIfFirstIsOne(List<List<float>> lists, int index)
         {
             foreach (var innerList in lists)

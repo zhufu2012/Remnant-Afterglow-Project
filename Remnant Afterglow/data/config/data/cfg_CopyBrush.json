@@ -5,16 +5,168 @@
         "CopyId": 1,
         "CopyType": 0,
         "AllWave": 2,
-        "PrepareTime": 10,
-        "BrushSpace": 30,
+        "PrepareTime": 1,
+        "BrushSpace": 1,
         "BrushSpaceList": [
             [
                 2,
-                10
+                4
             ]
         ],
         "BrushIdList": [
             4
         ]
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "ChapterId": 1,
+        "CopyId": 2,
+        "CopyType": 0,
+        "AllWave": 2,
+        "PrepareTime": 1,
+        "BrushSpace": 1,
+        "BrushSpaceList": [
+            [
+                2,
+                4
+            ]
+        ],
+        "BrushIdList": [
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "1_3",
+        "ChapterId": 1,
+        "CopyId": 3,
+        "CopyType": 0,
+        "AllWave": 12,
+        "PrepareTime": 1,
+        "BrushSpace": 1,
+        "BrushSpaceList": [
+            [
+                2,
+                4
+            ]
+        ],
+        "BrushIdList": [
+            5,
+            6
+        ]
+    },
+    {
+        "KEY_INDEX": "1_1000",
+        "ChapterId": 1,
+        "CopyId": 1000,
+        "CopyType": 0,
+        "AllWave": 4,
+        "PrepareTime": 1,
+        "BrushSpace": 10,
+        "BrushSpaceList": [],
+        "BrushIdList": [
+            10001
+        ]
+    },
+    {
+        "KEY_INDEX": "3_101",
+        "ChapterId": 3,
+        "CopyId": 101,
+        "CopyType": 0,
+        "AllWave": 8,
+        "PrepareTime": 1,
+        "BrushSpace": 15,
+        "BrushSpaceList": [],
+        "BrushIdList": [
+            10101,
+            10102
+        ]
+    },
+    {
+        "KEY_INDEX": "3_102",
+        "ChapterId": 3,
+        "CopyId": 102,
+        "CopyType": 0,
+        "AllWave": 10,
+        "PrepareTime": 1,
+        "BrushSpace": 15,
+        "BrushSpaceList": [],
+        "BrushIdList": [
+            10201,
+            10202,
+            10203,
+            10204
+        ]
+    },
+    {
+        "KEY_INDEX": "3_103",
+        "ChapterId": 3,
+        "CopyId": 103,
+        "CopyType": 0,
+        "AllWave": 10,
+        "PrepareTime": 1,
+        "BrushSpace": 15,
+        "BrushSpaceList": [],
+        "BrushIdList": [
+            10301,
+            10302
+        ]
+    },
+    {
+        "KEY_INDEX": "3_104",
+        "ChapterId": 3,
+        "CopyId": 104,
+        "CopyType": 0,
+        "AllWave": 11,
+        "PrepareTime": 1,
+        "BrushSpace": 15,
+        "BrushSpaceList": [],
+        "BrushIdList": [
+            10401,
+            10402,
+            10403
+        ]
+    },
+    {
+        "KEY_INDEX": "3_105",
+        "ChapterId": 3,
+        "CopyId": 105,
+        "CopyType": 0,
+        "AllWave": 11,
+        "PrepareTime": 1,
+        "BrushSpace": 15,
+        "BrushSpaceList": [],
+        "BrushIdList": [
+            10501,
+            10502,
+            10503
+        ]
+    },
+    {
+        "KEY_INDEX": "3_106",
+        "ChapterId": 3,
+        "CopyId": 106,
+        "CopyType": 0,
+        "AllWave": 11,
+        "PrepareTime": 1,
+        "BrushSpace": 15,
+        "BrushSpaceList": [],
+        "BrushIdList": [
+            10601,
+            10602,
+            10603
+        ]
+    },
+    {
+        "KEY_INDEX": "3_107",
+        "ChapterId": 3,
+        "CopyId": 107,
+        "CopyType": 0,
+        "AllWave": 12,
+        "PrepareTime": 1,
+        "BrushSpace": 15,
+        "BrushSpaceList": [],
+        "BrushIdList": []
     }
 ]

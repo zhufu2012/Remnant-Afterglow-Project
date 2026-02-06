@@ -8,47 +8,47 @@ namespace Remnant_Afterglow
     public partial class ChapterBase
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 战役id
         ///按数字从1开始排序
         /// </summary>
         public int ChapterId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 章节名称
         /// </summary>
         public string ChapterName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 章节描述文字1
         /// </summary>
         public string Describe1 { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 章节描述文字2
         /// </summary>
         public string Describe2 { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 章节类型
         ///暂不使用
         /// </summary>
         public int ChapterType { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 战役所用大地图id
         /// </summary>
         public int BigMapBaseId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 地图相机id
         /// </summary>
         public int CameraId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 战役图片
         /// </summary>
         public Texture2D ChapterImage { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 战役初始关卡列表
         ///一开始就解锁的关卡
         ///
         /// </summary>
         public List<int> ChapterStartCopy { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 战役初始就占领的位置列表
         /// </summary>
         public List<Vector2I> UnLockList { get; set; }

@@ -2,12 +2,15 @@ import json
 import shutil
 import os
 
-
+_config_cache = None
 def load_data():
+    global _config_cache
+    if _config_cache is not None:
+        return _config_cache
     with open('config.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
+    _config_cache = data
     return data
-
 
 ##读取日志数据
 def read_log():
@@ -103,7 +106,7 @@ def copy_dir2(class_export_path, project_path, ignore_list):
     for path in pathList:
         p = 0
         for ignore in ignore_list:
-            if path.find(ignore) != -1:
+            if path[:-3] == ignore != -1:
                 p = 1
                 break
             else:

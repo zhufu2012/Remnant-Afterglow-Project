@@ -108,5 +108,16 @@
         "Param2": 0,
         "Param3": 0,
         "ParamList": []
+    },
+    {
+        "KEY_INDEX": "13",
+        "AttrEventId": 13,
+        "AttrEventDescribe": "胶囊死亡时刷新作战人形",
+        "EventType": 0,
+        "Delay": 0,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
     }
 ]

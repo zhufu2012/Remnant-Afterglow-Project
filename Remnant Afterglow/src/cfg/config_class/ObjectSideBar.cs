@@ -8,11 +8,11 @@ namespace Remnant_Afterglow
     public partial class ObjectSideBar
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 侧边栏id
         /// </summary>
         public int SideBarId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 侧边栏位置偏移
         ///(X,Y)
         /// </summary>

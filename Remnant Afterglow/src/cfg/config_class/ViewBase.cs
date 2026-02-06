@@ -8,40 +8,40 @@ namespace Remnant_Afterglow
     public partial class ViewBase
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 界面id
         /// </summary>
         public int ViewId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 界面名称
         /// </summary>
         public string ViewName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 界面显示层级
         ///Zindex
         /// </summary>
         public int Zindex { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 界面大小设置方式
         ///1 固定大小
         ///2 比例大小
         /// </summary>
         public int SizeType { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 界面大小
         ///大小设置方式为1是 横纵轴像素(x,y)
         /// 为2 是屏幕比例最大为1（0.8,0.8）
         /// </summary>
         public Vector2 ViewSize { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 界面位置
         /// </summary>
         public Vector2 ViewPos { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 界面背景颜色
         /// </summary>
         public Color BackdropColor { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 界面背景图片
         /// </summary>
         public Texture2D BackdropPng { get; set; }

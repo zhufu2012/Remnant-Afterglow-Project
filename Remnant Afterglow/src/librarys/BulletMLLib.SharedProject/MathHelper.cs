@@ -4,40 +4,40 @@ namespace BulletMLLib.SharedProject;
 
 public static class MathHelper
 {
-    /// <summary>Represents the mathematical constant e(2.71828175).</summary>
+    /// <summary>表示数学常数e(2.71828175)。</summary>
     public const float E = 2.718282f;
 
-    /// <summary>Represents the log base ten of e(0.4342945).</summary>
+    /// <summary>表示以10为底的e的对数(0.4342945)。</summary>
     public const float Log10E = 0.4342945f;
 
-    /// <summary>Represents the log base two of e(1.442695).</summary>
+    /// <summary>表示以2为底的e的对数(1.442695)。</summary>
     public const float Log2E = 1.442695f;
 
-    /// <summary>Represents the value of pi(3.14159274).</summary>
+    /// <summary>表示π的值(3.14159274)。</summary>
     public const float Pi = 3.141593f;
 
     /// <summary>
-    /// Represents the value of pi divided by two(1.57079637).
+    /// 表示π除以二的值(1.57079637)。
     /// </summary>
     public const float PiOver2 = 1.570796f;
 
     /// <summary>
-    /// Represents the value of pi divided by four(0.7853982).
+    /// 表示π除以四的值(0.7853982)。
     /// </summary>
     public const float PiOver4 = 0.7853982f;
 
-    /// <summary>Represents the value of pi times two(6.28318548).</summary>
+    /// <summary>表示π乘以二的值(6.28318548)。</summary>
     public const float TwoPi = 6.283185f;
 
     /// <summary>
-    /// Returns the Cartesian coordinate for one axis of a point that is defined by a given triangle and two normalized barycentric (areal) coordinates.
+    /// 返回由给定三角形和两个归一化重心坐标定义的点在一个轴上的笛卡尔坐标。
     /// </summary>
-    /// <param name="value1">The coordinate on one axis of vertex 1 of the defining triangle.</param>
-    /// <param name="value2">The coordinate on the same axis of vertex 2 of the defining triangle.</param>
-    /// <param name="value3">The coordinate on the same axis of vertex 3 of the defining triangle.</param>
-    /// <param name="amount1">The normalized barycentric (areal) coordinate b2, equal to the weighting factor for vertex 2, the coordinate of which is specified in value2.</param>
-    /// <param name="amount2">The normalized barycentric (areal) coordinate b3, equal to the weighting factor for vertex 3, the coordinate of which is specified in value3.</param>
-    /// <returns>Cartesian coordinate of the specified point with respect to the axis being used.</returns>
+    /// <param name="value1">定义三角形顶点1在某个轴上的坐标。</param>
+    /// <param name="value2">定义三角形顶点2在同一轴上的坐标。</param>
+    /// <param name="value3">定义三角形顶点3在同一轴上的坐标。</param>
+    /// <param name="amount1">归一化重心坐标b2，等于顶点2的权重因子，顶点2的坐标由value2指定。</param>
+    /// <param name="amount2">归一化重心坐标b3，等于顶点3的权重因子，顶点3的坐标由value3指定。</param>
+    /// <returns>相对于正在使用的轴的指定点的笛卡尔坐标。</returns>
     public static float Barycentric(
         float value1,
         float value2,
@@ -52,14 +52,14 @@ public static class MathHelper
     }
 
     /// <summary>
-    /// Performs a Catmull-Rom interpolation using the specified positions.
+    /// 使用指定位置执行Catmull-Rom插值。
     /// </summary>
-    /// <param name="value1">The first position in the interpolation.</param>
-    /// <param name="value2">The second position in the interpolation.</param>
-    /// <param name="value3">The third position in the interpolation.</param>
-    /// <param name="value4">The fourth position in the interpolation.</param>
-    /// <param name="amount">Weighting factor.</param>
-    /// <returns>A position that is the result of the Catmull-Rom interpolation.</returns>
+    /// <param name="value1">插值中的第一个位置。</param>
+    /// <param name="value2">插值中的第二个位置。</param>
+    /// <param name="value3">插值中的第三个位置。</param>
+    /// <param name="value4">插值中的第四个位置。</param>
+    /// <param name="amount">权重因子。</param>
+    /// <returns>Catmull-Rom插值的结果位置。</returns>
     public static float CatmullRom(
         float value1,
         float value2,
@@ -81,11 +81,11 @@ public static class MathHelper
         );
     }
 
-    /// <summary>Restricts a value to be within a specified range.</summary>
-    /// <param name="value">The value to clamp.</param>
-    /// <param name="min">The minimum value. If <c>value</c> is less than <c>min</c>, <c>min</c> will be returned.</param>
-    /// <param name="max">The maximum value. If <c>value</c> is greater than <c>max</c>, <c>max</c> will be returned.</param>
-    /// <returns>The clamped value.</returns>
+    /// <summary>将值限制在指定范围内。</summary>
+    /// <param name="value">要限制的值。</param>
+    /// <param name="min">最小值。如果<c>value</c>小于<c>min</c>，将返回<c>min</c>。</param>
+    /// <param name="max">最大值。如果<c>value</c>大于<c>max</c>，将返回<c>max</c>。</param>
+    /// <returns>限制后的值。</returns>
     public static float Clamp(float value, float min, float max)
     {
         value = value > (double)max ? max : value;
@@ -93,11 +93,11 @@ public static class MathHelper
         return value;
     }
 
-    /// <summary>Restricts a value to be within a specified range.</summary>
-    /// <param name="value">The value to clamp.</param>
-    /// <param name="min">The minimum value. If <c>value</c> is less than <c>min</c>, <c>min</c> will be returned.</param>
-    /// <param name="max">The maximum value. If <c>value</c> is greater than <c>max</c>, <c>max</c> will be returned.</param>
-    /// <returns>The clamped value.</returns>
+    /// <summary>将值限制在指定范围内。</summary>
+    /// <param name="value">要限制的值。</param>
+    /// <param name="min">最小值。如果<c>value</c>小于<c>min</c>，将返回<c>min</c>。</param>
+    /// <param name="max">最大值。如果<c>value</c>大于<c>max</c>，将返回<c>max</c>。</param>
+    /// <returns>限制后的值。</returns>
     public static int Clamp(int value, int min, int max)
     {
         value = value > max ? max : value;
@@ -106,11 +106,11 @@ public static class MathHelper
     }
 
     /// <summary>
-    /// Calculates the absolute value of the difference of two values.
+    /// 计算两个值差的绝对值。
     /// </summary>
-    /// <param name="value1">Source value.</param>
-    /// <param name="value2">Source value.</param>
-    /// <returns>Distance between the two values.</returns>
+    /// <param name="value1">源值。</param>
+    /// <param name="value2">源值。</param>
+    /// <returns>两个值之间的距离。</returns>
     public static float Distance(float value1, float value2) => Math.Abs(value1 - value2);
 
     /// <summary>
@@ -154,15 +154,15 @@ public static class MathHelper
             : value1;  // 当amount等于0时，直接返回value1
     }
 
-    /// <summary>Linearly interpolates between two values.</summary>
-    /// <param name="value1">Source value.</param>
-    /// <param name="value2">Destination value.</param>
-    /// <param name="amount">Value between 0 and 1 indicating the weight of value2.</param>
-    /// <returns>Interpolated value.</returns>
-    /// <remarks>This method performs the linear interpolation based on the following formula:
-    /// <code>value1 + (value2 - value1) * amount</code>.
-    /// Passing amount a value of 0 will cause value1 to be returned, a value of 1 will cause value2 to be returned.
-    /// See <see cref="M:Microsoft.Xna.Framework.MathHelper.LerpPrecise(System.Single,System.Single,System.Single)" /> for a less efficient version with more precision around edge cases.
+    /// <summary>在两个值之间进行线性插值。</summary>
+    /// <param name="value1">源值。</param>
+    /// <param name="value2">目标值。</param>
+    /// <param name="amount">介于0和1之间的值，表示value2的权重。</param>
+    /// <returns>插值后的值。</returns>
+    /// <remarks>此方法基于以下公式执行线性插值：
+    /// <code>value1 + (value2 - value1) * amount</code>。
+    /// 当amount为0时返回value1，当amount为1时返回value2。
+    /// 有关在边缘情况下精度更高的低效版本，请参见<see cref="M:Microsoft.Xna.Framework.MathHelper.LerpPrecise(System.Single,System.Single,System.Single)" />。
     /// </remarks>
     public static float Lerp(float value1, float value2, float amount) =>
         value1 + (value2 - value1) * amount;
@@ -191,30 +191,30 @@ public static class MathHelper
     public static float LerpPrecise(float value1, float value2, float amount) =>
         (float)((1.0 - amount) * value1 + value2 * (double)amount);
 
-    /// <summary >返回两个值中较大的一个。</摘要>
-    /// <param name="value1 " >值1</param >
-    /// <param name="value2 " >值2</param >
-    ///<返回>较大的值。</returns >
+    /// <summary>返回两个值中较大的一个。</summary>
+    /// <param name="value1">值1</param>
+    /// <param name="value2">值2</param>
+    /// <returns>较大的值。</returns>
     public static float Max(float value1, float value2) =>
         value1 <= (double)value2 ? value2 : value1;
 
-    /// <summary >返回两个值中较大的一个。</摘要>
-    /// <param name="value1 " >值1</param >
-    /// <param name="value2 " >值2</param >
-    ///<返回>较大的值。</returns >
+    /// <summary>返回两个值中较大的一个。</summary>
+    /// <param name="value1">值1</param>
+    /// <param name="value2">值2</param>
+    /// <returns>较大的值。</returns>
     public static int Max(int value1, int value2) => value1 <= value2 ? value2 : value1;
 
-    /// <summary >返回两个值中较小的一个。</摘要>
-    /// <param name="value1 " >值1</param >
-    /// <param name="value2 " >值2</param >
-    ///<返回>较小的值。</returns >
+    /// <summary>返回两个值中较小的一个。</summary>
+    /// <param name="value1">值1</param>
+    /// <param name="value2">值2</param>
+    /// <returns>较小的值。</returns>
     public static float Min(float value1, float value2) =>
         value1 >= (double)value2 ? value2 : value1;
 
-    /// <summary >返回两个值中较小的一个。</摘要>
-    /// <param name="value1 " >值1</param >
-    /// <param name="value2 " >值2</param >
-    ///<返回>较小的值。</returns >
+    /// <summary>返回两个值中较小的一个。</summary>
+    /// <param name="value1">值1</param>
+    /// <param name="value2">值2</param>
+    /// <returns>较小的值。</returns>
     public static int Min(int value1, int value2) => value1 >= value2 ? value2 : value1;
 
     /// <summary>
@@ -233,29 +233,29 @@ public static class MathHelper
         return Hermite(value1, 0.0f, value2, 0.0f, amount1);
     }
 
-    /// <summary >将弧度转换为角度。</摘要>
-    /// <param name="radians " >以弧度表示的角度。</param >
-    /// <returns >以度为单位的角度。</returns >
-    ///<备注>
-    ///此方法在内部使用双精度，
-    ///尽管它返回单个浮点数
+    /// <summary>将弧度转换为角度。</summary>
+    /// <param name="radians">以弧度表示的角度。</param>
+    /// <returns>以度为单位的角度。</returns>
+    /// <remarks>
+    /// 此方法在内部使用双精度，
+    /// 尽管它返回单个浮点数
     /// Factor = 180 / pi
-    ///</备注>
+    ///</remarks>
     public static float ToDegrees(float radians) => radians * 57.29578f;
 
-    /// <summary >将角度转换为弧度。</摘要>
-    /// <param name="degrees " >以度为单位的角度。</param >
-    /// <returns >以弧度表示的角度。</returns >
-    ///<备注>
-    ///此方法在内部使用双精度，
-    ///尽管它返回单个浮点数
+    /// <summary>将角度转换为弧度。</summary>
+    /// <param name="degrees">以度为单位的角度。</param>
+    /// <returns>以弧度表示的角度。</returns>
+    /// <remarks>
+    /// 此方法在内部使用双精度，
+    /// 尽管它返回单个浮点数
     /// Factor = pi / 180
-    ///</备注>
+    ///</remarks>
     public static float ToRadians(float degrees) => degrees * 0.01745329f;
 
-    /// <summary >将给定的角度减小到π和-π之间的值。</摘要>
-    /// <param name="angle " >要减小的角度，以弧度为单位。</param >
-    /// <returns >以弧度表示的新角度。</returns >
+    /// <summary>将给定的角度减小到π和-π之间的值。</summary>
+    /// <param name="angle">要减小的角度，以弧度为单位。</param>
+    /// <returns>以弧度表示的新角度。</returns>
     public static float WrapAngle(float angle)
     {
         const float PI = 3.1415926535897932f;
@@ -275,8 +275,8 @@ public static class MathHelper
         return angle;
     }
 
-    /// <summary>Determines if value is powered by two.</summary>
-    /// <param name="value">A value.</param>
-    /// <returns><c>true</c> if <c>value</c> is powered by two; otherwise <c>false</c>.</returns>
+    /// <summary>确定值是否为2的幂。</summary>
+    /// <param name="value">一个值。</param>
+    /// <returns>如果<c>value</c>是2的幂，则为<c>true</c>；否则为<c>false</c>。</returns>
     public static bool IsPowerOfTwo(int value) => value > 0 && (value & value - 1) == 0;
 }

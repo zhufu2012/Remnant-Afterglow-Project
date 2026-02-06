@@ -5,38 +5,38 @@ using BulletMLLib.SharedProject.Nodes;
 namespace BulletMLLib.SharedProject.Tasks;
 
 /// <summary>
-/// This task changes the direction a little bit every frame
+/// 这个任务每帧都会稍微改变方向
 /// </summary>
 public class ChangeDirectionTask : BulletMLTask
 {
-    #region Members
+    #region 成员变量
     /// <summary>
-    /// The amount pulled out of the node
+    /// 从节点中提取的数值
     /// </summary>
     private float NodeDirection;
 
     /// <summary>
-    /// the type of direction change, pulled out of the node
+    /// 方向变化的类型，从节点中提取
     /// </summary>
     private ENodeType ChangeType;
 
     /// <summary>
-    /// How long to run this task... measured in frames
+    /// 运行此任务的时间长度...以帧为单位
     /// </summary>
     private float Duration { get; set; }
 
     /// <summary>
-    /// How many frames this dude has ran
+    /// 此任务已运行的帧数
     /// </summary>
     private float RunDelta { get; set; }
-    #endregion //Members
+    #endregion //成员变量
 
-    #region Methods
+    #region 方法
     /// <summary>
-    /// Initializes a new instance of the <see cref="BulletMLTask"/> class.
+    /// 初始化 <see cref="BulletMLTask"/> 类的新实例。
     /// </summary>
-    /// <param name="node">Node.</param>
-    /// <param name="owner">Owner.</param>
+    /// <param name="node">节点。</param>
+    /// <param name="owner">所有者。</param>
     public ChangeDirectionTask(ChangeDirectionNode node, BulletMLTask owner)
         : base(node, owner)
     {
@@ -45,33 +45,33 @@ public class ChangeDirectionTask : BulletMLTask
     }
 
     /// <summary>
-    /// this sets up the task to be run.
+    /// 设置任务准备运行。
     /// </summary>
-    /// <param name="bullet">Bullet.</param>
+    /// <param name="bullet">子弹。</param>
     protected override void SetupTask(Bullet bullet)
     {
         RunDelta = 0;
 
-        //set the time length to run this dude
+        //设置运行此任务的时间长度
         Duration = Node.GetChildValue(ENodeName.term, this, bullet);
 
-        //check for divide by 0
+        //检查除零错误
         if (Duration == 0.0f)
         {
             Duration = 1.0f;
         }
 
-        //Get the amount to change direction from the nodes
+        //从节点获取改变方向的数值
         var dirNode = Node.GetChild(ENodeName.direction) as DirectionNode;
-        NodeDirection = dirNode.GetValue(this, bullet) * (float)Math.PI / 180.0f; //also make sure to convert to radians
+        NodeDirection = dirNode.GetValue(this, bullet) * (float)Math.PI / 180.0f; //同时确保转换为弧度
 
-        //How do we want to change direction?
+        //我们想要如何改变方向？
         ChangeType = dirNode.NodeType;
     }
 
     private float GetDirection(Bullet bullet)
     {
-        //How do we want to change direction?
+        //我们想要如何改变方向？
         var direction = ChangeType switch
         {
             ENodeType.sequence
@@ -80,27 +80,28 @@ public class ChangeDirectionTask : BulletMLTask
                 NodeDirection,
             ENodeType.absolute
                 =>
-                //We are going to go in the direction we are given, regardless of where we are pointing right now
+                //我们将按照给定的方向进行移动，不管我们现在指向哪里
                 NodeDirection - bullet.Direction,
             ENodeType.relative
                 =>
-                //方向的改变将是相对于我们当前的方向
+                //方向的改变将相对于我们当前的方向
                 NodeDirection,
-            _ => (NodeDirection + bullet.GetAimDir()) - bullet.Direction
+            _ =>
+             (NodeDirection + bullet.GetAimDir()) - bullet.Direction
         };
 
         //保持方向在-180°和180°之间
         direction = MathHelper.WrapAngle(direction);
 
-        //改变方向的序列类型不受持续时间的影响
+        //序列类型的方向改变不受持续时间影响
         if (ChangeType == ENodeType.absolute)
         {
-            //divide by the amount fo time remaining
+            //除以剩余的时间量
             direction /= Duration - RunDelta;
         }
         else if (ChangeType != ENodeType.sequence)
         {
-            //Divide by the duration so we ease into the direction change
+            //除以持续时间，这样我们可以平滑地进入方向变化
             direction /= Duration;
         }
 
@@ -109,10 +110,10 @@ public class ChangeDirectionTask : BulletMLTask
 
     public override ERunStatus Run(Bullet bullet)
     {
-        //将项目子弹的方向改变正确的量
+        //将子弹的方向改变正确的量
         bullet.Direction += GetDirection(bullet);
 
-        //decrement the amount if time left to run and return End when this task is finished
+        //减少剩余运行时间，当此任务完成时返回End
         RunDelta += 1.0f * bullet.TimeSpeed;
         if (!(Duration <= RunDelta))
             return ERunStatus.Continue;
@@ -120,7 +121,7 @@ public class ChangeDirectionTask : BulletMLTask
         TaskFinished = true;
         return ERunStatus.End;
 
-        //since this task isn't finished, run it again next time
+        //由于此任务未完成，下次继续运行
     }
-    #endregion //Methods
+    #endregion //方法
 }

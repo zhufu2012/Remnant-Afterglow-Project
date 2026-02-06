@@ -3,43 +3,50 @@
 <bulletml type="vertical"  xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 
 	<action label="top">
-		<repeat>
-			<times>5</times>
 			<action>
 				<fire>
-					<direction type="absolute">360 * $rand</direction>
 					<bulletRef label="add2way"/>
 				</fire>
-				<repeat>
-					<times>71</times>
-					<action>
-						<fire>
-							<direction type="sequence">5</direction>
-							<bulletRef label="add2way"/>
-						</fire>
-					</action>
-				</repeat>
-				<wait>30 - 20 * $rank</wait>
+				
 			</action>
-		</repeat>
-		<wait>100</wait>
 	</action>
 
-	<bullet label="add2way">
-		<speed>2.4 * (0.25 + 0.75 * $rank)</speed>
-		<action>
-			<wait>(24 + 6 * $rand)/ (2.4 * (0.25 + 0.75 * $rank))</wait>
-			<fire>
-				<direction type="relative">17</direction>
-				<speed type="relative">0</speed>
-				<bullet/>
-			</fire>
-			<fire>
-				<direction type="relative">-17</direction>
-				<speed type="relative">0</speed>
-				<bullet/>
-			</fire>
-		</action>
-	</bullet>
-
+ <bullet label="add2way">
+    <!-- 初始随机方向（0-359度） -->
+    <direction>$rand*360</direction>
+    <!-- 初始较低速度 -->
+    <speed>0.5</speed>
+    
+    <action>
+      <!-- 持续追踪目标方向 -->
+      <repeat>
+        <action>
+          <!-- 使用aim类型追踪目标，term控制转向速度 -->
+          <changeDirection>
+            <direction type="aim">0</direction>
+            <term>8</term>  <!-- 越小转向越灵敏 -->
+          </changeDirection>
+          <wait>1</wait>
+        </action>
+      </repeat>
+    </action>
+    
+    <action>
+      <!-- 持续加速过程 -->
+      <changeSpeed>
+        <speed>1.5</speed>
+        <term>40</term>  <!-- 第一阶段加速 -->
+      </changeSpeed>
+      <wait>40</wait>
+      <changeSpeed>
+        <speed>3.0</speed>
+        <term>30</term>  <!-- 第二阶段加速 -->
+      </changeSpeed>
+      <wait>30</wait>
+      <changeSpeed>
+        <speed>5.0</speed>
+        <term>999</term> <!-- 最终保持高速 -->
+      </changeSpeed>
+    </action>
+  </bullet>
 </bulletml>

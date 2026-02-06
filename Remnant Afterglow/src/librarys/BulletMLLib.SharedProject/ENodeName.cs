@@ -10,7 +10,7 @@ public enum ENodeName
     changeDirection,
     changeSpeed,
     accel,
-    wait,
+    wait,       //暂停
     repeat,
     bulletRef,
     actionRef,
@@ -22,6 +22,6 @@ public enum ENodeName
     times,
     direction,
     speed,
-    param,
+    param,  //参数
     bulletml
 }

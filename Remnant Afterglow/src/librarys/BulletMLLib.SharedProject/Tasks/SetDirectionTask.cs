@@ -4,17 +4,17 @@ using BulletMLLib.SharedProject.Nodes;
 namespace BulletMLLib.SharedProject.Tasks;
 
 /// <summary>
-/// This task sets the direction of a bullet
+/// 此任务设置子弹的方向
 /// </summary>
 public class SetDirectionTask : BulletMLTask
 {
     #region Methods
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BulletMLTask"/> class.
+    /// 初始化 <see cref="BulletMLTask"/> 类的新实例。
     /// </summary>
-    /// <param name="node">Node.</param>
-    /// <param name="owner">Owner.</param>
+    /// <param name="node">节点。</param>
+    /// <param name="owner">所有者。</param>
     public SetDirectionTask(DirectionNode node, BulletMLTask owner)
         : base(node, owner)
     {

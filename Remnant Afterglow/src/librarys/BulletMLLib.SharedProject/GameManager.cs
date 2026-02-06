@@ -1,17 +1,17 @@
 namespace BulletMLLib.SharedProject;
 
 /// <summary>
-/// This thing manages a few gameplay variables that used by the bulletml lib
+/// 这个类管理BulletML库使用的一些游戏变量
 /// </summary>
 public static class GameManager
 {
-    //TODO: get rid of this class and move game difficulty in to bullet manager
+    //TODO: 移除这个类并将游戏难度移入子弹管理器
 
-    //TODO: bullet should store the difficulty when they are fired
+    //TODO: 子弹发射时应存储难度
 
     /// <summary>
-    /// callback method to get the game difficulty.
-    /// You need to set this at the start of the game
+    /// 获取游戏难度的回调方法。
+    /// 您需要在游戏开始时设置此方法
     /// </summary>
     static public FloatDelegate GameDifficulty;
 }

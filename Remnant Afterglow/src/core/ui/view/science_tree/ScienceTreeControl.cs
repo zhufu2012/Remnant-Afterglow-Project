@@ -5,59 +5,6 @@ using System.Collections.Generic;
 namespace Remnant_Afterglow
 {
     /// <summary>
-    /// 网格节点
-    /// </summary>
-    public partial class TreeNode : Control
-    {
-        /// <summary>
-        /// 科技范围
-        /// </summary>
-        public ScienceRange range;
-        /// <summary>
-        /// 科技显示配置
-        /// </summary>
-        public ScienceBase scienceBase;
-        /// <summary>
-        /// 子节点列表
-        /// </summary>
-        public List<TreeNode> Children = new List<TreeNode>();
-        /// <summary>
-        /// 是否显示为科技节点
-        /// </summary>
-        public bool isShow = false;
-
-        /// <summary>
-        /// 节点位置
-        /// </summary>
-        public Vector2I Pos;
-
-        public TreeNode(Vector2I Pos)
-        {
-            this.Pos = Pos;
-        }
-        public TreeNode(ScienceRange range, ScienceBase scienceBase, Vector2I Pos, bool isShow)
-        {
-            this.range = range;
-            this.scienceBase = scienceBase;
-            this.Pos = Pos;
-            this.isShow = isShow;
-        }
-
-        public override void _Ready()
-        {
-            ZIndex = 1;
-            Panel panel = new Panel();
-            panel.SetAnchorsPreset(LayoutPreset.FullRect);
-            Button button = new Button();
-            button.Text = Pos.ToString();
-            button.Size = range.NodeSize;
-            panel.AddChild(button);
-            AddChild(panel);
-
-
-        }
-    }
-    /// <summary>
     /// 科技树网格
     /// </summary>
     public partial class ScienceTreeControl : Control
@@ -70,6 +17,9 @@ namespace Remnant_Afterglow
         List<List<TreeNode>> NodeList = new List<List<TreeNode>>();
         //节点字典<科技id,节点>
         Dictionary<int, TreeNode> TreeNodeDict = new Dictionary<int, TreeNode>();
+
+        PackedScene treeNodeScene = null;
+
         /// <summary>
         /// 科技范围
         /// </summary>
@@ -86,7 +36,6 @@ namespace Remnant_Afterglow
                     max_x = item.Pos.X + 1;
                 if (item.Pos.Y >= max_y)
                     max_y = item.Pos.Y + 1;
-
             }
             for (int i = 0; i < max_x; i++)
             {
@@ -123,6 +72,12 @@ namespace Remnant_Afterglow
 
         }
 
+        public override void _Ready()
+        {
+            treeNodeScene = GD.Load<PackedScene>("res://src/core/ui/view/science_tree/ScienceTreeNode.tscn");
+            InitView();
+            DrawConnections();
+        }
 
         /// <summary>
         /// 初始化设置节点位置
@@ -140,20 +95,15 @@ namespace Remnant_Afterglow
                 // 遍历内层列表
                 for (int j = 0; j < itemList.Count; j++)
                 {
-                    TreeNode item = itemList[j];
-                    if (item.isShow)
+                    ScienceTreeNode item = (ScienceTreeNode)treeNodeScene.Instantiate();
+                    if (itemList[j].isShow)
                     {
+                        item.IniData(itemList[j]);
                         item.Position = GetPos(item.scienceBase.Pos);
                         AddChild(item);
                     }
                 }
             }
-        }
-
-        public override void _Ready()
-        {
-            InitView();
-            DrawConnections();
         }
 
         /// <summary>
@@ -170,7 +120,9 @@ namespace Remnant_Afterglow
                         foreach (var child in node.Children)
                         {
                             Line2D line = new Line2D();
-                            line.Points = CalculateHVPathAvoidingNodes(node, child); ;
+                            line.DefaultColor = Colors.White; // 设置线条颜色
+                            line.Width = 2; // 设置线条宽度
+                            line.Points = CalculateHVPathAvoidingNodes(node, child);
                             AddChild(line);
                         }
                     }
@@ -196,7 +148,6 @@ namespace Remnant_Afterglow
             Vector2I endCenter = new Vector2I((int)(endNode.Position.X + range.NodeSize.X / 2), (int)(endNode.Position.Y + range.NodeSize.Y / 2));
             Vector2I startPos = startNode.Pos;
             Vector2I endPos = endNode.Pos;
-
             // 创建路径点列表
             List<Vector2I> pathPoints = new List<Vector2I>
             {
@@ -215,10 +166,6 @@ namespace Remnant_Afterglow
                 Vector2I pos = GetPos(pathPoints[i]);
                 vector2s[i] = pos + new Vector2I(range.NodeSize.X / 2, range.NodeSize.Y / 2);
             }
-
-
-
-
             return vector2s;
         }
     }

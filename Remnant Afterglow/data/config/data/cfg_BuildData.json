@@ -3,8 +3,9 @@
         "KEY_INDEX": "101",
         "ObjectId": 101,
         "BuildingName": "挖掘钻机LV1",
-        "Describe": "需要建造在万能齿轮资源上，持续挖掘万能齿轮，升级可以提高挖掘效率，每秒获取5点",
+        "Describe": "需要建造在万能齿轮资源上，持续挖掘万能齿轮，升级可以提高挖掘效率，\n每秒获取5点",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
@@ -35,19 +36,12 @@
         "BuildingName": "挖掘钻机LV2",
         "Describe": "需要建造在万能齿轮资源上，持续挖掘万能齿轮，升级可以提高挖掘效率，每秒获取10点",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                600
-            ],
-            [
-                3,
-                50
-            ],
-            [
-                4,
-                0
+                1,
+                200
             ]
         ],
         "WeekLength": 1,
@@ -71,28 +65,21 @@
         "KEY_INDEX": "103",
         "ObjectId": 103,
         "BuildingName": "挖掘钻机LV3",
-        "Describe": "需要建造在万能齿轮资源上，持续挖掘万能齿轮，每秒获取15点",
+        "Describe": "需要建造在万能齿轮资源上，持续挖掘万能齿轮，每秒获取20点",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                900
-            ],
-            [
-                3,
-                125
-            ],
-            [
-                4,
-                25
+                1,
+                200
             ]
         ],
         "WeekLength": 1,
         "WeekResources": [
             [
                 1,
-                15
+                20
             ]
         ],
         "BuildingSize": 2,
@@ -111,21 +98,9 @@
         "BuildingName": "收解台LV1",
         "Describe": "收集周围的敌方残骸，将其分解成资源，收解台之间无法距离太近，升级可提高同时回收目标数量，同时回收目标数量:1",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                23
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 2,
@@ -136,7 +111,13 @@
         "AnimaTypeList": [
             1
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                201,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "202",
@@ -144,21 +125,9 @@
         "BuildingName": "收解台LV2",
         "Describe": "收集周围的敌方残骸，将其分解成资源，收解台之间无法距离太近，升级可提高同时回收目标数量，同时回收目标数量:2",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                19
-            ],
-            [
-                3,
-                100
-            ],
-            [
-                4,
-                23
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 2,
@@ -177,21 +146,9 @@
         "BuildingName": "收解台LV3",
         "Describe": "收集周围的敌方残骸，将其分解成资源，收解台之间无法距离太近，同时回收目标数量:4",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                24
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 2,
@@ -210,21 +167,9 @@
         "BuildingName": "熔炉平台LV1",
         "Describe": "建造在废料资源点附近，熔炉平台之间无法距离太近，建造完成时会自动添加2架采矿无人机，运回熔炉中提取加工，熔炉可选择需要合成的资源类型，升级可以提高采矿无人机的数量和熔炼速度，采矿无人机上限：2，熔炉效率:20",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                19
-            ],
-            [
-                3,
-                100
-            ],
-            [
-                4,
-                24
-            ]
-        ],
+        "Price": [],
         "WeekLength": 1,
         "WeekResources": [
             [
@@ -232,7 +177,7 @@
                 20
             ]
         ],
-        "BuildingSize": 3,
+        "BuildingSize": 4,
         "BuildingRules": [],
         "BuildProgress": 300,
         "AnimaTypeList": [
@@ -246,21 +191,9 @@
         "BuildingName": "熔炉平台LV2",
         "Describe": "建造在废料资源点附近，熔炉平台之间无法距离太近，建造完成时会自动添加2架采矿无人机，运回熔炉中提取加工，熔炉可选择需要合成的资源类型，升级可以提高采矿无人机的数量和熔炼速度，采矿无人机上限：4，熔炉效率:40",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                25
-            ]
-        ],
+        "Price": [],
         "WeekLength": 1,
         "WeekResources": [
             [
@@ -268,7 +201,7 @@
                 40
             ]
         ],
-        "BuildingSize": 3,
+        "BuildingSize": 4,
         "BuildingRules": [],
         "BuildProgress": 300,
         "AnimaTypeList": [
@@ -282,21 +215,9 @@
         "BuildingName": "熔炉平台LV3",
         "Describe": "建造在废料资源点附近，熔炉平台之间无法距离太近，建造完成时会自动添加2架采矿无人机，运回熔炉中提取加工，熔炉可选择需要合成的资源类型，升级可以提高采矿无人机的数量和熔炼速度，采矿无人机上限：6，熔炉效率:60",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                19
-            ],
-            [
-                3,
-                100
-            ],
-            [
-                4,
-                25
-            ]
-        ],
+        "Price": [],
         "WeekLength": 1,
         "WeekResources": [
             [
@@ -304,7 +225,7 @@
                 60
             ]
         ],
-        "BuildingSize": 3,
+        "BuildingSize": 4,
         "BuildingRules": [],
         "BuildProgress": 300,
         "AnimaTypeList": [
@@ -318,21 +239,9 @@
         "BuildingName": "水晶提取器LV1",
         "Describe": "建造在怨灵水晶资源点上，持续提取怨灵水晶，升级可以提高提取效率，每秒获得1点",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                26
-            ]
-        ],
+        "Price": [],
         "WeekLength": 1,
         "WeekResources": [
             [
@@ -356,21 +265,9 @@
         "BuildingName": "水晶提取器LV2",
         "Describe": "建造在怨灵水晶资源点上，持续提取怨灵水晶，升级可以提高提取效率，每秒获得2点",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                19
-            ],
-            [
-                3,
-                100
-            ],
-            [
-                4,
-                26
-            ]
-        ],
+        "Price": [],
         "WeekLength": 1,
         "WeekResources": [
             [
@@ -394,21 +291,9 @@
         "BuildingName": "水晶提取器LV3",
         "Describe": "建造在怨灵水晶资源点上，持续提取怨灵水晶，每秒获得3点",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                27
-            ]
-        ],
+        "Price": [],
         "WeekLength": 1,
         "WeekResources": [
             [
@@ -429,24 +314,12 @@
     {
         "KEY_INDEX": "501",
         "ObjectId": 501,
-        "BuildingName": "次元凝练器LV1",
-        "Describe": "建造在次元裂隙周围，持续凝练次元岛溶剂，升级可以提高凝练效率，每秒获得3点",
+        "BuildingName": "次元凝炼台LV1",
+        "Describe": "建造在次元裂隙周围，持续凝练次元岛溶剂，升级可以提高凝练效率，每秒获得4点",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                19
-            ],
-            [
-                3,
-                100
-            ],
-            [
-                4,
-                27
-            ]
-        ],
+        "Price": [],
         "WeekLength": 1,
         "WeekResources": [
             [
@@ -467,24 +340,12 @@
     {
         "KEY_INDEX": "502",
         "ObjectId": 502,
-        "BuildingName": "次元凝练器LV2",
-        "Describe": "建造在次元裂隙周围，持续凝练次元岛溶剂，升级可以提高凝练效率，每秒获得6点",
+        "BuildingName": "次元凝炼台LV2",
+        "Describe": "建造在次元裂隙周围，持续凝练次元岛溶剂，升级可以提高凝练效率，每秒获得10点",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                28
-            ]
-        ],
+        "Price": [],
         "WeekLength": 1,
         "WeekResources": [
             [
@@ -505,24 +366,12 @@
     {
         "KEY_INDEX": "503",
         "ObjectId": 503,
-        "BuildingName": "次元凝练器LV3",
-        "Describe": "建造在次元裂隙周围，持续凝练次元岛溶剂，每秒获得10点",
+        "BuildingName": "次元凝炼台LV3",
+        "Describe": "建造在次元裂隙周围，持续凝练次元岛溶剂，每秒获得20点",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                19
-            ],
-            [
-                3,
-                100
-            ],
-            [
-                4,
-                28
-            ]
-        ],
+        "Price": [],
         "WeekLength": 1,
         "WeekResources": [
             [
@@ -544,21 +393,14 @@
         "KEY_INDEX": "100001",
         "ObjectId": 100001,
         "BuildingName": "射击塔LV1",
-        "Describe": "较高攻速，可以攻击到空中的目标，每次发射一枚射线弹，优先瞄准装甲最低的敌人，升级提高弹夹容量和攻击速度",
+        "Describe": "较高攻速，可以攻击到空中的目标，每次发射一枚射线弹，升级提高弹夹容量和攻击速度",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                29
+                1,
+                300
             ]
         ],
         "WeekLength": 0,
@@ -581,26 +423,23 @@
         "KEY_INDEX": "100002",
         "ObjectId": 100002,
         "BuildingName": "射击塔LV2",
-        "Describe": "高攻速，可以攻击到空中的目标，每次发射一枚射线弹，优先瞄准装甲最低的敌人，升级提高弹夹容量和攻击速度",
+        "Describe": "高攻速，可以攻击到空中的目标，每次发射一枚射线弹，升级提高弹夹容量和攻击速度",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
+                1,
+                200
+            ],
+            [
                 2,
-                19
-            ],
-            [
-                3,
-                100
-            ],
-            [
-                4,
-                29
+                150
             ]
         ],
         "WeekLength": 0,
         "WeekResources": [],
-        "BuildingSize": 3,
+        "BuildingSize": 2,
         "BuildingRules": [],
         "BuildProgress": 300,
         "AnimaTypeList": [
@@ -618,26 +457,23 @@
         "KEY_INDEX": "100003",
         "ObjectId": 100003,
         "BuildingName": "射击塔LV3",
-        "Describe": "极高攻速，可以攻击到空中的目标，每次发射一枚射线弹，优先瞄准装甲最低的敌人",
+        "Describe": "极高攻速，可以攻击到空中的目标，每次发射一枚射线弹",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
+                1,
+                2200
+            ],
+            [
                 2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                30
+                400
             ]
         ],
         "WeekLength": 0,
         "WeekResources": [],
-        "BuildingSize": 4,
+        "BuildingSize": 2,
         "BuildingRules": [],
         "BuildProgress": 300,
         "AnimaTypeList": [
@@ -652,24 +488,205 @@
         ]
     },
     {
+        "KEY_INDEX": "100101",
+        "ObjectId": 100101,
+        "BuildingName": "破甲塔LV1",
+        "Describe": "慢攻速，射程较远，伤害较高，可以破坏敌人的装甲",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [
+            [
+                1,
+                750
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 2,
+        "BuildingRules": [],
+        "BuildProgress": 500,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                100101,
+                0,
+                0
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "100102",
+        "ObjectId": 100102,
+        "BuildingName": "破甲塔LV2",
+        "Describe": "慢攻速，射程较远，伤害较高，可以破坏敌人的装甲",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [
+            [
+                1,
+                1500
+            ],
+            [
+                2,
+                150
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 2,
+        "BuildingRules": [],
+        "BuildProgress": 500,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                100102,
+                0,
+                0
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "100103",
+        "ObjectId": 100103,
+        "BuildingName": "破甲塔LV3",
+        "Describe": "慢攻速，射程较远，伤害较高，可以破坏敌人的装甲",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [
+            [
+                1,
+                4000
+            ],
+            [
+                2,
+                400
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 2,
+        "BuildingRules": [],
+        "BuildProgress": 500,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                100103,
+                0,
+                0
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "100201",
+        "ObjectId": 100201,
+        "BuildingName": "散弹塔LV1",
+        "Describe": "高攻速，射程近，伤害较低，可以有效针对群体单位",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [
+            [
+                1,
+                100
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 2,
+        "BuildingRules": [],
+        "BuildProgress": 300,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                100201,
+                0,
+                0
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "100202",
+        "ObjectId": 100202,
+        "BuildingName": "散弹塔LV2",
+        "Describe": "高攻速，射程近，伤害较低，可以有效针对群体单位",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [
+            [
+                1,
+                100
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 2,
+        "BuildingRules": [],
+        "BuildProgress": 300,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                100202,
+                0,
+                0
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "100203",
+        "ObjectId": 100203,
+        "BuildingName": "散弹塔LV3",
+        "Describe": "高攻速，射程近，伤害较低，可以有效针对群体单位",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [
+            [
+                1,
+                100
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 2,
+        "BuildingRules": [],
+        "BuildProgress": 300,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                100203,
+                0,
+                0
+            ]
+        ]
+    },
+    {
         "KEY_INDEX": "100301",
         "ObjectId": 100301,
         "BuildingName": "机枪塔LV1",
         "Describe": "极高攻速，命中率较低，有很长的换弹时间，升级提高弹夹容量和伤害",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
+                1,
                 100
-            ],
-            [
-                4,
-                33
             ]
         ],
         "WeekLength": 0,
@@ -694,19 +711,12 @@
         "BuildingName": "机枪塔LV2",
         "Describe": "极高攻速，命中率较低，有很长的换弹时间，升级提高弹夹容量和伤害",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                34
+                1,
+                100
             ]
         ],
         "WeekLength": 0,
@@ -717,7 +727,13 @@
         "AnimaTypeList": [
             1
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                100302,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "100303",
@@ -725,19 +741,12 @@
         "BuildingName": "机枪塔LV3",
         "Describe": "极高攻速，命中率较低，有很长的换弹时间",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
+                1,
                 100
-            ],
-            [
-                4,
-                34
             ]
         ],
         "WeekLength": 0,
@@ -748,7 +757,13 @@
         "AnimaTypeList": [
             1
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                100303,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "100501",
@@ -756,19 +771,12 @@
         "BuildingName": "光子塔LV1",
         "Describe": "持续攻击，无需换弹，射出激光攻击敌人，升级提高伤害",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
+                1,
                 100
-            ],
-            [
-                4,
-                36
             ]
         ],
         "WeekLength": 0,
@@ -793,19 +801,12 @@
         "BuildingName": "光子塔LV2",
         "Describe": "持续攻击，无需换弹，射出激光攻击敌人，升级提高伤害",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                37
+                1,
+                100
             ]
         ],
         "WeekLength": 0,
@@ -816,7 +817,13 @@
         "AnimaTypeList": [
             1
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                100502,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "100503",
@@ -824,19 +831,12 @@
         "BuildingName": "光子塔LV3",
         "Describe": "持续攻击，无需换弹，射出激光攻击敌人",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
+                1,
                 100
-            ],
-            [
-                4,
-                37
             ]
         ],
         "WeekLength": 0,
@@ -847,7 +847,13 @@
         "AnimaTypeList": [
             1
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                100503,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "100901",
@@ -855,19 +861,12 @@
         "BuildingName": "迫击炮塔LV1",
         "Describe": "中攻速，优先攻击最远距离的敌人，无法攻击到自己附近的敌人，每次快速发射3枚炮弹，精准度不高，爆炸会小幅度击退目标周围的敌人，升级提高换弹速度和伤害",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
+                1,
                 100
-            ],
-            [
-                4,
-                42
             ]
         ],
         "WeekLength": 0,
@@ -892,21 +891,9 @@
         "BuildingName": "迫击炮塔LV2",
         "Describe": "中攻速，优先攻击最远距离的敌人，无法攻击到自己附近的敌人，每次快速发射3枚炮弹，精准度不高，爆炸会小幅度击退目标周围的敌人，升级提高换弹速度和伤害",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                101
-            ],
-            [
-                4,
-                43
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 2,
@@ -915,7 +902,13 @@
         "AnimaTypeList": [
             1
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                100902,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "100903",
@@ -923,17 +916,9 @@
         "BuildingName": "迫击炮塔LV3",
         "Describe": "中攻速，优先攻击最远距离的敌人，无法攻击到自己附近的敌人，每次快速发射3枚炮弹，精准度不高，爆炸会小幅度击退目标周围的敌人",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                11
-            ],
-            [
-                3,
-                116
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 2,
@@ -942,7 +927,13 @@
         "AnimaTypeList": [
             1
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                100903,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "101001",
@@ -950,15 +941,12 @@
         "BuildingName": "射空塔LV1",
         "Describe": "高射速，只能对空，每次快速发射2枚射线弹，升级提高弹夹容量和伤害",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
-                115
+                1,
+                100
             ]
         ],
         "WeekLength": 0,
@@ -971,7 +959,7 @@
         ],
         "WeaponList": [
             [
-                100101,
+                101001,
                 0,
                 0
             ]
@@ -983,15 +971,12 @@
         "BuildingName": "喷火塔LV1",
         "Describe": "较高攻速，贯穿，附加“燃烧”效果，升级提高效果的添加值和武器射程",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
-                116
+                1,
+                100
             ]
         ],
         "WeekLength": 0,
@@ -1002,25 +987,73 @@
         "AnimaTypeList": [
             1
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                101101,
+                0,
+                0
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "101102",
+        "ObjectId": 101102,
+        "BuildingName": "喷火塔LV2",
+        "Describe": "较高攻速，贯穿，附加“燃烧”效果，升级提高效果的添加值和武器射程",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 2,
+        "BuildingRules": [],
+        "BuildProgress": 300,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                101102,
+                0,
+                0
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "101103",
+        "ObjectId": 101103,
+        "BuildingName": "喷火塔LV3",
+        "Describe": "较高攻速，贯穿，附加“燃烧”效果",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 2,
+        "BuildingRules": [],
+        "BuildProgress": 300,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                101103,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "101201",
         "ObjectId": 101201,
         "BuildingName": "导弹无人机塔LV1",
-        "Describe": "导弹无人机塔是一种多功能战略平台，可以发射远距离追踪导弹，也可以释放一架战术无人机进行全图部署，当无人机离开平台，导弹系统将会关闭，升级可以提高导弹伤害和无人机机枪伤害，升级时无人机将会返回平台",
+        "Describe": "导弹无人机塔是一种多功能战略平台，可以发射远距离追踪导弹，也可以释放一架战术无人机进行全图部署，当无人机离开平台，导弹系统将会关闭，无人机需要返回无人机平台才能更换弹药，升级可以提高导弹伤害和无人机弹药携带量，升级时无人机将会返回平台",
         "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                19
-            ],
-            [
-                3,
-                117
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 3,
@@ -1032,20 +1065,77 @@
         "WeaponList": []
     },
     {
+        "KEY_INDEX": "100401",
+        "ObjectId": 100401,
+        "BuildingName": "镇压塔",
+        "Describe": "一座巨大的密集火力投送平台，会在长时间充能后对一个区域的敌人释放密集的弹雨，被压制的敌人移动速度将会下降，无法攻击距离较近的敌人，无法对空",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [
+            [
+                1,
+                100
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 4,
+        "BuildingRules": [],
+        "BuildProgress": 600,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                100401,
+                0,
+                0
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "102101",
+        "ObjectId": 102101,
+        "BuildingName": "集数投射塔",
+        "Describe": "慢攻速，发射一枚大型集数弹，在落到地面时会炸开覆盖一大片区域对敌人造成杀伤",
+        "Type": 1,
+        "SubType": 0,
+        "DefaultCamp": 1,
+        "Price": [
+            [
+                1,
+                500
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 4,
+        "BuildingRules": [],
+        "BuildProgress": 600,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": [
+            [
+                102101,
+                0,
+                0
+            ]
+        ]
+    },
+    {
         "KEY_INDEX": "200001",
         "ObjectId": 200001,
         "BuildingName": "防御墙LV1",
         "Describe": "建造在地面上，抵御敌人攻击，拥有一定的护甲值，周围建造重组塔将可以让该建筑自动重建",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
-                118
+                1,
+                50
             ]
         ],
         "WeekLength": 0,
@@ -1064,17 +1154,9 @@
         "BuildingName": "防御墙LV2",
         "Describe": "建造在地面上，抵御敌人攻击，血量较高，拥有中等的护甲值，周围建造重组塔将可以让该建筑自动重建",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                119
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 1,
@@ -1091,17 +1173,9 @@
         "BuildingName": "防御墙LV3",
         "Describe": "建造在地面上，抵御敌人攻击，血量极高，拥有较高的护甲值，周围建造重组塔将可以让该建筑自动重建",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                11
-            ],
-            [
-                3,
-                120
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 1,
@@ -1116,82 +1190,102 @@
         "KEY_INDEX": "201101",
         "ObjectId": 201101,
         "BuildingName": "战术地刺LV1",
-        "Describe": "",
-        "Type": 0,
+        "Describe": "无法被攻击到的特殊防御工事，拥有相当高的伤害，但每次攻击后需要消耗大量的时间重新装填，推荐配合城墙使用",
+        "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
-                129
+                1,
+                150
             ]
         ],
         "WeekLength": 0,
         "WeekResources": [],
-        "BuildingSize": 2,
+        "BuildingSize": 1,
         "BuildingRules": [],
         "BuildProgress": 300,
         "AnimaTypeList": [
-            1
+            1,
+            3
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                201101,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "201102",
         "ObjectId": 201102,
         "BuildingName": "战术地刺LV2",
-        "Describe": "",
-        "Type": 0,
+        "Describe": "无法被攻击到的特殊防御工事，拥有相当高的伤害，但每次攻击后需要消耗大量的时间重新装填，推荐配合城墙使用",
+        "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                10
+                1,
+                300
             ],
             [
-                3,
-                130
+                2,
+                50
             ]
         ],
         "WeekLength": 0,
         "WeekResources": [],
-        "BuildingSize": 2,
+        "BuildingSize": 1,
         "BuildingRules": [],
         "BuildProgress": 300,
         "AnimaTypeList": [
-            1
+            1,
+            3
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                201102,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "201103",
         "ObjectId": 201103,
         "BuildingName": "战术地刺LV3",
-        "Describe": "",
-        "Type": 0,
+        "Describe": "无法被攻击到的特殊防御工事，拥有相当高的伤害，但每次攻击后需要消耗大量的时间重新装填，推荐配合城墙使用",
+        "Type": 1,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                11
+                1,
+                500
             ],
             [
-                3,
-                131
+                2,
+                100
             ]
         ],
         "WeekLength": 0,
         "WeekResources": [],
-        "BuildingSize": 2,
+        "BuildingSize": 1,
         "BuildingRules": [],
         "BuildProgress": 300,
         "AnimaTypeList": [
-            1
+            1,
+            3
         ],
-        "WeaponList": []
+        "WeaponList": [
+            [
+                201103,
+                0,
+                0
+            ]
+        ]
     },
     {
         "KEY_INDEX": "300001",
@@ -1199,15 +1293,12 @@
         "BuildingName": "布局节点LV1",
         "Describe": "价格低廉的布局节点，在该节点范围内可以建造建筑，提供50%的建造速度，范围内的建造速度取最大值，被摧毁后需要重新消耗资源建造，升级可以提高建筑的建造速度",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
         "Price": [
             [
-                2,
-                19
-            ],
-            [
-                3,
-                130
+                1,
+                300
             ]
         ],
         "WeekLength": 0,
@@ -1226,17 +1317,9 @@
         "BuildingName": "布局节点LV2",
         "Describe": "血量大量提升，并快速回血，启用复活协议，被摧毁后，将会自行开始重建，提供75%的建造速度，范围内的建造速度取最大值，升级将会埋入地中，不被敌对单位攻击",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                131
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 2,
@@ -1253,98 +1336,9 @@
         "BuildingName": "布局节点LV3",
         "Describe": "启用埋地协议，将布局节点埋入地下，不会再成为敌人的攻击目标，提供100%的建造速度，范围内的建造速度取最大值",
         "Type": 0,
+        "SubType": 0,
         "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                11
-            ],
-            [
-                3,
-                132
-            ]
-        ],
-        "WeekLength": 0,
-        "WeekResources": [],
-        "BuildingSize": 2,
-        "BuildingRules": [],
-        "BuildProgress": 300,
-        "AnimaTypeList": [
-            1
-        ],
-        "WeaponList": []
-    },
-    {
-        "KEY_INDEX": "300201",
-        "ObjectId": 300201,
-        "BuildingName": "治疗工程塔LV1",
-        "Describe": "发射修理光束，维修周围受损的建筑，升级可以提供一个周期性的范围修复",
-        "Type": 1,
-        "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                19
-            ],
-            [
-                3,
-                132
-            ]
-        ],
-        "WeekLength": 0,
-        "WeekResources": [],
-        "BuildingSize": 2,
-        "BuildingRules": [],
-        "BuildProgress": 300,
-        "AnimaTypeList": [
-            1
-        ],
-        "WeaponList": []
-    },
-    {
-        "KEY_INDEX": "300202",
-        "ObjectId": 300202,
-        "BuildingName": "治疗工程塔LV2",
-        "Describe": "发射修理光束，维修周围受损的建筑，提供一个周期性的范围修复，升级可以埋入地下，不会再成为敌人的攻击目标",
-        "Type": 1,
-        "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                10
-            ],
-            [
-                3,
-                133
-            ]
-        ],
-        "WeekLength": 0,
-        "WeekResources": [],
-        "BuildingSize": 2,
-        "BuildingRules": [],
-        "BuildProgress": 300,
-        "AnimaTypeList": [
-            1
-        ],
-        "WeaponList": []
-    },
-    {
-        "KEY_INDEX": "300203",
-        "ObjectId": 300203,
-        "BuildingName": "治疗工程塔LV3",
-        "Describe": "发射修理光束，维修周围受损的建筑，提供一个周期性的范围修复，不会再成为敌人的攻击目标",
-        "Type": 1,
-        "DefaultCamp": 1,
-        "Price": [
-            [
-                2,
-                11
-            ],
-            [
-                3,
-                134
-            ]
-        ],
+        "Price": [],
         "WeekLength": 0,
         "WeekResources": [],
         "BuildingSize": 2,
@@ -1360,23 +1354,258 @@
         "ObjectId": 400001,
         "BuildingName": "核心节点",
         "Describe": "主要的节点，一台巨型的能量提取站和信号基站，可以生产资源，玩家需要竭尽全力保护其不被破坏，无法被其他建筑修复结构值",
-        "Type": 1,
+        "Type": 0,
+        "SubType": 2,
         "DefaultCamp": 1,
         "Price": [
             [
+                1,
+                0
+            ],
+            [
                 2,
+                0
+            ]
+        ],
+        "WeekLength": 5,
+        "WeekResources": [
+            [
+                1,
+                50
+            ]
+        ],
+        "BuildingSize": 4,
+        "BuildingRules": [],
+        "BuildProgress": 300,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": []
+    },
+    {
+        "KEY_INDEX": "400002",
+        "ObjectId": 400002,
+        "BuildingName": "核心节点",
+        "Describe": "主要的节点，一台巨型的能量提取站和信号基站，可以生产资源，玩家需要竭尽全力保护其不被破坏，无法被其他建筑修复结构值",
+        "Type": 0,
+        "SubType": 2,
+        "DefaultCamp": 1,
+        "Price": [
+            [
+                1,
+                0
+            ],
+            [
+                2,
+                0
+            ]
+        ],
+        "WeekLength": 5,
+        "WeekResources": [
+            [
+                1,
+                100
+            ]
+        ],
+        "BuildingSize": 4,
+        "BuildingRules": [],
+        "BuildProgress": 300,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": []
+    },
+    {
+        "KEY_INDEX": "600001",
+        "ObjectId": 600001,
+        "BuildingName": "水晶研究站",
+        "Describe": "中立建筑，地图装饰",
+        "Type": 0,
+        "SubType": 0,
+        "DefaultCamp": 0,
+        "Price": [
+            [
+                1,
                 9999
             ],
             [
-                3,
+                2,
                 9999
             ]
         ],
         "WeekLength": 0,
         "WeekResources": [],
-        "BuildingSize": 4,
+        "BuildingSize": 10,
         "BuildingRules": [],
-        "BuildProgress": 300,
+        "BuildProgress": 999,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": []
+    },
+    {
+        "KEY_INDEX": "600101",
+        "ObjectId": 600101,
+        "BuildingName": "大型激光钻头左",
+        "Describe": "中立建筑，地图装饰",
+        "Type": 0,
+        "SubType": 0,
+        "DefaultCamp": 0,
+        "Price": [
+            [
+                1,
+                9999
+            ],
+            [
+                2,
+                9999
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 3,
+        "BuildingRules": [],
+        "BuildProgress": 999,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": []
+    },
+    {
+        "KEY_INDEX": "600102",
+        "ObjectId": 600102,
+        "BuildingName": "大型激光钻头右",
+        "Describe": "中立建筑，地图装饰",
+        "Type": 0,
+        "SubType": 0,
+        "DefaultCamp": 0,
+        "Price": [
+            [
+                1,
+                9999
+            ],
+            [
+                2,
+                9999
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 3,
+        "BuildingRules": [],
+        "BuildProgress": 999,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": []
+    },
+    {
+        "KEY_INDEX": "600201",
+        "ObjectId": 600201,
+        "BuildingName": "大型次元传送基站1",
+        "Describe": "中立建筑，地图装饰",
+        "Type": 0,
+        "SubType": 0,
+        "DefaultCamp": 0,
+        "Price": [
+            [
+                1,
+                9999
+            ],
+            [
+                2,
+                9999
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 3,
+        "BuildingRules": [],
+        "BuildProgress": 999,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": []
+    },
+    {
+        "KEY_INDEX": "600202",
+        "ObjectId": 600202,
+        "BuildingName": "大型次元传送基站2",
+        "Describe": "中立建筑，地图装饰",
+        "Type": 0,
+        "SubType": 0,
+        "DefaultCamp": 0,
+        "Price": [
+            [
+                1,
+                9999
+            ],
+            [
+                2,
+                9999
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 3,
+        "BuildingRules": [],
+        "BuildProgress": 999,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": []
+    },
+    {
+        "KEY_INDEX": "600203",
+        "ObjectId": 600203,
+        "BuildingName": "大型次元传送基站3",
+        "Describe": "中立建筑，地图装饰",
+        "Type": 0,
+        "SubType": 0,
+        "DefaultCamp": 0,
+        "Price": [
+            [
+                1,
+                9999
+            ],
+            [
+                2,
+                9999
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 3,
+        "BuildingRules": [],
+        "BuildProgress": 999,
+        "AnimaTypeList": [
+            1
+        ],
+        "WeaponList": []
+    },
+    {
+        "KEY_INDEX": "600204",
+        "ObjectId": 600204,
+        "BuildingName": "大型次元传送基站4",
+        "Describe": "中立建筑，地图装饰",
+        "Type": 0,
+        "SubType": 0,
+        "DefaultCamp": 0,
+        "Price": [
+            [
+                1,
+                9999
+            ],
+            [
+                2,
+                9999
+            ]
+        ],
+        "WeekLength": 0,
+        "WeekResources": [],
+        "BuildingSize": 3,
+        "BuildingRules": [],
+        "BuildProgress": 999,
         "AnimaTypeList": [
             1
         ],

@@ -14,7 +14,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public void InitData()
         {
-             
+            Logic = PathConstant.GetPathUser(PathConstant.BULLET_LOGIC_PATH_USER) + Logic;
         }
 
         /// <summary>
@@ -22,8 +22,6 @@ namespace Remnant_Afterglow
         /// </summary>        
         public void InitData2()
         {
-            BulletScene bulletScene = ConfigCache.GetBulletScene(SceneType);
-            ScenePath = bulletScene.ScenePath;
         }
     }
 }

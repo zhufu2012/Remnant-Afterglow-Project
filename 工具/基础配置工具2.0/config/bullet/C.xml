@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+
+<bulletml type="horizontal"
+          xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+
+  <action label="top">
+    <fire>
+      <!-- 随机方向发射 -->
+      <direction>$rand*6 -3</direction>
+      <!-- 引用修改后的子弹模板 -->
+      <bulletRef label="fastBullet"/>
+    </fire>
+  </action>
+
+  <bullet label="fastBullet">
+    <!-- 初始高速 -->
+    <speed>8</speed>
+    <action>
+      <!-- 第一阶段：1秒内持续减速 -->
+      <changeSpeed>
+        <speed>1</speed>  <!-- 目标减速到4速度 -->
+        <term>60</term>  <!-- 耗时60帧（1秒） -->
+      </changeSpeed>
+	  
+	  <changeSpeed>
+        <speed>1</speed>  <!-- 目标减速到4速度 -->
+        <term>20</term>  <!-- 耗时60帧（1秒） -->
+      </changeSpeed>
+      <changeSpeed>
+        <speed>2</speed> <!-- 最终目标速度 -->
+        <term>60</term>   <!-- 用0.75秒加速到10 -->
+      </changeSpeed>
+	  <changeSpeed>
+        <speed>4</speed> <!-- 最终目标速度 -->
+        <term>60</term>   <!-- 用0.75秒加速到10 -->
+      </changeSpeed>
+      <!-- 第二阶段：1秒后开始加速 -->
+      <changeSpeed>
+        <speed>8</speed> <!-- 最终目标速度 -->
+        <term>60</term>   <!-- 用0.75秒加速到10 -->
+      </changeSpeed>
+    </action>
+  </bullet>
+
+</bulletml>

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://62a4bwc1cmxk"]
 
-[ext_resource type="Script" path="res://Test/UnitTest/build/TowerTest.cs" id="1_0l41q"]
+[ext_resource type="Script" uid="uid://cmjlm27ahkdf6" path="res://Test/UnitTest/build/TowerTest.cs" id="1_0l41q"]
 [ext_resource type="Texture2D" uid="uid://ca4gjg7e2sye2" path="res://Test/UnitTest/img/炮塔地基.png" id="1_pi1jy"]
 [ext_resource type="Texture2D" uid="uid://5i7qqjs3wh66" path="res://Test/UnitTest/img/射击塔.png" id="2_l53bj"]
 [ext_resource type="Texture2D" uid="uid://c1w4wug17ub4c" path="res://Test/UnitTest/img/攻击圈.png" id="4_stdn1"]
@@ -71,9 +71,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7uiri"]
 _data = {
-"RESET": SubResource("Animation_21r5j"),
-"开火": SubResource("Animation_s3h01"),
-"静默": SubResource("Animation_8n1m0")
+&"RESET": SubResource("Animation_21r5j"),
+&"开火": SubResource("Animation_s3h01"),
+&"静默": SubResource("Animation_8n1m0")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b0we8"]
@@ -103,7 +103,7 @@ sprite_frames = SubResource("SpriteFrames_o50rv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_7uiri")
+&"": SubResource("AnimationLibrary_7uiri")
 }
 autoplay = "RESET"
 

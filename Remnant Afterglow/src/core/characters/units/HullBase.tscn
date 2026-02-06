@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp8fop05yf7s7"]
+
+[ext_resource type="Script" uid="uid://c4s2jpvjoawcg" path="res://src/core/characters/units/HullBase.cs" id="1_q0jrm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cugj0"]
+resource_local_to_scene = true
+radius = 14.3178
+
+[node name="HullBase" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+input_pickable = false
+monitorable = false
+script = ExtResource("1_q0jrm")
+
+[node name="AttackShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cugj0")
+debug_color = Color(0, 0.595, 0.7, 0)
+
+[node name="hullSprite" type="Sprite2D" parent="."]

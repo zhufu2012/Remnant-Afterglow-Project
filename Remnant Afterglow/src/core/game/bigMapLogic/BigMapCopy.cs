@@ -7,7 +7,7 @@ namespace Remnant_Afterglow
 	/// <summary>
 	/// 大地图上
 	/// </summary>
-	public partial class BigMapCopy : Node2D
+	public partial class BigMapCopy : Control
 	{
 
 		/// <summary>
@@ -18,11 +18,11 @@ namespace Remnant_Afterglow
 		/// <summary>
 		/// 地图绘制节点
 		/// </summary>
-		public BigMapDraw bigMapDraw;
+		public BigTileMap bigMapDraw;
 		/// <summary>
-		/// 大地图碰撞器
+		/// 大地图额外节点
 		/// </summary>
-		public Node2D BigCellList;
+		public Control BigCellList;
 		#endregion
 
 
@@ -75,18 +75,27 @@ namespace Remnant_Afterglow
 			int ChapterId = (int)SceneManager.GetParam("chapter_id");
 			SceneManager.DataClear();
 			chapterBase = ConfigCache.GetChapterBase("" + ChapterId);
-			BigCellList = GetNode<Node2D>("BigCellList");
+			BigCellList = GetNode<Control>("BigCellList");
+
 
 			//设置对应坐标的章节战役关卡数据
-			List<Dictionary<string, object>> list = ConfigLoadSystem.QueryCfgAllLine(ConfigConstant.Config_ChapterCopyBase, new Dictionary<string, object> { { "ChapterId", ChapterId } });
+			List<Dictionary<string, object>> list = ConfigLoadSystem.QueryCfgAllLine(ConfigConstant.Config_ChapterCopyBase,
+				new Dictionary<string, object> { { "ChapterId", ChapterId } });//对应章节的所有关卡数据
 			for (int i = 0; i < list.Count; i++)
 			{
 				ChapterCopyBase chapterCopy = ConfigCache.GetChapterCopyBase("" + ChapterId + "_" + (int)list[i]["CopyId"]);
 				copyBaseDict[chapterCopy.Pos] = chapterCopy;
 			}
 			gameCamera = GetNode<BigMapCamera>("gameCamera");//初始化游戏相机
-			gameCamera.InitData(chapterBase.CameraId);
-            MapOpManager.Instance.SetOpView(OpViewType.BigMap_OpView);
+			gameCamera.InitData(chapterBase.CameraId);//游戏相机初始化
+			MapOpManager.Instance.SetOpView(OpViewType.BigMap_OpView);
+			// 窗口管理器数据
+			Dictionary<string, object> initialData = new Dictionary<string, object>
+			{
+				{ "chapterBase", chapterBase },
+				{ "chapter_id", chapterBase.ChapterId }
+			};
+			WindowManager.Instance.Initialize(initialData);//窗口管理器初始化
 		}
 
 		/// <summary>
@@ -94,9 +103,16 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public void InitMapCfg()
 		{
-			bigMapDraw = new BigMapDraw(ChapterId, new Vector2(0,0));
+			bigMapDraw = new BigTileMap(ChapterId, chapterBase, new Vector2(0, 0));
 			AddChild(bigMapDraw);
 		}
 
+		/// <summary>
+		/// 检查该坐标是否为副本
+		/// </summary>
+		public static bool IsCopy(Vector2I pos)
+		{
+			return Instance.copyBaseDict.ContainsKey(pos);
+		}
 	}
 }

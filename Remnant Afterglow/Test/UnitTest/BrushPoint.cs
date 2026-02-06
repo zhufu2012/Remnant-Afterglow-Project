@@ -10,8 +10,6 @@ namespace Project_Core_Test
     /// </summary>
     public class BrushPoint
     {
-        public long uid = 0;//祝福注释 实体uid  唯一
-
         //刷新点id 配置
         public int brush_id = 0;
 
@@ -69,10 +67,10 @@ namespace Project_Core_Test
             Brush_Type_Name = (string)dict["Brush_Type_Name"];
             Brush_Describe = (string)dict["Brush_Describe"];
             FirstWaveTime = (float)dict["FirstWaveTime"];
-            List<int> wavelist = (List<int>)dict["WaveList"];
             Shape_Select = (int)dict["Shape_Select"];
             PolygonList = (List<Vector2>)dict["Polygon"];
             Radius = (float)dict["Radius"];
+            List<int> wavelist = (List<int>)dict["WaveList"];
             foreach (int i in wavelist)
             {
                 WaveList.Add(new Wave(i));
@@ -196,7 +194,6 @@ namespace Project_Core_Test
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"UID: {uid}");
             sb.AppendLine($"Brush ID: {brush_id}");
             sb.AppendLine($"Position: {Pos}");
             sb.AppendLine($"Brush Type Name: {Brush_Type_Name}");

@@ -22,34 +22,48 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 获取对应实体类型的盟友列表
+        /// 炮塔，建筑获取阵营的敌对阵营的层级
         /// </summary>
-        /// <returns></returns>
-        public List<int> GetAllyList()
+        public static uint GetCampLayer()
         {
-            return AllyList;
+            switch (SaveLoadSystem.NowSaveData.Camp)
+            {
+                case 1:
+                    return Common.CalculateMaskSum([2, 3, 4]);
+                case 2:
+                    return Common.CalculateMaskSum([1, 3, 4]);
+                case 3:
+                    return Common.CalculateMaskSum([1, 2, 4]);
+                case 4:
+                    return Common.CalculateMaskSum([1, 2, 3]);
+                default:
+                    return Common.CalculateMaskSum([1, 2, 3, 4]);
+            }
+
         }
 
         /// <summary>
-        /// 获取对应实体类型的中立列表
+        /// 单位获取阵营的敌对阵营的层级
         /// </summary>
+        /// <param name="camp"></param>
         /// <returns></returns>
-        public List<int> GetNeutralList()
+        public static uint GetCampLayer(int camp)
         {
-            return NeutralList;
+            switch (camp)
+            {
+                case 1:
+                    return Common.CalculateMaskSum([2, 3, 4]);
+                case 2:
+                    return Common.CalculateMaskSum([1, 3, 4]);
+                case 3:
+                    return Common.CalculateMaskSum([1, 2, 4]);
+                case 4:
+                    return Common.CalculateMaskSum([1, 2, 3]);
+                default:
+                    return Common.CalculateMaskSum([1, 2, 3, 4]);
+            }
+
         }
-
-
-        /// <summary>
-        /// 获取敌对组列表
-        /// </summary>
-        /// <returns>一个包含对应类型的 所有敌对阵营的组名的列表</returns>
-        public List<int> GetHostileList()
-        {
-            return HostileList;
-        }
-
-
 
     }
 }

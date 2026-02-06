@@ -1,12 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0t7tvopyv65j"]
 
-[ext_resource type="Script" path="res://src/core/game/mapLogic/MapCopy.cs" id="1_qpqno"]
+[ext_resource type="Script" uid="uid://c4215njrkelel" path="res://src/core/game/mapLogic/MapCopy.cs" id="1_qpqno"]
 [ext_resource type="PackedScene" uid="uid://bevqotgqxvek5" path="res://src/core/game/mapLogic/MapCamera.tscn" id="2_w460h"]
 [ext_resource type="PackedScene" uid="uid://cliketrhctb6f" path="res://src/core/map/FixedTileMap.tscn" id="3_5sx8p"]
 
-[node name="MapCopy" type="Node2D"]
+[node name="MapCopy" type="Node2D" node_paths=PackedStringArray("DrawNode", "UnitNode", "TowerNode", "BuildNode", "WorkerNode", "BulletNode", "gameCamera", "fixedTileMap")]
 process_mode = 1
 script = ExtResource("1_qpqno")
+DrawNode = NodePath("DrawList")
+UnitNode = NodePath("UnitList")
+TowerNode = NodePath("TowerList")
+BuildNode = NodePath("BuildList")
+WorkerNode = NodePath("WorkerList")
+BulletNode = NodePath("BulletList")
+gameCamera = NodePath("gameCamera")
+fixedTileMap = NodePath("FixedTileMap")
 IsShowFlow = true
 
 [node name="gameCamera" parent="." instance=ExtResource("2_w460h")]

@@ -1,7 +1,8 @@
 using GameLog;
 using Godot;
 
-namespace Remnant_Afterglow{
+namespace Remnant_Afterglow
+{
     /// <summary>
     /// 移动状态
     /// </summary>
@@ -14,10 +15,17 @@ namespace Remnant_Afterglow{
             this.stateMachine = stateMachine;
         }
 
+        /// <summary>
+        /// 进入移动状态时的操作
+        /// </summary>
+        /// <param name="stateMachine"></param>
         public void Enter(StateMachine stateMachine)
         {
-            stateMachine.baseObject.PlayAnima(ObjectStateNames.Move);//播放移动代码
-            // 进入移动状态时的操作
+            if (stateMachine.baseObject.object_type == BaseObjectType.BaseUnit)
+            {
+                UnitBase unitBase = stateMachine.baseObject as UnitBase;
+                unitBase.PlayAnima(ObjectStateNames.Move);
+            }
         }
 
         public void Exit()

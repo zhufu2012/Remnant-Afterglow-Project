@@ -1,13 +1,257 @@
-[gd_scene load_steps=2 format=3 uid="uid://bevqotgqxvek5"]
+[gd_scene load_steps=6 format=3 uid="uid://bevqotgqxvek5"]
 
-[ext_resource type="Script" path="res://src/core/game/mapLogic/MapCamera.cs" id="1_c0kao"]
+[ext_resource type="Script" uid="uid://h7ygxvq1dcpm" path="res://src/core/game/mapLogic/MapCamera.cs" id="1_c0kao"]
+[ext_resource type="Texture2D" uid="uid://2mmrw2li1wo1" path="res://assets/作战界面素材/大背景面板1.png" id="2_kbyjx"]
+
+[sub_resource type="Animation" id="Animation_508o3"]
+resource_name = "new_animation"
+length = 0.8
+loop_mode = 1
+step = 0.25
+
+[sub_resource type="Animation" id="Animation_xp25m"]
+resource_name = "大背景动画"
+length = 5.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(0.143587, 0.143587),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.66, 0.66)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(0.784582, 0.784582),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../NinePatchRect2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0.25, 3.75),
+"transitions": PackedFloat32Array(0.143587, 0.143587),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.66, 0.66)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../NinePatchRect3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 4),
+"transitions": PackedFloat32Array(0.143587, 0.143587),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.66, 0.66)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../NinePatchRect4:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = false
+tracks/4/keys = {
+"times": PackedFloat32Array(0.75, 4.25),
+"transitions": PackedFloat32Array(0.143587, 0.143587),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.66, 0.66)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../NinePatchRect5:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = false
+tracks/5/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(0.143587, 0.143587),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.66, 0.66)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../NinePatchRect2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = false
+tracks/6/keys = {
+"times": PackedFloat32Array(0.25, 3.75),
+"transitions": PackedFloat32Array(0.784582, 0.784582),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../NinePatchRect3:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = false
+tracks/7/keys = {
+"times": PackedFloat32Array(0.5, 4),
+"transitions": PackedFloat32Array(0.784582, 0.784582),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../NinePatchRect4:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = false
+tracks/8/keys = {
+"times": PackedFloat32Array(0.75, 4.25),
+"transitions": PackedFloat32Array(0.784582, 0.784582),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../NinePatchRect5:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = false
+tracks/9/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(0.784582, 0.784582),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lsjxf"]
+_data = {
+&"new_animation": SubResource("Animation_508o3"),
+&"大背景动画": SubResource("Animation_xp25m")
+}
 
 [node name="MapCamera" type="Camera2D"]
+position = Vector2(960, 540)
 script = ExtResource("1_c0kao")
+zoom_max_limit = 3.0
 camera_speed = 800
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="frame_number_label" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 99.0
+offset_top = 80.0
+offset_right = 218.0
+offset_bottom = 115.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="需要置于地图下方" type="Control" parent="CanvasLayer2"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(4, 4)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/需要置于地图下方"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = -119.507
+offset_top = -68.8131
+offset_right = 608.493
+offset_bottom = 341.187
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(351.564, 202.093)
+texture = ExtResource("2_kbyjx")
+region_rect = Rect2(0, 0, 5, 5)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer2/需要置于地图下方"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = -119.507
+offset_top = -68.8131
+offset_right = 608.493
+offset_bottom = 341.187
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(351.564, 202.093)
+texture = ExtResource("2_kbyjx")
+region_rect = Rect2(0, 0, 5, 5)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="CanvasLayer2/需要置于地图下方"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = -119.507
+offset_top = -68.8131
+offset_right = 608.493
+offset_bottom = 341.187
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(351.564, 202.093)
+texture = ExtResource("2_kbyjx")
+region_rect = Rect2(0, 0, 5, 5)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="CanvasLayer2/需要置于地图下方"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = -119.507
+offset_top = -68.8131
+offset_right = 608.493
+offset_bottom = 341.187
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(351.564, 202.093)
+texture = ExtResource("2_kbyjx")
+region_rect = Rect2(0, 0, 5, 5)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="CanvasLayer2/需要置于地图下方"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = -119.507
+offset_top = -68.8131
+offset_right = 608.493
+offset_bottom = 341.187
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(351.564, 202.093)
+texture = ExtResource("2_kbyjx")
+region_rect = Rect2(0, 0, 5, 5)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer2/需要置于地图下方"]
+root_node = NodePath("../NinePatchRect")
+libraries = {
+&"": SubResource("AnimationLibrary_lsjxf")
+}
+autoplay = "大背景动画"

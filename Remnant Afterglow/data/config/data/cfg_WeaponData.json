@@ -34,6 +34,57 @@
         ]
     },
     {
+        "KEY_INDEX": "201",
+        "WeaponId": 201,
+        "Name": "收解台",
+        "Describe": "收解台",
+        "Type": 2,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "202",
+        "WeaponId": 202,
+        "Name": "收解台",
+        "Describe": "收解台",
+        "Type": 2,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "203",
+        "WeaponId": 203,
+        "Name": "收解台",
+        "Describe": "收解台",
+        "Type": 2,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
         "KEY_INDEX": "100001",
         "WeaponId": 100001,
         "Name": "射击塔LV1",
@@ -47,13 +98,87 @@
             255
         ],
         "AnimaTypeList": [
-            1
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100002",
+        "WeaponId": 100002,
+        "Name": "射击塔LV2",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100003",
+        "WeaponId": 100003,
+        "Name": "射击塔LV3",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
         ]
     },
     {
         "KEY_INDEX": "101001",
         "WeaponId": 101001,
-        "Name": "射空塔",
+        "Name": "射空塔1",
+        "Describe": "",
+        "Type": 2,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "101002",
+        "WeaponId": 101002,
+        "Name": "射空塔2",
+        "Describe": "",
+        "Type": 2,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "101003",
+        "WeaponId": 101003,
+        "Name": "射空塔3",
         "Describe": "",
         "Type": 2,
         "Ballistc": 0,
@@ -70,8 +195,428 @@
     {
         "KEY_INDEX": "100901",
         "WeaponId": 100901,
-        "Name": "迫击炮塔",
+        "Name": "迫击炮塔1",
         "Describe": "",
+        "Type": 1,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100902",
+        "WeaponId": 100902,
+        "Name": "迫击炮塔2",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100903",
+        "WeaponId": 100903,
+        "Name": "迫击炮塔3",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100501",
+        "WeaponId": 100501,
+        "Name": "光子塔1",
+        "Describe": "",
+        "Type": 2,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100502",
+        "WeaponId": 100502,
+        "Name": "光子塔2",
+        "Describe": "",
+        "Type": 2,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100503",
+        "WeaponId": 100503,
+        "Name": "光子塔3",
+        "Describe": "",
+        "Type": 2,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100301",
+        "WeaponId": 100301,
+        "Name": "机枪塔1",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100302",
+        "WeaponId": 100302,
+        "Name": "机枪塔2",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100303",
+        "WeaponId": 100303,
+        "Name": "机枪塔3",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "100401",
+        "WeaponId": 100401,
+        "Name": "镇压塔",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "101201",
+        "WeaponId": 101201,
+        "Name": "无人机导弹塔1",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "101202",
+        "WeaponId": 101202,
+        "Name": "无人机导弹塔2",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "101203",
+        "WeaponId": 101203,
+        "Name": "无人机导弹塔3",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "101101",
+        "WeaponId": 101101,
+        "Name": "喷火塔1",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "101102",
+        "WeaponId": 101102,
+        "Name": "喷火塔2",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "101103",
+        "WeaponId": 101103,
+        "Name": "喷火塔3",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "100201",
+        "WeaponId": 100201,
+        "Name": "散弹塔LV1",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "100202",
+        "WeaponId": 100202,
+        "Name": "散弹塔LV2",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "100203",
+        "WeaponId": 100203,
+        "Name": "散弹塔LV3",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "100101",
+        "WeaponId": 100101,
+        "Name": "破甲塔LV1",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "100102",
+        "WeaponId": 100102,
+        "Name": "破甲塔LV2",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "100103",
+        "WeaponId": 100103,
+        "Name": "破甲塔LV3",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "102101",
+        "WeaponId": 102101,
+        "Name": "集数投射塔",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "201101",
+        "WeaponId": 201101,
+        "Name": "战术地刺LV1",
+        "Describe": "无法被攻击到的特殊防御工事，拥有相当高的伤害，但每次攻击后需要消耗大量的时间重新装填，推荐配合城墙使用",
         "Type": 1,
         "Ballistc": 0,
         "ShowRange": true,
@@ -85,11 +630,45 @@
         ]
     },
     {
-        "KEY_INDEX": "100501",
-        "WeaponId": 100501,
-        "Name": "光子塔",
+        "KEY_INDEX": "201102",
+        "WeaponId": 201102,
+        "Name": "战术地刺LV2",
+        "Describe": "无法被攻击到的特殊防御工事，拥有相当高的伤害，但每次攻击后需要消耗大量的时间重新装填，推荐配合城墙使用",
+        "Type": 1,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "201103",
+        "WeaponId": 201103,
+        "Name": "战术地刺LV3",
+        "Describe": "无法被攻击到的特殊防御工事，拥有相当高的伤害，但每次攻击后需要消耗大量的时间重新装填，推荐配合城墙使用",
+        "Type": 1,
+        "Ballistc": 0,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "7001",
+        "WeaponId": 7001,
+        "Name": "装甲人形",
         "Describe": "",
-        "Type": 2,
+        "Type": 1,
         "Ballistc": 1,
         "ShowRange": true,
         "RangeColor": [
@@ -102,9 +681,374 @@
         ]
     },
     {
-        "KEY_INDEX": "100301",
-        "WeaponId": 100301,
-        "Name": "机枪塔",
+        "KEY_INDEX": "7002",
+        "WeaponId": 7002,
+        "Name": "自爆人形",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "7003",
+        "WeaponId": 7003,
+        "Name": "好战者",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "7006",
+        "WeaponId": 7006,
+        "Name": "翻越者",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "7009",
+        "WeaponId": 7009,
+        "Name": "刺击者",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "7010",
+        "WeaponId": 7010,
+        "Name": "胶囊",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "8005",
+        "WeaponId": 8005,
+        "Name": "速射战车",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "8006",
+        "WeaponId": 8006,
+        "Name": "臼炮战车",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "8001",
+        "WeaponId": 8001,
+        "Name": "作战人形",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "8002",
+        "WeaponId": 8002,
+        "Name": "射手人形",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "8003",
+        "WeaponId": 8003,
+        "Name": "枪手",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "8004",
+        "WeaponId": 8004,
+        "Name": "等离子",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "80071",
+        "WeaponId": 80071,
+        "Name": "小型速射炮",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "80072",
+        "WeaponId": 80072,
+        "Name": "标准脉冲激光炮",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "9001",
+        "WeaponId": 9001,
+        "Name": "冲击钻头",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "9002",
+        "WeaponId": 9002,
+        "Name": "推土机",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "10003",
+        "WeaponId": 10003,
+        "Name": "侦测者",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "10004",
+        "WeaponId": 10004,
+        "Name": "加固侦测者",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "10005",
+        "WeaponId": 10005,
+        "Name": "干扰侦测者",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "10006",
+        "WeaponId": 10006,
+        "Name": "导弹攻坚者",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "10008",
+        "WeaponId": 10008,
+        "Name": "小型炮艇",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "10009",
+        "WeaponId": 10009,
+        "Name": "大型炮艇",
+        "Describe": "",
+        "Type": 1,
+        "Ballistc": 1,
+        "ShowRange": true,
+        "RangeColor": [
+            0,
+            250,
+            255
+        ],
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "10019",
+        "WeaponId": 10019,
+        "Name": "旋翼",
         "Describe": "",
         "Type": 1,
         "Ballistc": 1,

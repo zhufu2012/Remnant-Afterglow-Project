@@ -1,116 +1,38 @@
 [
     {
-        "KEY_INDEX": "0",
-        "ImageLayerId": 0,
-        "LayerName": "背景",
-        "LayerShowDes": ""
-    },
-    {
         "KEY_INDEX": "1",
         "ImageLayerId": 1,
-        "LayerName": "地板层1",
+        "LayerName": "逻辑",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "2",
         "ImageLayerId": 2,
-        "LayerName": "地板层2",
+        "LayerName": "悬崖",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "3",
         "ImageLayerId": 3,
-        "LayerName": "地板层3",
+        "LayerName": "地板",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "4",
         "ImageLayerId": 4,
-        "LayerName": "缝隙层1",
+        "LayerName": "指示",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "5",
         "ImageLayerId": 5,
-        "LayerName": "缝隙层2",
+        "LayerName": "墙壁",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "6",
         "ImageLayerId": 6,
-        "LayerName": "缝隙层3",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "7",
-        "ImageLayerId": 7,
-        "LayerName": "实体层1",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "8",
-        "ImageLayerId": 8,
-        "LayerName": "实体层2",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "9",
-        "ImageLayerId": 9,
-        "LayerName": "实体层3",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "10",
-        "ImageLayerId": 10,
-        "LayerName": "实体层4",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "11",
-        "ImageLayerId": 11,
-        "LayerName": "实体层5",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "12",
-        "ImageLayerId": 12,
-        "LayerName": "实体层6",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "13",
-        "ImageLayerId": 13,
-        "LayerName": "缝隙层4",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "14",
-        "ImageLayerId": 14,
-        "LayerName": "缝隙层5",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "15",
-        "ImageLayerId": 15,
-        "LayerName": "缝隙层6",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "16",
-        "ImageLayerId": 16,
-        "LayerName": "天空层1",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "17",
-        "ImageLayerId": 17,
-        "LayerName": "天空层2",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "18",
-        "ImageLayerId": 18,
-        "LayerName": "天空层3",
+        "LayerName": "装饰",
         "LayerShowDes": ""
     }
 ]

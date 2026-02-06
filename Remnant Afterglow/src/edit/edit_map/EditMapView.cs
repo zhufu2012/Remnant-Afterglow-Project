@@ -35,15 +35,23 @@ namespace Remnant_Afterglow_EditMap
 
 		public EditCamera2D editCamera2D;
 		/// <summary>
-		/// 材料选择器
-		/// </summary>
-		public GridSelectPanel gridSelectPanel;
-		/// <summary>
-		/// 材料选择器
+		/// 图层选择器
 		/// </summary>
 		public LayerSelectPanel layerSelectPanel;
 
 		public ToolContainer toolContainer;
+		/// <summary>
+		/// 选择器下拉菜单
+		/// </summary>
+		public OptionButton selectOption;
+		/// <summary>
+		/// 材料选择器
+		/// </summary>
+		public GridSelectPanel gridSelectPanel;
+		/// <summary>
+		/// 实体选择器
+		/// </summary>
+		public EntitySelectPanel entitySelectPanel;
 		#endregion
 		/// <summary>
 		/// 地图当前大小
@@ -63,10 +71,6 @@ namespace Remnant_Afterglow_EditMap
 		/// 当前使用的地图数据
 		/// </summary>
 		public MapDrawData nowMapData;
-		/// <summary>
-		/// 地图各层数据
-		/// </summary>
-		public Dictionary<int, Cell[,]> layerData = new Dictionary<int, Cell[,]>();
 
 		/// <summary>
 		/// 实体管理器单例
@@ -84,9 +88,7 @@ namespace Remnant_Afterglow_EditMap
 			nowPath = (string)SceneManager.GetParam("MapDataPath");
 			mapName = (string)SceneManager.GetParam("MapName");
 			SceneManager.DataClear();//清空数据
-			//祝福注释-这里通过路径获取地图数据
-			nowMapData = MapDrawData.GetMapDrawData(nowPath,mapName);
-			layerData = nowMapData.layerData;
+			nowMapData = MapDrawData.GetMapDrawData(nowPath, mapName);
 		}
 
 		/// <summary>
@@ -131,16 +133,35 @@ namespace Remnant_Afterglow_EditMap
 			ReturnButton.ButtonDown += ReturnView;
 			SaveButton = GetNode<Button>("Camera2D/CanvasLayer/SaveButton");
 			SaveButton.ButtonDown += OnSaveButton;
-			editCamera2D  = (EditCamera2D)GetNode<Camera2D>("Camera2D");
-
+			editCamera2D = (EditCamera2D)GetNode<Camera2D>("Camera2D");
 			gridSelectPanel = (GridSelectPanel)GetNode<Control>("Camera2D/CanvasLayer/GridSelectPanel");
 			gridSelectPanel.InitData(1);//作战地图-材料格子初始化
-
-
+			entitySelectPanel = (EntitySelectPanel)GetNode<Control>("Camera2D/CanvasLayer/EntitySelectPanel");
 			layerSelectPanel = (LayerSelectPanel)GetNode<Control>("Camera2D/CanvasLayer/LayerSelectPane");
-
 			toolContainer = (ToolContainer)GetNode<GridContainer>("Camera2D/CanvasLayer/ToolContainer");
+			selectOption = GetNode<OptionButton>("Camera2D/CanvasLayer/selectOption");
+			selectOption.ItemSelected += SelectOption_ItemSelected;
 		}
+
+		/// <summary>
+		/// 修改选择
+		/// </summary>
+		/// <param name="index"></param>
+		/// <exception cref="System.NotImplementedException"></exception>
+		private void SelectOption_ItemSelected(long index)
+		{
+			if (index == 0)
+			{
+				gridSelectPanel.Visible = true;
+				entitySelectPanel.Visible = false;
+			}
+			else
+			{
+				gridSelectPanel.Visible = false;
+				entitySelectPanel.Visible = true;
+			}
+		}
+
 		/// <summary>
 		/// 返回上一个界面
 		/// </summary>
@@ -162,18 +183,18 @@ namespace Remnant_Afterglow_EditMap
 		/// </summary>
 		public void SaveMap()
 		{
-			switch(mapType)
+			switch (mapType)
 			{
 				case EditConstant.MapType://作战地图
 					break;
 				case EditConstant.TempMapType://地图模板
 					break;
-				default: 
+				default:
 					break;
 			}
 
-			nowMapData.SetMapData(layerData);//设置地图图块数据
-			nowMapData.SaveData(nowPath,mapName);
+			nowMapData.SetMapData(tileMap.layerData, tileMap.entityDict);//设置地图图块数据
+			nowMapData.SaveData(nowPath, mapName);
 		}
 
 

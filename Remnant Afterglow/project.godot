@@ -14,9 +14,10 @@ config/name="旧日余晖2"
 config/name_localized={
 "en_EC": "Remnant Afterglow"
 }
-run/main_scene="res://src/core/ui/MainView.tscn"
-config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://assets/主界面素材/失落核心2.png"
+config/tags=PackedStringArray("塔防", "战略塔防", "旧日余晖", "资源管理")
+run/main_scene="uid://ddykw8p37n7ft"
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+config/icon="uid://ihfiob6bxsh6"
 
 [autoload]
 
@@ -27,12 +28,21 @@ ConfigLoadSystem="*res://src/core/autoloads/scene/ConfigLoadSystem.tscn"
 DeveloperTool="*res://src/core/autoloads/scene/DeveloperTool.tscn"
 TemplateCache="*res://src/core/autoloads/scene/TemplateCache.tscn"
 SaveLoadSystem="*res://src/core/autoloads/scene/SaveLoadSystem.tscn"
+IdGenerator="*res://src/core/autoloads/scene/IdGenerator.tscn"
+ConfigPersistenceManager="*res://src/core/autoloads/scene/ConfigPersistenceManager.tscn"
+MapOpManager="*res://src/core/autoloads/MapOpManager.cs"
+SoundManager="*res://src/core/autoloads/scene/SoundManager.tscn"
+SteamManager="*res://autoload/steam_manager.gd"
+"屏幕长宽控制器"="*res://屏幕长宽控制器.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/resizable=false
 window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+window/vsync/vsync_mode=0
 
 [dotnet]
 
@@ -42,26 +52,36 @@ project/assembly_name="Remnant Afterglow Project"
 
 enabled=PackedStringArray()
 
+[global_group]
+
+texture_button_sfx=""
+texture_button_sfx2=""
+
+[gui]
+
+theme/custom_font="uid://12jf16kwhvhq"
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 cam_a={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
 ]
 }
 cam_w={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
 ]
 }
 cam_s={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
 ]
 }
 cam_d={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
 ]
 }
 left_click={
@@ -81,17 +101,12 @@ middle_click={
 }
 mapview_open_noise_editor={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":112,"echo":false,"script":null)
-]
-}
-mapview_drawmap={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":77,"key_label":0,"unicode":109,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":112,"location":0,"echo":false,"script":null)
 ]
 }
 Esc={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 Edit_Brush1={
@@ -104,3 +119,29 @@ Edit_Brush2={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"button_mask":16,"position":Vector2(226, 23),"global_position":Vector2(230, 64),"factor":1.0,"button_index":5,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+
+[physics]
+
+2d/run_on_separate_thread=true
+2d/default_gravity=0.0
+2d/default_gravity_vector=Vector2(0, 0)
+2d/default_linear_damp=0.0
+2d/default_angular_damp=0.0
+2d/solver/contact_max_allowed_penetration=0.4
+2d/solver/default_contact_bias=0.9
+
+[rendering]
+
+rendering_device/staging_buffer/block_size_kb=1024
+rendering_device/staging_buffer/max_size_mb=248
+rendering_device/pipeline_cache/save_chunk_size_mb=6.0
+rendering_device/d3d12/max_sampler_descriptors_per_frame=2048
+rendering_device/d3d12/max_misc_descriptors_per_frame=1024
+textures/canvas_textures/default_texture_filter=0
+viewport/hdr_2d=true
+
+[steam]
+
+initialization/app_id=0
+initialization/initialize_on_startup=false
+initialization/embed_callbacks=false

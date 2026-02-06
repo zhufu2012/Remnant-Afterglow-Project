@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cimgpq4sv75aa"]
 
-[ext_resource type="Script" path="res://src/edit/EditMapCreateView.cs" id="1_msc83"]
-[ext_resource type="Texture2D" uid="uid://h2uwol5hhg18" path="res://src/core/ui/大标题4.png" id="2_wum50"]
+[ext_resource type="Script" uid="uid://b7bs52rm6cu5p" path="res://src/edit/EditMapCreateView.cs" id="1_msc83"]
+[ext_resource type="Texture2D" uid="uid://h2uwol5hhg18" path="res://src/core/ui/img/大标题4.png" id="2_wum50"]
 
 [node name="EditMapCreateView" type="Control"]
 layout_mode = 3

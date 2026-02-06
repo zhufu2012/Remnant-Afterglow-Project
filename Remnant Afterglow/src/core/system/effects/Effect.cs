@@ -6,7 +6,6 @@ namespace Remnant_Afterglow
     /// </summary>
     public class Effect : IEffect
     {
-        public bool IsRecycled { get; set; }
         public string Logotype { get; set; }
 
         public bool IsDestroyed { get; }
@@ -14,10 +13,6 @@ namespace Remnant_Afterglow
         /// 配置id
         /// </summary>
         public int cfg_id { get; set; }
-        /// <summary>
-        /// 对象池id = 对象类型+ _ + cfg_id
-        /// </summary>
-        public string PoolId { get; set; }
 
         /// <summary>
         /// 播放特效

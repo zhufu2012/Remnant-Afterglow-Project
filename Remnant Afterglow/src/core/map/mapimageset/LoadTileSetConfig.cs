@@ -47,23 +47,16 @@ namespace Remnant_Afterglow
             if (Type == 1)//副本地图
             {
                 tileSet.TileShape = TileSet.TileShapeEnum.Square;
-                List<MapPhysicsLayer> PhysicsLayerList = ConfigCache.GetAllMapPhysicsLayer();
-                foreach (MapPhysicsLayer PhysicsLayer in PhysicsLayerList)//设置物理层
-                {
-                    tileSet.AddPhysicsLayer(PhysicsLayer.PhysicsLayerId);
-                }
-                //List<MapNavigate> NavigateLayerList = ConfigCache.GetAllMapNavigate();
-                //foreach (MapNavigate NavigateLayer in NavigateLayerList)//设置导航层
-                //{
-                //    tileSet.AddNavigationLayer(NavigateLayer.NavigateLayerId);
-                //}
                 mapImageSet = new MapImageSet(tileSet, Type, MapConstant.TileCellSize, MapConstant.TileCellSize);//给格子加备选格子，以及加上碰撞层
+
             }
             if (Type == 2)//六边形大地图
             {
                 tileSet.TileShape = TileSet.TileShapeEnum.Hexagon;
                 mapImageSet = new MapImageSet(tileSet, Type, MapConstant.BigCellSizeX, MapConstant.BigCellSizeY);//给格子加备选格子，以及加上碰撞层
             }
+
+
 
         }
 

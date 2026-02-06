@@ -1,91 +1,610 @@
 [
     {
-        "KEY_INDEX": "1",
-        "GroupId": 1,
-        "Name": "小规模敌军1",
-        "Describe": "测试小组1",
-        "ShowDescribe": "测试小组1接近战场",
+        "KEY_INDEX": "7001",
+        "GroupId": 7001,
+        "Name": "装甲人形",
+        "Describe": "小型，近战，物理，拥有装甲，防御力强",
+        "ShowDescribe": "装甲人形",
         "UnitList": [
             [
-                1001,
-                4
-            ],
-            [
-                1002,
-                1
-            ]
-        ],
-        "CountInterval": [
-            2,
-            2
-        ]
-    },
-    {
-        "KEY_INDEX": "2",
-        "GroupId": 2,
-        "Name": "小规模敌军2",
-        "Describe": "测试小组2",
-        "ShowDescribe": "测试小组2接近战场",
-        "UnitList": [
-            [
-                1001,
-                1
-            ]
-        ],
-        "CountInterval": [
-            2,
-            2
-        ]
-    },
-    {
-        "KEY_INDEX": "3",
-        "GroupId": 3,
-        "Name": "中等规模敌军1",
-        "Describe": "测试小组3",
-        "ShowDescribe": "测试小组3接近战场",
-        "UnitList": [],
-        "CountInterval": []
-    },
-    {
-        "KEY_INDEX": "4",
-        "GroupId": 4,
-        "Name": "大批敌军1",
-        "Describe": "测试小组4",
-        "ShowDescribe": "测试小组4接近战场",
-        "UnitList": [],
-        "CountInterval": []
-    },
-    {
-        "KEY_INDEX": "666",
-        "GroupId": 666,
-        "Name": "小规模敌军1",
-        "Describe": "测试小组1",
-        "ShowDescribe": "测试小组1接近战场",
-        "UnitList": [
-            [
-                700001,
-                1
-            ],
-            [
-                700002,
-                1
-            ],
-            [
-                700003,
-                1
-            ],
-            [
-                700004,
-                1
-            ],
-            [
-                700005,
+                7001,
                 1
             ]
         ],
         "CountInterval": [
             1,
             1
-        ]
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "7002",
+        "GroupId": 7002,
+        "Name": "自爆人形",
+        "Describe": "小型，近战，爆炸，靠近目标后会爆炸，产生小范围的爆炸伤害",
+        "ShowDescribe": "自爆人形",
+        "UnitList": [
+            [
+                7002,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "7003",
+        "GroupId": 7003,
+        "Name": "好战者",
+        "Describe": "中型，近战",
+        "ShowDescribe": "好战者",
+        "UnitList": [
+            [
+                7003,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "7006",
+        "GroupId": 7006,
+        "Name": "翻越者",
+        "Describe": "中型，近战",
+        "ShowDescribe": "翻越者",
+        "UnitList": [
+            [
+                7006,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "7009",
+        "GroupId": 7009,
+        "Name": "刺击者",
+        "Describe": "中型，近战",
+        "ShowDescribe": "刺击者",
+        "UnitList": [
+            [
+                7009,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "7010",
+        "GroupId": 7010,
+        "Name": "胶囊",
+        "Describe": "中型，近战，重生",
+        "ShowDescribe": "胶囊",
+        "UnitList": [
+            [
+                7010,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "8001",
+        "GroupId": 8001,
+        "Name": "作战人形",
+        "Describe": "中程",
+        "ShowDescribe": "作战人形",
+        "UnitList": [
+            [
+                8001,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "8002",
+        "GroupId": 8002,
+        "Name": "射手人形",
+        "Describe": "成群结队，远程，物理，装备双枪，会持续射击",
+        "ShowDescribe": "射手人形",
+        "UnitList": [
+            [
+                8002,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "8003",
+        "GroupId": 8003,
+        "Name": "枪手",
+        "Describe": "中型，远程",
+        "ShowDescribe": "枪手",
+        "UnitList": [
+            [
+                8003,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "8004",
+        "GroupId": 8004,
+        "Name": "等离子",
+        "Describe": "极远程,等离子激光",
+        "ShowDescribe": "超远程攻击，是大多数炮塔的梦魇，本体脆弱，可尝试用道具消灭",
+        "UnitList": [
+            [
+                8004,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "8005",
+        "GroupId": 8005,
+        "Name": "速射战车",
+        "Describe": "中小型,速射炮",
+        "ShowDescribe": "轻型机动车辆，装备一门速射炮，可以快速突破防线",
+        "UnitList": [
+            [
+                8005,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "8006",
+        "GroupId": 8006,
+        "Name": "臼炮战车",
+        "Describe": "中小型,火力臼炮",
+        "ShowDescribe": "轻型机动车辆，装备火力臼炮，快速抵达目标周围进行火力输出",
+        "UnitList": [
+            [
+                8006,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "8007",
+        "GroupId": 8007,
+        "Name": "怒火级陆行舰",
+        "Describe": "怒火级陆行舰",
+        "ShowDescribe": "一种来自远古的沙漠陆行舰设计，在沙漠中运输的高效手段，如今上方已经搭载了大量的火力炮塔，随时作战",
+        "UnitList": [
+            [
+                8007,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 50
+    },
+    {
+        "KEY_INDEX": "9001",
+        "GroupId": 9001,
+        "Name": "冲击钻头",
+        "Describe": "中型，攻城",
+        "ShowDescribe": "冲击钻头",
+        "UnitList": [
+            [
+                9001,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "9002",
+        "GroupId": 9002,
+        "Name": "推土机",
+        "Describe": "中型，攻城，护甲",
+        "ShowDescribe": "推土机",
+        "UnitList": [
+            [
+                9002,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "1",
+        "GroupId": 1,
+        "Name": "小型作战军团1号",
+        "Describe": "前期用，小型",
+        "ShowDescribe": "内含少量的装甲人形和较多的作战人形",
+        "UnitList": [
+            [
+                7001,
+                2
+            ],
+            [
+                8001,
+                5
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "2",
+        "GroupId": 2,
+        "Name": "中型测试组",
+        "Describe": "前期用，小型",
+        "ShowDescribe": "好战者，翻越者，刺击者，枪手",
+        "UnitList": [
+            [
+                7003,
+                1
+            ],
+            [
+                7006,
+                1
+            ],
+            [
+                7009,
+                1
+            ],
+            [
+                8003,
+                1
+            ],
+            [
+                8004,
+                1
+            ],
+            [
+                8005,
+                1
+            ],
+            [
+                8006,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "1",
+        "GroupId": 1,
+        "Name": "小型作战军团1号",
+        "Describe": "前期用，小型",
+        "ShowDescribe": "内含少量的装甲人形和较多的作战人形",
+        "UnitList": [
+            [
+                7001,
+                2
+            ],
+            [
+                8001,
+                5
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 2
+    },
+    {
+        "KEY_INDEX": "10001",
+        "GroupId": 10001,
+        "Name": "干扰体",
+        "Describe": "干扰体",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10001,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10003",
+        "GroupId": 10003,
+        "Name": "侦测者",
+        "Describe": "侦测者",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10003,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10004",
+        "GroupId": 10004,
+        "Name": "加固侦测者",
+        "Describe": "加固侦测者",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10004,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10005",
+        "GroupId": 10005,
+        "Name": "干扰侦测者",
+        "Describe": "干扰侦测者",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10005,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10006",
+        "GroupId": 10006,
+        "Name": "导弹攻坚者",
+        "Describe": "导弹攻坚者",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10006,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10007",
+        "GroupId": 10007,
+        "Name": "大型导弹攻坚者",
+        "Describe": "大型导弹攻坚者",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10007,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10008",
+        "GroupId": 10008,
+        "Name": "小型炮艇",
+        "Describe": "小型炮艇",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10008,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10009",
+        "GroupId": 10009,
+        "Name": "大型炮艇",
+        "Describe": "大型炮艇",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10009,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10019",
+        "GroupId": 10019,
+        "Name": "旋翼",
+        "Describe": "旋翼",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10019,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10020",
+        "GroupId": 10020,
+        "Name": "大型旋翼",
+        "Describe": "大型旋翼",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10020,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10023",
+        "GroupId": 10023,
+        "Name": "自毁者",
+        "Describe": "自毁者",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10023,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10024",
+        "GroupId": 10024,
+        "Name": "磁壳自毁者",
+        "Describe": "磁壳自毁者",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10024,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10025",
+        "GroupId": 10025,
+        "Name": "重投轰炸机",
+        "Describe": "重投轰炸机",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10025,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
+    },
+    {
+        "KEY_INDEX": "10031",
+        "GroupId": 10031,
+        "Name": "运输飞艇A型",
+        "Describe": "运输飞艇A型",
+        "ShowDescribe": "",
+        "UnitList": [
+            [
+                10031,
+                1
+            ]
+        ],
+        "CountInterval": [
+            1,
+            1
+        ],
+        "Interval": 10
     }
 ]

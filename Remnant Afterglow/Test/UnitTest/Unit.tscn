@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://he7nk6f17b61"]
 
-[ext_resource type="Script" path="res://Test/UnitTest/Units.cs" id="1_1tisg"]
+[ext_resource type="Script" uid="uid://3bg108h4raqp" path="res://Test/UnitTest/Units.cs" id="1_1tisg"]
 [ext_resource type="Texture2D" uid="uid://ckigp8d0vsnru" path="res://Test/UnitTest/士兵装饰.png" id="1_2816t"]
 [ext_resource type="Texture2D" uid="uid://ca7kq7lumtdhq" path="res://Test/UnitTest/小型作战单元标准六型.png" id="1_miuki"]
 
@@ -39,8 +39,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uef7h"]
 _data = {
-"RESET": SubResource("Animation_xoafb"),
-"移动": SubResource("Animation_jpeyw")
+&"RESET": SubResource("Animation_xoafb"),
+&"移动": SubResource("Animation_jpeyw")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s1e32"]
@@ -68,7 +68,7 @@ texture = ExtResource("1_2816t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_uef7h")
+&"": SubResource("AnimationLibrary_uef7h")
 }
 autoplay = "RESET"
 

@@ -1,6 +1,4 @@
-﻿
-
-using GameLog;
+﻿using GameLog;
 using Godot;
 using System.Collections.Generic;
 
@@ -20,6 +18,9 @@ namespace Remnant_Afterglow
         public ImageNum ImageNum41;
         public ImageNum ImageNum42;
         public BuildList buildOpList;
+
+        // 添加ResourceProgressBar用于显示次元岛溶剂
+        public ResourceProgressBar dimensionSolventBar;
         /// <summary>
         /// 初始化界面
         /// </summary>
@@ -34,6 +35,9 @@ namespace Remnant_Afterglow
             ImageNum31 = GetNode<ImageNum>("顶部资源列表/次元岛溶剂资源数1");
             ImageNum32 = GetNode<ImageNum>("顶部资源列表/次元岛溶剂资源数2");
 
+            // 获取ResourceProgressBar节点
+            dimensionSolventBar = GetNode<ResourceProgressBar>("顶部资源列表/次元岛溶剂进度条");
+
             ImageNum41 = GetNode<ImageNum>("波次列表/当前波次");
             ImageNum42 = GetNode<ImageNum>("波次列表/总波次");
             buildOpList = GetNode<BuildList>("BuildList");
@@ -47,9 +51,18 @@ namespace Remnant_Afterglow
         {
             imageNum11.SetNum(BagSystem.Instance.GetCurrency(MapConstant.MoneyId_1));
             imageNum21.SetNum(BagSystem.Instance.GetCurrency(MapConstant.MoneyId_2));
-            ImageNum31.SetNum(BagSystem.Instance.GetCurrency(MapConstant.MoneyId_3));
+            int dimensionSolventAmount = BagSystem.Instance.GetCurrency(MapConstant.MoneyId_3);
+            ImageNum31.SetNum(dimensionSolventAmount);
+            // 更新ResourceProgressBar显示
+            if (dimensionSolventBar != null)
+            {
+                // 假设最大显示容量为1000，你可以根据需要调整
+                dimensionSolventBar.SetTotalResource(1000);
+                dimensionSolventBar.SetCurrentResource(dimensionSolventAmount);
+            }
             SetAddCurrencyView();
         }
+
 
 
 

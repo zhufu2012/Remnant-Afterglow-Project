@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "KEY_INDEX": "1",
+        "ModifierId": 1,
+        "ExpiryTick": 600,
+        "ParamList": [
+            [
+                1.0,
+                1000.0,
+                2.0
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "2",
+        "ModifierId": 2,
+        "ExpiryTick": 0,
+        "ParamList": [
+            [
+                4.0,
+                1000.0,
+                2.0
+            ]
+        ]
+    }
+]

@@ -7,16 +7,16 @@ namespace Remnant_Afterglow
     public partial class AttrDependency
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 属性依赖id
         /// </summary>
         public int DependencyId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 依赖关系计算核心代码
         ///一个c#表达式
         /// </summary>
         public string Code { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 依赖计算返回值
         ///这是一个表达式
         /// </summary>

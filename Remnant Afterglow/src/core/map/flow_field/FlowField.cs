@@ -30,8 +30,8 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 创建一个位置流场
         /// </summary>
-        /// <param name="targetPos"></param>
-        public FlowField(Vector2I targetPos,int UnitType)
+        /// <param name="targetPos">地图格子位置</param>
+        public FlowField(Vector2I targetPos)
         {
             type = 0;
             this.targetPos = targetPos;
@@ -41,19 +41,6 @@ namespace Remnant_Afterglow
             InitNodeData();
         }
 
-        /// <summary>
-        /// 创建一个实体流场
-        /// </summary>
-        /// <param name="targetObject"></param>
-        public FlowField(BaseObject targetObject)
-        {
-            type = 1;
-            targetPos = targetObject.mapPos;
-            Width = FlowFieldSystem.Instance.Width;
-            Height = FlowFieldSystem.Instance.Height;
-            nodeData = new FlowFieldNode[Width, Height];
-            InitNodeData();
-        }
 
         /// <summary>
         /// 初始化流场数据
@@ -72,7 +59,7 @@ namespace Remnant_Afterglow
         }
 
         /// <summary>
-        /// 处理墙壁等特殊的，可以使得周围8个地块代价增减的地块
+        /// 处理墙壁等特殊的，可以使得周围8个地块代价增减的地块-祝福注释-这里可以优化到上面那个函数的循环里
         /// </summary>
         public void InitCost()
         {
@@ -80,7 +67,7 @@ namespace Remnant_Afterglow
             {
                 for (int j = 0; j < Height; j++)
                 {
-                    if(nodeData[i, j].PassTypeId>0)
+                    if (nodeData[i, j].PassTypeId > 0)
                     {
                         MapPassType passType = FlowFieldSystem.Instance.passDict[nodeData[i, j].MaterialId];
                         if (passType.PassCostAdd != 0)//特殊地块
@@ -113,7 +100,7 @@ namespace Remnant_Afterglow
                     if (!IsValid(x, y))
                     {
                         node.direction = Vector2.Zero;
-                        continue;//祝福注释-这里去掉障碍物 上的矢量，不合适就加回来
+                        continue;//这里去掉障碍物 上的矢量，不合适就加回来
                     }
                     List<FlowFieldNode> neighbourNodes = GetNeighbouringNodes(node);
                     float fCost = node.fCost;
@@ -121,7 +108,6 @@ namespace Remnant_Afterglow
                     for (int i = 0; i < neighbourNodes.Count; i++)
                     {
                         FlowFieldNode neighbourNode = neighbourNodes[i];
-                           
                         if (neighbourNode.fCost < fCost)
                         {
                             temp = neighbourNode;
@@ -144,10 +130,11 @@ namespace Remnant_Afterglow
             }
         }
 
+
+
         /// <summary>
         /// 设置目标节点
         /// </summary>
-        /// <param name="target">目标位置</param>
         public void SetTarget()
         {
             for (int x = 0; x < Width; x++)
@@ -174,7 +161,7 @@ namespace Remnant_Afterglow
                     FlowFieldNode neighbourNode = neighbourNodes[i];
                     if (neighbourNode.cost == int.MaxValue) continue;
                     float scost = CalculateCost(neighbourNode, currentNode);
-                    if(scost==int.MaxValue)
+                    if (scost == int.MaxValue)
                     {
                         neighbourNode.cost = int.MaxValue;
                     }
@@ -229,12 +216,46 @@ namespace Remnant_Afterglow
 
 
         /// <summary>
+        /// 获取指定节点的邻节点
+        /// </summary>
+        /// <param name="centerPos">要获取邻节点的节点</param>
+        /// <returns>邻节点列表</returns>
+        public List<FlowFieldNode> GetNeighbouringNodes(Vector2I centerPos)
+        {
+            List<FlowFieldNode> neighbours = new List<FlowFieldNode>();
+            for (int i = -1; i <= 1; i++)
+            {
+                for (int j = -1; j <= 1; j++)
+                {
+                    if (i == 0 && j == 0) continue;
+                    int x = centerPos.X + i;
+                    int y = centerPos.Y + j;
+
+                    // 跳过越界或不可通行的节点
+                    if (!IsValid(x, y)) continue;
+
+                    // 斜向移动需额外检查相邻节点
+                    if (i != 0 && j != 0)
+                    {
+                        bool horizontalValid = IsValid(centerPos.X + i, centerPos.Y);
+                        bool verticalValid = IsValid(centerPos.X, centerPos.Y + j);
+                        if (!horizontalValid || !verticalValid) continue;
+                    }
+
+                    neighbours.Add(nodeData[x, y]);
+                }
+            }
+            return neighbours;
+        }
+
+
+        /// <summary>
         /// 计算两个节点之间的代价>
         /// </summary>
         /// <param name="node1"></param>
         /// <param name="node2"></param>
         /// <returns></returns>
-        private float CalculateCost(FlowFieldNode node1, FlowFieldNode node2)
+        public float CalculateCost(FlowFieldNode node1, FlowFieldNode node2)
         {
             int deltaX = Mathf.Abs(node1.x - node2.x);
             int deltaY = Mathf.Abs(node1.y - node2.y);
@@ -265,11 +286,21 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 某个格子是否可以使用
         /// </summary>
-        /// <param name="pos"></param>
-        /// <returns></returns>
+        /// <param name="X">位置X</param>
+        /// <param name="Y">位置Y</param>
         public bool IsValid(int X, int Y)
         {
-            return X >= 0 && Y >= 0 && X < Width && Y < Height && nodeData[X,Y].isWalkable;
+            return X >= 0 && Y >= 0 && X < Width && Y < Height && nodeData[X, Y].isWalkable;
+        }
+
+
+        /// <summary>
+        /// 某个格子是否可以使用
+        /// </summary>
+        /// <param name="pos">位置</param>
+        public bool IsValid(Vector2I pos)
+        {
+            return pos.X >= 0 && pos.Y >= 0 && pos.X < Width && pos.Y < Height && nodeData[pos.X, pos.Y].isWalkable;
         }
 
         /// <summary>

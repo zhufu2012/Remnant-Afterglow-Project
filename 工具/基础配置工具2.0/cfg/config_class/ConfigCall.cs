@@ -7,27 +7,27 @@ namespace Remnant_Afterglow
     public partial class ConfigCall
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 调用关系id
         /// </summary>
         public string CallId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 读取子表名称
         /// </summary>
         public string ReadTableName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 调用子表名称
         /// </summary>
         public string CallTableName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 调用关系名称
         /// </summary>
         public string CallName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 调用关系描述
         /// </summary>
         public string CallDescribe { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 调用关系
         /// </summary>
         public List<List<int>> CallCondition1 { get; set; }

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4no5xy4bt2cn"]
+
+[ext_resource type="Script" uid="uid://xvmnp500sdpq" path="res://Test/子弹管理器/BulletManager.cs" id="1_ra6je"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ra6je"]
+radius = 230.17
+
+[node name="BulletManager" type="Node2D"]
+position = Vector2(16, 18)
+script = ExtResource("1_ra6je")
+BulletVelocity = 200
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(353, 285)
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ra6je")

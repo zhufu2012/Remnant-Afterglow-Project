@@ -43,17 +43,20 @@ namespace Remnant_Afterglow_EditMap
         /// 地图各层数据
         /// </summary>
         public Dictionary<int, Cell[,]> layerData = new Dictionary<int, Cell[,]>();
+
+        /// <summary>
+        /// 实体管理器单例
+        /// </summary>
+        public static EditBigMapView Instance { get; set; }
         public override void _Ready()
         {
+            Instance = this;
             mapType = (int)SceneManager.GetParam("MapType");
             nowPath = (string)SceneManager.GetParam("MapDataPath");
             mapName = (string)SceneManager.GetParam("MapName");
             SceneManager.DataClear();//清空数据
-            //祝福注释-这里通过路径获取地图数据
-            nowMapData = MapDrawData.GetMapDrawData(nowPath,mapName);
-
+            nowMapData = MapDrawData.GetMapDrawData(nowPath, mapName);
             layerData = nowMapData.layerData;
-
             LoadMapConfig.InitData();
 
 
@@ -61,6 +64,23 @@ namespace Remnant_Afterglow_EditMap
             InitView();
             InitDrawMap();//初始化绘制地图
         }
+        /// <summary>
+        /// 进入场景树
+        /// </summary>
+        public override void _EnterTree()
+        {
+            LoadMapConfig.InitData();
+        }
+
+        /// <summary>
+        /// 退出场景树
+        /// </summary>
+        public override void _ExitTree()
+        {
+            LoadMapConfig.ClearData();
+            Instance = null;
+        }
+
 
         /// <summary>
         /// 初始化地图配置
@@ -101,11 +121,6 @@ namespace Remnant_Afterglow_EditMap
             }
         }
 
-        public override void _ExitTree()
-        {
-            LoadMapConfig.ClearData();
-        }
-
         /// <summary>
         /// 返回上一个界面
         /// </summary>
@@ -119,9 +134,8 @@ namespace Remnant_Afterglow_EditMap
         /// </summary>
         public void SaveMap()
         {
-            nowMapData.SetMapData(layerData);//设置地图图块数据
-
-            nowMapData.SaveData(nowPath,mapName);
+            nowMapData.SetMapData(layerData, null);//设置地图图块数据
+            nowMapData.SaveData(nowPath, mapName);
         }
 
 

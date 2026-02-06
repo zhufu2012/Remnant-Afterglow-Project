@@ -76,7 +76,7 @@ namespace Remnant_Afterglow
                 {
                     if (IsRemoveAllLayer)//true 计时结束时 buff -1层/  false 层全清空
                     {
-                        timer += Duration;
+                        timer += Duration;//若Duration<=0会死循环
                         ModifyLayer(-1);
                     }
                     else

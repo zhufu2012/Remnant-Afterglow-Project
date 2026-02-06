@@ -1,706 +1,4071 @@
 [
     {
-        "KEY_INDEX": "1001",
-        "ObjectId": 1001,
+        "KEY_INDEX": "7001",
+        "ObjectId": 7001,
         "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            30.0,
+            -15.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "7002",
+        "ObjectId": 7002,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            30.0,
+            -15.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "7003",
+        "ObjectId": 7003,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            30.0,
+            -15.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            45
+        ]
+    },
+    {
+        "KEY_INDEX": "7006",
+        "ObjectId": 7006,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            30.0,
+            -15.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            25
+        ]
+    },
+    {
+        "KEY_INDEX": "7009",
+        "ObjectId": 7009,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            30.0,
+            -15.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            45
+        ]
+    },
+    {
+        "KEY_INDEX": "7010",
+        "ObjectId": 7010,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            30.0,
+            -15.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "8005",
+        "ObjectId": 8005,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -20.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            25
+        ]
+    },
+    {
+        "KEY_INDEX": "8006",
+        "ObjectId": 8006,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -20.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            25
+        ]
+    },
+    {
+        "KEY_INDEX": "8001",
+        "ObjectId": 8001,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -20.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "8002",
+        "ObjectId": 8002,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -20.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "8003",
+        "ObjectId": 8003,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            30.0,
+            -15.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            45
+        ]
+    },
+    {
+        "KEY_INDEX": "8004",
+        "ObjectId": 8004,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -20.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            25
+        ]
+    },
+    {
+        "KEY_INDEX": "8007",
+        "ObjectId": 8007,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -20.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            30
+        ]
+    },
+    {
+        "KEY_INDEX": "9001",
+        "ObjectId": 9001,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            60
+        ]
+    },
+    {
+        "KEY_INDEX": "9002",
+        "ObjectId": 9002,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            13
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            60
+        ]
+    },
+    {
+        "KEY_INDEX": "10001",
+        "ObjectId": 10001,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10003",
+        "ObjectId": 10003,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            25
+        ]
+    },
+    {
+        "KEY_INDEX": "10004",
+        "ObjectId": 10004,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            25
+        ]
+    },
+    {
+        "KEY_INDEX": "10005",
+        "ObjectId": 10005,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            25
+        ]
+    },
+    {
+        "KEY_INDEX": "10006",
+        "ObjectId": 10006,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            25
+        ]
+    },
+    {
+        "KEY_INDEX": "10007",
+        "ObjectId": 10007,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            45
+        ]
+    },
+    {
+        "KEY_INDEX": "10008",
+        "ObjectId": 10008,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10009",
+        "ObjectId": 10009,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            30
+        ]
+    },
+    {
+        "KEY_INDEX": "10019",
+        "ObjectId": 10019,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10020",
+        "ObjectId": 10020,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            30
+        ]
+    },
+    {
+        "KEY_INDEX": "10023",
+        "ObjectId": 10023,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10024",
+        "ObjectId": 10024,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            20
+        ]
+    },
+    {
+        "KEY_INDEX": "10025",
+        "ObjectId": 10025,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            60
+        ]
+    },
+    {
+        "KEY_INDEX": "10031",
+        "ObjectId": 10031,
+        "ObjectType": 1,
+        "CampId": 3,
+        "TempLateList": [
+            14
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            40.0,
+            -25.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "101",
+        "ObjectId": 101,
+        "ObjectType": 3,
         "CampId": 1,
         "TempLateList": [
-            1
+            5
         ],
         "BuffTagIdList": [],
         "BuffIdList": [],
-        "IsMove": true,
+        "IsMove": false,
         "IsCollide": true,
-        "CollisionLayerList": [
-            1
+        "AttributeBarPos": [
+            -25.0,
+            40.0
         ],
-        "MaskLayerList": [
-            1
-        ],
+        "Volume": 0.25,
         "CollidePos": [
             0.0,
             0.0
         ],
         "ShapeType": 1,
         "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
+            80,
+            80
+        ]
     },
     {
-        "KEY_INDEX": "1002",
-        "ObjectId": 1002,
-        "ObjectType": 1,
+        "KEY_INDEX": "102",
+        "ObjectId": 102,
+        "ObjectType": 3,
         "CampId": 1,
         "TempLateList": [
-            1
+            99
         ],
         "BuffTagIdList": [],
         "BuffIdList": [],
-        "IsMove": true,
+        "IsMove": false,
         "IsCollide": true,
-        "CollisionLayerList": [
-            1
+        "AttributeBarPos": [
+            -25.0,
+            40.0
         ],
-        "MaskLayerList": [
-            1
-        ],
+        "Volume": 0.25,
         "CollidePos": [
             0.0,
             0.0
         ],
         "ShapeType": 1,
         "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
+            80,
+            80
+        ]
     },
     {
-        "KEY_INDEX": "1003",
-        "ObjectId": 1003,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
+        "KEY_INDEX": "103",
+        "ObjectId": 103,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
         "BuffTagIdList": [],
         "BuffIdList": [],
-        "IsMove": true,
+        "IsMove": false,
         "IsCollide": true,
-        "CollisionLayerList": [
-            1
+        "AttributeBarPos": [
+            -25.0,
+            40.0
         ],
-        "MaskLayerList": [
-            1
-        ],
+        "Volume": 0.25,
         "CollidePos": [
             0.0,
             0.0
         ],
         "ShapeType": 1,
         "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
+            80,
+            80
+        ]
     },
     {
-        "KEY_INDEX": "1004",
-        "ObjectId": 1004,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1005",
-        "ObjectId": 1005,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1006",
-        "ObjectId": 1006,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1007",
-        "ObjectId": 1007,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1008",
-        "ObjectId": 1008,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1009",
-        "ObjectId": 1009,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1010",
-        "ObjectId": 1010,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1011",
-        "ObjectId": 1011,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1012",
-        "ObjectId": 1012,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1013",
-        "ObjectId": 1013,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1014",
-        "ObjectId": 1014,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1015",
-        "ObjectId": 1015,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1016",
-        "ObjectId": 1016,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1017",
-        "ObjectId": 1017,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1018",
-        "ObjectId": 1018,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "1019",
-        "ObjectId": 1019,
-        "ObjectType": 1,
-        "CampId": 3,
-        "TempLateList": [],
-        "BuffTagIdList": [],
-        "BuffIdList": [],
-        "IsMove": true,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
-        ],
-        "MaskLayerList": [
-            1
-        ],
-        "CollidePos": [
-            0.0,
-            0.0
-        ],
-        "ShapeType": 1,
-        "ShapePointList": [
-            [
-                20.0,
-                10.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
-    },
-    {
-        "KEY_INDEX": "2001",
-        "ObjectId": 2001,
+        "KEY_INDEX": "201",
+        "ObjectId": 201,
         "ObjectType": 2,
         "CampId": 1,
-        "TempLateList": [],
+        "TempLateList": [
+            99
+        ],
         "BuffTagIdList": [],
         "BuffIdList": [],
         "IsMove": false,
         "IsCollide": true,
-        "CollisionLayerList": [
-            1
+        "AttributeBarPos": [
+            -25.0,
+            40.0
         ],
-        "MaskLayerList": [
-            1
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
         ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "202",
+        "ObjectId": 202,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -25.0,
+            40.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "203",
+        "ObjectId": 203,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -25.0,
+            40.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "301",
+        "ObjectId": 301,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -25.0,
+            40.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "401",
+        "ObjectId": 401,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -25.0,
+            40.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "402",
+        "ObjectId": 402,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -25.0,
+            40.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "403",
+        "ObjectId": 403,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -25.0,
+            40.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "501",
+        "ObjectId": 501,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -25.0,
+            40.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "502",
+        "ObjectId": 502,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -25.0,
+            40.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "503",
+        "ObjectId": 503,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -25.0,
+            40.0
+        ],
+        "Volume": 0.25,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100001",
+        "ObjectId": 100001,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100002",
+        "ObjectId": 100002,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100003",
+        "ObjectId": 100003,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100101",
+        "ObjectId": 100101,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100102",
+        "ObjectId": 100102,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100103",
+        "ObjectId": 100103,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100201",
+        "ObjectId": 100201,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100202",
+        "ObjectId": 100202,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100203",
+        "ObjectId": 100203,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100301",
+        "ObjectId": 100301,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100302",
+        "ObjectId": 100302,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100303",
+        "ObjectId": 100303,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100401",
+        "ObjectId": 100401,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -80.0,
+            80.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "100501",
+        "ObjectId": 100501,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100502",
+        "ObjectId": 100502,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100503",
+        "ObjectId": 100503,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100601",
+        "ObjectId": 100601,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100602",
+        "ObjectId": 100602,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100603",
+        "ObjectId": 100603,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100701",
+        "ObjectId": 100701,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100702",
+        "ObjectId": 100702,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100703",
+        "ObjectId": 100703,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100801",
+        "ObjectId": 100801,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100802",
+        "ObjectId": 100802,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100803",
+        "ObjectId": 100803,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100901",
+        "ObjectId": 100901,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100902",
+        "ObjectId": 100902,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "100903",
+        "ObjectId": 100903,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "101001",
+        "ObjectId": 101001,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "101101",
+        "ObjectId": 101101,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "101102",
+        "ObjectId": 101102,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "101103",
+        "ObjectId": 101103,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "101201",
+        "ObjectId": 101201,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "101202",
+        "ObjectId": 101202,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "101203",
+        "ObjectId": 101203,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "102101",
+        "ObjectId": 102101,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "200001",
+        "ObjectId": 200001,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "200002",
+        "ObjectId": 200002,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "200003",
+        "ObjectId": 200003,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "200101",
+        "ObjectId": 200101,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "200102",
+        "ObjectId": 200102,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "200103",
+        "ObjectId": 200103,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "200201",
+        "ObjectId": 200201,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "200202",
+        "ObjectId": 200202,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "200203",
+        "ObjectId": 200203,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "200301",
+        "ObjectId": 200301,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "6200301",
+        "ObjectId": 6200301,
+        "ObjectType": 1,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
         "CollidePos": [
             0.0,
             0.0
         ],
         "ShapeType": 2,
         "ShapePointList": [
-            [
-                20.0,
-                20.0
-            ]
-        ],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
+            40
+        ]
     },
     {
-        "KEY_INDEX": "3001",
-        "ObjectId": 3001,
+        "KEY_INDEX": "200302",
+        "ObjectId": 200302,
         "ObjectType": 3,
         "CampId": 1,
-        "TempLateList": [],
+        "TempLateList": [
+            99
+        ],
         "BuffTagIdList": [],
         "BuffIdList": [],
         "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "6200302",
+        "ObjectId": 6200302,
+        "ObjectType": 1,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
         "IsCollide": true,
-        "CollisionLayerList": [
-            1
+        "AttributeBarPos": [
+            -40.0,
+            40.0
         ],
-        "MaskLayerList": [
-            1
-        ],
+        "Volume": 0.4,
         "CollidePos": [
             0.0,
             0.0
         ],
         "ShapeType": 2,
-        "ShapePointList": [],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
+        "ShapePointList": [
+            40
+        ]
     },
     {
-        "KEY_INDEX": "3002",
-        "ObjectId": 3002,
+        "KEY_INDEX": "200303",
+        "ObjectId": 200303,
         "ObjectType": 3,
         "CampId": 1,
-        "TempLateList": [],
+        "TempLateList": [
+            99
+        ],
         "BuffTagIdList": [],
         "BuffIdList": [],
         "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "6200303",
+        "ObjectId": 6200303,
+        "ObjectType": 1,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": true,
         "IsCollide": true,
-        "CollisionLayerList": [
-            1
+        "AttributeBarPos": [
+            -40.0,
+            40.0
         ],
-        "MaskLayerList": [
-            1
-        ],
+        "Volume": 0.4,
         "CollidePos": [
             0.0,
             0.0
         ],
         "ShapeType": 2,
-        "ShapePointList": [],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
+        "ShapePointList": [
+            40
+        ]
     },
     {
-        "KEY_INDEX": "3003",
-        "ObjectId": 3003,
+        "KEY_INDEX": "200601",
+        "ObjectId": 200601,
         "ObjectType": 3,
         "CampId": 1,
-        "TempLateList": [],
+        "TempLateList": [
+            99
+        ],
         "BuffTagIdList": [],
         "BuffIdList": [],
         "IsMove": false,
         "IsCollide": true,
-        "CollisionLayerList": [
-            1
+        "AttributeBarPos": [
+            -40.0,
+            40.0
         ],
-        "MaskLayerList": [
-            1
-        ],
+        "Volume": 0.4,
         "CollidePos": [
             0.0,
             0.0
         ],
-        "ShapeType": 2,
-        "ShapePointList": [],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
+        "ShapeType": 1,
+        "ShapePointList": [
+            120,
+            120
+        ]
     },
     {
-        "KEY_INDEX": "4001",
-        "ObjectId": 4001,
-        "ObjectType": 5,
+        "KEY_INDEX": "6200601",
+        "ObjectId": 6200601,
+        "ObjectType": 4,
         "CampId": 1,
-        "TempLateList": [],
+        "TempLateList": [
+            99
+        ],
         "BuffTagIdList": [],
         "BuffIdList": [],
         "IsMove": false,
-        "IsCollide": true,
-        "CollisionLayerList": [
-            1
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
         ],
-        "MaskLayerList": [
-            1
-        ],
+        "Volume": 0.4,
         "CollidePos": [
             0.0,
             0.0
         ],
         "ShapeType": 2,
-        "ShapePointList": [],
-        "CollideRotate": 0.0,
-        "SafeMargin": 1.0
+        "ShapePointList": [
+            20
+        ]
+    },
+    {
+        "KEY_INDEX": "200602",
+        "ObjectId": 200602,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "6200602",
+        "ObjectId": 6200602,
+        "ObjectType": 4,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            20
+        ]
+    },
+    {
+        "KEY_INDEX": "200603",
+        "ObjectId": 200603,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "6200603",
+        "ObjectId": 6200603,
+        "ObjectType": 4,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 2,
+        "ShapePointList": [
+            20
+        ]
+    },
+    {
+        "KEY_INDEX": "201101",
+        "ObjectId": 201101,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            0,
+            0
+        ]
+    },
+    {
+        "KEY_INDEX": "201102",
+        "ObjectId": 201102,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            0,
+            0
+        ]
+    },
+    {
+        "KEY_INDEX": "201103",
+        "ObjectId": 201103,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            0,
+            0
+        ]
+    },
+    {
+        "KEY_INDEX": "300001",
+        "ObjectId": 300001,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300002",
+        "ObjectId": 300002,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300003",
+        "ObjectId": 300003,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300101",
+        "ObjectId": 300101,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300102",
+        "ObjectId": 300102,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300103",
+        "ObjectId": 300103,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300201",
+        "ObjectId": 300201,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300204",
+        "ObjectId": 300204,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300301",
+        "ObjectId": 300301,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300302",
+        "ObjectId": 300302,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300303",
+        "ObjectId": 300303,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300304",
+        "ObjectId": 300304,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300401",
+        "ObjectId": 300401,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300402",
+        "ObjectId": 300402,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300403",
+        "ObjectId": 300403,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300501",
+        "ObjectId": 300501,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300502",
+        "ObjectId": 300502,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300503",
+        "ObjectId": 300503,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300601",
+        "ObjectId": 300601,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300602",
+        "ObjectId": 300602,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300603",
+        "ObjectId": 300603,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300701",
+        "ObjectId": 300701,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300702",
+        "ObjectId": 300702,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300703",
+        "ObjectId": 300703,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300801",
+        "ObjectId": 300801,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300802",
+        "ObjectId": 300802,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "300803",
+        "ObjectId": 300803,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": false,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            80,
+            80
+        ]
+    },
+    {
+        "KEY_INDEX": "400001",
+        "ObjectId": 400001,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400002",
+        "ObjectId": 400002,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400003",
+        "ObjectId": 400003,
+        "ObjectType": 3,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400004",
+        "ObjectId": 400004,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400005",
+        "ObjectId": 400005,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400006",
+        "ObjectId": 400006,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400007",
+        "ObjectId": 400007,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400008",
+        "ObjectId": 400008,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400009",
+        "ObjectId": 400009,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400010",
+        "ObjectId": 400010,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400011",
+        "ObjectId": 400011,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "400012",
+        "ObjectId": 400012,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            160,
+            160
+        ]
+    },
+    {
+        "KEY_INDEX": "500001",
+        "ObjectId": 500001,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -40.0,
+            40.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "500101",
+        "ObjectId": 500101,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "500201",
+        "ObjectId": 500201,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "500601",
+        "ObjectId": 500601,
+        "ObjectType": 2,
+        "CampId": 1,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 0.4,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            40,
+            40
+        ]
+    },
+    {
+        "KEY_INDEX": "600001",
+        "ObjectId": 600001,
+        "ObjectType": 3,
+        "CampId": 0,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 1.0,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            400,
+            400
+        ]
+    },
+    {
+        "KEY_INDEX": "600101",
+        "ObjectId": 600101,
+        "ObjectType": 3,
+        "CampId": 0,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 1.0,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            200,
+            100
+        ]
+    },
+    {
+        "KEY_INDEX": "600102",
+        "ObjectId": 600102,
+        "ObjectType": 3,
+        "CampId": 0,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 1.0,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            200,
+            100
+        ]
+    },
+    {
+        "KEY_INDEX": "600201",
+        "ObjectId": 600201,
+        "ObjectType": 3,
+        "CampId": 0,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 1.0,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            200,
+            200
+        ]
+    },
+    {
+        "KEY_INDEX": "600202",
+        "ObjectId": 600202,
+        "ObjectType": 3,
+        "CampId": 0,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 1.0,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            200,
+            200
+        ]
+    },
+    {
+        "KEY_INDEX": "600203",
+        "ObjectId": 600203,
+        "ObjectType": 3,
+        "CampId": 0,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 1.0,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            200,
+            200
+        ]
+    },
+    {
+        "KEY_INDEX": "600204",
+        "ObjectId": 600204,
+        "ObjectType": 3,
+        "CampId": 0,
+        "TempLateList": [
+            99
+        ],
+        "BuffTagIdList": [],
+        "BuffIdList": [],
+        "IsMove": false,
+        "IsCollide": true,
+        "AttributeBarPos": [
+            -10.0,
+            20.0
+        ],
+        "Volume": 1.0,
+        "CollidePos": [
+            0.0,
+            0.0
+        ],
+        "ShapeType": 1,
+        "ShapePointList": [
+            200,
+            200
+        ]
     }
 ]

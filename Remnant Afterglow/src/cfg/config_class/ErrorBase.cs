@@ -7,11 +7,11 @@ namespace Remnant_Afterglow
     public partial class ErrorBase
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 错误码id
         /// </summary>
         public int ErrorId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 中文
         /// </summary>
         public string zh_cn { get; set; }

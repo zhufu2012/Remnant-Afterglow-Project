@@ -152,12 +152,17 @@ def GetExportItemList(file_path, table_name, export_list_line, key_export_list_r
                         main_key_row.append(row)
                     key_row.append(row)
                     row_dict[row] = index  ##假纵数|真纵数
-                    if value.startswith('#'):
+                    if value.startswith('#'):##使用默认值
                         key_isnull_dict[value[1:]] = True
                         key_name_list.append(value[1:])
                     else:
-                        key_isnull_dict[value] = False
-                        key_name_list.append(value)
+                        if value.startswith('<'):##使用 <>内的默认值
+                            start_index = value.find('>')
+                            key_isnull_dict[value[start_index+2:]] = value[1:start_index]
+                            key_name_list.append(value[start_index+2:])
+                        else:
+                            key_isnull_dict[value] = False
+                            key_name_list.append(value)
                     row += 1
         elif line == 2:  ##字段类型
             for index, value in enumerate(item):
@@ -298,19 +303,12 @@ def data_conver(NowProjectConfig, pathlist):
 
 # region  文件相关操作
 # 根节点，文件夹，文件
-def next_file(root, dirs, files):
-    list = []
-    for file in files:
-        list.append(root + "\\" + file)
-    return list
-
-
-# 读取路径下，每一层的路径
 def get_files_from_directory(directory):
     file_list = []
-    for root, dirs, files in os.walk(directory):  # 每一层文件夹数据
-        list = next_file(root, dirs, files)
-        file_list = file_list + list
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file.endswith('.xlsx') and '~$' not in file:  # 直接过滤.xlsx和临时文件
+                file_list.append(os.path.join(root, file))
     return file_list
 
 

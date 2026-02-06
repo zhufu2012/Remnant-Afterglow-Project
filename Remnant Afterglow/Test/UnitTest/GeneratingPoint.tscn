@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ds0wstqjxwkha"]
 
 [ext_resource type="Texture2D" uid="uid://b1oc6t3rm1nv8" path="res://Test/UnitTest/生成敌人.png" id="1_ac8gl"]
-[ext_resource type="Script" path="res://Test/UnitTest/Generating.cs" id="1_mkuo8"]
+[ext_resource type="Script" uid="uid://b55uvyuhl3ol2" path="res://Test/UnitTest/Generating.cs" id="1_mkuo8"]
 
 [node name="GeneratingPoint" type="Node2D"]
 script = ExtResource("1_mkuo8")

@@ -8,19 +8,19 @@ namespace Remnant_Afterglow
     public partial class UnitGroupType
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 单位组类型
         /// </summary>
         public int GroupTypeId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单位组显示名称
         /// </summary>
         public string ShowName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单位组名称
         /// </summary>
         public string Name { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单位出现提示图片
         /// </summary>
         public Texture2D PromptPng { get; set; }

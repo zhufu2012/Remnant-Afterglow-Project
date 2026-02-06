@@ -49,6 +49,19 @@ namespace Remnant_Afterglow
 
         #region 私有方法
         /// <summary>
+        /// 给自己添加Buff列表
+        /// </summary>
+        /// <param name="buffIdList">buff列表 <buffId,></param>
+        public void SelfAddBuffList(List<List<int>> BuffIdList)
+        {
+            foreach(List<int> BuffL in BuffIdList)
+            {
+                var buff = BuffManager.Instance.GetBuff(BuffL[0]);
+                AddBuff(buff, BuffL[0], TargetObject, BuffL[1]);
+            }
+        }
+
+        /// <summary>
         /// 添加1层Buff
         /// </summary>
         /// <param name="buffId">施加Buff的ID</param>
@@ -204,22 +217,21 @@ namespace Remnant_Afterglow
         public void LateUpdate()
         {
             updated = false;
-            BuffBase bf;
-            bool buffRemoved = false;//是否有buff需要移除
-            for (int i = buffs.Count - 1; i >= 0; i--)
+            List<int> toRemove = new List<int>();
+            foreach (var kv in buffs)
             {
-                bf = buffs[i];
+                BuffBase bf = kv.Value;
                 bf.OnBuffUpdate();
-                if (!bf.isEffective)//buff无效了
+                if (!bf.isEffective)
                 {
-                    bf.OnBuffRemove();//当Buff需要被移除时调用
-                    buffRemoved = true;
-                    buffs.Remove(bf.buffId);
-                    forOnBuffDestroy += bf.OnBuffDestroy;
+                    bf.OnBuffRemove();
+                    toRemove.Add(kv.Key);
                 }
             }
-            if (buffRemoved)//有buff需要移除
-                onRemoveBuff?.Invoke();
+            foreach (int key in toRemove)
+            {
+                buffs.Remove(key);
+            }
         }
 
     }

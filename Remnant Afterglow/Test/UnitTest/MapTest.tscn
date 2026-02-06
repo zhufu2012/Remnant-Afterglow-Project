@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://c7ekw0rnx6tbm"]
 
-[ext_resource type="Script" path="res://Test/UnitTest/MapTest.cs" id="1_nm6rx"]
+[ext_resource type="Script" uid="uid://c2xdv8bqbnum4" path="res://Test/UnitTest/MapTest.cs" id="1_nm6rx"]
 [ext_resource type="PackedScene" uid="uid://he7nk6f17b61" path="res://Test/UnitTest/Unit.tscn" id="1_qbiji"]
-[ext_resource type="Script" path="res://Test/UnitTest/Camera.cs" id="2_qif2l"]
+[ext_resource type="Script" uid="uid://bofi7cd2a3ral" path="res://Test/UnitTest/Camera.cs" id="2_qif2l"]
 [ext_resource type="Texture2D" uid="uid://dija4o08dxicb" path="res://Test/UnitTest/沙漠地块3.png" id="2_w73iw"]
 [ext_resource type="PackedScene" uid="uid://ckgmj370bs4i6" path="res://Test/UnitTest/BuildTest.tscn" id="3_bnnk3"]
 [ext_resource type="PackedScene" uid="uid://ds0wstqjxwkha" path="res://Test/UnitTest/GeneratingPoint.tscn" id="4_5tcj7"]
@@ -72,6 +72,7 @@ navigation_layer_0/layers = 1
 sources/1 = SubResource("TileSetAtlasSource_6nrr5")
 
 [node name="MapTest" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_nm6rx")
 pool_max = 1200
 

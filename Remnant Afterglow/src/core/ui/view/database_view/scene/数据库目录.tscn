@@ -1,0 +1,172 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch30glgrlr52v"]
+
+[ext_resource type="Texture2D" uid="uid://bwanyv4iql1ja" path="res://assets/档案库素材/背景3.png" id="1_ryn3d"]
+[ext_resource type="Texture2D" uid="uid://cbrrp2fh06jb7" path="res://assets/档案库素材/窗口1.png" id="2_x7gtr"]
+[ext_resource type="Texture2D" uid="uid://ge82xowugae3" path="res://assets/漫画部分/背景1.png" id="3_mjy15"]
+
+[node name="数据库大界面" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = -59
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_ryn3d")
+region_rect = Rect2(0, 0, 80, 80)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 479.0
+offset_bottom = 269.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_x7gtr")
+region_rect = Rect2(0, 0, 80, 80)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 13
+patch_margin_bottom = 12
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="."]
+z_index = -56
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4.00049, 4.00016)
+region_rect = Rect2(33, 33, 33, 34)
+patch_margin_left = 21
+patch_margin_top = 21
+patch_margin_right = 20
+patch_margin_bottom = 21
+
+[node name="效果属性2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -763.0
+offset_top = -110.0
+offset_right = -387.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="效果属性2"]
+layout_mode = 2
+
+[node name="效果属性" type="VBoxContainer" parent="效果属性2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="效果属性2/HBoxContainer/效果属性"]
+layout_mode = 2
+icon = ExtResource("3_mjy15")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="效果属性2/HBoxContainer/效果属性"]
+layout_mode = 2
+text = "效果属性"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="炮塔" type="VBoxContainer" parent="效果属性2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="效果属性2/HBoxContainer/炮塔"]
+layout_mode = 2
+icon = ExtResource("3_mjy15")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="效果属性2/HBoxContainer/炮塔"]
+layout_mode = 2
+text = "炮塔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="敌方单位" type="VBoxContainer" parent="效果属性2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="效果属性2/HBoxContainer/敌方单位"]
+layout_mode = 2
+icon = ExtResource("3_mjy15")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="效果属性2/HBoxContainer/敌方单位"]
+layout_mode = 2
+text = "敌方单位"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="核心插件" type="VBoxContainer" parent="效果属性2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="效果属性2/HBoxContainer/核心插件"]
+layout_mode = 2
+icon = ExtResource("3_mjy15")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="效果属性2/HBoxContainer/核心插件"]
+layout_mode = 2
+text = "核心插件"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="机甲" type="VBoxContainer" parent="效果属性2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="效果属性2/HBoxContainer/机甲"]
+layout_mode = 2
+icon = ExtResource("3_mjy15")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="效果属性2/HBoxContainer/机甲"]
+layout_mode = 2
+text = "机甲"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="道具" type="VBoxContainer" parent="效果属性2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="效果属性2/HBoxContainer/道具"]
+layout_mode = 2
+icon = ExtResource("3_mjy15")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="效果属性2/HBoxContainer/道具"]
+layout_mode = 2
+text = "道具"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="背景故事" type="VBoxContainer" parent="效果属性2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="效果属性2/HBoxContainer/背景故事"]
+layout_mode = 2
+icon = ExtResource("3_mjy15")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="效果属性2/HBoxContainer/背景故事"]
+layout_mode = 2
+text = "背景故事"
+horizontal_alignment = 1
+vertical_alignment = 1

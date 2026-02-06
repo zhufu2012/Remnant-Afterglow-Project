@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo0hjx61q4me1"]
+
+[ext_resource type="Texture2D" uid="uid://bwanyv4iql1ja" path="res://assets/档案库素材/背景3.png" id="1_k0gva"]
+[ext_resource type="Texture2D" uid="uid://cbrrp2fh06jb7" path="res://assets/档案库素材/窗口1.png" id="2_n564j"]
+
+[node name="数据库单位" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = -59
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_k0gva")
+region_rect = Rect2(0, 0, 80, 80)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 479.0
+offset_bottom = 269.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_n564j")
+region_rect = Rect2(0, 0, 80, 80)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 13
+patch_margin_bottom = 12
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="."]
+z_index = -56
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4.00049, 4.00016)
+region_rect = Rect2(33, 33, 33, 34)
+patch_margin_left = 21
+patch_margin_top = 21
+patch_margin_right = 20
+patch_margin_bottom = 21

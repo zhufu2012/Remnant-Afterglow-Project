@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2f6h411km66c"]
+
+[ext_resource type="Script" uid="uid://c5ggig4grp7lx" path="res://Test/MultiMesh/BulletTestManager.cs" id="1_y5j85"]
+
+[node name="BulletTestManager" type="Node2D"]
+script = ExtResource("1_y5j85")
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="."]

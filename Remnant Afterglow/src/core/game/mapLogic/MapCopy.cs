@@ -2,6 +2,7 @@ using GameLog;
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Remnant_Afterglow
 {
@@ -14,45 +15,42 @@ namespace Remnant_Afterglow
 		/// 副本关卡数据
 		/// </summary>
 		public ChapterCopyBase copyData;
+		public CopyBrush copyBrush;
 
 		#region 各节点及初始化
 		/// <summary>
 		/// 绘制用列表
 		/// </summary>
-		public Node2D DrawNode;
+		[Export] public Node2D DrawNode;
 		/// <summary>
 		/// 单位列表
 		/// </summary>
-		public Node2D UnitNode;
+		[Export] public Node2D UnitNode;
 		/// <summary>
 		/// 防御塔列表
 		/// </summary>
-		public Node2D TowerNode;
+		[Export] public Node2D TowerNode;
 		/// <summary>
 		/// 建筑列表
 		/// </summary>
-		public Node2D BuildNode;
+		[Export] public Node2D BuildNode;
 		/// <summary>
 		/// 无人机列表
 		/// </summary>
-		public Node2D WorkerNode;
+		[Export] public Node2D WorkerNode;
 		/// <summary>
 		/// 子弹列表
 		/// </summary>
-		public Node2D BulletNode;
+		[Export] public Node2D BulletNode;
 		/// <summary>
 		/// 相机
 		/// </summary>
-		public MapCamera gameCamera;
-		#endregion
-
-		#region 地图生成
+		[Export] public MapCamera gameCamera;
 		/// <summary>
 		/// 地图绘制节点
 		/// </summary>
-		public FixedTileMap fixedTileMap;
+		[Export] public FixedTileMap fixedTileMap;
 		#endregion
-
 		#region 关卡各系统
 		/// <summary>
 		/// 地图基础逻辑-包含刷怪系统
@@ -62,14 +60,19 @@ namespace Remnant_Afterglow
 		/// <summary>
 		/// 子弹管理器
 		/// </summary>
-		public BulletManager bulletManager;
+		public BulletManager bulletManager = new BulletManager();
 		/// <summary>
 		/// 单位管理器
 		/// </summary>
 		public ObjectManager objectManager;
+		/// <summary>
+		/// 全局属性管理器
+		/// </summary>
+		public GloAttrDataManager gloManager;
 
 		public FlowFieldSystem flowFieldSystem;
 		public FlowFieldDrawer flowFieldDrawer;
+
 		#endregion
 
 
@@ -109,6 +112,12 @@ namespace Remnant_Afterglow
 		}
 
 		#region 初始化数据
+
+		public override void _Ready()
+		{
+			InitData();
+			InitMapCfg();
+		}
 		/// <summary>
 		/// 初始化数据和各系统
 		/// </summary>
@@ -118,19 +127,14 @@ namespace Remnant_Afterglow
 			CopyId = (int)SceneManager.GetParam("CopyId");
 			SceneManager.DataClear();
 			copyData = new ChapterCopyBase(ChapterId, CopyId);
-
-			DrawNode = GetNode<Node2D>("DrawList");
-			UnitNode = GetNode<Node2D>("UnitList");
-			TowerNode = GetNode<Node2D>("TowerList");
-			BuildNode = GetNode<Node2D>("BuildList");
-			WorkerNode = GetNode<Node2D>("WorkerList");
-			BulletNode = GetNode<Node2D>("BulletList");
-			gameCamera = GetNode<MapCamera>("gameCamera");
+			copyBrush = ConfigCache.GetCopyBrush(ChapterId + "_" + CopyId);
 			gameCamera.InitData(copyData.CameraId);//游戏相机
+			gloManager = new GloAttrDataManager();//全局属性管理器
 
-			bulletManager = new BulletManager();// 初始化子弹管理器
 			mapLogic = new MapLogic((MapGameModel)copyData.CopyType, ChapterId, CopyId);//游戏逻辑构造
+			mapLogic.Name = "mapLogic";
 			AddChild(mapLogic);//游戏模式逻辑
+			AddChild(bulletManager);
 			MapOpManager.Instance.SetOpView(OpViewType.Map_OpView);
 		}
 
@@ -139,42 +143,34 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public void InitMapCfg()
 		{
-			fixedTileMap = GetNode<FixedTileMap>("FixedTileMap");
-			fixedTileMap.InitData(copyData.GenerateMapId);
-				//new FixedTileMap(copyData.GenerateMapId);
+			fixedTileMap.InitData(copyData.MapName);
 			fixedTileMap.Name = "fixedTileMap";
-			flowFieldSystem = new FlowFieldSystem(fixedTileMap.Width, fixedTileMap.Height, fixedTileMap.layerData[MapConstant.MapLogicLayer]);//流场导航系统
-			objectManager = new ObjectManager(fixedTileMap.Width, fixedTileMap.Height,fixedTileMap.layerData[MapConstant.MapLogicLayer]);// 初始化单位管理器
-			if(IsShowFlow)//是否显示流场
+			flowFieldSystem = new FlowFieldSystem(fixedTileMap.Width, fixedTileMap.Height, fixedTileMap.layerData[MapConstant.MapLogicLayer], ChapterId, CopyId);//流场导航系统
+			objectManager = new ObjectManager(fixedTileMap.Width, fixedTileMap.Height, fixedTileMap.layerData[MapConstant.MapLogicLayer]);// 初始化单位管理器
+			foreach (int i in copyBrush.BrushIdList)
+			{
+				BrushPoint point = ConfigCache.GetBrushPoint(i);
+				FlowField flow = FlowFieldSystem.Instance.AddPosFlowField(point.TargetPos);
+				FlowFieldSystem.Instance.ShowFlowField = flow;
+			}
+			fixedTileMap.InitDrawMap();
+			fixedTileMap.InitDrawEntity();
+			//重新生成所有流场
+			FlowFieldSystem.Instance.RegenerateAllFlowFields();
+			if (IsShowFlow)//是否显示流场
 			{
 				flowFieldDrawer = new FlowFieldDrawer();//流场绘制显示
-				flowFieldDrawer.ZIndex = 100;
+				flowFieldDrawer.ZIndex = ViewConstant.FlowShow_ZIndex;
 				flowFieldDrawer.Name = "flowFieldDrawer";
 				AddChild(flowFieldDrawer);
 			}
 		}
-
-		public override void _Ready()
-		{
-			InitData();
-			InitMapCfg();
-			for (int i = 18; i < 19; i++)
-			{
-				for (int j = 5; j < 6; j++)
-				{
-					Random random = new Random();
-					//int unitId = random.NextDouble() >= 0.1 ? 1001 : 1002;
-					ObjectManager.Instance.CreateMapUnit(1001, new Vector2I(i, j));
-				}
-			}
-		}
 		#endregion
 
-
-		public override void _Process(double delta)
-		{
-			QueueRedraw();
-		}
+		/// <summary>
+		/// 当前帧数
+		/// </summary>
+		public ulong NowTick = 0;
 
 		/// <summary>
 		/// 逻辑帧
@@ -182,13 +178,20 @@ namespace Remnant_Afterglow
 		/// <param name="delta"></param>
 		public override void _PhysicsProcess(double delta)
 		{
-			bulletManager.Update(delta); // 更新子弹管理器
-			objectManager.Update(delta); // 实体更新逻辑
-			bulletManager.PostUpdate(); // 执行子弹管理器的PostUpdate逻辑
-			mapLogic.MapLogicUpdate(delta);//地图逻辑更新
+			if (!mapLogic.gameModel.IsEnd)
+			{
+				NowTick += 1;
+				gloManager.Update(NowTick);//全局属性更新
+				objectManager.Update(); // 实体更新逻辑
+				bulletManager.Update(); // 更新子弹管理器
+				mapLogic.MapLogicUpdate(delta);//地图逻辑更新
+			}
 		}
 
-
+		public override void _Process(double delta)
+		{
+			bulletManager.PostUpdate(); // 执行子弹管理器的PostUpdate逻辑
+		}
 
 
 		/// <summary>

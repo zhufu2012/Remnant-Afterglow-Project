@@ -1,5 +1,6 @@
 using GameLog;
 using Godot;
+using SteeringBehaviors;
 using System.Collections.Generic;
 
 namespace Remnant_Afterglow
@@ -45,10 +46,12 @@ namespace Remnant_Afterglow
             {
                 case MapGameModel.WaveBrush://波数刷怪
                     gameModel = new BrushSystem(chapter, chapterCopy);
+                    gameModel.Name = "BrushSystem";
                     break;
             }
             CreateBagData();//准备作战地图 的背包资源数据
             AddChild(gameModel);
+            InitAttribute();
         }
 
         #region 关卡逻辑开始
@@ -61,7 +64,7 @@ namespace Remnant_Afterglow
         public virtual void LogicStart()
         {
             MapOpView.Instance.SetCurrencyView();//设置货币数量
-            
+
             switch (mapGameModel)
             {
                 case MapGameModel.WaveBrush://波数刷怪
@@ -85,34 +88,33 @@ namespace Remnant_Afterglow
         #endregion
 
 
-
+        int index = 0;
         /// <summary>
         /// 地图逻辑-每帧更新
         /// </summary>
         /// <param name="delta"></param>
         public virtual void MapLogicUpdate(double delta)
         {
-            gameModel.PostUpdate(delta);//执行模式的PostUpdate逻辑
-            if(gameModel.IsEnd)//如果刷怪已经结束
+            if (gameModel.IsCopyEnd())
             {
-                if(gameModel.IsCopyEnd())
-                {
-                    LogicEnd();
-                    Log.Print("关卡结束了");
-                    SceneManager.PutParam("chapter_id", chapter.ChapterId);
-                    SceneManager.ChangeSceneName("BigMapCopy", this);
-                }
+                Log.Print("关卡结束了");
+                SceneManager.PutParam("chapter_id", chapter.ChapterId);
+                gameModel.EndModel();//关卡具体逻辑 结束
+                SpatialGrid.Clear();
             }
-        }
+            else
+            {
+                gameModel.PostUpdate(delta);//执行模式的PostUpdate逻辑-修改为每秒执行一次
 
-        /// <summary>
-        /// 关卡逻辑结束
-        /// 1.提示获得什么道具等，或者解锁什么功能，解锁什么成就，解锁什么科技
-        /// 2.返回主菜单
-        /// </summary>
-        public virtual void LogicEnd()
-        {
-            gameModel.EndModel();//关卡具体逻辑 结束
+            }
+            if (index >= GameConstant.GameFrame)//每秒执行一次
+            {
+                index = 0;
+            }
+
+            if (index % SpatialGrid.UpdateCacheTime == 0)
+                SpatialGrid.UpdateCache();
+            index++;
         }
 
         /// <summary>
@@ -120,6 +122,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public virtual void WaveStart()
         {
+
         }
 
         /// <summary>
@@ -134,11 +137,6 @@ namespace Remnant_Afterglow
         /// </summary>
         public virtual void RegenerationCycle()
         {
-            Log.Print("重置重生周期");
         }
-
-
-
-
     }
 }

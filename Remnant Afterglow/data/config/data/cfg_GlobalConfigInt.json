@@ -1,26 +1,34 @@
 [
     {
         "KEY_INDEX": "MapDefineCameraId",
-        "Configid": "MapDefineCameraId",
+        "ConfigId": "MapDefineCameraId",
         "ConfigName": "地图默认相机id",
+        "ShopSetting": false,
+        "IsModif": false,
         "ConfigValue": 1
     },
     {
         "KEY_INDEX": "TextSize1",
-        "Configid": "TextSize1",
+        "ConfigId": "TextSize1",
         "ConfigName": "游戏常规-主要文字的字号",
+        "ShopSetting": false,
+        "IsModif": false,
         "ConfigValue": 36
     },
     {
         "KEY_INDEX": "TextSize2",
-        "Configid": "TextSize2",
+        "ConfigId": "TextSize2",
         "ConfigName": "游戏常规-次要文字的字号",
+        "ShopSetting": false,
+        "IsModif": false,
         "ConfigValue": 22
     },
     {
         "KEY_INDEX": "TextSize3",
-        "Configid": "TextSize3",
+        "ConfigId": "TextSize3",
         "ConfigName": "游戏常规-文本的字号",
+        "ShopSetting": false,
+        "IsModif": false,
         "ConfigValue": 16
     }
 ]

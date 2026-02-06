@@ -7,22 +7,22 @@ namespace Remnant_Afterglow
     public partial class AttributeTemplate
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 模板id
         /// </summary>
         public int TempLateId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 标签名称
         /// </summary>
         public string TempLateName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 是否其属性是否可以覆盖之前的属性
         ///写在前面的标签属性先添加，
         ///不允许会文字报错
         ///（非程序报错），允许不报错
         /// </summary>
         public bool IsCover { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 负数实体id
         ///只能为负数
         /// </summary>

@@ -69,8 +69,7 @@ namespace Remnant_Afterglow
         /// 将一个大图片，拆分为多个小图片，返回图片字典
         /// </summary>
         /// <param name="texture">图片</param>
-        /// <param name="size">拆分的横轴和纵轴</param>
-        /// <returns></returns>
+        /// <param name="Size">拆分的横轴和纵轴</param>
         public static Dictionary<Vector2I, Texture2D> SplitTexture(Texture2D texture, Vector2I Size)
         {
             Image image = texture.GetImage();

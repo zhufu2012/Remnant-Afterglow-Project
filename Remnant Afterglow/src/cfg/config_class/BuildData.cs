@@ -7,72 +7,76 @@ namespace Remnant_Afterglow
     public partial class BuildData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 实体id
         /// </summary>
         public int ObjectId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 建筑名称
         /// </summary>
         public string BuildingName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 建筑描述
         ///
         /// </summary>
         public string Describe { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 建筑类型
         ///0 建筑
         ///1 炮塔
         ///默认为建筑
         /// </summary>
         public int Type { get; set; }
-        /// <summary>        
+        /// <summary>
+        /// 
+        /// </summary>
+        public int SubType { get; set; }
+        /// <summary>
         /// 建筑归属
         ///（该建筑默认属于那方阵营）
         ///导用cfg_Troops_阵营
         /// </summary>
         public int DefaultCamp { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 建造价格
         ///(货币id，数量)
         ///cfg_MoneyBase_货币界面显示配置
         ///目前只有1，2，3可用（与图有关系）
         /// </summary>
         public List<List<int>> Price { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 生产周期时长（秒）
         ///0 表示无生产周期
         /// </summary>
         public int WeekLength { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 周期生产资源数
         ///(货币id，数量)
         ///cfg_MoneyBase_货币
         /// </summary>
         public List<List<int>> WeekResources { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 建筑占地边长（正方形），
-        ///1是1格 2是4格
+        ///1是1*1格 2是2*2格
         ///
         /// </summary>
         public int BuildingSize { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 建造规则
         ///cfg_BuildRule_建造
         ///规则id列表
         /// </summary>
         public List<int> BuildingRules { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 最大建造进度
         ///每秒增加60的建造进度
         /// </summary>
         public int BuildProgress { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 动画类型列表
         /// </summary>
         public List<int> AnimaTypeList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 武器列表
         ///(武器id,坐标X，坐标Y) 坐标单位像素
         /// </summary>
@@ -85,6 +89,7 @@ namespace Remnant_Afterglow
 			BuildingName = (string)dict["BuildingName"];
 			Describe = (string)dict["Describe"];
 			Type = (int)dict["Type"];
+			SubType = (int)dict["SubType"];
 			DefaultCamp = (int)dict["DefaultCamp"];
 			Price = (List<List<int>>)dict["Price"];
 			WeekLength = (int)dict["WeekLength"];
@@ -105,6 +110,7 @@ namespace Remnant_Afterglow
 			BuildingName = (string)dict["BuildingName"];
 			Describe = (string)dict["Describe"];
 			Type = (int)dict["Type"];
+			SubType = (int)dict["SubType"];
 			DefaultCamp = (int)dict["DefaultCamp"];
 			Price = (List<List<int>>)dict["Price"];
 			WeekLength = (int)dict["WeekLength"];
@@ -123,6 +129,7 @@ namespace Remnant_Afterglow
 			BuildingName = (string)dict["BuildingName"];
 			Describe = (string)dict["Describe"];
 			Type = (int)dict["Type"];
+			SubType = (int)dict["SubType"];
 			DefaultCamp = (int)dict["DefaultCamp"];
 			Price = (List<List<int>>)dict["Price"];
 			WeekLength = (int)dict["WeekLength"];

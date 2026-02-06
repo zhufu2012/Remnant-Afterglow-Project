@@ -1,0 +1,748 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8jltaqgrkoqp"]
+
+[ext_resource type="Script" uid="uid://cgxuq8n0a545n" path="res://src/core/game/sceneLogic/subscene/CopyPreparePanel.cs" id="1_v1b13"]
+[ext_resource type="Texture2D" uid="uid://c2u42psw4ri1u" path="res://assets/（关卡选择界面-结算界面）素材/通用窗口1.png" id="2_5be10"]
+[ext_resource type="Texture2D" uid="uid://dfb4gix28xoor" path="res://assets/（关卡选择界面-结算界面）素材/通用窗口3.png" id="3_d05iw"]
+[ext_resource type="Texture2D" uid="uid://djh5efuy1q037" path="res://assets/（关卡选择界面-结算界面）素材/通用窗口2.png" id="4_fh0lk"]
+
+[node name="CopyPreparePanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 354.0
+offset_bottom = 77.0
+scale = Vector2(1.5, 1.5)
+mouse_filter = 1
+script = ExtResource("1_v1b13")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.501961)
+texture_filter = 1
+layout_mode = 0
+offset_left = -254.0
+offset_right = 654.0
+offset_bottom = 377.0
+texture = ExtResource("2_5be10")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 13.3334
+offset_top = 12.0
+offset_right = 134.333
+offset_bottom = 61.0
+texture = ExtResource("2_5be10")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="返回按钮" type="Button" parent="NinePatchRect/NinePatchRect3"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 111.0
+offset_bottom = 41.0
+text = "返回"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 306.0
+offset_top = 12.6667
+offset_right = 605.0
+offset_bottom = 61.6667
+texture = ExtResource("2_5be10")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="任务名称" type="Label" parent="NinePatchRect/NinePatchRect"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 13.0
+offset_right = 279.0
+offset_bottom = 34.0
+text = "任务名称"
+horizontal_alignment = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 13.0
+offset_top = 64.0
+offset_right = 363.0
+offset_bottom = 313.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Label" type="Label" parent="NinePatchRect/NinePatchRect2"]
+layout_mode = 0
+offset_left = 56.3333
+offset_top = 6.66667
+offset_right = 318.333
+offset_bottom = 29.6667
+text = "道具库"
+horizontal_alignment = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 350.333
+offset_right = 377.333
+offset_bottom = 249.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="VSlider" type="VSlider" parent="NinePatchRect/NinePatchRect2/NinePatchRect2"]
+layout_mode = 2
+offset_left = 3.0
+offset_top = 11.0
+offset_right = 23.0
+offset_bottom = 243.0
+
+[node name="Control" type="Control" parent="NinePatchRect/NinePatchRect2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11.0
+offset_top = 38.6667
+offset_right = 73.0
+offset_bottom = 97.667
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.3334
+offset_top = -1.33333
+offset_right = 62.3337
+offset_bottom = 58.6667
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 68.0
+offset_top = -0.666669
+offset_right = 128.0
+offset_bottom = 59.3333
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 133.333
+offset_top = -0.666664
+offset_right = 193.333
+offset_bottom = 59.3333
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = -0.666672
+offset_right = 260.0
+offset_bottom = 59.3333
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect6" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 266.667
+offset_top = -1.33334
+offset_right = 326.666
+offset_bottom = 58.6667
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect7" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.3334
+offset_top = 67.3333
+offset_right = 62.3337
+offset_bottom = 127.333
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect8" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 68.0
+offset_top = 68.0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect9" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 133.333
+offset_top = 68.0
+offset_right = 193.333
+offset_bottom = 128.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect10" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = 68.0
+offset_right = 260.0
+offset_bottom = 128.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect11" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 266.667
+offset_top = 67.3333
+offset_right = 326.666
+offset_bottom = 127.333
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect12" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.3334
+offset_top = 135.333
+offset_right = 62.3337
+offset_bottom = 195.333
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect13" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 68.0
+offset_top = 136.0
+offset_right = 128.0
+offset_bottom = 196.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect14" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 133.333
+offset_top = 136.0
+offset_right = 193.333
+offset_bottom = 196.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect15" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = 136.0
+offset_right = 260.0
+offset_bottom = 196.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect16" type="NinePatchRect" parent="NinePatchRect/NinePatchRect2/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 266.667
+offset_top = 135.333
+offset_right = 326.666
+offset_bottom = 195.333
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect3作战开始" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 732.0
+offset_top = 319.333
+offset_right = 898.0
+offset_bottom = 366.333
+texture = ExtResource("2_5be10")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="开始按钮" type="Button" parent="NinePatchRect/NinePatchRect3作战开始"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 159.0
+offset_bottom = 41.0
+text = "开始作战"
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 454.0
+offset_top = 64.0
+offset_right = 806.0
+offset_bottom = 313.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Label" type="Label" parent="NinePatchRect/NinePatchRect5"]
+layout_mode = 0
+offset_left = 68.6667
+offset_top = 7.33333
+offset_right = 330.667
+offset_bottom = 30.3333
+text = "核心组件库"
+horizontal_alignment = 1
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 352.0
+offset_right = 379.0
+offset_bottom = 249.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="VSlider" type="VSlider" parent="NinePatchRect/NinePatchRect5/NinePatchRect5"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 11.0
+offset_right = 23.0
+offset_bottom = 243.0
+
+[node name="Control" type="Control" parent="NinePatchRect/NinePatchRect5"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11.0
+offset_top = 38.6667
+offset_right = 73.0
+offset_bottom = 97.667
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.3334
+offset_top = -1.33333
+offset_right = 62.3337
+offset_bottom = 58.6667
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 68.0
+offset_top = -0.666669
+offset_right = 128.0
+offset_bottom = 59.3333
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 133.333
+offset_top = -0.666664
+offset_right = 193.333
+offset_bottom = 59.3333
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = -0.666672
+offset_right = 260.0
+offset_bottom = 59.3333
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect6" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 266.667
+offset_top = -1.33334
+offset_right = 326.666
+offset_bottom = 58.6667
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect7" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.3334
+offset_top = 67.3333
+offset_right = 62.3337
+offset_bottom = 127.333
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect8" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 68.0
+offset_top = 68.0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect9" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 133.333
+offset_top = 68.0
+offset_right = 193.333
+offset_bottom = 128.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect10" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = 68.0
+offset_right = 260.0
+offset_bottom = 128.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect11" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 266.667
+offset_top = 67.3333
+offset_right = 326.666
+offset_bottom = 127.333
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect12" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.3334
+offset_top = 135.333
+offset_right = 62.3337
+offset_bottom = 195.333
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect13" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 68.0
+offset_top = 136.0
+offset_right = 128.0
+offset_bottom = 196.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect14" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 133.333
+offset_top = 136.0
+offset_right = 193.333
+offset_bottom = 196.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect15" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = 136.0
+offset_right = 260.0
+offset_bottom = 196.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect16" type="NinePatchRect" parent="NinePatchRect/NinePatchRect5/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 266.667
+offset_top = 135.333
+offset_right = 326.666
+offset_bottom = 195.333
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 578.0
+offset_top = 64.6667
+offset_right = 640.0
+offset_bottom = 123.667
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.33338
+offset_top = -1.33333
+offset_right = 61.3334
+offset_bottom = 58.6667
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="Control2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.00007
+offset_top = 62.0
+offset_right = 61.0001
+offset_bottom = 122.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="Control2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.00006
+offset_top = 124.667
+offset_right = 61.0001
+offset_bottom = 184.667
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="Control2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.00006
+offset_top = 188.0
+offset_right = 61.0001
+offset_bottom = 248.0
+texture = ExtResource("4_fh0lk")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 134.0
+offset_top = 64.6667
+offset_right = 196.0
+offset_bottom = 123.667
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.3334
+offset_top = -1.33333
+offset_right = 62.3337
+offset_bottom = 58.6667
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0001
+offset_top = 62.0
+offset_right = 61.9997
+offset_bottom = 122.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 124.667
+offset_right = 61.9997
+offset_bottom = 184.667
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 188.0
+offset_right = 61.9997
+offset_bottom = 248.0
+texture = ExtResource("3_d05iw")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10

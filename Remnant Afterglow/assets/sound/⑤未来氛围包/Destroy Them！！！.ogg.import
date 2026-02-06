@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dvps40r6rs0na"
+path="res://.godot/imported/Destroy Them！！！.ogg-d9d27559cc8dc73fddb32c20ed834730.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/⑤未来氛围包/Destroy Them！！！.ogg"
+dest_files=["res://.godot/imported/Destroy Them！！！.ogg-d9d27559cc8dc73fddb32c20ed834730.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,8 +1,6 @@
-using GameLog;
 using Godot;
 using Remnant_Afterglow_EditMap;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Remnant_Afterglow
 {
@@ -12,13 +10,14 @@ namespace Remnant_Afterglow
 		/// 图块资源
 		/// </summary>
 		public LoadTileSetConfig loadTileSetConfig;
-		public Dictionary<int, NavigationRegion2D> regionDict = new Dictionary<int, NavigationRegion2D>();
-		public Dictionary<int, NavigationPolygon> polygonDict = new Dictionary<int, NavigationPolygon>();
 		/// <summary>
 		/// 地图各层数据
 		/// </summary>
 		public Dictionary<int, Cell[,]> layerData = new Dictionary<int, Cell[,]>();
-
+		/// <summary>
+		/// <实体id, 实体数据>
+		/// </summary>
+		public Dictionary<int, EntityData> entityDict = new Dictionary<int, EntityData>();
 		/// <summary>
 		/// 地图宽度
 		/// </summary>
@@ -30,12 +29,11 @@ namespace Remnant_Afterglow
 		/// <summary>
 		/// 固定地图配置
 		/// </summary>
-		public GenerateFixedMap cfgData;
+		public string mapName;
 		/// <summary>
 		/// 固定地图的数据
 		/// </summary>
 		public MapDrawData mapDrawData;
-		public List<MapNavigate> navigateList = new List<MapNavigate>();
 		public List<MapPassType> mapPassTypeList = new List<MapPassType>();
 		public override void _Ready()
 		{
@@ -49,22 +47,20 @@ namespace Remnant_Afterglow
 		{
 			buildShow = GetNode<Sprite2D>("建造预览");
 			line2D = GetNode<Line2D>("建造预览/边框线");
-			shape2D= GetNode<CollisionShape2D>("建造预览/占地区域/形状");
-			area2D = GetNode<Area2D>("建造预览/占地区域");
 			loadTileSetConfig = new LoadTileSetConfig(1);
 			TileSet = loadTileSetConfig.GetTileSet();
 
 		}
 
 
-		public void InitData(int cfgId)
+		public void InitData(string mapName)
 		{
-			cfgData = ConfigCache.GetGenerateFixedMap(cfgId);
-			mapDrawData = MapDrawData.GetMapDrawData(EditConstant.Map_Path, cfgData.MapName);
+			mapDrawData = MapDrawData.GetMapDrawData(EditConstant.Map_Path, mapName);
 			Width = mapDrawData.Width;
 			Height = mapDrawData.Height;
 			layerData = mapDrawData.layerData;
-			if (!layerData.ContainsKey(MapConstant.MapLogicLayer))//不存在该层就自行加上
+			entityDict = mapDrawData.entityDict;
+			if (!layerData.ContainsKey(MapConstant.MapLogicLayer))//对逻辑层数据进行处理
 			{
 				layerData[MapConstant.MapLogicLayer] = new Cell[Width, Height];
 			}
@@ -72,16 +68,23 @@ namespace Remnant_Afterglow
 				NavigationVisibilityMode = VisibilityMode.ForceShow;
 			if (MapConstant.IsShow_Collide)
 				CollisionVisibilityMode = VisibilityMode.ForceShow;
-
-			CreatMap();//创建地图
-			//CreatNavigation();//创建导航地图
 		}
 
 		/// <summary>
-		/// 创建地图
+		/// 初始化绘制
 		/// </summary>
-		public void CreatMap()
+		public void InitDraw()
 		{
+			InitDrawMap();//初始化绘制地图
+			InitDrawEntity();//初始化绘制实体
+		}
+
+		/// <summary>
+		/// 初始化绘制地图
+		/// </summary>
+		public void InitDrawMap()
+		{
+			(int dx, int dy)[] directions = MapConstant.Terraindirections;
 			foreach (var Layer in layerData)
 			{
 				int layer = Layer.Key;//当前层
@@ -93,111 +96,85 @@ namespace Remnant_Afterglow
 					}
 				}
 				Cell[,] map = Layer.Value;//本层的结构
-				for (int i = 0; i < map.GetLength(0); i++)
-				{
-					for (int j = 0; j < map.GetLength(1); j++)
-					{
 
-						SetCell(layer, new Vector2I(i, j), map[i, j].MapImageId, map[i, j].ImagePos);
-					}
-				}
-			}
-		}
-
-		
-		/// <summary>
-		/// 创建导航地图
-		/// </summary>
-		public void CreatNavigation()
-		{
-			int cellsize = MapConstant.TileCellSize;
-			Cell[,] logicMap = layerData[MapConstant.MapLogicLayer];//导航层
-			for (int i = 0; i < logicMap.GetLength(0); i++)
-			{
-				for (int j = 0; j < logicMap.GetLength(1); j++)
+				int width = map.GetLength(0);
+				int height = map.GetLength(1);
+				for (int i = 0; i < width; i++)
 				{
-					if (logicMap[i, j].index != 0)
+					for (int j = 0; j < height; j++)
 					{
-						if (MapImageSet.LogicMaterialList.Contains(logicMap[i, j].index))
+						if (MapConstant.EditSet.Contains(map[i, j].index))//是否需要边缘处理
 						{
-							MapFixedMaterial item = ConfigCache.GetMapFixedMaterial(logicMap[i, j].index);
-							polygonDict[item.PassTypeId].AddOutline(new[]
+							Cell cell = map[i, j];
+							uint flags = 0;
+							// 遍历所有方向
+							for (int index = 0; index < directions.Length; index++)
 							{
-								new Vector2(i,j)*cellsize,
-								new Vector2(i+1,j)*cellsize,
-								new Vector2(i+1, j+1)*cellsize,
-								new Vector2(i, j+1)*cellsize
-							});
-						}
-					}
-				}
-			}
-			foreach (var mapPassType in mapPassTypeList)
-			{
-				if (mapPassType.PassTypeId == 0)
-					continue;
-				regionDict[mapPassType.PassTypeId].BakeNavigationPolygon(false);
-			}
-		}
-
-		/***
-		/// <summary>
-		/// 创建导航地图
-		/// </summary>
-		public void CreatNavigation()
-		{
-			int cellsize = MapConstant.TileCellSize;
-			Cell[,] logicMap = layerData[MapConstant.MapLogicLayer];//导航层
-			for (int i = 0; i < logicMap.GetLength(0); i++)
-			{
-				for (int j = 0; j < logicMap.GetLength(1); j++)
-				{
-					if (logicMap[i, j].index != 0)
-					{
-						if (MapImageSet.LogicMaterialList.Contains(logicMap[i, j].index))
-						{
-							MapFixedMaterial item = ConfigCache.GetMapFixedMaterial(logicMap[i, j].index);
-							MapPassType mapPass = ConfigCache.GetMapPassType(item.PassTypeId);
-							//可通行的层
-							List<MapNavigate> passList = navigateList.FindAll((MapNavigate t) => { return !mapPass.NoPassList.Contains(t.NavigateLayerId); });
-							foreach (MapNavigate navigate in passList)
+								int checkX = i + directions[index].dx;
+								int checkY = j + directions[index].dy;
+								// 检查边界
+								if (checkX >= 0 && checkX < width && checkY >= 0 && checkY < height)
+								{
+									// 检查是否是同类母图块
+									if (cell.TerrainEquals(map[checkX, checkY]))
+										flags |= 1u << index;
+								}
+								else
+									flags |= 1u << index;  // 使用 1u 代替 (byte)(1 << index)
+							}
+							if (flags == 0)
 							{
-								if(navigate.NavigateLayerId ==1)
-								polygonDict[navigate.NavigateLayerId].AddOutline(new[]
-									{
-									new Vector2(i,j)*cellsize,
-									new Vector2(i+1,j)*cellsize,
-									new Vector2(i+1, j+1)*cellsize,
-									new Vector2(i, j+1)*cellsize
-								});
+								SetCell(layer, new Vector2I(i, j), cell.MapImageId, map[i, j].ImagePos);
+							}
+							else
+							{
+								int bit = TileSetTerrainInfo.TerrainBitToIndex(flags);
+								SetCell(layer, new Vector2I(i, j), cell.MapImageId, TileSetTerrainInfo.TerrainIndexToCoords(bit));
 							}
 						}
+						else
+						{
+							SetCell(layer, new Vector2I(i, j), map[i, j].MapImageId, map[i, j].ImagePos);
+						}
 					}
 				}
 			}
-			foreach (MapNavigate navigate in navigateList)
+		}
+		/// <summary>
+		/// 初始化绘制实体
+		/// </summary>
+		public void InitDrawEntity()
+		{
+			foreach (var info in entityDict)
 			{
-				//polygon.MakePolygonsFromOutlines();
-				Log.Print(NavigationServer2D.GetMaps());
-				regionDict[navigate.NavigateLayerId].BakeNavigationPolygon(false);
-				Log.Print(navigate.NavigateLayerId);
+				int objectId = info.Key;//实体id
+				EntityData entityData = info.Value;
+				BuildData buildData = ConfigCache.GetBuildData(objectId);
+				if (buildData.Type == 0)
+				{
+					foreach (List<int> item in entityData.PosL)
+					{
+						ObjectManager.Instance.CreateMapBuild(objectId, item[0], new Vector2I(item[1], item[2]));
+					}
+				}
+				else
+				{
+					foreach (List<int> item in entityData.PosL)
+					{
+						ObjectManager.Instance.CreateMapTower(objectId, item[0], new Vector2I(item[1], item[2]));
+					}
+				}
 			}
-		}***/
+		}
 
 		public override void _PhysicsProcess(double delta)
 		{
 			UpdateView(delta);//更新界面
 		}
 
-
-
-
-
 		/// <summary>
 		/// 获取鼠标位置在地图中的位置
 		/// </summary>
-		/// <param name="pos"></param>
-		/// <returns></returns>
 		public Vector2I GetLocalMousePos()
 		{
 			return LocalToMap(GetGlobalMousePosition());

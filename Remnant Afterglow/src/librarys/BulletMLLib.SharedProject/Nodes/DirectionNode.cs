@@ -3,20 +3,20 @@ namespace BulletMLLib.SharedProject.Nodes;
 public class DirectionNode : BulletMLNode
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="DirectionNode"/> class.
+    /// 初始化 <see cref="DirectionNode"/> 类的新实例。
     /// </summary>
     public DirectionNode()
         : base(ENodeName.direction)
     {
-        //set the default type to "aim"
+        //将默认类型设置为"aim"
         NodeType = ENodeType.aim;
     }
 
     /// <summary>
-    /// Gets or sets the type of the node.
-    /// This is virtual so sub-classes can override it and validate their own shit.
+    /// 获取或设置节点的类型。
+    /// 这是虚拟属性，因此子类可以覆盖它并验证它们自己的内容。
     /// </summary>
-    /// <value>The type of the node.</value>
+    /// <value>节点的类型。</value>
     public override ENodeType NodeType
     {
         get => base.NodeType;

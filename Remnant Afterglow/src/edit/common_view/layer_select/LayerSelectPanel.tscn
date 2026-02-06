@@ -1,13 +1,15 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7n1248vrbcli"]
 
-[ext_resource type="Script" path="res://src/edit/common_view/layer_select/LayerSelectPanel.cs" id="1_vjbwy"]
+[ext_resource type="Script" uid="uid://bbohhneltlx0a" path="res://src/edit/common_view/layer_select/LayerSelectPanel.cs" id="1_vjbwy"]
 
 [node name="LayerSelectPanel" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1420.0
+offset_left = 1707.0
+offset_right = 1.0
 offset_bottom = -780.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -19,30 +21,38 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_right = 142.0
-offset_bottom = 23.0
-text = "图层名称:"
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 66.0
+offset_bottom = 17.25
+scale = Vector2(1.09442, 1.09442)
+text = "图层名称："
 
 [node name="Label2" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 241.0
+offset_left = 123.0
 offset_top = 1.0
-offset_right = 383.0
-offset_bottom = 24.0
-text = "是否显示："
+offset_right = 188.0
+offset_bottom = 17.25
+scale = Vector2(1.07919, 1.07919)
+text = "图层可见："
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
 offset_top = 36.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 

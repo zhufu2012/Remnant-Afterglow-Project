@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://caj7aqvp7xmpy"]
 
-[ext_resource type="Script" path="res://src/core/ui/mod_view/SingleMod.cs" id="1_1ooex"]
+[ext_resource type="Script" uid="uid://b50qya4ajcpfa" path="res://src/core/ui/mod_view/SingleMod.cs" id="1_1ooex"]
 
 [node name="SingleMod" type="Button"]
 offset_right = 420.0

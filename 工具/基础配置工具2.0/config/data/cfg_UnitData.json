@@ -10,7 +10,11 @@
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
     },
     {
         "KEY_INDEX": "1002",
@@ -23,181 +27,214 @@
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
     },
     {
-        "KEY_INDEX": "1003",
-        "ObjectId": 1003,
-        "UnitName": "轮胎",
+        "KEY_INDEX": "7001",
+        "ObjectId": 7001,
+        "UnitName": "装甲人形",
         "AnimaTypeList": [
-            1
+            1,
+            2
         ],
         "ShadowSprite": "null",
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
     },
     {
-        "KEY_INDEX": "1004",
-        "ObjectId": 1004,
-        "UnitName": "撞击轮",
+        "KEY_INDEX": "7002",
+        "ObjectId": 7002,
+        "UnitName": "自爆人形",
         "AnimaTypeList": [
-            1
+            1,
+            2
         ],
         "ShadowSprite": "null",
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
     },
     {
-        "KEY_INDEX": "1005",
-        "ObjectId": 1005,
-        "UnitName": "锯片",
+        "KEY_INDEX": "7003",
+        "ObjectId": 7003,
+        "UnitName": "好战者",
         "AnimaTypeList": [
-            1
+            1,
+            2
         ],
         "ShadowSprite": "null",
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": true,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "./data/config/images/ID_0A5CE180590A44849EDD25154A69C4BF.png"
     },
     {
-        "KEY_INDEX": "1006",
-        "ObjectId": 1006,
-        "UnitName": "牙钳",
+        "KEY_INDEX": "7006",
+        "ObjectId": 7006,
+        "UnitName": "翻越者",
         "AnimaTypeList": [
-            1
+            1,
+            2
         ],
         "ShadowSprite": "null",
         "ShadowOffset": [
             0,
             0
-        ]
-    },
-    {
-        "KEY_INDEX": "1007",
-        "ObjectId": 1007,
-        "UnitName": "分形",
-        "AnimaTypeList": [
-            1
         ],
-        "ShadowSprite": "null",
-        "ShadowOffset": [
-            0,
-            0
-        ]
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
     },
     {
-        "KEY_INDEX": "1008",
-        "ObjectId": 1008,
-        "UnitName": "射手",
-        "AnimaTypeList": [
-            1
-        ],
-        "ShadowSprite": "null",
-        "ShadowOffset": [
-            0,
-            0
-        ]
-    },
-    {
-        "KEY_INDEX": "1009",
-        "ObjectId": 1009,
-        "UnitName": "电锯",
-        "AnimaTypeList": [
-            1
-        ],
-        "ShadowSprite": "null",
-        "ShadowOffset": [
-            0,
-            0
-        ]
-    },
-    {
-        "KEY_INDEX": "1010",
-        "ObjectId": 1010,
-        "UnitName": "喷火者",
-        "AnimaTypeList": [
-            1
-        ],
-        "ShadowSprite": "null",
-        "ShadowOffset": [
-            0,
-            0
-        ]
-    },
-    {
-        "KEY_INDEX": "1011",
-        "ObjectId": 1011,
-        "UnitName": "胶囊",
-        "AnimaTypeList": [
-            1
-        ],
-        "ShadowSprite": "null",
-        "ShadowOffset": [
-            0,
-            0
-        ]
-    },
-    {
-        "KEY_INDEX": "1012",
-        "ObjectId": 1012,
-        "UnitName": "尖刺",
-        "AnimaTypeList": [
-            1
-        ],
-        "ShadowSprite": "null",
-        "ShadowOffset": [
-            0,
-            0
-        ]
-    },
-    {
-        "KEY_INDEX": "1013",
-        "ObjectId": 1013,
-        "UnitName": "侍卫",
-        "AnimaTypeList": [
-            1
-        ],
-        "ShadowSprite": "null",
-        "ShadowOffset": [
-            0,
-            0
-        ]
-    },
-    {
-        "KEY_INDEX": "1014",
-        "ObjectId": 1014,
-        "UnitName": "电击",
-        "AnimaTypeList": [
-            1
-        ],
-        "ShadowSprite": "null",
-        "ShadowOffset": [
-            0,
-            0
-        ]
-    },
-    {
-        "KEY_INDEX": "1015",
-        "ObjectId": 1015,
+        "KEY_INDEX": "7009",
+        "ObjectId": 7009,
         "UnitName": "刺击者",
         "AnimaTypeList": [
-            1
+            1,
+            2
         ],
         "ShadowSprite": "null",
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": true,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "./data/config/images/ID_26A1FA193C98493C99C09878E58707D9.png"
     },
     {
-        "KEY_INDEX": "1016",
-        "ObjectId": 1016,
-        "UnitName": "双联射手",
+        "KEY_INDEX": "7010",
+        "ObjectId": 7010,
+        "UnitName": "胶囊",
+        "AnimaTypeList": [
+            1,
+            2
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "8005",
+        "ObjectId": 8005,
+        "UnitName": "速射战车",
+        "AnimaTypeList": [
+            1,
+            2
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "8006",
+        "ObjectId": 8006,
+        "UnitName": "臼炮战车",
+        "AnimaTypeList": [
+            1,
+            2
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "8001",
+        "ObjectId": 8001,
+        "UnitName": "作战人形",
+        "AnimaTypeList": [
+            1,
+            2
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "8002",
+        "ObjectId": 8002,
+        "UnitName": "射手人形",
+        "AnimaTypeList": [
+            1,
+            2
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "8003",
+        "ObjectId": 8003,
+        "UnitName": "枪手",
+        "AnimaTypeList": [
+            1,
+            2
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "8004",
+        "ObjectId": 8004,
+        "UnitName": "等离子",
         "AnimaTypeList": [
             1
         ],
@@ -205,12 +242,70 @@
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
     },
     {
-        "KEY_INDEX": "1017",
-        "ObjectId": 1017,
-        "UnitName": "火炮手",
+        "KEY_INDEX": "8007",
+        "ObjectId": 8007,
+        "UnitName": "怒火级陆行舰",
+        "AnimaTypeList": [
+            1,
+            2
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "9001",
+        "ObjectId": 9001,
+        "UnitName": "冲击钻头",
+        "AnimaTypeList": [
+            1,
+            2
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "9002",
+        "ObjectId": 9002,
+        "UnitName": "推土机",
+        "AnimaTypeList": [
+            1,
+            2
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10001",
+        "ObjectId": 10001,
+        "UnitName": "干扰体",
         "AnimaTypeList": [
             1
         ],
@@ -218,12 +313,16 @@
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
     },
     {
-        "KEY_INDEX": "1018",
-        "ObjectId": 1018,
-        "UnitName": "轰击",
+        "KEY_INDEX": "10003",
+        "ObjectId": 10003,
+        "UnitName": "侦测者",
         "AnimaTypeList": [
             1
         ],
@@ -231,12 +330,16 @@
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
     },
     {
-        "KEY_INDEX": "1019",
-        "ObjectId": 1019,
-        "UnitName": "溶解",
+        "KEY_INDEX": "10004",
+        "ObjectId": 10004,
+        "UnitName": "加固侦测者",
         "AnimaTypeList": [
             1
         ],
@@ -244,6 +347,197 @@
         "ShadowOffset": [
             0,
             0
-        ]
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10005",
+        "ObjectId": 10005,
+        "UnitName": "干扰侦测者",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10006",
+        "ObjectId": 10006,
+        "UnitName": "导弹攻坚者",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10007",
+        "ObjectId": 10007,
+        "UnitName": "大型导弹攻坚者",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10008",
+        "ObjectId": 10008,
+        "UnitName": "小型炮艇",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10009",
+        "ObjectId": 10009,
+        "UnitName": "大型炮艇",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10019",
+        "ObjectId": 10019,
+        "UnitName": "旋翼",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10020",
+        "ObjectId": 10020,
+        "UnitName": "大型旋翼",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10023",
+        "ObjectId": 10023,
+        "UnitName": "自毁者",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10024",
+        "ObjectId": 10024,
+        "UnitName": "磁壳自毁者",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10025",
+        "ObjectId": 10025,
+        "UnitName": "重投轰炸机",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
+    },
+    {
+        "KEY_INDEX": "10031",
+        "ObjectId": 10031,
+        "UnitName": "运输飞艇A型",
+        "AnimaTypeList": [
+            1
+        ],
+        "ShadowSprite": "null",
+        "ShadowOffset": [
+            0,
+            0
+        ],
+        "IsChassis": false,
+        "IsRotate": true,
+        "RotationSpeed": 90,
+        "ChassisImg": "null"
     }
 ]

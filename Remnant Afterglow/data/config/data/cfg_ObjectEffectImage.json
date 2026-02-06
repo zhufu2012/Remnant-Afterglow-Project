@@ -1,0 +1,14 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "EffectImageId": 1,
+        "Offset": [
+            0,
+            0
+        ],
+        "Index": 10,
+        "EffectType": 0,
+        "EffectValueList": [],
+        "FrameAnimaDes": "./data/config/images/ID_A4D2C744AB234D4EA9B694519F5152C0.png"
+    }
+]

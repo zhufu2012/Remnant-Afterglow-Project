@@ -2,14 +2,14 @@
   - addons                // 插件目录
   - assets                // 资源目录
   - data				  // 游戏数据和配置文件夹
-  - dll                   // 外部加载dll
+  - functions			  // 游戏内各功能界面及图片资源
   - mods				  // 模组加载文件夹
   - save				  // 存档保存文件夹
   - scenes                // 场景目录
   - scripts               // 脚本目录 gd脚本等
   - shader				  // 着色器
   - src 				  // c#代码目录
-  - temp				  //临时使用的图片
+  - temp				  // 临时使用的图片
   - ui                    // 用户界面目录
   - config.cfg            // 项目配置文件
   - README.md             // 项目说明文档

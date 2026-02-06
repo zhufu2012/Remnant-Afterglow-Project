@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://bun70bkixuddx"]
-
-[node name="ScienceNode" type="Panel"]
-offset_right = 49.0
-offset_bottom = 10.0

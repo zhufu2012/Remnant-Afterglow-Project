@@ -7,15 +7,15 @@ namespace Remnant_Afterglow
     public partial class BuffTag
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// buff标签Id
         /// </summary>
         public int TagId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 标签名称
         /// </summary>
         public string TagName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 覆盖
         ///实体拥有存在该标签的buff时，
         ///再添加存在以下标签的其他buff，旧标签的所有buff都会被移除
@@ -25,7 +25,7 @@ namespace Remnant_Afterglow
         ///tag1的覆盖id填写了tag2,那么当添加buff3(有tag2)时，buff1和buff2都移除
         /// </summary>
         public HashSet<int> ReplaceTagIdList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 互斥
         ///实体拥有存在该标签的buff时，
         ///不能再添加存在以下标签的其他buff，

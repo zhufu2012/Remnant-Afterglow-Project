@@ -81,7 +81,7 @@ namespace Remnant_Afterglow
                     return false;
                 }
             }
-            return false;
+            return true;
         }
 
     }

@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "KEY_INDEX": "BigMap_Show_MoneyIdList",
+        "ConfigId": "BigMap_Show_MoneyIdList",
+        "ConfigName": "大地图显示的货币id顺序",
+        "ConfigValue": []
+    },
+    {
+        "KEY_INDEX": "Map_Show_MoneyIdOrder",
+        "ConfigId": "Map_Show_MoneyIdOrder",
+        "ConfigName": "作战地图显示的货币id顺序",
+        "ConfigValue": [
+            1,
+            2,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "Map_Show_SpecMoneyIdList",
+        "ConfigId": "Map_Show_SpecMoneyIdList",
+        "ConfigName": "作战地图使用特殊进度条显示的货币id列表",
+        "ConfigValue": [
+            3
+        ]
+    }
+]

@@ -10,6 +10,7 @@
                 0
             ]
         ],
+        "Mass": 1,
         "AttackIsMove": false,
         "ForceAttackRange": 20.0,
         "PathfindingDis": 80.0,
@@ -27,6 +28,7 @@
                 0
             ]
         ],
+        "Mass": 1,
         "AttackIsMove": false,
         "ForceAttackRange": 20.0,
         "PathfindingDis": 80.0,
@@ -34,57 +36,574 @@
         "ImmuneList": []
     },
     {
-        "KEY_INDEX": "700001",
-        "ObjectId": 700001,
+        "KEY_INDEX": "7001",
+        "ObjectId": 7001,
         "UnitAIType": 0,
-        "WeaponList": [],
+        "WeaponList": [
+            [
+                7001,
+                0,
+                0
+            ]
+        ],
+        "Mass": 1,
         "AttackIsMove": false,
-        "ForceAttackRange": 40.0,
-        "PathfindingDis": 120.0,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "7002",
+        "ObjectId": 7002,
+        "UnitAIType": 0,
+        "WeaponList": [
+            [
+                7002,
+                0,
+                0
+            ]
+        ],
+        "Mass": 1,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
         "IsRotateWeapon": false,
         "ImmuneList": []
     },
     {
-        "KEY_INDEX": "700002",
-        "ObjectId": 700002,
+        "KEY_INDEX": "7003",
+        "ObjectId": 7003,
         "UnitAIType": 0,
-        "WeaponList": [],
+        "WeaponList": [
+            [
+                7003,
+                -28,
+                10
+            ]
+        ],
+        "Mass": 1,
         "AttackIsMove": false,
-        "ForceAttackRange": 40.0,
-        "PathfindingDis": 120.0,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "7006",
+        "ObjectId": 7006,
+        "UnitAIType": 1,
+        "WeaponList": [
+            [
+                7006,
+                0,
+                0
+            ]
+        ],
+        "Mass": 3,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "7009",
+        "ObjectId": 7009,
+        "UnitAIType": 0,
+        "WeaponList": [
+            [
+                7009,
+                -26,
+                10
+            ]
+        ],
+        "Mass": 3,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "7010",
+        "ObjectId": 7010,
+        "UnitAIType": 0,
+        "WeaponList": [
+            [
+                7010,
+                0,
+                0
+            ]
+        ],
+        "Mass": 1,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
         "IsRotateWeapon": false,
         "ImmuneList": []
     },
     {
-        "KEY_INDEX": "700003",
-        "ObjectId": 700003,
+        "KEY_INDEX": "8001",
+        "ObjectId": 8001,
         "UnitAIType": 0,
-        "WeaponList": [],
+        "WeaponList": [
+            [
+                8001,
+                0,
+                0
+            ]
+        ],
+        "Mass": 1,
         "AttackIsMove": false,
-        "ForceAttackRange": 40.0,
-        "PathfindingDis": 120.0,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "8002",
+        "ObjectId": 8002,
+        "UnitAIType": 0,
+        "WeaponList": [
+            [
+                8002,
+                0,
+                0
+            ]
+        ],
+        "Mass": 1,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "8003",
+        "ObjectId": 8003,
+        "UnitAIType": 0,
+        "WeaponList": [
+            [
+                8003,
+                0,
+                0
+            ]
+        ],
+        "Mass": 3,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
         "IsRotateWeapon": false,
         "ImmuneList": []
     },
     {
-        "KEY_INDEX": "700004",
-        "ObjectId": 700004,
+        "KEY_INDEX": "8004",
+        "ObjectId": 8004,
         "UnitAIType": 0,
-        "WeaponList": [],
+        "WeaponList": [
+            [
+                8004,
+                0,
+                0
+            ]
+        ],
+        "Mass": 2,
         "AttackIsMove": false,
-        "ForceAttackRange": 40.0,
-        "PathfindingDis": 120.0,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
         "IsRotateWeapon": false,
         "ImmuneList": []
     },
     {
-        "KEY_INDEX": "700005",
-        "ObjectId": 700005,
+        "KEY_INDEX": "8005",
+        "ObjectId": 8005,
         "UnitAIType": 0,
-        "WeaponList": [],
+        "WeaponList": [
+            [
+                8005,
+                0,
+                0
+            ]
+        ],
+        "Mass": 2,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "8006",
+        "ObjectId": 8006,
+        "UnitAIType": 0,
+        "WeaponList": [
+            [
+                8006,
+                0,
+                0
+            ]
+        ],
+        "Mass": 2,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "8007",
+        "ObjectId": 8007,
+        "UnitAIType": 0,
+        "WeaponList": [
+            [
+                80071,
+                11,
+                -9
+            ],
+            [
+                80071,
+                -11,
+                -9
+            ],
+            [
+                80072,
+                0,
+                -20
+            ]
+        ],
+        "Mass": 3,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": true,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "9001",
+        "ObjectId": 9001,
+        "UnitAIType": 0,
+        "WeaponList": [
+            [
+                9001,
+                0,
+                -29
+            ]
+        ],
+        "Mass": 4,
         "AttackIsMove": false,
-        "ForceAttackRange": 40.0,
-        "PathfindingDis": 120.0,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "9002",
+        "ObjectId": 9002,
+        "UnitAIType": 0,
+        "WeaponList": [
+            [
+                9002,
+                0,
+                -29
+            ]
+        ],
+        "Mass": 4,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 160.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10001",
+        "ObjectId": 10001,
+        "UnitAIType": 3,
+        "WeaponList": [],
+        "Mass": 1,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10003",
+        "ObjectId": 10003,
+        "UnitAIType": 3,
+        "WeaponList": [
+            [
+                10003,
+                0,
+                0
+            ]
+        ],
+        "Mass": 2,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10004",
+        "ObjectId": 10004,
+        "UnitAIType": 3,
+        "WeaponList": [
+            [
+                10004,
+                0,
+                0
+            ]
+        ],
+        "Mass": 2,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10005",
+        "ObjectId": 10005,
+        "UnitAIType": 3,
+        "WeaponList": [
+            [
+                10005,
+                0,
+                0
+            ]
+        ],
+        "Mass": 2,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10006",
+        "ObjectId": 10006,
+        "UnitAIType": 3,
+        "WeaponList": [
+            [
+                10006,
+                0,
+                -20
+            ],
+            [
+                10006,
+                0,
+                -10
+            ],
+            [
+                10006,
+                0,
+                10
+            ],
+            [
+                10006,
+                0,
+                20
+            ]
+        ],
+        "Mass": 1,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10007",
+        "ObjectId": 10007,
+        "UnitAIType": 3,
+        "WeaponList": [
+            [
+                10006,
+                0,
+                -40
+            ],
+            [
+                10006,
+                0,
+                -30
+            ],
+            [
+                10006,
+                0,
+                -20
+            ],
+            [
+                10006,
+                0,
+                -10
+            ],
+            [
+                10006,
+                0,
+                10
+            ],
+            [
+                10006,
+                0,
+                20
+            ],
+            [
+                10006,
+                0,
+                30
+            ],
+            [
+                10006,
+                0,
+                40
+            ]
+        ],
+        "Mass": 2,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10008",
+        "ObjectId": 10008,
+        "UnitAIType": 3,
+        "WeaponList": [
+            [
+                10008,
+                0,
+                0
+            ]
+        ],
+        "Mass": 1,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10009",
+        "ObjectId": 10009,
+        "UnitAIType": 3,
+        "WeaponList": [
+            [
+                10009,
+                0,
+                0
+            ]
+        ],
+        "Mass": 3,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10019",
+        "ObjectId": 10019,
+        "UnitAIType": 3,
+        "WeaponList": [
+            [
+                10019,
+                0,
+                -10
+            ],
+            [
+                10019,
+                0,
+                10
+            ]
+        ],
+        "Mass": 1,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10020",
+        "ObjectId": 10020,
+        "UnitAIType": 3,
+        "WeaponList": [
+            [
+                10019,
+                0,
+                -20
+            ],
+            [
+                10019,
+                0,
+                -10
+            ],
+            [
+                10019,
+                0,
+                10
+            ],
+            [
+                10019,
+                0,
+                20
+            ]
+        ],
+        "Mass": 3,
+        "AttackIsMove": false,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10023",
+        "ObjectId": 10023,
+        "UnitAIType": 3,
+        "WeaponList": [],
+        "Mass": 4,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10024",
+        "ObjectId": 10024,
+        "UnitAIType": 3,
+        "WeaponList": [],
+        "Mass": 5,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10025",
+        "ObjectId": 10025,
+        "UnitAIType": 3,
+        "WeaponList": [],
+        "Mass": 6,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
+        "IsRotateWeapon": false,
+        "ImmuneList": []
+    },
+    {
+        "KEY_INDEX": "10031",
+        "ObjectId": 10031,
+        "UnitAIType": 3,
+        "WeaponList": [],
+        "Mass": 4,
+        "AttackIsMove": true,
+        "ForceAttackRange": 80.0,
+        "PathfindingDis": 80.0,
         "IsRotateWeapon": false,
         "ImmuneList": []
     }

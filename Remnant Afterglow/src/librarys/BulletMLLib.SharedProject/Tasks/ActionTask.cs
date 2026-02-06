@@ -4,33 +4,33 @@ using BulletMLLib.SharedProject.Nodes;
 namespace BulletMLLib.SharedProject.Tasks;
 
 /// <summary>
-/// An action task, this dude contains a list of tasks that are repeated
+/// 动作任务，该对象包含一个可重复执行的任务列表
 /// </summary>
 public class ActionTask : BulletMLTask
 {
-    #region Members
+    #region 成员变量
 
     /// <summary>
-    /// The max number of times to repeat this action
+    /// 动作重复执行的最大次数
     /// </summary>
     public int RepeatNumMax { get; private set; }
 
     /// <summary>
-    /// The number of times this task has been run.
-    /// This starts at 0 and the task will repeat until it hits the "max"
+    /// 此任务已执行的次数
+    /// 从0开始计数，直到达到"最大值"时任务停止重复执行
     /// </summary>
     public int RepeatNum { get; private set; }
 
-    #endregion //Members
+    #endregion //成员变量
 
-    #region Methods
+    #region 方法
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BulletMLLib.ActionTask"/> class.
+    /// 初始化 <see cref="BulletMLLib.ActionTask"/> 类的新实例
     /// </summary>
-    /// <param name="repeatNumMax">Repeat number max.</param>
-    /// <param name="node">Node.</param>
-    /// <param name="owner">Owner.</param>
+    /// <param name="repeatNumMax">最大重复次数</param>
+    /// <param name="node">节点</param>
+    /// <param name="owner">拥有者</param>
     public ActionTask(ActionNode node, BulletMLTask owner)
         : base(node, owner)
     {
@@ -39,94 +39,89 @@ public class ActionTask : BulletMLTask
     }
 
     /// <summary>
-    /// Parse a specified node and bullet into this task
+    /// 将指定的节点和子弹解析到此任务中
     /// </summary>
-    /// <param name="myNode">the node for this dude</param>
-    /// <param name="bullet">the bullet this dude is controlling</param>
+    /// <param name="myNode">此任务的节点</param>
+    /// <param name="bullet">此任务控制的子弹</param>
     public override void ParseTasks(Bullet bullet)
     {
-        //set the number of times to repeat this action
+        //设置此动作的重复次数
         var actionNode = Node as ActionNode;
         Debug.Assert(null != actionNode);
         RepeatNumMax = actionNode.RepeatNum(this, bullet);
 
-        //is this an actionref task?
+        //这是actionref任务吗？
         if (ENodeName.actionRef == Node.Name)
         {
-            //add a sub task under this one for the referenced action
+            //在此任务下添加一个引用动作的子任务
             var myActionRefNode = Node as ActionRefNode;
 
-            //create the action task
+            //创建动作任务
             var actionTask = new ActionTask(myActionRefNode.ReferencedActionNode, this);
 
-            //parse the children of the action node into the task
+            //将动作节点的子节点解析到任务中
             actionTask.ParseTasks(bullet);
 
-            //store the task
+            //存储任务
             ChildTasks.Add(actionTask);
         }
 
-        //call the base class
+        //调用基类方法
         base.ParseTasks(bullet);
     }
 
     /// <summary>
-    /// this sets up the task to be run.
+    /// 设置任务准备运行
     /// </summary>
-    /// <param name="bullet">Bullet.</param>
+    /// <param name="bullet">子弹</param>
     protected override void SetupTask(Bullet bullet)
     {
         RepeatNum = 0;
     }
 
     /// <summary>
-    /// Run this task and all subtasks against a bullet
-    /// This is called once a frame during runtime.
+    /// 对子弹运行此任务和所有子任务
+    /// 在运行时每帧调用一次
     /// </summary>
-    /// <returns>ERunStatus: whether this task is done, paused, or still running</returns>
-    /// <param name="bullet">The bullet to update this task against.</param>
+    /// <returns>ERunStatus: 表示此任务已完成、暂停或仍在运行</returns>
+    /// <param name="bullet">用于更新此任务的子弹</param>
     public override ERunStatus Run(Bullet bullet)
     {
-        //run the action until we hit the limit
+        //重复运行动作直到达到限制次数
         while (RepeatNum < RepeatNumMax)
         {
             var runStatus = base.Run(bullet);
 
-            //What was the return value from running all teh child actions?
+            //运行所有子动作后的返回值是什么？
             switch (runStatus)
             {
                 case ERunStatus.End:
-
-                {
-                    //The actions completed successfully, initialize everything and run it again
-                    RepeatNum++;
-
-                    //reset all the child tasks
-                    foreach (var task in ChildTasks)
                     {
-                        task.InitTask(bullet);
+                        //动作成功完成，初始化所有内容并再次运行
+                        RepeatNum++;
+                        //重置所有子任务
+                        foreach (var task in ChildTasks)
+                        {
+                            task.InitTask(bullet);
+                        }
                     }
-                }
                     break;
-
                 case ERunStatus.Stop:
-                {
-                    //Something in the child tasks paused this action
-                    return runStatus;
-                }
-
+                    {
+                        //子任务中的某些内容暂停了此动作
+                        return runStatus;
+                    }
                 default:
-                {
-                    //One of the child tasks needs to keep running next frame
-                    return ERunStatus.Continue;
-                }
+                    {
+                        //某个子任务需要在下一帧继续运行
+                        return ERunStatus.Continue;
+                    }
             }
         }
-
-        //if it gets here, all the child tasks have been run the correct number of times
+        //如果执行到这里，说明所有子任务都已正确执行了指定次数
         TaskFinished = true;
         return ERunStatus.End;
     }
 
-    #endregion //Methods
+    #endregion //方法
 }

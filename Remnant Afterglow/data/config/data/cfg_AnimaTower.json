@@ -21,10 +21,8 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_BEBA6E998600412490ED72130D4B65C3.png",
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_28E1E9AB59E24BEEBD82B4C905FAA529.png",
         "FlipH": true,
         "FlipV": true
     },
@@ -37,8 +35,8 @@
             0
         ],
         "LengWidth": [
-            120,
-            120
+            80,
+            80
         ],
         "MaxIndex": 1,
         "Size": [
@@ -50,10 +48,8 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_DE6E0C34ED9441279630B1657D8B552D.png",
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_9076BCFFE8B743E291388702EBA3E965.png",
         "FlipH": true,
         "FlipV": true
     },
@@ -66,8 +62,8 @@
             0
         ],
         "LengWidth": [
-            160,
-            160
+            80,
+            80
         ],
         "MaxIndex": 1,
         "Size": [
@@ -79,10 +75,8 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_BAC5617E697146C89739856C7EA2DE9C.png",
         "FlipH": true,
         "FlipV": true
     },
@@ -108,9 +102,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
         "FlipH": true,
         "FlipV": true
@@ -137,9 +129,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_02B46886133B4720AC873E7ED4924F3B.png",
         "FlipH": true,
         "FlipV": true
@@ -166,9 +156,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_FA2D31673C634BB78E48C3E3B4AC0738.png",
         "FlipH": true,
         "FlipV": true
@@ -195,9 +183,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_427E7661D0EA4E048599710A386D6E9D.png",
         "FlipH": true,
         "FlipV": true
@@ -224,9 +210,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_5EEEB453049940DEBE73420F1EF0A8EC.png",
         "FlipH": true,
         "FlipV": true
@@ -253,9 +237,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_0F4174FFEF3E4C7BAFE8AB4778111C89.png",
         "FlipH": true,
         "FlipV": true
@@ -282,9 +264,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_3E72E9DFEEA14803B8AED009C53CB2A5.png",
         "FlipH": true,
         "FlipV": true
@@ -311,9 +291,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_313259228B634A45A49E32D36E6E3980.png",
         "FlipH": true,
         "FlipV": true
@@ -340,9 +318,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_3E72E9DFEEA14803B8AED009C53CB2A5.png",
         "FlipH": true,
         "FlipV": true
@@ -369,9 +345,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_A7F743AFE2FD46EAA09FF7404F510486.png",
         "FlipH": true,
         "FlipV": true
@@ -398,9 +372,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_3E72E9DFEEA14803B8AED009C53CB2A5.png",
         "FlipH": true,
         "FlipV": true
@@ -427,9 +399,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_1650E3A3D5A54E14A24702D844F4E9B6.png",
         "FlipH": true,
         "FlipV": true
@@ -456,9 +426,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_117E4FFD1E004BD08DBB6DF4DC2B8780.png",
         "FlipH": true,
         "FlipV": true
@@ -485,9 +453,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_5EBA871BBDB145CCB718AFBCD11E29DD.png",
         "FlipH": true,
         "FlipV": true
@@ -514,9 +480,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_117E4FFD1E004BD08DBB6DF4DC2B8780.png",
         "FlipH": true,
         "FlipV": true
@@ -543,9 +507,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_C22345BBE7494B58836CA07CC6F588D1.png",
         "FlipH": true,
         "FlipV": true
@@ -572,9 +534,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_117E4FFD1E004BD08DBB6DF4DC2B8780.png",
         "FlipH": true,
         "FlipV": true
@@ -601,28 +561,26 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_C8F1E574379A4424AEAA3E3B19B99209.png",
         "FlipH": true,
         "FlipV": true
     },
     {
-        "KEY_INDEX": "450401_1",
-        "ObjectId": 450401,
+        "KEY_INDEX": "201_1",
+        "ObjectId": 201,
         "AnimaType": 1,
         "Coords": [
             0,
             0
         ],
         "LengWidth": [
-            80,
-            80
+            120,
+            120
         ],
-        "MaxIndex": 1,
+        "MaxIndex": 8,
         "Size": [
-            1,
+            8,
             1
         ],
         "Offset": [
@@ -630,10 +588,62 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_0ADD07DFF37D4438BA2984CC6B50DED7.png",
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_B5AFA920A30E479E99069395816C06CC.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "202_1",
+        "ObjectId": 202,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 8,
+        "Size": [
+            8,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_F09BB24B5AA043D6A684061B2FDC4FC7.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "203_1",
+        "ObjectId": 203,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 8,
+        "Size": [
+            8,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_42EE0AF93B8E4A5B93C133F036C2EDF3.png",
         "FlipH": true,
         "FlipV": true
     },
@@ -659,68 +669,8 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_A4461C8310624320BF13983C26F8BCE0.png",
-        "FlipH": true,
-        "FlipV": true
-    },
-    {
-        "KEY_INDEX": "450601_1",
-        "ObjectId": 450601,
-        "AnimaType": 1,
-        "Coords": [
-            0,
-            0
-        ],
-        "LengWidth": [
-            160,
-            160
-        ],
-        "MaxIndex": 1,
-        "Size": [
-            1,
-            1
-        ],
-        "Offset": [
-            0,
-            0
-        ],
-        "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_2553E170C9E346DF8AE9B4CE86029BF4.png",
-        "FlipH": true,
-        "FlipV": true
-    },
-    {
-        "KEY_INDEX": "100001_1",
-        "ObjectId": 100001,
-        "AnimaType": 1,
-        "Coords": [
-            0,
-            0
-        ],
-        "LengWidth": [
-            80,
-            80
-        ],
-        "MaxIndex": 1,
-        "Size": [
-            1,
-            1
-        ],
-        "Offset": [
-            0,
-            0
-        ],
-        "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
         "FlipH": true,
         "FlipV": true
     },
@@ -746,10 +696,62 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_28E1E9AB59E24BEEBD82B4C905FAA529.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100302_1",
+        "ObjectId": 100302,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_9076BCFFE8B743E291388702EBA3E965.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100303_1",
+        "ObjectId": 100303,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_BAC5617E697146C89739856C7EA2DE9C.png",
         "FlipH": true,
         "FlipV": true
     },
@@ -775,10 +777,62 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_28E1E9AB59E24BEEBD82B4C905FAA529.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100502_1",
+        "ObjectId": 100502,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_9076BCFFE8B743E291388702EBA3E965.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100503_1",
+        "ObjectId": 100503,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_BAC5617E697146C89739856C7EA2DE9C.png",
         "FlipH": true,
         "FlipV": true
     },
@@ -804,10 +858,62 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_28E1E9AB59E24BEEBD82B4C905FAA529.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101002_1",
+        "ObjectId": 101002,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_9076BCFFE8B743E291388702EBA3E965.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101003_1",
+        "ObjectId": 101003,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_BAC5617E697146C89739856C7EA2DE9C.png",
         "FlipH": true,
         "FlipV": true
     },
@@ -833,10 +939,722 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_B21D2B2A481B469FBBECF51109241B0A.png",
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_28E1E9AB59E24BEEBD82B4C905FAA529.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100902_1",
+        "ObjectId": 100902,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_9076BCFFE8B743E291388702EBA3E965.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100903_1",
+        "ObjectId": 100903,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_BAC5617E697146C89739856C7EA2DE9C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101101_1",
+        "ObjectId": 101101,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_28E1E9AB59E24BEEBD82B4C905FAA529.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101102_1",
+        "ObjectId": 101102,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_9076BCFFE8B743E291388702EBA3E965.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101103_1",
+        "ObjectId": 101103,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_BAC5617E697146C89739856C7EA2DE9C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100101_1",
+        "ObjectId": 100101,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_28E1E9AB59E24BEEBD82B4C905FAA529.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100102_1",
+        "ObjectId": 100102,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_9076BCFFE8B743E291388702EBA3E965.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100103_1",
+        "ObjectId": 100103,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_BAC5617E697146C89739856C7EA2DE9C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100201_1",
+        "ObjectId": 100201,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_28E1E9AB59E24BEEBD82B4C905FAA529.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100202_1",
+        "ObjectId": 100202,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_9076BCFFE8B743E291388702EBA3E965.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100203_1",
+        "ObjectId": 100203,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            80,
+            80
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_BAC5617E697146C89739856C7EA2DE9C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101201_1",
+        "ObjectId": 101201,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_D4201C2CC2824EDF9EEBDADAA8AEA548.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101202_1",
+        "ObjectId": 101202,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_CF7A9D4164564103916D72E245DF4AC9.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101203_1",
+        "ObjectId": 101203,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            120,
+            120
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 5,
+        "Picture": "./data/config/images/ID_23762A84435E47B49DCBCBEDF0F495B1.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100401_1",
+        "ObjectId": 100401,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 0,
+        "Picture": "./data/config/images/ID_3281FD42D1254158979FD2F1FEE8CD8C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100601_1",
+        "ObjectId": 100601,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 0,
+        "Picture": "./data/config/images/ID_3281FD42D1254158979FD2F1FEE8CD8C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "101801_1",
+        "ObjectId": 101801,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 0,
+        "Picture": "./data/config/images/ID_3281FD42D1254158979FD2F1FEE8CD8C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "100801_1",
+        "ObjectId": 100801,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 0,
+        "Picture": "./data/config/images/ID_3281FD42D1254158979FD2F1FEE8CD8C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "102101_1",
+        "ObjectId": 102101,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            160,
+            160
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 0,
+        "Picture": "./data/config/images/ID_3281FD42D1254158979FD2F1FEE8CD8C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "201101_1",
+        "ObjectId": 201101,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            40,
+            40
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            5,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 1,
+        "Picture": "./data/config/images/ID_D11D2B3044C94281AB9999F805AB95C8.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "201101_3",
+        "ObjectId": 201101,
+        "AnimaType": 3,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            40,
+            40
+        ],
+        "MaxIndex": 5,
+        "Size": [
+            5,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [
+            [
+                2.0,
+                6.0
+            ],
+            [
+                3.0,
+                3.0
+            ],
+            [
+                4.0,
+                2.0
+            ]
+        ],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_982778376AB4490B87694418098DBDE2.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "201102_1",
+        "ObjectId": 201102,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            40,
+            40
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            5,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 1,
+        "Picture": "./data/config/images/ID_B7C3E42B95B142C1B360C73D5910D5F2.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "201102_3",
+        "ObjectId": 201102,
+        "AnimaType": 3,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            40,
+            40
+        ],
+        "MaxIndex": 5,
+        "Size": [
+            5,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [
+            [
+                2.0,
+                6.0
+            ],
+            [
+                3.0,
+                3.0
+            ],
+            [
+                4.0,
+                2.0
+            ]
+        ],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_4850B5F71105430AB39F7EA988F0983C.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "201103_1",
+        "ObjectId": 201103,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            40,
+            40
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            5,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 1,
+        "Picture": "./data/config/images/ID_F85E9283C1004E089C775E0CC260AD93.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "201103_3",
+        "ObjectId": 201103,
+        "AnimaType": 3,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            40,
+            40
+        ],
+        "MaxIndex": 5,
+        "Size": [
+            5,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [
+            [
+                2.0,
+                6.0
+            ],
+            [
+                3.0,
+                3.0
+            ],
+            [
+                4.0,
+                2.0
+            ]
+        ],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_406DCE8A3A9041E582B331C4E8C3C4E5.png",
         "FlipH": true,
         "FlipV": true
     }

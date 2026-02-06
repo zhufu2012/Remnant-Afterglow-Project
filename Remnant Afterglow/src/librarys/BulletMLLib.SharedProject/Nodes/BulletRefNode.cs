@@ -7,9 +7,9 @@ public class BulletRefNode : BulletNode
     #region Members
 
     /// <summary>
-    /// Gets the referenced bullet node.
+    /// 获取引用的子弹节点。
     /// </summary>
-    /// <value>The referenced bullet node.</value>
+    /// <value>引用的子弹节点。</value>
     public BulletNode ReferencedBulletNode { get; private set; }
 
     #endregion //Members
@@ -17,40 +17,40 @@ public class BulletRefNode : BulletNode
     #region Methods
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BulletRefNode"/> class.
+    /// 初始化 <see cref="BulletRefNode"/> 类的新实例。
     /// </summary>
     public BulletRefNode()
         : base(ENodeName.bulletRef) { }
 
     /// <summary>
-    /// Validates the node.
-    /// Overloaded in child classes to validate that each type of node follows the correct business logic.
-    /// This checks stuff that isn't validated by the XML validation
+    /// 验证节点。
+    /// 在子类中重载以验证每种类型的节点是否遵循正确的业务逻辑。
+    /// 这检查了XML验证未验证的内容
     /// </summary>
     public override void ValidateNode()
     {
-        //do any base class validation
+        //执行任何基类验证
         base.ValidateNode();
 
-        //make sure this dude knows where his bullet node is
+        //确保这个家伙知道他的子弹节点在哪里
         FindMyBulletNode();
     }
 
     /// <summary>
-    /// Finds the referenced bullet node.
+    /// 查找引用的子弹节点。
     /// </summary>
     public void FindMyBulletNode()
     {
         if (null == ReferencedBulletNode)
         {
-            //Find the action node this dude references
+            //查找这个家伙引用的动作节点
             var refNode = GetRootNode().FindLabelNode(Label, ENodeName.bullet);
 
-            //make sure we found something
+            //确保我们找到了什么
             if (null == refNode)
             {
                 throw new NullReferenceException(
-                    "Couldn't find the bullet node \"" + Label + "\""
+                    "找不到子弹节点 \"" + Label + "\""
                 );
             }
 
@@ -58,7 +58,7 @@ public class BulletRefNode : BulletNode
             if (null == ReferencedBulletNode)
             {
                 throw new NullReferenceException(
-                    "The BulletMLNode \"" + Label + "\" isn't a bullet node"
+                    "BulletMLNode \"" + Label + "\" 不是一个子弹节点"
                 );
             }
         }

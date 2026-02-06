@@ -35,6 +35,15 @@ namespace Remnant_Afterglow
         /// 道具唯一id
         /// </summary>
         public const int ID_TYPE_ITEM = 30;
+
+        /// <summary>
+        /// 编辑器 中 预览建筑的唯一id，用于地图编辑器中区分不同建筑实体
+        /// </summary>
+        public const int ID_TYPE_SHOW_BUILD = 38;
+        /// <summary>
+        /// 编辑器 中 预览炮塔的唯一id，用于地图编辑器中区分不同炮塔实体
+        /// </summary>
+        public const int ID_TYPE_SHOW_TOWER = 39;
         /// <summary>
         /// 最大的存储数据库的id 类型
         /// </summary>
@@ -42,7 +51,7 @@ namespace Remnant_Afterglow
         #endregion
 
 
-        /////////////不存储，仅保存内存，游戏重启就重新计算（可以用于防止mod顺序等修改）///////////////
+        /////////////不存储，仅保存在内存，游戏重启就重新计算（可以用于防止mod顺序等修改）///////////////
         /// <summary>
         /// Buff类型的唯一id
         /// </summary>

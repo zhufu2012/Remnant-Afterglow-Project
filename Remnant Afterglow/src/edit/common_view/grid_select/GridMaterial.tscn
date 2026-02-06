@@ -1,13 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://bcyv3ac4tlcq3"]
 
-[ext_resource type="Script" path="res://src/edit/common_view/grid_select/GridMaterial.cs" id="1_o86uv"]
+[ext_resource type="Script" uid="uid://dpmua25a2n2pd" path="res://src/edit/common_view/grid_select/GridMaterial.cs" id="1_o86uv"]
 
 [node name="GridMaterial" type="Button"]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1900.0
-offset_bottom = -1060.0
+offset_right = -1889.0
+offset_bottom = -1056.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o86uv")

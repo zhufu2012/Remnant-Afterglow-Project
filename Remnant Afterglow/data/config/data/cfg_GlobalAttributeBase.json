@@ -1,0 +1,14 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "GlobalAttributeId": 1,
+        "ShowName": "本副本运行帧数",
+        "Describe": "本副本已运行了多少帧"
+    },
+    {
+        "KEY_INDEX": "2",
+        "GlobalAttributeId": 2,
+        "ShowName": "本副本运行秒数",
+        "Describe": "本副本已运行了多少秒"
+    }
+]

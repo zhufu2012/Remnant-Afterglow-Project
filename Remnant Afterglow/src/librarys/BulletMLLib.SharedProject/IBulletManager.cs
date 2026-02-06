@@ -35,14 +35,13 @@ public interface IBulletManager
     /// 创建一个新的子弹。
     /// </summary>
     /// <returns>一个全新的子弹</returns>
-    IBullet CreateBullet(string BulletLabel,BaseObject targetObject, BaseObject createObject);
+    IBullet CreateBullet(Bullet parBullet,BaseObject targetObject, BaseObject createObject);
 
     /// <summary>
-    /// 创建一个新的顶级子弹。
-    /// 这些通常是特殊的子弹，不需要在任务完成后绘制或保留。
+    /// 将发射子弹请求加入队列
     /// </summary>
     /// <returns>一个全新的顶级子弹</returns>
-    IBullet CreateTopBullet(string BulletLabel,BaseObject targetObject, BaseObject createObject);
+    void EnqueueBulletRequest(BulletRequest request);
 
     /// <summary>
     /// 这是在运行时由子弹管理器传递给 Equationator 的项。

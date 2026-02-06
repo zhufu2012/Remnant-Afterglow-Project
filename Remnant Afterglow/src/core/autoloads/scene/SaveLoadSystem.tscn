@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7igaveoe3ehh"]
 
-[ext_resource type="Script" path="res://src/core/autoloads/SaveLoadSystem.cs" id="1_bat4w"]
+[ext_resource type="Script" uid="uid://bvoo7q4t71aep" path="res://src/core/autoloads/SaveLoadSystem.cs" id="1_bat4w"]
 
 [node name="SaveLoadSystem" type="Node"]
 script = ExtResource("1_bat4w")

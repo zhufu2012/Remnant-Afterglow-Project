@@ -105,10 +105,7 @@ public partial class AudioSettingsMenuBuilder : Node2D
         btn.Position = pos;
         btn.Visible = true;
         btn.Text = sound.ToString();
-        btn.Pressed += () => 
-        { 
-            audioServer.Toggle(sound); 
-        };
+        btn.Pressed += () => audioServer.Toggle(sound);
         return btn;
     }
 

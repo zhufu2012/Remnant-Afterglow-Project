@@ -7,23 +7,23 @@ namespace Remnant_Afterglow
     public partial class ExplodeHarm
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 爆炸id
         /// </summary>
         public int ExplodeId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 造成的伤害
         /// </summary>
         public int Harm { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 伤害半径
         /// </summary>
         public int HitRadius { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 击退半径
         /// </summary>
         public float RepelledRadius { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 最大击退速度
         /// </summary>
         public float MaxRepelled { get; set; }

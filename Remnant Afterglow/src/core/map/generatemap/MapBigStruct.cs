@@ -154,11 +154,7 @@ namespace Remnant_Afterglow
             {
                 int cellX = cell_x - X;
                 int cellY = cell_y - Y;
-                if (NowCell[cellX, cellY] != null)
-                {
-                    return true;
-                }
-                return false;
+                return NowCell[cellX, cellY] != default;
             }
             else
             {

@@ -15,7 +15,7 @@ namespace Remnant_Afterglow
 	public class SaveGameParam
 	{
 		/// <summary>
-		/// 选择的语言
+		/// 默认选择的语言
 		/// </summary>
 		public string language = "zh_cn";
 		/// <summary>

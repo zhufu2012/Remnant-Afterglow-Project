@@ -1,0 +1,521 @@
+[gd_scene load_steps=28 format=3 uid="uid://ca5psuo5xdiix"]
+
+[ext_resource type="Script" uid="uid://b0gpryg6thkl7" path="res://src/core/controllers/operation/bigmapop/BigMapOpView.cs" id="1_mt2wv"]
+[ext_resource type="Texture2D" uid="uid://kyxevqj8f2hx" path="res://assets/作战界面素材/设置背景.png" id="2_53oq3"]
+[ext_resource type="Texture2D" uid="uid://du6x3eaabhfyk" path="res://assets/作战界面素材/设置背景2.png" id="2_ut1fg"]
+[ext_resource type="Texture2D" uid="uid://dq424ajdosecl" path="res://assets/作战界面素材/设置图标.png" id="3_mnle7"]
+[ext_resource type="Texture2D" uid="uid://dxpqkm5to4mx1" path="res://assets/主界面素材/大窗口.png" id="4_mnle7"]
+[ext_resource type="Texture2D" uid="uid://f5nebrkys16g" path="res://src/core/controllers/operation/bigmapop/修改配置2.png" id="5_8lr5b"]
+[ext_resource type="ButtonGroup" uid="uid://csbja0j03rgrt" path="res://src/core/controllers/operation/bigmapop/大地图按钮组.tres" id="6_3lrhi"]
+[ext_resource type="Texture2D" uid="uid://cu66j3k8ddo1w" path="res://src/core/controllers/operation/bigmapop/档案库2.png" id="6_60b82"]
+[ext_resource type="Texture2D" uid="uid://1ir6tqmim3k6" path="res://src/core/controllers/operation/bigmapop/科技树2.png" id="7_y27rh"]
+[ext_resource type="Texture2D" uid="uid://j4cm3jdxhuol" path="res://src/core/controllers/operation/bigmapop/修改配置3.png" id="10_7hek7"]
+[ext_resource type="Texture2D" uid="uid://qhkb6dykainb" path="res://src/core/controllers/operation/bigmapop/操作界面.png" id="11_60b82"]
+[ext_resource type="Texture2D" uid="uid://b8fn3ip001c72" path="res://src/core/controllers/operation/bigmapop/修改配置4.png" id="11_sw076"]
+[ext_resource type="Texture2D" uid="uid://dpwi0u1l4bfm3" path="res://src/core/controllers/operation/bigmapop/档案库3.png" id="13_yngu3"]
+[ext_resource type="Texture2D" uid="uid://bxsdks0g02m1o" path="res://src/core/controllers/operation/bigmapop/档案库4.png" id="14_iu7ot"]
+[ext_resource type="Texture2D" uid="uid://j6k4i8lr7x7e" path="res://src/core/controllers/operation/bigmapop/科技树3.png" id="16_xeu5y"]
+[ext_resource type="Texture2D" uid="uid://dap0ov6d66073" path="res://src/core/controllers/operation/bigmapop/科技树4.png" id="17_gta6s"]
+[ext_resource type="Texture2D" uid="uid://besxj7yrppqgq" path="res://src/core/controllers/operation/bigmapop/大地图资源界面.png" id="17_ut1fg"]
+[ext_resource type="PackedScene" uid="uid://bvf0b06phctxb" path="res://src/core/ui/view/science_tree/ScienceTreeView.tscn" id="18_iu7ot"]
+[ext_resource type="Texture2D" uid="uid://cc3e7nufpwjri" path="res://src/core/game/mapLogic/计算机核心.png" id="18_wcf8w"]
+[ext_resource type="Texture2D" uid="uid://dmn0slihtllg3" path="res://assets/作战界面素材/万能齿轮资源数字.png" id="19_p2ay8"]
+[ext_resource type="Texture2D" uid="uid://ccajxmq8pdvki" path="res://src/core/game/mapLogic/关卡通关资源.png" id="20_xyx54"]
+
+[sub_resource type="Animation" id="Animation_k7mw6"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("设置背景:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("设置背景2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("设置背景3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("设置背景4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("设置背景5:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("设置背景6:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("设置背景7:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("设置背景8:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("设置背景9:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("设置背景10:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.14159]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bniw7"]
+resource_local_to_scene = true
+_data = {
+&"旋转": SubResource("Animation_k7mw6")
+}
+
+[sub_resource type="Animation" id="Animation_gta6s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("上方界面:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yngu3"]
+resource_name = "操作界面上升"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("下方界面/操作界面:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.217638, 1),
+"update": 0,
+"values": [Vector2(0, 975), Vector2(0, 880)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("上方界面:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.267943, 1),
+"update": 0,
+"values": [Vector2(960, -143.2), Vector2(960, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_iu7ot"]
+resource_name = "操作界面下降"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("下方界面/操作界面:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.241484, 1),
+"update": 0,
+"values": [Vector2(0, 880), Vector2(0, 975)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("上方界面:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.241484, 1),
+"update": 0,
+"values": [Vector2(960, 0), Vector2(960, -143.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xeu5y"]
+_data = {
+&"RESET": SubResource("Animation_gta6s"),
+&"操作界面上升": SubResource("Animation_yngu3"),
+&"操作界面下降": SubResource("Animation_iu7ot")
+}
+
+[node name="BigMapOpView" type="Control" node_paths=PackedStringArray("SetingButton", "ScienceButton", "RecordButton", "ConfigButton", "ScienceTreeView", "animation")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_mt2wv")
+SetingButton = NodePath("设置按钮")
+ScienceButton = NodePath("下方界面/操作界面/科技树")
+RecordButton = NodePath("下方界面/操作界面/档案库")
+ConfigButton = NodePath("下方界面/操作界面/修改配置")
+ScienceTreeView = NodePath("ScienceTreeView")
+animation = NodePath("操作界面升降")
+metadata/_edit_use_anchors_ = true
+
+[node name="设置按钮" type="Button" parent="."]
+layout_mode = 0
+offset_right = 23.0
+offset_bottom = 24.0
+scale = Vector2(4, 4)
+
+[node name="设置旋转" type="AnimationPlayer" parent="设置按钮"]
+libraries = {
+&"": SubResource("AnimationLibrary_bniw7")
+}
+autoplay = "旋转"
+speed_scale = 0.25
+
+[node name="设置背景" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(11.0235, 11.7363)
+rotation = 0.242156
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("2_ut1fg")
+
+[node name="设置背景2" type="Sprite2D" parent="设置按钮"]
+self_modulate = Color(0.27, 0.27, 0.27, 0.917647)
+z_index = -20
+texture_filter = 1
+position = Vector2(13.6896, 14.3954)
+rotation = 0.242156
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("2_53oq3")
+
+[node name="设置背景3" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(3.10898, 39.1874)
+rotation = -0.242156
+scale = Vector2(0.443556, 0.443556)
+texture = ExtResource("2_53oq3")
+
+[node name="设置背景4" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(32.9571, -3.79964)
+rotation = -0.242156
+scale = Vector2(0.444, 0.444)
+texture = ExtResource("2_53oq3")
+
+[node name="设置背景5" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(53.3907, -1.60243)
+rotation = -0.242156
+scale = Vector2(0.889, 0.889)
+texture = ExtResource("2_53oq3")
+
+[node name="设置图标" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(11.0222, 11.7397)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("3_mnle7")
+
+[node name="设置背景6" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(482.452, 189.555)
+rotation = 0.242156
+scale = Vector2(0.889, 0.889)
+texture = ExtResource("2_53oq3")
+
+[node name="设置背景7" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(367.333, -1.30637)
+rotation = 0.242156
+scale = Vector2(0.889, 0.889)
+texture = ExtResource("2_53oq3")
+
+[node name="设置背景8" type="Sprite2D" parent="设置按钮"]
+self_modulate = Color(0.27, 0.27, 0.27, 0.917647)
+z_index = -20
+texture_filter = 1
+position = Vector2(404.358, 8.71628)
+rotation = -0.242156
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("2_53oq3")
+
+[node name="设置背景9" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(1.21792, 208.183)
+rotation = 0.242156
+scale = Vector2(0.889, 0.889)
+texture = ExtResource("2_53oq3")
+
+[node name="设置背景10" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(-5.91276, 184.71)
+rotation = -0.484311
+scale = Vector2(0.443556, 0.443556)
+texture = ExtResource("2_53oq3")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." groups=["texture_button_sfx"]]
+z_index = -10
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("4_mnle7")
+region_rect = Rect2(0, 0, 254, 254)
+patch_margin_left = 46
+patch_margin_top = 46
+patch_margin_right = 46
+patch_margin_bottom = 46
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="操作界面升降" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xeu5y")
+}
+autoplay = "操作界面上升"
+
+[node name="ScienceTreeView" parent="." instance=ExtResource("18_iu7ot")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.015625
+anchor_top = 0.0546296
+anchor_right = 0.984375
+anchor_bottom = 1.05463
+offset_left = 422.082
+offset_top = 159.233
+offset_right = -362.918
+offset_bottom = -276.767
+
+[node name="上方界面" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+scale = Vector2(2, 2)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="上方界面"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.0
+offset_top = -23.0
+offset_right = 238.0
+offset_bottom = 69.0
+grow_horizontal = 2
+texture = ExtResource("17_ut1fg")
+region_rect = Rect2(0, 0, 239, 92)
+patch_margin_left = 119
+patch_margin_right = 119
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="上方界面"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = 7.0
+offset_right = 119.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="上方界面/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("18_wcf8w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="上方界面/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="上方界面/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "科技点"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="上方界面/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("19_p2ay8")
+
+[node name="TextureRect2" type="TextureRect" parent="上方界面/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("20_xyx54")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="上方界面/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="上方界面/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "关卡完成"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="上方界面/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("19_p2ay8")
+
+[node name="下方界面" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="操作界面" type="NinePatchRect" parent="下方界面"]
+z_index = -10
+texture_filter = 1
+layout_mode = 0
+offset_top = 975.0
+offset_right = 960.0
+offset_bottom = 1078.0
+scale = Vector2(2, 2)
+texture = ExtResource("11_60b82")
+region_rect = Rect2(0, 0, 1006, 100)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="修改配置" type="TextureButton" parent="下方界面/操作界面"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = -20.0
+offset_right = 424.0
+offset_bottom = 80.0
+toggle_mode = true
+button_group = ExtResource("6_3lrhi")
+texture_normal = ExtResource("5_8lr5b")
+texture_pressed = ExtResource("10_7hek7")
+texture_hover = ExtResource("11_sw076")
+
+[node name="科技树" type="TextureButton" parent="下方界面/操作界面"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -71.1678
+offset_right = 50.0
+offset_bottom = 28.8322
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+button_group = ExtResource("6_3lrhi")
+texture_normal = ExtResource("7_y27rh")
+texture_pressed = ExtResource("16_xeu5y")
+texture_hover = ExtResource("17_gta6s")
+
+[node name="档案库" type="TextureButton" parent="下方界面/操作界面"]
+layout_mode = 0
+offset_left = 535.52
+offset_top = -20.297
+offset_right = 635.52
+offset_bottom = 79.703
+toggle_mode = true
+button_group = ExtResource("6_3lrhi")
+texture_normal = ExtResource("6_60b82")
+texture_pressed = ExtResource("13_yngu3")
+texture_hover = ExtResource("14_iu7ot")

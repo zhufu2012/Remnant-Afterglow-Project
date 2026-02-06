@@ -8,23 +8,23 @@ namespace Remnant_Afterglow
     public partial class WorkerData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 实体id
         /// </summary>
         public int ObjectId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 无人机名称
         /// </summary>
         public string WorkerName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 动画类型列表
         /// </summary>
         public List<int> AnimaTypeList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 阴影图像
         /// </summary>
         public Texture2D ShadowSprite { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 阴影偏移
         /// </summary>
         public Vector2 ShadowOffset { get; set; }

@@ -7,19 +7,19 @@ namespace Remnant_Afterglow
     public partial class BagData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 背包id
         /// </summary>
         public int BagId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 背包名称
         /// </summary>
         public string BagName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 背包描述
         /// </summary>
         public string BagDesc { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 背包类型
         ///0 系统背包
         ///（无法看见)

@@ -21,9 +21,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png",
         "FlipH": true,
         "FlipV": true
@@ -50,9 +48,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": false,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png",
         "FlipH": true,
         "FlipV": true
@@ -79,9 +75,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png",
         "FlipH": true,
         "FlipV": true
@@ -108,9 +102,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_DE7940C7BC2D4D46915E35BA3143081A.png",
         "FlipH": true,
         "FlipV": true
@@ -137,9 +129,7 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_B967F5BF18684EFFA6C6E0F02372A10A.png",
         "FlipH": true,
         "FlipV": true
@@ -166,16 +156,14 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
+        "SpeedFps": 5,
         "Picture": "./data/config/images/ID_B967F5BF18684EFFA6C6E0F02372A10A.png",
         "FlipH": true,
         "FlipV": true
     },
     {
-        "KEY_INDEX": "700001_1",
-        "ObjectId": 700001,
+        "KEY_INDEX": "7001_1",
+        "ObjectId": 7001,
         "AnimaType": 1,
         "Coords": [
             0,
@@ -183,35 +171,6 @@
         ],
         "LengWidth": [
             24,
-            32
-        ],
-        "MaxIndex": 1,
-        "Size": [
-            1,
-            1
-        ],
-        "Offset": [
-            0,
-            0
-        ],
-        "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_68032C65704D406A8DD6E0D7D04AEEA5.png",
-        "FlipH": true,
-        "FlipV": true
-    },
-    {
-        "KEY_INDEX": "700002_1",
-        "ObjectId": 700002,
-        "AnimaType": 1,
-        "Coords": [
-            0,
-            0
-        ],
-        "LengWidth": [
-            20,
             20
         ],
         "MaxIndex": 1,
@@ -224,28 +183,26 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_73396B96EFFE49AA9EFD8BCB69C2B9D8.png",
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_94A20FBD29F04F919BDAD705B5DDAFD9.png",
         "FlipH": true,
         "FlipV": true
     },
     {
-        "KEY_INDEX": "700003_1",
-        "ObjectId": 700003,
-        "AnimaType": 1,
+        "KEY_INDEX": "7001_2",
+        "ObjectId": 7001,
+        "AnimaType": 2,
         "Coords": [
             0,
             0
         ],
         "LengWidth": [
-            22,
-            28
+            24,
+            20
         ],
-        "MaxIndex": 1,
+        "MaxIndex": 8,
         "Size": [
-            1,
+            8,
             1
         ],
         "Offset": [
@@ -253,45 +210,14 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_0E110603796D46C38494B28A4D571C62.png",
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_12BB2E94123C4C889F55194AEAB0BE41.png",
         "FlipH": true,
         "FlipV": true
     },
     {
-        "KEY_INDEX": "700004_1",
-        "ObjectId": 700004,
-        "AnimaType": 1,
-        "Coords": [
-            0,
-            0
-        ],
-        "LengWidth": [
-            20,
-            26
-        ],
-        "MaxIndex": 1,
-        "Size": [
-            1,
-            1
-        ],
-        "Offset": [
-            0,
-            0
-        ],
-        "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_F74820F460FF443097C161127F585EF3.png",
-        "FlipH": true,
-        "FlipV": true
-    },
-    {
-        "KEY_INDEX": "700005_1",
-        "ObjectId": 700005,
+        "KEY_INDEX": "7002_1",
+        "ObjectId": 7002,
         "AnimaType": 1,
         "Coords": [
             0,
@@ -299,7 +225,7 @@
         ],
         "LengWidth": [
             24,
-            32
+            20
         ],
         "MaxIndex": 1,
         "Size": [
@@ -311,10 +237,1317 @@
             0
         ],
         "RelativeList": [],
-        "SpeedScale": 1,
-        "IsAutoplay": true,
-        "IsLoop": true,
-        "Picture": "./data/config/images/ID_5700143AD5AB49B58DFC7EE8DDA80D8A.png",
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_94A20FBD29F04F919BDAD705B5DDAFD9.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "7002_2",
+        "ObjectId": 7002,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            24,
+            20
+        ],
+        "MaxIndex": 8,
+        "Size": [
+            8,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_12BB2E94123C4C889F55194AEAB0BE41.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8001_1",
+        "ObjectId": 8001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            24,
+            20
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_94A20FBD29F04F919BDAD705B5DDAFD9.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8001_2",
+        "ObjectId": 8001,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            24,
+            20
+        ],
+        "MaxIndex": 8,
+        "Size": [
+            8,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_12BB2E94123C4C889F55194AEAB0BE41.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8002_1",
+        "ObjectId": 8002,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            24,
+            20
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_94A20FBD29F04F919BDAD705B5DDAFD9.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8002_2",
+        "ObjectId": 8002,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            24,
+            20
+        ],
+        "MaxIndex": 8,
+        "Size": [
+            8,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 10,
+        "Picture": "./data/config/images/ID_12BB2E94123C4C889F55194AEAB0BE41.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8003_1",
+        "ObjectId": 8003,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            66,
+            60
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_30C6E71D5F8A4B8CBCAEC4B3A03CCB35.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8003_2",
+        "ObjectId": 8003,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            66,
+            60
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_30C6E71D5F8A4B8CBCAEC4B3A03CCB35.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "9001_1",
+        "ObjectId": 9001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            66,
+            67
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_C3370F0CE2EC4913AFD904E563492CCF.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "9001_2",
+        "ObjectId": 9001,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            66,
+            67
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_C3370F0CE2EC4913AFD904E563492CCF.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "9002_1",
+        "ObjectId": 9002,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            72,
+            67
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_968254E67A7E413FA6C6392FB8D12D90.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "9002_2",
+        "ObjectId": 9002,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            72,
+            67
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_968254E67A7E413FA6C6392FB8D12D90.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "7006_1",
+        "ObjectId": 7006,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            36,
+            33
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_A6348C79F2B4424382DC8D2BF6803C1B.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "7006_2",
+        "ObjectId": 7006,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            36,
+            33
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_A6348C79F2B4424382DC8D2BF6803C1B.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "7003_1",
+        "ObjectId": 7003,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            66,
+            60
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_30C6E71D5F8A4B8CBCAEC4B3A03CCB35.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "7003_2",
+        "ObjectId": 7003,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            66,
+            60
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_30C6E71D5F8A4B8CBCAEC4B3A03CCB35.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "7009_1",
+        "ObjectId": 7009,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            66,
+            60
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_30C6E71D5F8A4B8CBCAEC4B3A03CCB35.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "7009_2",
+        "ObjectId": 7009,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            66,
+            60
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_30C6E71D5F8A4B8CBCAEC4B3A03CCB35.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "7010_1",
+        "ObjectId": 7010,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            46,
+            56
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_D8DFF925EEBC4E2C8E10FDC93251A357.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "7010_2",
+        "ObjectId": 7010,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            46,
+            56
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_D8DFF925EEBC4E2C8E10FDC93251A357.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8005_1",
+        "ObjectId": 8005,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            50,
+            60
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_68ACDB4BE86A41398BAC6CC0CF9FE8D3.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8005_2",
+        "ObjectId": 8005,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            50,
+            60
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_68ACDB4BE86A41398BAC6CC0CF9FE8D3.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8006_1",
+        "ObjectId": 8006,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            50,
+            60
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_FB903126289E4CBF83E29EC6AD06E18A.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8006_2",
+        "ObjectId": 8006,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            50,
+            60
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_FB903126289E4CBF83E29EC6AD06E18A.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8004_1",
+        "ObjectId": 8004,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            1,
+            1
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 1,
+        "Picture": "./data/config/images/ID_FF7E28104CED49C5B8A6A806119BEA02.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8007_1",
+        "ObjectId": 8007,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            38,
+            140
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_3AAEA95A69F54B97865534A3BDE12DFB.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8007_2",
+        "ObjectId": 8007,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            38,
+            140
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_44A23E268BED40B5B1693FBC6A1BA9BF.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8008_1",
+        "ObjectId": 8008,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            58,
+            188
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_07E2C5F6CA38470A86A8D2EB69806F3D.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8008_2",
+        "ObjectId": 8008,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            58,
+            188
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_07E2C5F6CA38470A86A8D2EB69806F3D.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8009_1",
+        "ObjectId": 8009,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            82,
+            300
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_2D6012F9C8B44E328BF441D0919F0107.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "8009_2",
+        "ObjectId": 8009,
+        "AnimaType": 2,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            82,
+            300
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_2D6012F9C8B44E328BF441D0919F0107.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "13000_1",
+        "ObjectId": 13000,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            92,
+            136
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_100B689C7DE042889E72EC757E25B5C1.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "13001_1",
+        "ObjectId": 13001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            92,
+            136
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_100B689C7DE042889E72EC757E25B5C1.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "13002_1",
+        "ObjectId": 13002,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            92,
+            136
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_100B689C7DE042889E72EC757E25B5C1.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "13003_1",
+        "ObjectId": 13003,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            92,
+            136
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_100B689C7DE042889E72EC757E25B5C1.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10001_1",
+        "ObjectId": 10001,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            40,
+            19
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_70B248415E8A4D9D8CF3D8B9319B4DEF.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10003_1",
+        "ObjectId": 10003,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            86,
+            38
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_CFD970384FFF4D458D85657325FF4835.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10004_1",
+        "ObjectId": 10004,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            94,
+            56
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_729848AF6F6B47F19B3200189BA2DED4.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10005_1",
+        "ObjectId": 10005,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            116,
+            54
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_3DAF265EE80C4DE0AD15C01FF54DC844.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10006_1",
+        "ObjectId": 10006,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            74,
+            57
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_F0F43FCD85ED46CAA38E5A0345C25A8B.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10007_1",
+        "ObjectId": 10007,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            124,
+            57
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_709B3715FC41481D9D5869DC7AD296C9.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10008_1",
+        "ObjectId": 10008,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            50,
+            56
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_D03E6783FB3944E9B105EC64703CC381.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10009_1",
+        "ObjectId": 10009,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            74,
+            87
+        ],
+        "MaxIndex": 4,
+        "Size": [
+            4,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_B2B9C1B958044851A8E08D7A6D8CC4B4.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10019_1",
+        "ObjectId": 10019,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            50,
+            61
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_C6D9DFD2F03A4E8C902AC663BF9FE591.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10020_1",
+        "ObjectId": 10020,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            74,
+            86
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_AF0FFADC40AB4555835690EE2771055D.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10023_1",
+        "ObjectId": 10023,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            24,
+            84
+        ],
+        "MaxIndex": 6,
+        "Size": [
+            6,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_4C6AB4B4B9774A7CB76072D92F191163.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10024_1",
+        "ObjectId": 10024,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            44,
+            140
+        ],
+        "MaxIndex": 6,
+        "Size": [
+            6,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_4A25654618664D10BD06807F9472733F.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10025_1",
+        "ObjectId": 10025,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            54,
+            108
+        ],
+        "MaxIndex": 3,
+        "Size": [
+            3,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [
+            [
+                1.0,
+                2.0
+            ],
+            [
+                2.0,
+                3.0
+            ],
+            [
+                3.0,
+                3.0
+            ]
+        ],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_36440E39B0614DE79FA5795C0F411D04.png",
+        "FlipH": true,
+        "FlipV": true
+    },
+    {
+        "KEY_INDEX": "10031_1",
+        "ObjectId": 10031,
+        "AnimaType": 1,
+        "Coords": [
+            0,
+            0
+        ],
+        "LengWidth": [
+            133,
+            96
+        ],
+        "MaxIndex": 1,
+        "Size": [
+            1,
+            1
+        ],
+        "Offset": [
+            0,
+            0
+        ],
+        "RelativeList": [],
+        "SpeedFps": 20,
+        "Picture": "./data/config/images/ID_F2AE200851974CBC851F0643935CCBB8.png",
         "FlipH": true,
         "FlipV": true
     }

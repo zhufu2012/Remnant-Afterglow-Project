@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3 uid="uid://di0cddfnhg782"]
+
+[ext_resource type="Texture2D" uid="uid://b1j67na81ytf8" path="res://assets/档案库素材/窗口4.png" id="1_sq10u"]
+
+[node name="ArchivalItem" type="Button"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+offset_left = -1274.0
+offset_top = -389.0
+offset_right = -973.0
+offset_bottom = 389.0
+pivot_offset = Vector2(150.5, 389)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = -2.5
+offset_top = -2.0
+offset_right = 73.5
+offset_bottom = 194.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_sq10u")
+region_rect = Rect2(0, 0, 80, 80)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 270.0
+offset_bottom = 676.0
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 675.0
+offset_right = 352.0
+offset_bottom = 775.0
+scale = Vector2(0.75, 0.75)
+focus_mode = 0
+theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 1)
+theme_override_colors/clear_button_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(0, 1, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "默认"
+alignment = 1
+max_length = 99
+editable = false
+expand_to_text_length = true
+context_menu_enabled = false
+emoji_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false

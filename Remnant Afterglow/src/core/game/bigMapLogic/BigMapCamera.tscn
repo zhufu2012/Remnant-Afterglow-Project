@@ -1,9 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://cupk46217nntf"]
 
-[ext_resource type="Script" path="res://src/core/game/bigMapLogic/BigMapCamera.cs" id="1_2jsrw"]
+[ext_resource type="Script" uid="uid://dp4ton1xs3pgv" path="res://src/core/game/bigMapLogic/BigMapCamera.cs" id="1_2jsrw"]
 
 [node name="BigMapCamera" type="Camera2D"]
 script = ExtResource("1_2jsrw")
+zoom_min_limit = 0.4
+zoom_max_limit = 1.0
+camera_speed = 2000
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c58xnpy5lbipd"]
+
+[ext_resource type="Script" uid="uid://dgepan1ac1nnl" path="res://src/librarys/Laser/BaseLaser.cs" id="1_73qcp"]
+
+[node name="BaseLaser" type="RayCast2D"]
+position = Vector2(112, 30)
+script = ExtResource("1_73qcp")
+
+[node name="FillLine2D" type="Line2D" parent="."]
+position = Vector2(26, -1)
+points = PackedVector2Array(-27, 1, -27, 68)
+
+[node name="CastingParticles2D" type="GPUParticles2D" parent="."]
+
+[node name="CollisionParticles2D" type="GPUParticles2D" parent="."]
+
+[node name="BeamParticles2D" type="GPUParticles2D" parent="."]

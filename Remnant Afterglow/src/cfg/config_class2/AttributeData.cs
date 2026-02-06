@@ -1,5 +1,5 @@
 using GameLog;
-using Godot.Community.ManagedAttributes;
+using ManagedAttributes;
 using System.Collections.Generic;
 
 namespace Remnant_Afterglow
@@ -30,15 +30,15 @@ namespace Remnant_Afterglow
         /// 根据配置获取属性
         /// </summary>
         /// <returns></returns>
-        public FloatManagedAttribute GetAttr()
+        public AttrData GetAttr()
         {
             if(Attr.PriorityDict.ContainsKey(AttributeId))
             {
-                return new FloatManagedAttribute(AttributeId, StartValue, Min, Max, Regen, Attr.PriorityDict[AttributeId]);
+                return new AttrData(AttributeId, StartValue, Min, Max, Regen, Attr.PriorityDict[AttributeId]);
             }
             else
             {
-                return new FloatManagedAttribute(AttributeId, StartValue, Min, Max, Regen);
+                return new AttrData(AttributeId, StartValue, Min, Max, Regen);
             }
         }
 

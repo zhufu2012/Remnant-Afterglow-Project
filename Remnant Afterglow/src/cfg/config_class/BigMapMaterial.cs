@@ -7,42 +7,42 @@ namespace Remnant_Afterglow
     public partial class BigMapMaterial
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 地图节点id
         /// </summary>
         public int NodeId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 地图节点类型
         ///暂不使用
         /// </summary>
         public int NodeType { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 节点所用图集id
         ///地块表的cfg_MapImageSet_地图图像集id
         /// </summary>
         public int ImageSetId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 所在图集序号
         /// </summary>
         public int ImageSetIndex { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 节点绘制逻辑id列表
         /// </summary>
         public List<int> LogicIdList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 是否可选中
         /// </summary>
         public bool IsSelect { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 是否可点击
         /// </summary>
         public bool IsClick { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 地图节点 点击事件列表
         ///cfg_BigMapEvent_大地图节点事件的id列表
         /// </summary>
         public List<int> NodeClickEventList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 地图节点 进入事件列表
         ///
         ///cfg_BigMapEvent_大地图节点事件的id列表

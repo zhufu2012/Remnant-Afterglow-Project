@@ -73,14 +73,14 @@ def export_ConfigCache(NowProjectConfig, data_dict, result_dict, subtable_name_l
             class_name_cache = class_name + "_Cache"
             region_str.append(
                 f'        /// <summary>\n        /// {xlsx_dec}配置缓存\n        /// </summary>\n'
-                f'        private static readonly Dictionary<string, {class_name}> {class_name_cache} = new Dictionary<string, {class_name}>();\n'
+                f'        private static readonly Dictionary<string, {class_name}> {class_name_cache} = [];\n'
             )
             region_str.append(
                 f'        /// <summary>\n        /// 提前加载所有{xlsx_dec}配置缓存\n        /// </summary>\n'
                 f'        public static void Load{class_name}()\n' + '        {\n' +
-                f'            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_{class_name});\n' +
-                '            foreach (var val in cfg_dict)\n            {\n' +
-                f'                {class_name} data = new {class_name}(val.Value);\n' +
+                f'            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_{class_name}))\n' + 
+                '            {\n' +
+                f'                {class_name} data = new(val.Value);\n' +
                 '                data.InitData2();\n' +
                 f'                {class_name_cache}.Add(val.Key, data);\n' + '            }\n        }\n'
             )
@@ -93,7 +93,7 @@ def export_ConfigCache(NowProjectConfig, data_dict, result_dict, subtable_name_l
                 f'                    data = new {class_name}(cfgId);\n' +
                 '                    data.InitData2();\n' +
                 f'                    {class_name_cache}.Add(cfgId, data);\n' +
-                '                }\n                catch (Exception e)\n                {\n' +
+                '                }\n                catch (Exception)\n                {\n' +
                 f'                    Log.PrintConfigError(\"{xlsx_name}.xlsx表中的' +
                 f' {table_name}配置表中，不存在主键为<\" + cfgId + \">的数据！\");\n' +
                 '                }\n            }\n            return data;\n        }\n'
@@ -105,21 +105,36 @@ def export_ConfigCache(NowProjectConfig, data_dict, result_dict, subtable_name_l
                 f'                    data = new {class_name}(cfgId);\n' +
                 '                    data.InitData2();\n' +
                 f'                    {class_name_cache}.Add(\"\" + cfgId, data);\n' +
-                '                }\n                catch (Exception e)\n                {\n' +
+                '                }\n                catch (Exception)\n                {\n' +
                 f'                    Log.PrintConfigError(\"{xlsx_name}.xlsx表中的' +
                 f' {table_name}配置表中，不存在主键为<\" + cfgId + \">的数据！\");\n' +
                 '                }\n            }\n            return data;\n        }\n'
             )
+##            region_str.append(
+##                f'        /// <summary>\n        /// 获取加载的所有{xlsx_dec}数据\n        /// </summary>\n'
+##                f'        public static List<{class_name}> GetAll{class_name}()\n' + '        {\n' +
+##                f'            List<{class_name}> list = new List<{class_name}>();\n' +
+##                f'            foreach (var val in {class_name_cache})\n' + '            {\n' +
+##                '                list.Add(val.Value);\n            }\n            return list;\n        }\n'
+##            )
             region_str.append(
                 f'        /// <summary>\n        /// 获取加载的所有{xlsx_dec}数据\n        /// </summary>\n'
                 f'        public static List<{class_name}> GetAll{class_name}()\n' + '        {\n' +
-                f'            List<{class_name}> list = new List<{class_name}>();\n' +
-                f'            foreach (var val in {class_name_cache})\n' + '            {\n' +
-                '                list.Add(val.Value);\n            }\n            return list;\n        }\n'
+                f'            return new List<{class_name}>({class_name_cache}.Values);\n' + '        }\n'
+            )
+            region_str.append(
+                f'        /// <summary>\n        /// 检查是否存在指定ID的{xlsx_dec}数据\n        /// </summary>\n'
+                f'        public static bool Has{class_name}(int cfgId)\n' + '        {\n' +
+                f'            return {class_name_cache}.ContainsKey(\"\" + cfgId);\n' + '        }\n'
+            )
+            region_str.append(
+                f'        /// <summary>\n        /// 检查是否存在指定ID的{xlsx_dec}数据\n        /// </summary>\n'
+                f'        public static bool Has{class_name}(string cfgId)\n' + '        {\n' +
+                f'            return {class_name_cache}.ContainsKey(cfgId);\n' + '        }\n'
             )
             class_name_cache_list.append(class_name_cache)
             class_name_list.append(class_name)
-        regions.append(f'        #region {xlsx_name}\n' + ''.join(region_str) + '        #endregion\n')
+        regions.append(f'\n        #region {xlsx_name}\n' + ''.join(region_str) + '        #endregion\n')
     function_str = '        /// <summary>\n        /// 提前加载所有界面基础配置配置缓存\n        /// </summary>\n'
     function_str += '        public static void LoadOtherCache()\n        {\n'
     for class_name in class_name_list:

@@ -1,0 +1,32 @@
+[
+    {
+        "KEY_INDEX": "button_sfx",
+        "UIName": "button_sfx",
+        "SfxName": "按钮音效",
+        "UIType": 1,
+        "EventIdList": [
+            1
+        ],
+        "SoundPath": "按钮音效/主界面按钮音效1.ogg"
+    },
+    {
+        "KEY_INDEX": "texture_button_sfx",
+        "UIName": "texture_button_sfx",
+        "SfxName": "纹理按钮音效",
+        "UIType": 2,
+        "EventIdList": [
+            1
+        ],
+        "SoundPath": "按钮音效/主界面按钮音效1.ogg"
+    },
+    {
+        "KEY_INDEX": "texture_button_sfx2",
+        "UIName": "texture_button_sfx2",
+        "SfxName": "纹理按钮音效2",
+        "UIType": 2,
+        "EventIdList": [
+            4
+        ],
+        "SoundPath": "按钮音效/主界面按钮音效1.ogg"
+    }
+]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://6kf621tmiav"]
+
+[ext_resource type="Script" uid="uid://dyfqgks40w01b" path="res://src/edit/common_view/entity_select/EntitySelectPanel.cs" id="1_4wgst"]
+
+[node name="EntitySelectPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -996.0
+offset_bottom = -851.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4wgst")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1236.0
+offset_top = 146.0
+offset_right = 1402.0
+offset_bottom = 186.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_right = 166.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_right = 166.0
+offset_bottom = 40.0
+text = "建筑名称："
+vertical_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -4.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="textureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 109.0
+offset_right = 904.0
+offset_bottom = 452.0

@@ -1,5 +1,5 @@
 using GameLog;
-using Godot.Community.ManagedAttributes;
+using ManagedAttributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,10 +26,12 @@ namespace Remnant_Afterglow
 
         }
 
-
-        public ManagedAttributeContainer GetAttrCon()
+        /// <summary>
+        /// 获取模板实体属性管理器-祝福注释-这个函数可以优化到其他地方
+        /// </summary>
+        public ManagAttrCon GetAttrCon()
         {
-            ManagedAttributeContainer attributeContainer = new ManagedAttributeContainer();
+            ManagAttrCon attributeContainer = new ManagAttrCon();
             //属性列表
             List<Dictionary<string, object>> QueryList = ConfigLoadSystem.QueryCfgAllLine(ConfigConstant.Config_AttributeData, new Dictionary<string, object> { { "ObjectId", ObjectId }
               });
@@ -43,7 +45,7 @@ namespace Remnant_Afterglow
                 {
                     int AttributeId = (int)QueryList[i]["AttributeId"];//属性id
                     AttributeData attrData = ConfigCache.GetAttributeData(ObjectId + "_" + AttributeId);
-                    FloatManagedAttribute floatManaged = attrData.GetAttr();
+                    AttrData floatManaged = attrData.GetAttr();
                     floatManaged.IsTemplateAttr = true;
                     floatManaged.TemplateObjectId = ObjectId;
                     bool isCon = attributeContainer.Add(floatManaged);

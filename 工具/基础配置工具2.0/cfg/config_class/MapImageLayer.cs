@@ -7,17 +7,17 @@ namespace Remnant_Afterglow
     public partial class MapImageLayer
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 地图层id
         ///图层id高的显示在上面
         /// </summary>
         public int ImageLayerId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 图层显示名称
         ///编辑器中用于显示
         /// </summary>
         public string LayerName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 图层显示描述
         ///编辑器中用于显示
         /// </summary>

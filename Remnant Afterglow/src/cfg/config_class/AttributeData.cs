@@ -7,44 +7,44 @@ namespace Remnant_Afterglow
     public partial class AttributeData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 实体id
         ///单位或者炮塔或者建筑等
         ///
         ///给属性模板使用的是负数实体id
         /// </summary>
         public int ObjectId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 属性id
         /// </summary>
         public int AttributeId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 初始值
         /// </summary>
         public float StartValue { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 最大值
         /// </summary>
         public float Max { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 最小值
         /// </summary>
         public float Min { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 再生值
         /// </summary>
         public float Regen { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 添加时触发事件id列表
         /// </summary>
         public List<int> AddEventIdList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 移除时触发事件id列表
         /// </summary>
         public List<int> RemoveEventIdList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 事件触发id列表
-        ///（触发类型，触发参数1，触发参数2，触发参数3，事件id1，事件id2,事件id3....可以不断加，按顺序触发）
+        ///（触发类型，触发参数1，触发参数2，事件id）
         ///1 等于某值触发（参数1是触发值）
         ///2 大于某值触发 （参数1是触发值）
         ///3 小于某值触发 （参数1是触发值）

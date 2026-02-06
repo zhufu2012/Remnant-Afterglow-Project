@@ -1,6 +1,7 @@
 using GameLog;
 
-namespace Remnant_Afterglow{
+namespace Remnant_Afterglow
+{
     /// <summary>
     /// 默认模式
     /// </summary>
@@ -14,7 +15,27 @@ namespace Remnant_Afterglow{
 
         public void Enter(StateMachine stateMachine)
         {
-            stateMachine.baseObject.PlayAnima(ObjectStateNames.Default);//播放动画
+            switch (stateMachine.baseObject.object_type)
+            {
+                case BaseObjectType.BaseTower:
+                    TowerBase tower = stateMachine.baseObject as TowerBase;
+                    tower.PlayAnima(ObjectStateNames.Default);
+                    break;
+                case BaseObjectType.BaseBuild:
+                    BuildBase build = stateMachine.baseObject as BuildBase;
+                    build.PlayAnima(ObjectStateNames.Default);
+                    break;
+                case BaseObjectType.BaseWorker:
+                    WorkerBase worker = stateMachine.baseObject as WorkerBase;
+                    worker.PlayAnima(ObjectStateNames.Default);
+                    break;
+                case BaseObjectType.BaseUnit:
+                    UnitBase unitBase = stateMachine.baseObject as UnitBase;
+                    unitBase.PlayAnima(ObjectStateNames.Default);
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void Exit()

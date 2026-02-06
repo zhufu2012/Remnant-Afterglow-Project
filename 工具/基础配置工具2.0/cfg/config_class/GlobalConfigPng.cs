@@ -8,15 +8,15 @@ namespace Remnant_Afterglow
     public partial class GlobalConfigPng
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 全局配置id
         /// </summary>
-        public string Configid { get; set; }
-        /// <summary>        
+        public string ConfigId { get; set; }
+        /// <summary>
         /// 全局配置名称
         /// </summary>
         public string ConfigName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 全局配置值
         ///图片
         /// </summary>
@@ -25,7 +25,7 @@ namespace Remnant_Afterglow
         public GlobalConfigPng(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_GlobalConfigPng, id);//public const string Config_GlobalConfigPng = "cfg_GlobalConfigPng"; 
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
 			ConfigValue = (Texture2D)dict["ConfigValue"];
 			InitData();
@@ -35,7 +35,7 @@ namespace Remnant_Afterglow
         public GlobalConfigPng(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_GlobalConfigPng, cfg_id);//public const string Config_GlobalConfigPng = "cfg_GlobalConfigPng"; 
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
 			ConfigValue = (Texture2D)dict["ConfigValue"];
 			InitData();
@@ -43,7 +43,7 @@ namespace Remnant_Afterglow
 
         public GlobalConfigPng(Dictionary<string, object> dict)
         {
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
 			ConfigValue = (Texture2D)dict["ConfigValue"];
 			InitData();

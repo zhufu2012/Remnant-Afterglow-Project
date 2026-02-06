@@ -1,16 +1,26 @@
-﻿
-using Godot;
-using System.Collections.Generic;
+﻿using Godot;
 
 namespace Remnant_Afterglow
 {
     public partial class LoadMapConfig
     {
-        public  TileSet tileSet1;//作战地图
-        public  MapImageSet mapSet1;//作战地图 图集
+        /// <summary>
+        /// 作战地图 TileSet
+        /// </summary>
+        public TileSet tileSet1;
+        /// <summary>
+        /// 作战地图 图集
+        /// </summary>
+        public  MapImageSet mapSet1;
 
-        public  TileSet tileSet2;//大地图
-        public  MapImageSet mapSet2;//大地图 图集
+        /// <summary>
+        /// 大地图 TileSet
+        /// </summary>
+        public  TileSet tileSet2;
+        /// <summary>
+        /// 大地图 图集
+        /// </summary>
+        public  MapImageSet mapSet2;
         /// <summary>
         /// 单例模式，用于全局访问LoadMapConfig实例
         /// </summary>
@@ -26,7 +36,9 @@ namespace Remnant_Afterglow
         {
             new LoadMapConfig();
         }
-        //清理数据
+        /// <summary>
+        /// 清理数据
+        /// </summary>
         public static void ClearData()
         {
             Instance = null;
@@ -41,17 +53,6 @@ namespace Remnant_Afterglow
             tileSet.TileSize = new Vector2I(Width, Height);
             if (Type == 1)//副本地图
             {
-                tileSet.TileShape = TileSet.TileShapeEnum.Square;
-                List<MapPhysicsLayer> PhysicsLayerList = ConfigCache.GetAllMapPhysicsLayer();
-                foreach (MapPhysicsLayer PhysicsLayer in PhysicsLayerList)//设置物理层
-                {
-                    tileSet.AddPhysicsLayer(PhysicsLayer.PhysicsLayerId);
-                }
-                //List<MapNavigate> NavigateLayerList = ConfigCache.GetAllMapNavigate();
-                //foreach (MapNavigate NavigateLayer in NavigateLayerList)//设置导航层
-                //{
-                //    tileSet.AddNavigationLayer(NavigateLayer.NavigateLayerId);
-                //}
                 mapSet1 = new MapImageSet(tileSet, Type, MapConstant.TileCellSize, MapConstant.TileCellSize);//给格子加备选格子，以及加上碰撞层
             }
             if (Type == 2)//六边形大地图

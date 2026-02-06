@@ -18,7 +18,6 @@ namespace BulletMLLib.SharedProject;
 public abstract class Bullet : IBullet
 {
     #region 成员变量
-
     /// <summary>
     /// 子弹的飞行方向。以弧度为单位测量
     /// </summary>
@@ -44,10 +43,17 @@ public abstract class Bullet : IBullet
     public float Scale { get; set; }
 
     /// <summary>
+    /// 子弹id
+    /// </summary>
+    public int BulletId { get; set; }
+    /// <summary>
     /// 子弹标签名称
     /// </summary>
     public string BulletLabel { get; set; }
-
+    /// <summary>
+    /// 子弹阵营
+    /// </summary>
+    public int Camp { get; set; }
     // TODO: 实现任务工厂，我们将要创建大量的小对象
 
     #endregion //成员变量
@@ -59,12 +65,6 @@ public abstract class Bullet : IBullet
     /// </summary>
     /// <value>加速度，单位为像素/帧^2</value>
     public Vector2 Acceleration { get; set; }
-
-    /// <summary>
-    /// 获取或设置速度
-    /// </summary>
-    /// <value>速度，单位为像素/帧</value>
-    public virtual float Speed { get; set; }
 
     /// <summary>
     /// 定义此子弹行为的任务列表
@@ -100,10 +100,33 @@ public abstract class Bullet : IBullet
         get => _direction;
         set => _direction = MathHelper.WrapAngle(value);
     }
+
+    // 默认高度为0，小于0就移除子弹并可能触发特效
+    private float height = 0.0f;
+    // 高度属性
+    public float Height
+    {
+        get => height;
+        set
+        {
+            height = value;
+            // 当高度小于0时，删除子弹
+            if (height < 0)
+            {
+                MyBulletManager.RemoveBullet(this);
+                // 在这里可以添加触发特效的逻辑
+            }
+        }
+    }
+    /// <summary>
+    /// 获取或设置速度
+    /// </summary>
+    /// <value>速度，单位为像素/帧</value>
+    public virtual float Speed { get; set; }
     /// <summary>
     /// 当前子弹已经飞行的距离
     /// </summary>
-    public float CurrFlyDistance { get; set; }
+    public float CurrFlyDistance { get; set; } = 0;
     /// <summary>
     /// 方便获取子弹标签的属性。
     /// </summary>
@@ -152,17 +175,15 @@ public abstract class Bullet : IBullet
         // 将这些初始化为默认值
         TimeSpeed = 1.0f;
         Scale = 1.0f;
-        CurrFlyDistance = 0f;//飞行的距离
     }
 
     /// <summary>
     /// 使用顶级节点初始化此子弹
     /// </summary>
     /// <param name="rootNode">这是一个顶级节点... 找到第一个“top”节点并使用它来定义此子弹</param>
-    public void InitTopNode(BulletMLNode rootNode, BaseObject baseObject, BaseObject baseObject2)
+    public void InitTopNode(int bulletId, BulletMLNode rootNode, BaseObject baseObject, BaseObject baseObject2)
     {
         Debug.Assert(null != rootNode);
-
         // 好的，找到标记为 'top' 的项
         var bValidBullet = false;
         var topNode = rootNode.FindLabelNode("top", ENodeName.action);
@@ -189,7 +210,7 @@ public abstract class Bullet : IBullet
                     else
                     {
                         // 创建一个新的子弹
-                        var newDude = MyBulletManager.CreateTopBullet(rootNode.Label, baseObject, baseObject2);
+                        var newDude = MyBulletManager.CreateBullet(this, baseObject, baseObject2);
 
                         // 设置新子弹的位置为此子弹的位置
                         newDude.X = X;
@@ -258,7 +279,7 @@ public abstract class Bullet : IBullet
     }
 
     /// <summary>
-    /// 更新此子弹。在运行期间每秒调用一次
+    /// 更新此子弹。在运行期间每帧调用一次
     /// </summary>
     public virtual void Update()
     {
@@ -272,7 +293,6 @@ public abstract class Bullet : IBullet
         X += vel.X;
         Y += vel.Y;
         CurrFlyDistance += (float)Math.Sqrt(vel.X * vel.X + vel.Y * vel.Y);//飞行距离
-
     }
 
     /// <summary>
@@ -281,7 +301,19 @@ public abstract class Bullet : IBullet
     public abstract void PostUpdate();
 
     /// <summary>
-    /// 获取瞄准该子弹的方向
+    ///  确定此子弹瞄准的目标是否存在
+    /// </summary>
+    public virtual bool IsAimed()
+    {
+        if (targetObject != null && !targetObject.IsDestroyed && !targetObject.IsQueuedForDeletion())
+        {
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// 获取该子弹的瞄准方向
     /// </summary>
     /// <returns>瞄准子弹的角度</returns>
     public virtual float GetAimDir()
@@ -298,7 +330,7 @@ public abstract class Bullet : IBullet
             // 获取指向他的角度
             return (shipPos - pos).Angle();
         }
-        return Direction;
+        return Direction - (float)(Math.PI)/2;
     }
 
     /// <summary>
@@ -355,5 +387,23 @@ public abstract class Bullet : IBullet
         // 所有的任务及其子任务都已完成运行
     }
 
+
+    /// <summary>
+    /// 返回子弹的速度
+    /// </summary>
+    /// <returns></returns>
+    public Vector2 GetVelocity()
+    {
+        return (Acceleration + (Direction.ToVector2() * Speed)) * 60;
+    }
+
+    /// <summary>
+    /// 返回子弹的位置
+    /// </summary>
+    /// <returns></returns>
+    public Vector2 GetPosition()
+    {
+        return new Vector2(X, Y);
+    }
     #endregion //方法
 }

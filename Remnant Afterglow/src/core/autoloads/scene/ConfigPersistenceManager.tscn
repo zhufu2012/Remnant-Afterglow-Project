@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfbif5q6asaro"]
+
+[ext_resource type="Script" uid="uid://fmw5ea2lhm2g" path="res://src/core/autoloads/ConfigPersistenceManager.cs" id="1_tw7ry"]
+
+[node name="ConfigPersistenceManager" type="Node"]
+script = ExtResource("1_tw7ry")

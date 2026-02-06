@@ -5,60 +5,49 @@ namespace Remnant_Afterglow
 {
 	public partial class MainView : Control
 	{
-		public Button but_start_game;   //开始游戏
-		public Button but_multi_player; //多人游戏
-		public Button but_map_edit;     //地图编辑器
-		public Button but_archival;     //档案库
-		public Button but_model;    //模组
+		public TextureButton but_start_game;   //开始游戏
+		public TextureButton but_multi_player; //多人游戏
+		public TextureButton but_map_edit;     //地图编辑器
+		public TextureButton but_archival;     //档案库
+		public TextureButton but_model;    //模组
 
-		public Button but_setting;  //设置
-		public Button but_quit; //退出
+		public TextureButton but_setting;  //设置
+		public TextureButton but_quit; //退出
 
-		public Button but_achievement;  //成就
-		public Button but_thank;    //致谢
-		public Button but_language; //语言
-
-		/// <summary>
-		/// 操作界面
-		/// </summary>
-		public MapOpManager mapOpManager;
+		public TextureButton but_achievement;  //成就
+		public TextureButton but_thank;    //致谢
+		public TextureButton but_language; //语言
 
 		public override void _Ready()
 		{
+			MapOpManager.Instance.SetOpView(OpViewType.None);
 			InitView();
 		}
 
 		public void InitView()
 		{
-			but_start_game = GetNode<Button>("view/but_start_game");
-			but_multi_player = GetNode<Button>("view/but_multi_player");
-			but_map_edit = GetNode<Button>("view/but_map_edit");
-			but_archival = GetNode<Button>("view/but_archival");
+			but_start_game = GetNode<TextureButton>("view/but_start_game");
+			but_multi_player = GetNode<TextureButton>("view/but_multi_player");
+			but_map_edit = GetNode<TextureButton>("view/but_map_edit");
+			but_archival = GetNode<TextureButton>("view/but_archival");
 
-			but_model = GetNode<Button>("view/but_model");
-			but_setting = GetNode<Button>("view/but_setting");
-			but_quit = GetNode<Button>("view/but_quit");
-			but_achievement = GetNode<Button>("view/but_achievement");
-			but_thank = GetNode<Button>("view/but_thank");
+			but_model = GetNode<TextureButton>("view/but_model");
+			but_setting = GetNode<TextureButton>("view/but_setting");
+			but_quit = GetNode<TextureButton>("view/but_quit");
+			but_achievement = GetNode<TextureButton>("view2/but_achievement");
+			but_thank = GetNode<TextureButton>("view2/but_thank");
 
 			but_start_game.ButtonDown += StartGame;
 			but_multi_player.ButtonDown += MultiPlayer;
 			but_map_edit.ButtonDown += MapEdit;
 			but_archival.ButtonDown += ArchivalView;
 
-			but_model.ButtonDown += Model;
+			but_model.ButtonDown += ModelManager;
 			but_setting.ButtonDown += SetUp;
 			but_quit.ButtonDown += Quit;
 			but_achievement.ButtonDown += Achievement;
 			but_thank.ButtonDown += Thank;
 		}
-
-
-		public override void _Process(double delta)
-		{
-			base._Process(delta);
-		}
-
 
 
 		/// <summary>
@@ -67,7 +56,7 @@ namespace Remnant_Afterglow
 		public void MapEdit()
 		{
 			Log.Print("地图编辑器");
-			SceneManager.ChangeSceneName("EditMapCreateView", this);
+			SceneManager.ChangeScenePath("EditMapCreateView", SceneTransitionType.MainChange, this);
 		}
 
 		/// <summary>
@@ -76,6 +65,7 @@ namespace Remnant_Afterglow
 		public void ArchivalView()
 		{
 			Log.Print("档案库");
+			SceneManager.ChangeScenePath("ArchivalView", SceneTransitionType.MainChange, this);
 		}
 
 		/// <summary>
@@ -83,10 +73,8 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public void StartGame()
 		{
-			AddOpView();
 			Log.Print("开始游戏");
-			SceneManager.ChangeSceneName("SaveLoadView", this);
-			//GetTree().ChangeSceneToFile("res://src/core/ui/view/archive_view/SaveLoadView.tscn");
+			SceneManager.ChangeScenePath("SaveLoadView", SceneTransitionType.MainChange, this);
 		}
 
 		/// <summary>
@@ -94,16 +82,15 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public void MultiPlayer()
 		{
-			AddOpView();
 			Log.Print("多人游戏");
 		}
 
 		/// <summary>
 		/// 模组管理器
 		/// </summary>
-		public void Model()
+		public void ModelManager()
 		{
-			SceneManager.ChangeSceneName("ModManageView", this);
+			SceneManager.ChangeScenePath("ModManageView", SceneTransitionType.MainChange, this);
 		}
 
 		/// <summary>
@@ -111,7 +98,7 @@ namespace Remnant_Afterglow
 		/// </summary>
 		public void SetUp()
 		{
-			SceneManager.ChangeSceneName("SettingView", this);
+			SceneManager.ChangeScenePath("SettingView", SceneTransitionType.MainChange, this);
 		}
 
 		/// <summary>
@@ -137,15 +124,6 @@ namespace Remnant_Afterglow
 		public void Thank()
 		{
 			Log.Print("致谢");
-		}
-
-		/// <summary>
-		/// 添加操作界面-游戏开始添加
-		/// </summary>
-		public void AddOpView()
-		{
-			mapOpManager = GD.Load<PackedScene>("res://src/core/controllers/operation/MapOpManager.tscn").Instantiate<MapOpManager>();
-			GetTree().Root.AddChild(mapOpManager);//添加操作界面
 		}
 	}
 }

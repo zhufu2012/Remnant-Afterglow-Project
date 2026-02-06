@@ -1,158 +1,230 @@
-[gd_scene load_steps=17 format=3 uid="uid://duia8kylc60g5"]
+[gd_scene load_steps=20 format=3 uid="uid://duia8kylc60g5"]
 
-[ext_resource type="Script" path="res://src/core/controllers/operation/objectBuildSystem/BuildList.cs" id="1_v44h0"]
+[ext_resource type="Script" uid="uid://gj3slfta7otb" path="res://src/core/controllers/operation/objectBuildSystem/BuildList.cs" id="1_v44h0"]
 [ext_resource type="Texture2D" uid="uid://bxedc0ktxq0pc" path="res://assets/作战界面素材/建筑列表.png" id="2_bycqt"]
+[ext_resource type="Texture2D" uid="uid://bhutg77axaefx" path="res://assets/作战界面素材/晶体管高亮.png" id="3_11nkt"]
 [ext_resource type="Texture2D" uid="uid://ba4x68e8pjiut" path="res://assets/作战界面素材/采集.png" id="3_jxmr2"]
 [ext_resource type="Texture2D" uid="uid://cvmr3dbhs3jgd" path="res://assets/作战界面素材/武器.png" id="4_ot0c7"]
 [ext_resource type="Texture2D" uid="uid://b2hb1em58s3xw" path="res://assets/作战界面素材/防御.png" id="5_rh01s"]
 [ext_resource type="Texture2D" uid="uid://dp0du7yn0ufav" path="res://assets/作战界面素材/辅助.png" id="6_3a5yq"]
 [ext_resource type="PackedScene" uid="uid://vjwpqis5qiav" path="res://src/core/controllers/operation/objectBuildSystem/SubBuildList.tscn" id="7_tqqm4"]
-[ext_resource type="Texture2D" uid="uid://cnom1e5de6o7w" path="res://assets/作战界面素材/建筑列表高亮.png" id="8_fmxjh"]
+[ext_resource type="Texture2D" uid="uid://cw8b0q4bkvhlx" path="res://assets/作战界面素材/下方窗口/字母Q.png" id="7_vy8c7"]
 [ext_resource type="PackedScene" uid="uid://c1ys4itu4jwnt" path="res://src/core/controllers/operation/objectBuildSystem/BuildInfoView.tscn" id="9_1rs4p"]
-[ext_resource type="Texture2D" uid="uid://bqih0bd303kpj" path="res://assets/作战界面素材/列表背景.png" id="10_m7r0t"]
+[ext_resource type="Texture2D" uid="uid://d3xyg7gal7xge" path="res://assets/作战界面素材/下方窗口/字母W.png" id="9_cvb87"]
 [ext_resource type="Texture2D" uid="uid://c020posdcqda6" path="res://assets/作战界面素材/传送窗口.png" id="11_d1m0d"]
+[ext_resource type="Texture2D" uid="uid://bsgyqpofi165j" path="res://assets/作战界面素材/下方窗口/字母E.png" id="11_kwvjq"]
 [ext_resource type="Texture2D" uid="uid://csswhe7jvf2yi" path="res://assets/作战界面素材/传送.png" id="12_avhw8"]
 [ext_resource type="Texture2D" uid="uid://cnlju4nbiphu5" path="res://assets/作战界面素材/升级.png" id="13_axn4q"]
+[ext_resource type="Texture2D" uid="uid://urj3xga0u1fu" path="res://assets/作战界面素材/下方窗口/字母R.png" id="13_mxc1p"]
 [ext_resource type="Texture2D" uid="uid://cnq3t2uotv2ln" path="res://assets/作战界面素材/拆除.png" id="14_7hiqb"]
 [ext_resource type="Texture2D" uid="uid://d1teupl47nygg" path="res://assets/作战界面素材/1倍速.png" id="15_fcnid"]
-[ext_resource type="Texture2D" uid="uid://ddpbkougqu4lj" path="res://assets/作战界面素材/道具列表.png" id="16_4kixr"]
+[ext_resource type="Texture2D" uid="uid://c2rqpsinlmvfk" path="res://assets/作战界面素材/建造次级列表1.png" id="17_7p27j"]
 
 [node name="BuildList" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 720.0
+offset_bottom = 405.0
 scale = Vector2(2.667, 2.667)
 script = ExtResource("1_v44h0")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_top = 371.0
-offset_right = 720.0
-offset_bottom = 405.0
-texture = ExtResource("10_m7r0t")
-region_rect = Rect2(0, 0, 480, 31)
-patch_margin_left = 20
-patch_margin_top = 16
-patch_margin_right = 21
-patch_margin_bottom = 1
-
-[node name="按钮高亮" type="TextureRect" parent="."]
-visible = false
-z_index = 2
-texture_filter = 1
-layout_mode = 0
-offset_left = 110.0
-offset_top = 244.0
-offset_right = 174.0
-offset_bottom = 270.0
-texture = ExtResource("8_fmxjh")
-
 [node name="采集列表" type="TextureButton" parent="."]
 texture_filter = 1
-layout_mode = 0
-offset_left = 221.972
-offset_top = 376.828
-offset_right = 285.972
-offset_bottom = 402.828
+layout_mode = 2
+offset_left = 218.0
+offset_top = 365.0
+offset_right = 286.0
+offset_bottom = 405.0
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource("2_bycqt")
 stretch_mode = 0
 
 [node name="采集" type="TextureButton" parent="采集列表"]
 texture_filter = 1
-layout_mode = 0
-offset_left = 13.0
-offset_top = 6.0
-offset_right = 52.0
-offset_bottom = 20.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.5
+offset_top = -9.99964
+offset_right = 19.5
+offset_bottom = 4.00038
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 1
 texture_normal = ExtResource("3_jxmr2")
 
+[node name="字母q" type="TextureRect" parent="采集列表"]
+texture_filter = 1
+layout_mode = 1
+offset_left = 2.99962
+offset_top = 2.62473
+offset_right = 7.99962
+offset_bottom = 8.62473
+texture = ExtResource("7_vy8c7")
+
 [node name="武器列表" type="TextureButton" parent="."]
 texture_filter = 1
-layout_mode = 0
-offset_left = 287.819
-offset_top = 376.828
-offset_right = 351.819
-offset_bottom = 402.828
+layout_mode = 2
+offset_left = 286.0
+offset_top = 365.0
+offset_right = 354.0
+offset_bottom = 405.0
 texture_normal = ExtResource("2_bycqt")
 stretch_mode = 0
 
 [node name="武器" type="TextureButton" parent="武器列表"]
 texture_filter = 1
-layout_mode = 0
-offset_left = 13.0
-offset_top = 6.0
-offset_right = 52.0
-offset_bottom = 20.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.5
+offset_top = -9.99968
+offset_right = 19.5
+offset_bottom = 4.00027
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 1
 texture_normal = ExtResource("4_ot0c7")
 
+[node name="字母w" type="TextureRect" parent="武器列表"]
+texture_filter = 1
+layout_mode = 1
+offset_left = 2.24971
+offset_top = 2.99966
+offset_right = 8.24971
+offset_bottom = 8.99966
+texture = ExtResource("9_cvb87")
+
 [node name="防御列表" type="TextureButton" parent="."]
 texture_filter = 1
-layout_mode = 0
-offset_left = 353.847
-offset_top = 376.828
-offset_right = 417.847
-offset_bottom = 402.828
+layout_mode = 2
+offset_left = 354.0
+offset_top = 365.0
+offset_right = 422.0
+offset_bottom = 405.0
 texture_normal = ExtResource("2_bycqt")
 stretch_mode = 0
 
 [node name="防御" type="TextureButton" parent="防御列表"]
 texture_filter = 1
-layout_mode = 0
-offset_left = 13.0
-offset_top = 6.0
-offset_right = 52.0
-offset_bottom = 20.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.5
+offset_top = -9.99964
+offset_right = 19.5
+offset_bottom = 4.00038
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 1
 texture_normal = ExtResource("5_rh01s")
 
+[node name="字母e" type="TextureRect" parent="防御列表"]
+texture_filter = 1
+layout_mode = 1
+offset_left = 2.99962
+offset_top = 2.62473
+offset_right = 6.99962
+offset_bottom = 8.62473
+texture = ExtResource("11_kwvjq")
+
 [node name="辅助列表" type="TextureButton" parent="."]
 texture_filter = 1
-layout_mode = 0
-offset_left = 419.947
-offset_top = 377.203
-offset_right = 483.947
-offset_bottom = 403.203
+layout_mode = 2
+offset_left = 422.0
+offset_top = 365.0
+offset_right = 490.0
+offset_bottom = 405.0
 texture_normal = ExtResource("2_bycqt")
 stretch_mode = 0
 
 [node name="辅助" type="TextureButton" parent="辅助列表"]
 texture_filter = 1
-layout_mode = 0
-offset_left = 12.0
-offset_top = 5.0
-offset_right = 51.0
-offset_bottom = 19.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.5
+offset_top = -9.99964
+offset_right = 19.5
+offset_bottom = 4.00037
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 1
 texture_normal = ExtResource("6_3a5yq")
 
+[node name="字母r" type="TextureRect" parent="辅助列表"]
+texture_filter = 1
+layout_mode = 1
+offset_left = 2.99962
+offset_top = 2.62473
+offset_right = 6.99962
+offset_bottom = 8.62473
+texture = ExtResource("13_mxc1p")
+
+[node name="按钮高亮" type="TextureRect" parent="."]
+z_index = 2
+texture_filter = 1
+layout_mode = 0
+offset_left = 218.0
+offset_top = 365.0
+offset_right = 930.0
+offset_bottom = 542.0
+scale = Vector2(0.0954923, 0.221935)
+mouse_filter = 2
+texture = ExtResource("3_11nkt")
+
 [node name="SubBuildList" parent="." instance=ExtResource("7_tqqm4")]
-position = Vector2(225.722, 343.457)
-space = 15
+top_level = true
+z_index = -4
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 0.999939
+offset_top = -117.0
+offset_right = 0.999939
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2.666, 2.666)
+space = 20
 DefineXY = Vector2(5, 5)
 
 [node name="BuildInfoView" parent="." instance=ExtResource("9_1rs4p")]
 layout_mode = 0
-offset_left = 635.546
-offset_top = 112.486
-offset_right = 719.546
-offset_bottom = 261.486
+offset_left = 628.0
+offset_top = 100.0
+offset_right = 720.0
+offset_bottom = 321.0
 
-[node name="TextureButton1" type="TextureButton" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, -0.374953)
+
+[node name="TextureButton1" type="TextureButton" parent="Node2D"]
+visible = false
 texture_filter = 1
-layout_mode = 0
 offset_left = 485.939
 offset_top = 378.703
 offset_right = 511.939
 offset_bottom = 404.703
 texture_normal = ExtResource("11_d1m0d")
 
-[node name="TextureRect2" type="TextureRect" parent="TextureButton1"]
+[node name="TextureRect2" type="TextureRect" parent="Node2D/TextureButton1"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 4.75
@@ -161,16 +233,16 @@ offset_right = 20.75
 offset_bottom = 21.0
 texture = ExtResource("12_avhw8")
 
-[node name="TextureRect4" type="TextureButton" parent="."]
+[node name="TextureRect4" type="TextureButton" parent="Node2D"]
+visible = false
 texture_filter = 1
-layout_mode = 0
 offset_left = 513.686
 offset_top = 378.703
 offset_right = 539.686
 offset_bottom = 404.703
 texture_normal = ExtResource("11_d1m0d")
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect4"]
+[node name="TextureRect2" type="TextureRect" parent="Node2D/TextureRect4"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 4.75
@@ -179,16 +251,16 @@ offset_right = 20.75
 offset_bottom = 21.0
 texture = ExtResource("13_axn4q")
 
-[node name="TextureRect5" type="TextureButton" parent="."]
+[node name="TextureRect5" type="TextureButton" parent="Node2D"]
+visible = false
 texture_filter = 1
-layout_mode = 0
 offset_left = 542.182
 offset_top = 378.703
 offset_right = 568.182
 offset_bottom = 404.703
 texture_normal = ExtResource("11_d1m0d")
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect5"]
+[node name="TextureRect2" type="TextureRect" parent="Node2D/TextureRect5"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 4.75
@@ -197,16 +269,16 @@ offset_right = 20.75
 offset_bottom = 21.0
 texture = ExtResource("14_7hiqb")
 
-[node name="TextureRect6" type="TextureButton" parent="."]
+[node name="TextureRect6" type="TextureButton" parent="Node2D"]
+visible = false
 texture_filter = 1
-layout_mode = 0
 offset_left = 569.929
 offset_top = 378.703
 offset_right = 595.929
 offset_bottom = 404.703
 texture_normal = ExtResource("11_d1m0d")
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect6"]
+[node name="TextureRect2" type="TextureRect" parent="Node2D/TextureRect6"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 4.75
@@ -215,38 +287,41 @@ offset_right = 20.75
 offset_bottom = 21.0
 texture = ExtResource("15_fcnid")
 
-[node name="道具列表1" type="TextureButton" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 109.861
-offset_top = 379.453
-offset_right = 135.861
-offset_bottom = 405.453
-texture_normal = ExtResource("16_4kixr")
+[node name="Node2D2" type="Node2D" parent="."]
+visible = false
 
-[node name="道具列表2" type="TextureButton" parent="."]
+[node name="道具列表1" type="TextureButton" parent="Node2D2"]
+visible = false
 texture_filter = 1
-layout_mode = 0
-offset_left = 138.361
-offset_top = 379.453
-offset_right = 164.361
-offset_bottom = 405.453
-texture_normal = ExtResource("16_4kixr")
+offset_left = 44.9944
+offset_top = 353.206
+offset_right = 74.9944
+offset_bottom = 392.206
+texture_normal = ExtResource("17_7p27j")
 
-[node name="道具列表3" type="TextureButton" parent="."]
+[node name="道具列表2" type="TextureButton" parent="Node2D2"]
+visible = false
 texture_filter = 1
-layout_mode = 0
-offset_left = 166.486
-offset_top = 379.453
-offset_right = 192.486
-offset_bottom = 405.453
-texture_normal = ExtResource("16_4kixr")
+offset_left = 74.6157
+offset_top = 353.206
+offset_right = 104.616
+offset_bottom = 392.206
+texture_normal = ExtResource("17_7p27j")
 
-[node name="道具列表4" type="TextureButton" parent="."]
+[node name="道具列表3" type="TextureButton" parent="Node2D2"]
+visible = false
 texture_filter = 1
-layout_mode = 0
-offset_left = 194.236
-offset_top = 379.453
-offset_right = 220.236
-offset_bottom = 405.453
-texture_normal = ExtResource("16_4kixr")
+offset_left = 104.237
+offset_top = 352.831
+offset_right = 134.237
+offset_bottom = 391.831
+texture_normal = ExtResource("17_7p27j")
+
+[node name="道具列表4" type="TextureButton" parent="Node2D2"]
+visible = false
+texture_filter = 1
+offset_left = 134.233
+offset_top = 352.456
+offset_right = 164.233
+offset_bottom = 391.456
+texture_normal = ExtResource("17_7p27j")

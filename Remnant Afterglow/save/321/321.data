@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "ChapterId": 3,
+  "Camp": 1,
+  "CaptureCopyDict": {},
+  "UnlockChallengeCopyDict": {},
+  "ScienceIdList": [
+    1,
+    2,
+    3
+  ],
+  "bagSystem": {
+    "CurrencyBigMap": {
+      "101": 1000
+    },
+    "bagDict": {
+      "1": {
+        "BagId": 1,
+        "itemDict": {
+          "65970697666561": {
+            "ItemId": 1,
+            "Quantity": 10,
+            "Id": "65970697666561"
+          }
+        }
+      },
+      "2": {
+        "BagId": 2,
+        "itemDict": {}
+      }
+    }
+  }
+}

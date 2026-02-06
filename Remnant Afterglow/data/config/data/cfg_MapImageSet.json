@@ -26,6 +26,136 @@
         "MapImageSet": "./data/config/images/ID_1B8D765690364953B9DD0A5FB0ECF439.png"
     },
     {
+        "KEY_INDEX": "1000",
+        "MapImageSetId": 1000,
+        "MapImageSetName": "测试区",
+        "ImageSetDescribe": "测试区",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_409EFD4A2A9E410E849F0A479FB0ACDD.png"
+    },
+    {
+        "KEY_INDEX": "1001",
+        "MapImageSetId": 1001,
+        "MapImageSetName": "六边形地块图像集3",
+        "ImageSetDescribe": "大地图的图像集3",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_731065BDDFDA477199A185735A4D4350.png"
+    },
+    {
+        "KEY_INDEX": "1100",
+        "MapImageSetId": 1100,
+        "MapImageSetName": "未探明关卡",
+        "ImageSetDescribe": "大地图关卡贴图",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_BC87F172466D41A685446611F67A98C9.png"
+    },
+    {
+        "KEY_INDEX": "1101",
+        "MapImageSetId": 1101,
+        "MapImageSetName": "1-1战役模式-常规-初启协议",
+        "ImageSetDescribe": "大地图关卡贴图",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_8BDA9D91CC19458E854F35642579AA51.png"
+    },
+    {
+        "KEY_INDEX": "1102",
+        "MapImageSetId": 1102,
+        "MapImageSetName": "1-2战役模式-常规-网格枢纽",
+        "ImageSetDescribe": "大地图关卡贴图",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_CCB5358E712A4E5DB2AB4BBF74002FF5.png"
+    },
+    {
+        "KEY_INDEX": "1103",
+        "MapImageSetId": 1103,
+        "MapImageSetName": "1-3战役模式-常规-怨灵水晶",
+        "ImageSetDescribe": "大地图关卡贴图",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_F285F4A06F25417188819BE9CD778B77.png"
+    },
+    {
+        "KEY_INDEX": "1104",
+        "MapImageSetId": 1104,
+        "MapImageSetName": "1-4战役模式-常规-棱镜之井",
+        "ImageSetDescribe": "大地图关卡贴图",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_905FC3724FA74E2F9C74306221BD2251.png"
+    },
+    {
+        "KEY_INDEX": "1105",
+        "MapImageSetId": 1105,
+        "MapImageSetName": "1-5战役模式-常规-钢铁洪流",
+        "ImageSetDescribe": "大地图关卡贴图",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_0041FCB9D0494148816A06CD7370F0E9.png"
+    },
+    {
+        "KEY_INDEX": "1106",
+        "MapImageSetId": 1106,
+        "MapImageSetName": "1-6战役模式-常规-重炮破晓",
+        "ImageSetDescribe": "大地图关卡贴图",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_25CD87777428465F8F8B8D3A81132EEF.png"
+    },
+    {
+        "KEY_INDEX": "1107",
+        "MapImageSetId": 1107,
+        "MapImageSetName": "1-7战役模式-常规-次元岛装置",
+        "ImageSetDescribe": "大地图关卡贴图",
+        "ImageSetType": 2,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_F4165BF54078433E8C1A0846A99C8AF3.png"
+    },
+    {
         "KEY_INDEX": "8",
         "MapImageSetId": 8,
         "MapImageSetName": "逻辑地块",
@@ -36,7 +166,7 @@
             4,
             4
         ],
-        "MapImageSet": "./data/config/images/ID_73C1BF64C0CB42D5B607FE41763EC19F.png"
+        "MapImageSet": "./data/config/images/ID_1D91E21BB840407EBD70829FB8893A22.png"
     },
     {
         "KEY_INDEX": "9",
@@ -49,7 +179,20 @@
             11,
             12
         ],
-        "MapImageSet": "./data/config/images/ID_8662436A7853464180835C6C73ADBE05.png"
+        "MapImageSet": "./data/config/images/ID_5902D8F50B21428ABFB63993CA438846.png"
+    },
+    {
+        "KEY_INDEX": "15",
+        "MapImageSetId": 15,
+        "MapImageSetName": "工厂地板",
+        "ImageSetDescribe": "工厂区的地块",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 81,
+        "MapImageSize": [
+            9,
+            9
+        ],
+        "MapImageSet": "./data/config/images/ID_366BED8BE75246DF849D416B8A2CEC74.png"
     },
     {
         "KEY_INDEX": "10",
@@ -70,12 +213,12 @@
         "MapImageSetName": "资源地块",
         "ImageSetDescribe": "资源地块",
         "ImageSetType": 1,
-        "ImageSetMaxId": 3,
+        "ImageSetMaxId": 81,
         "MapImageSize": [
-            3,
-            1
+            9,
+            9
         ],
-        "MapImageSet": "./data/config/images/ID_97B8105DCDB8455182755E90D354E158.png"
+        "MapImageSet": "./data/config/images/ID_8033F42892484127AA852D814FE04E77.png"
     },
     {
         "KEY_INDEX": "12",
@@ -83,11 +226,596 @@
         "MapImageSetName": "沙漠地板",
         "ImageSetDescribe": "沙漠地板",
         "ImageSetType": 1,
-        "ImageSetMaxId": 9,
+        "ImageSetMaxId": 45,
         "MapImageSize": [
-            3,
-            3
+            9,
+            5
         ],
-        "MapImageSet": "./data/config/images/ID_2C6F5277AF184A408A5C536CE7FFDA94.png"
+        "MapImageSet": "./data/config/images/ID_8F9CE1109CBE434A8C7A6A451CD5C48A.png"
+    },
+    {
+        "KEY_INDEX": "13",
+        "MapImageSetId": 13,
+        "MapImageSetName": "地块效果层级阴影",
+        "ImageSetDescribe": "地块效果层级阴影",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 90,
+        "MapImageSize": [
+            9,
+            10
+        ],
+        "MapImageSet": "./data/config/images/ID_2EBD8AFA0097418CADEFD466A181A7C0.png"
+    },
+    {
+        "KEY_INDEX": "14",
+        "MapImageSetId": 14,
+        "MapImageSetName": "工厂部件1",
+        "ImageSetDescribe": "工厂部件1",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 81,
+        "MapImageSize": [
+            9,
+            9
+        ],
+        "MapImageSet": "./data/config/images/ID_12DA68E94D564C9B86ED6ACFDFDFF3C3.png"
+    },
+    {
+        "KEY_INDEX": "10000",
+        "MapImageSetId": 10000,
+        "MapImageSetName": "占位符",
+        "ImageSetDescribe": "占位符",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 1,
+        "MapImageSize": [
+            1,
+            1
+        ],
+        "MapImageSet": "./data/config/images/ID_A97268E70E814D19A17507429F4C1880.png"
+    },
+    {
+        "KEY_INDEX": "16",
+        "MapImageSetId": 16,
+        "MapImageSetName": "工厂墙壁",
+        "ImageSetDescribe": "工厂墙壁",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 81,
+        "MapImageSize": [
+            9,
+            9
+        ],
+        "MapImageSet": "./data/config/images/ID_AE6493A18B034DED84F9630F0FECB4F1.png"
+    },
+    {
+        "KEY_INDEX": "17",
+        "MapImageSetId": 17,
+        "MapImageSetName": "工厂墙壁",
+        "ImageSetDescribe": "工厂墙壁",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_2D50515CC48A453C914C998900B899A7.png"
+    },
+    {
+        "KEY_INDEX": "18",
+        "MapImageSetId": 18,
+        "MapImageSetName": "工厂墙壁",
+        "ImageSetDescribe": "工厂墙壁",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_552F982BB9A84CE39B08D931EAA9AAB3.png"
+    },
+    {
+        "KEY_INDEX": "19",
+        "MapImageSetId": 19,
+        "MapImageSetName": "工厂墙壁",
+        "ImageSetDescribe": "工厂墙壁",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_21FF3137B7044B7BADEEEC08DF547A6D.png"
+    },
+    {
+        "KEY_INDEX": "20",
+        "MapImageSetId": 20,
+        "MapImageSetName": "沙漠地板",
+        "ImageSetDescribe": "沙漠地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_771AEB6BE0D145EABA74588D0BD32CF9.png"
+    },
+    {
+        "KEY_INDEX": "21",
+        "MapImageSetId": 21,
+        "MapImageSetName": "工厂悬崖",
+        "ImageSetDescribe": "工厂悬崖",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_5F92616397BD4903B25B77F3D9163801.png"
+    },
+    {
+        "KEY_INDEX": "22",
+        "MapImageSetId": 22,
+        "MapImageSetName": "沙漠悬崖",
+        "ImageSetDescribe": "沙漠悬崖",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_2C0BA9F4EEA94842B07BB5CA163328E5.png"
+    },
+    {
+        "KEY_INDEX": "23",
+        "MapImageSetId": 23,
+        "MapImageSetName": "工厂装饰",
+        "ImageSetDescribe": "工厂装饰",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 81,
+        "MapImageSize": [
+            9,
+            9
+        ],
+        "MapImageSet": "./data/config/images/ID_18CF6AAFA20C4CA4AAB7AEDDC8C705E3.png"
+    },
+    {
+        "KEY_INDEX": "24",
+        "MapImageSetId": 24,
+        "MapImageSetName": "高层装饰1",
+        "ImageSetDescribe": "高层装饰1",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 81,
+        "MapImageSize": [
+            9,
+            9
+        ],
+        "MapImageSet": "./data/config/images/ID_94B926CE21D54075B81674379EA94C9E.png"
+    },
+    {
+        "KEY_INDEX": "25",
+        "MapImageSetId": 25,
+        "MapImageSetName": "宝石墙壁",
+        "ImageSetDescribe": "宝石墙壁",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_54A17A884E744506A9DD6718ADFAF8FF.png"
+    },
+    {
+        "KEY_INDEX": "26",
+        "MapImageSetId": 26,
+        "MapImageSetName": "墙壁阴影",
+        "ImageSetDescribe": "墙壁阴影",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 81,
+        "MapImageSize": [
+            9,
+            9
+        ],
+        "MapImageSet": "./data/config/images/ID_FAA60A501DD244459A0C5F4E44F36345.png"
+    },
+    {
+        "KEY_INDEX": "27",
+        "MapImageSetId": 27,
+        "MapImageSetName": "工厂地板",
+        "ImageSetDescribe": "工厂地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_69158AECBCC740C5A3BD17EB3BD08B04.png"
+    },
+    {
+        "KEY_INDEX": "28",
+        "MapImageSetId": 28,
+        "MapImageSetName": "工厂地板悬崖",
+        "ImageSetDescribe": "工厂地板悬崖",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_3BC98EFC03924D83A1389706A3772A53.png"
+    },
+    {
+        "KEY_INDEX": "29",
+        "MapImageSetId": 29,
+        "MapImageSetName": "工厂地板墙壁",
+        "ImageSetDescribe": "工厂地板墙壁",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_F242FC88CCB6417D9AEE0DF9725AFDF9.png"
+    },
+    {
+        "KEY_INDEX": "30",
+        "MapImageSetId": 30,
+        "MapImageSetName": "工厂地板阴影",
+        "ImageSetDescribe": "工厂地板阴影",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_02D8F267E60D4FB4A5F6F480B565094C.png"
+    },
+    {
+        "KEY_INDEX": "31",
+        "MapImageSetId": 31,
+        "MapImageSetName": "工厂破旧地板",
+        "ImageSetDescribe": "工厂破旧地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_F7817D681B8842369C6E62F983DCA994.png"
+    },
+    {
+        "KEY_INDEX": "32",
+        "MapImageSetId": 32,
+        "MapImageSetName": "敌方刷新点",
+        "ImageSetDescribe": "敌方刷新点",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_E5B1FD05FACB493EA76BFDF1A80FAAEA.png"
+    },
+    {
+        "KEY_INDEX": "33",
+        "MapImageSetId": 33,
+        "MapImageSetName": "不可建造区域",
+        "ImageSetDescribe": "不可建造区域",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_3F7491A1C758480B90FE1A84C902D3A8.png"
+    },
+    {
+        "KEY_INDEX": "34",
+        "MapImageSetId": 34,
+        "MapImageSetName": "推荐规划区",
+        "ImageSetDescribe": "推荐规划区",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_B663FCC4B3AB44D3B821099316609951.png"
+    },
+    {
+        "KEY_INDEX": "35",
+        "MapImageSetId": 35,
+        "MapImageSetName": "飞行敌人刷新点",
+        "ImageSetDescribe": "飞行敌人刷新点",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_18307AF68E06496CA6A110DFB4F00D67.png"
+    },
+    {
+        "KEY_INDEX": "36",
+        "MapImageSetId": 36,
+        "MapImageSetName": "警戒线",
+        "ImageSetDescribe": "警戒线",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_680F2289BCB04687B9DABF7D80829035.png"
+    },
+    {
+        "KEY_INDEX": "37",
+        "MapImageSetId": 37,
+        "MapImageSetName": "计算模块",
+        "ImageSetDescribe": "计算模块",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_F34DED19604C4EE59DC30EE796B226EB.png"
+    },
+    {
+        "KEY_INDEX": "38",
+        "MapImageSetId": 38,
+        "MapImageSetName": "酸化地板",
+        "ImageSetDescribe": "酸化地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_4ECA01A05EC24CB8981E8A6E8CFFACB8.png"
+    },
+    {
+        "KEY_INDEX": "39",
+        "MapImageSetId": 39,
+        "MapImageSetName": "腐烂地板",
+        "ImageSetDescribe": "腐烂地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_C9B2FAF0139B4C8DA52AE2AD77D90E95.png"
+    },
+    {
+        "KEY_INDEX": "40",
+        "MapImageSetId": 40,
+        "MapImageSetName": "沙漠风化地板",
+        "ImageSetDescribe": "沙漠风化地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_94FF0A72AA614F29AA3F3AC90E6DE516.png"
+    },
+    {
+        "KEY_INDEX": "41",
+        "MapImageSetId": 41,
+        "MapImageSetName": "岩石地板",
+        "ImageSetDescribe": "岩石地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_210C7FF9782141B68F07552CFA40F5FF.png"
+    },
+    {
+        "KEY_INDEX": "42",
+        "MapImageSetId": 42,
+        "MapImageSetName": "岩石沙漠地板",
+        "ImageSetDescribe": "岩石沙漠地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_1419DFA532CC412E87BC743CB871ADFD.png"
+    },
+    {
+        "KEY_INDEX": "43",
+        "MapImageSetId": 43,
+        "MapImageSetName": "道路",
+        "ImageSetDescribe": "道路",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_A9851062B938465C8EF82C44263ACF9C.png"
+    },
+    {
+        "KEY_INDEX": "44",
+        "MapImageSetId": 44,
+        "MapImageSetName": "破裂道路",
+        "ImageSetDescribe": "破裂道路",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_073722960C474F6B8E4E21290BCC36CE.png"
+    },
+    {
+        "KEY_INDEX": "45",
+        "MapImageSetId": 45,
+        "MapImageSetName": "红砖地面",
+        "ImageSetDescribe": "红砖地面",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_CCCCCCCC4ADC4EEE9705D538083F13FA.png"
+    },
+    {
+        "KEY_INDEX": "46",
+        "MapImageSetId": 46,
+        "MapImageSetName": "防沙地面",
+        "ImageSetDescribe": "防沙地面",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_BD896E158730498E8FAEEFB82AF7F0E1.png"
+    },
+    {
+        "KEY_INDEX": "47",
+        "MapImageSetId": 47,
+        "MapImageSetName": "熔岩地板",
+        "ImageSetDescribe": "熔岩地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_611FAEEDA292447BAC8D390B7F73C65F.png"
+    },
+    {
+        "KEY_INDEX": "48",
+        "MapImageSetId": 48,
+        "MapImageSetName": "黑曜石地板",
+        "ImageSetDescribe": "黑曜石地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_42228BAC81C04A61B6227103DB19F2A8.png"
+    },
+    {
+        "KEY_INDEX": "49",
+        "MapImageSetId": 49,
+        "MapImageSetName": "熔岩悬崖",
+        "ImageSetDescribe": "熔岩悬崖",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_B17F2EF5C83F483B97D4CFAD4F9979B7.png"
+    },
+    {
+        "KEY_INDEX": "50",
+        "MapImageSetId": 50,
+        "MapImageSetName": "灰绿色污染地块",
+        "ImageSetDescribe": "灰绿色污染地块",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_045FFD4FF60C4DADBE11C8DDE112A208.png"
+    },
+    {
+        "KEY_INDEX": "51",
+        "MapImageSetId": 51,
+        "MapImageSetName": "灰紫色污染地块",
+        "ImageSetDescribe": "灰紫色污染地块",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_6205220309514169BFC0D8687FB57BD9.png"
+    },
+    {
+        "KEY_INDEX": "52",
+        "MapImageSetId": 52,
+        "MapImageSetName": "寰星科技地板",
+        "ImageSetDescribe": "寰星科技地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_8451089FCB234E80A8B8EA18900DBE83.png"
+    },
+    {
+        "KEY_INDEX": "53",
+        "MapImageSetId": 53,
+        "MapImageSetName": "破损寰星科技地板",
+        "ImageSetDescribe": "破损寰星科技地板",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_B67FE283CDE347FDBC4B5EA6973DAEC9.png"
+    },
+    {
+        "KEY_INDEX": "54",
+        "MapImageSetId": 54,
+        "MapImageSetName": "立场墙",
+        "ImageSetDescribe": "立场墙",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_5382950A829C4A398397304FC7D3CB26.png"
+    },
+    {
+        "KEY_INDEX": "55",
+        "MapImageSetId": 55,
+        "MapImageSetName": "沙漠墙壁",
+        "ImageSetDescribe": "沙漠墙壁",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_5E9D5A50BAA349BA8CEAD0B1C99BE5C6.png"
+    },
+    {
+        "KEY_INDEX": "56",
+        "MapImageSetId": 56,
+        "MapImageSetName": "沙漠悬崖",
+        "ImageSetDescribe": "沙漠悬崖",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_1A31C68B558D4491804FB437BC5C13F5.png"
+    },
+    {
+        "KEY_INDEX": "57",
+        "MapImageSetId": 57,
+        "MapImageSetName": "工厂地板条纹",
+        "ImageSetDescribe": "工厂地板条纹",
+        "ImageSetType": 1,
+        "ImageSetMaxId": 48,
+        "MapImageSize": [
+            12,
+            4
+        ],
+        "MapImageSet": "./data/config/images/ID_FF19C7E99F37456586AA80ACD3D8AEE0.png"
     }
 ]

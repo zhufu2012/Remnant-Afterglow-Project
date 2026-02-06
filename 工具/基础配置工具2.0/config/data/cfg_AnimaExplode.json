@@ -19,8 +19,6 @@
         "RelativeList": [],
         "FrameSpeed": 1,
         "PlaySpeed": 3,
-        "IsAutoplay": true,
-        "IsLoop": true,
         "Picture": "./data/config/images/ID_B1E5BBB75DF144E6BCE87AD7FFB08D41.png",
         "FlipH": true,
         "FlipV": true

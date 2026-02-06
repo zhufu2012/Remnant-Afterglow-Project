@@ -1,43 +1,6 @@
 {
     "cfg_files": [
         {
-            "file_name": "cfg_BuffTag",
-            "file_path": "./data/config/data/cfg_BuffTag.json",
-            "xlsx_dec": "buff标签数据",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "TagId": "int",
-                "TagName": "string",
-                "ReplaceTagIdList": "HashSet<int>",
-                "BanTagIdList": "HashSet<int>"
-            }
-        },
-        {
-            "file_name": "cfg_BuffData",
-            "file_path": "./data/config/data/cfg_BuffData.json",
-            "xlsx_dec": "buff基础数据",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "BuffId": "int",
-                "BuffName": "string",
-                "BuffDesc": "string",
-                "BuffType": "int",
-                "BuffMutilAddType": "int",
-                "BuffTagIdList": "HashSet<int>",
-                "IsPermanent": "bool",
-                "Duration": "int",
-                "IsRemoveAllLayer": "bool",
-                "RunTickTimer": "bool",
-                "TickInterval": "int",
-                "MaxLayer": "int",
-                "StartEventIdList": "List<int>",
-                "EventIdList": "List<List<int>>",
-                "Param1": "int",
-                "Param2": "int",
-                "Param3": "int"
-            }
-        },
-        {
             "file_name": "cfg_ViewBase",
             "file_path": "./data/config/data/cfg_ViewBase.json",
             "xlsx_dec": "界面基础配置",
@@ -91,6 +54,31 @@
                 "UnlockCondList": "List<List<int>>",
                 "Content": "BBCode",
                 "UnlockCondStr": "string"
+            }
+        },
+        {
+            "file_name": "cfg_Archival",
+            "file_path": "./data/config/data/cfg_Archival.json",
+            "xlsx_dec": "档案库主界面",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ArchivalId": "int",
+                "Name": "string",
+                "IsDefine": "bool",
+                "ItemIdList": "List<int>"
+            }
+        },
+        {
+            "file_name": "cfg_ArchivalItem",
+            "file_path": "./data/config/data/cfg_ArchivalItem.json",
+            "xlsx_dec": "档案库子项",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ItemId": "int",
+                "Name": "string",
+                "Content": "string",
+                "Image": "Texture2D",
+                "IsDefine": "bool"
             }
         },
         {
@@ -205,8 +193,10 @@
             "xlsx_dec": "全局配置Int数据",
             "key_list": {
                 "KEY_INDEX": "string",
-                "Configid": "string",
+                "ConfigId": "string",
                 "ConfigName": "string",
+                "ShopSetting": "bool",
+                "IsModif": "bool",
                 "ConfigValue": "int"
             }
         },
@@ -216,7 +206,7 @@
             "xlsx_dec": "Png散图",
             "key_list": {
                 "KEY_INDEX": "string",
-                "Configid": "string",
+                "ConfigId": "string",
                 "ConfigName": "string",
                 "ConfigValue": "Texture2D"
             }
@@ -227,8 +217,10 @@
             "xlsx_dec": "Str数据",
             "key_list": {
                 "KEY_INDEX": "string",
-                "Configid": "string",
+                "ConfigId": "string",
                 "ConfigName": "string",
+                "ShopSetting": "bool",
+                "IsModif": "bool",
                 "ConfigValue": "string"
             }
         },
@@ -238,8 +230,10 @@
             "xlsx_dec": "float数据",
             "key_list": {
                 "KEY_INDEX": "string",
-                "Configid": "string",
+                "ConfigId": "string",
                 "ConfigName": "string",
+                "ShopSetting": "bool",
+                "IsModif": "bool",
                 "ConfigValue": "float"
             }
         },
@@ -249,7 +243,7 @@
             "xlsx_dec": "List数据",
             "key_list": {
                 "KEY_INDEX": "string",
-                "Configid": "string",
+                "ConfigId": "string",
                 "ConfigName": "string",
                 "ConfigValue": "List<int>"
             }
@@ -350,9 +344,7 @@
                 "Size": "Vector2I",
                 "Offset": "Vector2",
                 "RelativeList": "List<List<float>>",
-                "SpeedScale": "int",
-                "IsAutoplay": "bool",
-                "IsLoop": "bool",
+                "SpeedFps": "int",
                 "Picture": "Texture2D",
                 "FlipH": "bool",
                 "FlipV": "bool"
@@ -372,9 +364,7 @@
                 "Size": "Vector2I",
                 "Offset": "Vector2",
                 "RelativeList": "List<List<float>>",
-                "SpeedScale": "int",
-                "IsAutoplay": "bool",
-                "IsLoop": "bool",
+                "SpeedFps": "int",
                 "Picture": "Texture2D",
                 "FlipH": "bool",
                 "FlipV": "bool"
@@ -394,9 +384,7 @@
                 "Size": "Vector2I",
                 "Offset": "Vector2",
                 "RelativeList": "List<List<float>>",
-                "SpeedScale": "int",
-                "IsAutoplay": "bool",
-                "IsLoop": "bool",
+                "SpeedFps": "int",
                 "Picture": "Texture2D",
                 "FlipH": "bool",
                 "FlipV": "bool"
@@ -416,9 +404,7 @@
                 "Size": "Vector2I",
                 "Offset": "Vector2",
                 "RelativeList": "List<List<float>>",
-                "SpeedScale": "int",
-                "IsAutoplay": "bool",
-                "IsLoop": "bool",
+                "SpeedFps": "int",
                 "Picture": "Texture2D",
                 "FlipH": "bool",
                 "FlipV": "bool"
@@ -438,31 +424,7 @@
                 "Size": "Vector2I",
                 "Offset": "Vector2",
                 "RelativeList": "List<List<float>>",
-                "FrameSpeed": "int",
-                "IsAutoplay": "bool",
-                "IsLoop": "bool",
-                "Picture": "Texture2D",
-                "FlipH": "bool",
-                "FlipV": "bool"
-            }
-        },
-        {
-            "file_name": "cfg_AnimaBullet",
-            "file_path": "./data/config/data/cfg_AnimaBullet.json",
-            "xlsx_dec": "子弹动画",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "BulletLabel": "string",
-                "AnimaType": "int",
-                "Coords": "Vector2I",
-                "LengWidth": "Vector2I",
-                "MaxIndex": "int",
-                "Size": "Vector2I",
-                "Offset": "Vector2",
-                "RelativeList": "List<List<float>>",
-                "FrameSpeed": "int",
-                "IsAutoplay": "bool",
-                "IsLoop": "bool",
+                "SpeedFps": "int",
                 "Picture": "Texture2D",
                 "FlipH": "bool",
                 "FlipV": "bool"
@@ -483,8 +445,126 @@
                 "RelativeList": "List<List<float>>",
                 "FrameSpeed": "int",
                 "PlaySpeed": "int",
-                "IsAutoplay": "bool",
-                "IsLoop": "bool",
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
+            }
+        },
+        {
+            "file_name": "cfg_AnimaUnit2",
+            "file_path": "./data/config/data/cfg_AnimaUnit2.json",
+            "xlsx_dec": "单位帧动画配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ObjectId": "int",
+                "AnimaType": "int",
+                "Coords": "Vector2I",
+                "LengWidth": "Vector2I",
+                "MaxIndex": "int",
+                "Size": "Vector2I",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<float>>",
+                "SpeedFps": "int",
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
+            }
+        },
+        {
+            "file_name": "cfg_AnimaBuild2",
+            "file_path": "./data/config/data/cfg_AnimaBuild2.json",
+            "xlsx_dec": "建筑动画",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ObjectId": "int",
+                "AnimaType": "int",
+                "Coords": "Vector2I",
+                "LengWidth": "Vector2I",
+                "MaxIndex": "int",
+                "Size": "Vector2I",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<float>>",
+                "SpeedFps": "int",
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
+            }
+        },
+        {
+            "file_name": "cfg_AnimaTower2",
+            "file_path": "./data/config/data/cfg_AnimaTower2.json",
+            "xlsx_dec": "炮塔动画",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ObjectId": "int",
+                "AnimaType": "int",
+                "Coords": "Vector2I",
+                "LengWidth": "Vector2I",
+                "MaxIndex": "int",
+                "Size": "Vector2I",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<float>>",
+                "SpeedFps": "int",
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
+            }
+        },
+        {
+            "file_name": "cfg_AnimaWorker2",
+            "file_path": "./data/config/data/cfg_AnimaWorker2.json",
+            "xlsx_dec": "无人机动画",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ObjectId": "int",
+                "AnimaType": "int",
+                "Coords": "Vector2I",
+                "LengWidth": "Vector2I",
+                "MaxIndex": "int",
+                "Size": "Vector2I",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<float>>",
+                "SpeedFps": "int",
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
+            }
+        },
+        {
+            "file_name": "cfg_AnimaWeapon2",
+            "file_path": "./data/config/data/cfg_AnimaWeapon2.json",
+            "xlsx_dec": "武器动画",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "WeaponId": "int",
+                "AnimaType": "int",
+                "Coords": "Vector2I",
+                "LengWidth": "Vector2I",
+                "MaxIndex": "int",
+                "Size": "Vector2I",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<float>>",
+                "SpeedFps": "int",
+                "Picture": "Texture2D",
+                "FlipH": "bool",
+                "FlipV": "bool"
+            }
+        },
+        {
+            "file_name": "cfg_AnimaExplode2",
+            "file_path": "./data/config/data/cfg_AnimaExplode2.json",
+            "xlsx_dec": "爆炸动画",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ExplodeId": "int",
+                "AnimaType": "int",
+                "Coords": "Vector2I",
+                "LengWidth": "Vector2I",
+                "MaxIndex": "int",
+                "Offset": "Vector2",
+                "RelativeList": "List<List<float>>",
+                "FrameSpeed": "int",
+                "PlaySpeed": "int",
                 "Picture": "Texture2D",
                 "FlipH": "bool",
                 "FlipV": "bool"
@@ -511,6 +591,20 @@
                 "KetId": "int",
                 "Key2Id": "int",
                 "CopyId": "Texture2D"
+            }
+        },
+        {
+            "file_name": "cfg_ObjectEffectImage",
+            "file_path": "./data/config/data/cfg_ObjectEffectImage.json",
+            "xlsx_dec": "实体效果图片",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "EffectImageId": "int",
+                "Offset": "Vector2",
+                "Index": "int",
+                "EffectType": "int",
+                "EffectValueList": "List<int>",
+                "FrameAnimaDes": "Texture2D"
             }
         },
         {
@@ -579,9 +673,7 @@
             "key_list": {
                 "KEY_INDEX": "string",
                 "MaterialId": "int",
-                "EdgeId": "int",
-                "ImageSetId": "int",
-                "ImageSetIndex": "int"
+                "ImageSetId": "int"
             }
         },
         {
@@ -635,28 +727,6 @@
             "key_list": {
                 "KEY_INDEX": "string",
                 "ImageLayerId": "int",
-                "LayerName": "string",
-                "LayerShowDes": "string"
-            }
-        },
-        {
-            "file_name": "cfg_MapPhysicsLayer",
-            "file_path": "./data/config/data/cfg_MapPhysicsLayer.json",
-            "xlsx_dec": "物理层配置",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "PhysicsLayerId": "int",
-                "LayerName": "string",
-                "LayerShowDes": "string"
-            }
-        },
-        {
-            "file_name": "cfg_MapNavigate",
-            "file_path": "./data/config/data/cfg_MapNavigate.json",
-            "xlsx_dec": "地图导航层",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "NavigateLayerId": "int",
                 "LayerName": "string",
                 "LayerShowDes": "string"
             }
@@ -757,20 +827,17 @@
             }
         },
         {
-            "file_name": "cfg_BigMapMaterial",
-            "file_path": "./data/config/data/cfg_BigMapMaterial.json",
-            "xlsx_dec": "大地图节点",
+            "file_name": "cfg_MapDecorate",
+            "file_path": "./data/config/data/cfg_MapDecorate.json",
+            "xlsx_dec": "地图装饰物配置",
             "key_list": {
                 "KEY_INDEX": "string",
-                "NodeId": "int",
-                "NodeType": "int",
-                "ImageSetId": "int",
-                "ImageSetIndex": "int",
-                "LogicIdList": "List<int>",
-                "IsSelect": "bool",
-                "IsClick": "bool",
-                "NodeClickEventList": "List<int>",
-                "NodeEnterEventList": "List<int>"
+                "DecorateId": "int",
+                "Type": "int",
+                "Zindex": "int",
+                "Png": "Texture2D",
+                "FrameAnimaId": "Texture2D",
+                "SceneNode": "string"
             }
         },
         {
@@ -797,6 +864,23 @@
                 "BackgroundType": "int",
                 "BackgroundImage": "Texture2D",
                 "BackgroundShader": "string"
+            }
+        },
+        {
+            "file_name": "cfg_BigMapMaterial",
+            "file_path": "./data/config/data/cfg_BigMapMaterial.json",
+            "xlsx_dec": "大地图节点",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "NodeId": "int",
+                "NodeType": "int",
+                "ImageSetId": "int",
+                "ImageSetIndex": "int",
+                "LogicIdList": "List<int>",
+                "IsSelect": "bool",
+                "IsClick": "bool",
+                "NodeClickEventList": "List<int>",
+                "NodeEnterEventList": "List<int>"
             }
         },
         {
@@ -864,6 +948,7 @@
                 "KEY_INDEX": "string",
                 "BrushId": "int",
                 "BrushPosList": "List<Vector2I>",
+                "TargetPos": "Vector2I",
                 "WaveIdList": "List<int>"
             }
         },
@@ -890,7 +975,8 @@
                 "Describe": "string",
                 "ShowDescribe": "string",
                 "UnitList": "List<List<int>>",
-                "CountInterval": "List<int>"
+                "CountInterval": "List<int>",
+                "Interval": "int"
             }
         },
         {
@@ -934,10 +1020,10 @@
                 "CopyUiId": "int",
                 "CopyType": "int",
                 "CameraId": "int",
-                "MapType": "int",
-                "GenerateMapId": "int",
+                "MapName": "string",
                 "Pos": "Vector2I",
                 "NodeId": "int",
+                "GloTemList": "List<int>",
                 "CopyIdList": "List<int>"
             }
         },
@@ -957,13 +1043,12 @@
         {
             "file_name": "cfg_ChapterCopyUI",
             "file_path": "./data/config/data/cfg_ChapterCopyUI.json",
-            "xlsx_dec": "章节关卡UI数据",
+            "xlsx_dec": "章节关卡描述数据",
             "key_list": {
                 "KEY_INDEX": "string",
                 "CopyId": "int",
                 "CopyName": "string",
-                "Describe1": "string",
-                "Describe2": "string"
+                "Describe1": "string"
             }
         },
         {
@@ -974,61 +1059,40 @@
                 "KEY_INDEX": "string",
                 "MusicId": "string",
                 "MusicName": "string",
+                "MusicType": "int",
+                "Param": "int",
+                "Probability": "int",
+                "VolumeMultiple": "float",
                 "MusicPath": "string"
             }
         },
         {
-            "file_name": "cfg_SoundEffect",
-            "file_path": "./data/config/data/cfg_SoundEffect.json",
+            "file_name": "cfg_UISoundSfx",
+            "file_path": "./data/config/data/cfg_UISoundSfx.json",
+            "xlsx_dec": "UI音效配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "UIName": "string",
+                "SfxName": "string",
+                "UIType": "int",
+                "EventIdList": "List<int>",
+                "SoundPath": "string"
+            }
+        },
+        {
+            "file_name": "cfg_SoundSfx",
+            "file_path": "./data/config/data/cfg_SoundSfx.json",
             "xlsx_dec": "音效配置",
             "key_list": {
                 "KEY_INDEX": "string",
                 "SoundId": "string",
                 "SoundName": "string",
-                "SoundPath": "string"
-            }
-        },
-        {
-            "file_name": "cfg_BulletScript",
-            "file_path": "./data/config/data/cfg_BulletScript.json",
-            "xlsx_dec": "子弹脚本配置",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "BulletLabel": "string",
-                "AnimaTypeList": "List<int>",
-                "Logic": "string"
-            }
-        },
-        {
-            "file_name": "cfg_BulletAction",
-            "file_path": "./data/config/data/cfg_BulletAction.json",
-            "xlsx_dec": "子弹脚本行为",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "ActionLabel": "string",
-                "AnimaTypeList": "List<int>",
-                "Logic": "string"
-            }
-        },
-        {
-            "file_name": "cfg_BulletFire",
-            "file_path": "./data/config/data/cfg_BulletFire.json",
-            "xlsx_dec": "子弹脚本开火行为",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "FireLabel": "string",
-                "AnimaTypeList": "List<int>",
-                "Logic": "string"
-            }
-        },
-        {
-            "file_name": "cfg_BulletScene",
-            "file_path": "./data/config/data/cfg_BulletScene.json",
-            "xlsx_dec": "子弹场景数据",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "BulletSceneTypeId": "int",
-                "ScenePath": "string"
+                "SoundPath": "string",
+                "BusType": "int",
+                "VolumeDb": "float",
+                "PitchMin": "float",
+                "PitchMax": "float",
+                "MaxInstances": "int"
             }
         },
         {
@@ -1037,12 +1101,14 @@
             "xlsx_dec": "子弹基础数据表",
             "key_list": {
                 "KEY_INDEX": "string",
-                "BulletLabel": "string",
+                "BulletId": "int",
                 "SceneType": "int",
+                "BulletLabel": "string",
                 "Logic": "string",
                 "CollideId": "int",
                 "SoundId": "string",
                 "ZIndex": "int",
+                "IsCenter": "bool",
                 "BulletPng": "Texture2D",
                 "AnimaTypeList": "List<int>"
             }
@@ -1050,15 +1116,17 @@
         {
             "file_name": "cfg_BulletLogic",
             "file_path": "./data/config/data/cfg_BulletLogic.json",
-            "xlsx_dec": "子弹逻辑数据表",
+            "xlsx_dec": "实体子弹逻辑表",
             "key_list": {
                 "KEY_INDEX": "string",
+                "BulletId": "int",
                 "BulletLabel": "string",
                 "BulletName": "string",
                 "ShieldHarm": "int",
                 "ArmourHarm": "int",
                 "StructureHarm": "int",
                 "ElementHarm": "int",
+                "AddBuffList": "List<List<int>>",
                 "HitEvent": "List<int>",
                 "MaxLifeTime": "float",
                 "MaxDistance": "float",
@@ -1067,20 +1135,19 @@
             }
         },
         {
-            "file_name": "cfg_BulletCollide",
-            "file_path": "./data/config/data/cfg_BulletCollide.json",
-            "xlsx_dec": "子弹碰撞数据",
+            "file_name": "cfg_LaserBulletLogic",
+            "file_path": "./data/config/data/cfg_LaserBulletLogic.json",
+            "xlsx_dec": "激光子弹逻辑表",
             "key_list": {
                 "KEY_INDEX": "string",
-                "CollideId": "int",
-                "IsCollide": "bool",
-                "CollisionLayerList": "List<int>",
-                "MaskLayerList": "List<int>",
-                "CollidePos": "Vector2",
-                "ShapeType": "int",
-                "ShapePointList": "List<List<float>>",
-                "CollideRotate": "float",
-                "SafeMargin ": "float"
+                "LaserId": "int",
+                "BulletName": "string",
+                "Frame": "int",
+                "ShieldHarm": "int",
+                "ArmourHarm": "int",
+                "StructureHarm": "int",
+                "ElementHarm": "int",
+                "AddBuffList": "List<List<int>>"
             }
         },
         {
@@ -1124,7 +1191,11 @@
                 "UnitName": "string",
                 "AnimaTypeList": "List<int>",
                 "ShadowSprite": "Texture2D",
-                "ShadowOffset": "Vector2"
+                "ShadowOffset": "Vector2",
+                "IsChassis": "bool",
+                "IsRotate": "bool",
+                "RotationSpeed": "int",
+                "ChassisImg": "Texture2D"
             }
         },
         {
@@ -1136,27 +1207,12 @@
                 "ObjectId": "int",
                 "UnitAIType": "int",
                 "WeaponList": "List<List<int>>",
+                "Mass": "int",
                 "AttackIsMove": "bool",
                 "ForceAttackRange": "float",
                 "PathfindingDis": "float",
                 "IsRotateWeapon": "bool",
                 "ImmuneList": "List<int>"
-            }
-        },
-        {
-            "file_name": "cfg_AttrEvent",
-            "file_path": "./data/config/data/cfg_AttrEvent.json",
-            "xlsx_dec": "属性事件",
-            "key_list": {
-                "KEY_INDEX": "string",
-                "AttrEventId": "int",
-                "AttrEventDescribe": "string",
-                "EventType": "int",
-                "Delay": "int",
-                "Param1": "int",
-                "Param2": "int",
-                "Param3": "int",
-                "ParamList": "List<List<float>>"
             }
         },
         {
@@ -1204,15 +1260,11 @@
                 "BuffIdList": "HashSet<int>",
                 "IsMove": "bool",
                 "IsCollide": "bool",
-                "AttributeBarList": "List<int>",
+                "AttributeBarPos": "Vector2",
                 "Volume": "float",
-                "CollisionLayerList": "List<int>",
-                "MaskLayerList": "List<int>",
                 "CollidePos": "Vector2",
                 "ShapeType": "int",
-                "ShapePointList": "List<int>",
-                "CollideRotate": "float",
-                "SafeMargin": "float"
+                "ShapePointList": "List<int>"
             }
         },
         {
@@ -1225,6 +1277,7 @@
                 "BuildingName": "string",
                 "Describe": "string",
                 "Type": "int",
+                "SubType": "int",
                 "DefaultCamp": "int",
                 "Price": "List<List<int>>",
                 "WeekLength": "int",
@@ -1273,16 +1326,149 @@
                 "KEY_INDEX": "string",
                 "WeaponId": "int",
                 "MountLookTarget": "bool",
-                "BulletId": "string",
+                "BulletId": "int",
                 "Range": "float",
                 "LaunchTotal": "int",
                 "EmissionInterval": "int",
                 "FirePointList": "List<Vector2>",
+                "ShellPointList": "List<Vector2>",
                 "EmissionNum": "int",
                 "CoolTime": "int",
                 "StartAngle": "float",
                 "RotationSpeed": "float",
-                "CurrScatteringRange": "float"
+                "CurrScatteringRange": "float",
+                "HullOffsetAngle": "float",
+                "SectorAngle": "float"
+            }
+        },
+        {
+            "file_name": "cfg_WreckAge",
+            "file_path": "./data/config/data/cfg_WreckAge.json",
+            "xlsx_dec": "残骸配置",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "WreckAgeId": "int",
+                "OutTime": "int",
+                "WreckAgePng": "Texture2D"
+            }
+        },
+        {
+            "file_name": "cfg_BuffTag",
+            "file_path": "./data/config/data/cfg_BuffTag.json",
+            "xlsx_dec": "buff标签数据",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "TagId": "int",
+                "TagName": "string",
+                "ReplaceTagIdList": "HashSet<int>",
+                "BanTagIdList": "HashSet<int>"
+            }
+        },
+        {
+            "file_name": "cfg_BuffData",
+            "file_path": "./data/config/data/cfg_BuffData.json",
+            "xlsx_dec": "buff基础数据",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "BuffId": "int",
+                "BuffName": "string",
+                "BuffDesc": "string",
+                "BuffType": "int",
+                "BuffMutilAddType": "int",
+                "BuffTagIdList": "HashSet<int>",
+                "IsPermanent": "bool",
+                "Duration": "int",
+                "IsRemoveAllLayer": "bool",
+                "RunTickTimer": "bool",
+                "TickInterval": "int",
+                "MaxLayer": "int",
+                "StartEventIdList": "List<int>",
+                "EventIdList": "List<List<int>>",
+                "Param1": "int",
+                "Param2": "int",
+                "Param3": "int"
+            }
+        },
+        {
+            "file_name": "cfg_AttrEvent",
+            "file_path": "./data/config/data/cfg_AttrEvent.json",
+            "xlsx_dec": "实体事件",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "AttrEventId": "int",
+                "AttrEventDescribe": "string",
+                "EventType": "int",
+                "Delay": "int",
+                "Param1": "int",
+                "Param2": "int",
+                "Param3": "int",
+                "ParamList": "List<List<float>>"
+            }
+        },
+        {
+            "file_name": "cfg_GlobalAttrEvent",
+            "file_path": "./data/config/data/cfg_GlobalAttrEvent.json",
+            "xlsx_dec": "全局事件",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "GlobalAttrEventId": "int",
+                "AttrEventDescribe": "string",
+                "EventType": "int",
+                "Delay": "int",
+                "Param1": "int",
+                "Param2": "int",
+                "Param3": "int",
+                "ParamList": "List<List<float>>"
+            }
+        },
+        {
+            "file_name": "cfg_GlobalAttributeBase",
+            "file_path": "./data/config/data/cfg_GlobalAttributeBase.json",
+            "xlsx_dec": "全局属性表",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "GlobalAttributeId": "int",
+                "ShowName": "string",
+                "Describe": "string"
+            }
+        },
+        {
+            "file_name": "cfg_GlobalAttrTem",
+            "file_path": "./data/config/data/cfg_GlobalAttrTem.json",
+            "xlsx_dec": "属性模板表",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "TempLateId": "int",
+                "TempLateName": "string",
+                "IsCover": "bool"
+            }
+        },
+        {
+            "file_name": "cfg_GlobalAttrData",
+            "file_path": "./data/config/data/cfg_GlobalAttrData.json",
+            "xlsx_dec": "全局属性表",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "TempLateId": "int",
+                "GlobalAttributeId": "int",
+                "StartValue": "float",
+                "Max": "float",
+                "Min": "float",
+                "Regen": "float",
+                "AddEventIdList": "List<int>",
+                "RemoveEventIdList": "List<int>",
+                "AttrEventIdList": "List<List<int>>"
+            }
+        },
+        {
+            "file_name": "cfg_GlobalAttrMod",
+            "file_path": "./data/config/data/cfg_GlobalAttrMod.json",
+            "xlsx_dec": "全局修饰器",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ModifierId": "int",
+                "ExpiryTick": "ulong",
+                "ParamList": "List<List<float>>"
             }
         },
         {
@@ -1411,9 +1597,6 @@
                 "CampId": "int",
                 "CampName": "string",
                 "CampDes": "string",
-                "AllyList": "List<int>",
-                "NeutralList": "List<int>",
-                "HostileList": "List<int>",
                 "CampPng": "Texture2D",
                 "IsUser": "bool"
             }

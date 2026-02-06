@@ -1,0 +1,24 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3]
+
+[sub_resource type="Image" id="Image_fduex"]
+data = {
+"data": PackedByteArray(20, 20, 20, 5),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 1
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_hcrcm"]
+image = SubResource("Image_fduex")
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("ImageTexture_hcrcm")
+}],
+"loop": true,
+"name": &"1",
+"speed": 1.0
+}]

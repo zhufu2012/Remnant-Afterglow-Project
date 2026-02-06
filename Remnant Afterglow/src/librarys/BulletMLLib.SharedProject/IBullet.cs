@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using BulletMLLib.SharedProject.Nodes;
 using BulletMLLib.SharedProject.Tasks;
+using Godot;
 using Remnant_Afterglow;
 
 namespace BulletMLLib.SharedProject
@@ -47,13 +48,22 @@ namespace BulletMLLib.SharedProject
         /// <summary>
         /// 子弹id
         /// </summary>
+        int BulletId  { get; set; }
+
+        /// <summary>
+        /// 子弹id
+        /// </summary>
         string BulletLabel { get; set; }
+        /// <summary>
+        /// 子弹阵营
+        /// </summary>
+        int Camp { get; set; }
 
         /// <summary>
         /// 使用顶级节点初始化这颗子弹。
         /// </summary>
         /// <param name="rootNode">顶级节点，用于定义这颗子弹的行为。</param>
-        void InitTopNode(BulletMLNode rootNode, BaseObject targetObject, BaseObject createObject);
+        void InitTopNode(int BulletId,BulletMLNode rootNode, BaseObject targetObject, BaseObject createObject);
 
         /// <summary>
         /// 这颗子弹是从另一颗子弹发射出来的，从发射它的节点初始化。
@@ -62,5 +72,24 @@ namespace BulletMLLib.SharedProject
         /// <param name="baseObject">定义这颗子弹的子节点。</param>
         /// <param name="baseObject2">定义这颗子弹的子节点。</param>
         void InitNode(BulletMLNode subNode, BaseObject targetObject, BaseObject createObject);
+
+
+
+        /// <summary>
+        /// 返回子弹的速度
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 GetVelocity();
+
+        /// <summary>
+        /// 返回子弹的位置
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 GetPosition();
+
+        /// <summary>
+        /// 子弹瞄准的目标还存在
+        /// </summary>
+        public bool IsAimed();
     }
 }

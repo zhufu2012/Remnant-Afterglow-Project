@@ -6,8 +6,9 @@ namespace Remnant_Afterglow
     /// <summary>
     /// 武器事件
     /// </summary>
-    public partial class WeaponBase : Node2D, IWeapon
+    public partial class WeaponBase : Area2D, IWeapon
     {
+        /**
         /// <summary>
         /// 攻击事件-武器攻击时触发
         /// </summary>
@@ -37,6 +38,7 @@ namespace Remnant_Afterglow
         {
             CoolDownEnded?.Invoke();
         }
+        **/
 
 
     }

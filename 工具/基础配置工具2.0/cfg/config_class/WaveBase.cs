@@ -7,71 +7,26 @@ namespace Remnant_Afterglow
     public partial class WaveBase
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 刷怪点id
         /// </summary>
         public int BrushId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 波次Id
         ///（波数从1开始，一直
         ///到各刷新点中存在的
         ///最大波数为止）
         /// </summary>
         public int WaveId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 波次名称
         /// </summary>
         public string WaveName { get; set; }
-        /// <summary>        
-        /// 刷新类型
-        ///0 不刷新怪
-        ///1 固定方式 使用WaveData
-        ///2 随机刷新 使用WaveRandData
+        /// <summary>
+        /// 刷新单位组
+        ///(单位组id1,刷新次数1)|(单位组id2,刷新次数2)
         /// </summary>
-        public int WaveType { get; set; }
-        /// <summary>        
-        /// 刷新方式
-        ///0 触发刷新，点击开始才刷新
-        ///1.直接全部刷新
-        ///2.定时刷新间隔
-        /// </summary>
-        public int WaveWay { get; set; }
-        /// <summary>        
-        /// 刷新提示
-        /// </summary>
-        public string WaveDes { get; set; }
-        /// <summary>        
-        /// 刷新数据列表
-        ///(组序号,cfg_UnitBase的单位id，阵营id，数量)
-        ///刷新方式为1，就是直接全部刷新
-        ///刷新方式为2，就是从组序号1开始刷新
-        ///每隔WaveTime帧刷新下一组
-        ///
-        ///注意！刷新数据列表1 和刷新数据列表2的组序号可以重复
-        /// </summary>
-        public List<List<int>> WaveData { get; set; }
-        /// <summary>        
-        /// 刷新数据列表2
-        ///(组序号，cfg_UnitGroupData_单位组配置的单位组id,阵营id)
-        ///用于刷新一个单位组，单位组是特殊的集团
-        ///统一行动，还有特殊编号
-        ///刷新方式为1，就是直接全部刷新
-        ///刷新方式为2，就是从组序号1开始刷新
-        ///每隔WaveTime帧刷新下一组
-        /// </summary>
-        public List<List<int>> WaveData2 { get; set; }
-        /// <summary>        
-        /// 波数随机刷新数据列表
-        ///()
-        /// </summary>
-        public List<List<int>> WaveRandData { get; set; }
-        /// <summary>        
-        /// 
-        ///一个组一个组
-        ///定时刷新间隔时间
-        ///单位帧
-        /// </summary>
-        public int WaveTime { get; set; }
+        public List<List<int>> WaveUnitGroup { get; set; }
 
         public WaveBase(int id)
         {
@@ -79,13 +34,7 @@ namespace Remnant_Afterglow
 			BrushId = (int)dict["BrushId"];
 			WaveId = (int)dict["WaveId"];
 			WaveName = (string)dict["WaveName"];
-			WaveType = (int)dict["WaveType"];
-			WaveWay = (int)dict["WaveWay"];
-			WaveDes = (string)dict["WaveDes"];
-			WaveData = (List<List<int>>)dict["WaveData"];
-			WaveData2 = (List<List<int>>)dict["WaveData2"];
-			WaveRandData = (List<List<int>>)dict["WaveRandData"];
-			WaveTime = (int)dict["WaveTime"];
+			WaveUnitGroup = (List<List<int>>)dict["WaveUnitGroup"];
 			InitData();
         }
 
@@ -96,13 +45,7 @@ namespace Remnant_Afterglow
 			BrushId = (int)dict["BrushId"];
 			WaveId = (int)dict["WaveId"];
 			WaveName = (string)dict["WaveName"];
-			WaveType = (int)dict["WaveType"];
-			WaveWay = (int)dict["WaveWay"];
-			WaveDes = (string)dict["WaveDes"];
-			WaveData = (List<List<int>>)dict["WaveData"];
-			WaveData2 = (List<List<int>>)dict["WaveData2"];
-			WaveRandData = (List<List<int>>)dict["WaveRandData"];
-			WaveTime = (int)dict["WaveTime"];
+			WaveUnitGroup = (List<List<int>>)dict["WaveUnitGroup"];
 			InitData();
         }
 
@@ -111,13 +54,7 @@ namespace Remnant_Afterglow
 			BrushId = (int)dict["BrushId"];
 			WaveId = (int)dict["WaveId"];
 			WaveName = (string)dict["WaveName"];
-			WaveType = (int)dict["WaveType"];
-			WaveWay = (int)dict["WaveWay"];
-			WaveDes = (string)dict["WaveDes"];
-			WaveData = (List<List<int>>)dict["WaveData"];
-			WaveData2 = (List<List<int>>)dict["WaveData2"];
-			WaveRandData = (List<List<int>>)dict["WaveRandData"];
-			WaveTime = (int)dict["WaveTime"];
+			WaveUnitGroup = (List<List<int>>)dict["WaveUnitGroup"];
 			InitData();
         }
         #endregion

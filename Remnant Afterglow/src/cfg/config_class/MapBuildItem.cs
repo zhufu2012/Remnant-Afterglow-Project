@@ -8,24 +8,24 @@ namespace Remnant_Afterglow
     public partial class MapBuildItem
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 建造项id
         /// </summary>
         public int BuildItemId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 建造列表标签id
         /// </summary>
         public int BuildLableId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 建造的实体id
         /// </summary>
         public int ObjectId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 是否需要科技解锁
         ///
         /// </summary>
         public bool IsNeedScience { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 子列表图标
         /// </summary>
         public Texture2D LablePng { get; set; }

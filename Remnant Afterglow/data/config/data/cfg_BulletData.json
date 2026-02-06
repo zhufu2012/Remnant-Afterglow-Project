@@ -1,39 +1,296 @@
 [
     {
-        "KEY_INDEX": "add2way",
-        "BulletLabel": "add2way",
+        "KEY_INDEX": "1",
+        "BulletId": 1,
         "SceneType": 1,
+        "BulletLabel": "add2way",
         "Logic": "ce1.xml",
         "CollideId": 1,
         "SoundId": "",
         "ZIndex": 100,
-        "BulletPng": "./data/config/images/ID_FCAE7E6E6D8742E79BB6A5564E333C7B.png",
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_96CCA1A64A814293A19F6B84170B633F.png",
         "AnimaTypeList": [
             1
         ]
     },
     {
-        "KEY_INDEX": "hmgLsr",
-        "BulletLabel": "hmgLsr",
+        "KEY_INDEX": "2",
+        "BulletId": 2,
         "SceneType": 1,
+        "BulletLabel": "hmgLsr",
         "Logic": "A.xml",
         "CollideId": 1,
         "SoundId": "",
         "ZIndex": 100,
-        "BulletPng": "./data/config/images/ID_FCAE7E6E6D8742E79BB6A5564E333C7B.png",
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_96CCA1A64A814293A19F6B84170B633F.png",
         "AnimaTypeList": [
             1
         ]
     },
     {
-        "KEY_INDEX": "fastBullet",
-        "BulletLabel": "fastBullet",
+        "KEY_INDEX": "3",
+        "BulletId": 3,
         "SceneType": 1,
+        "BulletLabel": "fastBullet",
         "Logic": "B.xml",
         "CollideId": 1,
         "SoundId": "",
         "ZIndex": 100,
-        "BulletPng": "./data/config/images/ID_3B8EAE66BAEA4426B59F0AEE51C3CFD4.png",
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_96CCA1A64A814293A19F6B84170B633F.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "4",
+        "BulletId": 4,
+        "SceneType": 1,
+        "BulletLabel": "fastBullet2",
+        "Logic": "B.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": true,
+        "BulletPng": "./data/config/images/ID_14D2BE26A4E143FC9BECBA0FA0A2EB01.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "5",
+        "BulletId": 5,
+        "SceneType": 2,
+        "BulletLabel": "迫击炮塔的炮弹",
+        "Logic": "C.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 1000,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_ACEF8F5720F34F7D9873B4818BE71831.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "6",
+        "BulletId": 6,
+        "SceneType": 3,
+        "BulletLabel": "激光塔弹药",
+        "Logic": "B.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_96CCA1A64A814293A19F6B84170B633F.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "7",
+        "BulletId": 7,
+        "SceneType": 1,
+        "BulletLabel": "喷火塔子弹",
+        "Logic": "喷火塔子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_9D9BB6A07F5243DCB9AC9FBC638EA735.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "8",
+        "BulletId": 8,
+        "SceneType": 1,
+        "BulletLabel": "散弹塔子弹",
+        "Logic": "散弹塔子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_96CCA1A64A814293A19F6B84170B633F.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100101",
+        "BulletId": 100101,
+        "SceneType": 1,
+        "BulletLabel": "狙击塔子弹",
+        "Logic": "狙击塔子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_96CCA1A64A814293A19F6B84170B633F.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100102",
+        "BulletId": 100102,
+        "SceneType": 1,
+        "BulletLabel": "狙击塔子弹",
+        "Logic": "狙击塔子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_96CCA1A64A814293A19F6B84170B633F.png",
+        "AnimaTypeList": []
+    },
+    {
+        "KEY_INDEX": "100103",
+        "BulletId": 100103,
+        "SceneType": 1,
+        "BulletLabel": "狙击塔子弹",
+        "Logic": "狙击塔子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_96CCA1A64A814293A19F6B84170B633F.png",
+        "AnimaTypeList": []
+    },
+    {
+        "KEY_INDEX": "201101",
+        "BulletId": 201101,
+        "SceneType": 1,
+        "BulletLabel": "战术地刺LV1",
+        "Logic": "原地爆炸的子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_FF7E28104CED49C5B8A6A806119BEA02.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "201102",
+        "BulletId": 201102,
+        "SceneType": 1,
+        "BulletLabel": "战术地刺LV2",
+        "Logic": "原地爆炸的子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_FF7E28104CED49C5B8A6A806119BEA02.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "201103",
+        "BulletId": 201103,
+        "SceneType": 1,
+        "BulletLabel": "战术地刺LV3",
+        "Logic": "原地爆炸的子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_FF7E28104CED49C5B8A6A806119BEA02.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100401",
+        "BulletId": 100401,
+        "SceneType": 1,
+        "BulletLabel": "镇压塔",
+        "Logic": "镇压塔子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_77CA5B8C9EB64A64B923FFA07F70927A.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "80071",
+        "BulletId": 80071,
+        "SceneType": 1,
+        "BulletLabel": "fastBullet2",
+        "Logic": "B.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": true,
+        "BulletPng": "./data/config/images/ID_14D2BE26A4E143FC9BECBA0FA0A2EB01.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "80072",
+        "BulletId": 80072,
+        "SceneType": 1,
+        "BulletLabel": "fastBullet2",
+        "Logic": "B.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": true,
+        "BulletPng": "./data/config/images/ID_14D2BE26A4E143FC9BECBA0FA0A2EB01.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100301",
+        "BulletId": 100301,
+        "SceneType": 1,
+        "BulletLabel": "机枪塔1",
+        "Logic": "机枪塔子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_6498193AC743454BB48E8D8289A8DBE2.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100302",
+        "BulletId": 100302,
+        "SceneType": 1,
+        "BulletLabel": "机枪塔2",
+        "Logic": "机枪塔子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_6498193AC743454BB48E8D8289A8DBE2.png",
+        "AnimaTypeList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "100303",
+        "BulletId": 100303,
+        "SceneType": 1,
+        "BulletLabel": "机枪塔3",
+        "Logic": "机枪塔子弹.xml",
+        "CollideId": 1,
+        "SoundId": "",
+        "ZIndex": 100,
+        "IsCenter": false,
+        "BulletPng": "./data/config/images/ID_6498193AC743454BB48E8D8289A8DBE2.png",
         "AnimaTypeList": [
             1
         ]

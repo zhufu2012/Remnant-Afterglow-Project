@@ -1,1 +1,34 @@
-[]
+[
+    {
+        "KEY_INDEX": "CellSize",
+        "ConfigId": "CellSize",
+        "ConfigName": "空间网格大小",
+        "ShopSetting": true,
+        "IsModif": true,
+        "ConfigValue": 40.0
+    },
+    {
+        "KEY_INDEX": "MaxSeparation",
+        "ConfigId": "MaxSeparation",
+        "ConfigName": "最大分离力",
+        "ShopSetting": true,
+        "IsModif": true,
+        "ConfigValue": 50.0
+    },
+    {
+        "KEY_INDEX": "TotalUnit",
+        "ConfigId": "TotalUnit",
+        "ConfigName": "最大单位数",
+        "ShopSetting": true,
+        "IsModif": true,
+        "ConfigValue": 2000.0
+    },
+    {
+        "KEY_INDEX": "MaxBins",
+        "ConfigId": "MaxBins",
+        "ConfigName": "最大分区数",
+        "ShopSetting": true,
+        "IsModif": true,
+        "ConfigValue": 2000.0
+    }
+]

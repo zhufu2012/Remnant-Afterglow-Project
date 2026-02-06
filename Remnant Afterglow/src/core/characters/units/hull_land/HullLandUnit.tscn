@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://sacp88f7yrix"]
+
+[ext_resource type="Script" uid="uid://cjtcdubo786w0" path="res://src/core/characters/units/air/AirUnit.cs" id="1_7la5p"]
+[ext_resource type="Shader" uid="uid://da0ruv517df1p" path="res://shader/受击闪红.gdshader" id="2_rfyj1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c2ny0"]
+resource_local_to_scene = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rfyj1"]
+resource_local_to_scene = true
+shader = ExtResource("2_rfyj1")
+shader_parameter/percent = 0.0
+
+[node name="占地" type="Area2D" node_paths=PackedStringArray("AnimatedSprite", "area2DShape")]
+collision_layer = 0
+input_pickable = false
+script = ExtResource("1_7la5p")
+AnimatedSprite = NodePath("AnimatedSprite")
+area2DShape = NodePath("占地形状")
+
+[node name="占地形状" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c2ny0")
+debug_color = Color(0.796864, 0.397885, 0.394627, 0.42)
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_rfyj1")

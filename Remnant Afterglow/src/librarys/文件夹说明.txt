@@ -1,3 +1,4 @@
 managedAttributes: 属性系统
 BulletMLLib.SharedProject 子弹生成，轨迹描述系统
-SteeringBehaviors 转向行为库-自己做的
+SteeringBehaviors 转向行为库-自己做的,性能不够快-淘汰掉哩！
+GpuSteerBehaviors 计算着色器 实现 转向行为分离力计算-自己做的

@@ -1,11 +1,11 @@
 namespace BulletMLLib.SharedProject;
 
 /// <summary>
-/// Theese are used for tasks during runtime...
+/// 这些用于运行时的任务...
 /// </summary>
 public enum ERunStatus
 {
-    Continue, //keep parsing this task
-    End, //this task is finished parsing
-    Stop //this task is paused
+    Continue, //继续解析此任务
+    End, //此任务已完成解析
+    Stop //此任务已暂停
 }

@@ -7,15 +7,15 @@ namespace Remnant_Afterglow
     public partial class BaseObjectShow
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 实体显示id
         /// </summary>
         public int ObjectShow { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 底部栏项目id
         /// </summary>
         public int ObjectBottomId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 左侧边栏项目id
         /// </summary>
         public int ObjectSideId { get; set; }

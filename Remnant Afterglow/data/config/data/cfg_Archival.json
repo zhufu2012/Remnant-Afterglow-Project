@@ -1,0 +1,69 @@
+[
+    {
+        "KEY_INDEX": "1",
+        "ArchivalId": 1,
+        "Name": "效果属性",
+        "IsDefine": false,
+        "ItemIdList": [
+            1,
+            2,
+            3
+        ]
+    },
+    {
+        "KEY_INDEX": "2",
+        "ArchivalId": 2,
+        "Name": "炮塔",
+        "IsDefine": false,
+        "ItemIdList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "3",
+        "ArchivalId": 3,
+        "Name": "敌方单位",
+        "IsDefine": false,
+        "ItemIdList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "4",
+        "ArchivalId": 4,
+        "Name": "核心插件",
+        "IsDefine": false,
+        "ItemIdList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "5",
+        "ArchivalId": 5,
+        "Name": "机甲",
+        "IsDefine": false,
+        "ItemIdList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "6",
+        "ArchivalId": 6,
+        "Name": "道具",
+        "IsDefine": false,
+        "ItemIdList": [
+            1
+        ]
+    },
+    {
+        "KEY_INDEX": "7",
+        "ArchivalId": 7,
+        "Name": "背景故事",
+        "IsDefine": false,
+        "ItemIdList": [
+            1,
+            2,
+            3
+        ]
+    }
+]

@@ -1,10 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://b2ua6jf72qvwe"]
 
-[ext_resource type="Script" path="res://src/edit/common_view/temp_select/TempSelectPanel.cs" id="1_42if1"]
+[ext_resource type="Script" uid="uid://bqe0hjvbmuy3q" path="res://src/edit/common_view/temp_select/TempSelectPanel.cs" id="1_42if1"]
 
 [node name="TempSelectPanel" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 40.0
 script = ExtResource("1_42if1")
 
 [node name="Panel" type="Panel" parent="."]

@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfwjrn18ufkrm"]
 
-[ext_resource type="Script" path="res://src/edit/common_view/layer_select/LayerItem.cs" id="1_fp6r5"]
+[ext_resource type="Script" uid="uid://dnm2k62edbhqr" path="res://src/edit/common_view/layer_select/LayerItem.cs" id="1_fp6r5"]
 
 [node name="LayerItem" type="Control"]
+texture_filter = 1
 custom_minimum_size = Vector2(500, 30)
 layout_mode = 3
 anchors_preset = 15

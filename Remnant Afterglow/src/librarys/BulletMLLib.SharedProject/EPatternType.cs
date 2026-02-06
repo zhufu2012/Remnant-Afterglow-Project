@@ -1,7 +1,7 @@
 namespace BulletMLLib.SharedProject;
 
 /// <summary>
-/// Different types of bullet patterns
+/// 不同类型的子弹模式
 /// </summary>
 public enum EPatternType
 {

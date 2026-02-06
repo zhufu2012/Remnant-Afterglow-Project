@@ -1,0 +1,231 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds71imlqunrx7"]
+
+[ext_resource type="Texture2D" uid="uid://c2u42psw4ri1u" path="res://assets/（关卡选择界面-结算界面）素材/通用窗口1.png" id="1_k5yvu"]
+[ext_resource type="Script" uid="uid://cx6dkrk7hywm6" path="res://src/core/game/sceneLogic/subscene/CopySelectPanel.cs" id="1_ki3fr"]
+[ext_resource type="Texture2D" uid="uid://dy1scmeohopg1" path="res://assets/作战界面素材/黑色边框.png" id="3_vn4mr"]
+
+[node name="CopySelectPanel" type="Control" node_paths=PackedStringArray("returnBut", "optionButton", "prepareBut", "taskNameLab", "introduceLab")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.75, 1.75)
+mouse_filter = 1
+script = ExtResource("1_ki3fr")
+returnBut = NodePath("NinePatchRect/NinePatchRect4/返回按钮")
+optionButton = NodePath("NinePatchRect/NinePatchRect3/模式选择")
+prepareBut = NodePath("NinePatchRect/NinePatchRect3作战开始/进入准备")
+taskNameLab = NodePath("NinePatchRect/NinePatchRect/任务名称")
+introduceLab = NodePath("NinePatchRect/NinePatchRect5/任务介绍")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.501961)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -454.0
+offset_top = -188.5
+offset_right = 454.0
+offset_bottom = 188.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k5yvu")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 579.333
+offset_top = 319.929
+offset_right = 721.333
+offset_bottom = 366.929
+texture = ExtResource("1_k5yvu")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="模式选择" type="OptionButton" parent="NinePatchRect/NinePatchRect3"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 135.0
+offset_bottom = 41.0
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "  战役模式"
+popup/item_0/id = 0
+popup/item_1/text = "  挑战模式"
+popup/item_1/id = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 311.0
+offset_bottom = 61.0
+texture = ExtResource("1_k5yvu")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="任务名称" type="Label" parent="NinePatchRect/NinePatchRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 197.0
+offset_bottom = 31.0
+scale = Vector2(1.5, 1.5)
+text = "任务名称"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 68.0
+offset_right = 311.0
+offset_bottom = 361.0
+texture = ExtResource("1_k5yvu")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NinePatchRect3作战开始" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 732.0
+offset_top = 320.0
+offset_right = 898.0
+offset_bottom = 367.0
+texture = ExtResource("1_k5yvu")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="进入准备" type="Button" parent="NinePatchRect/NinePatchRect3作战开始"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 159.0
+offset_bottom = 41.0
+text = "进入准备"
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 638.0
+offset_top = 12.0
+offset_right = 898.0
+offset_bottom = 317.0
+texture = ExtResource("1_k5yvu")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="任务介绍" type="RichTextLabel" parent="NinePatchRect/NinePatchRect5"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 249.0
+offset_bottom = 296.0
+bbcode_enabled = true
+text = "任务介绍
+我们发现前方出现了许多的敌人，
+做好准备
+"
+scroll_following = true
+
+[node name="NinePatchRect6" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 315.0
+offset_top = 12.0
+offset_right = 632.0
+offset_bottom = 317.0
+texture = ExtResource("1_k5yvu")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Label" type="RichTextLabel" parent="NinePatchRect/NinePatchRect6"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 307.0
+offset_bottom = 295.0
+bbcode_enabled = true
+text = "敌人信息和地图要素
+以图标的方式显示，不会涉及具体的单位
+
+大量陆军，大地图，进攻路口数量，波次等
+波次
+地图大小：小中大
+关卡难度：☆★
+基础入口：1个
+传送入口：1个
+
+小型陆军○○○○●      中型陆军○○○○●
+大型陆军小型空军▼▽
+中型空军大型空军
+精锐单位☆★主战单位☆★"
+scroll_following = true
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="NinePatchRect"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 134.0
+offset_bottom = 61.0
+texture = ExtResource("1_k5yvu")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="返回按钮" type="Button" parent="NinePatchRect/NinePatchRect4"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 111.0
+offset_bottom = 41.0
+text = "返回"
+
+[node name="黑色边框" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.556863)
+z_index = -2
+layout_mode = 0
+offset_left = -549.0
+offset_top = -307.429
+offset_right = 549.0
+offset_bottom = 310.571
+texture = ExtResource("3_vn4mr")

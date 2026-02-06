@@ -7,9 +7,9 @@ public class FireNode : BulletMLNode
     #region Members
 
     /// <summary>
-    /// A bullet node this task will use to set any bullets shot from this task
+    /// 此任务将使用的子弹节点，用于设置从此任务发射的任何子弹
     /// </summary>
-    /// <value>The bullet node.</value>
+    /// <value>子弹节点。</value>
     public BulletNode BulletDescriptionNode { get; set; }
 
     #endregion //Members
@@ -17,35 +17,35 @@ public class FireNode : BulletMLNode
     #region Methods
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="FireNode"/> class.
+    /// 初始化 <see cref="FireNode"/> 类的新实例。
     /// </summary>
     public FireNode()
         : this(ENodeName.fire) { }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="FireNode"/> class.
-    /// this is the constructor used by sub classes
+    /// 初始化 <see cref="FireNode"/> 类的新实例。
+    /// 这是子类使用的构造函数
     /// </summary>
-    /// <param name="eNodeType">the node type.</param>
+    /// <param name="eNodeType">节点类型。</param>
     public FireNode(ENodeName eNodeType)
         : base(eNodeType) { }
 
     /// <summary>
-    /// Validates the node.
-    /// Overloaded in child classes to validate that each type of node follows the correct business logic.
-    /// This checks stuff that isn't validated by the XML validation
+    /// 验证节点。
+    /// 在子类中重载以验证每种类型的节点是否遵循正确的业务逻辑。
+    /// 这检查了XML验证未验证的内容
     /// </summary>
     public override void ValidateNode()
     {
         base.ValidateNode();
 
-        //check for a bullet node
+        //检查子弹节点
         BulletDescriptionNode = GetChild(ENodeName.bullet) as BulletNode;
 
-        //if it didn't find one, check for the bulletref node
+        //如果没有找到，检查bulletref节点
         if (null == BulletDescriptionNode)
         {
-            //make sure that dude knows what he's doing
+            //确保那个家伙知道他在做什么
             if (GetChild(ENodeName.bulletRef) is BulletRefNode refNode)
             {
                 refNode.FindMyBulletNode();

@@ -7,37 +7,37 @@ namespace Remnant_Afterglow
     public partial class CopyBrush
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 战役id
         ///cfg_ChapterBase_战役基础数据表id
         /// </summary>
         public int ChapterId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 关卡id
         /// </summary>
         public int CopyId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 关卡刷怪类型
         ///0 通用类型，造塔刷怪，
         ///且无玩家实体
         ///
         /// </summary>
         public int CopyType { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 总波数
         /// </summary>
         public int AllWave { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 关卡准备时间(秒)
         ///准备时间内不会刷新怪物
         ///
         /// </summary>
         public int PrepareTime { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 波次默认刷怪完之后的间隔时间(秒)
         /// </summary>
         public int BrushSpace { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 波次间隔时间列表
         ///(1,10) 表示第一波10秒后刷新
         ///没有配某波就默认为BrushSpace的时间
@@ -46,7 +46,7 @@ namespace Remnant_Afterglow
         ///
         /// </summary>
         public List<List<int>> BrushSpaceList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 刷怪点id列表
         ///cfg_BrushPoint_刷怪点表id
         /// </summary>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml type="horizontal" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+
+  <!-- 主发射动作 -->
+  <action label="top">
+    <!-- 持续发射 -->
+    <repeat>
+      <times>5</times>  <!-- 发射5波 -->
+      <action>
+        <!-- 正态分布的扇形发射 -->
+        <!-- ±5°区域 -->
+        <fire>
+          <direction type="sequence">2 + (1-$rand*2)*3.5</direction>
+          <bulletRef label="flameBullet"/>
+        </fire>
+        <fire>
+          <direction type="sequence">-2 + (1-$rand*2)*3.5</direction>
+          <bulletRef label="flameBullet"/>
+        </fire>
+        <wait>5</wait>  <!-- 发射间隔 -->
+      </action>
+    </repeat>
+  </action>
+
+  <!-- 火焰子弹定义 -->
+  <bullet label="flameBullet">
+    <!-- 随机初速度：8~12 (基础10±20%) -->
+    <speed>4 + $rand*4</speed>
+    <action>
+      <!-- 随机寿命：27~33帧 (基础30±10%) -->
+      <repeat>
+        <times>20+ $rand* 70</times>  <!-- 简化寿命 -->
+        <action>
+          <changeSpeed>
+            <speed type="relative">-0.05</speed>  <!-- 每帧减速 -->
+          </changeSpeed>
+          <wait>1</wait>
+        </action>
+      </repeat>
+      <vanish/>  <!-- 消失 -->
+    </action>
+  </bullet>
+
+</bulletml>

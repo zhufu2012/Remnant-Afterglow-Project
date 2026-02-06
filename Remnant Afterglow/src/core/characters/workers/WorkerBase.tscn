@@ -1,32 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7kvujstwij2t"]
+[gd_scene load_steps=3 format=3 uid="uid://c7kvujstwij2t"]
 
-[ext_resource type="Script" path="res://src/core/characters/workers/WorkerBase.cs" id="1_n2sln"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_76pko"]
-radius = 15.2971
+[ext_resource type="Script" uid="uid://c7fm51rxkg13v" path="res://src/core/characters/workers/WorkerBase.cs" id="1_n2sln"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cugj0"]
+resource_local_to_scene = true
 radius = 52.0865
 
-[node name="WorkerBase" type="CharacterBody2D"]
-motion_mode = 1
+[node name="占地" type="Area2D" node_paths=PackedStringArray("AnimatedSprite", "area2DShape")]
+collision_layer = 0
+monitorable = false
 script = ExtResource("1_n2sln")
+AnimatedSprite = NodePath("AnimatedSprite")
+area2DShape = NodePath("占地形状")
 
-[node name="碰撞体" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_76pko")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="AttackedRange" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackedRange"]
+[node name="占地形状" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cugj0")
+debug_color = Color(0.333107, 0.621426, 0.106063, 0.42)
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_postprocessing = 1
-debug_enabled = true
-debug_use_custom = true
-debug_path_custom_color = Color(0.00599163, 0.0766406, 3.00817e-09, 1)
-
-[node name="navigation_timer" type="Timer" parent="."]
-autostart = true
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]

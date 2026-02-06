@@ -1,0 +1,175 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmmnbrasxvd58"]
+
+[sub_resource type="Gradient" id="Gradient_amfhw"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.0563293)
+colors = PackedColorArray(0, 0, 0, 1, 0.28, 0.28, 0.28, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yfdjg"]
+gradient = SubResource("Gradient_amfhw")
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik7bt"]
+atlas = SubResource("GradientTexture2D_yfdjg")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wms8s"]
+texture = SubResource("AtlasTexture_ik7bt")
+
+[sub_resource type="Gradient" id="Gradient_yfdjg"]
+offsets = PackedFloat32Array(0.871677, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ik7bt"]
+gradient = SubResource("Gradient_yfdjg")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+metadata/_snap_count = 6
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g1q4x"]
+texture = SubResource("GradientTexture2D_ik7bt")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="背景" type="Panel" parent="."]
+texture_repeat = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wms8s")
+
+[node name="边框" type="Panel" parent="背景"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g1q4x")
+
+[node name="选项" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mbox" type="MarginContainer" parent="选项"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="左方容器" type="BoxContainer" parent="选项/mbox"]
+layout_mode = 2
+vertical = true
+
+[node name="游戏标题" type="Label" parent="选项/mbox/左方容器"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "游戏标题"
+
+[node name="按钮" type="BoxContainer" parent="选项/mbox/左方容器"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+vertical = true
+
+[node name="button_0" type="Button" parent="选项/mbox/左方容器/按钮"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "按钮"
+
+[node name="button_1" type="Button" parent="选项/mbox/左方容器/按钮"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "按钮"
+
+[node name="button_2" type="Button" parent="选项/mbox/左方容器/按钮"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "按钮"
+
+[node name="button_3" type="Button" parent="选项/mbox/左方容器/按钮"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "按钮"
+
+[node name="右方容器" type="BoxContainer" parent="选项/mbox"]
+layout_mode = 2
+size_flags_horizontal = 8
+vertical = true
+
+[node name="版本信息" type="BoxContainer" parent="选项/mbox/右方容器"]
+layout_mode = 2
+size_flags_vertical = 3
+vertical = true
+
+[node name="版本" type="Label" parent="选项/mbox/右方容器/版本信息"]
+layout_mode = 2
+text = "version1.0"
+horizontal_alignment = 1
+
+[node name="公告板" type="Panel" parent="选项/mbox/右方容器/版本信息"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="游戏信息" type="BoxContainer" parent="选项/mbox/右方容器"]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 2
+vertical = true
+
+[node name="星球动画" type="TextureRect" parent="选项/mbox/右方容器/游戏信息"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="定位" type="Control" parent="选项/mbox/右方容器/游戏信息/星球动画"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="贴图" type="Sprite2D" parent="选项/mbox/右方容器/游戏信息/星球动画/定位"]
+
+[node name="动画" type="AnimationPlayer" parent="选项/mbox/右方容器/游戏信息/星球动画/定位/贴图"]
+
+[node name="box" type="BoxContainer" parent="选项/mbox/右方容器/游戏信息"]
+layout_mode = 2
+
+[node name="button_1" type="Button" parent="选项/mbox/右方容器/游戏信息/box"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "按钮"
+
+[node name="button_0" type="Button" parent="选项/mbox/右方容器/游戏信息/box"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "按钮"

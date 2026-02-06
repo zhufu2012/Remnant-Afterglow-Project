@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctf01ym8g88rv"]
+
+[ext_resource type="Script" uid="uid://doejwapjje0d2" path="res://Test/MultiMesh/MultiMeshTest.cs" id="2_2l4se"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_nmbtb"]
+
+[node name="MultiMeshTest" type="MultiMeshInstance2D"]
+position = Vector2(562, 208)
+multimesh = SubResource("MultiMesh_nmbtb")
+script = ExtResource("2_2l4se")
+
+[node name="Node2D" type="Sprite2D" parent="."]

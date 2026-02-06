@@ -3,17 +3,6 @@ namespace Remnant_Afterglow
     //自动生成的静态类，用于管理配置的路径，请不要手动修改
     public partial class ConfigConstant
     {
-        #region buff配置
-        /// <summary>
-        /// buff标签数据
-        /// </summary>
-        public const string Config_BuffTag = "cfg_BuffTag";
-
-        /// <summary>
-        /// buff基础数据
-        /// </summary>
-        public const string Config_BuffData = "cfg_BuffData";
-        #endregion
         #region Ui界面配置
         /// <summary>
         /// 界面基础配置
@@ -36,6 +25,17 @@ namespace Remnant_Afterglow
         /// 数据库成就相关配置
         /// </summary>
         public const string Config_AttainmentBase = "cfg_AttainmentBase";
+        #endregion
+        #region 档案库主界面
+        /// <summary>
+        /// 档案库主界面
+        /// </summary>
+        public const string Config_Archival = "cfg_Archival";
+
+        /// <summary>
+        /// 档案库子项
+        /// </summary>
+        public const string Config_ArchivalItem = "cfg_ArchivalItem";
         #endregion
         #region 科技树解锁界面相关配置
         /// <summary>
@@ -156,14 +156,40 @@ namespace Remnant_Afterglow
         public const string Config_AnimaWorker = "cfg_AnimaWorker";
 
         /// <summary>
-        /// 子弹动画
+        /// 爆炸动画
         /// </summary>
-        public const string Config_AnimaBullet = "cfg_AnimaBullet";
+        public const string Config_AnimaExplode = "cfg_AnimaExplode";
+        #endregion
+        #region 帧动画2
+        /// <summary>
+        /// 单位帧动画配置
+        /// </summary>
+        public const string Config_AnimaUnit2 = "cfg_AnimaUnit2";
+
+        /// <summary>
+        /// 建筑动画
+        /// </summary>
+        public const string Config_AnimaBuild2 = "cfg_AnimaBuild2";
+
+        /// <summary>
+        /// 炮塔动画
+        /// </summary>
+        public const string Config_AnimaTower2 = "cfg_AnimaTower2";
+
+        /// <summary>
+        /// 无人机动画
+        /// </summary>
+        public const string Config_AnimaWorker2 = "cfg_AnimaWorker2";
+
+        /// <summary>
+        /// 武器动画
+        /// </summary>
+        public const string Config_AnimaWeapon2 = "cfg_AnimaWeapon2";
 
         /// <summary>
         /// 爆炸动画
         /// </summary>
-        public const string Config_AnimaExplode = "cfg_AnimaExplode";
+        public const string Config_AnimaExplode2 = "cfg_AnimaExplode2";
         #endregion
         #region 序列图
         /// <summary>
@@ -176,6 +202,12 @@ namespace Remnant_Afterglow
         /// 特效配置
         /// </summary>
         public const string Config_SpeciallyEffect = "cfg_SpeciallyEffect";
+        #endregion
+        #region 程序动画
+        /// <summary>
+        /// 实体效果图片
+        /// </summary>
+        public const string Config_ObjectEffectImage = "cfg_ObjectEffectImage";
         #endregion
         #region 固定地图配置
         /// <summary>
@@ -224,16 +256,6 @@ namespace Remnant_Afterglow
         /// 图像层配置
         /// </summary>
         public const string Config_MapImageLayer = "cfg_MapImageLayer";
-
-        /// <summary>
-        /// 物理层配置
-        /// </summary>
-        public const string Config_MapPhysicsLayer = "cfg_MapPhysicsLayer";
-
-        /// <summary>
-        /// 地图导航层
-        /// </summary>
-        public const string Config_MapNavigate = "cfg_MapNavigate";
         #endregion
         #region 地图生成
         /// <summary>
@@ -261,16 +283,22 @@ namespace Remnant_Afterglow
         /// </summary>
         public const string Config_GenerateAdornMap = "cfg_GenerateAdornMap";
         #endregion
-        #region 大地图生成
+        #region 地图装饰物配置
         /// <summary>
-        /// 大地图节点
+        /// 地图装饰物配置
         /// </summary>
-        public const string Config_BigMapMaterial = "cfg_BigMapMaterial";
-
+        public const string Config_MapDecorate = "cfg_MapDecorate";
+        #endregion
+        #region 大地图生成
         /// <summary>
         /// 生成大地图
         /// </summary>
         public const string Config_BigMapBase = "cfg_BigMapBase";
+
+        /// <summary>
+        /// 大地图节点
+        /// </summary>
+        public const string Config_BigMapMaterial = "cfg_BigMapMaterial";
 
         /// <summary>
         /// 大地图大结构
@@ -330,7 +358,7 @@ namespace Remnant_Afterglow
         public const string Config_CopyBuildLimit = "cfg_CopyBuildLimit";
 
         /// <summary>
-        /// 章节关卡UI数据
+        /// 章节关卡描述数据
         /// </summary>
         public const string Config_ChapterCopyUI = "cfg_ChapterCopyUI";
         #endregion
@@ -342,46 +370,30 @@ namespace Remnant_Afterglow
         #endregion
         #region 音效配置
         /// <summary>
+        /// UI音效配置
+        /// </summary>
+        public const string Config_UISoundSfx = "cfg_UISoundSfx";
+
+        /// <summary>
         /// 音效配置
         /// </summary>
-        public const string Config_SoundEffect = "cfg_SoundEffect";
-        #endregion
-        #region 子弹脚本配置
-        /// <summary>
-        /// 子弹脚本配置
-        /// </summary>
-        public const string Config_BulletScript = "cfg_BulletScript";
-
-        /// <summary>
-        /// 子弹脚本行为
-        /// </summary>
-        public const string Config_BulletAction = "cfg_BulletAction";
-
-        /// <summary>
-        /// 子弹脚本开火行为
-        /// </summary>
-        public const string Config_BulletFire = "cfg_BulletFire";
+        public const string Config_SoundSfx = "cfg_SoundSfx";
         #endregion
         #region 子弹配置
-        /// <summary>
-        /// 子弹场景数据
-        /// </summary>
-        public const string Config_BulletScene = "cfg_BulletScene";
-
         /// <summary>
         /// 子弹基础数据表
         /// </summary>
         public const string Config_BulletData = "cfg_BulletData";
 
         /// <summary>
-        /// 子弹逻辑数据表
+        /// 实体子弹逻辑表
         /// </summary>
         public const string Config_BulletLogic = "cfg_BulletLogic";
 
         /// <summary>
-        /// 子弹碰撞数据
+        /// 激光子弹逻辑表
         /// </summary>
-        public const string Config_BulletCollide = "cfg_BulletCollide";
+        public const string Config_LaserBulletLogic = "cfg_LaserBulletLogic";
         #endregion
         #region 爆炸配置
         /// <summary>
@@ -404,12 +416,6 @@ namespace Remnant_Afterglow
         /// 单位逻辑表
         /// </summary>
         public const string Config_UnitLogic = "cfg_UnitLogic";
-        #endregion
-        #region 实体事件配置
-        /// <summary>
-        /// 属性事件
-        /// </summary>
-        public const string Config_AttrEvent = "cfg_AttrEvent";
         #endregion
         #region 实体显示相关配置
         /// <summary>
@@ -456,7 +462,57 @@ namespace Remnant_Afterglow
         /// </summary>
         public const string Config_WeaponData2 = "cfg_WeaponData2";
         #endregion
-        #region 属性基础表
+        #region 残骸配置
+        /// <summary>
+        /// 残骸配置
+        /// </summary>
+        public const string Config_WreckAge = "cfg_WreckAge";
+        #endregion
+        #region buff配置
+        /// <summary>
+        /// buff标签数据
+        /// </summary>
+        public const string Config_BuffTag = "cfg_BuffTag";
+
+        /// <summary>
+        /// buff基础数据
+        /// </summary>
+        public const string Config_BuffData = "cfg_BuffData";
+        #endregion
+        #region 事件配置
+        /// <summary>
+        /// 实体事件
+        /// </summary>
+        public const string Config_AttrEvent = "cfg_AttrEvent";
+
+        /// <summary>
+        /// 全局事件
+        /// </summary>
+        public const string Config_GlobalAttrEvent = "cfg_GlobalAttrEvent";
+        #endregion
+        #region 全局属性基础表
+        /// <summary>
+        /// 全局属性表
+        /// </summary>
+        public const string Config_GlobalAttributeBase = "cfg_GlobalAttributeBase";
+        #endregion
+        #region 全局属性配置
+        /// <summary>
+        /// 属性模板表
+        /// </summary>
+        public const string Config_GlobalAttrTem = "cfg_GlobalAttrTem";
+
+        /// <summary>
+        /// 全局属性表
+        /// </summary>
+        public const string Config_GlobalAttrData = "cfg_GlobalAttrData";
+
+        /// <summary>
+        /// 全局修饰器
+        /// </summary>
+        public const string Config_GlobalAttrMod = "cfg_GlobalAttrMod";
+        #endregion
+        #region 实体属性基础表
         /// <summary>
         /// 属性表
         /// </summary>
@@ -472,7 +528,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public const string Config_AttrDependency = "cfg_AttrDependency";
         #endregion
-        #region 属性配置
+        #region 实体属性配置
         /// <summary>
         /// 属性模板表
         /// </summary>

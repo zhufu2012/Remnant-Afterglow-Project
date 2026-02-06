@@ -7,16 +7,25 @@ namespace Remnant_Afterglow
     public partial class GlobalConfigInt
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 全局配置id
         ///(在这几个表中都必须唯一)
         /// </summary>
-        public string Configid { get; set; }
-        /// <summary>        
+        public string ConfigId { get; set; }
+        /// <summary>
         /// 全局配置名称
         /// </summary>
         public string ConfigName { get; set; }
-        /// <summary>        
+        /// <summary>
+        /// 
+        ///设置-特殊参数中是否显示
+        /// </summary>
+        public bool ShopSetting { get; set; }
+        /// <summary>
+        /// 设置-特殊参数中是否可以修改
+        /// </summary>
+        public bool IsModif { get; set; }
+        /// <summary>
         /// 全局配置值
         /// </summary>
         public int ConfigValue { get; set; }
@@ -24,8 +33,10 @@ namespace Remnant_Afterglow
         public GlobalConfigInt(int id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_GlobalConfigInt, id);//public const string Config_GlobalConfigInt = "cfg_GlobalConfigInt"; 
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
+			ShopSetting = (bool)dict["ShopSetting"];
+			IsModif = (bool)dict["IsModif"];
 			ConfigValue = (int)dict["ConfigValue"];
 			InitData();
         }
@@ -34,16 +45,20 @@ namespace Remnant_Afterglow
         public GlobalConfigInt(string cfg_id)
         {
             Dictionary<string, object> dict = ConfigLoadSystem.GetCfgIndex(ConfigConstant.Config_GlobalConfigInt, cfg_id);//public const string Config_GlobalConfigInt = "cfg_GlobalConfigInt"; 
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
+			ShopSetting = (bool)dict["ShopSetting"];
+			IsModif = (bool)dict["IsModif"];
 			ConfigValue = (int)dict["ConfigValue"];
 			InitData();
         }
 
         public GlobalConfigInt(Dictionary<string, object> dict)
         {
-			Configid = (string)dict["Configid"];
+			ConfigId = (string)dict["ConfigId"];
 			ConfigName = (string)dict["ConfigName"];
+			ShopSetting = (bool)dict["ShopSetting"];
+			IsModif = (bool)dict["IsModif"];
 			ConfigValue = (int)dict["ConfigValue"];
 			InitData();
         }

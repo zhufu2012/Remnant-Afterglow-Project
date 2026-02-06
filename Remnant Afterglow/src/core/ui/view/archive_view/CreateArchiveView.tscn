@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://np2tfgus0s0x"]
 
-[ext_resource type="Script" path="res://src/core/ui/view/archive_view/CreateArchiveView.cs" id="1_pkb5q"]
+[ext_resource type="Script" uid="uid://dl3vgrkoopb8p" path="res://src/core/ui/view/archive_view/CreateArchiveView.cs" id="1_pkb5q"]
 
 [node name="CreateArchiveView" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
 scale = Vector2(1.667, 1.667)
@@ -13,7 +14,7 @@ layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="ReturnBut" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 10.0

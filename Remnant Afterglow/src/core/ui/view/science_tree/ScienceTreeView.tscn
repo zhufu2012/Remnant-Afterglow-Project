@@ -1,0 +1,279 @@
+[gd_scene load_steps=11 format=3 uid="uid://bvf0b06phctxb"]
+
+[ext_resource type="Script" uid="uid://ctv2qh2pean8p" path="res://src/core/ui/view/science_tree/ScienceTreeView.cs" id="1_o6k6h"]
+[ext_resource type="Texture2D" uid="uid://djh5efuy1q037" path="res://assets/（关卡选择界面-结算界面）素材/通用窗口2.png" id="2_c6ret"]
+[ext_resource type="Texture2D" uid="uid://dy1scmeohopg1" path="res://assets/作战界面素材/黑色边框.png" id="3_c6ret"]
+[ext_resource type="Texture2D" uid="uid://bpjrs1x7xxv4k" path="res://src/core/controllers/operation/bigmapop/科技树5.png" id="4_iwagl"]
+[ext_resource type="Texture2D" uid="uid://xug0iimtpudh" path="res://src/core/controllers/operation/bigmapop/科技树6.png" id="5_mlppa"]
+[ext_resource type="Texture2D" uid="uid://gnlngo4jq5mv" path="res://src/core/game/mapLogic/计算机核心.png" id="6_yx3ad"]
+[ext_resource type="Texture2D" uid="uid://bpv3jy2s5dbax" path="res://src/core/controllers/operation/bigmapop/脉冲走马灯.png" id="7_fo0sd"]
+
+[sub_resource type="Animation" id="Animation_7hks5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2/走马灯:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-128.181, 3.49926)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect/走马灯:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-128.181, 3.49926)]
+}
+
+[sub_resource type="Animation" id="Animation_1j36l"]
+resource_name = "脉冲"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2/走马灯:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1.93187, 1),
+"update": 0,
+"values": [Vector2(-161.841, 3.49918), Vector2(541.691, 3.50075)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect/走马灯:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1.93187, 1),
+"update": 0,
+"values": [Vector2(-161.841, 3.49918), Vector2(541.691, 3.50075)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kooty"]
+_data = {
+&"RESET": SubResource("Animation_7hks5"),
+&"脉冲走马灯": SubResource("Animation_1j36l")
+}
+
+[node name="ScienceTreeView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 960.0
+offset_top = 540.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o6k6h")
+metadata/_edit_use_anchors_ = true
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="科技范围" type="NinePatchRect" parent="UI"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -838.0
+offset_top = -352.0
+offset_right = -701.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("2_c6ret")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="科技显示文字" type="NinePatchRect" parent="UI"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -565.0
+offset_top = -352.0
+offset_right = -136.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("2_c6ret")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="黑色边框" type="NinePatchRect" parent="UI"]
+self_modulate = Color(1, 1, 1, 0.556863)
+z_index = -10
+layout_mode = 0
+offset_left = -940.0
+offset_top = -520.0
+offset_right = 980.0
+offset_bottom = 560.0
+texture = ExtResource("3_c6ret")
+
+[node name="科技描述" type="NinePatchRect" parent="UI"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 292.0
+offset_top = -353.0
+offset_right = 565.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("2_c6ret")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+z_index = 20
+layout_mode = 0
+offset_left = -818.462
+offset_top = -520.254
+offset_right = -278.462
+offset_bottom = -459.254
+rotation = 1.57079
+scale = Vector2(2, 2)
+texture = ExtResource("4_iwagl")
+
+[node name="TextureRect3" type="TextureRect" parent="UI/TextureRect"]
+z_index = -1
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 61.0
+texture = ExtResource("5_mlppa")
+
+[node name="TextureRect" type="TextureRect" parent="UI/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_yx3ad")
+
+[node name="走马灯" type="TextureRect" parent="UI/TextureRect"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -398.181
+offset_top = -27.0007
+offset_right = -238.181
+offset_bottom = 26.9993
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_fo0sd")
+
+[node name="TextureRect2" type="TextureRect" parent="UI"]
+z_index = 20
+layout_mode = 0
+offset_left = 979.866
+offset_top = -520.254
+offset_right = 1519.87
+offset_bottom = -459.254
+rotation = 1.57079
+scale = Vector2(2, 2)
+texture = ExtResource("4_iwagl")
+
+[node name="TextureRect4" type="TextureRect" parent="UI/TextureRect2"]
+z_index = -1
+layout_mode = 0
+offset_top = -0.127136
+offset_right = 540.0
+offset_bottom = 60.8729
+texture = ExtResource("5_mlppa")
+
+[node name="TextureRect" type="TextureRect" parent="UI/TextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_yx3ad")
+
+[node name="走马灯" type="TextureRect" parent="UI/TextureRect2"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -398.181
+offset_top = -27.0007
+offset_right = -238.181
+offset_bottom = 26.9993
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_fo0sd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
+libraries = {
+&"": SubResource("AnimationLibrary_kooty")
+}
+autoplay = "脉冲走马灯"

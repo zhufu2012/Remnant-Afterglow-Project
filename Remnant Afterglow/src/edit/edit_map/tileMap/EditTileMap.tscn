@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://tjsaytgotk7h"]
 
-[ext_resource type="Script" path="res://src/edit/edit_map/tileMap/EditTileMap.cs" id="1_tr7v0"]
+[ext_resource type="Script" uid="uid://ciniji1ral0qr" path="res://src/edit/edit_map/tileMap/EditTileMap.cs" id="1_tr7v0"]
 
 [sub_resource type="TileSet" id="TileSet_euyru"]
 tile_size = Vector2i(20, 20)
@@ -9,3 +9,10 @@ tile_size = Vector2i(20, 20)
 tile_set = SubResource("TileSet_euyru")
 format = 2
 script = ExtResource("1_tr7v0")
+
+[node name="建造预览" type="Sprite2D" parent="."]
+z_index = 100
+
+[node name="边框线" type="Line2D" parent="建造预览"]
+closed = true
+width = 2.0

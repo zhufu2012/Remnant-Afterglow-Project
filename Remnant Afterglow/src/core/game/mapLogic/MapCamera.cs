@@ -87,7 +87,7 @@ namespace Remnant_Afterglow
 		/// <summary>
 		/// 拖动起始相机位置（场景坐标）
 		/// </summary>
-        private Vector2 drag_start_camera_pos; 
+		private Vector2 drag_start_camera_pos; 
 		/// <summary>
 		/// 拖动起始鼠标位置（场景坐标）
 		/// </summary>
@@ -126,46 +126,46 @@ namespace Remnant_Afterglow
 		/// <param name="delta"></param>
 		public void PhysicsProcess(double delta)
 		{
-                if (is_key)//按InputMap（ui_left/top/right/bottom）中定义的键移动相机。
-                {
-                    if (key[0])
-                        camera_movement.X -= (float)(camera_speed * delta);
-                    if (key[1])
-                        camera_movement.Y -= (float)(camera_speed * delta);
-                    if (key[2])
-                        camera_movement.X += (float)(camera_speed * delta);
-                    if (key[3])
-                        camera_movement.Y += (float)(camera_speed * delta);
-                }
-                if (is_edge)//当相机位于边缘（由camera_margin定义）时，用鼠标移动相机。
-                {
+				if (is_key)//按InputMap（ui_left/top/right/bottom）中定义的键移动相机。
+				{
+					if (key[0])
+						camera_movement.X -= (float)(camera_speed * delta);
+					if (key[1])
+						camera_movement.Y -= (float)(camera_speed * delta);
+					if (key[2])
+						camera_movement.X += (float)(camera_speed * delta);
+					if (key[3])
+						camera_movement.Y += (float)(camera_speed * delta);
+				}
+				if (is_edge)//当相机位于边缘（由camera_margin定义）时，用鼠标移动相机。
+				{
 
-                    Rect2 rec = GetViewport().GetVisibleRect();////注释//-这里类型
-                    Vector2 v = GetLocalMousePosition() + rec.Size / 2;
+					Rect2 rec = GetViewport().GetVisibleRect();////注释//-这里类型
+					Vector2 v = GetLocalMousePosition() + rec.Size / 2;
 
-                    if (rec.Size.X - v.X <= camera_margin)
-                        camera_movement.X += (float)(camera_speed * delta);
-                    if (v.X <= camera_margin)
-                        camera_movement.X -= (float)(camera_speed * delta);
-                    if (rec.Size.Y - v.Y <= camera_margin)
-                        camera_movement.Y += (float)(camera_speed * delta);
-                    if (v.Y <= camera_margin)
-                        camera_movement.Y -= (float)(camera_speed * delta);
-                }
-                //更新相机的位置。
-                Position += camera_movement * Zoom;
-                //将相机移动设置为零，更新旧的鼠标位置。
-                camera_movement = Vector2.Zero;
-                _prev_mouse_pos = GetLocalMousePosition();
+					if (rec.Size.X - v.X <= camera_margin)
+						camera_movement.X += (float)(camera_speed * delta);
+					if (v.X <= camera_margin)
+						camera_movement.X -= (float)(camera_speed * delta);
+					if (rec.Size.Y - v.Y <= camera_margin)
+						camera_movement.Y += (float)(camera_speed * delta);
+					if (v.Y <= camera_margin)
+						camera_movement.Y -= (float)(camera_speed * delta);
+				}
+				//更新相机的位置。
+				Position += camera_movement * Zoom;
+				//将相机移动设置为零，更新旧的鼠标位置。
+				camera_movement = Vector2.Zero;
+				_prev_mouse_pos = GetLocalMousePosition();
 		}
 
-        /// <summary>
-        /// 鼠标中建是否按下
-        /// </summary>
-        private bool _isMiddlePressed = false;
-        public override void _Input(InputEvent @event)
-        {
-            if (@event is InputEventMouseButton mouseButton)
+		/// <summary>
+		/// 鼠标中建是否按下
+		/// </summary>
+		private bool _isMiddlePressed = false;
+		public override void _Input(InputEvent @event)
+		{
+			if (@event is InputEventMouseButton mouseButton)
 			{
 				if(mouseButton.ButtonIndex == MouseButton.Middle)
 				{
@@ -181,10 +181,10 @@ namespace Remnant_Afterglow
 				}
 			}
 
-        }
+		}
 
 
-        public void UnhandledInput(InputEvent @event)
+		public void UnhandledInput(InputEvent @event)
 		{
 			if (@event is InputEventMouseButton mouseButton)
 			{
@@ -210,9 +210,9 @@ namespace Remnant_Afterglow
 				}
 				if(mouseButton.ButtonIndex == MouseButton.Middle)//中键点击
 					_isMiddlePressed = mouseButton.Pressed;
-            }
+			}
 
-            if (@event.IsActionPressed(KeyConstant.Input_Key_A))
+			if (@event.IsActionPressed(KeyConstant.Input_Key_A))
 				key[0] = true;
 			if (@event.IsActionPressed(KeyConstant.Input_Key_W))
 				key[1] = true;

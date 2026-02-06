@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b7qbx82qv66fc"
+path="res://.godot/imported/Air Raid.ogg-5401f3a41589031205b101f0f4806c5c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/①史诗氛围包/Air Raid.ogg"
+dest_files=["res://.godot/imported/Air Raid.ogg-5401f3a41589031205b101f0f4806c5c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

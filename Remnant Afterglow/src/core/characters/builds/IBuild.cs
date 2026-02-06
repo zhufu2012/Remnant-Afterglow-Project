@@ -10,7 +10,7 @@ namespace Remnant_Afterglow
         /// 根据阵营数据和配置数据
         /// 初始化建筑数据
         /// </summary>
-        void InitData(int ObjectId);
+        void InitData(int ObjectId,int Source);
 
         /// <summary>
         /// 建筑运行逻辑执行完成

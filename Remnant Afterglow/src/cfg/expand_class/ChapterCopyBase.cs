@@ -15,7 +15,7 @@ namespace Remnant_Afterglow
             this.CopyId = (int)dict["CopyId"];
             CopyUiId = (int)dict["CopyUiId"];
             CameraId = (int)dict["CameraId"];
-            GenerateMapId = (int)dict["GenerateMapId"];
+            MapName = (string)dict["MapName"];
             Pos = (Vector2I)dict["Pos"];
             NodeId = (int)dict["NodeId"];
             CopyIdList = (List<int>)dict["CopyIdList"];

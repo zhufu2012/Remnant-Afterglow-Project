@@ -3,15 +3,15 @@ using Godot;
 namespace BulletMLLib.SharedProject;
 
 /// <summary>
-/// This is a callback method for getting a position
-/// used to break out dependencies
+/// 这是一个用于获取位置的回调方法
+/// 用于解除依赖关系
 /// </summary>
-/// <returns>a method to get a position.</returns>
+/// <returns>一个获取位置的方法。</returns>
 public delegate Vector2 PositionDelegate();
 
 /// <summary>
-/// a method to get a float from somewhere
-/// separate from delgates
+/// 从某处获取浮点数的方法
+/// 与委托分开
 /// </summary>
-/// <returns>get a float from somewhere</returns>
+/// <returns>从某处获取浮点数</returns>
 public delegate float FloatDelegate();

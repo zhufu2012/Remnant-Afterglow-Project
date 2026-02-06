@@ -26,7 +26,6 @@ namespace Remnant_Afterglow
         public static string CONFIG_PATH_USER = "./data/config/file_name.json";
 
 
-
         /// <summary>
         /// 存档保存基础路径-目前使用的路径 PathConstant.GetPathUser(PathConstant.SAVE_LOAD_PATH_USER)
         /// </summary>
@@ -87,6 +86,12 @@ namespace Remnant_Afterglow
         /// 序列图路径  PathConstant.GetPathUser(PathConstant.SequenceMap_PATH_USER)
         /// </summary>
         public static string SequenceMap_PATH_USER = "./data/config/sequence_map/";
+
+
+        /// <summary>
+        /// 音效文件路径  PathConstant.GetPathUser(PathConstant.SOUND_PATH_USER)
+        /// </summary>
+        public static string SOUND_PATH_USER = "./assets/sound/";
 
         /// <summary>
         /// 获取对应路径

@@ -13,5 +13,35 @@
             1
         ],
         "UnLockList": []
+    },
+    {
+        "KEY_INDEX": "2",
+        "ChapterId": 2,
+        "ChapterName": "战役二",
+        "Describe1": "战役一描述1",
+        "Describe2": "战役一描述2",
+        "ChapterType": 1,
+        "BigMapBaseId": 1,
+        "CameraId": 2,
+        "ChapterImage": "./data/config/images/ID_4F7A8073DA284D22BA006B9612BECC52.png",
+        "ChapterStartCopy": [
+            1
+        ],
+        "UnLockList": []
+    },
+    {
+        "KEY_INDEX": "3",
+        "ChapterId": 3,
+        "ChapterName": "demo",
+        "Describe1": "这是一个专门用于demo的战役",
+        "Describe2": "战役一描述2",
+        "ChapterType": 1,
+        "BigMapBaseId": 1,
+        "CameraId": 2,
+        "ChapterImage": "./data/config/images/ID_4F7A8073DA284D22BA006B9612BECC52.png",
+        "ChapterStartCopy": [
+            1
+        ],
+        "UnLockList": []
     }
 ]

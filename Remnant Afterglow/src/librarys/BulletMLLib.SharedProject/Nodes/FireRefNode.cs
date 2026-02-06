@@ -8,9 +8,9 @@ public class FireRefNode : FireNode
     #region Members
 
     /// <summary>
-    /// Gets the referenced fire node.
+    /// 获取引用的开火节点。
     /// </summary>
-    /// <value>The referenced fire node.</value>
+    /// <value>引用的开火节点。</value>
     public FireNode ReferencedFireNode { get; private set; }
 
     #endregion //Members
@@ -18,37 +18,37 @@ public class FireRefNode : FireNode
     #region Methods
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="FireRefNode"/> class.
+    /// 初始化 <see cref="FireRefNode"/> 类的新实例。
     /// </summary>
     public FireRefNode()
         : base(ENodeName.fireRef) { }
 
     /// <summary>
-    /// Validates the node.
-    /// Overloaded in child classes to validate that each type of node follows the correct business logic.
-    /// This checks stuff that isn't validated by the XML validation
+    /// 验证节点。
+    /// 在子类中重载以验证每种类型的节点是否遵循正确的业务逻辑。
+    /// 这检查了XML验证未验证的内容
     /// </summary>
     public override void ValidateNode()
     {
-        //Find the action node this dude
+        //查找这个家伙的动作节点
         Debug.Assert(null != GetRootNode());
         var refNode = GetRootNode().FindLabelNode(Label, ENodeName.fire);
 
-        //make sure we found something
+        //确保我们找到了什么
         if (null == refNode)
         {
-            throw new NullReferenceException("Couldn't find the fire node \"" + Label + "\"");
+            throw new NullReferenceException("找不到开火节点 \"" + Label + "\"");
         }
 
         ReferencedFireNode = refNode as FireNode;
         if (null == ReferencedFireNode)
         {
             throw new NullReferenceException(
-                "The BulletMLNode \"" + Label + "\" isn't a fire node"
+                "BulletMLNode \"" + Label + "\" 不是一个开火节点"
             );
         }
 
-        //Do not validate the base class of this dude... it will crap out trying to find the bullet node!
+        //不要验证这个家伙的基类...它会试图查找子弹节点时出错！
     }
 
     #endregion //Methods

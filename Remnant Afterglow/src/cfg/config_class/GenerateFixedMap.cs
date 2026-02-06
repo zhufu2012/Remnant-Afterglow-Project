@@ -7,19 +7,19 @@ namespace Remnant_Afterglow
     public partial class GenerateFixedMap
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 固定地图id
         /// </summary>
         public int MapId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 地图名称
         /// </summary>
         public string Name { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 地图描述
         /// </summary>
         public string MapDescribe { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 地图文件名称，可以带文件夹
         ///默认路径在这里 Remnant Afterglow\map\
         ///举例：1.map

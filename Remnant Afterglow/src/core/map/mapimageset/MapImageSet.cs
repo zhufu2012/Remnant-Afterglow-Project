@@ -85,87 +85,61 @@ namespace Remnant_Afterglow
             foreach (var kvp in list)
             {
                 int MapImageSetId = (int)kvp["MapImageSetId"];
-                TileSetAtlasSource source = new TileSetAtlasSource();
-
-                source.Texture = (Texture2D)kvp["MapImageSet"];
-                source.TextureRegionSize = new Vector2I(Width, Height);
-
                 Vector2I size = (Vector2I)kvp["MapImageSize"];
-                for (var i = 0; i < size.X; i++)
-                {
-                    for (var j = 0; j < size.Y; j++)
-                    {
-                        Vector2I pos = new Vector2I(i, j);
-                        source.CreateTile(pos);//创建给定大小 size 的图块
-                    }
-                }
+                TileSetAtlasSource source = new TileSetAtlasSource();
+                Texture2D texture2D = (Texture2D)kvp["MapImageSet"];
 
-                tileSet.AddSource(source, MapImageSetId);//加入资源
-                MapSetDataDict[(int)kvp["MapImageSetId"]] =  new ImageSetData(kvp, Width, Height);
-                MapSetDict[(int)kvp["MapImageSetId"]] = source;
+                if (texture2D.GetWidth() >= Width * size.X && texture2D.GetHeight() >= Height * size.Y)
+                {
+                    source.Texture = texture2D;
+                    source.TextureRegionSize = new Vector2I(Width, Height);
+                    for (var i = 0; i < size.X; i++)
+                    {
+                        for (var j = 0; j < size.Y; j++)
+                        {
+                            source.CreateTile(new Vector2I(i, j));//创建给定大小 size 的图块
+                        }
+                    }
+
+                    tileSet.AddSource(source, MapImageSetId);//加入资源
+                    /**
+                    if (MapConstant.EditImageSet.ContainsKey(MapImageSetId))
+                    {
+                        tileSet.AddTerrain(0, terrainId);
+                        int index = 1;
+                        for (var i = 0; i < size.Y; i++)
+                        {
+                            for (var j = 0; j < size.X; j++)
+                            {
+                                if (index != 4)
+                                {
+                                    TileData tileData = source.GetTileData(new Vector2I(j, i), 0);
+                                    tileData.TerrainSet = 0;
+                                    tileData.Terrain = terrainId;
+                                    TileSetTerrainInfo.InttTerrain(tileData, terrainId, index);
+                                }
+                                index++;
+                            }
+                        }
+                        terrainId++;
+                    }
+                    **/
+
+
+                    MapSetDataDict[(int)kvp["MapImageSetId"]] = new ImageSetData(kvp, Width, Height);
+                    MapSetDict[(int)kvp["MapImageSetId"]] = source;
+                }
+                else
+                {
+                    Log.Error("cfg_MapImageSet_地图图像集的 图像集id:" + MapImageSetId + ",图块创建错误！图集大小错误！");
+                }
             }
             if (Type == 1)//作战地图
             {
                 MapFixedSet mapFixed = ConfigCache.GetMapFixedSet(1);//逻辑图层
                 LogicMaterialList = mapFixed.MaterialIdList;
             }
-                /**
-                if (Type == 1)//作战地图
-                {
-                    NavigationRegion2D region2D = MapCopy.Instance.fixedTileMap.region2D;
-
-
-                    List<MapNavigate> NavigateLayerList = ConfigCache.GetAllMapNavigate();
-                    MapFixedSet mapFixed = ConfigCache.GetMapFixedSet(1);//逻辑图层
-                    LogicMaterialList = mapFixed.MaterialIdList;
-                    foreach (int id in mapFixed.MaterialIdList)
-                    {
-                        MapFixedMaterial item = ConfigCache.GetMapFixedMaterial(id);
-                        MapPassType mapPass = ConfigCache.GetMapPassType(item.PassTypeId);
-                        Vector2I size= (Vector2I)ConfigLoadSystem.GetCfgValue(ConfigConstant.Config_MapImageSet,""+item.ImageSetId,"MapImageSize");
-                        int y = (item.ImageSetIndex - 1) / size.X;
-                        Vector2I pos = new Vector2I(item.ImageSetIndex - y * size.X - 1, y);
-                        TileSetAtlasSource temp_source = MapSetDict[item.ImageSetId];
-
-                        List<MapNavigate> mapNavigates = NavigateLayerList.FindAll((MapNavigate t) => { return !mapPass.NoPassList.Contains(t.NavigateLayerId); }) ;
-                        TileData tileData = temp_source.GetTileData(pos, 0);
-                        foreach (MapNavigate navigate in mapNavigates)
-                        {
-                            if(navigate.NavigateLayerId==0)
-                            {
-                                //int newAlternativeTileId = temp_source.CreateAlternativeTile(pos);//新增备选图块
-                                //MapMaterialDict[new Vector2(1,item.MaterialId)] = newAlternativeTileId;
-                                tileData.AddCollisionPolygon(navigate.NavigateLayerId);
-                                NavigationPolygon navigation = new NavigationPolygon();
-                                var vertices = new Vector2[] {
-                                    new Vector2(20, 20),
-                                    new Vector2(-20, 20),
-                                    new Vector2(-20, -20),
-                                    new Vector2(20, -20) 
-                                };
-                                navigation.Vertices = vertices;
-                                var polygons = new int[] {0,1,2,3};
-                                navigation.AddPolygon(polygons);
-                                var boundingOutline = new Vector2[] {
-                                     new Vector2(-20, -20),
-                                     new Vector2(20, -20),
-                                     new Vector2(20, 20),
-                                     new Vector2(-20, 20)
-                                };
-                                navigation.AddOutline(vertices);
-                                navigation.AgentRadius = 0f;
-
-                               
-                                //navigation.MakePolygonsFromOutlines();
-
-                                //NavigationServer2D.BakeFromSourceGeometryData(navigation, new NavigationMeshSourceGeometryData2D());
-
-                                tileData.SetNavigationPolygon(navigate.NavigateLayerId, navigation);
-                            }
-                        }
-                    }
-                }**/
-            }
+        }
 
 
 

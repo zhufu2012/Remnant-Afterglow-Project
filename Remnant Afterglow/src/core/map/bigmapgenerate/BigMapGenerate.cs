@@ -23,7 +23,9 @@ namespace Remnant_Afterglow
         Hex[,] map;
         /// 其他装饰层的数据
         Dictionary<int, Hex[,]> mapLayer = new Dictionary<int, Hex[,]>();
-        ///种子数据
+        /// <summary>
+        /// 种子数据
+        /// </summary>
         public MapSeedType Seed;
 
         //常用材料

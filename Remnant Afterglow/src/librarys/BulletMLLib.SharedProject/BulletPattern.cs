@@ -60,7 +60,6 @@ namespace BulletMLLib.SharedProject
         {
             // 获取文件名
             Filename = xmlFileName;
-
             try
             {
 #if NETFX_CORE
@@ -74,7 +73,6 @@ namespace BulletMLLib.SharedProject
                 };
                 settings.ValidationEventHandler += MyValidationEventHandler;
 #endif
-                Log.Error(xmlFileName);
                 // 使用 XmlReader 读取 XML 文件
                 using (var reader = XmlReader.Create(xmlFileName, settings))
                 {
@@ -86,6 +84,7 @@ namespace BulletMLLib.SharedProject
             }
             catch (Exception ex)
             {
+                Log.Error("子弹脚本加载报错！路径:"+xmlFileName);
                 // 读取文件时发生错误
                 throw new Exception("Error reading \"" + xmlFileName + "\"", ex);
             }

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ivp8rrueft5m"
+path="res://.godot/imported/Hate, Birth and Humanity.ogg-738c886394832c3140544a870497d2cc.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/⑤未来氛围包/Hate, Birth and Humanity.ogg"
+dest_files=["res://.godot/imported/Hate, Birth and Humanity.ogg-738c886394832c3140544a870497d2cc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

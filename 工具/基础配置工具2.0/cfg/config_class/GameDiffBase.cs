@@ -8,23 +8,23 @@ namespace Remnant_Afterglow
     public partial class GameDiffBase
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 难度id
         /// </summary>
         public int DiffId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 难度名称
         /// </summary>
         public string DiffName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 难度描述
         /// </summary>
         public string DiffDes { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 难度标识图片
         /// </summary>
         public Texture2D DiffPng { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 是否使用
         /// </summary>
         public bool IsUser { get; set; }

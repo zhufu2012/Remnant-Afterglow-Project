@@ -23,44 +23,6 @@ namespace Remnant_Afterglow
         {
         }
 
-        /// <summary>
-        /// 碰撞形状
-        /// </summary>
-        /// <returns></returns>
-        public CollisionShape2D GetCollisionShape2D()
-        {
-            CollisionShape2D Collision = new CollisionShape2D();
-            Collision.Disabled = IsCollide;//是否启用碰撞器
-            switch (ShapeType)
-            {
-                case 1: //1 2D胶囊形状
-                    CapsuleShape2D shape1 = new CapsuleShape2D();
-                    Collision.Shape = shape1;
-
-                    break;
-                case 2: //2 2D矩形
-                    RectangleShape2D shape2 = new RectangleShape2D();
-                    Collision.Shape = shape2;
-                    break;
-                case 3: //3 2D圆形
-                    CircleShape2D shape3 = new CircleShape2D();
-                    Collision.Shape = shape3;
-                    break;
-                case 4: //4 2D线段形状
-                    SegmentShape2D shape4 = new SegmentShape2D();
-                    Collision.Shape = shape4;
-                    break;
-                case 5: //5 2D多线段形状.描述多边形
-                    ConcavePolygonShape2D shape5 = new ConcavePolygonShape2D();
-                    Collision.Shape = shape5;
-                    break;
-                default:
-                    break;
-            }
-            Collision.Position = CollidePos;
-            Collision.RotationDegrees = CollideRotate;
-            return Collision;
-        }
 
     }
 }

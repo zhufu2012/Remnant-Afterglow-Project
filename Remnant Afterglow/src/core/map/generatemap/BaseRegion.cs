@@ -64,10 +64,7 @@ namespace Remnant_Afterglow
         /// <returns></returns>
         public bool IsConnected(BaseRegion room)
         {
-            if (connectedRooms.Contains(room.data_id))
-                return true;
-            else
-                return false;
+            return connectedRooms.Contains(room.data_id);
         }
     }
 }

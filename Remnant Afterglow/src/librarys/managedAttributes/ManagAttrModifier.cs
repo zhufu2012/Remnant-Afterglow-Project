@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+
+namespace ManagedAttributes
+{
+
+    // 定义ManagedAttributeModifier类，用于表示对ManagedAttribute的修饰，每个修饰器，只能对一个属性的不同属性类型进行修饰
+    public class ManagAttrModifier
+    {
+
+        /// <summary>
+        /// 定义委托类型，用于处理修饰器过期事件
+        /// </summary>
+        /// <param name="modifier"></param>
+        public delegate void AttributeModifierElapsedHandler(ManagAttrModifier modifier);
+
+        /// <summary>
+        /// 定义事件，当修饰器过期时触发
+        /// </summary>
+        public event AttributeModifierElapsedHandler AttributeModifierElapsed;
+
+        /// <summary>
+        /// 字典，存储不同类型属性的修饰值
+        /// </summary>
+        public Dictionary<AttrDataType, ManagedAttributeModifierValue> ModifierValues { get; set; } = new();
+
+        /// <summary>
+        /// 当前修饰器应用的时间戳
+        /// </summary>
+        public ulong ApplyTick { get; set; }
+
+        /// <summary>
+        /// 修饰器过期的时间戳
+        /// </summary>
+        public ulong ExpiryTick { get; set; }
+
+        /// <summary>
+        /// 唯一标识符，用于唯一识别每个修饰器
+        /// </summary>
+        public Guid Id = new();
+
+        /// <summary>
+        /// 方法，当修饰器过期时调用
+        /// </summary>
+        public void OnModifierElapsed()
+        {
+            // 触发AttributeModifierElapsed事件，参数为当前修饰器实例
+            AttributeModifierElapsed?.Invoke(this);
+        }
+    }
+
+    /// <summary>
+    /// 定义ManagedAttributeModifierValue类，用于存储修饰器的具体数值
+    /// </summary>
+    public class ManagedAttributeModifierValue
+    {
+
+        /// <summary>
+        /// 属性Add，表示修饰器的加成数值
+        /// </summary>
+        public float Add { get; set; } = 0f;
+
+        /// <summary>
+        /// 属性Multiplier，表示修饰器的乘法系数
+        /// </summary>
+        public float Multiplier { get; set; } = 1f;
+    }
+}

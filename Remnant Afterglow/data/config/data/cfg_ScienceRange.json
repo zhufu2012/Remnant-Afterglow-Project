@@ -2,7 +2,7 @@
     {
         "KEY_INDEX": "1",
         "ScienceRangeId": 1,
-        "ScienceRangeName": "炮塔",
+        "ScienceRangeName": "采集",
         "ShowMoneyList": [],
         "Offset": [
             1,
@@ -21,7 +21,7 @@
     {
         "KEY_INDEX": "2",
         "ScienceRangeId": 2,
-        "ScienceRangeName": "建筑",
+        "ScienceRangeName": "武器",
         "ShowMoneyList": [],
         "Offset": [
             1,
@@ -33,7 +33,102 @@
         ],
         "NodeSize": [
             100,
-            40
+            50
+        ],
+        "ScienceRangeDes": "建筑科技类型"
+    },
+    {
+        "KEY_INDEX": "3",
+        "ScienceRangeId": 3,
+        "ScienceRangeName": "防御",
+        "ShowMoneyList": [],
+        "Offset": [
+            1,
+            1
+        ],
+        "Interval": [
+            10,
+            10
+        ],
+        "NodeSize": [
+            100,
+            50
+        ],
+        "ScienceRangeDes": "建筑科技类型"
+    },
+    {
+        "KEY_INDEX": "4",
+        "ScienceRangeId": 4,
+        "ScienceRangeName": "辅助",
+        "ShowMoneyList": [],
+        "Offset": [
+            1,
+            1
+        ],
+        "Interval": [
+            10,
+            10
+        ],
+        "NodeSize": [
+            100,
+            50
+        ],
+        "ScienceRangeDes": "建筑科技类型"
+    },
+    {
+        "KEY_INDEX": "5",
+        "ScienceRangeId": 5,
+        "ScienceRangeName": "道具",
+        "ShowMoneyList": [],
+        "Offset": [
+            1,
+            1
+        ],
+        "Interval": [
+            10,
+            10
+        ],
+        "NodeSize": [
+            100,
+            50
+        ],
+        "ScienceRangeDes": "建筑科技类型"
+    },
+    {
+        "KEY_INDEX": "6",
+        "ScienceRangeId": 6,
+        "ScienceRangeName": "全局",
+        "ShowMoneyList": [],
+        "Offset": [
+            1,
+            1
+        ],
+        "Interval": [
+            10,
+            10
+        ],
+        "NodeSize": [
+            100,
+            50
+        ],
+        "ScienceRangeDes": "建筑科技类型"
+    },
+    {
+        "KEY_INDEX": "99",
+        "ScienceRangeId": 99,
+        "ScienceRangeName": "测试",
+        "ShowMoneyList": [],
+        "Offset": [
+            1,
+            1
+        ],
+        "Interval": [
+            10,
+            10
+        ],
+        "NodeSize": [
+            100,
+            50
         ],
         "ScienceRangeDes": "建筑科技类型"
     }

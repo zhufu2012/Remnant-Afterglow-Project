@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnsam0s8uyplo"]
+
+[ext_resource type="Texture2D" uid="uid://dwy2ueq4ran2h" path="res://assets/档案库素材/窗口3.png" id="1_ty4u1"]
+
+[node name="ArcjovalControl" type="Control"]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 16.0
+offset_right = 449.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 64
+text = "失落核心"
+flat = true
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="Button"]
+z_index = -1
+layout_mode = 0
+offset_right = 105.0
+offset_bottom = 34.0
+scale = Vector2(4.00049, 4.00016)
+texture = ExtResource("1_ty4u1")
+region_rect = Rect2(0, 0, 80, 80)
+patch_margin_left = 17
+patch_margin_top = 17
+patch_margin_right = 17
+patch_margin_bottom = 17

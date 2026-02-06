@@ -3,9 +3,8 @@ using Godot;
 using Remnant_Afterglow;
 using System.Collections.Generic;
 
-public partial class BuildInfoView : TextureRect
+public partial class BuildInfoView : NinePatchRect
 {
-
 	public ImageNum ImageNum1;
 
 	public ImageNum ImageNum2;

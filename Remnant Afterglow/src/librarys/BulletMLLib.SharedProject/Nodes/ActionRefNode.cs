@@ -3,8 +3,8 @@ using System;
 namespace BulletMLLib.SharedProject.Nodes;
 
 /// <summary>
-/// Action reference node.
-/// This node type references another Action node.
+/// 动作引用节点。
+/// 此节点类型引用另一个动作节点。
 /// </summary>
 public class ActionRefNode : ActionNode
 {
@@ -17,35 +17,33 @@ public class ActionRefNode : ActionNode
     #region Methods
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="ActionRefNode"/> class.
+    /// 初始化 <see cref="ActionRefNode"/> 类的新实例。
     /// </summary>
     public ActionRefNode()
         : base(ENodeName.actionRef) { }
 
     /// <summary>
-    /// Validates the node.
-    /// Overloaded in child classes to validate that each type of node follows the correct business logic.
-    /// This checks stuff that isn't validated by the XML validation
+    /// 验证节点。
+    /// 在子类中重载以验证每种类型的节点是否遵循正确的业务逻辑。
+    /// 这检查了XML验证未验证的内容
     /// </summary>
     public override void ValidateNode()
     {
-        //do any base class validation
+        //执行任何基类验证
         base.ValidateNode();
-
-        //Find the action node this dude references
+        //查找这个家伙引用的动作节点
         var refNode = GetRootNode().FindLabelNode(Label, ENodeName.action);
-
-        //make sure we found something
+        //确保我们找到了什么
         if (null == refNode)
         {
-            throw new NullReferenceException("Couldn't find the action node \"" + Label + "\"");
+            throw new NullReferenceException("找不到动作节点 \"" + Label + "\"");
         }
 
         ReferencedActionNode = refNode as ActionNode;
         if (null == ReferencedActionNode)
         {
             throw new NullReferenceException(
-                "The BulletMLNode \"" + Label + "\" isn't an action node"
+                "BulletMLNode \"" + Label + "\" 不是一个动作节点"
             );
         }
     }

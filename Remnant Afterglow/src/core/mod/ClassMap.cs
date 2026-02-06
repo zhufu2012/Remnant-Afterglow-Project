@@ -5,12 +5,16 @@ using System.Reflection;
 
 namespace Remnant_Afterglow
 {
-
+    //是否可拓展，在这里添加
     public class ClassMap
     {
-        //所有可拓展基类
+        /// <summary>
+        /// 所有可拓展基类
+        /// </summary>
         public static Dictionary<string, Type> BaseClass = new Dictionary<string, Type>();
-        //所有基的子类
+        /// <summary>
+        /// 所有基的子类
+        /// </summary>
         public static Dictionary<Type, List<Type>> SubClass = new Dictionary<Type, List<Type>>();
 
         static ClassMap()

@@ -25,9 +25,7 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 添加物品到背包中
         /// </summary>
-        /// <param name="rowIndex">横排</param>
-        /// <param name="columnIndex">竖排</param>
-        /// <param name="item"></param>
+        /// <param name="item">物品</param>
         public bool AddItem(ItemBase item)
         {
             if (item.Quantity > 0)//数量大于0

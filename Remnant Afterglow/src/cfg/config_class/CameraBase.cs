@@ -8,68 +8,68 @@ namespace Remnant_Afterglow
     public partial class CameraBase
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 相机id
         /// </summary>
         public int CameraId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 相机初始位置
         ///(X,Y)
         /// </summary>
         public Vector2 StartPos { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 能否上下左右移动
         /// </summary>
         public bool IsMove { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 相机移动速度
         /// </summary>
         public int MoveSpeed { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 初始缩放值
         ///（原来的多少倍）
         /// </summary>
         public Vector2 StartZoom { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 能否放大
         /// </summary>
         public bool IsZoomIn { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 能否缩小
         /// </summary>
         public bool IsZoomOut { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 最大缩放值
         ///（原来的多少倍）
         /// </summary>
         public float MaxZoom { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 最小缩放值
         ///（原来的多少倍）
         /// </summary>
         public float MinZoom { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 缩放变化量
         /// </summary>
         public Vector2 ZoomIncrement { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 是否使用边缘滚动操作
         /// </summary>
         public bool IsEdgeScroll { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 边缘滚动触发区域的宽度
         ///当鼠标靠近视窗边缘至少这个距离时，开始执行边缘滚动操作
         /// </summary>
         public int EdgeScrollMargin { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 控制边缘滚动的基础速度
         /// </summary>
         public int BaseEdgeScrollSpeed { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 鼠标默认图标
         /// </summary>
         public Texture2D CursorPoint { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 鼠标点击图标
         /// </summary>
         public Texture2D CursorGrab { get; set; }

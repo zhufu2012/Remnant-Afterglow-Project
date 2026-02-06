@@ -29,7 +29,7 @@ namespace Remnant_Afterglow
         [JsonIgnore]
         public Dictionary<int, int> CurrencyMap = new Dictionary<int, int>();
         /// <summary>
-        /// 创建存档时的货币处理
+        /// 创建存档时的货币处理-祝福注释-货币处理需要优化！
         /// </summary>
         public void CreateBigMapCurrency(MoneyBase moneyBase)
         {

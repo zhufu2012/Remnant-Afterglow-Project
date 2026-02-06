@@ -7,12 +7,12 @@ namespace Remnant_Afterglow
     public partial class AttainmentPage
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 成就分页id
         ///按这个id顺序从小到大排序
         /// </summary>
         public int PageId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 分页名称
         /// </summary>
         public string PageName { get; set; }

@@ -21,7 +21,7 @@ public class NodeSaveConverter : JsonConverter<NodeSave>
                 // position
                 string? propertyName = reader.Value?.ToString();
 
-                reader.Read(); // Move to property value
+                reader.Read(); // EntityUpdata to property value
 
                 object? propertyValue;
 

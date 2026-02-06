@@ -1,0 +1,298 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2b4t6sulluj7"]
+
+[ext_resource type="Texture2D" uid="uid://c7yb87r020rsk" path="res://assets/漫画部分/背景1.png" id="1_pnsv3"]
+[ext_resource type="Texture2D" uid="uid://bmsxsxfryp2y1" path="res://assets/漫画部分/教程关卡开头1-1.png" id="2_mdqoh"]
+[ext_resource type="Texture2D" uid="uid://dh8yomfjk4d6s" path="res://assets/漫画部分/教程关卡开头1-2.png" id="3_qcg7s"]
+[ext_resource type="Texture2D" uid="uid://dg40my13naue1" path="res://assets/漫画部分/教程关卡开头1-3.png" id="4_frl06"]
+[ext_resource type="Texture2D" uid="uid://dodvl6gtpx3fl" path="res://assets/漫画部分/教程关卡开头1-4.png" id="5_ypn6u"]
+[ext_resource type="Texture2D" uid="uid://c8id6kfdtt7ih" path="res://assets/漫画部分/教程关卡开头1-5.png" id="6_wc38p"]
+[ext_resource type="Texture2D" uid="uid://b3yb44yaootp2" path="res://assets/主界面素材/主界面按钮1.png" id="7_qcg7s"]
+[ext_resource type="Texture2D" uid="uid://c2la15wn5rp0e" path="res://assets/主界面素材/主界面按钮4.png" id="8_frl06"]
+
+[sub_resource type="Animation" id="Animation_otrgk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("第一幕:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("第二幕:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("第三幕:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("第四幕:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("第五幕:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.40829)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("第三幕:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1260, 27)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_410ik"]
+resource_name = "过场动画1"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("第一幕:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.56667, 1.82),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("第二幕:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.11, 3.36333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("第三幕:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5.03, 5.28333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("第四幕:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6.85, 7.10333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("第五幕:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 9.38, 9.63333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("第三幕:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(5.52, 5.58667, 5.65333, 5.72, 5.77333, 5.84, 5.92, 5.98667, 6.05333, 6.10667, 6.17333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1260, 27), Vector2(1244, 15), Vector2(1259, 43), Vector2(1288, 20), Vector2(1262, 75), Vector2(1260, 27), Vector2(1244, 15), Vector2(1259, 43), Vector2(1288, 20), Vector2(1262, 75), Vector2(1260, 27)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 11.6667, 11.92),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mccrh"]
+_data = {
+&"RESET": SubResource("Animation_otrgk"),
+&"过场动画1": SubResource("Animation_410ik")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1420.0
+offset_bottom = 580.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="过场动画1" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mccrh")
+}
+autoplay = "过场动画1"
+
+[node name="背景" type="NinePatchRect" parent="."]
+z_index = -10
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 540.0
+scale = Vector2(2, 2)
+texture = ExtResource("1_pnsv3")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="第一幕" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 109.0
+offset_top = 17.0
+offset_right = 1025.0
+offset_bottom = 789.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_mdqoh")
+
+[node name="第二幕" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 721.0
+offset_top = 23.0
+offset_right = 1519.0
+offset_bottom = 801.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_qcg7s")
+
+[node name="第三幕" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1260.0
+offset_top = 27.0
+offset_right = 2099.0
+offset_bottom = 802.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("4_frl06")
+
+[node name="第四幕" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 120.0
+offset_top = 517.0
+offset_right = 1048.0
+offset_bottom = 1311.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("5_ypn6u")
+
+[node name="第五幕" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.40829)
+layout_mode = 0
+offset_left = 762.0
+offset_top = 494.0
+offset_right = 2366.0
+offset_bottom = 1317.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("6_wc38p")
+
+[node name="Button2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1593.0
+offset_top = 962.0
+offset_right = 1739.0
+offset_bottom = 1014.0
+scale = Vector2(2, 2)
+focus_mode = 0
+texture_normal = ExtResource("7_qcg7s")
+texture_pressed = ExtResource("8_frl06")
+texture_hover = ExtResource("7_qcg7s")
+
+[node name="Label" type="Label" parent="Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -8.12502
+offset_right = 26.0
+offset_bottom = 8.12502
+grow_horizontal = 2
+grow_vertical = 2
+text = "继续.."
+horizontal_alignment = 1
+vertical_alignment = 1

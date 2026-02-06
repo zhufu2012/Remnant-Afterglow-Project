@@ -4,15 +4,33 @@ using Godot;
 
 namespace Remnant_Afterglow
 {
+    /// <summary>
+    /// 地图格子
+    /// </summary>
     public struct Cell
     {
         public int x;
         public int y;
-        public int index;//材料序号 MaterialId
-        public int PassTypeId;//可通过类型
-        public int MapImageId;//图像集序号，MapImageSet中CfgDataList的序号
-        public int MapImageIndex;//图集内序号
-        public Vector2I ImagePos;//瓦片在图集中的位置
+        /// <summary>
+        /// 材料序号 MaterialId
+        /// </summary>
+        public int index;
+        /// <summary>
+        /// 可通过类型
+        /// </summary>
+        public int PassTypeId;
+        /// <summary>
+        /// 图像集序号，MapImageSet中CfgDataList的序号
+        /// </summary>
+        public int MapImageId;
+        /// <summary>
+        /// 图集内序号
+        /// </summary>
+        public int MapImageIndex;
+        /// <summary>
+        /// 瓦片在图集中的位置
+        /// </summary>
+        public Vector2I ImagePos;
         public Cell()
         {
             index = 0;
@@ -93,6 +111,15 @@ namespace Remnant_Afterglow
             if (obj is Cell other)
             {
                  return other.x == x && other.y == y && other.index == index;
+            }
+            return false;
+        }
+
+        public bool TerrainEquals(object obj)
+        {
+            if (obj is Cell other)
+            {
+                return other.index == index;
             }
             return false;
         }

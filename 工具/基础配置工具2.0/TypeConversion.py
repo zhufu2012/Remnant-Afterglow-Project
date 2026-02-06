@@ -513,6 +513,8 @@ def TO_INT_HashSet(NowProjectConfig, file_path, table_name, Col_x, Col_y, variab
             f"导出失败！  配置文件:[{file_path}]  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据:[{variable}]转换为HashSet<INT>列表时出现错误：{e}")
         return None
 
+
+##  数据类型  转换函数，基础默认值，c#类型
 BaseType = {
     'BOOL': (TO_BOOL, True, 'bool'),
     ##'BYTE': (TO_BYTE, b'\x00','byte'),
@@ -547,12 +549,12 @@ BaseType = {
     '<LANG>': (TO_STR_LIST, [], "<language_id>"),  ##语言id列表类型
     'POINT': (TO_FLOAT_TUPLE, (0, 0), 'Vector2'),  ##坐标类型
     '<POINT>': (TO_FLOAT_TUPLE_LIST, [], 'List<Vector2>'),  ##坐标列表类型
-    'Vector2I': (TO_INT_TUPLE, (0, 0), 'Vector2I'),  ##坐标类型
-    'ULONG': (TO_UINT64, 0, 'ulong'),  ##坐标类型
-    'RGB': (TO_RGB, (0, 0, 0), 'Color'),  ##坐标类型
-    'RGBA': (TO_RGBA, (0, 0, 0, 0), 'Color'),  ##坐标类型
-    '<Vector2I>': (TO_INT_VECTOR_LIST, [], 'List<Vector2I>'),  ##坐标列表类型
-    'SequenceMap': (TO_SEQUENCE_MAP, "", 'SequenceMapType'),  ##坐标列表类型
+    'Vector2I': (TO_INT_TUPLE, (0, 0), 'Vector2I'),  ##二维整形
+    'ULONG': (TO_UINT64, 0, 'ulong'),  ##长整型
+    'RGB': (TO_RGB, (0, 0, 0), 'Color'),  ##颜色RGB
+    'RGBA': (TO_RGBA, (0, 0, 0, 0), 'Color'),  ##颜色RGBA
+    '<Vector2I>': (TO_INT_VECTOR_LIST, [], 'List<Vector2I>'),  ##整数坐标列表
+    'SequenceMap': (TO_SEQUENCE_MAP, "", 'SequenceMapType'),  ##序列图类型
     'BBCode': (TO_STR, "", 'BBCode'),
     'HashSet<INT>': (TO_INT_HashSet, [], 'HashSet<int>'),
 }
@@ -562,11 +564,14 @@ def TO_DATA(NowProjectConfig, file_path, table_name, Col_x, Col_y, Type, Data, I
     try:
         function, default_value, NewType = BaseType.get(Type, (
             lambda NowProjectConfig, file_path, table_name, Col_x, Col_y, variable: "Invalid", None))
-        if Data == "#BASEVALUE" or (IsDefault and (Data == '' or str(Data) == 'nan')):  ## 值为#BASEVALUE 或者 值为空的同时，数据为可默认
+        ## 值为#BASEVALUE 或者 值为空的同时，数据为可默认
+        
+        if Data == "#BASEVALUE" or (IsDefault == True and (Data == '' or str(Data) == 'nan')): 
             return default_value
         else:
-            NewData = function(NowProjectConfig, file_path, table_name, Col_x, Col_y, Data)
-            return NewData
+            if (Data == '' or str(Data) == 'nan') and (IsDefault != False and IsDefault != True):
+                return function(NowProjectConfig, file_path, table_name, Col_x, Col_y, IsDefault)
+            return function(NowProjectConfig, file_path, table_name, Col_x, Col_y, Data)
     except Exception as e:
         Config.add_log(
             f"导出失败！  配置文件:[{file_path}]  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据类型错误！不存在类型{Type}")

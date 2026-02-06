@@ -1,0 +1,14 @@
+{
+  "profiles": {
+	"Remnant Afterglow Project": {
+	  "commandName": "Project"
+	},
+	"配置文件 1": {
+	  "commandName": "Executable",
+	  "executablePath": "E:\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64.exe",
+	  "commandLineArgs": "--path . --verbose",
+	  "workingDirectory": ".",
+	  "nativeDebugging": true
+	}
+  }
+}

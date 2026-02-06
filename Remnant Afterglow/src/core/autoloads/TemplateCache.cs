@@ -57,9 +57,7 @@ namespace Remnant_Afterglow
 		/// <summary>
 		/// 编译整个表数据
 		/// </summary>
-		/// <param name="table_name"></param>
-		/// <param name="table_dict"></param>
-		/// <param name="type_str"></param>
+		/// <param name="temp">函数模板</param>
 		/// <exception cref="Exception"></exception>
 		public static void CompileTable(FunctionTemplate temp)
 		{
@@ -115,7 +113,13 @@ namespace Remnant_Afterglow
 		}
 
 
-		///把一个配置表的全部函数编译在一个类中
+		/// <summary>
+		/// 把一个配置表的全部函数编译在一个类中
+		/// </summary>
+		/// <param name="temp">函数模板</param>
+		/// <param name="table_name">表名</param>
+		/// <param name="table_dict">表内的键</param>
+		/// <returns></returns>
 		public static string TemplateCode(FunctionTemplate temp, string table_name, Dictionary<string, Dictionary<string, object>> table_dict)
 		{
 			string class_name = temp.TemplateId;

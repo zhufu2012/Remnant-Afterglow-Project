@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bulletml SYSTEM "http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml.dtd">
+<bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+  <action label="top">
+    <repeat>
+      <times>3</times>
+      <action>
+        <fire>
+          <direction type="aim">0</direction>
+          <speed>2</speed>
+          <bullet>
+            <action>
+              <!-- 设置初始高度 -->
+              <actionRef label="setInitialHeight"/>
+              <!-- 抛物线运动 -->
+              <actionRef label="parabola"/>
+            </action>
+          </bullet>
+        </fire>
+        <wait>20</wait>
+      </action>
+    </repeat>
+  </action>
+  
+  <!-- 设置初始高度 -->
+  <action label="setInitialHeight">
+    <changeDirection>
+      <direction type="absolute">90</direction>
+      <term>1</term>
+    </changeDirection>
+    <height>10</height>
+  </action>
+  
+  <!-- 抛物线运动逻辑 -->
+  <action label="parabola">
+    <repeat>
+      <times>60</times>
+      <action>
+        <changeDirection>
+          <direction type="relative">-3</direction>
+          <term>1</term>
+        </changeDirection>
+        <!-- 高度逐渐降低 -->
+        <height>$rand * 0.2 + 0.8</height>
+        <wait>1</wait>
+      </action>
+    </repeat>
+    <vanish/>
+  </action>
+</bulletml>

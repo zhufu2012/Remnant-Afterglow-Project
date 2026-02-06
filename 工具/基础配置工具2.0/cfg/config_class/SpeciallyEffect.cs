@@ -8,15 +8,15 @@ namespace Remnant_Afterglow
     public partial class SpeciallyEffect
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 特效id
         /// </summary>
         public int KetId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 特效名称
         /// </summary>
         public int Key2Id { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 特效SpriteFrames
         ///资源路径
         /// </summary>

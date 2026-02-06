@@ -2,21 +2,647 @@
     {
         "KEY_INDEX": "1",
         "BrushId": 1,
-        "BrushShowType": true,
-        "BrushPos": [
-            40,
-            40
+        "BrushPosList": [
+            [
+                16,
+                1
+            ],
+            [
+                3,
+                3
+            ]
+        ],
+        "TargetPos": [
+            28,
+            36
         ],
         "WaveIdList": [
             1,
             2
-        ],
-        "ShapeType": 2,
-        "ShapeParame": [
+        ]
+    },
+    {
+        "KEY_INDEX": "2",
+        "BrushId": 2,
+        "BrushPosList": [
             [
-                0,
+                21,
+                1
+            ],
+            [
+                2,
+                2
+            ]
+        ],
+        "TargetPos": [
+            28,
+            36
+        ],
+        "WaveIdList": [
+            1,
+            2
+        ]
+    },
+    {
+        "KEY_INDEX": "3",
+        "BrushId": 3,
+        "BrushPosList": [
+            [
+                28,
+                1
+            ],
+            [
+                2,
+                2
+            ]
+        ],
+        "TargetPos": [
+            28,
+            36
+        ],
+        "WaveIdList": [
+            1,
+            2
+        ]
+    },
+    {
+        "KEY_INDEX": "4",
+        "BrushId": 4,
+        "BrushPosList": [
+            [
+                16,
+                3
+            ],
+            [
+                8,
+                8
+            ]
+        ],
+        "TargetPos": [
+            26,
+            41
+        ],
+        "WaveIdList": [
+            1,
+            2
+        ]
+    },
+    {
+        "KEY_INDEX": "5",
+        "BrushId": 5,
+        "BrushPosList": [
+            [
+                28,
+                12
+            ],
+            [
+                1,
+                1
+            ]
+        ],
+        "TargetPos": [
+            28,
+            36
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "KEY_INDEX": "6",
+        "BrushId": 6,
+        "BrushPosList": [
+            [
+                13,
+                0
+            ],
+            [
+                1,
+                1
+            ]
+        ],
+        "TargetPos": [
+            28,
+            36
+        ],
+        "WaveIdList": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "KEY_INDEX": "10001",
+        "BrushId": 10001,
+        "BrushPosList": [
+            [
+                1,
+                2
+            ],
+            [
+                47,
                 0
             ]
+        ],
+        "TargetPos": [
+            23,
+            45
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "KEY_INDEX": "10101",
+        "BrushId": 10101,
+        "BrushPosList": [
+            [
+                19,
+                0
+            ],
+            [
+                7,
+                0
+            ]
+        ],
+        "TargetPos": [
+            24,
+            38
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "KEY_INDEX": "10102",
+        "BrushId": 10102,
+        "BrushPosList": [
+            [
+                25,
+                0
+            ],
+            [
+                6,
+                0
+            ]
+        ],
+        "TargetPos": [
+            25,
+            38
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "KEY_INDEX": "10201",
+        "BrushId": 10201,
+        "BrushPosList": [
+            [
+                49,
+                6
+            ],
+            [
+                0,
+                8
+            ]
+        ],
+        "TargetPos": [
+            39,
+            24
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10202",
+        "BrushId": 10202,
+        "BrushPosList": [
+            [
+                49,
+                34
+            ],
+            [
+                0,
+                8
+            ]
+        ],
+        "TargetPos": [
+            39,
+            27
+        ],
+        "WaveIdList": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10203",
+        "BrushId": 10203,
+        "BrushPosList": [
+            [
+                0,
+                18
+            ],
+            [
+                0,
+                7
+            ]
+        ],
+        "TargetPos": [
+            39,
+            24
+        ],
+        "WaveIdList": [
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10204",
+        "BrushId": 10204,
+        "BrushPosList": [
+            [
+                0,
+                24
+            ],
+            [
+                0,
+                6
+            ]
+        ],
+        "TargetPos": [
+            39,
+            27
+        ],
+        "WaveIdList": [
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10301",
+        "BrushId": 10301,
+        "BrushPosList": [
+            [
+                0,
+                9
+            ],
+            [
+                0,
+                6
+            ]
+        ],
+        "TargetPos": [
+            23,
+            39
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10302",
+        "BrushId": 10302,
+        "BrushPosList": [
+            [
+                49,
+                9
+            ],
+            [
+                0,
+                6
+            ]
+        ],
+        "TargetPos": [
+            24,
+            39
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "KEY_INDEX": "10401",
+        "BrushId": 10401,
+        "BrushPosList": [
+            [
+                0,
+                29
+            ],
+            [
+                0,
+                6
+            ]
+        ],
+        "TargetPos": [
+            24,
+            33
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "KEY_INDEX": "10402",
+        "BrushId": 10402,
+        "BrushPosList": [
+            [
+                21,
+                0
+            ],
+            [
+                7,
+                0
+            ]
+        ],
+        "TargetPos": [
+            24,
+            33
+        ],
+        "WaveIdList": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "KEY_INDEX": "10403",
+        "BrushId": 10403,
+        "BrushPosList": [
+            [
+                49,
+                29
+            ],
+            [
+                0,
+                6
+            ]
+        ],
+        "TargetPos": [
+            25,
+            33
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "KEY_INDEX": "10501",
+        "BrushId": 10501,
+        "BrushPosList": [
+            [
+                5,
+                0
+            ],
+            [
+                8,
+                0
+            ]
+        ],
+        "TargetPos": [
+            24,
+            42
+        ],
+        "WaveIdList": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "KEY_INDEX": "10502",
+        "BrushId": 10502,
+        "BrushPosList": [
+            [
+                20,
+                0
+            ],
+            [
+                9,
+                0
+            ]
+        ],
+        "TargetPos": [
+            24,
+            42
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "KEY_INDEX": "10503",
+        "BrushId": 10503,
+        "BrushPosList": [
+            [
+                36,
+                0
+            ],
+            [
+                8,
+                0
+            ]
+        ],
+        "TargetPos": [
+            24,
+            42
+        ],
+        "WaveIdList": [
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "KEY_INDEX": "10601",
+        "BrushId": 10601,
+        "BrushPosList": [
+            [
+                7,
+                0
+            ],
+            [
+                8,
+                0
+            ]
+        ],
+        "TargetPos": [
+            44,
+            19
+        ],
+        "WaveIdList": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "KEY_INDEX": "10602",
+        "BrushId": 10602,
+        "BrushPosList": [
+            [
+                49,
+                6
+            ],
+            [
+                0,
+                6
+            ]
+        ],
+        "TargetPos": [
+            44,
+            19
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "KEY_INDEX": "10603",
+        "BrushId": 10603,
+        "BrushPosList": [
+            [
+                49,
+                27
+            ],
+            [
+                0,
+                7
+            ]
+        ],
+        "TargetPos": [
+            44,
+            20
+        ],
+        "WaveIdList": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
         ]
     }
 ]

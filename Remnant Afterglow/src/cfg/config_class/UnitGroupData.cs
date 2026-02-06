@@ -7,33 +7,37 @@ namespace Remnant_Afterglow
     public partial class UnitGroupData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 单位组ID
         /// </summary>
         public int GroupId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单位组名称
         /// </summary>
         public string Name { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单位组描述
         /// </summary>
         public string Describe { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单位组出场描述
         /// </summary>
         public string ShowDescribe { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单位id及刷新概率
         ///(单位id,刷新概率)
         ///单个概率是与所有概率之和的比例
         /// </summary>
         public List<List<int>> UnitList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单位数量区间
         ///(最小刷新量，最大刷新量)
         /// </summary>
         public List<int> CountInterval { get; set; }
+        /// <summary>
+        /// 单位与单位之间刷新间隔（帧数）
+        /// </summary>
+        public int Interval { get; set; }
 
         public UnitGroupData(int id)
         {
@@ -44,6 +48,7 @@ namespace Remnant_Afterglow
 			ShowDescribe = (string)dict["ShowDescribe"];
 			UnitList = (List<List<int>>)dict["UnitList"];
 			CountInterval = (List<int>)dict["CountInterval"];
+			Interval = (int)dict["Interval"];
 			InitData();
         }
 
@@ -57,6 +62,7 @@ namespace Remnant_Afterglow
 			ShowDescribe = (string)dict["ShowDescribe"];
 			UnitList = (List<List<int>>)dict["UnitList"];
 			CountInterval = (List<int>)dict["CountInterval"];
+			Interval = (int)dict["Interval"];
 			InitData();
         }
 
@@ -68,6 +74,7 @@ namespace Remnant_Afterglow
 			ShowDescribe = (string)dict["ShowDescribe"];
 			UnitList = (List<List<int>>)dict["UnitList"];
 			CountInterval = (List<int>)dict["CountInterval"];
+			Interval = (int)dict["Interval"];
 			InitData();
         }
         #endregion

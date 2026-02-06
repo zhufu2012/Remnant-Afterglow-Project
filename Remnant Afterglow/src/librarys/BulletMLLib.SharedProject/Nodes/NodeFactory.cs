@@ -3,15 +3,15 @@ using System;
 namespace BulletMLLib.SharedProject.Nodes;
 
 /// <summary>
-/// This is a simple class used to create different types of nodes.
+/// 这是一个用于创建不同类型节点的简单类。
 /// </summary>
 public static class NodeFactory
 {
     /// <summary>
-    /// Given a node type, create the correct node.
+    /// 给定一个节点类型，创建正确的节点。
     /// </summary>
-    /// <returns>An instance of the correct node type</returns>
-    /// <param name="nodeType">Node type that we want.</param>
+    /// <returns>正确节点类型的实例</returns>
+    /// <param name="nodeType">我们想要的节点类型。</param>
     public static BulletMLNode CreateNode(ENodeName nodeType)
     {
         return nodeType switch
@@ -36,7 +36,7 @@ public static class NodeFactory
             ENodeName.speed => new SpeedNode(),
             ENodeName.param => new ParamNode(),
             ENodeName.bulletml => new(ENodeName.bulletml),
-            _ => throw new($"Unhandled type of ENodeName: {nodeType}")
+            _ => throw new($"未处理的ENodeName类型: {nodeType}")
         };
     }
 }

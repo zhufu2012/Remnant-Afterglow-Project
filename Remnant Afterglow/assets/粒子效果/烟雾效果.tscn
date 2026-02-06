@@ -1,0 +1,102 @@
+[gd_scene load_steps=10 format=3 uid="uid://busasmalb0cff"]
+
+[ext_resource type="Texture2D" uid="uid://cbrwlvjaamni6" path="res://assets/粒子效果/废料熔炼站.png" id="1_xik4c"]
+[ext_resource type="Texture2D" uid="uid://csojab2icgies" path="res://assets/粒子效果/浓烟1.png" id="2_uxmbo"]
+
+[sub_resource type="Gradient" id="Gradient_f3yxv"]
+offsets = PackedFloat32Array(0, 0.187097, 0.629032)
+colors = PackedColorArray(1, 1, 1, 0.262745, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kq7om"]
+gradient = SubResource("Gradient_f3yxv")
+
+[sub_resource type="Curve" id="Curve_ou88y"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.251479, 0.501163), 2.48915, 2.48915, 0, 0, Vector2(0.591716, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.675), -0.87588, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_yhmfi"]
+curve = SubResource("Curve_ou88y")
+
+[sub_resource type="Curve" id="Curve_1nwdr"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1.52616), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jc013"]
+curve = SubResource("Curve_1nwdr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_44wnw"]
+lifetime_randomness = 0.25
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(-10, 10, 0)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_max = 360.0
+direction = Vector3(0, 0, 0)
+initial_velocity_max = 1.0
+gravity = Vector3(10, -10, 0)
+linear_accel_min = 0.25
+linear_accel_max = 2.0
+radial_accel_max = 2.0
+tangential_accel_max = 5.0
+damping_max = 5.0
+scale_curve = SubResource("CurveTexture_yhmfi")
+scale_over_velocity_max = 1.0
+scale_over_velocity_curve = SubResource("CurveTexture_jc013")
+color = Color(1, 1, 1, 0.470588)
+color_ramp = SubResource("GradientTexture1D_kq7om")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="废料熔炉2" type="Sprite2D" parent="."]
+position = Vector2(922, 486)
+texture = ExtResource("1_xik4c")
+
+[node name="GPUParticles2D烟雾" type="GPUParticles2D" parent="废料熔炉2"]
+amount = 30
+texture = ExtResource("2_uxmbo")
+lifetime = 15.0
+visibility_rect = Rect2(-25, 25, 500, -500)
+process_material = SubResource("ParticleProcessMaterial_44wnw")
+
+[node name="废料熔炉" type="Sprite2D" parent="."]
+position = Vector2(1009, 486)
+texture = ExtResource("1_xik4c")
+
+[node name="GPUParticles2D烟雾" type="GPUParticles2D" parent="废料熔炉"]
+amount = 30
+texture = ExtResource("2_uxmbo")
+lifetime = 15.0
+visibility_rect = Rect2(-25, 25, 500, -500)
+process_material = SubResource("ParticleProcessMaterial_44wnw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(959, 72)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Sprite2D"]
+visible = false
+amount = 1000
+visibility_rect = Rect2(-900, 0, 1800, 900)
+process_material = SubResource("ParticleProcessMaterial_44wnw")
+
+[node name="废料熔炉3" type="Sprite2D" parent="."]
+position = Vector2(922, 574)
+texture = ExtResource("1_xik4c")
+
+[node name="GPUParticles2D烟雾" type="GPUParticles2D" parent="废料熔炉3"]
+amount = 30
+texture = ExtResource("2_uxmbo")
+lifetime = 15.0
+visibility_rect = Rect2(-25, 25, 500, -500)
+process_material = SubResource("ParticleProcessMaterial_44wnw")
+
+[node name="废料熔炉4" type="Sprite2D" parent="."]
+position = Vector2(1009, 574)
+texture = ExtResource("1_xik4c")
+
+[node name="GPUParticles2D烟雾" type="GPUParticles2D" parent="废料熔炉4"]
+amount = 30
+texture = ExtResource("2_uxmbo")
+lifetime = 15.0
+visibility_rect = Rect2(-25, 25, 500, -500)
+process_material = SubResource("ParticleProcessMaterial_44wnw")

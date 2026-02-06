@@ -49,14 +49,16 @@ class CSharpClassGenerator:
         properties = []
         for key, value_type in self.data['key_list'].items():
             if key == 'KEY_INDEX':
-                continue  # Skip the index key as it's not a property of the class.
+                continue  # 跳过索引键，因为它不是类的属性。
             describe = ""
             for i, key_name in enumerate(result_dict[2]):
-                if key_name == key and (len(result_dict[1]) >= i + 1) and (result_dict[1][i] in [1, 2, 3]):
+                key_name_str = str(key_name)
+                ind = key_name_str.find("#")
+                if ((key_name_str == key)or (ind!=-1 and key_name_str.split("#")[1] == key)) and (len(result_dict[1]) >= i + 1) and (result_dict[1][i] in [1, 2, 3]):
                     describe = result_dict[0][i]
             describe = describe.replace("\n", "\n        ///")
             properties.append(
-                f'        /// <summary>        \n        /// {describe}\n        /// </summary>\n        public {self.type_replace(value_type)} {key} {{ get; set; }}')
+                f'        /// <summary>\n        /// {describe}\n        /// </summary>\n        public {self.type_replace(value_type)} {key} {{ get; set; }}')
 
         return '\n'.join(properties)
 

@@ -7,42 +7,42 @@ namespace Remnant_Afterglow
     public partial class FunctionTemplate
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 模板id
         ///也是类名
         /// </summary>
         public string TemplateId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 表名
         /// </summary>
         public string TableName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 表中主键的字段名
         /// </summary>
         public string TableKey { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 对应表中
         ///代码的字段名
         /// </summary>
         public string TableCode { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 对应表中
         ///返回值的字段名
         /// </summary>
         public string TableReturn { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 导包代码
         /// </summary>
         public string CodePack { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 函数输入变量
         /// </summary>
         public string CodeVariable { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 函数统一返回值
         /// </summary>
         public string CodeReturn { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 函数变量类型
         ///最多9个参数
         ///（前面属于变量，最后一个属于返回值）

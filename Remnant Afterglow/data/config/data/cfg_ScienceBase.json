@@ -110,5 +110,63 @@
         ],
         "ConnectList": [],
         "SciencePng": "./data/config/images/ID_A5BAA4F30A314152873A3175A4E9916B.png"
+    },
+    {
+        "KEY_INDEX": "9",
+        "ScienceId": 9,
+        "ScienceRangeId": 1,
+        "ScienceName": "解锁测试炮台1",
+        "ScienceDes": "解锁测试炮台1",
+        "Pos": [
+            5,
+            8
+        ],
+        "ConnectList": [
+            1
+        ],
+        "SciencePng": "./data/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
+    },
+    {
+        "KEY_INDEX": "101",
+        "ScienceId": 101,
+        "ScienceRangeId": 1,
+        "ScienceName": "采集建筑优化Ⅰ",
+        "ScienceDes": "通过优化自动化工序，减少基础采集设备的建造价格\n挖掘钻机造价-20%\n收解台造价-10%",
+        "Pos": [
+            1,
+            1
+        ],
+        "ConnectList": [
+            102
+        ],
+        "SciencePng": "./data/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
+    },
+    {
+        "KEY_INDEX": "102",
+        "ScienceId": 102,
+        "ScienceRangeId": 1,
+        "ScienceName": "采集建筑优化Ⅱ",
+        "ScienceDes": "通过优化自动化工序，减少进阶高级设备的建造价格\n水晶提取器造价-10%\n次元凝练器造价-10%\n熔炉平台造价-10%\n熔炉插件造价-10%\n采矿无人机平台造价-10%",
+        "Pos": [
+            1,
+            4
+        ],
+        "ConnectList": [
+            103
+        ],
+        "SciencePng": "./data/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
+    },
+    {
+        "KEY_INDEX": "103",
+        "ScienceId": 103,
+        "ScienceRangeId": 1,
+        "ScienceName": "采集建筑优化Ⅲ",
+        "ScienceDes": "通过优化自动化工序，减少进阶特殊设备的建造价格\n结构体跃迁器造价-10%\n跃迁处理器造价-10%\n次元合成器造价-10%\n次元裂解器造价-10%",
+        "Pos": [
+            1,
+            8
+        ],
+        "ConnectList": [],
+        "SciencePng": "./data/config/images/ID_5A1F6944C9424D0F8086801D862BA273.png"
     }
 ]

@@ -8,35 +8,35 @@ namespace Remnant_Afterglow
     public partial class AnimaExplode
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 爆炸id
         ///
         /// </summary>
         public int ExplodeId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 帧动画类型
         /// </summary>
         public int AnimaType { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 帧图坐标
         /// </summary>
         public Vector2I Coords { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 单个帧图
         ///长宽（横纵）
         /// </summary>
         public Vector2I LengWidth { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 帧图最大序号
         ///第一张图是1
         /// </summary>
         public int MaxIndex { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 播放时，偏移中心的值
         ///（横,竖）
         /// </summary>
         public Vector2 Offset { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 各帧相对持续时间
         ///各帧默认为1
         ///持续时间为1的帧的显示长度是持续时间为2的帧的两倍
@@ -45,34 +45,26 @@ namespace Remnant_Afterglow
         ///表示第三帧相对持续时间为1
         /// </summary>
         public List<List<float>> RelativeList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 设置动画播放倍数
         ///2表示两倍播放，0.5表示半速播放
         /// </summary>
         public int FrameSpeed { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 设置动画的播放速度
         ///单位:
         /// </summary>
         public int PlaySpeed { get; set; }
-        /// <summary>        
-        /// 是否自动播放
-        /// </summary>
-        public bool IsAutoplay { get; set; }
-        /// <summary>        
-        /// 是否循环播放
-        /// </summary>
-        public bool IsLoop { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 帧图
         /// </summary>
         public Texture2D Picture { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 不水平翻转
         ///不填默认为True
         /// </summary>
         public bool FlipH { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 不垂直翻转
         ///不填默认为True
         /// </summary>
@@ -90,8 +82,6 @@ namespace Remnant_Afterglow
 			RelativeList = (List<List<float>>)dict["RelativeList"];
 			FrameSpeed = (int)dict["FrameSpeed"];
 			PlaySpeed = (int)dict["PlaySpeed"];
-			IsAutoplay = (bool)dict["IsAutoplay"];
-			IsLoop = (bool)dict["IsLoop"];
 			Picture = (Texture2D)dict["Picture"];
 			FlipH = (bool)dict["FlipH"];
 			FlipV = (bool)dict["FlipV"];
@@ -111,8 +101,6 @@ namespace Remnant_Afterglow
 			RelativeList = (List<List<float>>)dict["RelativeList"];
 			FrameSpeed = (int)dict["FrameSpeed"];
 			PlaySpeed = (int)dict["PlaySpeed"];
-			IsAutoplay = (bool)dict["IsAutoplay"];
-			IsLoop = (bool)dict["IsLoop"];
 			Picture = (Texture2D)dict["Picture"];
 			FlipH = (bool)dict["FlipH"];
 			FlipV = (bool)dict["FlipV"];
@@ -130,8 +118,6 @@ namespace Remnant_Afterglow
 			RelativeList = (List<List<float>>)dict["RelativeList"];
 			FrameSpeed = (int)dict["FrameSpeed"];
 			PlaySpeed = (int)dict["PlaySpeed"];
-			IsAutoplay = (bool)dict["IsAutoplay"];
-			IsLoop = (bool)dict["IsLoop"];
 			Picture = (Texture2D)dict["Picture"];
 			FlipH = (bool)dict["FlipH"];
 			FlipV = (bool)dict["FlipV"];

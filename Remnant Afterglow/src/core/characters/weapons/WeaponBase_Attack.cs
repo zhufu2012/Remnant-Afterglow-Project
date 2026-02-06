@@ -1,6 +1,5 @@
 using GameLog;
 using Godot;
-using GodotPlugins.Game;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +17,7 @@ namespace Remnant_Afterglow
     /// <summary>
     /// 武器 攻击相关逻辑
     /// </summary>
-    public partial class WeaponBase : Node2D, IWeapon
+    public partial class WeaponBase : Area2D, IWeapon
     {
         /// <summary>
         /// 初始化武器状态
@@ -27,11 +26,12 @@ namespace Remnant_Afterglow
         {
             //武器准备好了
             state = WeaponState.Ready;
+            PlayAnimaImmediate(ObjectStateNames.Default);//播放默认动画
         }
 
         #region 武器流程逻辑
         /// <summary>
-        /// 武器状态-默认开始就是准备好的状态
+        /// 武器状态-默认是建筑状态
         /// </summary>
         private WeaponState state = WeaponState.Building;
 
@@ -69,20 +69,24 @@ namespace Remnant_Afterglow
         /// 武器每个开火点单次发射数
         /// </summary>
         public int EmissionNum;
-
+        /// <summary>
+        /// 武器发射的子弹
+        /// </summary>
+        public int BulletId;
         /// <summary>
         /// 初始化武器功能逻辑 的 内部参数
         /// </summary>
-        public void InitWeaponAttack()
+        public virtual void InitWeaponAttack(WeaponData2 CfgData2)
         {
             LaunchTotal = CfgData2.LaunchTotal;//周期内发射总次数
             CoolTime = CfgData2.CoolTime;//冷却帧数
             EmissionInterval = CfgData2.EmissionInterval;//间隔帧数
-            Range = CfgData2.Range;
+            Range = CfgData2.Range * CfgData2.Range;
             FirePointList = CfgData2.FirePointList;
             EmissionNum = CfgData2.EmissionNum;
             MountLookTarget = CfgData2.MountLookTarget;
             RotationSpeed = CfgData2.RotationSpeed;
+            BulletId = CfgData2.BulletId;
         }
         #endregion
 
@@ -103,44 +107,33 @@ namespace Remnant_Afterglow
         public bool MountLookTarget;
 
         /// <summary>
-        /// 武器真实的旋转角度, 角度制
-        /// </summary>
-        public float RealRotationDegrees { get; private set; } = 270;
-
-        /// <summary>
         /// 武器真实的旋转角度, 弧度制
         /// </summary>
-        public float RealRotation => Mathf.DegToRad(RealRotationDegrees);
+        public float RealRotation => Mathf.DegToRad(GlobalRotationDegrees);
         #endregion
 
         #region 武器索敌逻辑
         /// <summary>
         /// 锁定目标 实体
         /// </summary>
-        public BaseObject targetObject { get; set; }
+        public BaseObject targetObject { get; set; } = null;
         /// <summary>
         /// 旋转是否完成
         /// </summary>
         public bool isRotatedToTarget = false;
         /// <summary>
-        /// 范围内可攻击实体列表
+        /// 范围内可攻击实体列表-祝福注释-可以优化为带id,然后锁定时才获取对应实体， 第二个好办法是一旦检测到有对象进入，记为target，然后关闭碰撞检测，设置collisionshape diable属性为true
+        ///当target销毁或离开足够距离后，重新开启碰撞检测,也可以通过直接使用Physics2DServer的Physics2DDirectSpaceState来实现area2d的碰撞检测，性能有较大提升
         /// </summary>
         public HashSet<BaseObject> RangeList = new HashSet<BaseObject>();
 
         /// <summary>
-        /// 攻击范围-需要维护一个可攻击对象表
-        /// </summary>
-        public Area2D AttackRange;
-        public CollisionShape2D AttackShape;
-
-        /// <summary>
-        /// 检查目标是否有效，每帧运行
+        /// 检查目标是否有效，每20帧运行
         /// </summary>
         public void CheckTarget()
         {
-            if (targetObject != null && !GodotObject.IsInstanceValid(targetObject))
+            if (targetObject == null || !IsInstanceValid(targetObject) || GlobalPosition.DistanceSquaredTo(targetObject.GlobalPosition) > Range)
             {
-                targetObject = null;
                 FindTarget();
             }
         }
@@ -148,39 +141,41 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 在攻击范围内寻找最近的目标
         /// </summary>
-        public void FindTarget()
+        public virtual void FindTarget()
         {
-            targetObject = null;
             float minDistanceSq = float.MaxValue;
             Vector2 myPos = GlobalPosition;
-
-            // 使用 Linq 简化查找并过滤无效对象
-            var validTargets = RangeList.Where(obj => GodotObject.IsInstanceValid(obj)).ToList();
-            foreach (BaseObject obj in validTargets)
+            foreach (BaseObject obj in RangeList)
             {
-                float distanceSq = myPos.DistanceSquaredTo(obj.GlobalPosition);
-                if (distanceSq < minDistanceSq)
+                if (IsInstanceValid(obj))
                 {
-                    minDistanceSq = distanceSq;
-                    targetObject = obj;
+                    float distanceSq = myPos.DistanceSquaredTo(obj.GlobalPosition);
+                    if (distanceSq < minDistanceSq)
+                    {
+                        minDistanceSq = distanceSq;
+                        targetObject = obj;
+                    }
                 }
             }
-
+            if (targetObject != null)
+            {
+                //Monitoring = false;
+                SetDeferred("monitoring", false);
+            }
             // 清理无效对象
-            RangeList.RemoveWhere(obj => !GodotObject.IsInstanceValid(obj));
+            RangeList.RemoveWhere(obj => !IsInstanceValid(obj));
         }
 
         /// <summary>
         /// 实体进入可攻击区域
         /// </summary>
         /// <param name="body"></param>
-        private void Area2DEntered(Node2D body)
+        private void Area2DEntered(Area2D body)
         {
-            BaseObject enteringObj = body as BaseObject ?? body.GetParent<BaseObject>();
-            if (enteringObj != null && enteringObj.Camp != baseObject.Camp)
+            BaseObject enteringObj = body as BaseObject;
+            if (enteringObj.Camp != baseObject.Camp)
             {
                 RangeList.Add(enteringObj);
-                FindTarget();
             }
         }
 
@@ -188,13 +183,15 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 当有实体退出攻击范围
         /// </summary>
-        private void Area2DExited(Node2D body)
+        private void Area2DExited(Area2D body)
         {
-            BaseObject exitingObj = body as BaseObject ?? body.GetParent<BaseObject>();
+            BaseObject exitingObj = body as BaseObject;
             if (exitingObj != null && RangeList.Contains(exitingObj))
             {
                 RangeList.Remove(exitingObj);
-                if (targetObject == exitingObj) FindTarget();
+                if (targetObject == exitingObj)
+                    CallDeferred(nameof(FindTarget));
+                //FindTarget();
             }
         }
         #endregion
@@ -214,7 +211,7 @@ namespace Remnant_Afterglow
         /// </summary>
         public int EmissionInterval;
         /// <summary>
-        /// 攻击范围
+        /// 攻击范围的平方
         /// </summary>
         public float Range;
 
@@ -226,6 +223,11 @@ namespace Remnant_Afterglow
             switch (state)
             {
                 case WeaponState.Ready://准备好状态
+                    if (targetObject != null && isRotatedToTarget && IsInstanceValid(targetObject))
+                    {
+                        state = WeaponState.Firing;
+                        PlayAnimaImmediate(ObjectStateNames.Attack);//攻击状态
+                    }//准备攻击
                     break;
                 case WeaponState.FirInterval://开火间隔状态
                     if (--intervalTimer <= 0)//开火间隔结束时
@@ -233,23 +235,33 @@ namespace Remnant_Afterglow
                         state = WeaponState.Ready;//状态改为准备状态
                     }
                     break;
-                case WeaponState.Firing://开火状态
-                    Launch(); // 执行一次发射
-                    intervalNum++;//发射后 发射计数增加
-                    if (intervalNum >= LaunchTotal)//大于等于总数-到冷却状态
+                case WeaponState.Firing://当前为开火状态
+                    if (targetObject != null && IsInstanceValid(targetObject))
                     {
-                        state = WeaponState.Cooling;
-                        coolTimer = Math.Max(0, CoolTime); // 设置冷却周期，确保非负
+                        if (intervalNum >= LaunchTotal)//大于等于总数-到冷却状态
+                        {
+                            PlayAnimaImmediate(ObjectStateNames.Fill);//修改为装填动画
+                            state = WeaponState.Cooling;//冷却
+                            coolTimer = Math.Max(0, CoolTime); // 设置冷却周期，确保非负
+                            intervalNum = 0; // 重置发射计数，避免重复触发冷却
+                        }
+                        else
+                        {
+                            Launch(); // 执行一次发射
+                            intervalTimer = EmissionInterval;//设置间隔周期
+                            state = WeaponState.FirInterval;
+                        }
                     }
                     else
                     {
-                        intervalTimer = EmissionInterval;//设置间隔周期
-                        state = WeaponState.FirInterval;
+                        // 目标无效，切换到Ready状态并重置参数
+                        state = WeaponState.Ready;
                     }
                     break;
                 case WeaponState.Cooling://冷却状态
-                    if (coolTimer > 0) coolTimer--; // 减少冷却计时器
-                    if (coolTimer <= 0) // 冷却结束时
+                    if (coolTimer > 0)
+                        coolTimer--; // 减少冷却计时器
+                    else
                     {
                         state = WeaponState.Ready; // 状态改回准备好的状态
                         intervalNum = 0; // 重置周期内发射数
@@ -260,48 +272,50 @@ namespace Remnant_Afterglow
             }
         }
 
-        /// <summary>
-        /// 开始攻击,只有在旋转完成且目标有效时才攻击
-        /// </summary>
-        public void Attack()
-        {
-            if (state == WeaponState.Ready && targetObject != null && isRotatedToTarget)
-            {
-                state = WeaponState.Firing;
-                Launch();
-            }
-        }
 
 
         /// <summary>
-        /// 执行发射
+        /// 执行一次子弹发射发射
         /// </summary>
-        protected virtual void Launch()
+        public void Launch()
         {
             foreach (var point in FirePointList)
             {
+                Vector2 firePosition = GlobalTransform * point; // 正确转换本地坐标到全局
                 for (int i = 0; i < EmissionNum; i++)
                 {
                     // 计算子弹位置（考虑武器旋转）
-                    Vector2 firePosition = GlobalPosition + point.Rotated(RealRotation);
                     // 修改后的动态方向计算（在Launch方法中）：
-                    // 计算子弹基础方向（基于武器真实旋转角度）
-                    float baseAngle = RealRotation; // 弧度制
-                    // 若需要散射效果（根据CurrScatteringRange添加随机偏移）
-                    //Log.Print(baseObject.ObjectId);
-                    //Log.Print((float)Math.Cos(baseAngle)+"   "+(float)Math.Sin(RealRotation));
-                    // 创建子弹时传递计算后的角度
-                    MapCopy.Instance.bulletManager.CreateTopBullet(
-                        CfgData2.BulletId,
-                        firePosition,
-                        baseAngle, // 使用动态计算的角度
-                        targetObject,
-                        baseObject
-                    );
+                    // 将生成子弹请求加入队列
+                    MapCopy.Instance.bulletManager.EnqueueBulletRequest(new BulletRequest
+                    {
+                        BulletId = BulletId,
+                        Position = firePosition,
+                        Direction = RealRotation,
+                        TargetObject = targetObject,
+                        CreateObject = baseObject
+                    });
 
                 }
             }
-            OnAttacked(); // 触发攻击事件
+            intervalNum++;//发射后 发射计数增加
+        }
+
+        /// <summary>
+        /// 检查目标是否在机壳限制的角度范围内
+        /// </summary>
+        public bool IsTargetInHullRange(BaseObject target)
+        {
+            if (hullBase == null || !MountLookTarget)
+                return true; // 没有机壳或不跟踪目标，无限制
+            Vector2 directionToTarget = target.GlobalPosition - GlobalPosition;
+            float targetAngle = directionToTarget.Angle();
+            // 计算机壳的朝向角度
+            float hullAngle = hullBase.GetHullRotationRad();
+            // 计算相对角度差
+            float angleDiff = Mathf.Abs(Mathf.Wrap(targetAngle - hullAngle, -Mathf.Pi, Mathf.Pi));
+            // 假设机壳提供120度的覆盖范围（可根据需要调整）
+            return angleDiff <= Mathf.Pi / 3;
         }
 
 
@@ -309,45 +323,37 @@ namespace Remnant_Afterglow
         /// 旋转角度
         /// </summary>
         /// <param name="delta"></param>
-        private void UpdateRotation(double delta)
+        public virtual void UpdateRotation(double delta)
         {
             if (targetObject == null || !MountLookTarget) return;
-            if (!GodotObject.IsInstanceValid(targetObject))
+            if (!IsInstanceValid(targetObject))
             {
                 targetObject = null;
                 return;
             }
 
-            Vector2 targetPos = targetObject.GlobalPosition;
-            Vector2 direction = targetPos - GlobalPosition;
-
-            // 计算目标角度
-            float targetAngle = Mathf.RadToDeg(direction.Angle());
-
-            // 计算当前角度和目标角度之间的差值
-            float angleDifference = Mathf.Wrap(targetAngle - RealRotationDegrees, -180f, 180f);
-
-            // 选择最短的旋转路径：如果差值大于0则顺时针，小于0则逆时针
-            RealRotationDegrees = Mathf.MoveToward(RealRotationDegrees, RealRotationDegrees + angleDifference, RotationSpeed * (float)delta);
-
-            // 更新GlobalRotation
-            GlobalRotation = Mathf.DegToRad(RealRotationDegrees) + Mathf.Pi / 2;
-
-            // 判断是否已经对准目标
-            if (Mathf.Abs(angleDifference) < 1f) // 假设1度以内就认为是对准
+            // 检查目标是否在机壳范围内
+            if (!IsTargetInHullRange(targetObject))
             {
-                isRotatedToTarget = true;
+                targetObject = null;
+                return;
             }
-            else
+            Vector2 direction = targetObject.GlobalPosition - GlobalPosition;
+            float targetAngleDeg;
+            if (hullBase != null) // 有机壳
             {
-                isRotatedToTarget = false;
+                // 计算相对于机壳的方向
+                targetAngleDeg = Mathf.RadToDeg(direction.Angle()) + 90f;
+                // 考虑机壳的旋转
+                targetAngleDeg -= hullBase.GlobalRotationDegrees;
             }
-
-            // 只有旋转完成才开始攻击
-            if (isRotatedToTarget && state == WeaponState.Ready)
+            else // 没有机壳，保持原有逻辑
             {
-                Attack();
+                targetAngleDeg = Mathf.RadToDeg(direction.Angle()) + 90f;
             }
+            float angleDifference = Mathf.Wrap(targetAngleDeg - GlobalRotationDegrees, -180f, 180f);
+            GlobalRotationDegrees = Mathf.MoveToward(GlobalRotationDegrees, GlobalRotationDegrees + angleDifference, RotationSpeed * (float)delta);
+            isRotatedToTarget = Mathf.Abs(angleDifference) < 1f;
         }
 
 

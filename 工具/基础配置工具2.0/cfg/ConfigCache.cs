@@ -13,12 +13,12 @@ namespace Remnant_Afterglow
         /// </summary>
         public static void LoadOtherCache()
         {
-            LoadBuffTag();
-            LoadBuffData();
             LoadViewBase();
             LoadUpdateLog();
             LoadAttainmentPage();
             LoadAttainmentBase();
+            LoadArchival();
+            LoadArchivalItem();
             LoadScienceRange();
             LoadScienceBase();
             LoadScienceData();
@@ -34,66 +34,75 @@ namespace Remnant_Afterglow
             LoadGlobalConfigList();
             LoadFunctionTemplate();
             LoadCameraBase();
-            LoadCameraAssemblyBase();
             LoadAnimaUnit();
-            LoadAnimaTower();
             LoadAnimaBuild();
+            LoadAnimaTower();
             LoadAnimaWeapon();
             LoadAnimaWorker();
-            LoadAnimaBullet();
             LoadAnimaExplode();
+            LoadAnimaUnit2();
+            LoadAnimaBuild2();
+            LoadAnimaTower2();
+            LoadAnimaWorker2();
+            LoadAnimaWeapon2();
+            LoadAnimaExplode2();
             LoadSequenceMapBase();
             LoadSpeciallyEffect();
+            LoadObjectEffectImage();
+            LoadGenerateFixedMap();
             LoadMapFixedSet();
             LoadMapFixedMaterial();
-            LoadGenerateFixedMap();
             LoadMapPassType();
             LoadMapEdge();
+            LoadMapWallShadow();
             LoadMapMassif();
             LoadMapImageLayer();
-            LoadMapPhysicsLayer();
-            LoadMapNavigate();
             LoadMapMaterial();
             LoadGenerateBottomMap();
             LoadMapExtraDraw();
             LoadGenerateBigStruct();
-            LoadBigMapMaterial();
+            LoadMapDecorate();
             LoadBigMapBase();
+            LoadBigMapMaterial();
             LoadBigMapBigCell();
             LoadBigMapCellLogic();
             LoadBigMapEvent();
-            LoadUnitGroupType();
-            LoadUnitGroupData();
-            LoadChapterBase();
-            LoadChapterCopyBase();
             LoadCopyBrush();
             LoadBrushPoint();
             LoadWaveBase();
+            LoadUnitGroupData();
+            LoadUnitGroupType();
+            LoadChapterBase();
+            LoadChapterCopyBase();
+            LoadCopyBuildLimit();
             LoadChapterCopyUI();
             LoadBackgroundMusic();
-            LoadSoundEffect();
-            LoadBulletScript();
-            LoadBulletAction();
-            LoadBulletFire();
-            LoadBulletScene();
+            LoadUISoundSfx();
+            LoadSoundSfx();
             LoadBulletData();
             LoadBulletLogic();
-            LoadBulletCollide();
+            LoadLaserBulletLogic();
             LoadExplodeData();
             LoadExplodeHarm();
             LoadUnitData();
             LoadUnitLogic();
-            LoadAttrEvent();
             LoadBaseObjectShow();
             LoadObjectBottomBar();
             LoadObjectSideBar();
             LoadBaseObjectData();
-            LoadBaseObjectWeapon();
             LoadBuildData();
             LoadWorkerData();
             LoadWeaponData();
             LoadWeaponData2();
-            LoadTowerData();
+            LoadWreckAge();
+            LoadBuffTag();
+            LoadBuffData();
+            LoadAttrEvent();
+            LoadGlobalAttrEvent();
+            LoadGlobalAttributeBase();
+            LoadGlobalAttrTem();
+            LoadGlobalAttrData();
+            LoadGlobalAttrMod();
             LoadAttributeBase();
             LoadAttrCalculate();
             LoadAttrDependency();
@@ -106,160 +115,26 @@ namespace Remnant_Afterglow
             LoadCampBase();
             LoadGameDiffBase();
             LoadBagData();
-            LoadMoneyBase();
             LoadItemData();
+            LoadMoneyBase();
             LoadErrorBase();
         }
 
 
-        #region buff配置
-        /// <summary>
-        /// buff标签数据配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, BuffTag> BuffTag_Cache = new Dictionary<string, BuffTag>();
-        /// <summary>
-        /// 提前加载所有buff标签数据配置缓存
-        /// </summary>
-        public static void LoadBuffTag()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BuffTag);
-            foreach (var val in cfg_dict)
-            {
-                BuffTag data = new BuffTag(val.Value);
-                data.InitData2();
-                BuffTag_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的buff标签数据基础配置缓存
-        /// </summary>
-        public static BuffTag GetBuffTag(string cfgId)
-        {
-            if (!BuffTag_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new BuffTag(cfgId);
-                    data.InitData2();
-                    BuffTag_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("buff配置.xlsx表中的 cfg_BuffTag配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static BuffTag GetBuffTag(int cfgId)
-        {
-            if (!BuffTag_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new BuffTag(cfgId);
-                    data.InitData2();
-                    BuffTag_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("buff配置.xlsx表中的 cfg_BuffTag配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有buff标签数据数据
-        /// </summary>
-        public static List<BuffTag> GetAllBuffTag()
-        {
-            List<BuffTag> list = new List<BuffTag>();
-            foreach (var val in BuffTag_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// buff基础数据配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, BuffData> BuffData_Cache = new Dictionary<string, BuffData>();
-        /// <summary>
-        /// 提前加载所有buff基础数据配置缓存
-        /// </summary>
-        public static void LoadBuffData()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BuffData);
-            foreach (var val in cfg_dict)
-            {
-                BuffData data = new BuffData(val.Value);
-                data.InitData2();
-                BuffData_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的buff基础数据基础配置缓存
-        /// </summary>
-        public static BuffData GetBuffData(string cfgId)
-        {
-            if (!BuffData_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new BuffData(cfgId);
-                    data.InitData2();
-                    BuffData_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("buff配置.xlsx表中的 cfg_BuffData配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static BuffData GetBuffData(int cfgId)
-        {
-            if (!BuffData_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new BuffData(cfgId);
-                    data.InitData2();
-                    BuffData_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("buff配置.xlsx表中的 cfg_BuffData配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有buff基础数据数据
-        /// </summary>
-        public static List<BuffData> GetAllBuffData()
-        {
-            List<BuffData> list = new List<BuffData>();
-            foreach (var val in BuffData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        #endregion
+
         #region Ui界面配置
         /// <summary>
         /// 界面基础配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ViewBase> ViewBase_Cache = new Dictionary<string, ViewBase>();
+        private static readonly Dictionary<string, ViewBase> ViewBase_Cache = [];
         /// <summary>
         /// 提前加载所有界面基础配置配置缓存
         /// </summary>
         public static void LoadViewBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ViewBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ViewBase))
             {
-                ViewBase data = new ViewBase(val.Value);
+                ViewBase data = new(val.Value);
                 data.InitData2();
                 ViewBase_Cache.Add(val.Key, data);
             }
@@ -277,7 +152,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ViewBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("Ui界面配置.xlsx表中的 cfg_ViewBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -294,7 +169,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ViewBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("Ui界面配置.xlsx表中的 cfg_ViewBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -306,28 +181,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ViewBase> GetAllViewBase()
         {
-            List<ViewBase> list = new List<ViewBase>();
-            foreach (var val in ViewBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ViewBase>(ViewBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的界面基础配置数据
+        /// </summary>
+        public static bool HasViewBase(int cfgId)
+        {
+            return ViewBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的界面基础配置数据
+        /// </summary>
+        public static bool HasViewBase(string cfgId)
+        {
+            return ViewBase_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 主界面更新日志
         /// <summary>
         /// 更新日志配置缓存
         /// </summary>
-        private static readonly Dictionary<string, UpdateLog> UpdateLog_Cache = new Dictionary<string, UpdateLog>();
+        private static readonly Dictionary<string, UpdateLog> UpdateLog_Cache = [];
         /// <summary>
         /// 提前加载所有更新日志配置缓存
         /// </summary>
         public static void LoadUpdateLog()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_UpdateLog);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_UpdateLog))
             {
-                UpdateLog data = new UpdateLog(val.Value);
+                UpdateLog data = new(val.Value);
                 data.InitData2();
                 UpdateLog_Cache.Add(val.Key, data);
             }
@@ -345,7 +229,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     UpdateLog_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("主界面更新日志.xlsx表中的 cfg_UpdateLog配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -362,7 +246,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     UpdateLog_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("主界面更新日志.xlsx表中的 cfg_UpdateLog配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -374,28 +258,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<UpdateLog> GetAllUpdateLog()
         {
-            List<UpdateLog> list = new List<UpdateLog>();
-            foreach (var val in UpdateLog_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<UpdateLog>(UpdateLog_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的更新日志数据
+        /// </summary>
+        public static bool HasUpdateLog(int cfgId)
+        {
+            return UpdateLog_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的更新日志数据
+        /// </summary>
+        public static bool HasUpdateLog(string cfgId)
+        {
+            return UpdateLog_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 数据库界面及成就相关配置
         /// <summary>
         /// 数据库成就分页配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AttainmentPage> AttainmentPage_Cache = new Dictionary<string, AttainmentPage>();
+        private static readonly Dictionary<string, AttainmentPage> AttainmentPage_Cache = [];
         /// <summary>
         /// 提前加载所有数据库成就分页配置缓存
         /// </summary>
         public static void LoadAttainmentPage()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttainmentPage);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttainmentPage))
             {
-                AttainmentPage data = new AttainmentPage(val.Value);
+                AttainmentPage data = new(val.Value);
                 data.InitData2();
                 AttainmentPage_Cache.Add(val.Key, data);
             }
@@ -413,7 +306,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttainmentPage_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("数据库界面及成就相关配置.xlsx表中的 cfg_AttainmentPage配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -430,7 +323,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttainmentPage_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("数据库界面及成就相关配置.xlsx表中的 cfg_AttainmentPage配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -442,26 +335,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttainmentPage> GetAllAttainmentPage()
         {
-            List<AttainmentPage> list = new List<AttainmentPage>();
-            foreach (var val in AttainmentPage_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttainmentPage>(AttainmentPage_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的数据库成就分页数据
+        /// </summary>
+        public static bool HasAttainmentPage(int cfgId)
+        {
+            return AttainmentPage_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的数据库成就分页数据
+        /// </summary>
+        public static bool HasAttainmentPage(string cfgId)
+        {
+            return AttainmentPage_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 数据库成就相关配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AttainmentBase> AttainmentBase_Cache = new Dictionary<string, AttainmentBase>();
+        private static readonly Dictionary<string, AttainmentBase> AttainmentBase_Cache = [];
         /// <summary>
         /// 提前加载所有数据库成就相关配置配置缓存
         /// </summary>
         public static void LoadAttainmentBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttainmentBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttainmentBase))
             {
-                AttainmentBase data = new AttainmentBase(val.Value);
+                AttainmentBase data = new(val.Value);
                 data.InitData2();
                 AttainmentBase_Cache.Add(val.Key, data);
             }
@@ -479,7 +380,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttainmentBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("数据库界面及成就相关配置.xlsx表中的 cfg_AttainmentBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -496,7 +397,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttainmentBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("数据库界面及成就相关配置.xlsx表中的 cfg_AttainmentBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -508,28 +409,188 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttainmentBase> GetAllAttainmentBase()
         {
-            List<AttainmentBase> list = new List<AttainmentBase>();
-            foreach (var val in AttainmentBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttainmentBase>(AttainmentBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的数据库成就相关配置数据
+        /// </summary>
+        public static bool HasAttainmentBase(int cfgId)
+        {
+            return AttainmentBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的数据库成就相关配置数据
+        /// </summary>
+        public static bool HasAttainmentBase(string cfgId)
+        {
+            return AttainmentBase_Cache.ContainsKey(cfgId);
         }
         #endregion
+
+        #region 档案库主界面
+        /// <summary>
+        /// 档案库主界面配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, Archival> Archival_Cache = [];
+        /// <summary>
+        /// 提前加载所有档案库主界面配置缓存
+        /// </summary>
+        public static void LoadArchival()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_Archival))
+            {
+                Archival data = new(val.Value);
+                data.InitData2();
+                Archival_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的档案库主界面基础配置缓存
+        /// </summary>
+        public static Archival GetArchival(string cfgId)
+        {
+            if (!Archival_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new Archival(cfgId);
+                    data.InitData2();
+                    Archival_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("档案库主界面.xlsx表中的 cfg_Archival配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static Archival GetArchival(int cfgId)
+        {
+            if (!Archival_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new Archival(cfgId);
+                    data.InitData2();
+                    Archival_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("档案库主界面.xlsx表中的 cfg_Archival配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有档案库主界面数据
+        /// </summary>
+        public static List<Archival> GetAllArchival()
+        {
+            return new List<Archival>(Archival_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的档案库主界面数据
+        /// </summary>
+        public static bool HasArchival(int cfgId)
+        {
+            return Archival_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的档案库主界面数据
+        /// </summary>
+        public static bool HasArchival(string cfgId)
+        {
+            return Archival_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 档案库子项配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, ArchivalItem> ArchivalItem_Cache = [];
+        /// <summary>
+        /// 提前加载所有档案库子项配置缓存
+        /// </summary>
+        public static void LoadArchivalItem()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ArchivalItem))
+            {
+                ArchivalItem data = new(val.Value);
+                data.InitData2();
+                ArchivalItem_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的档案库子项基础配置缓存
+        /// </summary>
+        public static ArchivalItem GetArchivalItem(string cfgId)
+        {
+            if (!ArchivalItem_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new ArchivalItem(cfgId);
+                    data.InitData2();
+                    ArchivalItem_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("档案库主界面.xlsx表中的 cfg_ArchivalItem配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static ArchivalItem GetArchivalItem(int cfgId)
+        {
+            if (!ArchivalItem_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new ArchivalItem(cfgId);
+                    data.InitData2();
+                    ArchivalItem_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("档案库主界面.xlsx表中的 cfg_ArchivalItem配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有档案库子项数据
+        /// </summary>
+        public static List<ArchivalItem> GetAllArchivalItem()
+        {
+            return new List<ArchivalItem>(ArchivalItem_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的档案库子项数据
+        /// </summary>
+        public static bool HasArchivalItem(int cfgId)
+        {
+            return ArchivalItem_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的档案库子项数据
+        /// </summary>
+        public static bool HasArchivalItem(string cfgId)
+        {
+            return ArchivalItem_Cache.ContainsKey(cfgId);
+        }
+        #endregion
+
         #region 科技树解锁界面相关配置
         /// <summary>
         /// 科技范围配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ScienceRange> ScienceRange_Cache = new Dictionary<string, ScienceRange>();
+        private static readonly Dictionary<string, ScienceRange> ScienceRange_Cache = [];
         /// <summary>
         /// 提前加载所有科技范围配置配置缓存
         /// </summary>
         public static void LoadScienceRange()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ScienceRange);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ScienceRange))
             {
-                ScienceRange data = new ScienceRange(val.Value);
+                ScienceRange data = new(val.Value);
                 data.InitData2();
                 ScienceRange_Cache.Add(val.Key, data);
             }
@@ -547,7 +608,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ScienceRange_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("科技树解锁界面相关配置.xlsx表中的 cfg_ScienceRange配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -564,7 +625,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ScienceRange_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("科技树解锁界面相关配置.xlsx表中的 cfg_ScienceRange配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -576,26 +637,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ScienceRange> GetAllScienceRange()
         {
-            List<ScienceRange> list = new List<ScienceRange>();
-            foreach (var val in ScienceRange_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ScienceRange>(ScienceRange_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的科技范围配置数据
+        /// </summary>
+        public static bool HasScienceRange(int cfgId)
+        {
+            return ScienceRange_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的科技范围配置数据
+        /// </summary>
+        public static bool HasScienceRange(string cfgId)
+        {
+            return ScienceRange_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 科技基础显示配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ScienceBase> ScienceBase_Cache = new Dictionary<string, ScienceBase>();
+        private static readonly Dictionary<string, ScienceBase> ScienceBase_Cache = [];
         /// <summary>
         /// 提前加载所有科技基础显示配置配置缓存
         /// </summary>
         public static void LoadScienceBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ScienceBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ScienceBase))
             {
-                ScienceBase data = new ScienceBase(val.Value);
+                ScienceBase data = new(val.Value);
                 data.InitData2();
                 ScienceBase_Cache.Add(val.Key, data);
             }
@@ -613,7 +682,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ScienceBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("科技树解锁界面相关配置.xlsx表中的 cfg_ScienceBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -630,7 +699,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ScienceBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("科技树解锁界面相关配置.xlsx表中的 cfg_ScienceBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -642,26 +711,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ScienceBase> GetAllScienceBase()
         {
-            List<ScienceBase> list = new List<ScienceBase>();
-            foreach (var val in ScienceBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ScienceBase>(ScienceBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的科技基础显示配置数据
+        /// </summary>
+        public static bool HasScienceBase(int cfgId)
+        {
+            return ScienceBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的科技基础显示配置数据
+        /// </summary>
+        public static bool HasScienceBase(string cfgId)
+        {
+            return ScienceBase_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 科技激活相关数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ScienceData> ScienceData_Cache = new Dictionary<string, ScienceData>();
+        private static readonly Dictionary<string, ScienceData> ScienceData_Cache = [];
         /// <summary>
         /// 提前加载所有科技激活相关数据配置缓存
         /// </summary>
         public static void LoadScienceData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ScienceData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ScienceData))
             {
-                ScienceData data = new ScienceData(val.Value);
+                ScienceData data = new(val.Value);
                 data.InitData2();
                 ScienceData_Cache.Add(val.Key, data);
             }
@@ -679,7 +756,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ScienceData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("科技树解锁界面相关配置.xlsx表中的 cfg_ScienceData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -696,7 +773,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ScienceData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("科技树解锁界面相关配置.xlsx表中的 cfg_ScienceData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -708,28 +785,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ScienceData> GetAllScienceData()
         {
-            List<ScienceData> list = new List<ScienceData>();
-            foreach (var val in ScienceData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ScienceData>(ScienceData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的科技激活相关数据数据
+        /// </summary>
+        public static bool HasScienceData(int cfgId)
+        {
+            return ScienceData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的科技激活相关数据数据
+        /// </summary>
+        public static bool HasScienceData(string cfgId)
+        {
+            return ScienceData_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 配置界面相关
         /// <summary>
         /// 道具配置界面数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ItemDeployData> ItemDeployData_Cache = new Dictionary<string, ItemDeployData>();
+        private static readonly Dictionary<string, ItemDeployData> ItemDeployData_Cache = [];
         /// <summary>
         /// 提前加载所有道具配置界面数据配置缓存
         /// </summary>
         public static void LoadItemDeployData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ItemDeployData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ItemDeployData))
             {
-                ItemDeployData data = new ItemDeployData(val.Value);
+                ItemDeployData data = new(val.Value);
                 data.InitData2();
                 ItemDeployData_Cache.Add(val.Key, data);
             }
@@ -747,7 +833,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ItemDeployData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置界面相关.xlsx表中的 cfg_ItemDeployData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -764,7 +850,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ItemDeployData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置界面相关.xlsx表中的 cfg_ItemDeployData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -776,26 +862,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ItemDeployData> GetAllItemDeployData()
         {
-            List<ItemDeployData> list = new List<ItemDeployData>();
-            foreach (var val in ItemDeployData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ItemDeployData>(ItemDeployData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的道具配置界面数据数据
+        /// </summary>
+        public static bool HasItemDeployData(int cfgId)
+        {
+            return ItemDeployData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的道具配置界面数据数据
+        /// </summary>
+        public static bool HasItemDeployData(string cfgId)
+        {
+            return ItemDeployData_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 核心插件配置数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, CorePlugDeployData> CorePlugDeployData_Cache = new Dictionary<string, CorePlugDeployData>();
+        private static readonly Dictionary<string, CorePlugDeployData> CorePlugDeployData_Cache = [];
         /// <summary>
         /// 提前加载所有核心插件配置数据配置缓存
         /// </summary>
         public static void LoadCorePlugDeployData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_CorePlugDeployData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_CorePlugDeployData))
             {
-                CorePlugDeployData data = new CorePlugDeployData(val.Value);
+                CorePlugDeployData data = new(val.Value);
                 data.InitData2();
                 CorePlugDeployData_Cache.Add(val.Key, data);
             }
@@ -813,7 +907,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     CorePlugDeployData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置界面相关.xlsx表中的 cfg_CorePlugDeployData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -830,7 +924,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     CorePlugDeployData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置界面相关.xlsx表中的 cfg_CorePlugDeployData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -842,26 +936,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<CorePlugDeployData> GetAllCorePlugDeployData()
         {
-            List<CorePlugDeployData> list = new List<CorePlugDeployData>();
-            foreach (var val in CorePlugDeployData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<CorePlugDeployData>(CorePlugDeployData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的核心插件配置数据数据
+        /// </summary>
+        public static bool HasCorePlugDeployData(int cfgId)
+        {
+            return CorePlugDeployData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的核心插件配置数据数据
+        /// </summary>
+        public static bool HasCorePlugDeployData(string cfgId)
+        {
+            return CorePlugDeployData_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 科技配置数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ScienceDeployData> ScienceDeployData_Cache = new Dictionary<string, ScienceDeployData>();
+        private static readonly Dictionary<string, ScienceDeployData> ScienceDeployData_Cache = [];
         /// <summary>
         /// 提前加载所有科技配置数据配置缓存
         /// </summary>
         public static void LoadScienceDeployData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ScienceDeployData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ScienceDeployData))
             {
-                ScienceDeployData data = new ScienceDeployData(val.Value);
+                ScienceDeployData data = new(val.Value);
                 data.InitData2();
                 ScienceDeployData_Cache.Add(val.Key, data);
             }
@@ -879,7 +981,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ScienceDeployData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置界面相关.xlsx表中的 cfg_ScienceDeployData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -896,7 +998,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ScienceDeployData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置界面相关.xlsx表中的 cfg_ScienceDeployData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -908,28 +1010,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ScienceDeployData> GetAllScienceDeployData()
         {
-            List<ScienceDeployData> list = new List<ScienceDeployData>();
-            foreach (var val in ScienceDeployData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ScienceDeployData>(ScienceDeployData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的科技配置数据数据
+        /// </summary>
+        public static bool HasScienceDeployData(int cfgId)
+        {
+            return ScienceDeployData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的科技配置数据数据
+        /// </summary>
+        public static bool HasScienceDeployData(string cfgId)
+        {
+            return ScienceDeployData_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 配置特殊功能表
         /// <summary>
         /// 配置覆盖关系表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ConfigCover> ConfigCover_Cache = new Dictionary<string, ConfigCover>();
+        private static readonly Dictionary<string, ConfigCover> ConfigCover_Cache = [];
         /// <summary>
         /// 提前加载所有配置覆盖关系表配置缓存
         /// </summary>
         public static void LoadConfigCover()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ConfigCover);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ConfigCover))
             {
-                ConfigCover data = new ConfigCover(val.Value);
+                ConfigCover data = new(val.Value);
                 data.InitData2();
                 ConfigCover_Cache.Add(val.Key, data);
             }
@@ -947,7 +1058,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ConfigCover_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置特殊功能表.xlsx表中的 cfg_ConfigCover配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -964,7 +1075,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ConfigCover_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置特殊功能表.xlsx表中的 cfg_ConfigCover配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -976,26 +1087,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ConfigCover> GetAllConfigCover()
         {
-            List<ConfigCover> list = new List<ConfigCover>();
-            foreach (var val in ConfigCover_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ConfigCover>(ConfigCover_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的配置覆盖关系表数据
+        /// </summary>
+        public static bool HasConfigCover(int cfgId)
+        {
+            return ConfigCover_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的配置覆盖关系表数据
+        /// </summary>
+        public static bool HasConfigCover(string cfgId)
+        {
+            return ConfigCover_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 配置调用关系表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ConfigCall> ConfigCall_Cache = new Dictionary<string, ConfigCall>();
+        private static readonly Dictionary<string, ConfigCall> ConfigCall_Cache = [];
         /// <summary>
         /// 提前加载所有配置调用关系表配置缓存
         /// </summary>
         public static void LoadConfigCall()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ConfigCall);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ConfigCall))
             {
-                ConfigCall data = new ConfigCall(val.Value);
+                ConfigCall data = new(val.Value);
                 data.InitData2();
                 ConfigCall_Cache.Add(val.Key, data);
             }
@@ -1013,7 +1132,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ConfigCall_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置特殊功能表.xlsx表中的 cfg_ConfigCall配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1030,7 +1149,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ConfigCall_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("配置特殊功能表.xlsx表中的 cfg_ConfigCall配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1042,28 +1161,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ConfigCall> GetAllConfigCall()
         {
-            List<ConfigCall> list = new List<ConfigCall>();
-            foreach (var val in ConfigCall_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ConfigCall>(ConfigCall_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的配置调用关系表数据
+        /// </summary>
+        public static bool HasConfigCall(int cfgId)
+        {
+            return ConfigCall_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的配置调用关系表数据
+        /// </summary>
+        public static bool HasConfigCall(string cfgId)
+        {
+            return ConfigCall_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 默认配置表
         /// <summary>
         /// 全局配置Int数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, GlobalConfigInt> GlobalConfigInt_Cache = new Dictionary<string, GlobalConfigInt>();
+        private static readonly Dictionary<string, GlobalConfigInt> GlobalConfigInt_Cache = [];
         /// <summary>
         /// 提前加载所有全局配置Int数据配置缓存
         /// </summary>
         public static void LoadGlobalConfigInt()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigInt);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigInt))
             {
-                GlobalConfigInt data = new GlobalConfigInt(val.Value);
+                GlobalConfigInt data = new(val.Value);
                 data.InitData2();
                 GlobalConfigInt_Cache.Add(val.Key, data);
             }
@@ -1081,7 +1209,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigInt_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigInt配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1098,7 +1226,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigInt_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigInt配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1110,26 +1238,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigInt> GetAllGlobalConfigInt()
         {
-            List<GlobalConfigInt> list = new List<GlobalConfigInt>();
-            foreach (var val in GlobalConfigInt_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigInt>(GlobalConfigInt_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局配置Int数据数据
+        /// </summary>
+        public static bool HasGlobalConfigInt(int cfgId)
+        {
+            return GlobalConfigInt_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局配置Int数据数据
+        /// </summary>
+        public static bool HasGlobalConfigInt(string cfgId)
+        {
+            return GlobalConfigInt_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// Png散图配置缓存
         /// </summary>
-        private static readonly Dictionary<string, GlobalConfigPng> GlobalConfigPng_Cache = new Dictionary<string, GlobalConfigPng>();
+        private static readonly Dictionary<string, GlobalConfigPng> GlobalConfigPng_Cache = [];
         /// <summary>
         /// 提前加载所有Png散图配置缓存
         /// </summary>
         public static void LoadGlobalConfigPng()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigPng);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigPng))
             {
-                GlobalConfigPng data = new GlobalConfigPng(val.Value);
+                GlobalConfigPng data = new(val.Value);
                 data.InitData2();
                 GlobalConfigPng_Cache.Add(val.Key, data);
             }
@@ -1147,7 +1283,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigPng_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigPng配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1164,7 +1300,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigPng_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigPng配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1176,26 +1312,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigPng> GetAllGlobalConfigPng()
         {
-            List<GlobalConfigPng> list = new List<GlobalConfigPng>();
-            foreach (var val in GlobalConfigPng_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigPng>(GlobalConfigPng_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的Png散图数据
+        /// </summary>
+        public static bool HasGlobalConfigPng(int cfgId)
+        {
+            return GlobalConfigPng_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的Png散图数据
+        /// </summary>
+        public static bool HasGlobalConfigPng(string cfgId)
+        {
+            return GlobalConfigPng_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// Str数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, GlobalConfigStr> GlobalConfigStr_Cache = new Dictionary<string, GlobalConfigStr>();
+        private static readonly Dictionary<string, GlobalConfigStr> GlobalConfigStr_Cache = [];
         /// <summary>
         /// 提前加载所有Str数据配置缓存
         /// </summary>
         public static void LoadGlobalConfigStr()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigStr);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigStr))
             {
-                GlobalConfigStr data = new GlobalConfigStr(val.Value);
+                GlobalConfigStr data = new(val.Value);
                 data.InitData2();
                 GlobalConfigStr_Cache.Add(val.Key, data);
             }
@@ -1213,7 +1357,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigStr_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigStr配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1230,7 +1374,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigStr_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigStr配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1242,26 +1386,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigStr> GetAllGlobalConfigStr()
         {
-            List<GlobalConfigStr> list = new List<GlobalConfigStr>();
-            foreach (var val in GlobalConfigStr_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigStr>(GlobalConfigStr_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的Str数据数据
+        /// </summary>
+        public static bool HasGlobalConfigStr(int cfgId)
+        {
+            return GlobalConfigStr_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的Str数据数据
+        /// </summary>
+        public static bool HasGlobalConfigStr(string cfgId)
+        {
+            return GlobalConfigStr_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// float数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, GlobalConfigFloat> GlobalConfigFloat_Cache = new Dictionary<string, GlobalConfigFloat>();
+        private static readonly Dictionary<string, GlobalConfigFloat> GlobalConfigFloat_Cache = [];
         /// <summary>
         /// 提前加载所有float数据配置缓存
         /// </summary>
         public static void LoadGlobalConfigFloat()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigFloat);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigFloat))
             {
-                GlobalConfigFloat data = new GlobalConfigFloat(val.Value);
+                GlobalConfigFloat data = new(val.Value);
                 data.InitData2();
                 GlobalConfigFloat_Cache.Add(val.Key, data);
             }
@@ -1279,7 +1431,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigFloat_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigFloat配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1296,7 +1448,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigFloat_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigFloat配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1308,26 +1460,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigFloat> GetAllGlobalConfigFloat()
         {
-            List<GlobalConfigFloat> list = new List<GlobalConfigFloat>();
-            foreach (var val in GlobalConfigFloat_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigFloat>(GlobalConfigFloat_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的float数据数据
+        /// </summary>
+        public static bool HasGlobalConfigFloat(int cfgId)
+        {
+            return GlobalConfigFloat_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的float数据数据
+        /// </summary>
+        public static bool HasGlobalConfigFloat(string cfgId)
+        {
+            return GlobalConfigFloat_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// List数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, GlobalConfigList> GlobalConfigList_Cache = new Dictionary<string, GlobalConfigList>();
+        private static readonly Dictionary<string, GlobalConfigList> GlobalConfigList_Cache = [];
         /// <summary>
         /// 提前加载所有List数据配置缓存
         /// </summary>
         public static void LoadGlobalConfigList()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigList);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalConfigList))
             {
-                GlobalConfigList data = new GlobalConfigList(val.Value);
+                GlobalConfigList data = new(val.Value);
                 data.InitData2();
                 GlobalConfigList_Cache.Add(val.Key, data);
             }
@@ -1345,7 +1505,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigList_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigList配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1362,7 +1522,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GlobalConfigList_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("默认配置表.xlsx表中的 cfg_GlobalConfigList配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1374,28 +1534,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GlobalConfigList> GetAllGlobalConfigList()
         {
-            List<GlobalConfigList> list = new List<GlobalConfigList>();
-            foreach (var val in GlobalConfigList_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GlobalConfigList>(GlobalConfigList_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的List数据数据
+        /// </summary>
+        public static bool HasGlobalConfigList(int cfgId)
+        {
+            return GlobalConfigList_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的List数据数据
+        /// </summary>
+        public static bool HasGlobalConfigList(string cfgId)
+        {
+            return GlobalConfigList_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 函数模板
         /// <summary>
         /// 函数模板配置缓存
         /// </summary>
-        private static readonly Dictionary<string, FunctionTemplate> FunctionTemplate_Cache = new Dictionary<string, FunctionTemplate>();
+        private static readonly Dictionary<string, FunctionTemplate> FunctionTemplate_Cache = [];
         /// <summary>
         /// 提前加载所有函数模板配置缓存
         /// </summary>
         public static void LoadFunctionTemplate()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_FunctionTemplate);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_FunctionTemplate))
             {
-                FunctionTemplate data = new FunctionTemplate(val.Value);
+                FunctionTemplate data = new(val.Value);
                 data.InitData2();
                 FunctionTemplate_Cache.Add(val.Key, data);
             }
@@ -1413,7 +1582,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     FunctionTemplate_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("函数模板.xlsx表中的 cfg_FunctionTemplate配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1430,7 +1599,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     FunctionTemplate_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("函数模板.xlsx表中的 cfg_FunctionTemplate配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1442,30 +1611,40 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<FunctionTemplate> GetAllFunctionTemplate()
         {
-            List<FunctionTemplate> list = new List<FunctionTemplate>();
-            foreach (var val in FunctionTemplate_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<FunctionTemplate>(FunctionTemplate_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的函数模板数据
+        /// </summary>
+        public static bool HasFunctionTemplate(int cfgId)
+        {
+            return FunctionTemplate_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的函数模板数据
+        /// </summary>
+        public static bool HasFunctionTemplate(string cfgId)
+        {
+            return FunctionTemplate_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 噪声
         #endregion
+
         #region 相机
         /// <summary>
         /// 相机基本数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, CameraBase> CameraBase_Cache = new Dictionary<string, CameraBase>();
+        private static readonly Dictionary<string, CameraBase> CameraBase_Cache = [];
         /// <summary>
         /// 提前加载所有相机基本数据配置缓存
         /// </summary>
         public static void LoadCameraBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_CameraBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_CameraBase))
             {
-                CameraBase data = new CameraBase(val.Value);
+                CameraBase data = new(val.Value);
                 data.InitData2();
                 CameraBase_Cache.Add(val.Key, data);
             }
@@ -1483,7 +1662,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     CameraBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("相机.xlsx表中的 cfg_CameraBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1500,7 +1679,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     CameraBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("相机.xlsx表中的 cfg_CameraBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1512,94 +1691,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<CameraBase> GetAllCameraBase()
         {
-            List<CameraBase> list = new List<CameraBase>();
-            foreach (var val in CameraBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<CameraBase>(CameraBase_Cache.Values);
         }
         /// <summary>
-        /// 相机组件表配置缓存
+        /// 检查是否存在指定ID的相机基本数据数据
         /// </summary>
-        private static readonly Dictionary<string, CameraAssemblyBase> CameraAssemblyBase_Cache = new Dictionary<string, CameraAssemblyBase>();
-        /// <summary>
-        /// 提前加载所有相机组件表配置缓存
-        /// </summary>
-        public static void LoadCameraAssemblyBase()
+        public static bool HasCameraBase(int cfgId)
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_CameraAssemblyBase);
-            foreach (var val in cfg_dict)
-            {
-                CameraAssemblyBase data = new CameraAssemblyBase(val.Value);
-                data.InitData2();
-                CameraAssemblyBase_Cache.Add(val.Key, data);
-            }
+            return CameraBase_Cache.ContainsKey("" + cfgId);
         }
         /// <summary>
-        /// 加载或获取已缓存的相机组件表基础配置缓存
+        /// 检查是否存在指定ID的相机基本数据数据
         /// </summary>
-        public static CameraAssemblyBase GetCameraAssemblyBase(string cfgId)
+        public static bool HasCameraBase(string cfgId)
         {
-            if (!CameraAssemblyBase_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new CameraAssemblyBase(cfgId);
-                    data.InitData2();
-                    CameraAssemblyBase_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("相机.xlsx表中的 cfg_CameraAssemblyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static CameraAssemblyBase GetCameraAssemblyBase(int cfgId)
-        {
-            if (!CameraAssemblyBase_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new CameraAssemblyBase(cfgId);
-                    data.InitData2();
-                    CameraAssemblyBase_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("相机.xlsx表中的 cfg_CameraAssemblyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有相机组件表数据
-        /// </summary>
-        public static List<CameraAssemblyBase> GetAllCameraAssemblyBase()
-        {
-            List<CameraAssemblyBase> list = new List<CameraAssemblyBase>();
-            foreach (var val in CameraAssemblyBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return CameraBase_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 帧动画
         /// <summary>
         /// 单位帧动画配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AnimaUnit> AnimaUnit_Cache = new Dictionary<string, AnimaUnit>();
+        private static readonly Dictionary<string, AnimaUnit> AnimaUnit_Cache = [];
         /// <summary>
         /// 提前加载所有单位帧动画配置配置缓存
         /// </summary>
         public static void LoadAnimaUnit()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaUnit);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaUnit))
             {
-                AnimaUnit data = new AnimaUnit(val.Value);
+                AnimaUnit data = new(val.Value);
                 data.InitData2();
                 AnimaUnit_Cache.Add(val.Key, data);
             }
@@ -1617,7 +1739,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaUnit_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaUnit配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1634,7 +1756,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaUnit_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaUnit配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1646,92 +1768,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaUnit> GetAllAnimaUnit()
         {
-            List<AnimaUnit> list = new List<AnimaUnit>();
-            foreach (var val in AnimaUnit_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AnimaUnit>(AnimaUnit_Cache.Values);
         }
         /// <summary>
-        /// 炮塔动画配置缓存
+        /// 检查是否存在指定ID的单位帧动画配置数据
         /// </summary>
-        private static readonly Dictionary<string, AnimaTower> AnimaTower_Cache = new Dictionary<string, AnimaTower>();
-        /// <summary>
-        /// 提前加载所有炮塔动画配置缓存
-        /// </summary>
-        public static void LoadAnimaTower()
+        public static bool HasAnimaUnit(int cfgId)
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaTower);
-            foreach (var val in cfg_dict)
-            {
-                AnimaTower data = new AnimaTower(val.Value);
-                data.InitData2();
-                AnimaTower_Cache.Add(val.Key, data);
-            }
+            return AnimaUnit_Cache.ContainsKey("" + cfgId);
         }
         /// <summary>
-        /// 加载或获取已缓存的炮塔动画基础配置缓存
+        /// 检查是否存在指定ID的单位帧动画配置数据
         /// </summary>
-        public static AnimaTower GetAnimaTower(string cfgId)
+        public static bool HasAnimaUnit(string cfgId)
         {
-            if (!AnimaTower_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new AnimaTower(cfgId);
-                    data.InitData2();
-                    AnimaTower_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaTower配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static AnimaTower GetAnimaTower(int cfgId)
-        {
-            if (!AnimaTower_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new AnimaTower(cfgId);
-                    data.InitData2();
-                    AnimaTower_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaTower配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有炮塔动画数据
-        /// </summary>
-        public static List<AnimaTower> GetAllAnimaTower()
-        {
-            List<AnimaTower> list = new List<AnimaTower>();
-            foreach (var val in AnimaTower_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return AnimaUnit_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 建筑动画配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AnimaBuild> AnimaBuild_Cache = new Dictionary<string, AnimaBuild>();
+        private static readonly Dictionary<string, AnimaBuild> AnimaBuild_Cache = [];
         /// <summary>
         /// 提前加载所有建筑动画配置缓存
         /// </summary>
         public static void LoadAnimaBuild()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaBuild);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaBuild))
             {
-                AnimaBuild data = new AnimaBuild(val.Value);
+                AnimaBuild data = new(val.Value);
                 data.InitData2();
                 AnimaBuild_Cache.Add(val.Key, data);
             }
@@ -1749,7 +1813,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaBuild_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaBuild配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1766,7 +1830,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaBuild_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaBuild配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1778,26 +1842,108 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaBuild> GetAllAnimaBuild()
         {
-            List<AnimaBuild> list = new List<AnimaBuild>();
-            foreach (var val in AnimaBuild_Cache)
+            return new List<AnimaBuild>(AnimaBuild_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建筑动画数据
+        /// </summary>
+        public static bool HasAnimaBuild(int cfgId)
+        {
+            return AnimaBuild_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建筑动画数据
+        /// </summary>
+        public static bool HasAnimaBuild(string cfgId)
+        {
+            return AnimaBuild_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 炮塔动画配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AnimaTower> AnimaTower_Cache = [];
+        /// <summary>
+        /// 提前加载所有炮塔动画配置缓存
+        /// </summary>
+        public static void LoadAnimaTower()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaTower))
             {
-                list.Add(val.Value);
+                AnimaTower data = new(val.Value);
+                data.InitData2();
+                AnimaTower_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的炮塔动画基础配置缓存
+        /// </summary>
+        public static AnimaTower GetAnimaTower(string cfgId)
+        {
+            if (!AnimaTower_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaTower(cfgId);
+                    data.InitData2();
+                    AnimaTower_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaTower配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AnimaTower GetAnimaTower(int cfgId)
+        {
+            if (!AnimaTower_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaTower(cfgId);
+                    data.InitData2();
+                    AnimaTower_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaTower配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有炮塔动画数据
+        /// </summary>
+        public static List<AnimaTower> GetAllAnimaTower()
+        {
+            return new List<AnimaTower>(AnimaTower_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的炮塔动画数据
+        /// </summary>
+        public static bool HasAnimaTower(int cfgId)
+        {
+            return AnimaTower_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的炮塔动画数据
+        /// </summary>
+        public static bool HasAnimaTower(string cfgId)
+        {
+            return AnimaTower_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 武器动画配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AnimaWeapon> AnimaWeapon_Cache = new Dictionary<string, AnimaWeapon>();
+        private static readonly Dictionary<string, AnimaWeapon> AnimaWeapon_Cache = [];
         /// <summary>
         /// 提前加载所有武器动画配置缓存
         /// </summary>
         public static void LoadAnimaWeapon()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaWeapon);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaWeapon))
             {
-                AnimaWeapon data = new AnimaWeapon(val.Value);
+                AnimaWeapon data = new(val.Value);
                 data.InitData2();
                 AnimaWeapon_Cache.Add(val.Key, data);
             }
@@ -1815,7 +1961,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaWeapon_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaWeapon配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1832,7 +1978,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaWeapon_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaWeapon配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1844,26 +1990,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaWeapon> GetAllAnimaWeapon()
         {
-            List<AnimaWeapon> list = new List<AnimaWeapon>();
-            foreach (var val in AnimaWeapon_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AnimaWeapon>(AnimaWeapon_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的武器动画数据
+        /// </summary>
+        public static bool HasAnimaWeapon(int cfgId)
+        {
+            return AnimaWeapon_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的武器动画数据
+        /// </summary>
+        public static bool HasAnimaWeapon(string cfgId)
+        {
+            return AnimaWeapon_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 无人机动画配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AnimaWorker> AnimaWorker_Cache = new Dictionary<string, AnimaWorker>();
+        private static readonly Dictionary<string, AnimaWorker> AnimaWorker_Cache = [];
         /// <summary>
         /// 提前加载所有无人机动画配置缓存
         /// </summary>
         public static void LoadAnimaWorker()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaWorker);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaWorker))
             {
-                AnimaWorker data = new AnimaWorker(val.Value);
+                AnimaWorker data = new(val.Value);
                 data.InitData2();
                 AnimaWorker_Cache.Add(val.Key, data);
             }
@@ -1881,7 +2035,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaWorker_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaWorker配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1898,7 +2052,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaWorker_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaWorker配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -1910,92 +2064,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaWorker> GetAllAnimaWorker()
         {
-            List<AnimaWorker> list = new List<AnimaWorker>();
-            foreach (var val in AnimaWorker_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AnimaWorker>(AnimaWorker_Cache.Values);
         }
         /// <summary>
-        /// 子弹动画配置缓存
+        /// 检查是否存在指定ID的无人机动画数据
         /// </summary>
-        private static readonly Dictionary<string, AnimaBullet> AnimaBullet_Cache = new Dictionary<string, AnimaBullet>();
-        /// <summary>
-        /// 提前加载所有子弹动画配置缓存
-        /// </summary>
-        public static void LoadAnimaBullet()
+        public static bool HasAnimaWorker(int cfgId)
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaBullet);
-            foreach (var val in cfg_dict)
-            {
-                AnimaBullet data = new AnimaBullet(val.Value);
-                data.InitData2();
-                AnimaBullet_Cache.Add(val.Key, data);
-            }
+            return AnimaWorker_Cache.ContainsKey("" + cfgId);
         }
         /// <summary>
-        /// 加载或获取已缓存的子弹动画基础配置缓存
+        /// 检查是否存在指定ID的无人机动画数据
         /// </summary>
-        public static AnimaBullet GetAnimaBullet(string cfgId)
+        public static bool HasAnimaWorker(string cfgId)
         {
-            if (!AnimaBullet_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new AnimaBullet(cfgId);
-                    data.InitData2();
-                    AnimaBullet_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaBullet配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static AnimaBullet GetAnimaBullet(int cfgId)
-        {
-            if (!AnimaBullet_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new AnimaBullet(cfgId);
-                    data.InitData2();
-                    AnimaBullet_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaBullet配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有子弹动画数据
-        /// </summary>
-        public static List<AnimaBullet> GetAllAnimaBullet()
-        {
-            List<AnimaBullet> list = new List<AnimaBullet>();
-            foreach (var val in AnimaBullet_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return AnimaWorker_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 爆炸动画配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AnimaExplode> AnimaExplode_Cache = new Dictionary<string, AnimaExplode>();
+        private static readonly Dictionary<string, AnimaExplode> AnimaExplode_Cache = [];
         /// <summary>
         /// 提前加载所有爆炸动画配置缓存
         /// </summary>
         public static void LoadAnimaExplode()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaExplode);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaExplode))
             {
-                AnimaExplode data = new AnimaExplode(val.Value);
+                AnimaExplode data = new(val.Value);
                 data.InitData2();
                 AnimaExplode_Cache.Add(val.Key, data);
             }
@@ -2013,7 +2109,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaExplode_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaExplode配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2030,7 +2126,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AnimaExplode_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("帧动画.xlsx表中的 cfg_AnimaExplode配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2042,28 +2138,484 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AnimaExplode> GetAllAnimaExplode()
         {
-            List<AnimaExplode> list = new List<AnimaExplode>();
-            foreach (var val in AnimaExplode_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AnimaExplode>(AnimaExplode_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的爆炸动画数据
+        /// </summary>
+        public static bool HasAnimaExplode(int cfgId)
+        {
+            return AnimaExplode_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的爆炸动画数据
+        /// </summary>
+        public static bool HasAnimaExplode(string cfgId)
+        {
+            return AnimaExplode_Cache.ContainsKey(cfgId);
         }
         #endregion
+
+        #region 帧动画2
+        /// <summary>
+        /// 单位帧动画配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AnimaUnit2> AnimaUnit2_Cache = [];
+        /// <summary>
+        /// 提前加载所有单位帧动画配置配置缓存
+        /// </summary>
+        public static void LoadAnimaUnit2()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaUnit2))
+            {
+                AnimaUnit2 data = new(val.Value);
+                data.InitData2();
+                AnimaUnit2_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的单位帧动画配置基础配置缓存
+        /// </summary>
+        public static AnimaUnit2 GetAnimaUnit2(string cfgId)
+        {
+            if (!AnimaUnit2_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaUnit2(cfgId);
+                    data.InitData2();
+                    AnimaUnit2_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaUnit2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AnimaUnit2 GetAnimaUnit2(int cfgId)
+        {
+            if (!AnimaUnit2_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaUnit2(cfgId);
+                    data.InitData2();
+                    AnimaUnit2_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaUnit2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有单位帧动画配置数据
+        /// </summary>
+        public static List<AnimaUnit2> GetAllAnimaUnit2()
+        {
+            return new List<AnimaUnit2>(AnimaUnit2_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位帧动画配置数据
+        /// </summary>
+        public static bool HasAnimaUnit2(int cfgId)
+        {
+            return AnimaUnit2_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位帧动画配置数据
+        /// </summary>
+        public static bool HasAnimaUnit2(string cfgId)
+        {
+            return AnimaUnit2_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 建筑动画配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AnimaBuild2> AnimaBuild2_Cache = [];
+        /// <summary>
+        /// 提前加载所有建筑动画配置缓存
+        /// </summary>
+        public static void LoadAnimaBuild2()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaBuild2))
+            {
+                AnimaBuild2 data = new(val.Value);
+                data.InitData2();
+                AnimaBuild2_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的建筑动画基础配置缓存
+        /// </summary>
+        public static AnimaBuild2 GetAnimaBuild2(string cfgId)
+        {
+            if (!AnimaBuild2_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaBuild2(cfgId);
+                    data.InitData2();
+                    AnimaBuild2_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaBuild2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AnimaBuild2 GetAnimaBuild2(int cfgId)
+        {
+            if (!AnimaBuild2_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaBuild2(cfgId);
+                    data.InitData2();
+                    AnimaBuild2_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaBuild2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有建筑动画数据
+        /// </summary>
+        public static List<AnimaBuild2> GetAllAnimaBuild2()
+        {
+            return new List<AnimaBuild2>(AnimaBuild2_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建筑动画数据
+        /// </summary>
+        public static bool HasAnimaBuild2(int cfgId)
+        {
+            return AnimaBuild2_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建筑动画数据
+        /// </summary>
+        public static bool HasAnimaBuild2(string cfgId)
+        {
+            return AnimaBuild2_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 炮塔动画配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AnimaTower2> AnimaTower2_Cache = [];
+        /// <summary>
+        /// 提前加载所有炮塔动画配置缓存
+        /// </summary>
+        public static void LoadAnimaTower2()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaTower2))
+            {
+                AnimaTower2 data = new(val.Value);
+                data.InitData2();
+                AnimaTower2_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的炮塔动画基础配置缓存
+        /// </summary>
+        public static AnimaTower2 GetAnimaTower2(string cfgId)
+        {
+            if (!AnimaTower2_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaTower2(cfgId);
+                    data.InitData2();
+                    AnimaTower2_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaTower2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AnimaTower2 GetAnimaTower2(int cfgId)
+        {
+            if (!AnimaTower2_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaTower2(cfgId);
+                    data.InitData2();
+                    AnimaTower2_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaTower2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有炮塔动画数据
+        /// </summary>
+        public static List<AnimaTower2> GetAllAnimaTower2()
+        {
+            return new List<AnimaTower2>(AnimaTower2_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的炮塔动画数据
+        /// </summary>
+        public static bool HasAnimaTower2(int cfgId)
+        {
+            return AnimaTower2_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的炮塔动画数据
+        /// </summary>
+        public static bool HasAnimaTower2(string cfgId)
+        {
+            return AnimaTower2_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 无人机动画配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AnimaWorker2> AnimaWorker2_Cache = [];
+        /// <summary>
+        /// 提前加载所有无人机动画配置缓存
+        /// </summary>
+        public static void LoadAnimaWorker2()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaWorker2))
+            {
+                AnimaWorker2 data = new(val.Value);
+                data.InitData2();
+                AnimaWorker2_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的无人机动画基础配置缓存
+        /// </summary>
+        public static AnimaWorker2 GetAnimaWorker2(string cfgId)
+        {
+            if (!AnimaWorker2_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaWorker2(cfgId);
+                    data.InitData2();
+                    AnimaWorker2_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaWorker2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AnimaWorker2 GetAnimaWorker2(int cfgId)
+        {
+            if (!AnimaWorker2_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaWorker2(cfgId);
+                    data.InitData2();
+                    AnimaWorker2_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaWorker2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有无人机动画数据
+        /// </summary>
+        public static List<AnimaWorker2> GetAllAnimaWorker2()
+        {
+            return new List<AnimaWorker2>(AnimaWorker2_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的无人机动画数据
+        /// </summary>
+        public static bool HasAnimaWorker2(int cfgId)
+        {
+            return AnimaWorker2_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的无人机动画数据
+        /// </summary>
+        public static bool HasAnimaWorker2(string cfgId)
+        {
+            return AnimaWorker2_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 武器动画配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AnimaWeapon2> AnimaWeapon2_Cache = [];
+        /// <summary>
+        /// 提前加载所有武器动画配置缓存
+        /// </summary>
+        public static void LoadAnimaWeapon2()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaWeapon2))
+            {
+                AnimaWeapon2 data = new(val.Value);
+                data.InitData2();
+                AnimaWeapon2_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的武器动画基础配置缓存
+        /// </summary>
+        public static AnimaWeapon2 GetAnimaWeapon2(string cfgId)
+        {
+            if (!AnimaWeapon2_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaWeapon2(cfgId);
+                    data.InitData2();
+                    AnimaWeapon2_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaWeapon2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AnimaWeapon2 GetAnimaWeapon2(int cfgId)
+        {
+            if (!AnimaWeapon2_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaWeapon2(cfgId);
+                    data.InitData2();
+                    AnimaWeapon2_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaWeapon2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有武器动画数据
+        /// </summary>
+        public static List<AnimaWeapon2> GetAllAnimaWeapon2()
+        {
+            return new List<AnimaWeapon2>(AnimaWeapon2_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的武器动画数据
+        /// </summary>
+        public static bool HasAnimaWeapon2(int cfgId)
+        {
+            return AnimaWeapon2_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的武器动画数据
+        /// </summary>
+        public static bool HasAnimaWeapon2(string cfgId)
+        {
+            return AnimaWeapon2_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 爆炸动画配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AnimaExplode2> AnimaExplode2_Cache = [];
+        /// <summary>
+        /// 提前加载所有爆炸动画配置缓存
+        /// </summary>
+        public static void LoadAnimaExplode2()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AnimaExplode2))
+            {
+                AnimaExplode2 data = new(val.Value);
+                data.InitData2();
+                AnimaExplode2_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的爆炸动画基础配置缓存
+        /// </summary>
+        public static AnimaExplode2 GetAnimaExplode2(string cfgId)
+        {
+            if (!AnimaExplode2_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaExplode2(cfgId);
+                    data.InitData2();
+                    AnimaExplode2_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaExplode2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AnimaExplode2 GetAnimaExplode2(int cfgId)
+        {
+            if (!AnimaExplode2_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AnimaExplode2(cfgId);
+                    data.InitData2();
+                    AnimaExplode2_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("帧动画2.xlsx表中的 cfg_AnimaExplode2配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有爆炸动画数据
+        /// </summary>
+        public static List<AnimaExplode2> GetAllAnimaExplode2()
+        {
+            return new List<AnimaExplode2>(AnimaExplode2_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的爆炸动画数据
+        /// </summary>
+        public static bool HasAnimaExplode2(int cfgId)
+        {
+            return AnimaExplode2_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的爆炸动画数据
+        /// </summary>
+        public static bool HasAnimaExplode2(string cfgId)
+        {
+            return AnimaExplode2_Cache.ContainsKey(cfgId);
+        }
+        #endregion
+
         #region 序列图
         /// <summary>
         /// 序列图配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, SequenceMapBase> SequenceMapBase_Cache = new Dictionary<string, SequenceMapBase>();
+        private static readonly Dictionary<string, SequenceMapBase> SequenceMapBase_Cache = [];
         /// <summary>
         /// 提前加载所有序列图配置配置缓存
         /// </summary>
         public static void LoadSequenceMapBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_SequenceMapBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_SequenceMapBase))
             {
-                SequenceMapBase data = new SequenceMapBase(val.Value);
+                SequenceMapBase data = new(val.Value);
                 data.InitData2();
                 SequenceMapBase_Cache.Add(val.Key, data);
             }
@@ -2081,7 +2633,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     SequenceMapBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("序列图.xlsx表中的 cfg_SequenceMapBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2098,7 +2650,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     SequenceMapBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("序列图.xlsx表中的 cfg_SequenceMapBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2110,28 +2662,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<SequenceMapBase> GetAllSequenceMapBase()
         {
-            List<SequenceMapBase> list = new List<SequenceMapBase>();
-            foreach (var val in SequenceMapBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<SequenceMapBase>(SequenceMapBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的序列图配置数据
+        /// </summary>
+        public static bool HasSequenceMapBase(int cfgId)
+        {
+            return SequenceMapBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的序列图配置数据
+        /// </summary>
+        public static bool HasSequenceMapBase(string cfgId)
+        {
+            return SequenceMapBase_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 特效
         /// <summary>
         /// 特效配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, SpeciallyEffect> SpeciallyEffect_Cache = new Dictionary<string, SpeciallyEffect>();
+        private static readonly Dictionary<string, SpeciallyEffect> SpeciallyEffect_Cache = [];
         /// <summary>
         /// 提前加载所有特效配置配置缓存
         /// </summary>
         public static void LoadSpeciallyEffect()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_SpeciallyEffect);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_SpeciallyEffect))
             {
-                SpeciallyEffect data = new SpeciallyEffect(val.Value);
+                SpeciallyEffect data = new(val.Value);
                 data.InitData2();
                 SpeciallyEffect_Cache.Add(val.Key, data);
             }
@@ -2149,7 +2710,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     SpeciallyEffect_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("特效.xlsx表中的 cfg_SpeciallyEffect配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2166,7 +2727,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     SpeciallyEffect_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("特效.xlsx表中的 cfg_SpeciallyEffect配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2178,160 +2739,114 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<SpeciallyEffect> GetAllSpeciallyEffect()
         {
-            List<SpeciallyEffect> list = new List<SpeciallyEffect>();
-            foreach (var val in SpeciallyEffect_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<SpeciallyEffect>(SpeciallyEffect_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的特效配置数据
+        /// </summary>
+        public static bool HasSpeciallyEffect(int cfgId)
+        {
+            return SpeciallyEffect_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的特效配置数据
+        /// </summary>
+        public static bool HasSpeciallyEffect(string cfgId)
+        {
+            return SpeciallyEffect_Cache.ContainsKey(cfgId);
         }
         #endregion
+
+        #region 程序动画
+        /// <summary>
+        /// 实体效果图片配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, ObjectEffectImage> ObjectEffectImage_Cache = [];
+        /// <summary>
+        /// 提前加载所有实体效果图片配置缓存
+        /// </summary>
+        public static void LoadObjectEffectImage()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ObjectEffectImage))
+            {
+                ObjectEffectImage data = new(val.Value);
+                data.InitData2();
+                ObjectEffectImage_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的实体效果图片基础配置缓存
+        /// </summary>
+        public static ObjectEffectImage GetObjectEffectImage(string cfgId)
+        {
+            if (!ObjectEffectImage_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new ObjectEffectImage(cfgId);
+                    data.InitData2();
+                    ObjectEffectImage_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("程序动画.xlsx表中的 cfg_ObjectEffectImage配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static ObjectEffectImage GetObjectEffectImage(int cfgId)
+        {
+            if (!ObjectEffectImage_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new ObjectEffectImage(cfgId);
+                    data.InitData2();
+                    ObjectEffectImage_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("程序动画.xlsx表中的 cfg_ObjectEffectImage配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有实体效果图片数据
+        /// </summary>
+        public static List<ObjectEffectImage> GetAllObjectEffectImage()
+        {
+            return new List<ObjectEffectImage>(ObjectEffectImage_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的实体效果图片数据
+        /// </summary>
+        public static bool HasObjectEffectImage(int cfgId)
+        {
+            return ObjectEffectImage_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的实体效果图片数据
+        /// </summary>
+        public static bool HasObjectEffectImage(string cfgId)
+        {
+            return ObjectEffectImage_Cache.ContainsKey(cfgId);
+        }
+        #endregion
+
         #region 固定地图配置
-        /// <summary>
-        /// 固定地图图集 配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, MapFixedSet> MapFixedSet_Cache = new Dictionary<string, MapFixedSet>();
-        /// <summary>
-        /// 提前加载所有固定地图图集 配置缓存
-        /// </summary>
-        public static void LoadMapFixedSet()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapFixedSet);
-            foreach (var val in cfg_dict)
-            {
-                MapFixedSet data = new MapFixedSet(val.Value);
-                data.InitData2();
-                MapFixedSet_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的固定地图图集 基础配置缓存
-        /// </summary>
-        public static MapFixedSet GetMapFixedSet(string cfgId)
-        {
-            if (!MapFixedSet_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapFixedSet(cfgId);
-                    data.InitData2();
-                    MapFixedSet_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedSet配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static MapFixedSet GetMapFixedSet(int cfgId)
-        {
-            if (!MapFixedSet_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapFixedSet(cfgId);
-                    data.InitData2();
-                    MapFixedSet_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedSet配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有固定地图图集 数据
-        /// </summary>
-        public static List<MapFixedSet> GetAllMapFixedSet()
-        {
-            List<MapFixedSet> list = new List<MapFixedSet>();
-            foreach (var val in MapFixedSet_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 固定地图用材料配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, MapFixedMaterial> MapFixedMaterial_Cache = new Dictionary<string, MapFixedMaterial>();
-        /// <summary>
-        /// 提前加载所有固定地图用材料配置缓存
-        /// </summary>
-        public static void LoadMapFixedMaterial()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapFixedMaterial);
-            foreach (var val in cfg_dict)
-            {
-                MapFixedMaterial data = new MapFixedMaterial(val.Value);
-                data.InitData2();
-                MapFixedMaterial_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的固定地图用材料基础配置缓存
-        /// </summary>
-        public static MapFixedMaterial GetMapFixedMaterial(string cfgId)
-        {
-            if (!MapFixedMaterial_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapFixedMaterial(cfgId);
-                    data.InitData2();
-                    MapFixedMaterial_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static MapFixedMaterial GetMapFixedMaterial(int cfgId)
-        {
-            if (!MapFixedMaterial_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapFixedMaterial(cfgId);
-                    data.InitData2();
-                    MapFixedMaterial_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有固定地图用材料数据
-        /// </summary>
-        public static List<MapFixedMaterial> GetAllMapFixedMaterial()
-        {
-            List<MapFixedMaterial> list = new List<MapFixedMaterial>();
-            foreach (var val in MapFixedMaterial_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
         /// <summary>
         /// 固定地图配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, GenerateFixedMap> GenerateFixedMap_Cache = new Dictionary<string, GenerateFixedMap>();
+        private static readonly Dictionary<string, GenerateFixedMap> GenerateFixedMap_Cache = [];
         /// <summary>
         /// 提前加载所有固定地图配置配置缓存
         /// </summary>
         public static void LoadGenerateFixedMap()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateFixedMap);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateFixedMap))
             {
-                GenerateFixedMap data = new GenerateFixedMap(val.Value);
+                GenerateFixedMap data = new(val.Value);
                 data.InitData2();
                 GenerateFixedMap_Cache.Add(val.Key, data);
             }
@@ -2349,7 +2864,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GenerateFixedMap_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2366,7 +2881,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GenerateFixedMap_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_GenerateFixedMap配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2378,26 +2893,182 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GenerateFixedMap> GetAllGenerateFixedMap()
         {
-            List<GenerateFixedMap> list = new List<GenerateFixedMap>();
-            foreach (var val in GenerateFixedMap_Cache)
+            return new List<GenerateFixedMap>(GenerateFixedMap_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的固定地图配置数据
+        /// </summary>
+        public static bool HasGenerateFixedMap(int cfgId)
+        {
+            return GenerateFixedMap_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的固定地图配置数据
+        /// </summary>
+        public static bool HasGenerateFixedMap(string cfgId)
+        {
+            return GenerateFixedMap_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 固定地图图集 配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MapFixedSet> MapFixedSet_Cache = [];
+        /// <summary>
+        /// 提前加载所有固定地图图集 配置缓存
+        /// </summary>
+        public static void LoadMapFixedSet()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapFixedSet))
             {
-                list.Add(val.Value);
+                MapFixedSet data = new(val.Value);
+                data.InitData2();
+                MapFixedSet_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的固定地图图集 基础配置缓存
+        /// </summary>
+        public static MapFixedSet GetMapFixedSet(string cfgId)
+        {
+            if (!MapFixedSet_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapFixedSet(cfgId);
+                    data.InitData2();
+                    MapFixedSet_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedSet配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MapFixedSet GetMapFixedSet(int cfgId)
+        {
+            if (!MapFixedSet_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapFixedSet(cfgId);
+                    data.InitData2();
+                    MapFixedSet_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedSet配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有固定地图图集 数据
+        /// </summary>
+        public static List<MapFixedSet> GetAllMapFixedSet()
+        {
+            return new List<MapFixedSet>(MapFixedSet_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的固定地图图集 数据
+        /// </summary>
+        public static bool HasMapFixedSet(int cfgId)
+        {
+            return MapFixedSet_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的固定地图图集 数据
+        /// </summary>
+        public static bool HasMapFixedSet(string cfgId)
+        {
+            return MapFixedSet_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 固定地图用材料配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MapFixedMaterial> MapFixedMaterial_Cache = [];
+        /// <summary>
+        /// 提前加载所有固定地图用材料配置缓存
+        /// </summary>
+        public static void LoadMapFixedMaterial()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapFixedMaterial))
+            {
+                MapFixedMaterial data = new(val.Value);
+                data.InitData2();
+                MapFixedMaterial_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的固定地图用材料基础配置缓存
+        /// </summary>
+        public static MapFixedMaterial GetMapFixedMaterial(string cfgId)
+        {
+            if (!MapFixedMaterial_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapFixedMaterial(cfgId);
+                    data.InitData2();
+                    MapFixedMaterial_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MapFixedMaterial GetMapFixedMaterial(int cfgId)
+        {
+            if (!MapFixedMaterial_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapFixedMaterial(cfgId);
+                    data.InitData2();
+                    MapFixedMaterial_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapFixedMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有固定地图用材料数据
+        /// </summary>
+        public static List<MapFixedMaterial> GetAllMapFixedMaterial()
+        {
+            return new List<MapFixedMaterial>(MapFixedMaterial_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的固定地图用材料数据
+        /// </summary>
+        public static bool HasMapFixedMaterial(int cfgId)
+        {
+            return MapFixedMaterial_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的固定地图用材料数据
+        /// </summary>
+        public static bool HasMapFixedMaterial(string cfgId)
+        {
+            return MapFixedMaterial_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 地图可通过类型配置缓存
         /// </summary>
-        private static readonly Dictionary<string, MapPassType> MapPassType_Cache = new Dictionary<string, MapPassType>();
+        private static readonly Dictionary<string, MapPassType> MapPassType_Cache = [];
         /// <summary>
         /// 提前加载所有地图可通过类型配置缓存
         /// </summary>
         public static void LoadMapPassType()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapPassType);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapPassType))
             {
-                MapPassType data = new MapPassType(val.Value);
+                MapPassType data = new(val.Value);
                 data.InitData2();
                 MapPassType_Cache.Add(val.Key, data);
             }
@@ -2415,7 +3086,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapPassType_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapPassType配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2432,7 +3103,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapPassType_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapPassType配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2444,26 +3115,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapPassType> GetAllMapPassType()
         {
-            List<MapPassType> list = new List<MapPassType>();
-            foreach (var val in MapPassType_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapPassType>(MapPassType_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图可通过类型数据
+        /// </summary>
+        public static bool HasMapPassType(int cfgId)
+        {
+            return MapPassType_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图可通过类型数据
+        /// </summary>
+        public static bool HasMapPassType(string cfgId)
+        {
+            return MapPassType_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 地图边缘连接配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, MapEdge> MapEdge_Cache = new Dictionary<string, MapEdge>();
+        private static readonly Dictionary<string, MapEdge> MapEdge_Cache = [];
         /// <summary>
         /// 提前加载所有地图边缘连接配置配置缓存
         /// </summary>
         public static void LoadMapEdge()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapEdge);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapEdge))
             {
-                MapEdge data = new MapEdge(val.Value);
+                MapEdge data = new(val.Value);
                 data.InitData2();
                 MapEdge_Cache.Add(val.Key, data);
             }
@@ -2481,7 +3160,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapEdge_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapEdge配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2498,7 +3177,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapEdge_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapEdge配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2510,28 +3189,111 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapEdge> GetAllMapEdge()
         {
-            List<MapEdge> list = new List<MapEdge>();
-            foreach (var val in MapEdge_Cache)
+            return new List<MapEdge>(MapEdge_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图边缘连接配置数据
+        /// </summary>
+        public static bool HasMapEdge(int cfgId)
+        {
+            return MapEdge_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图边缘连接配置数据
+        /// </summary>
+        public static bool HasMapEdge(string cfgId)
+        {
+            return MapEdge_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 地图墙壁阴影配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MapWallShadow> MapWallShadow_Cache = [];
+        /// <summary>
+        /// 提前加载所有地图墙壁阴影配置配置缓存
+        /// </summary>
+        public static void LoadMapWallShadow()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapWallShadow))
             {
-                list.Add(val.Value);
+                MapWallShadow data = new(val.Value);
+                data.InitData2();
+                MapWallShadow_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的地图墙壁阴影配置基础配置缓存
+        /// </summary>
+        public static MapWallShadow GetMapWallShadow(string cfgId)
+        {
+            if (!MapWallShadow_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapWallShadow(cfgId);
+                    data.InitData2();
+                    MapWallShadow_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapWallShadow配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MapWallShadow GetMapWallShadow(int cfgId)
+        {
+            if (!MapWallShadow_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MapWallShadow(cfgId);
+                    data.InitData2();
+                    MapWallShadow_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("固定地图配置.xlsx表中的 cfg_MapWallShadow配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有地图墙壁阴影配置数据
+        /// </summary>
+        public static List<MapWallShadow> GetAllMapWallShadow()
+        {
+            return new List<MapWallShadow>(MapWallShadow_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图墙壁阴影配置数据
+        /// </summary>
+        public static bool HasMapWallShadow(int cfgId)
+        {
+            return MapWallShadow_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图墙壁阴影配置数据
+        /// </summary>
+        public static bool HasMapWallShadow(string cfgId)
+        {
+            return MapWallShadow_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 图块相关
         /// <summary>
         /// 地图资源图集配置缓存
         /// </summary>
-        private static readonly Dictionary<string, MapMassif> MapMassif_Cache = new Dictionary<string, MapMassif>();
+        private static readonly Dictionary<string, MapMassif> MapMassif_Cache = [];
         /// <summary>
         /// 提前加载所有地图资源图集配置缓存
         /// </summary>
         public static void LoadMapMassif()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapMassif);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapMassif))
             {
-                MapMassif data = new MapMassif(val.Value);
+                MapMassif data = new(val.Value);
                 data.InitData2();
                 MapMassif_Cache.Add(val.Key, data);
             }
@@ -2549,7 +3311,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapMassif_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("图块相关.xlsx表中的 cfg_MapMassif配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2566,7 +3328,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapMassif_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("图块相关.xlsx表中的 cfg_MapMassif配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2578,28 +3340,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapMassif> GetAllMapMassif()
         {
-            List<MapMassif> list = new List<MapMassif>();
-            foreach (var val in MapMassif_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapMassif>(MapMassif_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图资源图集数据
+        /// </summary>
+        public static bool HasMapMassif(int cfgId)
+        {
+            return MapMassif_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图资源图集数据
+        /// </summary>
+        public static bool HasMapMassif(string cfgId)
+        {
+            return MapMassif_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 图层相关
         /// <summary>
         /// 图像层配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, MapImageLayer> MapImageLayer_Cache = new Dictionary<string, MapImageLayer>();
+        private static readonly Dictionary<string, MapImageLayer> MapImageLayer_Cache = [];
         /// <summary>
         /// 提前加载所有图像层配置配置缓存
         /// </summary>
         public static void LoadMapImageLayer()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapImageLayer);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapImageLayer))
             {
-                MapImageLayer data = new MapImageLayer(val.Value);
+                MapImageLayer data = new(val.Value);
                 data.InitData2();
                 MapImageLayer_Cache.Add(val.Key, data);
             }
@@ -2617,7 +3388,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapImageLayer_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("图层相关.xlsx表中的 cfg_MapImageLayer配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2634,7 +3405,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapImageLayer_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("图层相关.xlsx表中的 cfg_MapImageLayer配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2646,160 +3417,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapImageLayer> GetAllMapImageLayer()
         {
-            List<MapImageLayer> list = new List<MapImageLayer>();
-            foreach (var val in MapImageLayer_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapImageLayer>(MapImageLayer_Cache.Values);
         }
         /// <summary>
-        /// 物理层配置配置缓存
+        /// 检查是否存在指定ID的图像层配置数据
         /// </summary>
-        private static readonly Dictionary<string, MapPhysicsLayer> MapPhysicsLayer_Cache = new Dictionary<string, MapPhysicsLayer>();
-        /// <summary>
-        /// 提前加载所有物理层配置配置缓存
-        /// </summary>
-        public static void LoadMapPhysicsLayer()
+        public static bool HasMapImageLayer(int cfgId)
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapPhysicsLayer);
-            foreach (var val in cfg_dict)
-            {
-                MapPhysicsLayer data = new MapPhysicsLayer(val.Value);
-                data.InitData2();
-                MapPhysicsLayer_Cache.Add(val.Key, data);
-            }
+            return MapImageLayer_Cache.ContainsKey("" + cfgId);
         }
         /// <summary>
-        /// 加载或获取已缓存的物理层配置基础配置缓存
+        /// 检查是否存在指定ID的图像层配置数据
         /// </summary>
-        public static MapPhysicsLayer GetMapPhysicsLayer(string cfgId)
+        public static bool HasMapImageLayer(string cfgId)
         {
-            if (!MapPhysicsLayer_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapPhysicsLayer(cfgId);
-                    data.InitData2();
-                    MapPhysicsLayer_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("图层相关.xlsx表中的 cfg_MapPhysicsLayer配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static MapPhysicsLayer GetMapPhysicsLayer(int cfgId)
-        {
-            if (!MapPhysicsLayer_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapPhysicsLayer(cfgId);
-                    data.InitData2();
-                    MapPhysicsLayer_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("图层相关.xlsx表中的 cfg_MapPhysicsLayer配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有物理层配置数据
-        /// </summary>
-        public static List<MapPhysicsLayer> GetAllMapPhysicsLayer()
-        {
-            List<MapPhysicsLayer> list = new List<MapPhysicsLayer>();
-            foreach (var val in MapPhysicsLayer_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 地图导航层配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, MapNavigate> MapNavigate_Cache = new Dictionary<string, MapNavigate>();
-        /// <summary>
-        /// 提前加载所有地图导航层配置缓存
-        /// </summary>
-        public static void LoadMapNavigate()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapNavigate);
-            foreach (var val in cfg_dict)
-            {
-                MapNavigate data = new MapNavigate(val.Value);
-                data.InitData2();
-                MapNavigate_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的地图导航层基础配置缓存
-        /// </summary>
-        public static MapNavigate GetMapNavigate(string cfgId)
-        {
-            if (!MapNavigate_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapNavigate(cfgId);
-                    data.InitData2();
-                    MapNavigate_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("图层相关.xlsx表中的 cfg_MapNavigate配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static MapNavigate GetMapNavigate(int cfgId)
-        {
-            if (!MapNavigate_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new MapNavigate(cfgId);
-                    data.InitData2();
-                    MapNavigate_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("图层相关.xlsx表中的 cfg_MapNavigate配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有地图导航层数据
-        /// </summary>
-        public static List<MapNavigate> GetAllMapNavigate()
-        {
-            List<MapNavigate> list = new List<MapNavigate>();
-            foreach (var val in MapNavigate_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return MapImageLayer_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 地图生成
         /// <summary>
         /// 随机生成地图用材料配置缓存
         /// </summary>
-        private static readonly Dictionary<string, MapMaterial> MapMaterial_Cache = new Dictionary<string, MapMaterial>();
+        private static readonly Dictionary<string, MapMaterial> MapMaterial_Cache = [];
         /// <summary>
         /// 提前加载所有随机生成地图用材料配置缓存
         /// </summary>
         public static void LoadMapMaterial()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapMaterial);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapMaterial))
             {
-                MapMaterial data = new MapMaterial(val.Value);
+                MapMaterial data = new(val.Value);
                 data.InitData2();
                 MapMaterial_Cache.Add(val.Key, data);
             }
@@ -2817,7 +3465,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapMaterial_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("地图生成.xlsx表中的 cfg_MapMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2834,7 +3482,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapMaterial_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("地图生成.xlsx表中的 cfg_MapMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2846,26 +3494,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapMaterial> GetAllMapMaterial()
         {
-            List<MapMaterial> list = new List<MapMaterial>();
-            foreach (var val in MapMaterial_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapMaterial>(MapMaterial_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的随机生成地图用材料数据
+        /// </summary>
+        public static bool HasMapMaterial(int cfgId)
+        {
+            return MapMaterial_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的随机生成地图用材料数据
+        /// </summary>
+        public static bool HasMapMaterial(string cfgId)
+        {
+            return MapMaterial_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 随机生成地图方式配置缓存
         /// </summary>
-        private static readonly Dictionary<string, GenerateBottomMap> GenerateBottomMap_Cache = new Dictionary<string, GenerateBottomMap>();
+        private static readonly Dictionary<string, GenerateBottomMap> GenerateBottomMap_Cache = [];
         /// <summary>
         /// 提前加载所有随机生成地图方式配置缓存
         /// </summary>
         public static void LoadGenerateBottomMap()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateBottomMap);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateBottomMap))
             {
-                GenerateBottomMap data = new GenerateBottomMap(val.Value);
+                GenerateBottomMap data = new(val.Value);
                 data.InitData2();
                 GenerateBottomMap_Cache.Add(val.Key, data);
             }
@@ -2883,7 +3539,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GenerateBottomMap_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("地图生成.xlsx表中的 cfg_GenerateBottomMap配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2900,7 +3556,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GenerateBottomMap_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("地图生成.xlsx表中的 cfg_GenerateBottomMap配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2912,26 +3568,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GenerateBottomMap> GetAllGenerateBottomMap()
         {
-            List<GenerateBottomMap> list = new List<GenerateBottomMap>();
-            foreach (var val in GenerateBottomMap_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GenerateBottomMap>(GenerateBottomMap_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的随机生成地图方式数据
+        /// </summary>
+        public static bool HasGenerateBottomMap(int cfgId)
+        {
+            return GenerateBottomMap_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的随机生成地图方式数据
+        /// </summary>
+        public static bool HasGenerateBottomMap(string cfgId)
+        {
+            return GenerateBottomMap_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 地图额外绘制表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, MapExtraDraw> MapExtraDraw_Cache = new Dictionary<string, MapExtraDraw>();
+        private static readonly Dictionary<string, MapExtraDraw> MapExtraDraw_Cache = [];
         /// <summary>
         /// 提前加载所有地图额外绘制表配置缓存
         /// </summary>
         public static void LoadMapExtraDraw()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapExtraDraw);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapExtraDraw))
             {
-                MapExtraDraw data = new MapExtraDraw(val.Value);
+                MapExtraDraw data = new(val.Value);
                 data.InitData2();
                 MapExtraDraw_Cache.Add(val.Key, data);
             }
@@ -2949,7 +3613,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapExtraDraw_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("地图生成.xlsx表中的 cfg_MapExtraDraw配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2966,7 +3630,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapExtraDraw_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("地图生成.xlsx表中的 cfg_MapExtraDraw配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -2978,26 +3642,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapExtraDraw> GetAllMapExtraDraw()
         {
-            List<MapExtraDraw> list = new List<MapExtraDraw>();
-            foreach (var val in MapExtraDraw_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapExtraDraw>(MapExtraDraw_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图额外绘制表数据
+        /// </summary>
+        public static bool HasMapExtraDraw(int cfgId)
+        {
+            return MapExtraDraw_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图额外绘制表数据
+        /// </summary>
+        public static bool HasMapExtraDraw(string cfgId)
+        {
+            return MapExtraDraw_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 地图大型结构配置缓存
         /// </summary>
-        private static readonly Dictionary<string, GenerateBigStruct> GenerateBigStruct_Cache = new Dictionary<string, GenerateBigStruct>();
+        private static readonly Dictionary<string, GenerateBigStruct> GenerateBigStruct_Cache = [];
         /// <summary>
         /// 提前加载所有地图大型结构配置缓存
         /// </summary>
         public static void LoadGenerateBigStruct()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateBigStruct);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GenerateBigStruct))
             {
-                GenerateBigStruct data = new GenerateBigStruct(val.Value);
+                GenerateBigStruct data = new(val.Value);
                 data.InitData2();
                 GenerateBigStruct_Cache.Add(val.Key, data);
             }
@@ -3015,7 +3687,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GenerateBigStruct_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("地图生成.xlsx表中的 cfg_GenerateBigStruct配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3032,7 +3704,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GenerateBigStruct_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("地图生成.xlsx表中的 cfg_GenerateBigStruct配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3044,94 +3716,114 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GenerateBigStruct> GetAllGenerateBigStruct()
         {
-            List<GenerateBigStruct> list = new List<GenerateBigStruct>();
-            foreach (var val in GenerateBigStruct_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GenerateBigStruct>(GenerateBigStruct_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图大型结构数据
+        /// </summary>
+        public static bool HasGenerateBigStruct(int cfgId)
+        {
+            return GenerateBigStruct_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图大型结构数据
+        /// </summary>
+        public static bool HasGenerateBigStruct(string cfgId)
+        {
+            return GenerateBigStruct_Cache.ContainsKey(cfgId);
         }
         #endregion
-        #region 大地图生成
+
+        #region 地图装饰物配置
         /// <summary>
-        /// 大地图节点配置缓存
+        /// 地图装饰物配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BigMapMaterial> BigMapMaterial_Cache = new Dictionary<string, BigMapMaterial>();
+        private static readonly Dictionary<string, MapDecorate> MapDecorate_Cache = [];
         /// <summary>
-        /// 提前加载所有大地图节点配置缓存
+        /// 提前加载所有地图装饰物配置配置缓存
         /// </summary>
-        public static void LoadBigMapMaterial()
+        public static void LoadMapDecorate()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapMaterial);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapDecorate))
             {
-                BigMapMaterial data = new BigMapMaterial(val.Value);
+                MapDecorate data = new(val.Value);
                 data.InitData2();
-                BigMapMaterial_Cache.Add(val.Key, data);
+                MapDecorate_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的大地图节点基础配置缓存
+        /// 加载或获取已缓存的地图装饰物配置基础配置缓存
         /// </summary>
-        public static BigMapMaterial GetBigMapMaterial(string cfgId)
+        public static MapDecorate GetMapDecorate(string cfgId)
         {
-            if (!BigMapMaterial_Cache.TryGetValue(cfgId, out var data))
+            if (!MapDecorate_Cache.TryGetValue(cfgId, out var data))
             {
                 try
                 {
-                    data = new BigMapMaterial(cfgId);
+                    data = new MapDecorate(cfgId);
                     data.InitData2();
-                    BigMapMaterial_Cache.Add(cfgId, data);
+                    MapDecorate_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("地图装饰物配置.xlsx表中的 cfg_MapDecorate配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
-        public static BigMapMaterial GetBigMapMaterial(int cfgId)
+        public static MapDecorate GetMapDecorate(int cfgId)
         {
-            if (!BigMapMaterial_Cache.TryGetValue("" + cfgId, out var data))
+            if (!MapDecorate_Cache.TryGetValue("" + cfgId, out var data))
             {
                 try
                 {
-                    data = new BigMapMaterial(cfgId);
+                    data = new MapDecorate(cfgId);
                     data.InitData2();
-                    BigMapMaterial_Cache.Add("" + cfgId, data);
+                    MapDecorate_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("地图装饰物配置.xlsx表中的 cfg_MapDecorate配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有大地图节点数据
+        /// 获取加载的所有地图装饰物配置数据
         /// </summary>
-        public static List<BigMapMaterial> GetAllBigMapMaterial()
+        public static List<MapDecorate> GetAllMapDecorate()
         {
-            List<BigMapMaterial> list = new List<BigMapMaterial>();
-            foreach (var val in BigMapMaterial_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapDecorate>(MapDecorate_Cache.Values);
         }
+        /// <summary>
+        /// 检查是否存在指定ID的地图装饰物配置数据
+        /// </summary>
+        public static bool HasMapDecorate(int cfgId)
+        {
+            return MapDecorate_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的地图装饰物配置数据
+        /// </summary>
+        public static bool HasMapDecorate(string cfgId)
+        {
+            return MapDecorate_Cache.ContainsKey(cfgId);
+        }
+        #endregion
+
+        #region 大地图生成
         /// <summary>
         /// 生成大地图配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BigMapBase> BigMapBase_Cache = new Dictionary<string, BigMapBase>();
+        private static readonly Dictionary<string, BigMapBase> BigMapBase_Cache = [];
         /// <summary>
         /// 提前加载所有生成大地图配置缓存
         /// </summary>
         public static void LoadBigMapBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapBase))
             {
-                BigMapBase data = new BigMapBase(val.Value);
+                BigMapBase data = new(val.Value);
                 data.InitData2();
                 BigMapBase_Cache.Add(val.Key, data);
             }
@@ -3149,7 +3841,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BigMapBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3166,7 +3858,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BigMapBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3178,26 +3870,108 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BigMapBase> GetAllBigMapBase()
         {
-            List<BigMapBase> list = new List<BigMapBase>();
-            foreach (var val in BigMapBase_Cache)
+            return new List<BigMapBase>(BigMapBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的生成大地图数据
+        /// </summary>
+        public static bool HasBigMapBase(int cfgId)
+        {
+            return BigMapBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的生成大地图数据
+        /// </summary>
+        public static bool HasBigMapBase(string cfgId)
+        {
+            return BigMapBase_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 大地图节点配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, BigMapMaterial> BigMapMaterial_Cache = [];
+        /// <summary>
+        /// 提前加载所有大地图节点配置缓存
+        /// </summary>
+        public static void LoadBigMapMaterial()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapMaterial))
             {
-                list.Add(val.Value);
+                BigMapMaterial data = new(val.Value);
+                data.InitData2();
+                BigMapMaterial_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的大地图节点基础配置缓存
+        /// </summary>
+        public static BigMapMaterial GetBigMapMaterial(string cfgId)
+        {
+            if (!BigMapMaterial_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new BigMapMaterial(cfgId);
+                    data.InitData2();
+                    BigMapMaterial_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static BigMapMaterial GetBigMapMaterial(int cfgId)
+        {
+            if (!BigMapMaterial_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new BigMapMaterial(cfgId);
+                    data.InitData2();
+                    BigMapMaterial_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapMaterial配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有大地图节点数据
+        /// </summary>
+        public static List<BigMapMaterial> GetAllBigMapMaterial()
+        {
+            return new List<BigMapMaterial>(BigMapMaterial_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的大地图节点数据
+        /// </summary>
+        public static bool HasBigMapMaterial(int cfgId)
+        {
+            return BigMapMaterial_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的大地图节点数据
+        /// </summary>
+        public static bool HasBigMapMaterial(string cfgId)
+        {
+            return BigMapMaterial_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 大地图大结构配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BigMapBigCell> BigMapBigCell_Cache = new Dictionary<string, BigMapBigCell>();
+        private static readonly Dictionary<string, BigMapBigCell> BigMapBigCell_Cache = [];
         /// <summary>
         /// 提前加载所有大地图大结构配置缓存
         /// </summary>
         public static void LoadBigMapBigCell()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapBigCell);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapBigCell))
             {
-                BigMapBigCell data = new BigMapBigCell(val.Value);
+                BigMapBigCell data = new(val.Value);
                 data.InitData2();
                 BigMapBigCell_Cache.Add(val.Key, data);
             }
@@ -3215,7 +3989,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BigMapBigCell_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapBigCell配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3232,7 +4006,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BigMapBigCell_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapBigCell配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3244,26 +4018,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BigMapBigCell> GetAllBigMapBigCell()
         {
-            List<BigMapBigCell> list = new List<BigMapBigCell>();
-            foreach (var val in BigMapBigCell_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BigMapBigCell>(BigMapBigCell_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的大地图大结构数据
+        /// </summary>
+        public static bool HasBigMapBigCell(int cfgId)
+        {
+            return BigMapBigCell_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的大地图大结构数据
+        /// </summary>
+        public static bool HasBigMapBigCell(string cfgId)
+        {
+            return BigMapBigCell_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 节点绘制逻辑配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BigMapCellLogic> BigMapCellLogic_Cache = new Dictionary<string, BigMapCellLogic>();
+        private static readonly Dictionary<string, BigMapCellLogic> BigMapCellLogic_Cache = [];
         /// <summary>
         /// 提前加载所有节点绘制逻辑配置缓存
         /// </summary>
         public static void LoadBigMapCellLogic()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapCellLogic);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapCellLogic))
             {
-                BigMapCellLogic data = new BigMapCellLogic(val.Value);
+                BigMapCellLogic data = new(val.Value);
                 data.InitData2();
                 BigMapCellLogic_Cache.Add(val.Key, data);
             }
@@ -3281,7 +4063,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BigMapCellLogic_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapCellLogic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3298,7 +4080,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BigMapCellLogic_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapCellLogic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3310,26 +4092,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BigMapCellLogic> GetAllBigMapCellLogic()
         {
-            List<BigMapCellLogic> list = new List<BigMapCellLogic>();
-            foreach (var val in BigMapCellLogic_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BigMapCellLogic>(BigMapCellLogic_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的节点绘制逻辑数据
+        /// </summary>
+        public static bool HasBigMapCellLogic(int cfgId)
+        {
+            return BigMapCellLogic_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的节点绘制逻辑数据
+        /// </summary>
+        public static bool HasBigMapCellLogic(string cfgId)
+        {
+            return BigMapCellLogic_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 大地图节点事件配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BigMapEvent> BigMapEvent_Cache = new Dictionary<string, BigMapEvent>();
+        private static readonly Dictionary<string, BigMapEvent> BigMapEvent_Cache = [];
         /// <summary>
         /// 提前加载所有大地图节点事件配置缓存
         /// </summary>
         public static void LoadBigMapEvent()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapEvent);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BigMapEvent))
             {
-                BigMapEvent data = new BigMapEvent(val.Value);
+                BigMapEvent data = new(val.Value);
                 data.InitData2();
                 BigMapEvent_Cache.Add(val.Key, data);
             }
@@ -3347,7 +4137,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BigMapEvent_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapEvent配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3364,7 +4154,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BigMapEvent_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("大地图生成.xlsx表中的 cfg_BigMapEvent配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3376,294 +4166,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BigMapEvent> GetAllBigMapEvent()
         {
-            List<BigMapEvent> list = new List<BigMapEvent>();
-            foreach (var val in BigMapEvent_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BigMapEvent>(BigMapEvent_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的大地图节点事件数据
+        /// </summary>
+        public static bool HasBigMapEvent(int cfgId)
+        {
+            return BigMapEvent_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的大地图节点事件数据
+        /// </summary>
+        public static bool HasBigMapEvent(string cfgId)
+        {
+            return BigMapEvent_Cache.ContainsKey(cfgId);
         }
         #endregion
-        #region 单位组配置
-        /// <summary>
-        /// 单位组类型配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, UnitGroupType> UnitGroupType_Cache = new Dictionary<string, UnitGroupType>();
-        /// <summary>
-        /// 提前加载所有单位组类型配置缓存
-        /// </summary>
-        public static void LoadUnitGroupType()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitGroupType);
-            foreach (var val in cfg_dict)
-            {
-                UnitGroupType data = new UnitGroupType(val.Value);
-                data.InitData2();
-                UnitGroupType_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的单位组类型基础配置缓存
-        /// </summary>
-        public static UnitGroupType GetUnitGroupType(string cfgId)
-        {
-            if (!UnitGroupType_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new UnitGroupType(cfgId);
-                    data.InitData2();
-                    UnitGroupType_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("单位组配置.xlsx表中的 cfg_UnitGroupType配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static UnitGroupType GetUnitGroupType(int cfgId)
-        {
-            if (!UnitGroupType_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new UnitGroupType(cfgId);
-                    data.InitData2();
-                    UnitGroupType_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("单位组配置.xlsx表中的 cfg_UnitGroupType配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有单位组类型数据
-        /// </summary>
-        public static List<UnitGroupType> GetAllUnitGroupType()
-        {
-            List<UnitGroupType> list = new List<UnitGroupType>();
-            foreach (var val in UnitGroupType_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 单位组配置配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, UnitGroupData> UnitGroupData_Cache = new Dictionary<string, UnitGroupData>();
-        /// <summary>
-        /// 提前加载所有单位组配置配置缓存
-        /// </summary>
-        public static void LoadUnitGroupData()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitGroupData);
-            foreach (var val in cfg_dict)
-            {
-                UnitGroupData data = new UnitGroupData(val.Value);
-                data.InitData2();
-                UnitGroupData_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的单位组配置基础配置缓存
-        /// </summary>
-        public static UnitGroupData GetUnitGroupData(string cfgId)
-        {
-            if (!UnitGroupData_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new UnitGroupData(cfgId);
-                    data.InitData2();
-                    UnitGroupData_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("单位组配置.xlsx表中的 cfg_UnitGroupData配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static UnitGroupData GetUnitGroupData(int cfgId)
-        {
-            if (!UnitGroupData_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new UnitGroupData(cfgId);
-                    data.InitData2();
-                    UnitGroupData_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("单位组配置.xlsx表中的 cfg_UnitGroupData配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有单位组配置数据
-        /// </summary>
-        public static List<UnitGroupData> GetAllUnitGroupData()
-        {
-            List<UnitGroupData> list = new List<UnitGroupData>();
-            foreach (var val in UnitGroupData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        #endregion
-        #region 战役副本相关
-        /// <summary>
-        /// 战役基础数据配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, ChapterBase> ChapterBase_Cache = new Dictionary<string, ChapterBase>();
-        /// <summary>
-        /// 提前加载所有战役基础数据配置缓存
-        /// </summary>
-        public static void LoadChapterBase()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ChapterBase);
-            foreach (var val in cfg_dict)
-            {
-                ChapterBase data = new ChapterBase(val.Value);
-                data.InitData2();
-                ChapterBase_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的战役基础数据基础配置缓存
-        /// </summary>
-        public static ChapterBase GetChapterBase(string cfgId)
-        {
-            if (!ChapterBase_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new ChapterBase(cfgId);
-                    data.InitData2();
-                    ChapterBase_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static ChapterBase GetChapterBase(int cfgId)
-        {
-            if (!ChapterBase_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new ChapterBase(cfgId);
-                    data.InitData2();
-                    ChapterBase_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有战役基础数据数据
-        /// </summary>
-        public static List<ChapterBase> GetAllChapterBase()
-        {
-            List<ChapterBase> list = new List<ChapterBase>();
-            foreach (var val in ChapterBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 战役关卡基础数据配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, ChapterCopyBase> ChapterCopyBase_Cache = new Dictionary<string, ChapterCopyBase>();
-        /// <summary>
-        /// 提前加载所有战役关卡基础数据配置缓存
-        /// </summary>
-        public static void LoadChapterCopyBase()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ChapterCopyBase);
-            foreach (var val in cfg_dict)
-            {
-                ChapterCopyBase data = new ChapterCopyBase(val.Value);
-                data.InitData2();
-                ChapterCopyBase_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的战役关卡基础数据基础配置缓存
-        /// </summary>
-        public static ChapterCopyBase GetChapterCopyBase(string cfgId)
-        {
-            if (!ChapterCopyBase_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new ChapterCopyBase(cfgId);
-                    data.InitData2();
-                    ChapterCopyBase_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterCopyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static ChapterCopyBase GetChapterCopyBase(int cfgId)
-        {
-            if (!ChapterCopyBase_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new ChapterCopyBase(cfgId);
-                    data.InitData2();
-                    ChapterCopyBase_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterCopyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有战役关卡基础数据数据
-        /// </summary>
-        public static List<ChapterCopyBase> GetAllChapterCopyBase()
-        {
-            List<ChapterCopyBase> list = new List<ChapterCopyBase>();
-            foreach (var val in ChapterCopyBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
+
+        #region 刷怪配置
         /// <summary>
         /// 战役关卡刷怪数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, CopyBrush> CopyBrush_Cache = new Dictionary<string, CopyBrush>();
+        private static readonly Dictionary<string, CopyBrush> CopyBrush_Cache = [];
         /// <summary>
         /// 提前加载所有战役关卡刷怪数据配置缓存
         /// </summary>
         public static void LoadCopyBrush()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_CopyBrush);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_CopyBrush))
             {
-                CopyBrush data = new CopyBrush(val.Value);
+                CopyBrush data = new(val.Value);
                 data.InitData2();
                 CopyBrush_Cache.Add(val.Key, data);
             }
@@ -3681,9 +4214,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     CopyBrush_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_CopyBrush配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_CopyBrush配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -3698,9 +4231,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     CopyBrush_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_CopyBrush配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_CopyBrush配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -3710,26 +4243,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<CopyBrush> GetAllCopyBrush()
         {
-            List<CopyBrush> list = new List<CopyBrush>();
-            foreach (var val in CopyBrush_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<CopyBrush>(CopyBrush_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的战役关卡刷怪数据数据
+        /// </summary>
+        public static bool HasCopyBrush(int cfgId)
+        {
+            return CopyBrush_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的战役关卡刷怪数据数据
+        /// </summary>
+        public static bool HasCopyBrush(string cfgId)
+        {
+            return CopyBrush_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 刷怪点数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BrushPoint> BrushPoint_Cache = new Dictionary<string, BrushPoint>();
+        private static readonly Dictionary<string, BrushPoint> BrushPoint_Cache = [];
         /// <summary>
         /// 提前加载所有刷怪点数据配置缓存
         /// </summary>
         public static void LoadBrushPoint()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BrushPoint);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BrushPoint))
             {
-                BrushPoint data = new BrushPoint(val.Value);
+                BrushPoint data = new(val.Value);
                 data.InitData2();
                 BrushPoint_Cache.Add(val.Key, data);
             }
@@ -3747,9 +4288,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BrushPoint_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_BrushPoint配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_BrushPoint配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -3764,9 +4305,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BrushPoint_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_BrushPoint配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_BrushPoint配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -3776,26 +4317,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BrushPoint> GetAllBrushPoint()
         {
-            List<BrushPoint> list = new List<BrushPoint>();
-            foreach (var val in BrushPoint_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BrushPoint>(BrushPoint_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的刷怪点数据数据
+        /// </summary>
+        public static bool HasBrushPoint(int cfgId)
+        {
+            return BrushPoint_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的刷怪点数据数据
+        /// </summary>
+        public static bool HasBrushPoint(string cfgId)
+        {
+            return BrushPoint_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 波数配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, WaveBase> WaveBase_Cache = new Dictionary<string, WaveBase>();
+        private static readonly Dictionary<string, WaveBase> WaveBase_Cache = [];
         /// <summary>
         /// 提前加载所有波数配置配置缓存
         /// </summary>
         public static void LoadWaveBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_WaveBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_WaveBase))
             {
-                WaveBase data = new WaveBase(val.Value);
+                WaveBase data = new(val.Value);
                 data.InitData2();
                 WaveBase_Cache.Add(val.Key, data);
             }
@@ -3813,9 +4362,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     WaveBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_WaveBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_WaveBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -3830,9 +4379,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     WaveBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_WaveBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_WaveBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -3842,32 +4391,413 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<WaveBase> GetAllWaveBase()
         {
-            List<WaveBase> list = new List<WaveBase>();
-            foreach (var val in WaveBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<WaveBase>(WaveBase_Cache.Values);
         }
         /// <summary>
-        /// 章节关卡UI数据配置缓存
+        /// 检查是否存在指定ID的波数配置数据
         /// </summary>
-        private static readonly Dictionary<string, ChapterCopyUI> ChapterCopyUI_Cache = new Dictionary<string, ChapterCopyUI>();
+        public static bool HasWaveBase(int cfgId)
+        {
+            return WaveBase_Cache.ContainsKey("" + cfgId);
+        }
         /// <summary>
-        /// 提前加载所有章节关卡UI数据配置缓存
+        /// 检查是否存在指定ID的波数配置数据
+        /// </summary>
+        public static bool HasWaveBase(string cfgId)
+        {
+            return WaveBase_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 单位组配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, UnitGroupData> UnitGroupData_Cache = [];
+        /// <summary>
+        /// 提前加载所有单位组配置配置缓存
+        /// </summary>
+        public static void LoadUnitGroupData()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitGroupData))
+            {
+                UnitGroupData data = new(val.Value);
+                data.InitData2();
+                UnitGroupData_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的单位组配置基础配置缓存
+        /// </summary>
+        public static UnitGroupData GetUnitGroupData(string cfgId)
+        {
+            if (!UnitGroupData_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new UnitGroupData(cfgId);
+                    data.InitData2();
+                    UnitGroupData_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_UnitGroupData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static UnitGroupData GetUnitGroupData(int cfgId)
+        {
+            if (!UnitGroupData_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new UnitGroupData(cfgId);
+                    data.InitData2();
+                    UnitGroupData_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_UnitGroupData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有单位组配置数据
+        /// </summary>
+        public static List<UnitGroupData> GetAllUnitGroupData()
+        {
+            return new List<UnitGroupData>(UnitGroupData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位组配置数据
+        /// </summary>
+        public static bool HasUnitGroupData(int cfgId)
+        {
+            return UnitGroupData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位组配置数据
+        /// </summary>
+        public static bool HasUnitGroupData(string cfgId)
+        {
+            return UnitGroupData_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 单位组类型配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, UnitGroupType> UnitGroupType_Cache = [];
+        /// <summary>
+        /// 提前加载所有单位组类型配置缓存
+        /// </summary>
+        public static void LoadUnitGroupType()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitGroupType))
+            {
+                UnitGroupType data = new(val.Value);
+                data.InitData2();
+                UnitGroupType_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的单位组类型基础配置缓存
+        /// </summary>
+        public static UnitGroupType GetUnitGroupType(string cfgId)
+        {
+            if (!UnitGroupType_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new UnitGroupType(cfgId);
+                    data.InitData2();
+                    UnitGroupType_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_UnitGroupType配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static UnitGroupType GetUnitGroupType(int cfgId)
+        {
+            if (!UnitGroupType_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new UnitGroupType(cfgId);
+                    data.InitData2();
+                    UnitGroupType_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("刷怪配置.xlsx表中的 cfg_UnitGroupType配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有单位组类型数据
+        /// </summary>
+        public static List<UnitGroupType> GetAllUnitGroupType()
+        {
+            return new List<UnitGroupType>(UnitGroupType_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位组类型数据
+        /// </summary>
+        public static bool HasUnitGroupType(int cfgId)
+        {
+            return UnitGroupType_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位组类型数据
+        /// </summary>
+        public static bool HasUnitGroupType(string cfgId)
+        {
+            return UnitGroupType_Cache.ContainsKey(cfgId);
+        }
+        #endregion
+
+        #region 战役副本相关
+        /// <summary>
+        /// 战役基础数据配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, ChapterBase> ChapterBase_Cache = [];
+        /// <summary>
+        /// 提前加载所有战役基础数据配置缓存
+        /// </summary>
+        public static void LoadChapterBase()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ChapterBase))
+            {
+                ChapterBase data = new(val.Value);
+                data.InitData2();
+                ChapterBase_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的战役基础数据基础配置缓存
+        /// </summary>
+        public static ChapterBase GetChapterBase(string cfgId)
+        {
+            if (!ChapterBase_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new ChapterBase(cfgId);
+                    data.InitData2();
+                    ChapterBase_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static ChapterBase GetChapterBase(int cfgId)
+        {
+            if (!ChapterBase_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new ChapterBase(cfgId);
+                    data.InitData2();
+                    ChapterBase_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有战役基础数据数据
+        /// </summary>
+        public static List<ChapterBase> GetAllChapterBase()
+        {
+            return new List<ChapterBase>(ChapterBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的战役基础数据数据
+        /// </summary>
+        public static bool HasChapterBase(int cfgId)
+        {
+            return ChapterBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的战役基础数据数据
+        /// </summary>
+        public static bool HasChapterBase(string cfgId)
+        {
+            return ChapterBase_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 战役关卡基础数据配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, ChapterCopyBase> ChapterCopyBase_Cache = [];
+        /// <summary>
+        /// 提前加载所有战役关卡基础数据配置缓存
+        /// </summary>
+        public static void LoadChapterCopyBase()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ChapterCopyBase))
+            {
+                ChapterCopyBase data = new(val.Value);
+                data.InitData2();
+                ChapterCopyBase_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的战役关卡基础数据基础配置缓存
+        /// </summary>
+        public static ChapterCopyBase GetChapterCopyBase(string cfgId)
+        {
+            if (!ChapterCopyBase_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new ChapterCopyBase(cfgId);
+                    data.InitData2();
+                    ChapterCopyBase_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterCopyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static ChapterCopyBase GetChapterCopyBase(int cfgId)
+        {
+            if (!ChapterCopyBase_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new ChapterCopyBase(cfgId);
+                    data.InitData2();
+                    ChapterCopyBase_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterCopyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有战役关卡基础数据数据
+        /// </summary>
+        public static List<ChapterCopyBase> GetAllChapterCopyBase()
+        {
+            return new List<ChapterCopyBase>(ChapterCopyBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的战役关卡基础数据数据
+        /// </summary>
+        public static bool HasChapterCopyBase(int cfgId)
+        {
+            return ChapterCopyBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的战役关卡基础数据数据
+        /// </summary>
+        public static bool HasChapterCopyBase(string cfgId)
+        {
+            return ChapterCopyBase_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 关卡建造限制配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, CopyBuildLimit> CopyBuildLimit_Cache = [];
+        /// <summary>
+        /// 提前加载所有关卡建造限制配置缓存
+        /// </summary>
+        public static void LoadCopyBuildLimit()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_CopyBuildLimit))
+            {
+                CopyBuildLimit data = new(val.Value);
+                data.InitData2();
+                CopyBuildLimit_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的关卡建造限制基础配置缓存
+        /// </summary>
+        public static CopyBuildLimit GetCopyBuildLimit(string cfgId)
+        {
+            if (!CopyBuildLimit_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new CopyBuildLimit(cfgId);
+                    data.InitData2();
+                    CopyBuildLimit_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_CopyBuildLimit配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static CopyBuildLimit GetCopyBuildLimit(int cfgId)
+        {
+            if (!CopyBuildLimit_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new CopyBuildLimit(cfgId);
+                    data.InitData2();
+                    CopyBuildLimit_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_CopyBuildLimit配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有关卡建造限制数据
+        /// </summary>
+        public static List<CopyBuildLimit> GetAllCopyBuildLimit()
+        {
+            return new List<CopyBuildLimit>(CopyBuildLimit_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的关卡建造限制数据
+        /// </summary>
+        public static bool HasCopyBuildLimit(int cfgId)
+        {
+            return CopyBuildLimit_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的关卡建造限制数据
+        /// </summary>
+        public static bool HasCopyBuildLimit(string cfgId)
+        {
+            return CopyBuildLimit_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 章节关卡描述数据配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, ChapterCopyUI> ChapterCopyUI_Cache = [];
+        /// <summary>
+        /// 提前加载所有章节关卡描述数据配置缓存
         /// </summary>
         public static void LoadChapterCopyUI()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ChapterCopyUI);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ChapterCopyUI))
             {
-                ChapterCopyUI data = new ChapterCopyUI(val.Value);
+                ChapterCopyUI data = new(val.Value);
                 data.InitData2();
                 ChapterCopyUI_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的章节关卡UI数据基础配置缓存
+        /// 加载或获取已缓存的章节关卡描述数据基础配置缓存
         /// </summary>
         public static ChapterCopyUI GetChapterCopyUI(string cfgId)
         {
@@ -3879,7 +4809,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ChapterCopyUI_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterCopyUI配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3896,7 +4826,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ChapterCopyUI_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("战役副本相关.xlsx表中的 cfg_ChapterCopyUI配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3904,32 +4834,41 @@ namespace Remnant_Afterglow
             return data;
         }
         /// <summary>
-        /// 获取加载的所有章节关卡UI数据数据
+        /// 获取加载的所有章节关卡描述数据数据
         /// </summary>
         public static List<ChapterCopyUI> GetAllChapterCopyUI()
         {
-            List<ChapterCopyUI> list = new List<ChapterCopyUI>();
-            foreach (var val in ChapterCopyUI_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ChapterCopyUI>(ChapterCopyUI_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的章节关卡描述数据数据
+        /// </summary>
+        public static bool HasChapterCopyUI(int cfgId)
+        {
+            return ChapterCopyUI_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的章节关卡描述数据数据
+        /// </summary>
+        public static bool HasChapterCopyUI(string cfgId)
+        {
+            return ChapterCopyUI_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 音乐配置
         /// <summary>
         /// 背景音乐配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BackgroundMusic> BackgroundMusic_Cache = new Dictionary<string, BackgroundMusic>();
+        private static readonly Dictionary<string, BackgroundMusic> BackgroundMusic_Cache = [];
         /// <summary>
         /// 提前加载所有背景音乐配置缓存
         /// </summary>
         public static void LoadBackgroundMusic()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BackgroundMusic);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BackgroundMusic))
             {
-                BackgroundMusic data = new BackgroundMusic(val.Value);
+                BackgroundMusic data = new(val.Value);
                 data.InitData2();
                 BackgroundMusic_Cache.Add(val.Key, data);
             }
@@ -3947,7 +4886,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BackgroundMusic_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("音乐配置.xlsx表中的 cfg_BackgroundMusic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3964,7 +4903,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BackgroundMusic_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("音乐配置.xlsx表中的 cfg_BackgroundMusic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -3976,65 +4915,148 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BackgroundMusic> GetAllBackgroundMusic()
         {
-            List<BackgroundMusic> list = new List<BackgroundMusic>();
-            foreach (var val in BackgroundMusic_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BackgroundMusic>(BackgroundMusic_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的背景音乐数据
+        /// </summary>
+        public static bool HasBackgroundMusic(int cfgId)
+        {
+            return BackgroundMusic_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的背景音乐数据
+        /// </summary>
+        public static bool HasBackgroundMusic(string cfgId)
+        {
+            return BackgroundMusic_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 音效配置
+        /// <summary>
+        /// UI音效配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, UISoundSfx> UISoundSfx_Cache = [];
+        /// <summary>
+        /// 提前加载所有UI音效配置配置缓存
+        /// </summary>
+        public static void LoadUISoundSfx()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_UISoundSfx))
+            {
+                UISoundSfx data = new(val.Value);
+                data.InitData2();
+                UISoundSfx_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的UI音效配置基础配置缓存
+        /// </summary>
+        public static UISoundSfx GetUISoundSfx(string cfgId)
+        {
+            if (!UISoundSfx_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new UISoundSfx(cfgId);
+                    data.InitData2();
+                    UISoundSfx_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("音效配置.xlsx表中的 cfg_UISoundSfx配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static UISoundSfx GetUISoundSfx(int cfgId)
+        {
+            if (!UISoundSfx_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new UISoundSfx(cfgId);
+                    data.InitData2();
+                    UISoundSfx_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("音效配置.xlsx表中的 cfg_UISoundSfx配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有UI音效配置数据
+        /// </summary>
+        public static List<UISoundSfx> GetAllUISoundSfx()
+        {
+            return new List<UISoundSfx>(UISoundSfx_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的UI音效配置数据
+        /// </summary>
+        public static bool HasUISoundSfx(int cfgId)
+        {
+            return UISoundSfx_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的UI音效配置数据
+        /// </summary>
+        public static bool HasUISoundSfx(string cfgId)
+        {
+            return UISoundSfx_Cache.ContainsKey(cfgId);
+        }
         /// <summary>
         /// 音效配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, SoundEffect> SoundEffect_Cache = new Dictionary<string, SoundEffect>();
+        private static readonly Dictionary<string, SoundSfx> SoundSfx_Cache = [];
         /// <summary>
         /// 提前加载所有音效配置配置缓存
         /// </summary>
-        public static void LoadSoundEffect()
+        public static void LoadSoundSfx()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_SoundEffect);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_SoundSfx))
             {
-                SoundEffect data = new SoundEffect(val.Value);
+                SoundSfx data = new(val.Value);
                 data.InitData2();
-                SoundEffect_Cache.Add(val.Key, data);
+                SoundSfx_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
         /// 加载或获取已缓存的音效配置基础配置缓存
         /// </summary>
-        public static SoundEffect GetSoundEffect(string cfgId)
+        public static SoundSfx GetSoundSfx(string cfgId)
         {
-            if (!SoundEffect_Cache.TryGetValue(cfgId, out var data))
+            if (!SoundSfx_Cache.TryGetValue(cfgId, out var data))
             {
                 try
                 {
-                    data = new SoundEffect(cfgId);
+                    data = new SoundSfx(cfgId);
                     data.InitData2();
-                    SoundEffect_Cache.Add(cfgId, data);
+                    SoundSfx_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("音效配置.xlsx表中的 cfg_SoundEffect配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("音效配置.xlsx表中的 cfg_SoundSfx配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
-        public static SoundEffect GetSoundEffect(int cfgId)
+        public static SoundSfx GetSoundSfx(int cfgId)
         {
-            if (!SoundEffect_Cache.TryGetValue("" + cfgId, out var data))
+            if (!SoundSfx_Cache.TryGetValue("" + cfgId, out var data))
             {
                 try
                 {
-                    data = new SoundEffect(cfgId);
+                    data = new SoundSfx(cfgId);
                     data.InitData2();
-                    SoundEffect_Cache.Add("" + cfgId, data);
+                    SoundSfx_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("音效配置.xlsx表中的 cfg_SoundEffect配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("音效配置.xlsx表中的 cfg_SoundSfx配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -4042,296 +5064,39 @@ namespace Remnant_Afterglow
         /// <summary>
         /// 获取加载的所有音效配置数据
         /// </summary>
-        public static List<SoundEffect> GetAllSoundEffect()
+        public static List<SoundSfx> GetAllSoundSfx()
         {
-            List<SoundEffect> list = new List<SoundEffect>();
-            foreach (var val in SoundEffect_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<SoundSfx>(SoundSfx_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的音效配置数据
+        /// </summary>
+        public static bool HasSoundSfx(int cfgId)
+        {
+            return SoundSfx_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的音效配置数据
+        /// </summary>
+        public static bool HasSoundSfx(string cfgId)
+        {
+            return SoundSfx_Cache.ContainsKey(cfgId);
         }
         #endregion
-        #region 子弹脚本配置
-        /// <summary>
-        /// 子弹脚本配置配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, BulletScript> BulletScript_Cache = new Dictionary<string, BulletScript>();
-        /// <summary>
-        /// 提前加载所有子弹脚本配置配置缓存
-        /// </summary>
-        public static void LoadBulletScript()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BulletScript);
-            foreach (var val in cfg_dict)
-            {
-                BulletScript data = new BulletScript(val.Value);
-                data.InitData2();
-                BulletScript_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的子弹脚本配置基础配置缓存
-        /// </summary>
-        public static BulletScript GetBulletScript(string cfgId)
-        {
-            if (!BulletScript_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new BulletScript(cfgId);
-                    data.InitData2();
-                    BulletScript_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("子弹脚本配置.xlsx表中的 cfg_BulletScript配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static BulletScript GetBulletScript(int cfgId)
-        {
-            if (!BulletScript_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new BulletScript(cfgId);
-                    data.InitData2();
-                    BulletScript_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("子弹脚本配置.xlsx表中的 cfg_BulletScript配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有子弹脚本配置数据
-        /// </summary>
-        public static List<BulletScript> GetAllBulletScript()
-        {
-            List<BulletScript> list = new List<BulletScript>();
-            foreach (var val in BulletScript_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 子弹脚本行为配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, BulletAction> BulletAction_Cache = new Dictionary<string, BulletAction>();
-        /// <summary>
-        /// 提前加载所有子弹脚本行为配置缓存
-        /// </summary>
-        public static void LoadBulletAction()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BulletAction);
-            foreach (var val in cfg_dict)
-            {
-                BulletAction data = new BulletAction(val.Value);
-                data.InitData2();
-                BulletAction_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的子弹脚本行为基础配置缓存
-        /// </summary>
-        public static BulletAction GetBulletAction(string cfgId)
-        {
-            if (!BulletAction_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new BulletAction(cfgId);
-                    data.InitData2();
-                    BulletAction_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("子弹脚本配置.xlsx表中的 cfg_BulletAction配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static BulletAction GetBulletAction(int cfgId)
-        {
-            if (!BulletAction_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new BulletAction(cfgId);
-                    data.InitData2();
-                    BulletAction_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("子弹脚本配置.xlsx表中的 cfg_BulletAction配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有子弹脚本行为数据
-        /// </summary>
-        public static List<BulletAction> GetAllBulletAction()
-        {
-            List<BulletAction> list = new List<BulletAction>();
-            foreach (var val in BulletAction_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        /// <summary>
-        /// 子弹脚本开火行为配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, BulletFire> BulletFire_Cache = new Dictionary<string, BulletFire>();
-        /// <summary>
-        /// 提前加载所有子弹脚本开火行为配置缓存
-        /// </summary>
-        public static void LoadBulletFire()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BulletFire);
-            foreach (var val in cfg_dict)
-            {
-                BulletFire data = new BulletFire(val.Value);
-                data.InitData2();
-                BulletFire_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的子弹脚本开火行为基础配置缓存
-        /// </summary>
-        public static BulletFire GetBulletFire(string cfgId)
-        {
-            if (!BulletFire_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new BulletFire(cfgId);
-                    data.InitData2();
-                    BulletFire_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("子弹脚本配置.xlsx表中的 cfg_BulletFire配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static BulletFire GetBulletFire(int cfgId)
-        {
-            if (!BulletFire_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new BulletFire(cfgId);
-                    data.InitData2();
-                    BulletFire_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("子弹脚本配置.xlsx表中的 cfg_BulletFire配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有子弹脚本开火行为数据
-        /// </summary>
-        public static List<BulletFire> GetAllBulletFire()
-        {
-            List<BulletFire> list = new List<BulletFire>();
-            foreach (var val in BulletFire_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        #endregion
+
         #region 子弹配置
-        /// <summary>
-        /// 子弹场景数据配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, BulletScene> BulletScene_Cache = new Dictionary<string, BulletScene>();
-        /// <summary>
-        /// 提前加载所有子弹场景数据配置缓存
-        /// </summary>
-        public static void LoadBulletScene()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BulletScene);
-            foreach (var val in cfg_dict)
-            {
-                BulletScene data = new BulletScene(val.Value);
-                data.InitData2();
-                BulletScene_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的子弹场景数据基础配置缓存
-        /// </summary>
-        public static BulletScene GetBulletScene(string cfgId)
-        {
-            if (!BulletScene_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new BulletScene(cfgId);
-                    data.InitData2();
-                    BulletScene_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("子弹配置.xlsx表中的 cfg_BulletScene配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static BulletScene GetBulletScene(int cfgId)
-        {
-            if (!BulletScene_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new BulletScene(cfgId);
-                    data.InitData2();
-                    BulletScene_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("子弹配置.xlsx表中的 cfg_BulletScene配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有子弹场景数据数据
-        /// </summary>
-        public static List<BulletScene> GetAllBulletScene()
-        {
-            List<BulletScene> list = new List<BulletScene>();
-            foreach (var val in BulletScene_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
         /// <summary>
         /// 子弹基础数据表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BulletData> BulletData_Cache = new Dictionary<string, BulletData>();
+        private static readonly Dictionary<string, BulletData> BulletData_Cache = [];
         /// <summary>
         /// 提前加载所有子弹基础数据表配置缓存
         /// </summary>
         public static void LoadBulletData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BulletData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BulletData))
             {
-                BulletData data = new BulletData(val.Value);
+                BulletData data = new(val.Value);
                 data.InitData2();
                 BulletData_Cache.Add(val.Key, data);
             }
@@ -4349,7 +5114,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BulletData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("子弹配置.xlsx表中的 cfg_BulletData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4366,7 +5131,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BulletData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("子弹配置.xlsx表中的 cfg_BulletData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4378,32 +5143,40 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BulletData> GetAllBulletData()
         {
-            List<BulletData> list = new List<BulletData>();
-            foreach (var val in BulletData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BulletData>(BulletData_Cache.Values);
         }
         /// <summary>
-        /// 子弹逻辑数据表配置缓存
+        /// 检查是否存在指定ID的子弹基础数据表数据
         /// </summary>
-        private static readonly Dictionary<string, BulletLogic> BulletLogic_Cache = new Dictionary<string, BulletLogic>();
+        public static bool HasBulletData(int cfgId)
+        {
+            return BulletData_Cache.ContainsKey("" + cfgId);
+        }
         /// <summary>
-        /// 提前加载所有子弹逻辑数据表配置缓存
+        /// 检查是否存在指定ID的子弹基础数据表数据
+        /// </summary>
+        public static bool HasBulletData(string cfgId)
+        {
+            return BulletData_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 实体子弹逻辑表配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, BulletLogic> BulletLogic_Cache = [];
+        /// <summary>
+        /// 提前加载所有实体子弹逻辑表配置缓存
         /// </summary>
         public static void LoadBulletLogic()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BulletLogic);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BulletLogic))
             {
-                BulletLogic data = new BulletLogic(val.Value);
+                BulletLogic data = new(val.Value);
                 data.InitData2();
                 BulletLogic_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的子弹逻辑数据表基础配置缓存
+        /// 加载或获取已缓存的实体子弹逻辑表基础配置缓存
         /// </summary>
         public static BulletLogic GetBulletLogic(string cfgId)
         {
@@ -4415,7 +5188,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BulletLogic_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("子弹配置.xlsx表中的 cfg_BulletLogic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4432,7 +5205,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BulletLogic_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("子弹配置.xlsx表中的 cfg_BulletLogic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4440,98 +5213,115 @@ namespace Remnant_Afterglow
             return data;
         }
         /// <summary>
-        /// 获取加载的所有子弹逻辑数据表数据
+        /// 获取加载的所有实体子弹逻辑表数据
         /// </summary>
         public static List<BulletLogic> GetAllBulletLogic()
         {
-            List<BulletLogic> list = new List<BulletLogic>();
-            foreach (var val in BulletLogic_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BulletLogic>(BulletLogic_Cache.Values);
         }
         /// <summary>
-        /// 子弹碰撞数据配置缓存
+        /// 检查是否存在指定ID的实体子弹逻辑表数据
         /// </summary>
-        private static readonly Dictionary<string, BulletCollide> BulletCollide_Cache = new Dictionary<string, BulletCollide>();
-        /// <summary>
-        /// 提前加载所有子弹碰撞数据配置缓存
-        /// </summary>
-        public static void LoadBulletCollide()
+        public static bool HasBulletLogic(int cfgId)
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BulletCollide);
-            foreach (var val in cfg_dict)
+            return BulletLogic_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的实体子弹逻辑表数据
+        /// </summary>
+        public static bool HasBulletLogic(string cfgId)
+        {
+            return BulletLogic_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 激光子弹逻辑表配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, LaserBulletLogic> LaserBulletLogic_Cache = [];
+        /// <summary>
+        /// 提前加载所有激光子弹逻辑表配置缓存
+        /// </summary>
+        public static void LoadLaserBulletLogic()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_LaserBulletLogic))
             {
-                BulletCollide data = new BulletCollide(val.Value);
+                LaserBulletLogic data = new(val.Value);
                 data.InitData2();
-                BulletCollide_Cache.Add(val.Key, data);
+                LaserBulletLogic_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的子弹碰撞数据基础配置缓存
+        /// 加载或获取已缓存的激光子弹逻辑表基础配置缓存
         /// </summary>
-        public static BulletCollide GetBulletCollide(string cfgId)
+        public static LaserBulletLogic GetLaserBulletLogic(string cfgId)
         {
-            if (!BulletCollide_Cache.TryGetValue(cfgId, out var data))
+            if (!LaserBulletLogic_Cache.TryGetValue(cfgId, out var data))
             {
                 try
                 {
-                    data = new BulletCollide(cfgId);
+                    data = new LaserBulletLogic(cfgId);
                     data.InitData2();
-                    BulletCollide_Cache.Add(cfgId, data);
+                    LaserBulletLogic_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("子弹配置.xlsx表中的 cfg_BulletCollide配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("子弹配置.xlsx表中的 cfg_LaserBulletLogic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
-        public static BulletCollide GetBulletCollide(int cfgId)
+        public static LaserBulletLogic GetLaserBulletLogic(int cfgId)
         {
-            if (!BulletCollide_Cache.TryGetValue("" + cfgId, out var data))
+            if (!LaserBulletLogic_Cache.TryGetValue("" + cfgId, out var data))
             {
                 try
                 {
-                    data = new BulletCollide(cfgId);
+                    data = new LaserBulletLogic(cfgId);
                     data.InitData2();
-                    BulletCollide_Cache.Add("" + cfgId, data);
+                    LaserBulletLogic_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("子弹配置.xlsx表中的 cfg_BulletCollide配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("子弹配置.xlsx表中的 cfg_LaserBulletLogic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有子弹碰撞数据数据
+        /// 获取加载的所有激光子弹逻辑表数据
         /// </summary>
-        public static List<BulletCollide> GetAllBulletCollide()
+        public static List<LaserBulletLogic> GetAllLaserBulletLogic()
         {
-            List<BulletCollide> list = new List<BulletCollide>();
-            foreach (var val in BulletCollide_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<LaserBulletLogic>(LaserBulletLogic_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的激光子弹逻辑表数据
+        /// </summary>
+        public static bool HasLaserBulletLogic(int cfgId)
+        {
+            return LaserBulletLogic_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的激光子弹逻辑表数据
+        /// </summary>
+        public static bool HasLaserBulletLogic(string cfgId)
+        {
+            return LaserBulletLogic_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 爆炸配置
         /// <summary>
         /// 爆炸基础数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ExplodeData> ExplodeData_Cache = new Dictionary<string, ExplodeData>();
+        private static readonly Dictionary<string, ExplodeData> ExplodeData_Cache = [];
         /// <summary>
         /// 提前加载所有爆炸基础数据配置缓存
         /// </summary>
         public static void LoadExplodeData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ExplodeData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ExplodeData))
             {
-                ExplodeData data = new ExplodeData(val.Value);
+                ExplodeData data = new(val.Value);
                 data.InitData2();
                 ExplodeData_Cache.Add(val.Key, data);
             }
@@ -4549,7 +5339,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ExplodeData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("爆炸配置.xlsx表中的 cfg_ExplodeData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4566,7 +5356,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ExplodeData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("爆炸配置.xlsx表中的 cfg_ExplodeData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4578,26 +5368,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ExplodeData> GetAllExplodeData()
         {
-            List<ExplodeData> list = new List<ExplodeData>();
-            foreach (var val in ExplodeData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ExplodeData>(ExplodeData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的爆炸基础数据数据
+        /// </summary>
+        public static bool HasExplodeData(int cfgId)
+        {
+            return ExplodeData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的爆炸基础数据数据
+        /// </summary>
+        public static bool HasExplodeData(string cfgId)
+        {
+            return ExplodeData_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 爆炸伤害数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ExplodeHarm> ExplodeHarm_Cache = new Dictionary<string, ExplodeHarm>();
+        private static readonly Dictionary<string, ExplodeHarm> ExplodeHarm_Cache = [];
         /// <summary>
         /// 提前加载所有爆炸伤害数据配置缓存
         /// </summary>
         public static void LoadExplodeHarm()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ExplodeHarm);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ExplodeHarm))
             {
-                ExplodeHarm data = new ExplodeHarm(val.Value);
+                ExplodeHarm data = new(val.Value);
                 data.InitData2();
                 ExplodeHarm_Cache.Add(val.Key, data);
             }
@@ -4615,7 +5413,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ExplodeHarm_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("爆炸配置.xlsx表中的 cfg_ExplodeHarm配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4632,7 +5430,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ExplodeHarm_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("爆炸配置.xlsx表中的 cfg_ExplodeHarm配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4644,28 +5442,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ExplodeHarm> GetAllExplodeHarm()
         {
-            List<ExplodeHarm> list = new List<ExplodeHarm>();
-            foreach (var val in ExplodeHarm_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ExplodeHarm>(ExplodeHarm_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的爆炸伤害数据数据
+        /// </summary>
+        public static bool HasExplodeHarm(int cfgId)
+        {
+            return ExplodeHarm_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的爆炸伤害数据数据
+        /// </summary>
+        public static bool HasExplodeHarm(string cfgId)
+        {
+            return ExplodeHarm_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 单位配置
         /// <summary>
         /// 单位基础表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, UnitData> UnitData_Cache = new Dictionary<string, UnitData>();
+        private static readonly Dictionary<string, UnitData> UnitData_Cache = [];
         /// <summary>
         /// 提前加载所有单位基础表配置缓存
         /// </summary>
         public static void LoadUnitData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitData))
             {
-                UnitData data = new UnitData(val.Value);
+                UnitData data = new(val.Value);
                 data.InitData2();
                 UnitData_Cache.Add(val.Key, data);
             }
@@ -4683,7 +5490,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     UnitData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("单位配置.xlsx表中的 cfg_UnitData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4700,7 +5507,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     UnitData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("单位配置.xlsx表中的 cfg_UnitData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4712,26 +5519,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<UnitData> GetAllUnitData()
         {
-            List<UnitData> list = new List<UnitData>();
-            foreach (var val in UnitData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<UnitData>(UnitData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位基础表数据
+        /// </summary>
+        public static bool HasUnitData(int cfgId)
+        {
+            return UnitData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位基础表数据
+        /// </summary>
+        public static bool HasUnitData(string cfgId)
+        {
+            return UnitData_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 单位逻辑表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, UnitLogic> UnitLogic_Cache = new Dictionary<string, UnitLogic>();
+        private static readonly Dictionary<string, UnitLogic> UnitLogic_Cache = [];
         /// <summary>
         /// 提前加载所有单位逻辑表配置缓存
         /// </summary>
         public static void LoadUnitLogic()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitLogic);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_UnitLogic))
             {
-                UnitLogic data = new UnitLogic(val.Value);
+                UnitLogic data = new(val.Value);
                 data.InitData2();
                 UnitLogic_Cache.Add(val.Key, data);
             }
@@ -4749,7 +5564,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     UnitLogic_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("单位配置.xlsx表中的 cfg_UnitLogic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4766,7 +5581,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     UnitLogic_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("单位配置.xlsx表中的 cfg_UnitLogic配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4778,96 +5593,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<UnitLogic> GetAllUnitLogic()
         {
-            List<UnitLogic> list = new List<UnitLogic>();
-            foreach (var val in UnitLogic_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<UnitLogic>(UnitLogic_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位逻辑表数据
+        /// </summary>
+        public static bool HasUnitLogic(int cfgId)
+        {
+            return UnitLogic_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的单位逻辑表数据
+        /// </summary>
+        public static bool HasUnitLogic(string cfgId)
+        {
+            return UnitLogic_Cache.ContainsKey(cfgId);
         }
         #endregion
-        #region 实体事件配置
-        /// <summary>
-        /// 属性事件配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, AttrEvent> AttrEvent_Cache = new Dictionary<string, AttrEvent>();
-        /// <summary>
-        /// 提前加载所有属性事件配置缓存
-        /// </summary>
-        public static void LoadAttrEvent()
-        {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttrEvent);
-            foreach (var val in cfg_dict)
-            {
-                AttrEvent data = new AttrEvent(val.Value);
-                data.InitData2();
-                AttrEvent_Cache.Add(val.Key, data);
-            }
-        }
-        /// <summary>
-        /// 加载或获取已缓存的属性事件基础配置缓存
-        /// </summary>
-        public static AttrEvent GetAttrEvent(string cfgId)
-        {
-            if (!AttrEvent_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new AttrEvent(cfgId);
-                    data.InitData2();
-                    AttrEvent_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("实体事件配置.xlsx表中的 cfg_AttrEvent配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static AttrEvent GetAttrEvent(int cfgId)
-        {
-            if (!AttrEvent_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new AttrEvent(cfgId);
-                    data.InitData2();
-                    AttrEvent_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("实体事件配置.xlsx表中的 cfg_AttrEvent配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有属性事件数据
-        /// </summary>
-        public static List<AttrEvent> GetAllAttrEvent()
-        {
-            List<AttrEvent> list = new List<AttrEvent>();
-            foreach (var val in AttrEvent_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        #endregion
+
         #region 实体显示相关配置
         /// <summary>
         /// 实体显示方式表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BaseObjectShow> BaseObjectShow_Cache = new Dictionary<string, BaseObjectShow>();
+        private static readonly Dictionary<string, BaseObjectShow> BaseObjectShow_Cache = [];
         /// <summary>
         /// 提前加载所有实体显示方式表配置缓存
         /// </summary>
         public static void LoadBaseObjectShow()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BaseObjectShow);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BaseObjectShow))
             {
-                BaseObjectShow data = new BaseObjectShow(val.Value);
+                BaseObjectShow data = new(val.Value);
                 data.InitData2();
                 BaseObjectShow_Cache.Add(val.Key, data);
             }
@@ -4885,7 +5641,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BaseObjectShow_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("实体显示相关配置.xlsx表中的 cfg_BaseObjectShow配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4902,7 +5658,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BaseObjectShow_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("实体显示相关配置.xlsx表中的 cfg_BaseObjectShow配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4914,26 +5670,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BaseObjectShow> GetAllBaseObjectShow()
         {
-            List<BaseObjectShow> list = new List<BaseObjectShow>();
-            foreach (var val in BaseObjectShow_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BaseObjectShow>(BaseObjectShow_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的实体显示方式表数据
+        /// </summary>
+        public static bool HasBaseObjectShow(int cfgId)
+        {
+            return BaseObjectShow_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的实体显示方式表数据
+        /// </summary>
+        public static bool HasBaseObjectShow(string cfgId)
+        {
+            return BaseObjectShow_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 底部栏配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ObjectBottomBar> ObjectBottomBar_Cache = new Dictionary<string, ObjectBottomBar>();
+        private static readonly Dictionary<string, ObjectBottomBar> ObjectBottomBar_Cache = [];
         /// <summary>
         /// 提前加载所有底部栏配置缓存
         /// </summary>
         public static void LoadObjectBottomBar()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ObjectBottomBar);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ObjectBottomBar))
             {
-                ObjectBottomBar data = new ObjectBottomBar(val.Value);
+                ObjectBottomBar data = new(val.Value);
                 data.InitData2();
                 ObjectBottomBar_Cache.Add(val.Key, data);
             }
@@ -4951,7 +5715,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ObjectBottomBar_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("实体显示相关配置.xlsx表中的 cfg_ObjectBottomBar配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4968,7 +5732,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ObjectBottomBar_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("实体显示相关配置.xlsx表中的 cfg_ObjectBottomBar配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -4980,26 +5744,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ObjectBottomBar> GetAllObjectBottomBar()
         {
-            List<ObjectBottomBar> list = new List<ObjectBottomBar>();
-            foreach (var val in ObjectBottomBar_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ObjectBottomBar>(ObjectBottomBar_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的底部栏数据
+        /// </summary>
+        public static bool HasObjectBottomBar(int cfgId)
+        {
+            return ObjectBottomBar_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的底部栏数据
+        /// </summary>
+        public static bool HasObjectBottomBar(string cfgId)
+        {
+            return ObjectBottomBar_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 侧边栏配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ObjectSideBar> ObjectSideBar_Cache = new Dictionary<string, ObjectSideBar>();
+        private static readonly Dictionary<string, ObjectSideBar> ObjectSideBar_Cache = [];
         /// <summary>
         /// 提前加载所有侧边栏配置缓存
         /// </summary>
         public static void LoadObjectSideBar()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ObjectSideBar);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ObjectSideBar))
             {
-                ObjectSideBar data = new ObjectSideBar(val.Value);
+                ObjectSideBar data = new(val.Value);
                 data.InitData2();
                 ObjectSideBar_Cache.Add(val.Key, data);
             }
@@ -5017,7 +5789,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ObjectSideBar_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("实体显示相关配置.xlsx表中的 cfg_ObjectSideBar配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5034,7 +5806,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ObjectSideBar_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("实体显示相关配置.xlsx表中的 cfg_ObjectSideBar配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5046,28 +5818,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ObjectSideBar> GetAllObjectSideBar()
         {
-            List<ObjectSideBar> list = new List<ObjectSideBar>();
-            foreach (var val in ObjectSideBar_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ObjectSideBar>(ObjectSideBar_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的侧边栏数据
+        /// </summary>
+        public static bool HasObjectSideBar(int cfgId)
+        {
+            return ObjectSideBar_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的侧边栏数据
+        /// </summary>
+        public static bool HasObjectSideBar(string cfgId)
+        {
+            return ObjectSideBar_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 实体相关配置
         /// <summary>
         /// 实体表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BaseObjectData> BaseObjectData_Cache = new Dictionary<string, BaseObjectData>();
+        private static readonly Dictionary<string, BaseObjectData> BaseObjectData_Cache = [];
         /// <summary>
         /// 提前加载所有实体表配置缓存
         /// </summary>
         public static void LoadBaseObjectData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BaseObjectData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BaseObjectData))
             {
-                BaseObjectData data = new BaseObjectData(val.Value);
+                BaseObjectData data = new(val.Value);
                 data.InitData2();
                 BaseObjectData_Cache.Add(val.Key, data);
             }
@@ -5085,7 +5866,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BaseObjectData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("实体相关配置.xlsx表中的 cfg_BaseObjectData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5102,7 +5883,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BaseObjectData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("实体相关配置.xlsx表中的 cfg_BaseObjectData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5114,100 +5895,43 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BaseObjectData> GetAllBaseObjectData()
         {
-            List<BaseObjectData> list = new List<BaseObjectData>();
-            foreach (var val in BaseObjectData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BaseObjectData>(BaseObjectData_Cache.Values);
         }
         /// <summary>
-        /// 实体武器表配置缓存
+        /// 检查是否存在指定ID的实体表数据
         /// </summary>
-        private static readonly Dictionary<string, BaseObjectWeapon> BaseObjectWeapon_Cache = new Dictionary<string, BaseObjectWeapon>();
-        /// <summary>
-        /// 提前加载所有实体武器表配置缓存
-        /// </summary>
-        public static void LoadBaseObjectWeapon()
+        public static bool HasBaseObjectData(int cfgId)
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BaseObjectWeapon);
-            foreach (var val in cfg_dict)
-            {
-                BaseObjectWeapon data = new BaseObjectWeapon(val.Value);
-                data.InitData2();
-                BaseObjectWeapon_Cache.Add(val.Key, data);
-            }
+            return BaseObjectData_Cache.ContainsKey("" + cfgId);
         }
         /// <summary>
-        /// 加载或获取已缓存的实体武器表基础配置缓存
+        /// 检查是否存在指定ID的实体表数据
         /// </summary>
-        public static BaseObjectWeapon GetBaseObjectWeapon(string cfgId)
+        public static bool HasBaseObjectData(string cfgId)
         {
-            if (!BaseObjectWeapon_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new BaseObjectWeapon(cfgId);
-                    data.InitData2();
-                    BaseObjectWeapon_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("实体相关配置.xlsx表中的 cfg_BaseObjectWeapon配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static BaseObjectWeapon GetBaseObjectWeapon(int cfgId)
-        {
-            if (!BaseObjectWeapon_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new BaseObjectWeapon(cfgId);
-                    data.InitData2();
-                    BaseObjectWeapon_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("实体相关配置.xlsx表中的 cfg_BaseObjectWeapon配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        /// <summary>
-        /// 获取加载的所有实体武器表数据
-        /// </summary>
-        public static List<BaseObjectWeapon> GetAllBaseObjectWeapon()
-        {
-            List<BaseObjectWeapon> list = new List<BaseObjectWeapon>();
-            foreach (var val in BaseObjectWeapon_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return BaseObjectData_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 建筑配置
         /// <summary>
-        /// 建筑数据配置缓存
+        /// 建筑及炮塔数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BuildData> BuildData_Cache = new Dictionary<string, BuildData>();
+        private static readonly Dictionary<string, BuildData> BuildData_Cache = [];
         /// <summary>
-        /// 提前加载所有建筑数据配置缓存
+        /// 提前加载所有建筑及炮塔数据配置缓存
         /// </summary>
         public static void LoadBuildData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BuildData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BuildData))
             {
-                BuildData data = new BuildData(val.Value);
+                BuildData data = new(val.Value);
                 data.InitData2();
                 BuildData_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的建筑数据基础配置缓存
+        /// 加载或获取已缓存的建筑及炮塔数据基础配置缓存
         /// </summary>
         public static BuildData GetBuildData(string cfgId)
         {
@@ -5219,7 +5943,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BuildData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("建筑配置.xlsx表中的 cfg_BuildData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5236,7 +5960,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BuildData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("建筑配置.xlsx表中的 cfg_BuildData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5244,32 +5968,41 @@ namespace Remnant_Afterglow
             return data;
         }
         /// <summary>
-        /// 获取加载的所有建筑数据数据
+        /// 获取加载的所有建筑及炮塔数据数据
         /// </summary>
         public static List<BuildData> GetAllBuildData()
         {
-            List<BuildData> list = new List<BuildData>();
-            foreach (var val in BuildData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BuildData>(BuildData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建筑及炮塔数据数据
+        /// </summary>
+        public static bool HasBuildData(int cfgId)
+        {
+            return BuildData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建筑及炮塔数据数据
+        /// </summary>
+        public static bool HasBuildData(string cfgId)
+        {
+            return BuildData_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 无人机配置
         /// <summary>
         /// 无人机基础表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, WorkerData> WorkerData_Cache = new Dictionary<string, WorkerData>();
+        private static readonly Dictionary<string, WorkerData> WorkerData_Cache = [];
         /// <summary>
         /// 提前加载所有无人机基础表配置缓存
         /// </summary>
         public static void LoadWorkerData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_WorkerData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_WorkerData))
             {
-                WorkerData data = new WorkerData(val.Value);
+                WorkerData data = new(val.Value);
                 data.InitData2();
                 WorkerData_Cache.Add(val.Key, data);
             }
@@ -5287,7 +6020,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     WorkerData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("无人机配置.xlsx表中的 cfg_WorkerData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5304,7 +6037,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     WorkerData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("无人机配置.xlsx表中的 cfg_WorkerData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5316,28 +6049,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<WorkerData> GetAllWorkerData()
         {
-            List<WorkerData> list = new List<WorkerData>();
-            foreach (var val in WorkerData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<WorkerData>(WorkerData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的无人机基础表数据
+        /// </summary>
+        public static bool HasWorkerData(int cfgId)
+        {
+            return WorkerData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的无人机基础表数据
+        /// </summary>
+        public static bool HasWorkerData(string cfgId)
+        {
+            return WorkerData_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 武器配置
         /// <summary>
         /// 武器数据1配置缓存
         /// </summary>
-        private static readonly Dictionary<string, WeaponData> WeaponData_Cache = new Dictionary<string, WeaponData>();
+        private static readonly Dictionary<string, WeaponData> WeaponData_Cache = [];
         /// <summary>
         /// 提前加载所有武器数据1配置缓存
         /// </summary>
         public static void LoadWeaponData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_WeaponData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_WeaponData))
             {
-                WeaponData data = new WeaponData(val.Value);
+                WeaponData data = new(val.Value);
                 data.InitData2();
                 WeaponData_Cache.Add(val.Key, data);
             }
@@ -5355,7 +6097,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     WeaponData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("武器配置.xlsx表中的 cfg_WeaponData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5372,7 +6114,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     WeaponData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("武器配置.xlsx表中的 cfg_WeaponData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5384,26 +6126,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<WeaponData> GetAllWeaponData()
         {
-            List<WeaponData> list = new List<WeaponData>();
-            foreach (var val in WeaponData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<WeaponData>(WeaponData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的武器数据1数据
+        /// </summary>
+        public static bool HasWeaponData(int cfgId)
+        {
+            return WeaponData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的武器数据1数据
+        /// </summary>
+        public static bool HasWeaponData(string cfgId)
+        {
+            return WeaponData_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 武器数据2配置缓存
         /// </summary>
-        private static readonly Dictionary<string, WeaponData2> WeaponData2_Cache = new Dictionary<string, WeaponData2>();
+        private static readonly Dictionary<string, WeaponData2> WeaponData2_Cache = [];
         /// <summary>
         /// 提前加载所有武器数据2配置缓存
         /// </summary>
         public static void LoadWeaponData2()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_WeaponData2);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_WeaponData2))
             {
-                WeaponData2 data = new WeaponData2(val.Value);
+                WeaponData2 data = new(val.Value);
                 data.InitData2();
                 WeaponData2_Cache.Add(val.Key, data);
             }
@@ -5421,7 +6171,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     WeaponData2_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("武器配置.xlsx表中的 cfg_WeaponData2配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5438,7 +6188,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     WeaponData2_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("武器配置.xlsx表中的 cfg_WeaponData2配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5450,96 +6200,718 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<WeaponData2> GetAllWeaponData2()
         {
-            List<WeaponData2> list = new List<WeaponData2>();
-            foreach (var val in WeaponData2_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<WeaponData2>(WeaponData2_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的武器数据2数据
+        /// </summary>
+        public static bool HasWeaponData2(int cfgId)
+        {
+            return WeaponData2_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的武器数据2数据
+        /// </summary>
+        public static bool HasWeaponData2(string cfgId)
+        {
+            return WeaponData2_Cache.ContainsKey(cfgId);
         }
         #endregion
-        #region 炮塔配置
+
+        #region 残骸配置
         /// <summary>
-        /// 炮塔基础表配置缓存
+        /// 残骸配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, TowerData> TowerData_Cache = new Dictionary<string, TowerData>();
+        private static readonly Dictionary<string, WreckAge> WreckAge_Cache = [];
         /// <summary>
-        /// 提前加载所有炮塔基础表配置缓存
+        /// 提前加载所有残骸配置配置缓存
         /// </summary>
-        public static void LoadTowerData()
+        public static void LoadWreckAge()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_TowerData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_WreckAge))
             {
-                TowerData data = new TowerData(val.Value);
+                WreckAge data = new(val.Value);
                 data.InitData2();
-                TowerData_Cache.Add(val.Key, data);
+                WreckAge_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的炮塔基础表基础配置缓存
+        /// 加载或获取已缓存的残骸配置基础配置缓存
         /// </summary>
-        public static TowerData GetTowerData(string cfgId)
+        public static WreckAge GetWreckAge(string cfgId)
         {
-            if (!TowerData_Cache.TryGetValue(cfgId, out var data))
+            if (!WreckAge_Cache.TryGetValue(cfgId, out var data))
             {
                 try
                 {
-                    data = new TowerData(cfgId);
+                    data = new WreckAge(cfgId);
                     data.InitData2();
-                    TowerData_Cache.Add(cfgId, data);
+                    WreckAge_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("炮塔配置.xlsx表中的 cfg_TowerData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("残骸配置.xlsx表中的 cfg_WreckAge配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
-        public static TowerData GetTowerData(int cfgId)
+        public static WreckAge GetWreckAge(int cfgId)
         {
-            if (!TowerData_Cache.TryGetValue("" + cfgId, out var data))
+            if (!WreckAge_Cache.TryGetValue("" + cfgId, out var data))
             {
                 try
                 {
-                    data = new TowerData(cfgId);
+                    data = new WreckAge(cfgId);
                     data.InitData2();
-                    TowerData_Cache.Add("" + cfgId, data);
+                    WreckAge_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("炮塔配置.xlsx表中的 cfg_TowerData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("残骸配置.xlsx表中的 cfg_WreckAge配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有炮塔基础表数据
+        /// 获取加载的所有残骸配置数据
         /// </summary>
-        public static List<TowerData> GetAllTowerData()
+        public static List<WreckAge> GetAllWreckAge()
         {
-            List<TowerData> list = new List<TowerData>();
-            foreach (var val in TowerData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<WreckAge>(WreckAge_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的残骸配置数据
+        /// </summary>
+        public static bool HasWreckAge(int cfgId)
+        {
+            return WreckAge_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的残骸配置数据
+        /// </summary>
+        public static bool HasWreckAge(string cfgId)
+        {
+            return WreckAge_Cache.ContainsKey(cfgId);
         }
         #endregion
-        #region 属性基础表
+
+        #region buff配置
+        /// <summary>
+        /// buff标签数据配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, BuffTag> BuffTag_Cache = [];
+        /// <summary>
+        /// 提前加载所有buff标签数据配置缓存
+        /// </summary>
+        public static void LoadBuffTag()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BuffTag))
+            {
+                BuffTag data = new(val.Value);
+                data.InitData2();
+                BuffTag_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的buff标签数据基础配置缓存
+        /// </summary>
+        public static BuffTag GetBuffTag(string cfgId)
+        {
+            if (!BuffTag_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new BuffTag(cfgId);
+                    data.InitData2();
+                    BuffTag_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("buff配置.xlsx表中的 cfg_BuffTag配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static BuffTag GetBuffTag(int cfgId)
+        {
+            if (!BuffTag_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new BuffTag(cfgId);
+                    data.InitData2();
+                    BuffTag_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("buff配置.xlsx表中的 cfg_BuffTag配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有buff标签数据数据
+        /// </summary>
+        public static List<BuffTag> GetAllBuffTag()
+        {
+            return new List<BuffTag>(BuffTag_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的buff标签数据数据
+        /// </summary>
+        public static bool HasBuffTag(int cfgId)
+        {
+            return BuffTag_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的buff标签数据数据
+        /// </summary>
+        public static bool HasBuffTag(string cfgId)
+        {
+            return BuffTag_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// buff基础数据配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, BuffData> BuffData_Cache = [];
+        /// <summary>
+        /// 提前加载所有buff基础数据配置缓存
+        /// </summary>
+        public static void LoadBuffData()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BuffData))
+            {
+                BuffData data = new(val.Value);
+                data.InitData2();
+                BuffData_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的buff基础数据基础配置缓存
+        /// </summary>
+        public static BuffData GetBuffData(string cfgId)
+        {
+            if (!BuffData_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new BuffData(cfgId);
+                    data.InitData2();
+                    BuffData_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("buff配置.xlsx表中的 cfg_BuffData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static BuffData GetBuffData(int cfgId)
+        {
+            if (!BuffData_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new BuffData(cfgId);
+                    data.InitData2();
+                    BuffData_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("buff配置.xlsx表中的 cfg_BuffData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有buff基础数据数据
+        /// </summary>
+        public static List<BuffData> GetAllBuffData()
+        {
+            return new List<BuffData>(BuffData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的buff基础数据数据
+        /// </summary>
+        public static bool HasBuffData(int cfgId)
+        {
+            return BuffData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的buff基础数据数据
+        /// </summary>
+        public static bool HasBuffData(string cfgId)
+        {
+            return BuffData_Cache.ContainsKey(cfgId);
+        }
+        #endregion
+
+        #region 事件配置
+        /// <summary>
+        /// 实体事件配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, AttrEvent> AttrEvent_Cache = [];
+        /// <summary>
+        /// 提前加载所有实体事件配置缓存
+        /// </summary>
+        public static void LoadAttrEvent()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttrEvent))
+            {
+                AttrEvent data = new(val.Value);
+                data.InitData2();
+                AttrEvent_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的实体事件基础配置缓存
+        /// </summary>
+        public static AttrEvent GetAttrEvent(string cfgId)
+        {
+            if (!AttrEvent_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new AttrEvent(cfgId);
+                    data.InitData2();
+                    AttrEvent_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("事件配置.xlsx表中的 cfg_AttrEvent配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static AttrEvent GetAttrEvent(int cfgId)
+        {
+            if (!AttrEvent_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new AttrEvent(cfgId);
+                    data.InitData2();
+                    AttrEvent_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("事件配置.xlsx表中的 cfg_AttrEvent配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有实体事件数据
+        /// </summary>
+        public static List<AttrEvent> GetAllAttrEvent()
+        {
+            return new List<AttrEvent>(AttrEvent_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的实体事件数据
+        /// </summary>
+        public static bool HasAttrEvent(int cfgId)
+        {
+            return AttrEvent_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的实体事件数据
+        /// </summary>
+        public static bool HasAttrEvent(string cfgId)
+        {
+            return AttrEvent_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 全局事件配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, GlobalAttrEvent> GlobalAttrEvent_Cache = [];
+        /// <summary>
+        /// 提前加载所有全局事件配置缓存
+        /// </summary>
+        public static void LoadGlobalAttrEvent()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalAttrEvent))
+            {
+                GlobalAttrEvent data = new(val.Value);
+                data.InitData2();
+                GlobalAttrEvent_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的全局事件基础配置缓存
+        /// </summary>
+        public static GlobalAttrEvent GetGlobalAttrEvent(string cfgId)
+        {
+            if (!GlobalAttrEvent_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttrEvent(cfgId);
+                    data.InitData2();
+                    GlobalAttrEvent_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("事件配置.xlsx表中的 cfg_GlobalAttrEvent配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static GlobalAttrEvent GetGlobalAttrEvent(int cfgId)
+        {
+            if (!GlobalAttrEvent_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttrEvent(cfgId);
+                    data.InitData2();
+                    GlobalAttrEvent_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("事件配置.xlsx表中的 cfg_GlobalAttrEvent配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有全局事件数据
+        /// </summary>
+        public static List<GlobalAttrEvent> GetAllGlobalAttrEvent()
+        {
+            return new List<GlobalAttrEvent>(GlobalAttrEvent_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局事件数据
+        /// </summary>
+        public static bool HasGlobalAttrEvent(int cfgId)
+        {
+            return GlobalAttrEvent_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局事件数据
+        /// </summary>
+        public static bool HasGlobalAttrEvent(string cfgId)
+        {
+            return GlobalAttrEvent_Cache.ContainsKey(cfgId);
+        }
+        #endregion
+
+        #region 全局属性基础表
+        /// <summary>
+        /// 全局属性表配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, GlobalAttributeBase> GlobalAttributeBase_Cache = [];
+        /// <summary>
+        /// 提前加载所有全局属性表配置缓存
+        /// </summary>
+        public static void LoadGlobalAttributeBase()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalAttributeBase))
+            {
+                GlobalAttributeBase data = new(val.Value);
+                data.InitData2();
+                GlobalAttributeBase_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的全局属性表基础配置缓存
+        /// </summary>
+        public static GlobalAttributeBase GetGlobalAttributeBase(string cfgId)
+        {
+            if (!GlobalAttributeBase_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttributeBase(cfgId);
+                    data.InitData2();
+                    GlobalAttributeBase_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("全局属性基础表.xlsx表中的 cfg_GlobalAttributeBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static GlobalAttributeBase GetGlobalAttributeBase(int cfgId)
+        {
+            if (!GlobalAttributeBase_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttributeBase(cfgId);
+                    data.InitData2();
+                    GlobalAttributeBase_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("全局属性基础表.xlsx表中的 cfg_GlobalAttributeBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有全局属性表数据
+        /// </summary>
+        public static List<GlobalAttributeBase> GetAllGlobalAttributeBase()
+        {
+            return new List<GlobalAttributeBase>(GlobalAttributeBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局属性表数据
+        /// </summary>
+        public static bool HasGlobalAttributeBase(int cfgId)
+        {
+            return GlobalAttributeBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局属性表数据
+        /// </summary>
+        public static bool HasGlobalAttributeBase(string cfgId)
+        {
+            return GlobalAttributeBase_Cache.ContainsKey(cfgId);
+        }
+        #endregion
+
+        #region 全局属性配置
+        /// <summary>
+        /// 属性模板表配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, GlobalAttrTem> GlobalAttrTem_Cache = [];
+        /// <summary>
+        /// 提前加载所有属性模板表配置缓存
+        /// </summary>
+        public static void LoadGlobalAttrTem()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalAttrTem))
+            {
+                GlobalAttrTem data = new(val.Value);
+                data.InitData2();
+                GlobalAttrTem_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的属性模板表基础配置缓存
+        /// </summary>
+        public static GlobalAttrTem GetGlobalAttrTem(string cfgId)
+        {
+            if (!GlobalAttrTem_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttrTem(cfgId);
+                    data.InitData2();
+                    GlobalAttrTem_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("全局属性配置.xlsx表中的 cfg_GlobalAttrTem配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static GlobalAttrTem GetGlobalAttrTem(int cfgId)
+        {
+            if (!GlobalAttrTem_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttrTem(cfgId);
+                    data.InitData2();
+                    GlobalAttrTem_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("全局属性配置.xlsx表中的 cfg_GlobalAttrTem配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有属性模板表数据
+        /// </summary>
+        public static List<GlobalAttrTem> GetAllGlobalAttrTem()
+        {
+            return new List<GlobalAttrTem>(GlobalAttrTem_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性模板表数据
+        /// </summary>
+        public static bool HasGlobalAttrTem(int cfgId)
+        {
+            return GlobalAttrTem_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性模板表数据
+        /// </summary>
+        public static bool HasGlobalAttrTem(string cfgId)
+        {
+            return GlobalAttrTem_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 全局属性表配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, GlobalAttrData> GlobalAttrData_Cache = [];
+        /// <summary>
+        /// 提前加载所有全局属性表配置缓存
+        /// </summary>
+        public static void LoadGlobalAttrData()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalAttrData))
+            {
+                GlobalAttrData data = new(val.Value);
+                data.InitData2();
+                GlobalAttrData_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的全局属性表基础配置缓存
+        /// </summary>
+        public static GlobalAttrData GetGlobalAttrData(string cfgId)
+        {
+            if (!GlobalAttrData_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttrData(cfgId);
+                    data.InitData2();
+                    GlobalAttrData_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("全局属性配置.xlsx表中的 cfg_GlobalAttrData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static GlobalAttrData GetGlobalAttrData(int cfgId)
+        {
+            if (!GlobalAttrData_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttrData(cfgId);
+                    data.InitData2();
+                    GlobalAttrData_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("全局属性配置.xlsx表中的 cfg_GlobalAttrData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有全局属性表数据
+        /// </summary>
+        public static List<GlobalAttrData> GetAllGlobalAttrData()
+        {
+            return new List<GlobalAttrData>(GlobalAttrData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局属性表数据
+        /// </summary>
+        public static bool HasGlobalAttrData(int cfgId)
+        {
+            return GlobalAttrData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局属性表数据
+        /// </summary>
+        public static bool HasGlobalAttrData(string cfgId)
+        {
+            return GlobalAttrData_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 全局修饰器配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, GlobalAttrMod> GlobalAttrMod_Cache = [];
+        /// <summary>
+        /// 提前加载所有全局修饰器配置缓存
+        /// </summary>
+        public static void LoadGlobalAttrMod()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GlobalAttrMod))
+            {
+                GlobalAttrMod data = new(val.Value);
+                data.InitData2();
+                GlobalAttrMod_Cache.Add(val.Key, data);
+            }
+        }
+        /// <summary>
+        /// 加载或获取已缓存的全局修饰器基础配置缓存
+        /// </summary>
+        public static GlobalAttrMod GetGlobalAttrMod(string cfgId)
+        {
+            if (!GlobalAttrMod_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttrMod(cfgId);
+                    data.InitData2();
+                    GlobalAttrMod_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("全局属性配置.xlsx表中的 cfg_GlobalAttrMod配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static GlobalAttrMod GetGlobalAttrMod(int cfgId)
+        {
+            if (!GlobalAttrMod_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new GlobalAttrMod(cfgId);
+                    data.InitData2();
+                    GlobalAttrMod_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("全局属性配置.xlsx表中的 cfg_GlobalAttrMod配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有全局修饰器数据
+        /// </summary>
+        public static List<GlobalAttrMod> GetAllGlobalAttrMod()
+        {
+            return new List<GlobalAttrMod>(GlobalAttrMod_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局修饰器数据
+        /// </summary>
+        public static bool HasGlobalAttrMod(int cfgId)
+        {
+            return GlobalAttrMod_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的全局修饰器数据
+        /// </summary>
+        public static bool HasGlobalAttrMod(string cfgId)
+        {
+            return GlobalAttrMod_Cache.ContainsKey(cfgId);
+        }
+        #endregion
+
+        #region 实体属性基础表
         /// <summary>
         /// 属性表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AttributeBase> AttributeBase_Cache = new Dictionary<string, AttributeBase>();
+        private static readonly Dictionary<string, AttributeBase> AttributeBase_Cache = [];
         /// <summary>
         /// 提前加载所有属性表配置缓存
         /// </summary>
         public static void LoadAttributeBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttributeBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttributeBase))
             {
-                AttributeBase data = new AttributeBase(val.Value);
+                AttributeBase data = new(val.Value);
                 data.InitData2();
                 AttributeBase_Cache.Add(val.Key, data);
             }
@@ -5557,9 +6929,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttributeBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性基础表.xlsx表中的 cfg_AttributeBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性基础表.xlsx表中的 cfg_AttributeBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5574,9 +6946,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttributeBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性基础表.xlsx表中的 cfg_AttributeBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性基础表.xlsx表中的 cfg_AttributeBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5586,26 +6958,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttributeBase> GetAllAttributeBase()
         {
-            List<AttributeBase> list = new List<AttributeBase>();
-            foreach (var val in AttributeBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttributeBase>(AttributeBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性表数据
+        /// </summary>
+        public static bool HasAttributeBase(int cfgId)
+        {
+            return AttributeBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性表数据
+        /// </summary>
+        public static bool HasAttributeBase(string cfgId)
+        {
+            return AttributeBase_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 属性计算表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AttrCalculate> AttrCalculate_Cache = new Dictionary<string, AttrCalculate>();
+        private static readonly Dictionary<string, AttrCalculate> AttrCalculate_Cache = [];
         /// <summary>
         /// 提前加载所有属性计算表配置缓存
         /// </summary>
         public static void LoadAttrCalculate()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttrCalculate);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttrCalculate))
             {
-                AttrCalculate data = new AttrCalculate(val.Value);
+                AttrCalculate data = new(val.Value);
                 data.InitData2();
                 AttrCalculate_Cache.Add(val.Key, data);
             }
@@ -5623,9 +7003,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttrCalculate_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性基础表.xlsx表中的 cfg_AttrCalculate配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性基础表.xlsx表中的 cfg_AttrCalculate配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5640,9 +7020,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttrCalculate_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性基础表.xlsx表中的 cfg_AttrCalculate配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性基础表.xlsx表中的 cfg_AttrCalculate配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5652,26 +7032,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttrCalculate> GetAllAttrCalculate()
         {
-            List<AttrCalculate> list = new List<AttrCalculate>();
-            foreach (var val in AttrCalculate_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttrCalculate>(AttrCalculate_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性计算表数据
+        /// </summary>
+        public static bool HasAttrCalculate(int cfgId)
+        {
+            return AttrCalculate_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性计算表数据
+        /// </summary>
+        public static bool HasAttrCalculate(string cfgId)
+        {
+            return AttrCalculate_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 属性依赖表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AttrDependency> AttrDependency_Cache = new Dictionary<string, AttrDependency>();
+        private static readonly Dictionary<string, AttrDependency> AttrDependency_Cache = [];
         /// <summary>
         /// 提前加载所有属性依赖表配置缓存
         /// </summary>
         public static void LoadAttrDependency()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttrDependency);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttrDependency))
             {
-                AttrDependency data = new AttrDependency(val.Value);
+                AttrDependency data = new(val.Value);
                 data.InitData2();
                 AttrDependency_Cache.Add(val.Key, data);
             }
@@ -5689,9 +7077,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttrDependency_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性基础表.xlsx表中的 cfg_AttrDependency配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性基础表.xlsx表中的 cfg_AttrDependency配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5706,9 +7094,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttrDependency_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性基础表.xlsx表中的 cfg_AttrDependency配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性基础表.xlsx表中的 cfg_AttrDependency配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5718,28 +7106,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttrDependency> GetAllAttrDependency()
         {
-            List<AttrDependency> list = new List<AttrDependency>();
-            foreach (var val in AttrDependency_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttrDependency>(AttrDependency_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性依赖表数据
+        /// </summary>
+        public static bool HasAttrDependency(int cfgId)
+        {
+            return AttrDependency_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性依赖表数据
+        /// </summary>
+        public static bool HasAttrDependency(string cfgId)
+        {
+            return AttrDependency_Cache.ContainsKey(cfgId);
         }
         #endregion
-        #region 属性配置
+
+        #region 实体属性配置
         /// <summary>
         /// 属性模板表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AttributeTemplate> AttributeTemplate_Cache = new Dictionary<string, AttributeTemplate>();
+        private static readonly Dictionary<string, AttributeTemplate> AttributeTemplate_Cache = [];
         /// <summary>
         /// 提前加载所有属性模板表配置缓存
         /// </summary>
         public static void LoadAttributeTemplate()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttributeTemplate);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttributeTemplate))
             {
-                AttributeTemplate data = new AttributeTemplate(val.Value);
+                AttributeTemplate data = new(val.Value);
                 data.InitData2();
                 AttributeTemplate_Cache.Add(val.Key, data);
             }
@@ -5757,9 +7154,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttributeTemplate_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性配置.xlsx表中的 cfg_AttributeTemplate配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性配置.xlsx表中的 cfg_AttributeTemplate配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5774,9 +7171,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttributeTemplate_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性配置.xlsx表中的 cfg_AttributeTemplate配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性配置.xlsx表中的 cfg_AttributeTemplate配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5786,26 +7183,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttributeTemplate> GetAllAttributeTemplate()
         {
-            List<AttributeTemplate> list = new List<AttributeTemplate>();
-            foreach (var val in AttributeTemplate_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttributeTemplate>(AttributeTemplate_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性模板表数据
+        /// </summary>
+        public static bool HasAttributeTemplate(int cfgId)
+        {
+            return AttributeTemplate_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性模板表数据
+        /// </summary>
+        public static bool HasAttributeTemplate(string cfgId)
+        {
+            return AttributeTemplate_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 实体属性表配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AttributeData> AttributeData_Cache = new Dictionary<string, AttributeData>();
+        private static readonly Dictionary<string, AttributeData> AttributeData_Cache = [];
         /// <summary>
         /// 提前加载所有实体属性表配置缓存
         /// </summary>
         public static void LoadAttributeData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttributeData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttributeData))
             {
-                AttributeData data = new AttributeData(val.Value);
+                AttributeData data = new(val.Value);
                 data.InitData2();
                 AttributeData_Cache.Add(val.Key, data);
             }
@@ -5823,9 +7228,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttributeData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性配置.xlsx表中的 cfg_AttributeData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性配置.xlsx表中的 cfg_AttributeData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5840,9 +7245,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttributeData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性配置.xlsx表中的 cfg_AttributeData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性配置.xlsx表中的 cfg_AttributeData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5852,26 +7257,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttributeData> GetAllAttributeData()
         {
-            List<AttributeData> list = new List<AttributeData>();
-            foreach (var val in AttributeData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttributeData>(AttributeData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的实体属性表数据
+        /// </summary>
+        public static bool HasAttributeData(int cfgId)
+        {
+            return AttributeData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的实体属性表数据
+        /// </summary>
+        public static bool HasAttributeData(string cfgId)
+        {
+            return AttributeData_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 属性修饰器配置缓存
         /// </summary>
-        private static readonly Dictionary<string, AttrModifier> AttrModifier_Cache = new Dictionary<string, AttrModifier>();
+        private static readonly Dictionary<string, AttrModifier> AttrModifier_Cache = [];
         /// <summary>
         /// 提前加载所有属性修饰器配置缓存
         /// </summary>
         public static void LoadAttrModifier()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttrModifier);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_AttrModifier))
             {
-                AttrModifier data = new AttrModifier(val.Value);
+                AttrModifier data = new(val.Value);
                 data.InitData2();
                 AttrModifier_Cache.Add(val.Key, data);
             }
@@ -5889,9 +7302,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttrModifier_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性配置.xlsx表中的 cfg_AttrModifier配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性配置.xlsx表中的 cfg_AttrModifier配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5906,9 +7319,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     AttrModifier_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("属性配置.xlsx表中的 cfg_AttrModifier配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("实体属性配置.xlsx表中的 cfg_AttrModifier配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -5918,28 +7331,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<AttrModifier> GetAllAttrModifier()
         {
-            List<AttrModifier> list = new List<AttrModifier>();
-            foreach (var val in AttrModifier_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<AttrModifier>(AttrModifier_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性修饰器数据
+        /// </summary>
+        public static bool HasAttrModifier(int cfgId)
+        {
+            return AttrModifier_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的属性修饰器数据
+        /// </summary>
+        public static bool HasAttrModifier(string cfgId)
+        {
+            return AttrModifier_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 建造列表相关配置
         /// <summary>
         /// 建造列表标签配置缓存
         /// </summary>
-        private static readonly Dictionary<string, MapBuildLable> MapBuildLable_Cache = new Dictionary<string, MapBuildLable>();
+        private static readonly Dictionary<string, MapBuildLable> MapBuildLable_Cache = [];
         /// <summary>
         /// 提前加载所有建造列表标签配置缓存
         /// </summary>
         public static void LoadMapBuildLable()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapBuildLable);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapBuildLable))
             {
-                MapBuildLable data = new MapBuildLable(val.Value);
+                MapBuildLable data = new(val.Value);
                 data.InitData2();
                 MapBuildLable_Cache.Add(val.Key, data);
             }
@@ -5957,7 +7379,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapBuildLable_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_MapBuildLable配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5974,7 +7396,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapBuildLable_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_MapBuildLable配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -5986,26 +7408,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapBuildLable> GetAllMapBuildLable()
         {
-            List<MapBuildLable> list = new List<MapBuildLable>();
-            foreach (var val in MapBuildLable_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapBuildLable>(MapBuildLable_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建造列表标签数据
+        /// </summary>
+        public static bool HasMapBuildLable(int cfgId)
+        {
+            return MapBuildLable_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建造列表标签数据
+        /// </summary>
+        public static bool HasMapBuildLable(string cfgId)
+        {
+            return MapBuildLable_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 建造项数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, MapBuildItem> MapBuildItem_Cache = new Dictionary<string, MapBuildItem>();
+        private static readonly Dictionary<string, MapBuildItem> MapBuildItem_Cache = [];
         /// <summary>
         /// 提前加载所有建造项数据配置缓存
         /// </summary>
         public static void LoadMapBuildItem()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapBuildItem);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MapBuildItem))
             {
-                MapBuildItem data = new MapBuildItem(val.Value);
+                MapBuildItem data = new(val.Value);
                 data.InitData2();
                 MapBuildItem_Cache.Add(val.Key, data);
             }
@@ -6023,7 +7453,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapBuildItem_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_MapBuildItem配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6040,7 +7470,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     MapBuildItem_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_MapBuildItem配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6052,26 +7482,34 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<MapBuildItem> GetAllMapBuildItem()
         {
-            List<MapBuildItem> list = new List<MapBuildItem>();
-            foreach (var val in MapBuildItem_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<MapBuildItem>(MapBuildItem_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建造项数据数据
+        /// </summary>
+        public static bool HasMapBuildItem(int cfgId)
+        {
+            return MapBuildItem_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建造项数据数据
+        /// </summary>
+        public static bool HasMapBuildItem(string cfgId)
+        {
+            return MapBuildItem_Cache.ContainsKey(cfgId);
         }
         /// <summary>
         /// 建造规则配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BuildRule> BuildRule_Cache = new Dictionary<string, BuildRule>();
+        private static readonly Dictionary<string, BuildRule> BuildRule_Cache = [];
         /// <summary>
         /// 提前加载所有建造规则配置缓存
         /// </summary>
         public static void LoadBuildRule()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BuildRule);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BuildRule))
             {
-                BuildRule data = new BuildRule(val.Value);
+                BuildRule data = new(val.Value);
                 data.InitData2();
                 BuildRule_Cache.Add(val.Key, data);
             }
@@ -6089,7 +7527,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BuildRule_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_BuildRule配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6106,7 +7544,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BuildRule_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("建造列表相关配置.xlsx表中的 cfg_BuildRule配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6118,28 +7556,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<BuildRule> GetAllBuildRule()
         {
-            List<BuildRule> list = new List<BuildRule>();
-            foreach (var val in BuildRule_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BuildRule>(BuildRule_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建造规则数据
+        /// </summary>
+        public static bool HasBuildRule(int cfgId)
+        {
+            return BuildRule_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的建造规则数据
+        /// </summary>
+        public static bool HasBuildRule(string cfgId)
+        {
+            return BuildRule_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 阵营相关
         /// <summary>
         /// 阵营基础数据配置缓存
         /// </summary>
-        private static readonly Dictionary<string, CampBase> CampBase_Cache = new Dictionary<string, CampBase>();
+        private static readonly Dictionary<string, CampBase> CampBase_Cache = [];
         /// <summary>
         /// 提前加载所有阵营基础数据配置缓存
         /// </summary>
         public static void LoadCampBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_CampBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_CampBase))
             {
-                CampBase data = new CampBase(val.Value);
+                CampBase data = new(val.Value);
                 data.InitData2();
                 CampBase_Cache.Add(val.Key, data);
             }
@@ -6157,7 +7604,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     CampBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("阵营相关.xlsx表中的 cfg_CampBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6174,7 +7621,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     CampBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("阵营相关.xlsx表中的 cfg_CampBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6186,28 +7633,37 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<CampBase> GetAllCampBase()
         {
-            List<CampBase> list = new List<CampBase>();
-            foreach (var val in CampBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<CampBase>(CampBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的阵营基础数据数据
+        /// </summary>
+        public static bool HasCampBase(int cfgId)
+        {
+            return CampBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的阵营基础数据数据
+        /// </summary>
+        public static bool HasCampBase(string cfgId)
+        {
+            return CampBase_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 难度相关
         /// <summary>
         /// 游戏难度相关配置缓存
         /// </summary>
-        private static readonly Dictionary<string, GameDiffBase> GameDiffBase_Cache = new Dictionary<string, GameDiffBase>();
+        private static readonly Dictionary<string, GameDiffBase> GameDiffBase_Cache = [];
         /// <summary>
         /// 提前加载所有游戏难度相关配置缓存
         /// </summary>
         public static void LoadGameDiffBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_GameDiffBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_GameDiffBase))
             {
-                GameDiffBase data = new GameDiffBase(val.Value);
+                GameDiffBase data = new(val.Value);
                 data.InitData2();
                 GameDiffBase_Cache.Add(val.Key, data);
             }
@@ -6225,7 +7681,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GameDiffBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("难度相关.xlsx表中的 cfg_GameDiffBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6242,7 +7698,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     GameDiffBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("难度相关.xlsx表中的 cfg_GameDiffBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6254,34 +7710,43 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<GameDiffBase> GetAllGameDiffBase()
         {
-            List<GameDiffBase> list = new List<GameDiffBase>();
-            foreach (var val in GameDiffBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<GameDiffBase>(GameDiffBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的游戏难度相关数据
+        /// </summary>
+        public static bool HasGameDiffBase(int cfgId)
+        {
+            return GameDiffBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的游戏难度相关数据
+        /// </summary>
+        public static bool HasGameDiffBase(string cfgId)
+        {
+            return GameDiffBase_Cache.ContainsKey(cfgId);
         }
         #endregion
-        #region 背包相关
+
+        #region 背包 道具 及货币相关配置
         /// <summary>
-        /// 配置缓存
+        /// 背包配置配置缓存
         /// </summary>
-        private static readonly Dictionary<string, BagData> BagData_Cache = new Dictionary<string, BagData>();
+        private static readonly Dictionary<string, BagData> BagData_Cache = [];
         /// <summary>
-        /// 提前加载所有配置缓存
+        /// 提前加载所有背包配置配置缓存
         /// </summary>
         public static void LoadBagData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_BagData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_BagData))
             {
-                BagData data = new BagData(val.Value);
+                BagData data = new(val.Value);
                 data.InitData2();
                 BagData_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的基础配置缓存
+        /// 加载或获取已缓存的背包配置基础配置缓存
         /// </summary>
         public static BagData GetBagData(string cfgId)
         {
@@ -6293,9 +7758,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BagData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("背包相关.xlsx表中的 cfg_bagData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_bagData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -6310,114 +7775,52 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     BagData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("背包相关.xlsx表中的 cfg_bagData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_bagData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有数据
+        /// 获取加载的所有背包配置数据
         /// </summary>
         public static List<BagData> GetAllBagData()
         {
-            List<BagData> list = new List<BagData>();
-            foreach (var val in BagData_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<BagData>(BagData_Cache.Values);
         }
-        #endregion
-        #region 货币相关
         /// <summary>
-        /// 货币界面显示配置配置缓存
+        /// 检查是否存在指定ID的背包配置数据
         /// </summary>
-        private static readonly Dictionary<string, MoneyBase> MoneyBase_Cache = new Dictionary<string, MoneyBase>();
-        /// <summary>
-        /// 提前加载所有货币界面显示配置配置缓存
-        /// </summary>
-        public static void LoadMoneyBase()
+        public static bool HasBagData(int cfgId)
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_MoneyBase);
-            foreach (var val in cfg_dict)
-            {
-                MoneyBase data = new MoneyBase(val.Value);
-                data.InitData2();
-                MoneyBase_Cache.Add(val.Key, data);
-            }
+            return BagData_Cache.ContainsKey("" + cfgId);
         }
         /// <summary>
-        /// 加载或获取已缓存的货币界面显示配置基础配置缓存
+        /// 检查是否存在指定ID的背包配置数据
         /// </summary>
-        public static MoneyBase GetMoneyBase(string cfgId)
+        public static bool HasBagData(string cfgId)
         {
-            if (!MoneyBase_Cache.TryGetValue(cfgId, out var data))
-            {
-                try
-                {
-                    data = new MoneyBase(cfgId);
-                    data.InitData2();
-                    MoneyBase_Cache.Add(cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("货币相关.xlsx表中的 cfg_MoneyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
-        }
-        public static MoneyBase GetMoneyBase(int cfgId)
-        {
-            if (!MoneyBase_Cache.TryGetValue("" + cfgId, out var data))
-            {
-                try
-                {
-                    data = new MoneyBase(cfgId);
-                    data.InitData2();
-                    MoneyBase_Cache.Add("" + cfgId, data);
-                }
-                catch (Exception e)
-                {
-                    Log.PrintConfigError("货币相关.xlsx表中的 cfg_MoneyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
-                }
-            }
-            return data;
+            return BagData_Cache.ContainsKey(cfgId);
         }
         /// <summary>
-        /// 获取加载的所有货币界面显示配置数据
+        /// 道具配置配置缓存
         /// </summary>
-        public static List<MoneyBase> GetAllMoneyBase()
-        {
-            List<MoneyBase> list = new List<MoneyBase>();
-            foreach (var val in MoneyBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
-        }
-        #endregion
-        #region 道具相关
+        private static readonly Dictionary<string, ItemData> ItemData_Cache = [];
         /// <summary>
-        /// 道具基础数据配置缓存
-        /// </summary>
-        private static readonly Dictionary<string, ItemData> ItemData_Cache = new Dictionary<string, ItemData>();
-        /// <summary>
-        /// 提前加载所有道具基础数据配置缓存
+        /// 提前加载所有道具配置配置缓存
         /// </summary>
         public static void LoadItemData()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ItemData);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ItemData))
             {
-                ItemData data = new ItemData(val.Value);
+                ItemData data = new(val.Value);
                 data.InitData2();
                 ItemData_Cache.Add(val.Key, data);
             }
         }
         /// <summary>
-        /// 加载或获取已缓存的道具基础数据基础配置缓存
+        /// 加载或获取已缓存的道具配置基础配置缓存
         /// </summary>
         public static ItemData GetItemData(string cfgId)
         {
@@ -6429,9 +7832,9 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ItemData_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("道具相关.xlsx表中的 cfg_itemData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_itemData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
@@ -6446,40 +7849,123 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ItemData_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Log.PrintConfigError("道具相关.xlsx表中的 cfg_itemData配置表中，不存在主键为<" + cfgId + ">的数据！");
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_itemData配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
             }
             return data;
         }
         /// <summary>
-        /// 获取加载的所有道具基础数据数据
+        /// 获取加载的所有道具配置数据
         /// </summary>
         public static List<ItemData> GetAllItemData()
         {
-            List<ItemData> list = new List<ItemData>();
-            foreach (var val in ItemData_Cache)
+            return new List<ItemData>(ItemData_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的道具配置数据
+        /// </summary>
+        public static bool HasItemData(int cfgId)
+        {
+            return ItemData_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的道具配置数据
+        /// </summary>
+        public static bool HasItemData(string cfgId)
+        {
+            return ItemData_Cache.ContainsKey(cfgId);
+        }
+        /// <summary>
+        /// 货币配置配置缓存
+        /// </summary>
+        private static readonly Dictionary<string, MoneyBase> MoneyBase_Cache = [];
+        /// <summary>
+        /// 提前加载所有货币配置配置缓存
+        /// </summary>
+        public static void LoadMoneyBase()
+        {
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_MoneyBase))
             {
-                list.Add(val.Value);
+                MoneyBase data = new(val.Value);
+                data.InitData2();
+                MoneyBase_Cache.Add(val.Key, data);
             }
-            return list;
+        }
+        /// <summary>
+        /// 加载或获取已缓存的货币配置基础配置缓存
+        /// </summary>
+        public static MoneyBase GetMoneyBase(string cfgId)
+        {
+            if (!MoneyBase_Cache.TryGetValue(cfgId, out var data))
+            {
+                try
+                {
+                    data = new MoneyBase(cfgId);
+                    data.InitData2();
+                    MoneyBase_Cache.Add(cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_MoneyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        public static MoneyBase GetMoneyBase(int cfgId)
+        {
+            if (!MoneyBase_Cache.TryGetValue("" + cfgId, out var data))
+            {
+                try
+                {
+                    data = new MoneyBase(cfgId);
+                    data.InitData2();
+                    MoneyBase_Cache.Add("" + cfgId, data);
+                }
+                catch (Exception)
+                {
+                    Log.PrintConfigError("背包 道具 及货币相关配置.xlsx表中的 cfg_MoneyBase配置表中，不存在主键为<" + cfgId + ">的数据！");
+                }
+            }
+            return data;
+        }
+        /// <summary>
+        /// 获取加载的所有货币配置数据
+        /// </summary>
+        public static List<MoneyBase> GetAllMoneyBase()
+        {
+            return new List<MoneyBase>(MoneyBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的货币配置数据
+        /// </summary>
+        public static bool HasMoneyBase(int cfgId)
+        {
+            return MoneyBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的货币配置数据
+        /// </summary>
+        public static bool HasMoneyBase(string cfgId)
+        {
+            return MoneyBase_Cache.ContainsKey(cfgId);
         }
         #endregion
+
         #region 错误码
         /// <summary>
         /// 错误码配置缓存
         /// </summary>
-        private static readonly Dictionary<string, ErrorBase> ErrorBase_Cache = new Dictionary<string, ErrorBase>();
+        private static readonly Dictionary<string, ErrorBase> ErrorBase_Cache = [];
         /// <summary>
         /// 提前加载所有错误码配置缓存
         /// </summary>
         public static void LoadErrorBase()
         {
-            Dictionary<string, Dictionary<string, object>> cfg_dict = ConfigLoadSystem.GetCfg(ConfigConstant.Config_ErrorBase);
-            foreach (var val in cfg_dict)
+            foreach (var val in ConfigLoadSystem.GetCfg(ConfigConstant.Config_ErrorBase))
             {
-                ErrorBase data = new ErrorBase(val.Value);
+                ErrorBase data = new(val.Value);
                 data.InitData2();
                 ErrorBase_Cache.Add(val.Key, data);
             }
@@ -6497,7 +7983,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ErrorBase_Cache.Add(cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("错误码.xlsx表中的 cfg_ErrorBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6514,7 +8000,7 @@ namespace Remnant_Afterglow
                     data.InitData2();
                     ErrorBase_Cache.Add("" + cfgId, data);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Log.PrintConfigError("错误码.xlsx表中的 cfg_ErrorBase配置表中，不存在主键为<" + cfgId + ">的数据！");
                 }
@@ -6526,12 +8012,21 @@ namespace Remnant_Afterglow
         /// </summary>
         public static List<ErrorBase> GetAllErrorBase()
         {
-            List<ErrorBase> list = new List<ErrorBase>();
-            foreach (var val in ErrorBase_Cache)
-            {
-                list.Add(val.Value);
-            }
-            return list;
+            return new List<ErrorBase>(ErrorBase_Cache.Values);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的错误码数据
+        /// </summary>
+        public static bool HasErrorBase(int cfgId)
+        {
+            return ErrorBase_Cache.ContainsKey("" + cfgId);
+        }
+        /// <summary>
+        /// 检查是否存在指定ID的错误码数据
+        /// </summary>
+        public static bool HasErrorBase(string cfgId)
+        {
+            return ErrorBase_Cache.ContainsKey(cfgId);
         }
         #endregion
 
@@ -6541,12 +8036,12 @@ namespace Remnant_Afterglow
         /// </summary>
         public static void ClearAllCache()
         {
-            BuffTag_Cache.Clear();
-            BuffData_Cache.Clear();
             ViewBase_Cache.Clear();
             UpdateLog_Cache.Clear();
             AttainmentPage_Cache.Clear();
             AttainmentBase_Cache.Clear();
+            Archival_Cache.Clear();
+            ArchivalItem_Cache.Clear();
             ScienceRange_Cache.Clear();
             ScienceBase_Cache.Clear();
             ScienceData_Cache.Clear();
@@ -6562,66 +8057,75 @@ namespace Remnant_Afterglow
             GlobalConfigList_Cache.Clear();
             FunctionTemplate_Cache.Clear();
             CameraBase_Cache.Clear();
-            CameraAssemblyBase_Cache.Clear();
             AnimaUnit_Cache.Clear();
-            AnimaTower_Cache.Clear();
             AnimaBuild_Cache.Clear();
+            AnimaTower_Cache.Clear();
             AnimaWeapon_Cache.Clear();
             AnimaWorker_Cache.Clear();
-            AnimaBullet_Cache.Clear();
             AnimaExplode_Cache.Clear();
+            AnimaUnit2_Cache.Clear();
+            AnimaBuild2_Cache.Clear();
+            AnimaTower2_Cache.Clear();
+            AnimaWorker2_Cache.Clear();
+            AnimaWeapon2_Cache.Clear();
+            AnimaExplode2_Cache.Clear();
             SequenceMapBase_Cache.Clear();
             SpeciallyEffect_Cache.Clear();
+            ObjectEffectImage_Cache.Clear();
+            GenerateFixedMap_Cache.Clear();
             MapFixedSet_Cache.Clear();
             MapFixedMaterial_Cache.Clear();
-            GenerateFixedMap_Cache.Clear();
             MapPassType_Cache.Clear();
             MapEdge_Cache.Clear();
+            MapWallShadow_Cache.Clear();
             MapMassif_Cache.Clear();
             MapImageLayer_Cache.Clear();
-            MapPhysicsLayer_Cache.Clear();
-            MapNavigate_Cache.Clear();
             MapMaterial_Cache.Clear();
             GenerateBottomMap_Cache.Clear();
             MapExtraDraw_Cache.Clear();
             GenerateBigStruct_Cache.Clear();
-            BigMapMaterial_Cache.Clear();
+            MapDecorate_Cache.Clear();
             BigMapBase_Cache.Clear();
+            BigMapMaterial_Cache.Clear();
             BigMapBigCell_Cache.Clear();
             BigMapCellLogic_Cache.Clear();
             BigMapEvent_Cache.Clear();
-            UnitGroupType_Cache.Clear();
-            UnitGroupData_Cache.Clear();
-            ChapterBase_Cache.Clear();
-            ChapterCopyBase_Cache.Clear();
             CopyBrush_Cache.Clear();
             BrushPoint_Cache.Clear();
             WaveBase_Cache.Clear();
+            UnitGroupData_Cache.Clear();
+            UnitGroupType_Cache.Clear();
+            ChapterBase_Cache.Clear();
+            ChapterCopyBase_Cache.Clear();
+            CopyBuildLimit_Cache.Clear();
             ChapterCopyUI_Cache.Clear();
             BackgroundMusic_Cache.Clear();
-            SoundEffect_Cache.Clear();
-            BulletScript_Cache.Clear();
-            BulletAction_Cache.Clear();
-            BulletFire_Cache.Clear();
-            BulletScene_Cache.Clear();
+            UISoundSfx_Cache.Clear();
+            SoundSfx_Cache.Clear();
             BulletData_Cache.Clear();
             BulletLogic_Cache.Clear();
-            BulletCollide_Cache.Clear();
+            LaserBulletLogic_Cache.Clear();
             ExplodeData_Cache.Clear();
             ExplodeHarm_Cache.Clear();
             UnitData_Cache.Clear();
             UnitLogic_Cache.Clear();
-            AttrEvent_Cache.Clear();
             BaseObjectShow_Cache.Clear();
             ObjectBottomBar_Cache.Clear();
             ObjectSideBar_Cache.Clear();
             BaseObjectData_Cache.Clear();
-            BaseObjectWeapon_Cache.Clear();
             BuildData_Cache.Clear();
             WorkerData_Cache.Clear();
             WeaponData_Cache.Clear();
             WeaponData2_Cache.Clear();
-            TowerData_Cache.Clear();
+            WreckAge_Cache.Clear();
+            BuffTag_Cache.Clear();
+            BuffData_Cache.Clear();
+            AttrEvent_Cache.Clear();
+            GlobalAttrEvent_Cache.Clear();
+            GlobalAttributeBase_Cache.Clear();
+            GlobalAttrTem_Cache.Clear();
+            GlobalAttrData_Cache.Clear();
+            GlobalAttrMod_Cache.Clear();
             AttributeBase_Cache.Clear();
             AttrCalculate_Cache.Clear();
             AttrDependency_Cache.Clear();
@@ -6634,8 +8138,8 @@ namespace Remnant_Afterglow
             CampBase_Cache.Clear();
             GameDiffBase_Cache.Clear();
             BagData_Cache.Clear();
-            MoneyBase_Cache.Clear();
             ItemData_Cache.Clear();
+            MoneyBase_Cache.Clear();
             ErrorBase_Cache.Clear();
         }
 

@@ -7,27 +7,27 @@ namespace Remnant_Afterglow
     public partial class ItemData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 道具id
         /// </summary>
         public int ItemId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 道具名称
         /// </summary>
         public string ItemName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 道具描述
         /// </summary>
         public string ItemDesc { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 道具类型
         /// </summary>
         public int ItemType { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 所在背包id
         /// </summary>
         public int BagId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 创建存档时给与的数量
         ///为0表示创建存档时不给道具
         /// </summary>

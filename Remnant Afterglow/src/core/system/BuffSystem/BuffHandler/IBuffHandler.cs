@@ -1,4 +1,4 @@
-using Godot.Community.ManagedAttributes;
+using ManagedAttributes;
 using System;
 
 namespace Remnant_Afterglow

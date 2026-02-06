@@ -135,7 +135,7 @@
         "KEY_INDEX": "41",
         "AttributeId": 41,
         "ShowName": "移动加速度",
-        "AttributeDescribe": "实体自身的移动加速度（每秒）",
+        "AttributeDescribe": "飞行单位的移动加速度（每秒）\n",
         "ShowColor": [
             0,
             0,
@@ -146,8 +146,32 @@
     {
         "KEY_INDEX": "42",
         "AttributeId": 42,
-        "ShowName": "旋转速度",
-        "AttributeDescribe": "实体自身的旋转速度（每秒）",
+        "ShowName": "最大转向速率",
+        "AttributeDescribe": "飞行单位，最大转向速率，单位：弧度/秒",
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "43",
+        "AttributeId": 43,
+        "ShowName": "最小转弯半径",
+        "AttributeDescribe": "最小转弯半径（像素），限制飞行单位转弯的尖锐程度",
+        "ShowColor": [
+            0,
+            0,
+            0
+        ],
+        "DependencyIdList": []
+    },
+    {
+        "KEY_INDEX": "44",
+        "AttributeId": 44,
+        "ShowName": "倾斜系数",
+        "AttributeDescribe": "倾斜系数，控制转弯时飞行单位的倾斜程度",
         "ShowColor": [
             0,
             0,

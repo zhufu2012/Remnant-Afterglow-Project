@@ -4,41 +4,41 @@ using BulletMLLib.SharedProject.Nodes;
 namespace BulletMLLib.SharedProject.Tasks;
 
 /// <summary>
-/// This task changes the speed a little bit every frame.
+/// 这个任务每帧都会稍微改变速度。
 /// </summary>
 public class ChangeSpeedTask : BulletMLTask
 {
-    #region Members
+    #region 成员变量
 
     /// <summary>
-    /// The amount pulled out of the node
+    /// 从节点中提取的速度值
     /// </summary>
     private float NodeSpeed;
 
     /// <summary>
-    /// the type of speed change, pulled out of the node
+    /// 速度变化的类型，从节点中提取
     /// </summary>
     private ENodeType ChangeType;
 
     /// <summary>
-    /// How long to run this task... measured in frames
+    /// 运行此任务的时间长度...以帧为单位
     /// </summary>
     private float Duration { get; set; }
 
     /// <summary>
-    /// How many frames this dude has ran
+    /// 此任务已运行的帧数
     /// </summary>
     private float RunDelta { get; set; }
 
-    #endregion //Members
+    #endregion //成员变量
 
-    #region Methods
+    #region 方法
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BulletMLTask"/> class.
+    /// 初始化 <see cref="BulletMLTask"/> 类的新实例。
     /// </summary>
-    /// <param name="node">Node.</param>
-    /// <param name="owner">Owner.</param>
+    /// <param name="node">节点。</param>
+    /// <param name="owner">所有者。</param>
     public ChangeSpeedTask(ChangeSpeedNode node, BulletMLTask owner)
         : base(node, owner)
     {
@@ -47,20 +47,20 @@ public class ChangeSpeedTask : BulletMLTask
     }
 
     /// <summary>
-    /// this sets up the task to be run.
+    /// 设置任务准备运行。
     /// </summary>
-    /// <param name="bullet">Bullet.</param>
+    /// <param name="bullet">子弹。</param>
     protected override void SetupTask(Bullet bullet)
     {
-        //set the length of time to run this dude
+        // 设置运行此任务的时间长度
         Duration = Node.GetChildValue(ENodeName.term, this, bullet);
 
-        //check for divide by 0
+        // 检查除零错误
         if (0.0f == Duration)
         {
             Duration = 1.0f;
         }
-
+        //节点设置的速度
         NodeSpeed = Node.GetChildValue(ENodeName.speed, this, bullet);
         ChangeType = Node.GetChild(ENodeName.speed).NodeType;
     }
@@ -76,11 +76,11 @@ public class ChangeSpeedTask : BulletMLTask
     }
 
     /// <summary>
-    /// Run this task and all subtasks against a bullet
-    /// This is called once a frame during runtime.
+    /// 针对子弹运行此任务和所有子任务
+    /// 在运行时每帧调用一次。
     /// </summary>
-    /// <returns>ERunStatus: whether this task is done, paused, or still running</returns>
-    /// <param name="bullet">The bullet to update this task against.</param>
+    /// <returns>ERunStatus: 此任务是已完成、暂停还是仍在运行</returns>
+    /// <param name="bullet">要针对其更新此任务的子弹。</param>
     public override ERunStatus Run(Bullet bullet)
     {
         bullet.Speed += GetVelocity(bullet);
@@ -92,9 +92,9 @@ public class ChangeSpeedTask : BulletMLTask
             return ERunStatus.End;
         }
 
-        //since this task isn't finished, run it again next time
+        // 由于此任务未完成，下次继续运行
         return ERunStatus.Continue;
     }
 
-    #endregion //Methods
+    #endregion //方法
 }

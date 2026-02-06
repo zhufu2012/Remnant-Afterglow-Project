@@ -10,87 +10,75 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_knight/guild_knight.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_workshop.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_envelope.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_player.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_event.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_depot.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_wish.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_pub.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/science.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/pet/pet_city.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/pet/pet_soul.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/pet/pet_bless_eq.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/pet/pet.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/pet/pet_pos.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/mount_eq.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/xun_bao/xun_bao_record.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/xun_bao/xun_bao_period.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/xun_bao/xun_bao_player.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/xun_bao/xun_bao.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/xo_room/xo_room_player.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/pet/pet_shengshu.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/pet/pet_illusion.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/pet/pet_eq_and_star.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/pet/pet_substitution.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/xo_room/xo_room.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/xo_room/xo_room_map.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/xo_room/xo_room_logic.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/mount.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/attainment.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/skill/buff_map.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_instance_zones/guild_ins_zones_map_monster.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_instance_zones/guild_ins_zones_map_collect.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_instance_zones/guild_ins_zones_map_common.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_instance_zones/guild_ins_zones_map_maze.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_instance_zones/guild_ins_zones_map_boss.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_instance_zones/guild_ins_zones_player.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_instance_zones/guild_ins_zones_logic.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_instance_zones/guild_instance_zones.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/skill/skill_lib.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/skill/skill_map.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/skill/skill_up.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/skill/map_armor.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/skill/buff_player.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/skill/skill_player.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/m_guild_envelope.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/skill/skill_new.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/guild/guild_instance_zones/guild_ins_zones_map_welfare.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/skill/map_shield.erl" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Test/player/map/map_pet.erl" root0="SKIP_INSPECTION" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2h8NmWl92mf3PXERZidQZHZjlgj" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/edit/common_view/layer_select" />
-    <property name="project.structure.last.edited" value="项目" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.24827586" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/My Svn/Remnant Afterglow Project/Remnant Afterglow",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\src\edit\common_view\layer_select" />
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\src\core\system\BuffSystem\BuffManager" />
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\src\core\game\mapLogic" />
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\src\core\managers" />
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\Test\player" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\core\characters\units\hull_land" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\core\characters\units\hull_air" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\librarys\managedAttributes\globa_attribute" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\librarys\SteeringBehaviors" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\core\world\component\draw\procedural_anim_sprite" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\src\edit\edit_map\tileMap" />
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\src\core\characters\State" />
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\src\edit\edit_map" />
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\src\core\game\mapLogic\operation" />
-      <recent name="F:\Remnant Afterglow Project\Remnant Afterglow\src\core\game\mapLogic" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\core\characters\units" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\librarys\managedAttributes\attribute" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\core\autoloads" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\core\managers" />
+      <recent name="D:\Remnant Afterglow ProJect\Remnant Afterglow\src\core\game\mapLogic\waveBrush" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <created>1745478960894</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745478960894</updated>
+      <workItem from="1745478962149" duration="1050000" />
+      <workItem from="1745493004116" duration="1748000" />
+      <workItem from="1745726336068" duration="641000" />
+      <workItem from="1745742940605" duration="1898000" />
+      <workItem from="1745747171273" duration="101000" />
+      <workItem from="1745981168342" duration="806000" />
+      <workItem from="1745981985669" duration="11246000" />
+      <workItem from="1746503506509" duration="4456000" />
+      <workItem from="1746587684815" duration="5799000" />
+      <workItem from="1746670831304" duration="6815000" />
+      <workItem from="1746696139966" duration="1314000" />
+      <workItem from="1746861991390" duration="8049000" />
+      <workItem from="1747015093498" duration="153000" />
+      <workItem from="1747015258122" duration="29772000" />
+      <workItem from="1770284218301" duration="632000" />
+      <workItem from="1770341836850" duration="2677000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
 </project>

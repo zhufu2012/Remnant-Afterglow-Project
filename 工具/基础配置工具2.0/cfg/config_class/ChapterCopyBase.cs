@@ -8,58 +8,57 @@ namespace Remnant_Afterglow
     public partial class ChapterCopyBase
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 战役id
         ///cfg_ChapterBase_战役基础数据表id
         /// </summary>
         public int ChapterId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 关卡id
         /// </summary>
         public int CopyId { get; set; }
-        /// <summary>        
-        /// 关卡UIid
+        /// <summary>
+        /// 关卡的描述数据id
+        ///cfg_ChapterCopyUI_章节关卡描述数据
         /// </summary>
         public int CopyUiId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 关卡类型
         ///0 常规刷怪关
-        ///1 点击奖励关
         /// </summary>
         public int CopyType { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 地图相机id
         /// </summary>
         public int CameraId { get; set; }
-        /// <summary>        
-        /// 关卡所用地图类型
-        ///1 固定地图
-        ///2 随机地图
+        /// <summary>
+        /// 地图文件名称，可以带文件夹
+        ///默认路径在这里 Remnant Afterglow\map\
+        ///举例：1.map
+        ///2.map
+        ///key/3.map
+        ///无法仅填写#BASEVALUE
         /// </summary>
-        public int MapType { get; set; }
-        /// <summary>        
-        /// 关卡所用地图id
-        ///地图类型为1，使用地图生成.xlsx表的
-        ///cfg_GenerateFixedMap_固定地图配置
-        ///地图类型为2：
-        ///地图生成.xlsx表的
-        ///cfg_GenerateBottomMap_
-        ///随机生成地图方式表id
-        /// </summary>
-        public int GenerateMapId { get; set; }
-        /// <summary>        
+        public string MapName { get; set; }
+        /// <summary>
         /// 关卡节点
         ///位置坐标
         /// </summary>
         public Vector2I Pos { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 关卡在大地图上
         ///显示用节点id
-        ///cfg_BigMapCell_大地图节点的id
+        ///cfg_BigMapMaterial_大地图节点的id
         ///
         /// </summary>
         public int NodeId { get; set; }
-        /// <summary>        
+        /// <summary>
+        /// 全局属性模板Id列表
+        ///每帧运行一次
+        ///cfg_GlobalAttrTem_属性模板表
+        /// </summary>
+        public List<int> GloTemList { get; set; }
+        /// <summary>
         /// 后继关卡id列表
         ///通关该关卡后会解锁的
         ///关卡id
@@ -76,10 +75,10 @@ namespace Remnant_Afterglow
 			CopyUiId = (int)dict["CopyUiId"];
 			CopyType = (int)dict["CopyType"];
 			CameraId = (int)dict["CameraId"];
-			MapType = (int)dict["MapType"];
-			GenerateMapId = (int)dict["GenerateMapId"];
+			MapName = (string)dict["MapName"];
 			Pos = (Vector2I)dict["Pos"];
 			NodeId = (int)dict["NodeId"];
+			GloTemList = (List<int>)dict["GloTemList"];
 			CopyIdList = (List<int>)dict["CopyIdList"];
 			InitData();
         }
@@ -93,10 +92,10 @@ namespace Remnant_Afterglow
 			CopyUiId = (int)dict["CopyUiId"];
 			CopyType = (int)dict["CopyType"];
 			CameraId = (int)dict["CameraId"];
-			MapType = (int)dict["MapType"];
-			GenerateMapId = (int)dict["GenerateMapId"];
+			MapName = (string)dict["MapName"];
 			Pos = (Vector2I)dict["Pos"];
 			NodeId = (int)dict["NodeId"];
+			GloTemList = (List<int>)dict["GloTemList"];
 			CopyIdList = (List<int>)dict["CopyIdList"];
 			InitData();
         }
@@ -108,10 +107,10 @@ namespace Remnant_Afterglow
 			CopyUiId = (int)dict["CopyUiId"];
 			CopyType = (int)dict["CopyType"];
 			CameraId = (int)dict["CameraId"];
-			MapType = (int)dict["MapType"];
-			GenerateMapId = (int)dict["GenerateMapId"];
+			MapName = (string)dict["MapName"];
 			Pos = (Vector2I)dict["Pos"];
 			NodeId = (int)dict["NodeId"];
+			GloTemList = (List<int>)dict["GloTemList"];
 			CopyIdList = (List<int>)dict["CopyIdList"];
 			InitData();
         }

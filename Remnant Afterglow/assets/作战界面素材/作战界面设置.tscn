@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://b63hft33xmnig"]
+
+[ext_resource type="Texture2D" uid="uid://c2u42psw4ri1u" path="res://assets/（关卡选择界面-结算界面）素材/通用窗口1.png" id="1_lsx0o"]
+
+[node name="作战界面设置" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="背景" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.803922)
+layout_mode = 0
+offset_right = 209.0
+offset_bottom = 270.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_lsx0o")
+patch_margin_left = 29
+patch_margin_top = 10
+patch_margin_right = 30
+patch_margin_bottom = 11

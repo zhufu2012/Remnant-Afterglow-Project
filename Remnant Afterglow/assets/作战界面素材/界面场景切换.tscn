@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpuxmga7vhlpb"]
+
+[ext_resource type="Texture2D" uid="uid://bllj65wkucniu" path="res://assets/主界面素材/大闸门3.png" id="5_ov2fi"]
+
+[sub_resource type="Animation" id="Animation_g7lsd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/大闸门4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2425, 540)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/大闸门3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-510, 540)]
+}
+
+[sub_resource type="Animation" id="Animation_bjnr6"]
+resource_name = "关闭"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/大闸门4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.349892, 0.389307, 0.435565, 0.499191),
+"transitions": PackedFloat32Array(1.7411, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2425, 540), Vector2(1463, 540), Vector2(1452, 540), Vector2(1485, 540), Vector2(1463, 540)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/大闸门3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.349892, 0.389307, 0.435565, 0.499191),
+"transitions": PackedFloat32Array(1.7411, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-510, 540), Vector2(455, 540), Vector2(444, 540), Vector2(477, 540), Vector2(455, 540)]
+}
+
+[sub_resource type="Animation" id="Animation_8sjlb"]
+resource_name = "打开"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/大闸门4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.199912, 0.497858),
+"transitions": PackedFloat32Array(0.217637, 1.93187, 1),
+"update": 0,
+"values": [Vector2(1463, 540), Vector2(1488.58, 540), Vector2(2425, 540)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/大闸门3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.199912, 0.497858),
+"transitions": PackedFloat32Array(0.217637, 1.93187, 1),
+"update": 0,
+"values": [Vector2(455, 540), Vector2(429.343, 540), Vector2(-510, 540)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hh13d"]
+_data = {
+&"RESET": SubResource("Animation_g7lsd"),
+&"关闭动画": SubResource("Animation_bjnr6"),
+&"开启动画": SubResource("Animation_8sjlb")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hh13d")
+}
+autoplay = "关闭动画"
+
+[node name="大闸门3" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(-510, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("5_ov2fi")
+
+[node name="大闸门4" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(2425, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("5_ov2fi")
+flip_h = true

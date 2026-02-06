@@ -1,0 +1,246 @@
+[gd_scene load_steps=9 format=3 uid="uid://bv0o1v7gn4m15"]
+
+[ext_resource type="Texture2D" uid="uid://c2u42psw4ri1u" path="res://assets/（关卡选择界面-结算界面）素材/通用窗口1.png" id="1_5a2f7"]
+[ext_resource type="Script" uid="uid://bwkiu6pmvpej2" path="res://src/core/game/mapLogic/waveBrush/BrushSettleView.cs" id="1_nl7u6"]
+[ext_resource type="Texture2D" uid="uid://cqu3o57d8oy3k" path="res://src/core/game/mapLogic/计算机核心背景5.png" id="2_s838o"]
+[ext_resource type="Texture2D" uid="uid://c8hlsuutj0dku" path="res://src/core/game/mapLogic/计算机核心-Sheet.png" id="3_rygk6"]
+[ext_resource type="Texture2D" uid="uid://c61puxtsoaltt" path="res://src/core/game/mapLogic/计算机核心背景3.png" id="4_nl7u6"]
+[ext_resource type="Texture2D" uid="uid://bf5nbmjsk6a6p" path="res://src/core/game/mapLogic/高级计算机核心-Sheet.png" id="5_pyi52"]
+[ext_resource type="Texture2D" uid="uid://ded403pf3je48" path="res://src/core/game/mapLogic/次元计算机核心-Sheet.png" id="6_3fqsx"]
+[ext_resource type="Texture2D" uid="uid://dy1scmeohopg1" path="res://assets/作战界面素材/黑色边框.png" id="7_548dq"]
+
+[node name="关卡选择界面" type="Popup" node_paths=PackedStringArray("RetButton", "SettleButton")]
+initial_position = 2
+size = Vector2i(1920, 1080)
+visible = true
+always_on_top = true
+mouse_passthrough = true
+content_scale_factor = 1.75
+script = ExtResource("1_nl7u6")
+RetButton = NodePath("NinePatchRect/返回大地图/返回大地图")
+SettleButton = NodePath("NinePatchRect/任务结算/任务结算按钮")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.5
+offset_top = -90.0
+offset_right = 140.5
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5a2f7")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="任务结算" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 120.0
+grow_vertical = 0
+texture = ExtResource("1_5a2f7")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="任务结算按钮" type="Button" parent="NinePatchRect/任务结算"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 121.0
+offset_bottom = 40.0
+disabled = true
+text = "任务结算"
+flat = true
+
+[node name="返回大地图" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_5a2f7")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="返回大地图" type="Button" parent="NinePatchRect/返回大地图"]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+text = "返回大地图"
+flat = true
+
+[node name="NinePatchRect3作战开始2" type="NinePatchRect" parent="NinePatchRect"]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0901857
+anchor_bottom = 0.0901857
+offset_left = -163.0
+offset_top = 86.0
+offset_right = 453.0
+offset_bottom = 307.0
+texture = ExtResource("1_5a2f7")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/NinePatchRect3作战开始2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.176471
+anchor_bottom = -0.176471
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 606.0
+offset_bottom = 209.0
+bbcode_enabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="胜利与失败" type="NinePatchRect" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.5665
+offset_right = 56.5665
+offset_bottom = 56.69
+grow_horizontal = 2
+texture = ExtResource("1_5a2f7")
+region_rect = Rect2(0, 0, 40, 40)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="胜利" type="Label" parent="NinePatchRect/胜利与失败"]
+layout_mode = 0
+offset_right = 117.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 40
+text = "胜利"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="失败" type="Label" parent="NinePatchRect/胜利与失败"]
+visible = false
+layout_mode = 0
+offset_right = 117.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 40
+text = "失败"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="结算的计算机核心奖励" type="TextureProgressBar" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -29.9999
+offset_right = 125.0
+offset_bottom = 29.9999
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 5.0
+value = 5.0
+stretch_margin_left = 20
+stretch_margin_top = 20
+stretch_margin_right = 20
+stretch_margin_bottom = 20
+texture_under = ExtResource("2_s838o")
+texture_progress = ExtResource("3_rygk6")
+texture_progress_offset = Vector2(0, 5)
+
+[node name="结算的高级计算机核心奖励" type="TextureProgressBar" parent="NinePatchRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -30.0
+offset_right = 75.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 3.0
+value = 3.0
+stretch_margin_left = 20
+stretch_margin_top = 20
+stretch_margin_right = 20
+stretch_margin_bottom = 20
+texture_under = ExtResource("4_nl7u6")
+texture_progress = ExtResource("5_pyi52")
+texture_progress_offset = Vector2(0, 5)
+
+[node name="结算的次元计算机核心奖励" type="TextureProgressBar" parent="NinePatchRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -30.0
+offset_right = 75.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 3.0
+value = 3.0
+stretch_margin_left = 20
+stretch_margin_top = 20
+stretch_margin_right = 20
+stretch_margin_bottom = 20
+texture_under = ExtResource("4_nl7u6")
+texture_progress = ExtResource("6_3fqsx")
+texture_progress_offset = Vector2(0, 5)
+
+[node name="黑色边框" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.286275)
+z_index = -2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -549.0
+offset_top = -309.0
+offset_right = 549.0
+offset_bottom = 309.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_548dq")

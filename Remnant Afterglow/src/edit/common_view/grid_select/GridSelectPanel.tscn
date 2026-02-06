@@ -1,30 +1,38 @@
 [gd_scene load_steps=2 format=3 uid="uid://idu7fgf7xoq0"]
 
-[ext_resource type="Script" path="res://src/edit/common_view/grid_select/GridSelectPanel.cs" id="1_ivvnn"]
+[ext_resource type="Script" uid="uid://dqwcjr6rdwtrj" path="res://src/edit/common_view/grid_select/GridSelectPanel.cs" id="1_ivvnn"]
 
 [node name="GridSelectPanel" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1420.0
-offset_bottom = -470.0
+offset_right = -872.0
+offset_bottom = -968.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 1
 script = ExtResource("1_ivvnn")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 500.0
-offset_bottom = 100.0
+offset_left = 863.0
+offset_top = 116.0
+offset_right = 1048.0
+offset_bottom = 216.0
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 36.0
+offset_right = 1.0
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -57,16 +65,15 @@ text = "图集序号："
 
 [node name="ImageLayer" type="Label" parent="Control/Panel"]
 layout_mode = 0
-offset_left = 224.0
-offset_top = 39.0
-offset_right = 344.0
-offset_bottom = 64.0
+offset_top = 99.0
+offset_right = 120.0
+offset_bottom = 124.0
 text = "所在图层："
 
 [node name="Button" type="Button" parent="Control/Panel"]
 layout_mode = 0
-offset_left = 368.0
-offset_right = 468.0
+offset_left = -107.0
+offset_right = -7.0
 offset_bottom = 100.0
 expand_icon = true
 
@@ -75,7 +82,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 100.0
-offset_bottom = 100.0
+offset_right = 1051.0
+offset_bottom = 111.0
 grow_horizontal = 2
 grow_vertical = 2
+tab_alignment = 1

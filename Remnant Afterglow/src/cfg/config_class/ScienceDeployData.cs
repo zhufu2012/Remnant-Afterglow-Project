@@ -7,16 +7,16 @@ namespace Remnant_Afterglow
     public partial class ScienceDeployData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 战役id
         ///cfg_ChapterBase_战役基础数据表id
         /// </summary>
         public int ChapterId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 常规字段
         /// </summary>
         public int Key2Id { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 最后一个字段
         /// </summary>
         public int CopyId { get; set; }

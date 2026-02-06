@@ -1,0 +1,599 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmph15h8jqx10"]
+
+[ext_resource type="PackedScene" uid="uid://c58xnpy5lbipd" path="res://src/librarys/Laser/BaseLaser.tscn" id="1_4suwa"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BaseLaser" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser2" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser3" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser4" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser5" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser6" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser7" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser8" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser9" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser10" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser11" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser12" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser13" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser14" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser15" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser16" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser17" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser18" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser19" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser20" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser21" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser22" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser23" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser24" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser25" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser26" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser27" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser28" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser29" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser30" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser31" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser32" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser33" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser34" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser35" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser36" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser37" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser38" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser39" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser40" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser41" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser42" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser43" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser44" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser45" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser46" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser47" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser48" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser49" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser50" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser51" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser52" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser53" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser54" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser55" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(266, 84)
+
+[node name="BaseLaser56" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(266, 84)
+
+[node name="BaseLaser57" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(266, 84)
+
+[node name="BaseLaser58" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(266, 84)
+
+[node name="BaseLaser59" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(266, 84)
+
+[node name="BaseLaser60" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(266, 84)
+
+[node name="BaseLaser61" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(266, 84)
+
+[node name="BaseLaser62" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(266, 84)
+
+[node name="BaseLaser63" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser64" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser65" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser66" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser67" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser68" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser69" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser70" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser71" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser72" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser73" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser74" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser75" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser76" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser77" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser78" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser79" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser80" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser81" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser82" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser83" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser84" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser85" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser86" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(184, 46)
+
+[node name="BaseLaser87" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(184, 46)
+
+[node name="BaseLaser88" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(184, 46)
+
+[node name="BaseLaser89" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(184, 46)
+
+[node name="BaseLaser90" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(184, 46)
+
+[node name="BaseLaser91" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(184, 46)
+
+[node name="BaseLaser92" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser93" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser94" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser95" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser96" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser97" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser98" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser99" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser100" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser101" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser102" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser103" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser104" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser105" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser106" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser107" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser108" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser109" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser110" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser111" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser112" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser113" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser114" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser115" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser116" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser117" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser118" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser119" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser120" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser121" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser122" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser123" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser124" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser125" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser126" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser127" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser128" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser129" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser130" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser131" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser132" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser133" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser134" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser135" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser136" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser137" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser138" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser139" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser140" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser141" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser142" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser143" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser144" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(79, 38)
+
+[node name="BaseLaser145" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser146" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser147" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser148" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser149" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(119, 93)
+
+[node name="BaseLaser150" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(119, 93)
+
+[node name="BaseLaser151" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(119, 93)
+
+[node name="BaseLaser152" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(119, 93)
+
+[node name="BaseLaser153" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(119, 93)
+
+[node name="BaseLaser154" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(119, 93)
+
+[node name="BaseLaser155" parent="." instance=ExtResource("1_4suwa")]
+position = Vector2(119, 93)
+
+[node name="BaseLaser156" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser157" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser158" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser159" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser160" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser161" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser162" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser163" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser164" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser165" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser166" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser167" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser168" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser169" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser170" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser171" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser172" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser173" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser174" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser175" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser176" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser177" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser178" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser179" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser180" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser181" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser182" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser183" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser184" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser185" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser186" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser187" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser188" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser189" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser190" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser191" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser192" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser193" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser194" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser195" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser196" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser197" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser198" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser199" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser200" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser201" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser202" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser203" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser204" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser205" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser206" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser207" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser208" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser209" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser210" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser211" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser212" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser213" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser214" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser215" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser216" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser217" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser218" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser219" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser220" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser221" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser222" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser223" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser224" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser225" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser226" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser227" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser228" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser229" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser230" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser231" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser232" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser233" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser234" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser235" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser236" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser237" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser238" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser239" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser240" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser241" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser242" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser243" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser244" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser245" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser246" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser247" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser248" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser249" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser250" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser251" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser252" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser253" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser254" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser255" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser256" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser257" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser258" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser259" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser260" parent="." instance=ExtResource("1_4suwa")]
+
+[node name="BaseLaser261" parent="." instance=ExtResource("1_4suwa")]

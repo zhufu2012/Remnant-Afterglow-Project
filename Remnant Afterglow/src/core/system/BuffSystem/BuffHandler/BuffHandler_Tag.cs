@@ -19,12 +19,14 @@ namespace Remnant_Afterglow
         public Dictionary<int, HashSet<int>> ReplaceTagDict = new Dictionary<int, HashSet<int>>();
         /// <summary>
         /// 禁止Tag字段，当新增buff上有以下tag，不添加该buff,buff过期时需要移除
-        // <TagId,List<BuffId>>
+        /// <TagId,List<BuffId>>
         /// 移除逻辑是检查所有tagId,有就移除，为空列表时移除tagId项
         /// </summary>
         public Dictionary<int, HashSet<int>> BanTagDict = new Dictionary<int, HashSet<int>>();
 
-        //初始化buffTag数据
+        /// <summary>
+        /// 初始化buffTag数据
+        /// </summary>
         public void InitBuffTag()
         {
             foreach (var info in buffs)

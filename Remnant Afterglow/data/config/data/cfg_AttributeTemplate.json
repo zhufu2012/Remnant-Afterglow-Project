@@ -65,8 +65,22 @@
     {
         "KEY_INDEX": "13",
         "TempLateId": 13,
-        "TempLateName": "移动速度基础模板",
+        "TempLateName": "陆地单位临时模板，用于单位显示",
         "IsCover": true,
         "ObjectId": -13
+    },
+    {
+        "KEY_INDEX": "14",
+        "TempLateId": 14,
+        "TempLateName": "空军单位临时模板，用于单位显示",
+        "IsCover": true,
+        "ObjectId": -14
+    },
+    {
+        "KEY_INDEX": "99",
+        "TempLateId": 99,
+        "TempLateName": "所有建筑临时模板，用于建筑显示",
+        "IsCover": true,
+        "ObjectId": -99
     }
 ]

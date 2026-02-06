@@ -2,9 +2,6 @@
     {
         "KEY_INDEX": "1",
         "CameraId": 1,
-        "AssemblyIdList": [
-            1
-        ],
         "StartPos": [
             576.0,
             324.0
@@ -17,7 +14,7 @@
         ],
         "IsZoomIn": true,
         "IsZoomOut": true,
-        "MaxZoom": 2.0,
+        "MaxZoom": 3.0,
         "MinZoom": 0.5,
         "ZoomIncrement": [
             0.05,
@@ -32,13 +29,6 @@
     {
         "KEY_INDEX": "2",
         "CameraId": 2,
-        "AssemblyIdList": [
-            2,
-            3,
-            4,
-            5,
-            6
-        ],
         "StartPos": [
             576.0,
             324.0
@@ -52,7 +42,7 @@
         "IsZoomIn": true,
         "IsZoomOut": true,
         "MaxZoom": 2.0,
-        "MinZoom": 0.5,
+        "MinZoom": 0.25,
         "ZoomIncrement": [
             0.05,
             0.05

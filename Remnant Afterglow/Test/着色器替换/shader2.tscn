@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://8lofjxx37s1j"]
+
+[ext_resource type="Script" uid="uid://cb0u0a4qoqlhf" path="res://Test/着色器替换/Shader2.cs" id="1_io55j"]
+
+[node name="Shader2" type="Node2D"]
+script = ExtResource("1_io55j")

@@ -7,22 +7,22 @@ namespace Remnant_Afterglow
     public partial class MapFixedSet
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 固定地图编辑用图集id
         ///逻辑图集id默认为1
         /// </summary>
         public int EditImageSetId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 编辑图集的名称
         /// </summary>
         public string EditSetName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 所在图层
         ///具体看 图层相关.xlsx的
         ///cfg_MapImageLayer_图像层配置表
         /// </summary>
         public int ImageLayer { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 固定地图材料id列表
         ///cfg_MapFixedMaterial_固定地图用材料
         /// </summary>

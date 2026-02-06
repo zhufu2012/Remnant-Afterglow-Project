@@ -1,0 +1,119 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt26wawqlebnj"]
+
+[ext_resource type="Texture2D" uid="uid://chp2c7ymwx3m" path="res://assets/档案库素材/背景4.png" id="1_yu1to"]
+[ext_resource type="Texture2D" uid="uid://b1j67na81ytf8" path="res://assets/档案库素材/窗口4.png" id="2_vjttc"]
+
+[node name="ArcjovalItemView" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(0.8, 0.8)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+self_modulate = Color(0, 0, 0, 0.482353)
+z_index = -59
+layout_mode = 0
+offset_left = -5.0
+offset_top = -2.0
+offset_right = 597.0
+offset_bottom = 336.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_yu1to")
+region_rect = Rect2(0, 0, 80, 80)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = -59
+layout_mode = 0
+offset_left = 274.5
+offset_top = 151.75
+offset_right = 735.5
+offset_bottom = 404.75
+scale = Vector2(4, 4)
+texture = ExtResource("1_yu1to")
+region_rect = Rect2(0, 0, 80, 80)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="图片区" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 1710.5
+offset_top = 143.75
+offset_right = 1814.5
+offset_bottom = 400.75
+scale = Vector2(4, 4)
+texture = ExtResource("2_vjttc")
+region_rect = Rect2(0, 0, 80, 80)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 13
+patch_margin_bottom = 12
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="图片区"]
+z_index = -1
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 97.0
+offset_bottom = 251.0
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 262.5
+offset_top = 143.75
+offset_right = 624.5
+offset_bottom = 400.75
+scale = Vector2(4, 4)
+texture = ExtResource("2_vjttc")
+region_rect = Rect2(0, 0, 80, 80)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 13
+patch_margin_bottom = 12
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="NinePatchRect3"]
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 1157.0
+offset_bottom = 823.0
+scale = Vector2(0.3, 0.3)
+localize_numeral_system = false
+focus_mode = 0
+theme_override_colors/word_highlighted_color = Color(1, 1, 1, 0)
+theme_override_colors/current_line_color = Color(0, 0, 0, 0)
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 0)
+theme_override_colors/font_readonly_color = Color(0.450242, 0.686796, 0.52551, 1)
+theme_override_colors/font_color = Color(0.972549, 0.972549, 1, 0)
+theme_override_colors/selection_color = Color(0, 0, 0, 0)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 0)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 0)
+theme_override_colors/caret_color = Color(0, 0, 0, 0)
+theme_override_colors/search_result_border_color = Color(0, 0, 0, 0)
+theme_override_colors/search_result_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 40
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+empty_selection_clipboard_enabled = false
+wrap_mode = 1
+autowrap_mode = 1
+scroll_smooth = true
+scroll_v_scroll_speed = 15.0
+scroll_fit_content_width = true

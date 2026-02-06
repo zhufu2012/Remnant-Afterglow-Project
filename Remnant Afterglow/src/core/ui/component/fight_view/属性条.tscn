@@ -1,16 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbqssr7t207o0"]
+[gd_scene load_steps=5 format=3 uid="uid://cbqssr7t207o0"]
 
-[ext_resource type="Texture2D" uid="uid://yhw2tsqpt83p" path="res://assets/作战界面素材/结构值背景.png" id="1_5suer"]
-[ext_resource type="Script" path="res://src/core/ui/component/fight_view/AttributeBar.cs" id="1_61yq3"]
-[ext_resource type="Texture2D" uid="uid://3cknce6hcltf" path="res://assets/作战界面素材/结构值.png" id="2_go53l"]
+[ext_resource type="Script" uid="uid://c3kivgnukvfn5" path="res://src/core/ui/component/fight_view/AttributeBar.cs" id="1_61yq3"]
+[ext_resource type="Texture2D" uid="uid://cmxp1vmdhno2l" path="res://src/core/ui/component/fight_view/结构值背景2.png" id="1_pkdx2"]
+[ext_resource type="Texture2D" uid="uid://djdoksfn8dynf" path="res://src/core/ui/component/fight_view/结构值5.png" id="2_pum2s"]
+[ext_resource type="Texture2D" uid="uid://cch4myqu264da" path="res://src/core/ui/component/fight_view/护盾值2.png" id="4_pum2s"]
 
-[node name="AttributeBar" type="TextureProgressBar"]
+[node name="AttributeBar" type="TextureProgressBar" node_paths=PackedStringArray("shield_bar")]
 texture_filter = 1
-offset_right = 36.0
-offset_bottom = 3.0
-value = 50.0
+offset_right = 200.0
+offset_bottom = 20.0
+value = 100.0
 nine_patch_stretch = true
-texture_under = ExtResource("1_5suer")
-texture_progress = ExtResource("2_go53l")
-tint_progress = Color(0, 1, 0, 1)
+texture_under = ExtResource("1_pkdx2")
+texture_progress = ExtResource("2_pum2s")
 script = ExtResource("1_61yq3")
+shield_bar = NodePath("shield")
+
+[node name="shield" type="TextureProgressBar" parent="."]
+z_index = 1
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 20.0
+value = 100.0
+texture_progress = ExtResource("4_pum2s")

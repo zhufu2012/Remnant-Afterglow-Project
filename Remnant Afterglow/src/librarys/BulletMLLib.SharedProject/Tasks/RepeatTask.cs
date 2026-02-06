@@ -4,18 +4,18 @@ using BulletMLLib.SharedProject.Nodes;
 namespace BulletMLLib.SharedProject.Tasks;
 
 /// <summary>
-/// This is a task..each task is the action from a single xml node, for one bullet.
-/// basically each bullet makes a tree of these to match its pattern
+/// 这是一个任务..每个任务都是单个xml节点对一个子弹的操作。
+/// 基本上每个子弹都会创建一个这样的树来匹配其模式
 /// </summary>
 public class RepeatTask : BulletMLTask
 {
-    #region Methods
+    #region 方法
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BulletMLTask"/> class.
+    /// 初始化 <see cref="BulletMLTask"/> 类的新实例。
     /// </summary>
-    /// <param name="node">Node.</param>
-    /// <param name="owner">Owner.</param>
+    /// <param name="node">节点。</param>
+    /// <param name="owner">所有者。</param>
     public RepeatTask(RepeatNode node, BulletMLTask owner)
         : base(node, owner)
     {
@@ -24,17 +24,17 @@ public class RepeatTask : BulletMLTask
     }
 
     /// <summary>
-    /// Init this task and all its sub tasks.
-    /// This method should be called AFTER the nodes are parsed, but BEFORE run is called.
+    /// 初始化此任务及其所有子任务。
+    /// 此方法应在节点解析之后、运行之前调用。
     /// </summary>
-    /// <param name="bullet">the bullet this dude is controlling</param>
+    /// <param name="bullet">此任务控制的子弹</param>
     public override void InitTask(Bullet bullet)
     {
-        //Init task is being called on a RepeatTask, which means all the sequence nodes underneath this one need to be reset
+        // 在RepeatTask上调用Init task，这意味着该任务下的所有序列节点都需要重置
 
-        //Call the HardReset method of the base class
+        // 调用基类的HardReset方法
         HardReset(bullet);
     }
 
-    #endregion //Methods
+    #endregion //方法
 }

@@ -1,7 +1,7 @@
 namespace Remnant_Afterglow
 {
     /// <summary>
-    /// 自动生成的配置类2 BuildData 用于 建筑数据,拓展请在expand_class文件下使用partial拓展
+    /// 自动生成的配置类2 BuildData 用于 建筑及炮塔数据,拓展请在expand_class文件下使用partial拓展
     /// </summary>
     public partial class BuildData
     {

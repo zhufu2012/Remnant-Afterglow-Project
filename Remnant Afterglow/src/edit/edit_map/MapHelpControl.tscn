@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dotgc0a843cxq"]
 
-[ext_resource type="Script" path="res://src/edit/edit_map/MapHelpControl.cs" id="1_g654j"]
+[ext_resource type="Script" uid="uid://b51hn00wthcmj" path="res://src/edit/edit_map/MapHelpControl.cs" id="1_g654j"]
 
 [node name="MapHelpControl" type="Control"]
 z_index = 1

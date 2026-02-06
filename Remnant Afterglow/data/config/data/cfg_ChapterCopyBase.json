@@ -6,13 +6,173 @@
         "CopyUiId": 1,
         "CopyType": 0,
         "CameraId": 1,
-        "MapType": 1,
-        "GenerateMapId": 1,
+        "MapName": "教程0-1.map",
         "Pos": [
             2,
             2
         ],
         "NodeId": 3,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "ChapterId": 1,
+        "CopyId": 2,
+        "CopyUiId": 2,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "教程0-2.map",
+        "Pos": [
+            1,
+            1
+        ],
+        "NodeId": 3,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "1_3",
+        "ChapterId": 1,
+        "CopyId": 3,
+        "CopyUiId": 3,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "教程0-4.map",
+        "Pos": [
+            3,
+            1
+        ],
+        "NodeId": 4,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "1_1000",
+        "ChapterId": 1,
+        "CopyId": 1000,
+        "CopyUiId": 4,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "沙漏.map",
+        "Pos": [
+            2,
+            1
+        ],
+        "NodeId": 5,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "3_101",
+        "ChapterId": 3,
+        "CopyId": 101,
+        "CopyUiId": 101,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "1-1战役模式-常规-初启协议.map",
+        "Pos": [
+            4,
+            1
+        ],
+        "NodeId": 1101,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "3_102",
+        "ChapterId": 3,
+        "CopyId": 102,
+        "CopyUiId": 102,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "1-2战役模式-常规-网格枢纽.map",
+        "Pos": [
+            5,
+            1
+        ],
+        "NodeId": 1102,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "3_103",
+        "ChapterId": 3,
+        "CopyId": 103,
+        "CopyUiId": 103,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "1-3战役模式-常规-怨灵水晶.map",
+        "Pos": [
+            6,
+            2
+        ],
+        "NodeId": 1103,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "3_104",
+        "ChapterId": 3,
+        "CopyId": 104,
+        "CopyUiId": 104,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "1-4战役模式-常规-棱镜之井.map",
+        "Pos": [
+            5,
+            3
+        ],
+        "NodeId": 1104,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "3_105",
+        "ChapterId": 3,
+        "CopyId": 105,
+        "CopyUiId": 105,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "1-5战役模式-常规-钢铁洪流.map",
+        "Pos": [
+            4,
+            3
+        ],
+        "NodeId": 1105,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "3_106",
+        "ChapterId": 3,
+        "CopyId": 106,
+        "CopyUiId": 106,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "1-6战役模式-常规-重炮破晓.map",
+        "Pos": [
+            4,
+            2
+        ],
+        "NodeId": 1106,
+        "GloTemList": [],
+        "CopyIdList": []
+    },
+    {
+        "KEY_INDEX": "3_107",
+        "ChapterId": 3,
+        "CopyId": 107,
+        "CopyUiId": 107,
+        "CopyType": 0,
+        "CameraId": 1,
+        "MapName": "1-7战役模式-常规-次元岛装置.map",
+        "Pos": [
+            5,
+            2
+        ],
+        "NodeId": 1107,
+        "GloTemList": [],
         "CopyIdList": []
     }
 ]

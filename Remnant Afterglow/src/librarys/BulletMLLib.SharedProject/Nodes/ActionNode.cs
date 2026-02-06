@@ -4,17 +4,17 @@ using BulletMLLib.SharedProject.Tasks;
 namespace BulletMLLib.SharedProject.Nodes;
 
 /// <summary>
-/// Action node... also the base class for actionref nodes
+/// 动作节点...也是动作引用节点的基类
 /// </summary>
 public class ActionNode : BulletMLNode
 {
     #region Members
 
     /// <summary>
-    /// Gets or sets the parent repeat node.
-    /// This is the node immediately above this one that says how many times to repeat this action.
+    /// 获取或设置父重复节点。
+    /// 这是紧接在此节点上方的节点，用于指定重复此动作的次数。
     /// </summary>
-    /// <value>The parent repeat node.</value>
+    /// <value>父重复节点。</value>
     public RepeatNode ParentRepeatNode { get; private set; }
 
     #endregion //Members
@@ -22,72 +22,73 @@ public class ActionNode : BulletMLNode
     #region Methods
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="ActionNode"/> class.
+    /// 初始化 <see cref="ActionNode"/> 类的新实例。
     /// </summary>
     public ActionNode()
         : this(ENodeName.action) { }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="ActionNode"/> class.
-    /// this is the constructor used by sub classes
+    /// 初始化 <see cref="ActionNode"/> 类的新实例。
+    /// 这是子类使用的构造函数
     /// </summary>
-    /// <param name="eNodeType">the node type.</param>
+    /// <param name="eNodeType">节点类型。</param>
     public ActionNode(ENodeName eNodeType)
         : base(eNodeType) { }
 
     /// <summary>
-    /// Validates the node.
-    /// Overloaded in child classes to validate that each type of node follows the correct business logic.
-    /// This checks stuff that isn't validated by the XML validation
+    /// 验证节点。
+    /// 在子类中重载以验证每种类型的节点是否遵循正确的业务逻辑。
+    /// 这检查了XML验证未验证的内容
     /// </summary>
     public override void ValidateNode()
     {
-        //Get our parent repeat node if we have one
+        //获取我们的父重复节点（如果有的话）
         ParentRepeatNode = FindParentRepeatNode();
 
-        //do any base class validation
+        //执行任何基类验证
         base.ValidateNode();
     }
 
     /// <summary>
-    /// Finds the parent repeat node.
-    /// This method is not recursive, since action and actionref nodes can be nested.
+    /// 查找父重复节点。
+    /// 此方法不是递归的，因为动作和动作引用节点可以嵌套。
     /// </summary>
-    /// <returns>The parent repeat node.</returns>
+    /// <returns>父重复节点。</returns>
     private RepeatNode FindParentRepeatNode()
     {
-        //Parent node should never ever be empty on an action node
+        //动作节点上的父节点绝不应为空
         if (null == Parent)
         {
             throw new NullReferenceException(
-                "Parent node cannot be empty on an action or actionRef node"
+                "动作或动作引用节点上的父节点不能为空"
             );
         }
 
-        //If the parent is a repeat node, check how many times to repeat this action
+        //如果父节点是重复节点，则检查重复此动作的次数
         if (Parent.Name == ENodeName.repeat)
         {
             return Parent as RepeatNode;
         }
 
-        //This dude is not under a repeat node
+        //这个节点不在重复节点下
         return null;
     }
 
     /// <summary>
-    /// Get the number of times this action should be repeated.
+    /// 获取此动作应重复的次数。
     /// </summary>
-    /// <param name="myTask">the task to get the number of repeat times for</param>
-    /// <returns>The number of times to repeat this node, as specified by a parent Repeat node.</returns>
+    /// <param name="myTask">要获取重复次数的任务</param>
+    /// <param name="bullet">子弹对象</param>
+    /// <returns>根据父重复节点指定的重复此节点的次数。</returns>
     public int RepeatNum(ActionTask myTask, Bullet bullet)
     {
         if (null != ParentRepeatNode)
         {
-            //Get the equation value of the repeat node
+            //获取重复节点的方程值
             return (int)ParentRepeatNode.GetChildValue(ENodeName.times, myTask, bullet);
         }
 
-        //no repeat nodes, just repeat it once
+        //没有重复节点，只重复一次
         return 1;
     }
 

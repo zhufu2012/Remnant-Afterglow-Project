@@ -29,10 +29,7 @@ namespace Remnant_Afterglow
         public static bool PathIsDirectory(string absolutePath)
         {
             FileAttributes attr = File.GetAttributes(absolutePath);
-            if ((attr & FileAttributes.Directory) == FileAttributes.Directory)
-                return true;
-            else
-                return false;
+            return (attr & FileAttributes.Directory) == FileAttributes.Directory;
         }
 
         /// <summary>
@@ -410,8 +407,7 @@ namespace Remnant_Afterglow
         {
             string physicalPath = GetWindowsPhysicalPath(filepath);
             if (physicalPath == null) return false;
-            if (filepath != physicalPath) return false;
-            else return true;
+            return filepath == physicalPath;
         }
 
         [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]

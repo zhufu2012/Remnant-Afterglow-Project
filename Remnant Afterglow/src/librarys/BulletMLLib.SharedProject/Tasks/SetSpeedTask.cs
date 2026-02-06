@@ -4,17 +4,17 @@ using BulletMLLib.SharedProject.Nodes;
 namespace BulletMLLib.SharedProject.Tasks;
 
 /// <summary>
-/// This action sets the velocity of a bullet
+/// 此操作设置子弹的速度
 /// </summary>
 public class SetSpeedTask : BulletMLTask
 {
     #region Methods
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BulletMLTask"/> class.
+    /// 初始化 <see cref="BulletMLTask"/> 类的新实例。
     /// </summary>
-    /// <param name="node">Node.</param>
-    /// <param name="owner">Owner.</param>
+    /// <param name="node">节点。</param>
+    /// <param name="owner">所有者。</param>
     public SetSpeedTask(SpeedNode node, BulletMLTask owner)
         : base(node, owner)
     {

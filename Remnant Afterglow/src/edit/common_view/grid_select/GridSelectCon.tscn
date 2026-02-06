@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4j8tc8gn6l67"]
 
-[ext_resource type="Script" path="res://src/edit/common_view/grid_select/GridSelectCon.cs" id="1_xlubl"]
+[ext_resource type="Script" uid="uid://cqbto4gqqauyb" path="res://src/edit/common_view/grid_select/GridSelectCon.cs" id="1_xlubl"]
 
 [node name="GridSelectCon" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
 offset_top = 10.0

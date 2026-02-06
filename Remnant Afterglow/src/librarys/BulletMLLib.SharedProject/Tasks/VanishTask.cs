@@ -4,17 +4,17 @@ using BulletMLLib.SharedProject.Nodes;
 namespace BulletMLLib.SharedProject.Tasks;
 
 /// <summary>
-/// This task removes a bullet from the game.
+/// 此任务从游戏中移除子弹。
 /// </summary>
 public class VanishTask : BulletMLTask
 {
     #region Methods
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BulletMLTask"/> class.
+    /// 初始化 <see cref="BulletMLTask"/> 类的新实例。
     /// </summary>
-    /// <param name="node">Node.</param>
-    /// <param name="owner">Owner.</param>
+    /// <param name="node">节点。</param>
+    /// <param name="owner">所有者。</param>
     public VanishTask(VanishNode node, BulletMLTask owner)
         : base(node, owner)
     {
@@ -23,14 +23,14 @@ public class VanishTask : BulletMLTask
     }
 
     /// <summary>
-    /// Run this task and all subtasks against a bullet
-    /// This is called once a frame during runtime.
+    /// 针对子弹运行此任务和所有子任务
+    /// 在运行时每帧调用一次。
     /// </summary>
-    /// <returns>ERunStatus: whether this task is done, paused, or still running</returns>
-    /// <param name="bullet">The bullet to update this task against.</param>
+    /// <returns>ERunStatus: 此任务是完成、暂停还是仍在运行</returns>
+    /// <param name="bullet">要针对其更新此任务的子弹。</param>
     public override ERunStatus Run(Bullet bullet)
     {
-        //remove the bullet via the bullet manager interface
+        //通过子弹管理器接口移除子弹
         var manager = bullet.MyBulletManager;
         Debug.Assert(null != manager);
         manager.RemoveBullet(bullet);

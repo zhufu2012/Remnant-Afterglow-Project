@@ -1,20 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://tkl23cncryl3"]
+[gd_scene load_steps=3 format=3 uid="uid://tkl23cncryl3"]
 
-[ext_resource type="Script" path="res://src/core/characters/builds/BuildBase.cs" id="1_h36km"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_76pko"]
-radius = 67.15
+[ext_resource type="Script" uid="uid://uyho7g38mg10" path="res://src/core/characters/builds/BuildBase.cs" id="1_h36km"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cugj0"]
+resource_local_to_scene = true
 
-[node name="BuildBase" type="CharacterBody2D"]
-motion_mode = 1
+[node name="BuildBase" type="Area2D" node_paths=PackedStringArray("AnimatedSprite", "area2DShape")]
+collision_layer = 0
+input_pickable = false
 script = ExtResource("1_h36km")
+AnimatedSprite = NodePath("AnimatedSprite")
+area2DShape = NodePath("占地形状")
 
-[node name="碰撞体" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_76pko")
-
-[node name="占地" type="Area2D" parent="."]
-
-[node name="占地形状" type="CollisionShape2D" parent="占地"]
+[node name="占地形状" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cugj0")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]

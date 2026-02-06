@@ -8,15 +8,15 @@ namespace Remnant_Afterglow
     public partial class MapBuildLable
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 建造列表标签id
         /// </summary>
         public int BuildLableId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 标签名称
         /// </summary>
         public string LableName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 标签图标
         /// </summary>
         public Texture2D LablePng { get; set; }

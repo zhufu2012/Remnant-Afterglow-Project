@@ -8,21 +8,21 @@ namespace Remnant_Afterglow
     public partial class ExplodeData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 爆炸id
         /// </summary>
         public int ExplodeId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 动画类型列表
         ///cfg_AnimaExplode_爆炸动画id列表
         /// </summary>
         public List<int> AnimaTypeList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 爆炸音效id
         ///不写表示无音效
         /// </summary>
         public string SoundId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 碰撞器所在层数
         ///(1-32)
         ///具体请按照
@@ -30,20 +30,20 @@ namespace Remnant_Afterglow
         ///
         /// </summary>
         public int CollisionLayer { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 碰撞器检测哪些层的碰撞器
         ///具体请按照
         ///cfg_MapPhysicsLayer_物理层配置id填写
         ///仅检查碰撞器与这些层的碰撞
         /// </summary>
         public List<int> MaskLayerList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 碰撞器挂载位置
         ///（X,Y）
         ///（0，0）表示单位中心
         /// </summary>
         public Vector2 CollidePos { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 碰撞器形状
         ///1 2D胶囊形状
         ///2 2D矩形
@@ -52,7 +52,7 @@ namespace Remnant_Afterglow
         ///5 2D多线段形状.描述多边形
         /// </summary>
         public int ShapeType { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 碰撞体形状参数列表
         ///当碰撞器形状为
         ///1 2D胶囊形状 （高度,半径）
@@ -63,13 +63,13 @@ namespace Remnant_Afterglow
         ///描述一个多边形的所有顶点
         /// </summary>
         public List<List<float>> ShapePointList { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 碰撞器旋转角度
         ///单位为度数
         ///rotation_degrees
         /// </summary>
         public float CollideRotate { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 额外边距，
         ///如果该实体与另一个实体至少有这么近
         ///就会认为它们正在碰撞

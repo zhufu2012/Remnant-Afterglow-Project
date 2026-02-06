@@ -2,7 +2,7 @@
     {
         "KEY_INDEX": "1",
         "AttrEventId": 1,
-        "AttrEventDescribe": "自律体-1_结构值清空",
+        "AttrEventDescribe": "结构值清空",
         "EventType": 0,
         "Delay": 0,
         "Param1": 0,
@@ -13,7 +13,7 @@
     {
         "KEY_INDEX": "2",
         "AttrEventId": 2,
-        "AttrEventDescribe": "自律体-1_装甲血量一半",
+        "AttrEventDescribe": "装甲血量一半",
         "EventType": 0,
         "Delay": 0,
         "Param1": 0,
@@ -24,7 +24,7 @@
     {
         "KEY_INDEX": "3",
         "AttrEventId": 3,
-        "AttrEventDescribe": "自律体-1_护盾900",
+        "AttrEventDescribe": "护盾900",
         "EventType": 0,
         "Delay": 0,
         "Param1": 0,
@@ -35,7 +35,7 @@
     {
         "KEY_INDEX": "4",
         "AttrEventId": 4,
-        "AttrEventDescribe": "自律体-1_护盾过载恢复",
+        "AttrEventDescribe": "护盾过载恢复",
         "EventType": 0,
         "Delay": 0,
         "Param1": 0,
@@ -46,7 +46,7 @@
     {
         "KEY_INDEX": "5",
         "AttrEventId": 5,
-        "AttrEventDescribe": "自律体-1_开始就触发",
+        "AttrEventDescribe": "开始就触发",
         "EventType": 0,
         "Delay": 0,
         "Param1": 0,
@@ -57,7 +57,7 @@
     {
         "KEY_INDEX": "6",
         "AttrEventId": 6,
-        "AttrEventDescribe": "自律体-1_结构值700",
+        "AttrEventDescribe": "结构值700",
         "EventType": 0,
         "Delay": 0,
         "Param1": 0,
@@ -69,6 +69,50 @@
         "KEY_INDEX": "7",
         "AttrEventId": 7,
         "AttrEventDescribe": "护盾过载恢复降到0后，护盾刷新满值",
+        "EventType": 0,
+        "Delay": 0,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "10",
+        "AttrEventId": 10,
+        "AttrEventDescribe": "护盾过载时，暂停护盾恢复",
+        "EventType": 0,
+        "Delay": 0,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "11",
+        "AttrEventId": 11,
+        "AttrEventDescribe": "护盾过载时，增加护盾过载条",
+        "EventType": 0,
+        "Delay": 0,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "12",
+        "AttrEventId": 12,
+        "AttrEventDescribe": "护盾过载条清空时，护盾直接回满",
+        "EventType": 0,
+        "Delay": 0,
+        "Param1": 0,
+        "Param2": 0,
+        "Param3": 0,
+        "ParamList": []
+    },
+    {
+        "KEY_INDEX": "13",
+        "AttrEventId": 13,
+        "AttrEventDescribe": "胶囊死亡时刷新作战人形",
         "EventType": 0,
         "Delay": 0,
         "Param1": 0,

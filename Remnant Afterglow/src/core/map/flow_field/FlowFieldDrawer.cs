@@ -1,65 +1,95 @@
-﻿using Godot;
-using System;
+using Godot;
 
 namespace Remnant_Afterglow
 {
-    public partial class FlowFieldDrawer : Node2D
-    {
-        private FlowField flowField;
-        private float _arrowLength = 8.0f; // 箭头长度
-        private Color _arrowColor = new Color("white"); // 箭头颜色
-        public override void _Ready()
-        {
-        }
+	public partial class FlowFieldDrawer : Node2D
+	{
+		// 常量预计算
+		private static readonly float ArrowHeadAngle = Mathf.DegToRad(150);
+		private static readonly float ArrowHeadLengthMultiplier = 0.4f;
+		private static readonly Vector2 HalfVector = new Vector2(0.5f, 0.5f);
 
-        public override void _PhysicsProcess(double delta)
-        {
-            QueueRedraw();
-        }
+		// 配置参数
+		private float _arrowLength = 8.0f;
+		private Color _arrowColor = Colors.White;
+		private int _redrawInterval = 60; // 重绘间隔帧数
 
-        public override void _Draw()
-        {
-            DrawFlowFieldArrows();
-        }
+		// 缓存变量
+		private FlowField _cachedFlowField;
+		private Vector2 _cachedTileCenterOffset;
+		private int _tileSize;
 
-        private void DrawFlowFieldArrows()
-        {
-            flowField = FlowFieldSystem.Instance.ShowFlowField;
-            if (flowField != null)
-            {
-                Vector2I targetPos = flowField.targetPos;
-                int TileSize = MapConstant.TileCellSize;
-                for (int x = 0; x < FlowFieldSystem.Instance.Width; x++)
-                {
-                    for (int y = 0; y < FlowFieldSystem.Instance.Height; y++)
-                    {
-                        Vector2I position = new Vector2I(x, y);
-                        if (position == targetPos)
-                        {
-                            DrawCircle(targetPos * TileSize + new Vector2(TileSize / 2, TileSize / 2), TileSize / 2, Colors.White);
+		private int index = 0;
+		public override void _Ready()
+		{
+			_tileSize = MapConstant.TileCellSize;
+			_cachedTileCenterOffset = new Vector2(_tileSize, _tileSize) * 0.5f;
+		}
 
-                        }
-                        else
-                        {
-                            Vector2 direction = flowField.nodeData[x, y].direction;
-                            if (direction == Vector2.Zero)
-                                continue;
-                            // 计算箭头的起点和终点
-                            Vector2 startPos = new Vector2(position.X, position.Y) * TileSize + new Vector2(TileSize / 2, TileSize / 2);
-                            Vector2 endPos = startPos + direction * _arrowLength;
+		public override void _PhysicsProcess(double delta)
+		{
+			if (++index % _redrawInterval == 0)
+			{
+				index = 0;
+				QueueRedraw();
+			}
+		}
 
-                            // 绘制箭头线段
-                            DrawLine(startPos, endPos, _arrowColor, 2.0f);
-                            // 计算箭头的两个边角
-                            Vector2 right = direction.Rotated(Mathf.DegToRad(-30)) * _arrowLength * 0.4f;
-                            Vector2 left = direction.Rotated(Mathf.DegToRad(30)) * _arrowLength * 0.4f;
-                            // 绘制箭头的两个边角
-                            DrawLine(endPos, endPos + right, _arrowColor, 2.0f);
-                            DrawLine(endPos, endPos + left, _arrowColor, 2.0f);
-                        }
-                    }
-                }
-            }
-        }
-    }
+		public override void _Draw()
+		{
+			var currentFlowField = FlowFieldSystem.Instance.ShowFlowField;
+			if (currentFlowField == null) return;
+
+			// 使用缓存减少属性访问
+			int width = FlowFieldSystem.Instance.Width;
+			int height = FlowFieldSystem.Instance.Height;
+			Vector2I targetPos = currentFlowField.targetPos;
+			Vector2 targetCenter = targetPos * _tileSize + _cachedTileCenterOffset;
+
+			// 批量绘制准备
+			var arrowLines = new Vector2[width * height * 6]; // 每个箭头3条线
+			int lineIndex = 0;
+
+			// 预计算公共值
+			float radius = _tileSize * 0.5f;
+			float headLength = _arrowLength * ArrowHeadLengthMultiplier;
+
+			for (int x = 0; x < width; x++)
+			{
+				for (int y = 0; y < height; y++)
+				{
+					Vector2I position = new Vector2I(x, y);
+					if (position == targetPos)
+					{
+						DrawCircle(targetCenter, radius, Colors.White);
+						continue;
+					}
+
+					Vector2 direction = currentFlowField.nodeData[x, y].direction;
+					if (direction == Vector2.Zero) continue;
+
+					// 计算箭头基点
+					Vector2 startPos = new Vector2(x * _tileSize, y * _tileSize) + _cachedTileCenterOffset;
+					Vector2 endPos = startPos + direction * _arrowLength;
+
+					// 存储主线段
+					arrowLines[lineIndex++] = startPos;
+					arrowLines[lineIndex++] = endPos;
+					// 计算箭头边角
+					Vector2 right = direction.Rotated(ArrowHeadAngle) * headLength;
+					Vector2 left = direction.Rotated(-ArrowHeadAngle) * headLength;
+
+					// 存储边角线段
+					arrowLines[lineIndex++] = endPos;
+					arrowLines[lineIndex++] = endPos + right;
+
+					arrowLines[lineIndex++] = endPos;
+					arrowLines[lineIndex++] = endPos + left;
+				}
+			}
+
+			// 批量绘制所有线段
+			DrawMultiline(arrowLines, _arrowColor, 2.0f);
+		}
+	}
 }

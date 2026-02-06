@@ -8,11 +8,11 @@ namespace Remnant_Afterglow
     public partial class ObjectBottomBar
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 底部栏id
         /// </summary>
         public int BottomBarId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 底部栏位置偏移
         ///(X,Y)
         /// </summary>

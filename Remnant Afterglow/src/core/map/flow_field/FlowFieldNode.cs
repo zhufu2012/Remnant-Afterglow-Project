@@ -47,6 +47,18 @@ namespace Remnant_Afterglow
         public bool isWalkable;
 
         public int tempCost;
+
+
+        /// <summary>
+        /// 其上占据的实体-默认为地板
+        /// </summary>
+        public FlowFieldNode(int x, int y,int fCost)
+        {
+            this.x = x;
+            this.y = y;
+            this.fCost = fCost;
+        }
+
         /// <summary>
         /// 其上占据的实体-默认为地板
         /// </summary>
@@ -63,7 +75,10 @@ namespace Remnant_Afterglow
             fCost = int.MaxValue;
         }
 
-        
+        public override string ToString()
+        {
+            return "{"+x+","+y+"}";
+        }
 
     }
 }

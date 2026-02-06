@@ -1,7 +1,7 @@
 namespace Remnant_Afterglow
 {
     /// <summary>
-    /// 自动生成的配置类2 BulletLogic 用于 子弹逻辑数据表,拓展请在expand_class文件下使用partial拓展
+    /// 自动生成的配置类2 BulletLogic 用于 实体子弹逻辑表,拓展请在expand_class文件下使用partial拓展
     /// </summary>
     public partial class BulletLogic
     {

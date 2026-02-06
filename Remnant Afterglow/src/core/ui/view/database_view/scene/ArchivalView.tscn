@@ -1,0 +1,432 @@
+[gd_scene load_steps=11 format=3 uid="uid://cgey0i31x6mem"]
+
+[ext_resource type="Texture2D" uid="uid://bwanyv4iql1ja" path="res://assets/档案库素材/背景3.png" id="1_1673w"]
+[ext_resource type="Script" uid="uid://b84stoae700e0" path="res://src/core/ui/view/database_view/src/ArchivalView.cs" id="1_g7tsf"]
+[ext_resource type="Texture2D" uid="uid://cbrrp2fh06jb7" path="res://assets/档案库素材/窗口1.png" id="2_g7tsf"]
+[ext_resource type="Texture2D" uid="uid://b1j67na81ytf8" path="res://assets/档案库素材/窗口4.png" id="4_rgpie"]
+[ext_resource type="Texture2D" uid="uid://kyxevqj8f2hx" path="res://assets/作战界面素材/设置背景.png" id="5_6vdbu"]
+[ext_resource type="Texture2D" uid="uid://dq424ajdosecl" path="res://assets/作战界面素材/设置图标.png" id="6_exmaa"]
+[ext_resource type="Script" uid="uid://dgdusr2w1luvn" path="res://src/core/ui/view/database_view/src/CarouselContainer.cs" id="8_f6mdr"]
+[ext_resource type="PackedScene" uid="uid://dt26wawqlebnj" path="res://src/core/ui/view/database_view/scene/ArcjovalItemView.tscn" id="9_ye3om"]
+
+[sub_resource type="Animation" id="Animation_3ff5v"]
+resource_name = "设置旋转"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../设置背景2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../设置背景3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../设置背景4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../设置背景5:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../设置背景6:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../设置背景7:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../设置背景8:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../设置背景9:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../设置背景10:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.14159]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../设置背景11:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.14159]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../设置背景12:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.14159]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../设置背景13:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.14159]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../设置背景14:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.14159]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wj5bt"]
+_data = {
+&"设置旋转": SubResource("Animation_3ff5v")
+}
+
+[node name="ArchivalView" type="Node2D"]
+script = ExtResource("1_g7tsf")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = -59
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_1673w")
+region_rect = Rect2(0, 0, 80, 80)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 479.0
+offset_bottom = 233.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_g7tsf")
+region_rect = Rect2(0, 0, 80, 80)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 13
+patch_margin_bottom = 12
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="."]
+offset_top = 931.0
+offset_right = 480.0
+offset_bottom = 968.0
+scale = Vector2(4, 4)
+texture = ExtResource("4_rgpie")
+region_rect = Rect2(0, 0, 80, 80)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 13
+patch_margin_bottom = 12
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="."]
+z_index = -56
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4.00049, 4.00016)
+region_rect = Rect2(33, 33, 33, 34)
+patch_margin_left = 21
+patch_margin_top = 21
+patch_margin_right = 20
+patch_margin_bottom = 21
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 5.0
+offset_top = 954.0
+offset_right = 3188.0
+offset_bottom = 1140.0
+scale = Vector2(0.6, 0.6)
+horizontal_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="设置按钮" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3.80547, 3.80547)
+
+[node name="设置旋转" type="AnimationPlayer" parent="设置按钮"]
+root_node = NodePath("../设置背景")
+libraries = {
+&"": SubResource("AnimationLibrary_wj5bt")
+}
+autoplay = "设置旋转"
+speed_scale = 0.25
+
+[node name="设置背景" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(11.0235, 11.7363)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景2" type="Sprite2D" parent="设置按钮"]
+self_modulate = Color(0.27, 0.27, 0.27, 0.917647)
+z_index = -20
+texture_filter = 1
+position = Vector2(13.6896, 14.3954)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景3" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(3.10898, 39.1874)
+scale = Vector2(0.443556, 0.443556)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景4" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(32.9571, -3.79964)
+scale = Vector2(0.444, 0.444)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景5" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(53.3907, -1.60243)
+scale = Vector2(0.889, 0.889)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置图标" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(11.0222, 11.7397)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("6_exmaa")
+
+[node name="Button" type="Button" parent="设置按钮/设置图标"]
+offset_left = -16.0
+offset_top = -17.0
+offset_right = 17.0
+offset_bottom = 16.0
+flat = true
+
+[node name="设置背景6" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(493.993, 189.788)
+scale = Vector2(0.889, 0.889)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景7" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(400.655, -1.51499)
+scale = Vector2(0.889, 0.889)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景8" type="Sprite2D" parent="设置按钮"]
+self_modulate = Color(0.27, 0.27, 0.27, 0.917647)
+z_index = -20
+texture_filter = 1
+position = Vector2(435.11, 7.22737)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景9" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(1.21792, 208.183)
+scale = Vector2(0.889, 0.889)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景10" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(-5.91276, 184.71)
+scale = Vector2(0.443556, 0.443556)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景11" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(39.1867, 284.861)
+scale = Vector2(0.790321, 0.790321)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景12" type="Sprite2D" parent="设置按钮"]
+self_modulate = Color(0.27, 0.27, 0.27, 0.917647)
+z_index = -20
+texture_filter = 1
+position = Vector2(72.1019, 289.304)
+scale = Vector2(0.592074, 0.592074)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景13" type="Sprite2D" parent="设置按钮"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+z_index = -20
+texture_filter = 1
+position = Vector2(391.141, 291.75)
+scale = Vector2(0.790321, 0.790321)
+texture = ExtResource("5_6vdbu")
+
+[node name="设置背景14" type="Sprite2D" parent="设置按钮"]
+texture_filter = 1
+position = Vector2(366.202, 283.994)
+scale = Vector2(0.394321, 0.394321)
+texture = ExtResource("5_6vdbu")
+
+[node name="CarouselContainer" type="Node2D" parent="." node_paths=PackedStringArray("PositionOffsetNode", "button_left", "button_right", "Popup")]
+position = Vector2(456, 462)
+script = ExtResource("8_f6mdr")
+PositionOffsetNode = NodePath("Control")
+button_left = NodePath("../Button_a")
+button_right = NodePath("../Button_b")
+Popup = NodePath("Popup")
+metadata/_custom_type_script = "uid://dgdusr2w1luvn"
+
+[node name="Control" type="Control" parent="CarouselContainer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1635.49
+offset_top = -11.0
+offset_right = 3858.49
+offset_bottom = -11.0
+
+[node name="Popup" type="Popup" parent="CarouselContainer"]
+transparent_bg = true
+size = Vector2i(1920, 1080)
+
+[node name="ArcjovalItemView" parent="CarouselContainer/Popup" instance=ExtResource("9_ye3om")]
+
+[node name="Button" type="Button" parent="CarouselContainer/Popup"]
+offset_left = 1750.0
+offset_top = 50.0
+offset_right = 1840.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 30
+text = "关闭"
+
+[node name="Button_a" type="Button" parent="."]
+offset_left = 69.0
+offset_top = 62.0
+offset_right = 637.0
+offset_bottom = 844.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+shortcut_feedback = false
+flat = true
+
+[node name="Button_b" type="Button" parent="."]
+offset_left = 1297.0
+offset_top = 55.0
+offset_right = 1857.0
+offset_bottom = 846.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+shortcut_feedback = false
+flat = true

@@ -51,6 +51,7 @@ namespace Remnant_Afterglow
         }
     }
     //从json中读取出的SequenceMapType类
+    //序列图
     public class SequenceMapType
     {
         public FrameData[] frames { get; set; }

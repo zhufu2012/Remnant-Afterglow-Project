@@ -1,86 +1,38 @@
 [
     {
-        "KEY_INDEX": "0",
-        "ImageLayerId": 0,
-        "LayerName": "背景",
-        "LayerShowDes": ""
-    },
-    {
         "KEY_INDEX": "1",
         "ImageLayerId": 1,
-        "LayerName": "逻辑地块",
+        "LayerName": "逻辑",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "2",
         "ImageLayerId": 2,
-        "LayerName": "地块层",
+        "LayerName": "悬崖",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "3",
         "ImageLayerId": 3,
-        "LayerName": "地块效果层",
+        "LayerName": "地板",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "4",
         "ImageLayerId": 4,
-        "LayerName": "悬崖墙壁层",
+        "LayerName": "指示",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "5",
         "ImageLayerId": 5,
-        "LayerName": "装饰一层",
+        "LayerName": "墙壁",
         "LayerShowDes": ""
     },
     {
         "KEY_INDEX": "6",
         "ImageLayerId": 6,
-        "LayerName": "装饰二层",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "7",
-        "ImageLayerId": 7,
-        "LayerName": "装饰三层",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "8",
-        "ImageLayerId": 8,
-        "LayerName": "地图资源",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "9",
-        "ImageLayerId": 9,
-        "LayerName": "场景阴影",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "10",
-        "ImageLayerId": 10,
-        "LayerName": "高层装饰一层",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "11",
-        "ImageLayerId": 11,
-        "LayerName": "高层装饰二层",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "12",
-        "ImageLayerId": 12,
-        "LayerName": "高层装饰三层",
-        "LayerShowDes": ""
-    },
-    {
-        "KEY_INDEX": "13",
-        "ImageLayerId": 13,
-        "LayerName": "实体",
+        "LayerName": "装饰",
         "LayerShowDes": ""
     }
 ]

@@ -17,9 +17,9 @@ float linear(float old_min, float old_max, float new_min, float new_max, float c
 
 void fragment() {
 	vec4 color = COLOR;
-	
+
 	float normalized = linear(min_val, max_val, 0.0, 1.0, current_val);
-	
+
 	/*
 	If the fragcoord.x is less than or equal to the calculated point
 	between min and max that current_value falls on, mix with our
@@ -28,6 +28,6 @@ void fragment() {
 	if (UV.x <= normalized) {
 		color.rgb = mix(color.rgb, fill_color.rgb, 0.5);
 	}
-	
+
 	COLOR = color;
 }

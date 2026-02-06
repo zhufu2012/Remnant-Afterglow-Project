@@ -7,35 +7,26 @@ namespace Remnant_Afterglow
     public partial class BagData
     {
         #region 参数及初始化
-        /// <summary>        
+        /// <summary>
         /// 背包id
         /// </summary>
         public int BagId { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 背包名称
         /// </summary>
         public string BagName { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 背包描述
         /// </summary>
         public string BagDesc { get; set; }
-        /// <summary>        
+        /// <summary>
         /// 背包类型
         ///0 系统背包
-        ///（无法看见，无需管道具顺序和
-        ///在背包的位置,无限大小）
+        ///（无法看见)
         ///1 常规玩家背包
-        ///（可以看见，背包大小=背包横排大小*背包竖排大小）
+        ///（可以看见）
         /// </summary>
         public int BagType { get; set; }
-        /// <summary>        
-        /// 背包横排大小
-        /// </summary>
-        public int Crosswise { get; set; }
-        /// <summary>        
-        /// 背包竖排大小
-        /// </summary>
-        public int Vertical { get; set; }
 
         public BagData(int id)
         {
@@ -44,8 +35,6 @@ namespace Remnant_Afterglow
 			BagName = (string)dict["BagName"];
 			BagDesc = (string)dict["BagDesc"];
 			BagType = (int)dict["BagType"];
-			Crosswise = (int)dict["Crosswise"];
-			Vertical = (int)dict["Vertical"];
 			InitData();
         }
 
@@ -57,8 +46,6 @@ namespace Remnant_Afterglow
 			BagName = (string)dict["BagName"];
 			BagDesc = (string)dict["BagDesc"];
 			BagType = (int)dict["BagType"];
-			Crosswise = (int)dict["Crosswise"];
-			Vertical = (int)dict["Vertical"];
 			InitData();
         }
 
@@ -68,8 +55,6 @@ namespace Remnant_Afterglow
 			BagName = (string)dict["BagName"];
 			BagDesc = (string)dict["BagDesc"];
 			BagType = (int)dict["BagType"];
-			Crosswise = (int)dict["Crosswise"];
-			Vertical = (int)dict["Vertical"];
 			InitData();
         }
         #endregion
